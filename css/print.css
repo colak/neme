@@ -1,0 +1,24 @@
+body {margin: 20px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px !important;color: #000;background-color: #fff;border:0}
+p a:after {content: " ("attr(href)") ";font-size:10px; text-decoration:none; color:#000000}
+a[href]:after {content:" <URL: "attr(href)">"; background:inherit;}
+abbr[title]:after, acronym[title]:after {content: '(' attr(title) ')'; text-decoration:none; color:#000000}
+sup a:after {content: "" !important;}
+.container_24 {width:97%;margin:1%}
+.submenu, #search, #accessibility, #menu, #publications .grid_1, #publications #footer {display:none;}
+body {background-image: none;}
+.notes sup {display:none}
+#footer, .video {display:none;}
+img, iframe, video, script, .rslides, .grid_1, .logo {display:none;}
+.container_24 {width:95%;max-width:95%;margin:1%}
+#side, nav, #footer
+ {display:none;}
+#content {color:#000;background: #fff url("/images/794.jpg") repeat;}
+#content .grid_18 {width:98%;color:#000; background-color:#fff;}
+#content figcaption {color:#000}
+#publications a img, #publications img {display:block}
+
+hr { width:80%; padding: 0; margin: 2em auto 0 auto; border: none; border-top: medium double #eee; color: #000; text-align: center; } 
+hr:after { content: "▼"; display: inline-block; position: relative; top: -.8em; font-size: 1.5em; padding: 0 0.25em; background: #fff url("/images/794.jpg") repeat;}
+
+h1, h2, h3, h4, h5 {color:#000}
+.grideven {width:95%;clear:both}
