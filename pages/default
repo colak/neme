@@ -396,7 +396,7 @@ Cyprus</p>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
 
 <txp:if_custom_field name="pubs_by_others"><div class="line"><h4 class="line">Publications</h4>
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
