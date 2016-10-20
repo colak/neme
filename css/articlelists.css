@@ -1,0 +1,14 @@
+hr {width:100%}
+
+#events h6 a, #participations h6 a {font-size: 14px}
+
+.line {border: none; border-bottom: medium double #eee; color: #eee; text-align: center; margin:0 0 3em 0;} 
+.clear {height:.1em;max-height:.1em;font-size:1pt}
+
+@media screen and (max-width: 959px) {
+.grid_18 {width:100%}
+
+#participations section .grid_5, #participations section .grid_6, #participations section .grid_13 {width:98%}
+#events section .grid_5, #events section .grid_6, #events section .grid_13 {width:98%}
+
+}
