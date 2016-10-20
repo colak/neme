@@ -1,4 +1,4 @@
-# compression and cache control
+# compression 
 
 <ifModule mod_headers.c>
 Header set Connection keep-alive
@@ -19,12 +19,14 @@ Header set Connection keep-alive
     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
+# ETags
+
 <IfModule mod_headers.c>
 Header unset ETag
 FileETag None
 </IfModule>
 
-
+# cache control
 
 <IfModule mod_expires.c>
 ExpiresActive On
