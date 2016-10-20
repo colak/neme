@@ -309,7 +309,7 @@ Cyprus</address>
 </div>
 <div class="announce">
 <h3>Announcements</h3>
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php>
 </div>
 <div>
 <h4>Publications</h4>
