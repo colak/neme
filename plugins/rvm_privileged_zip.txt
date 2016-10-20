@@ -1,0 +1,49 @@
+# Name: rvm_privileged v0.5 (compressed)
+# Type: Public plugin
+# Use TXP admin user privileges on public side
+# Author: Ruud van Melick
+# URL: http://vanmelick.com/
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
