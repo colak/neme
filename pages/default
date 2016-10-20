@@ -103,9 +103,14 @@ header('content-type: text/html; charset=utf-8');
 
 
 
-<txp:hide><txp:if_section name="publications"><script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script></txp:if_section>
-
-<script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script></txp:hide>
+<txp:hide>
+<!-- the google js is no longer working --> 
+<txp:if_section name="publications">
+<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
+</txp:if_section>
+<!-- support for battleforthenet.com -->
+<script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
+</txp:hide>
 
 </head>
 
