@@ -175,13 +175,6 @@ header('content-type: text/html; charset=utf-8');
 </div><!-- end .container_24 --></div>
 
 <div id="content"><div class="container_24">
-<txp:hide><txp:output_form form="colak_cookie" />
-<txp:variable name="cookie_warning_visible" value="true">
-<div id="cookie-monster" class="grid_24">
-<p>This site uses cookies and EU forces us to let you know about it. You can read our <a href="/about/#cookies">cookie policy</a> or just click <a href="?hide_cookie_warning=1">OK</a> and this message will dissapear.</p>
-</div>
-</txp:variable>
-</txp:hide>
 
 <txp:hide>==================-home page-======================</txp:hide>
 
