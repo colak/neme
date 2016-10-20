@@ -49,7 +49,7 @@ ExpiresDefault "access plus 1 month"
 #ErrorDocument 403 /403.php
 Header append X-FRAME-OPTIONS "SAMEORIGIN"
 
-#RewriteEngine on
+#RewriteEngine on. Redirect to www
 RewriteCond %{HTTP_HOST} ^neme.org [NC]
 RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
 
@@ -70,7 +70,7 @@ Redirect 301 /about/about-neme /about/
 Redirect 301 /nac/neme-arts-centre /nac/
 Redirect 301 /workshops/workshops /workshops/
 
-
+# Block
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} ^http\://.*semalt\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*kambasoft\.com [NC,OR]
@@ -84,6 +84,7 @@ RewriteCond %{HTTP_REFERER} ^https\://hur609\.dtudtu\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*savetubevideo\.com [NC]
 RewriteRule .* - [F]
 
+# Block keywords in the url
 RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|kcfinder|register|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|login|cms|console|ycportal|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc) [NC]
 RewriteRule .* http://127.0.0.1/ [R=301,L]
 
@@ -143,7 +144,7 @@ RewriteRule ^(.*)$ - [F,L]
 # RewriteRule ^ - [F]
 
 
-# This prevents web browsers or spiders from seeing your .htaccess directives:
+# This prevents web browsers or spiders from seeing the .htaccess directives:
 
 ServerSignature Off
 
