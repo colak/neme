@@ -1,0 +1,52 @@
+# Name: the_video v0.7 (compressed)
+# Type: Public plugin
+# Easy video embeding
+# Author: The Magnus
+# URL: http://textpattern.org/plugins/752/the_video
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
