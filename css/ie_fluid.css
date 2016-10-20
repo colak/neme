@@ -1,0 +1,1 @@
+.clearfix{zoom:1} .grideven {height: expression( this.scrollHeight < 251 ? "250px" : "auto" );} img {width: 100%;height:auto;}
