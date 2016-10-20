@@ -1,0 +1,157 @@
+# compression and cache control
+
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+</ifModule>
+
+<IfModule deflate_module>
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<IfModule mod_headers.c>
+Header unset ETag
+FileETag None
+</IfModule>
+
+
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 day"
+ExpiresByType text/html "access plus 10 seconds"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType application/atom+xml "access plus 1 hour"
+ExpiresByType application/rss+xml "access plus 1 hour"
+ExpiresDefault "access plus 1 month"
+</IfModule>
+
+
+#ErrorDocument 403 /403.php
+Header append X-FRAME-OPTIONS "SAMEORIGIN"
+
+#RewriteEngine on
+RewriteCond %{HTTP_HOST} ^neme.org [NC]
+RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
+
+#RewriteRule ^/sitemap/ /texts/ [R=301,L]
+RedirectMatch 301 ^/main/?(.+)?$ http://www.neme.org/$1
+RedirectMatch 301 ^/calls/?(.+)?$ http://news.neme.org/calls/$1
+RedirectMatch 301 ^/arts_info/?(.+)?$ http://news.neme.org/arts_info/$1
+RedirectMatch 301 ^/archives/?(.+)?$ http://news.neme.org/archives/$1
+RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
+Redirect 301 /reblog/out/ http://www.neme.org/
+Redirect 301 /sitemap/ http://www.neme.org/
+Redirect /category/calls http://news.neme.org/calls/
+Redirect 301 /article/ /texts/
+Redirect 301 /call/ http://news.neme.org/calls/
+Redirect 301 /category/intransition /events/in-transition-cyprus-2006
+Redirect 301 /category/ideodrome2006 /events/ideodrome-2006
+Redirect 301 /about/about-neme /about/
+Redirect 301 /nac/neme-arts-centre /nac/
+Redirect 301 /workshops/workshops /workshops/
+
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} ^http\://.*semalt\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*kambasoft\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*rankings-analytics\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://tinyurl\.com/ponbdfv [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https\://www\.bet\-at\-home\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*success\-seo\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*best\-seo\-solution\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*best\-seo\-offer\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https\://hur609\.dtudtu\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*savetubevideo\.com [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|kcfinder|register|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|login|cms|console|ycportal|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc) [NC]
+RewriteRule .* http://127.0.0.1/ [R=301,L]
+
+#RewriteCond %{REMOTE_ADDR} 23\.108\.34\.202
+#RewriteRule .* http://www.neme.org/indexthief.htm [R,L]
+
+#Options +FollowSymlinks
+#RewriteEngine on
+#RewriteCond %{REMOTE_HOST} !^23\.108\.34\.202
+#RewriteRule \.html$ /indexthief.htm [R=302,L]
+
+
+
+#DirectoryIndex index.php index.html
+
+#Options +FollowSymLinks
+#Options -Indexes
+#ErrorDocument 403 default
+
+#RewriteCond %{QUERY_STRING} m=any&q=1
+#RewriteRule - [F]
+
+RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
+RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
+RewriteRule ^ - [F]
+
+RewriteCond %{THE_REQUEST} ^.*(wp-login).* [NC]
+RewriteCond %{THE_REQUEST} ^.*(fckeditor).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	#RewriteBase /relative/web/path/
+
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^(.+) - [PT,L]
+
+	RewriteCond %{REQUEST_URI} !=/favicon.ico
+	RewriteRule ^(.*) index.php
+
+	RewriteCond %{HTTP:Authorization}  !^$
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+#php_value register_globals 0
+
+# SVG
+<IfModule mod_mime.c>
+	AddType image/svg+xml  svg svgz
+	AddEncoding gzip       svgz
+</IfModule>
+
+# RewriteCond %{QUERY_STRING} ^m\=any$- [F]
+# RewriteRule ^ - [F]
+
+
+# This prevents web browsers or spiders from seeing your .htaccess directives:
+
+ServerSignature Off
+
+
+<Files .htaccess>
+deny from all
+</Files>
+
+<Files config.php> 
+deny from all 
+</Files>
