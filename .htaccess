@@ -146,7 +146,7 @@ RewriteRule ^(.*)$ - [F,L]
 # RewriteRule ^ - [F]
 
 
-# This prevents web browsers or spiders from seeing the .htaccess directives:
+# This prevents web browsers and spiders from seeing the .htaccess directives:
 
 ServerSignature Off
 
