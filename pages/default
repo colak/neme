@@ -567,7 +567,7 @@ poBox 50325<br />
 Cyprus</address></div>
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
 </div>
 <txp:hide><txp:thumbnail id="166" class="grid_4 prefix_2" /></txp:hide>
 
