@@ -133,7 +133,7 @@ menu.removeAttr('style');
 
 <h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist.<txp:else /><txp:error_message /></h2></txp:if_status></h2>
 
-<div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a rel="external" href="http://news.neme.org">news.neme.org</a> subdomain which is now hosting our legasy content.</p></div>
+<div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a rel="external" href="http://news.neme.org">news.neme.org</a> subdomain which is now hosting our legacy content.</p></div>
 
 </div><!-- end .container_24 -->
 </div>
