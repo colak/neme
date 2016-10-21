@@ -57,12 +57,24 @@ RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301]
 
 #RewriteRule ^/sitemap/ /texts/ [R=301,L]
 RedirectMatch 301 ^/main/?(.+)?$ http://www.neme.org/$1
-RedirectMatch 301 ^/calls/?(.+)?$ http://news.neme.org/calls/$1
-RedirectMatch 301 ^/arts_info/?(.+)?$ http://news.neme.org/arts_info/$1
-RedirectMatch 301 ^/archives/?(.+)?$ http://news.neme.org/archives/$1
 RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
 Redirect 301 /reblog/out/ http://www.neme.org/
 Redirect 301 /sitemap/ http://www.neme.org/
+Redirect 301 /arts_info/ http://news.neme.org/arts_info/
+Redirect 301 /archives/ http://news.neme.org/archives/
+Redirect 301 /archives2005/ http://news.neme.org/archives2005/
+Redirect 301 /archives2006/ http://news.neme.org/archives2006/
+Redirect 301 /archives2007/ http://news.neme.org/archives2007/
+Redirect 301 /archives2008/ http://news.neme.org/archives2008/
+Redirect 301 /archives2009/ http://news.neme.org/archives2009/
+Redirect 301 /archives2010/ http://news.neme.org/archives2010/
+Redirect 301 /archives2011/ http://news.neme.org/archives2011/
+Redirect 301 /archives2012/ http://news.neme.org/archives2012/
+Redirect 301 /archives2013/ http://news.neme.org/archives2013/
+Redirect 301 /archives2014/ http://news.neme.org/archives2014/
+Redirect 301 /archives2015/ http://news.neme.org/archives2015/
+Redirect 301 /archives2016/ http://news.neme.org/archives2016/
+Redirect 301 /calls/ http://news.neme.org/calls/
 Redirect /category/calls http://news.neme.org/calls/
 Redirect 301 /article/ /texts/
 Redirect 301 /call/ http://news.neme.org/calls/
