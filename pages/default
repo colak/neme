@@ -582,7 +582,7 @@ Cyprus</address></div>
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#<txp:section />"><txp:image id="177" class="grid_1 omega" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><txp:image id="177" class="grid_1 omega" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -842,7 +842,7 @@ Cyprus</address></div>
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 </txp:if_individual_article>
-<span class="grid_1 prefix_23 nosmall"><a href="#<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>"><txp:image id="177" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
