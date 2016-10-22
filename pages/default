@@ -843,6 +843,7 @@ Cyprus</address></div>
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 </txp:if_individual_article>
+<div class="clear">&nbsp;</div>
 <span class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
 <div class="clear">&nbsp;</div>
 
