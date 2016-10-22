@@ -824,10 +824,23 @@ Cyprus</address></div>
 
 <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
 
-<h3>Other Texts</h3>
-<div class="sub"><txp:article_custom sort="rand()" section="texts" limit="20" break="li" wraptag="ul" class="submenu">
-<txp:permlink><txp:title /></txp:permlink>
-</txp:article_custom></div>
+<div class="sub">
+<txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
+<txp:variable name="moretexts"><txp:article_custom limit="20" section="texts" break="," sort="rand()" exclude='<txp:article_id />'><txp:article_id /></txp:article_custom></txp:variable>
+<txp:etc_query name="relatedtexts" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article" break=","><txp:article_id /></txp:etc_query>
+<txp:if_variable name="relatedtexts" value="">
+<txp:article_custom section="texts" sort="rand()" limit="20" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4" id='<txp:variable name="moretexts" />' exclude='<txp:article_id />'> 
+<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
+</txp:article_custom>
+<txp:else />
+<txp:article_custom id='<txp:variable name="relatedtexts" />' limit="20" break="li" wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
+<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
+</txp:article_custom>
+<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="find" />' limit="15" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4"> 
+<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
+</txp:article_custom>
+</txp:if_variable>
+</div>
 
 <txp:if_custom_field name="pubs_by_others">
 <txp:images id='<txp:custom_field name="pubs_by_others" />'>
