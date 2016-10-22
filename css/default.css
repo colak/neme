@@ -342,8 +342,8 @@ transform: translatez(0);
 .bx-wrapper .bx-controls-direction a {position: absolute;top: 50%;margin-top: -16px;outline: 0;width: 32px;height: 32px;text-indent: -9999px;z-index: 8888;}
 .bx-wrapper .bx-controls-direction a.disabled {display: none;}
 
-
 .logo {max-height: 150px; margin-bottom:1em;} 
+.anchor {display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
 
 /* smaller screens */
