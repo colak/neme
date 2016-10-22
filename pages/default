@@ -10,7 +10,6 @@ header('content-type: text/html; charset=utf-8');
 
 <!doctype html>
 
-
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
 <!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
 <!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
@@ -178,7 +177,6 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:glx_if_frontpage><h1><txp:site_slogan /></h1><txp:else /><h1><txp:page_title /></h1></txp:glx_if_frontpage>
 
-
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
@@ -319,11 +317,8 @@ Cyprus</address>
 </txp:images>
 </div>
 
-
 <txp:recent_articles section="events,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 </div>
-
-
 
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
@@ -702,7 +697,6 @@ Cyprus</address></div>
 <txp:if_section name="newsletter">
 <txp:thumbnail id="166" class="grid_4" />
 
-
 <div class="grid_10">
 
 <txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
@@ -730,7 +724,6 @@ Cyprus</address></div>
 
 <div class="clear">&nbsp;</div>
 </txp:if_section>
-
 
 </txp:if_article_list>
 
@@ -781,7 +774,6 @@ Cyprus</address></div>
 </txp:images>
 </txp:if_custom_field>
 
-
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
@@ -801,7 +793,6 @@ Cyprus</address></div>
 <div class="sub"><txp:article_custom label='Other <txp:section />' labeltag="h4" section='<txp:section />' limit="600" wraptag="ul" class="submenu">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
-
 
 </div>
 <div class="clear">&nbsp;</div>
