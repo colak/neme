@@ -5,6 +5,8 @@ a:focus{outline:1px dotted} h1{font-size:25px} h2{font-size:23px} h3{font-size:2
 
 hr { width:80%; padding: 0; margin: 2em auto 0 auto; border: none; border-top: 1px solid #eee; color: #eee; text-align: center; } 
 hr:after { content: "○"; display: inline-block; position: relative; top: -.8em; font-size: 1.4em; padding: 0 0.25em; background: #191919 url("/images/350.jpg") repeat;}
+hr.line {width:90%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
+hr.line:after{content:"●";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350.jpg) #191919}
 
 sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}
 sup {top: -0.5em;}
