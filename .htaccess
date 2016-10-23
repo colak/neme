@@ -75,7 +75,7 @@ Redirect 301 /archives2014/ http://news.neme.org/archives2014/
 Redirect 301 /archives2015/ http://news.neme.org/archives2015/
 Redirect 301 /archives2016/ http://news.neme.org/archives2016/
 Redirect 301 /calls/ http://news.neme.org/calls/
-Redirect /category/calls http://news.neme.org/calls/
+Redirect 301 /category/calls http://news.neme.org/calls/
 Redirect 301 /article/ /texts/
 Redirect 301 /call/ http://news.neme.org/calls/
 Redirect 301 /category/intransition /events/in-transition-cyprus-2006
