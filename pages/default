@@ -30,14 +30,12 @@ header('content-type: text/html; charset=utf-8');
 </txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-
 <txp:rvm_css n="default" format="link" media="all" />
 <txp:if_article_list><txp:rvm_css n="articlelists" format="link" media="all" /></txp:if_article_list>
 <!--[if IE]><txp:rvm_css n="ie-fluid" format="link" /><![endif]-->
 <!--[if IE 7]><txp:rvm_css n="ie7" format="link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
 <txp:rvm_css n="print" format="link" media="print" />
-
 
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
@@ -51,8 +49,6 @@ header('content-type: text/html; charset=utf-8');
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
 <meta name="DC.title" content="<txp:page_title />" />
-
-
 
 <link rel="home" href="<txp:site_url />" />
 <link rel="canonical" href="http://www.neme.org<txp:page_url />" />
@@ -76,7 +72,6 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:meta_description format="" />" />
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
 </txp:if_individual_article>
-
 
 <txp:feed_link flavor="atom" format="link" label="Atom" section="" category="" />
 <txp:feed_link flavor="rss" format="link" label="RSS" section="" category="" />
@@ -154,7 +149,6 @@ header('content-type: text/html; charset=utf-8');
 <li class="nosmall">&nbsp;&nbsp;</li>
 <li><a href="http://forum.neme.org/" rel="external">Forum</a></li>
 <li><a href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li><txp:rvm_if_privileged><txp:if_individual_article><li><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></li></txp:if_individual_article></txp:rvm_if_privileged>
-
 </ul>
 </div>
 </div>
