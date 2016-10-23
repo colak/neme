@@ -131,7 +131,7 @@ menu.removeAttr('style');
 <div id="content">
 <div class="container_24">
 
-<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist.<txp:else /><txp:error_message /></h2></txp:if_status></h2>
+<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist but it may exist on<br /><a rel="external" href="http://news.neme.org<txp:page_url />">news.neme.org<txp:page_url /></a><txp:else /><txp:error_message /></h2></txp:if_status></h2>
 
 <div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a rel="external" href="http://news.neme.org">news.neme.org</a> subdomain which is now hosting our legacy content.</p></div>
 
