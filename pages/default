@@ -826,20 +826,16 @@ Cyprus</address></div>
 
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
-<txp:variable name="moretexts"><txp:article_custom limit="20" section="texts" break="," sort="rand()" exclude='<txp:article_id />'><txp:article_id /></txp:article_custom></txp:variable>
-<txp:etc_query name="relatedtexts" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article" break=","><txp:article_id /></txp:etc_query>
-<txp:if_variable name="relatedtexts" value="">
-<txp:article_custom section="texts" sort="rand()" limit="20" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4" id='<txp:variable name="moretexts" />' exclude='<txp:article_id />'> 
-<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
-</txp:article_custom>
-<txp:else />
-<txp:article_custom id='<txp:variable name="relatedtexts" />' limit="20" break="li" wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
-<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
-</txp:article_custom>
-<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit="15" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4"> 
-<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
-</txp:article_custom>
+<txp:if_variable name="find">
+<txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
+<txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
+{$<({#row}|21).?(<li><a rel="canonical" href="<txp:permlink />"><txp:title /></a></li>)}
+</txp:etc_query>
 </txp:if_variable>
+<txp:variable name="relatedtitles" />
+<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4">
+<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
+</txp:article_custom>
 </div>
 
 <txp:if_custom_field name="pubs_by_others">
