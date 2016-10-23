@@ -830,12 +830,12 @@ Cyprus</address></div>
 <txp:if_variable name="find">
 <txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
 <txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
-{$<({#row}|21).?(<li><a rel="canonical" href="<txp:permlink />"><txp:title /></a></li>)}
+{$<({#row}|21).?(<li><a href="<txp:permlink />"><txp:title /></a></li>)}
 </txp:etc_query>
 </txp:if_variable>
 <txp:variable name="relatedtitles" />
 <txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4">
-<a rel="canonical" href="<txp:permlink />"><txp:title /></a>
+<a href="<txp:permlink />"><txp:title /></a>
 </txp:article_custom>
 </div>
 
