@@ -836,7 +836,7 @@ Cyprus</address></div>
 <txp:article_custom id='<txp:variable name="relatedtexts" />' limit="20" break="li" wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
 <a rel="canonical" href="<txp:permlink />"><txp:title /></a>
 </txp:article_custom>
-<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="find" />' limit="15" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4"> 
+<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit="15" break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4"> 
 <a rel="canonical" href="<txp:permlink />"><txp:title /></a>
 </txp:article_custom>
 </txp:if_variable>
