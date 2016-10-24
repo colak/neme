@@ -1,0 +1,38 @@
+# Name: wet_slimpattern v0.4.1 (compressed)
+# Type: Public plugin
+# Integrates SlimStat or Mint logging into Textpattern.
+# Author: Robert Wetzlmayr
+# URL: http://awasteofwords.com/article/wetslimpattern-integrate-slimstat-with-textpattern
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+H4sIAAAAAAAAA4VWaXPbNhD9HM34P6CMx8eMRVqWfESWlKapJnWbo5XtdDJ1yoHIJQmHBFgA
+NK0c/727vCzXSfOJ5GKx+7Dv7YJ8PBiMP5nxaOxInoFzasaDw7FTgvVNKrKcWwtakvlo7PDC
+JkpXPvi1UEvQlv0J9mOa8VVt32+9/EILspwMx05ibT72PF5yY0FFpdKhcQOVeVxbEaTgYbq1
+bH0hLcSaW+iT1Vhu+6WwSd/CrV1DdDx2bkAboaovRL3vjtxBBWMwdkIwgRa5bZcRx1kb17Bz
+DHyOgZnS7BXmY6mKYyFjhu+KXdwlcmkzVidQYVWdkwEG8jy2gHh+m7PGyzAVscvFS+P9U4AW
+mACjiFgqDS77tTCW8TCkXBoydQPuRm+zXmVTtu1deVuf/77ytDFXXvOySU9uVVZb6G3z89XT
+azMt0w/+tcF3zRMfcWJ2nvqqsHlhp5rLUGXDb6xalfeXXNdxrossz0AWn6+8r3tLyKDPpVSF
+DKDeg3RgWRNVNp/AdZBggK9jgQCk9UUW8G+5UAo/QrFIKP/XsT6XTwIw3/LB0/n16bB+0wE+
+qWrTgbd9utHb6D1mzwJb8LRjmhhFPgwdiSWgAUkhrRlyAI3MOF6rvwOvWvGFDNIiBDdPcueU
+YtZ8MpsAe8xyDTnIEEJin0wSMbJUSCADSL5MoVZbq3AUp0thHiTO0MMLlIxE7GFDqSrjbnUQ
+Ee3Y25wi6IgHqCCUUF4sUxFss60t9gOiiP0YobCdRmR7jGvNVzub/vl88Xa++Gt7Mf/jcn5+
+4V8uzrbf77G7BTQv3vnnF4uz1y+23+/u7rJPGz326Mfm4L5CLbC7QM7Pb55fvpq/vvAXb95c
+OO/d9YMQ3C8bvaaB7Cqvxwv2adOvOAdAN7bDxhalPDbrfrg1gTSvTEPq4kkynHXti7qoK3q/
+a+8VeOLhjl7v0SQZzS4NjwENo8qQz84kAk5Tl80rduh5rVa4JW93PMfuVZn4SJLZ+U1gPhVt
+PT45GO6f7q4F+mnFQoh4kdo9pF4YlqcFyqwZAigwYauhgMlYBCiRicm5ZEHKUaxOwHPjzHCA
+TDwyzwzbmZA+ZzQLJl71uscaE8m6s1EBSGqp+AC7LnunChZQ3ITLGGokS0j4jVCFZtywEhAA
+PmkeBdXRvocEQS+hOUfIliuWqVBEK6oHJa6kxejyCBuAjeoaiEgFtVjlW9eEqjc4PjVVB3al
+zmcXa2VDLEVGYzRBkmlrx/i99q0TojjdSnfUJV1aQ5mJXARGEVmkUtTbPahdg7e7tIgTywpJ
+jpS2hKURFjrIWikkuExE28lfgdP26xoSuM0hsDWQJvNahzeOLnvesobnRCUnSFMQYJdggnTF
+RMRWxOKDu6s5Z6X2ah9DgiK8GomtUOAgtrgdQmFb0toqo3h4yPPO3hC41sTtIYzV5NThIVlU
+aP5bIfwo2r5rmX0r0MomnCUaomn7P4C3vlUSqj8BStKR4eBYTaeOVMhYqkpn9r0NE4/PkN61
+0oQqQP1IWyHZY6bIc6XrcRGqUqYKj03TOEIijduUEct9w0VaLfCHeLGLgBNtBOABxl9w9dmr
+ZpUArQ+RlwLvwmB98HRi79OQMBQNuEGF3GnvQb3K0o1l4SodeykFNGC8OE9de/uwZC9kwV6A
+BI033u/V7cA6EA02Gqk4T7Owmr3DAxzCR0E4WA5GwWB5/OTw4Gh08iQIh8eHB6Pj/aMnAc7v
+L/8CG7DzRDEKAAA=
