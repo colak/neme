@@ -13,4 +13,3 @@
 <p class="small"><txp:permlink><txp:permlink /></txp:permlink></p>
 </txp:if_article_section>
 </div>
-
