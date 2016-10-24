@@ -47,6 +47,16 @@ ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
 </IfModule>
 
+# hotlink protection
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?neme\.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?news\.neme\.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?cyprus\.neme\.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?hblack\.net/.*$ [NC]
+RewriteRule .*\.(gif|jpg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
+</ifModule>
 
 #ErrorDocument 403 /403.php
 Header append X-FRAME-OPTIONS "SAMEORIGIN"
