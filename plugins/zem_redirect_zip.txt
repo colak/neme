@@ -1,0 +1,60 @@
+# Name: zem_redirect v1.2.1 (compressed)
+# Type: Public plugin
+# Redirect Pro: handle incorrect, outdated and duplicate URLs
+# Author: Alex Shiels
+# URL: http://thresholdstate.com/
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
+HvU3tzc3+mNv5+G/yxd7R88YAAA=
