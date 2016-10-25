@@ -122,7 +122,7 @@ Redirect 301 /about/about-neme /about/
 Redirect 301 /nac/neme-arts-centre /nac/
 Redirect 301 /workshops/workshops /workshops/
 
-# Block
+# Block consistent spam referrers
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} ^http\://.*1\-99seo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*arenanews\.com\.ua [NC,OR]
@@ -132,16 +132,19 @@ RewriteCond %{HTTP_REFERER} ^http\://.*buttons\-for\-website\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*darodar\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*domain2008\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*econom\.co/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*filmgo\.ru/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*iloveitaly\.ru/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*ilovevitaly.\.ru/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*ilovevitaly\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*ilovevitaly\.info/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*ilovevitaly\.org/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*isistaylorporn\.info [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*jeffreydach\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*kambasoft\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*kambasoft\.com/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*komputers\-best\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*meduza\-consult\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*mosrif\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*mydirtystuff\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*pharmacyincity\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*pharmacyincity\.com [NC,OR]
@@ -154,6 +157,7 @@ RewriteCond %{HTTP_REFERER} ^http\://.*savetubevideo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*semalt\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*shinikiev\.com\.ua [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*shmetall\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http\://.*storehouse\.ua [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*success\-seo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://.*watchstock\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http\://shmetall\.dtudtu\.com [NC,OR]
