@@ -78,7 +78,7 @@ menu.removeAttr('style');
 
 
 </head>
-<body id="error">
+<body id="error" class="no-js">
 
 <div id="nav"><div class="container_24">
 <div class="grid_24" id="menu">
