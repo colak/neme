@@ -1,6 +1,7 @@
 hr {width:100%}
 
 #events h6 a, #participations h6 a {font-size: 14px}
+#texts h6, #events h6, #participations h6 {margin:0;padding:0 0 1em 0}
 
 .line {border: none; border-bottom: medium double #eee; color: #eee; text-align: center; margin:0 0 3em 0;} 
 .clear {height:.1em;max-height:.1em;font-size:1pt}
