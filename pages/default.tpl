@@ -585,7 +585,7 @@ Cyprus</address></div>
 <txp:if_different>
 <div class="line"><figure><span class="grid_6">
 <a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" class="ds" id="book_<txp:image_info type="id" />" /></a></span>
-<figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&step=image_edit&id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure>
+<figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
 </txp:if_different>
