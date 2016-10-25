@@ -54,6 +54,7 @@ RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?neme\.org/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?news\.neme\.org/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?cyprus\.neme\.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?forum\.neme\.org/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?hblack\.net/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?google\. [NC]
 RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?google\. [NC]
