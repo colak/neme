@@ -597,7 +597,7 @@ Cyprus</address></div>
 <div class="grid_12 grideven"><figure>
 <span class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" class="ds" /></span>
 <figcaption class="grid_9 omega"><txp:image_info type="caption" escape="" />
-<txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&step=image_edit&id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged>
+<txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged>
 </figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
