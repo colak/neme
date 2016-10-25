@@ -1,7 +1,7 @@
 #
-# a list of bad bots.
+# A list of bad bots.
+# This file is not needed by textpattern
 #
-
 
 # Begin block Bad-Robots from robots.txt
 User-agent: asterias
