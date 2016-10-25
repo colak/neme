@@ -500,9 +500,9 @@ Cyprus</p>
 <div class="line">
 
 <article class="grid_6 about" role="main">
-<p>This page lists all <txp:mdn_count section="texts" /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://announcements.by.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
+<p>This page lists all <txp:mdn_count section="texts" /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 
-<p>We apologise that since our site's redesign in October 2016 all of your bookmarks to these texts are broken but it was the only way to move the site forward.</p>
+<p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
 </article>
 
 <figure class="grid_18 slides">
@@ -523,7 +523,7 @@ Cyprus</p>
 <txp:article limit="999">
 <article><div class="grid_6"><txp:rvm_if_privileged><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:rvm_if_privileged></div>
 <div class="grid_18"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
-<div class="clearboth"><hr /></div></article>
+<hr class="clearboth" /></article>
 </txp:article></section>
 </txp:if_search>
 </txp:if_section>
