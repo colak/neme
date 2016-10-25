@@ -572,7 +572,7 @@ Cyprus</address></div>
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <div class="line"><figure><span class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
-<txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&step=image_edit&id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure><div class="clear">&nbsp;</div></div>
+<txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure><div class="clear">&nbsp;</div></div>
 
 </txp:images>
 </txp:if_custom_field>
