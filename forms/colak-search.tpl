@@ -27,5 +27,7 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
 </form>
-<p>&copy; 2004-<txp:php>echo date('Y'); </txp:php>, <a href="<txp:site_url />">NeMe</a> and/or respective contributors</p>
-<script defer src="<txp:site_url />js/default.js"></script>
+<p>&copy; <txp:posted format="%Y" />-<txp:php>echo date('Y'); </txp:php>, <a href="http://www.neme.org">NeMe</a> <txp:if_article_section name="texts"> and <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag=""><span itemprop="author"><txp:link_name /></span></txp:linklist><txp:else />and/or respective contributors</txp:if_article_section></p>
+<txp:hide><a href="https://twitter.com/share" class="twitter-share-button" data-via="NeMeOrg" data-size="large" data-hashtags="arts">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></txp:hide>
+<script defer src="http://www.neme.org/js/default.js"></script>
