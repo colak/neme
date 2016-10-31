@@ -168,6 +168,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:image id="792" />
 <txp:else />
 <a href="<txp:site_url />" rel="home"><txp:image id="792" /></a>
+<small>Est. 2004</small>
 </txp:glx_if_frontpage>
 </div>
 
