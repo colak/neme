@@ -61,7 +61,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:creator" content="@nemeorg" />
 <meta name="twitter:url" content="<txp:permlink />" />
 <meta name="twitter:title" content="<txp:page_title />" />
-<meta name="twitter:description" content="<txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all>" />
+<meta name="twitter:description" content="<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />" />
 <meta name="twitter:image" content="<txp:images id='<txp:custom_field name="img_main"/>' wraptag="" break="" sort="rand()" limit="1"><txp:image_url /></txp:images>" />
 <txp:else />
 <meta name="twitter:card" content="summary" />
