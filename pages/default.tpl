@@ -18,7 +18,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
 
 <head>
-<title><txp:if_section name=""><txp:site_slogan /><txp:else /><txp:page_title /></txp:if_section></title>
+<title><txp:page_title /></title>
 
 <meta charset="utf-8">
 <txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
