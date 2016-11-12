@@ -808,7 +808,7 @@ Cyprus</address></div>
 <p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
 <txp:variable name="linkurl" value='<txp:link_url />' />
 <txp:if_variable name="linkurl" value="">
-<span itemprop="author"><txp:link_name /></span>
+<span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span><span itemprop="author"><txp:link_name /></span></span>
 <txp:else />
 <a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
 </txp:if_variable>
