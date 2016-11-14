@@ -280,6 +280,7 @@ background: linear-gradient(to bottom, #d80000 0%, #8b0000 15%, #8b0000 90%, #3f
 #menu-primary-items{display: block;}
 nav li {width: auto;float: left;display: inline;padding: 0;margin: 0;}
 nav a {display: block;padding: .5em .75em;}
+nav span {color:#fff;margin:-.5em .1em 0 .1em;display:inline-block;font-size:1.5em}
 nav li:first-child a {padding-left: 0;}
 nav ul:after {content: ""; display: table;clear: left;}
 .medium {display:none}
