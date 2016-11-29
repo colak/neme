@@ -220,7 +220,7 @@ header('content-type: text/html; charset=utf-8');
 </article>
 
 <figure class="grid_18 slides">
-<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
 <a href="/<txp:image_info type="name" />"><txp:image /></a>
 </txp:images>
 </figure>
