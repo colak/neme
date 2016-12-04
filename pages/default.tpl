@@ -850,7 +850,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span itemprop="image" class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
