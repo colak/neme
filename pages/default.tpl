@@ -219,7 +219,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:article_custom>
 </article>
 
-<figure class="grid_18 slides">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
 <txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
 <a href="/<txp:image_info type="name" />"><txp:image /></a>
 </txp:images>
@@ -276,7 +276,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_section name="about">
 <txp:article_custom id="1">
-<figure class="grid_6 nosmall"><txp:if_custom_field name="pubs">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />">img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
 </txp:images>
@@ -286,7 +286,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:images>
 </txp:if_custom_field></figure>
 
-<figure class="grid_18">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
 
 <txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
 <a href="<txp:site_url /><txp:image_info type="name" />"><txp:image /></a>
@@ -356,7 +356,7 @@ Cyprus</address>
 
 <txp:if_section name="nac">
 <txp:article_custom id="44">
-<figure class="grid_6 nosmall"><txp:if_custom_field name="pubs">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />">img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
 </txp:images>
@@ -366,7 +366,7 @@ Cyprus</address>
 </txp:images>
 </txp:if_custom_field></figure>
 
-<figure class="grid_18"><txp:images category='<txp:category_list type="image" parent="nac" break="," class="ds"><txp:category type="image" /></txp:category_list>' limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images category='<txp:category_list type="image" parent="nac" break="," class="ds"><txp:category type="image" /></txp:category_list>' limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:image />
 </txp:images>
 </figure>
@@ -456,9 +456,9 @@ Cyprus</p>
 <txp:else />
 <div class="line">
 
-<figure class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
-<figure class="grid_6 nosmall"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -506,7 +506,7 @@ Cyprus</p>
 <p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
 </article>
 
-<figure class="grid_18 slides">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
 <txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
 <a href="/<txp:image_info type="name" />"><txp:image /></a>
 </txp:images>
@@ -572,7 +572,7 @@ Cyprus</address></div>
 <txp:article_custom section="events, participations, about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure><span class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
 <txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure><div class="clear">&nbsp;</div></div>
 
 </txp:images>
@@ -584,7 +584,7 @@ Cyprus</address></div>
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
 <txp:if_different>
-<div class="line"><figure><span class="grid_6">
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span class="grid_6">
 <a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" class="ds" id="book_<txp:image_info type="id" />" /></a></span>
 <figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure>
 <div class="clear">&nbsp;</div>
@@ -595,7 +595,7 @@ Cyprus</address></div>
 <div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><txp:image id="177" class="grid_1 omega" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
-<div class="grid_12 grideven"><figure>
+<div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
 <span class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" class="ds" /></span>
 <figcaption class="grid_9 omega"><txp:image_info type="caption" escape="" />
 <txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged>
@@ -609,11 +609,11 @@ Cyprus</address></div>
 
 <txp:if_section name="workshops">
 <txp:article_custom id="2">
-<figure class="grid_6 nosmall"><txp:thumbnail id='<txp:custom_field name="img2" />' class="ds" /></figure>
-<figure class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:thumbnail id='<txp:custom_field name="img2" />' class="ds" /></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
 <div class="clear">&nbsp;</div>
 <div class="grid_18"><txp:body /></div>
-<figure class="grid_6 nosmall"><txp:thumbnail id="68" class="ds" /></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:thumbnail id="68" class="ds" /></figure>
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 </txp:if_section>
@@ -731,10 +731,10 @@ Cyprus</address></div>
 <txp:hide>==================-individual events-participations-======================</txp:hide>
 
 <txp:if_article_section name="events,participations">
-<txp:article><figure class="grid_6 nosmall">
+<txp:article><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
 <txp:thumbnail class="ds" /></txp:images></figure>
-<figure class="grid_18"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
 <div class="clear">&nbsp;</div>
 
 <div class="grid_18" role="main" id="main">
