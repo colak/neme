@@ -131,8 +131,8 @@ header('content-type: text/html; charset=utf-8');
 <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"  class="menu" id="menu-primary">
 <div class="menu-container">
 <div id="menu-toggle-primary">
-<a class="open-menu-primary" href="#menu-primary"><span class="screen-reader-text"><txp:image id="792" class="grid_2" /> Menu</span></a>
-<a class="close-menu-primary" href="#"><span class="screen-reader-text"><txp:image id="792" class="grid_2" /> Close menu</span></a>
+<a class="open-menu-primary" href="#menu-primary"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Menu</span></a>
+<a class="close-menu-primary" href="#"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Close menu</span></a>
 </div><!-- .menu-toggle -->
 <div class="wrap">
 <ul class="menu-items" id="menu-primary-items">
@@ -572,7 +572,7 @@ Cyprus</address></div>
 <txp:article_custom section="events, participations, about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
 <txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure><div class="clear">&nbsp;</div></div>
 
 </txp:images>
@@ -584,7 +584,7 @@ Cyprus</address></div>
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
 <txp:if_different>
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span class="grid_6">
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
 <a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" class="ds" id="book_<txp:image_info type="id" />" /></a></span>
 <figcaption class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged></figcaption></figure>
 <div class="clear">&nbsp;</div>
@@ -596,7 +596,7 @@ Cyprus</address></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
-<span class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" class="ds" /></span>
+<span itemprop="image" class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" class="ds" /></span>
 <figcaption class="grid_9 omega"><txp:image_info type="caption" escape="" />
 <txp:rvm_if_privileged><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:rvm_if_privileged>
 </figcaption></figure>
@@ -788,7 +788,7 @@ Cyprus</address></div>
 <div class="clear">&nbsp;</div></txp:if_variable>
 
 <div class="sub"><txp:article_custom label='Other <txp:section />' labeltag="h4" section='<txp:section />' limit="600" wraptag="ul" class="submenu">
-<txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
+<txp:if_article_id><li><span itemprop="image"><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 
 </div>
@@ -850,7 +850,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
+<span itemprop="image" class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
