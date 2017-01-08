@@ -131,6 +131,9 @@ Redirect 301 /workshops/workshops /workshops/
 
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} (1-99seo) [NC,OR]
+RewriteCond %{HTTP_REFERER} (2hDdcMe) [NC,OR]
+RewriteCond %{HTTP_REFERER} (2hsQ0zD) [NC,OR]
+RewriteCond %{HTTP_REFERER} (2gK7XFW) [NC,OR]
 RewriteCond %{HTTP_REFERER} (5elementov) [NC,OR]
 RewriteCond %{HTTP_REFERER} (abccoolgallery) [NC,OR]
 RewriteCond %{HTTP_REFERER} (abcteach) [NC,OR]
