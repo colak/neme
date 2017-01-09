@@ -91,9 +91,14 @@ RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wd
 #ErrorDocument 403 /403.php
 Header append X-FRAME-OPTIONS "SAMEORIGIN"
 
-#RewriteEngine on. Redirect to www
-RewriteCond %{HTTP_HOST} ^neme.org [NC]
-RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
+# Redirect to www
+# RewriteCond %{HTTP_HOST} ^neme.org [NC]
+# RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
+
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 #RewriteRule ^/sitemap/ /texts/ [R=301,L]
 RedirectMatch 301 ^/main/?(.+)?$ http://www.neme.org/$1
@@ -365,10 +370,15 @@ RewriteRule ^(.*)$ - [F,L]
 # RewriteRule ^ - [F]
 
 
-# This prevents web browsers and spiders from seeing the .htaccess directives:
+# Hide server signuture
 
 ServerSignature Off
 
+# This prevents web browsers and spiders from seeing the .htaccess directives:
+
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
 
 <Files .htaccess>
 deny from all
