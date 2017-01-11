@@ -272,3 +272,5 @@ User-agent: dotbot
 Disallow:/
 User-agent: ahrefsbot
 Disallow:/
+
+Sitemap: /?rah_sitemap=sitemap
