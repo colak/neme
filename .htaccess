@@ -351,6 +351,7 @@ RewriteCond %{HTTP_REFERER} (yougotanewdomain) [NC,OR]
 RewriteCond %{HTTP_REFERER} (z-news) [NC,OR]
 RewriteCond %{HTTP_REFERER} (zebramart) [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
+
 # Block keywords in the url
 # This is for local urls. 
 
