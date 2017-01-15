@@ -1,4 +1,4 @@
-# compression 
+# compression and cache control
 
 <ifModule mod_headers.c>
 Header set Connection keep-alive
@@ -19,14 +19,12 @@ Header set Connection keep-alive
     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
-# ETags
-
 <IfModule mod_headers.c>
 Header unset ETag
 FileETag None
 </IfModule>
 
-# cache control
+
 
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -47,11 +45,24 @@ ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
 </IfModule>
 
-# deny access to bad robots site rippers offline browsers and other nasty scum
+
+#ErrorDocument 403 /403.php
+Header append X-FRAME-OPTIONS "SAMEORIGIN"
+
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^neme.org [NC]
+#RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
+
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# deny access to evil robots site rippers offline browsers and other nasty scum
 # RewriteBase /
+
 RewriteCond %{HTTP_USER_AGENT} ADSARobot|ah-ha|almaden|aktuelles|Anarchie|amzn_assoc|ASPSeek|ASSORT|ATHENS|Atomz|attach|attache|autoemailspider|BackWeb|Bandit|BatchFTP|bdfetch|big.brother|BlackWidow|bmclient|Boston\ Project|BravoBrian\ SpiderEngine\ MarcoPolo|Bot\ mailto:craftbot@yahoo.com|Buddy|Bullseye|bumblebee|capture|CherryPicker|ChinaClaw|CICC|clipping|Collector|Copier|Crescent|Crescent\ Internet\ ToolPak|Custo|cyberalert|DA$|Deweb|diagem|Digger|Digimarc|DIIbot|DISCo|DISCo\ Pump|DISCoFinder|Download\ Demon|Download\ Wonder|Downloader|Drip|DSurf15a|DTS.Agent|EasyDL|eCatch|ecollector|efp@gmx\.net|Email\ Extractor|EirGrabber|email|EmailCollector|EmailSiphon|EmailWolf|Express\ WebPictures|ExtractorPro|EyeNetIE|FavOrg|fastlwspider|Favorites\ Sweeper|Fetch|FEZhead|FileHound|FlashGet\ WebWasher|FlickBot|fluffy|FrontPage|GalaxyBot|Generic|Getleft|GetRight|GetSmart|GetWeb!|GetWebPage|gigabaz|Girafabot|Go\!Zilla|Go!Zilla|Go-Ahead-Got-It|GornKer|gotit|Grabber|GrabNet|Grafula|Green\ Research|grub-client|Harvest|hhjhj@yahoo|hloader|HMView|HomePageSearch|http\ generic|HTTrack|httpdown|httrack|ia_archiver|IBM_Planetwide|Image\ Stripper|Image\ Sucker|imagefetch|IncyWincy|Indy*Library|Indy\ Library|informant|Ingelin|InterGET|Internet\ Ninja|InternetLinkagent|Internet\ Ninja|InternetSeer\.com|Iria|Irvine|JBH*agent|JetCar|JOC|JOC\ Web\ Spider|JustView|KWebGet|Lachesis|larbin|LeechFTP|LexiBot|lftp|libwww|likse|Link|Link*Sleuth|LINKS\ ARoMATIZED|LinkWalker|LWP|lwp-trivial|Mag-Net|Magnet|Mac\ Finder|Mag-Net|Mass\ Downloader|MCspider|Memo|Microsoft.URL|MIDown\ tool|Mirror|Missigua\ Locator|Mister\ PiX|MMMtoCrawl\/UrlDispatcherLLL|^Mozilla$|Mozilla.*Indy|Mozilla.*NEWT|Mozilla*MSIECrawler|MS\ FrontPage*|MSFrontPage|MSIECrawler|MSProxy|multithreaddb|nationaldirectory|Navroad|NearSite|NetAnts|NetCarta|NetMechanic|netprospector|NetResearchServer|NetSpider|Net\ Vampire|NetZIP|NetZip\ Downloader|NetZippy|NEWT|NICErsPRO|Ninja|NPBot|Octopus|Offline\ Explorer|Offline\ Navigator|OpaL|Openfind|OpenTextSiteCrawler|OrangeBot|PageGrabber|Papa\ Foto|PackRat|pavuk|pcBrowser|PersonaPilot|Ping|PingALink|Pockey|Proxy|psbot|PSurf|puf|Pump|PushSite|QRVA|RealDownload|Reaper|Recorder|ReGet|replacer|RepoMonkey|Robozilla|Rover|RPT-HTTPClient|Rsync|Scooter|SearchExpress|searchhippo|searchterms\.it|Second\ Street\ Research|Seeker|Shai|Siphon|sitecheck|sitecheck.internetseer.com|SiteSnagger|SlySearch|SmartDownload|snagger|Snake|SpaceBison|Spegla|SpiderBot|sproose|SqWorm|Stripper|Sucker|SuperBot|SuperHTTP|Surfbot|SurfWalker|Szukacz|tAkeOut|tarspider|Teleport\ Pro|Templeton|TrueRobot|TV33_Mercator|UIowaCrawler|UtilMind|URLSpiderPro|URL_Spider_Pro|Vacuum|vagabondo|vayala|visibilitygap|VoidEYE|vspider|Web\ Downloader|w3mir|Web\ Data\ Extractor|Web\ Image\ Collector|Web\ Sucker|Wweb|WebAuto|WebBandit|web\.by\.mail|Webclipping|webcollage|webcollector|WebCopier|webcraft@bea|webdevil|webdownloader|Webdup|WebEMailExtrac|WebFetch|WebGo\ IS|WebHook|Webinator|WebLeacher|WEBMASTERS|WebMiner|WebMirror|webmole|WebReaper|WebSauger|Website|Website\ eXtractor|Website\ Quester|WebSnake|Webster|WebStripper|websucker|webvac|webwalk|webweasel|WebWhacker|WebZIP|Wget|Whacker|whizbang|WhosTalking|Widow|WISEbot|WWWOFFLE|x-Tractor|^Xaldon\ WebSpider|WUMPUS|Xenu|XGET|Zeus.*Webster|Zeus [NC]
 RewriteRule ^.* - [F,L]
-
 
 # hotlink protection
 <IfModule mod_rewrite.c>
@@ -100,25 +111,6 @@ RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?faganfinder\.com/.*$ [NC]
 RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
 </ifModule>
 
-#ErrorDocument 403 /403.php
-Header append X-FRAME-OPTIONS "SAMEORIGIN"
-
-# Redirect to www
-# RewriteCond %{HTTP_HOST} ^neme.org [NC]
-# RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
-
-RewriteCond %{HTTP_HOST} !^$
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTPS}s ^on(s)|
-RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-# Force non-www in a Generic Way
-
-# RewriteEngine on
-# RewriteCond %{HTTP_HOST} ^www\.
-# RewriteCond %{HTTPS}s ^on(s)|off
-# RewriteCond http%1://%{HTTP_HOST} ^(https?://)(www\.)?(.+)$
-# RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
 
 #RewriteRule ^/sitemap/ /texts/ [R=301,L]
 RedirectMatch 301 ^/main/?(.+)?$ http://www.neme.org/$1
@@ -149,10 +141,21 @@ Redirect 301 /about/about-neme /about/
 Redirect 301 /nac/neme-arts-centre /nac/
 Redirect 301 /workshops/workshops /workshops/
 
-# Block Spam referrers. 
-# This method is using the url name without the tld. 
-# Advantage: Blocks hits from any url which has the keyword
-# Disadvantage: Blocks hits from any url which has the keyword so I might be blocking legit sites
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
+#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
+#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
+#RewriteRule .* - [F]
+
+# block QUERY_STRINGs
+#<IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).* [NC,OR]
+# RewriteCond %{QUERY_STRING} ^.*(\.|\*|;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).* [NC,OR]
+# RewriteCond %{QUERY_STRING} ^.*(md5|benchmark|union|select|insert|cast|set|declare|drop|update).* [NC]
+# RewriteRule ^(.*)$ - [F,L]
+#</IfModule>
+
 
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} (1-99seo) [NC,OR]
@@ -163,6 +166,7 @@ RewriteCond %{HTTP_REFERER} (2hDdcMe) [NC,OR]
 RewriteCond %{HTTP_REFERER} (2hsQ0zD) [NC,OR]
 RewriteCond %{HTTP_REFERER} (2hXrgwD) [NC,OR]
 RewriteCond %{HTTP_REFERER} (5elementov) [NC,OR]
+RewriteCond %{HTTP_REFERER} (98oi) [NC,OR]
 RewriteCond %{HTTP_REFERER} (abccoolgallery) [NC,OR]
 RewriteCond %{HTTP_REFERER} (abcteach) [NC,OR]
 RewriteCond %{HTTP_REFERER} (acetylsalicylicacid) [NC,OR]
@@ -372,10 +376,16 @@ RewriteCond %{HTTP_REFERER} (z-news) [NC,OR]
 RewriteCond %{HTTP_REFERER} (zebramart) [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
 
-# Block keywords in the url
-# This is for local urls. 
 
-RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|kcfinder|register|trackback|cgi|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|login|cms|console|ycportal|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc) [NC]
+
+RewriteEngine On
+#RewriteCond %{HTTP_REFERER} .*xxx.org.*$ [OR]
+#RewriteCond %{HTTP_REFERER} .*yyy.org.*$ [OR]
+#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [OR]
+RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$
+RewriteRule ^(.*)$ http://www.neme.org/kwangjubiennale.html
+
+RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|wordpress|blog|kcfinder|register|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|cookies|joomla|templates|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* http://127.0.0.1/ [R=301,L]
 
 #RewriteCond %{REMOTE_ADDR} 23\.108\.34\.202
@@ -386,7 +396,14 @@ RewriteRule .* http://127.0.0.1/ [R=301,L]
 #RewriteCond %{REMOTE_HOST} !^23\.108\.34\.202
 #RewriteRule \.html$ /indexthief.htm [R=302,L]
 
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{REMOTE_HOST} 1\.215\.226\.190
+RewriteRule .* http://www.neme.org/indexthief.htm [R,L]
 
+
+#Order Deny,Allow
+#Deny from 1.215.226.190
 
 #DirectoryIndex index.php index.html
 
@@ -405,7 +422,11 @@ RewriteCond %{THE_REQUEST} ^.*(wp-login).* [NC]
 RewriteCond %{THE_REQUEST} ^.*(fckeditor).* [NC]
 RewriteRule ^(.*)$ - [F,L]
 
+# turn off ipv6
+#Listen 0.0.0.0:80
 
+
+AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
@@ -431,14 +452,12 @@ RewriteRule ^(.*)$ - [F,L]
 </IfModule>
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
-# RewriteRule ^ - [F]
+# RewriteRule ^ - [F]
 
 
-# Hide server signuture
+# This prevents web browsers or spiders from seeing your .htaccess directives:
 
 ServerSignature Off
-
-# This prevents web browsers and spiders from seeing the .htaccess directives:
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
