@@ -1,3 +1,5 @@
+# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
+
 # compression and cache control
 
 <ifModule mod_headers.c>
@@ -146,15 +148,6 @@ Redirect 301 /workshops/workshops /workshops/
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
 #RewriteRule .* - [F]
-
-# block QUERY_STRINGs
-#<IfModule mod_rewrite.c>
-# RewriteEngine On
-# RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).* [NC,OR]
-# RewriteCond %{QUERY_STRING} ^.*(\.|\*|;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).* [NC,OR]
-# RewriteCond %{QUERY_STRING} ^.*(md5|benchmark|union|select|insert|cast|set|declare|drop|update).* [NC]
-# RewriteRule ^(.*)$ - [F,L]
-#</IfModule>
 
 
 RewriteEngine on
@@ -418,9 +411,15 @@ RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
 RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
 RewriteRule ^ - [F]
 
-RewriteCond %{THE_REQUEST} ^.*(wp-login).* [NC]
-RewriteCond %{THE_REQUEST} ^.*(fckeditor).* [NC]
-RewriteRule ^(.*)$ - [F,L]
+# block QUERY_STRINGs
+#<IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).* [NC,OR]
+# RewriteCond %{QUERY_STRING} ^.*(\.|\*|;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).* [NC,OR]
+# RewriteCond %{QUERY_STRING} ^.*(md5|benchmark|union|select|insert|cast|set|declare|drop|update).* [NC]
+# RewriteRule ^(.*)$ - [F,L]
+#</IfModule>
+
 
 # turn off ipv6
 #Listen 0.0.0.0:80
