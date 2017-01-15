@@ -1,5 +1,3 @@
-# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
-
 # compression and cache control
 
 <ifModule mod_headers.c>
