@@ -24,7 +24,13 @@ Header unset ETag
 FileETag None
 </IfModule>
 
-
+<ifModule mod_headers.c>
+    Header unset P3P
+    Header append X-XSS-Protection "1; mode=block"
+    Header append X-Frame-Options "DENY"
+    Header append X-Content-Type-Options "nosniff"
+    Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com"
+</ifModule>
 
 <IfModule mod_expires.c>
 ExpiresActive On
