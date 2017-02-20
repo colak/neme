@@ -30,7 +30,15 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 
 <p><txp:if_article_list>
 
+<txp:if_section name="nac">
+&copy; 2014-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a>.
+<txp:else />
+<txp:if_section name="events,participations,texts">
 &copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a> and/or respective contributors.
+<txp:else />
+&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a>.
+</txp:if_section>
+</txp:if_section>
 <txp:else />
 
 <txp:variable name="year" value='<txp:php>echo safe_strftime("%Y");</txp:php>' />
