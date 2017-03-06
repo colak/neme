@@ -164,15 +164,15 @@ header('content-type: text/html; charset=utf-8');
 <div id="header"><div class="container_24">
 
 <div class="grid_2 logo nosmall">
-<txp:glx_if_frontpage>
+<txp:if_section name="">
 <txp:image id="792" />
 <txp:else />
 <a href="<txp:site_url />" rel="home"><txp:image id="792" /></a>
 <small>Est. 2004</small>
-</txp:glx_if_frontpage>
+</txp:if_section>
 </div>
 
-<txp:glx_if_frontpage><h1><txp:site_slogan /></h1><txp:else /><h1><txp:page_title /></h1></txp:glx_if_frontpage>
+<txp:if_section name=""><h1><txp:site_slogan /></h1><txp:else /><h1><txp:page_title /></h1></txp:if_section>
 
 <div class="clear">&nbsp;</div>
 
@@ -210,7 +210,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_search>
 </txp:if_section>
 
-<txp:glx_if_frontpage>
+<txp:if_section name="">
 <article class="grid_6 about" role="main">
 <txp:article_custom id="1">
 <h3><txp:title /></h3>
@@ -266,7 +266,7 @@ header('content-type: text/html; charset=utf-8');
 </div>
 
 <div class="clear">&nbsp;</div>
-</txp:glx_if_frontpage>
+</txp:if_section>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
