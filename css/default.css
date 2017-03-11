@@ -354,7 +354,7 @@ transform: translatez(0);
 .container_24 {padding:0 1.5%;display:block}
 #menu {clear:both;display:block;}
 h1 {font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em 1.5%; clear:both;width:97%;display:block;}
-#header {padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:1em 0 0 0;}
+#header {padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:2em 0 0 0;}
 #header .container_24 .grid_18, #header .grid_20 {width:95%;margin:0 auto; padding:0; border:0; display:block; top:0; clear:both;}
 .logo, #header .grid_6 {float:none;display:block;width:11%;height:auto;margin:0 auto}
 .logo {clear:both}
