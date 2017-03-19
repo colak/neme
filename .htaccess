@@ -237,6 +237,7 @@ RewriteCond %{HTTP_REFERER} (cincybar) [NC,OR]
 RewriteCond %{HTTP_REFERER} (cleaningservices) [NC,OR]
 RewriteCond %{HTTP_REFERER} (coolnstore) [NC,OR]
 RewriteCond %{HTTP_REFERER} (cosmetic) [NC,OR]
+RewriteCond %{HTTP_REFERER} (craftburg) [NC,OR]
 RewriteCond %{HTTP_REFERER} (creditservise) [NC,OR]
 RewriteCond %{HTTP_REFERER} (creditmoney) [NC,OR]
 RewriteCond %{HTTP_REFERER} (CSST-E7) [NC,OR]
@@ -268,6 +269,7 @@ RewriteCond %{HTTP_REFERER} (dveri-vdom) [NC,OR]
 RewriteCond %{HTTP_REFERER} (ecepu) [NC,OR]
 RewriteCond %{HTTP_REFERER} (eckonom) [NC,OR]
 RewriteCond %{HTTP_REFERER} (econom) [NC,OR]
+RewriteCond %{HTTP_REFERER} (ed-shop01) [NC,OR]
 RewriteCond %{HTTP_REFERER} (ehisaxego) [NC,OR]
 RewriteCond %{HTTP_REFERER} (electro-n) [NC,OR]
 RewriteCond %{HTTP_REFERER} (elektrotabak) [NC,OR]
@@ -433,6 +435,7 @@ RewriteCond %{HTTP_REFERER} (musicstock) [NC,OR]
 RewriteCond %{HTTP_REFERER} (my-hlife) [NC,OR]
 RewriteCond %{HTTP_REFERER} (mydirtystuff) [NC,OR]
 RewriteCond %{HTTP_REFERER} (myriazur) [NC,OR]
+RewriteCond %{HTTP_REFERER} (nalogovyy-kodeks) [NC,OR]
 RewriteCond %{HTTP_REFERER} (nashkomp) [NC,OR]
 RewriteCond %{HTTP_REFERER} (nemazennevemben) [NC,OR]
 RewriteCond %{HTTP_REFERER} (newstraveller) [NC,OR]
@@ -706,7 +709,7 @@ AddDefaultCharset utf-8
 </IfModule>
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
-# RewriteRule ^ - [F]
+# RewriteRule ^ - [F]
 
 
 # This prevents web browsers or spiders from seeing your .htaccess directives:
