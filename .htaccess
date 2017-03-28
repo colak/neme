@@ -155,21 +155,6 @@ Redirect 301 /workshops/workshops /workshops/
 
 # spam referrers
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} (1-99seo) [NC,OR]
 RewriteCond %{HTTP_REFERER} (2dm) [NC,OR]
