@@ -1,3 +1,7 @@
+#neme2
+
+# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
+
 # compression and cache control
 
 <ifModule mod_headers.c>
@@ -31,6 +35,8 @@ FileETag None
     Header append X-Content-Type-Options "nosniff"
     Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com"
 </ifModule>
+
+
 
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -67,55 +73,55 @@ RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # deny access to evil robots site rippers offline browsers and other nasty scum
 # RewriteBase /
 
-RewriteCond %{HTTP_USER_AGENT} ADSARobot|ah-ha|almaden|aktuelles|Anarchie|amzn_assoc|ASPSeek|ASSORT|ATHENS|Atomz|attach|attache|autoemailspider|BackWeb|Bandit|BatchFTP|bdfetch|big.brother|BlackWidow|bmclient|Boston\ Project|BravoBrian\ SpiderEngine\ MarcoPolo|Bot\ mailto:craftbot@yahoo.com|Buddy|Bullseye|bumblebee|capture|CherryPicker|ChinaClaw|CICC|clipping|Collector|Copier|Crescent|Crescent\ Internet\ ToolPak|Custo|cyberalert|DA$|Deweb|diagem|Digger|Digimarc|DIIbot|DISCo|DISCo\ Pump|DISCoFinder|Download\ Demon|Download\ Wonder|Downloader|Drip|DSurf15a|DTS.Agent|EasyDL|eCatch|ecollector|efp@gmx\.net|Email\ Extractor|EirGrabber|email|EmailCollector|EmailSiphon|EmailWolf|Express\ WebPictures|ExtractorPro|EyeNetIE|FavOrg|fastlwspider|Favorites\ Sweeper|Fetch|FEZhead|FileHound|FlashGet\ WebWasher|FlickBot|fluffy|FrontPage|GalaxyBot|Generic|Getleft|GetRight|GetSmart|GetWeb!|GetWebPage|gigabaz|Girafabot|Go\!Zilla|Go!Zilla|Go-Ahead-Got-It|GornKer|gotit|Grabber|GrabNet|Grafula|Green\ Research|grub-client|Harvest|hhjhj@yahoo|hloader|HMView|HomePageSearch|http\ generic|HTTrack|httpdown|httrack|ia_archiver|IBM_Planetwide|Image\ Stripper|Image\ Sucker|imagefetch|IncyWincy|Indy*Library|Indy\ Library|informant|Ingelin|InterGET|Internet\ Ninja|InternetLinkagent|Internet\ Ninja|InternetSeer\.com|Iria|Irvine|JBH*agent|JetCar|JOC|JOC\ Web\ Spider|JustView|KWebGet|Lachesis|larbin|LeechFTP|LexiBot|lftp|libwww|likse|Link|Link*Sleuth|LINKS\ ARoMATIZED|LinkWalker|LWP|lwp-trivial|Mag-Net|Magnet|Mac\ Finder|Mag-Net|Mass\ Downloader|MCspider|Memo|Microsoft.URL|MIDown\ tool|Mirror|Missigua\ Locator|Mister\ PiX|MMMtoCrawl\/UrlDispatcherLLL|^Mozilla$|Mozilla.*Indy|Mozilla.*NEWT|Mozilla*MSIECrawler|MS\ FrontPage*|MSFrontPage|MSIECrawler|MSProxy|multithreaddb|nationaldirectory|Navroad|NearSite|NetAnts|NetCarta|NetMechanic|netprospector|NetResearchServer|NetSpider|Net\ Vampire|NetZIP|NetZip\ Downloader|NetZippy|NEWT|NICErsPRO|Ninja|NPBot|Octopus|Offline\ Explorer|Offline\ Navigator|OpaL|Openfind|OpenTextSiteCrawler|OrangeBot|PageGrabber|Papa\ Foto|PackRat|pavuk|pcBrowser|PersonaPilot|Ping|PingALink|Pockey|Proxy|psbot|PSurf|puf|Pump|PushSite|QRVA|RealDownload|Reaper|Recorder|ReGet|replacer|RepoMonkey|Robozilla|Rover|RPT-HTTPClient|Rsync|Scooter|SearchExpress|searchhippo|searchterms\.it|Second\ Street\ Research|Seeker|Shai|Siphon|sitecheck|sitecheck.internetseer.com|SiteSnagger|SlySearch|SmartDownload|snagger|Snake|SpaceBison|Spegla|SpiderBot|sproose|SqWorm|Stripper|Sucker|SuperBot|SuperHTTP|Surfbot|SurfWalker|Szukacz|tAkeOut|tarspider|Teleport\ Pro|Templeton|TrueRobot|TV33_Mercator|UIowaCrawler|UtilMind|URLSpiderPro|URL_Spider_Pro|Vacuum|vagabondo|vayala|visibilitygap|VoidEYE|vspider|Web\ Downloader|w3mir|Web\ Data\ Extractor|Web\ Image\ Collector|Web\ Sucker|Wweb|WebAuto|WebBandit|web\.by\.mail|Webclipping|webcollage|webcollector|WebCopier|webcraft@bea|webdevil|webdownloader|Webdup|WebEMailExtrac|WebFetch|WebGo\ IS|WebHook|Webinator|WebLeacher|WEBMASTERS|WebMiner|WebMirror|webmole|WebReaper|WebSauger|Website|Website\ eXtractor|Website\ Quester|WebSnake|Webster|WebStripper|websucker|webvac|webwalk|webweasel|WebWhacker|WebZIP|Wget|Whacker|whizbang|WhosTalking|Widow|WISEbot|WWWOFFLE|x-Tractor|^Xaldon\ WebSpider|WUMPUS|Xenu|XGET|Zeus.*Webster|Zeus [NC]
-RewriteRule ^.* - [F,L]
+#RewriteCond %{HTTP_USER_AGENT} ADSARobot|ah-ha|almaden|aktuelles|Anarchie|amzn_assoc|ASPSeek|ASSORT|ATHENS|Atomz|attach|attache|autoemailspider|BackWeb|Bandit|BatchFTP|bdfetch|big.brother|BlackWidow|bmclient|Boston\ Project|BravoBrian\ SpiderEngine\ MarcoPolo|Bot\ mailto:craftbot@yahoo.com|Buddy|Bullseye|bumblebee|capture|CherryPicker|ChinaClaw|CICC|clipping|Collector|Copier|Crescent|Crescent\ Internet\ ToolPak|Custo|cyberalert|DA$|Deweb|diagem|Digger|Digimarc|DIIbot|DISCo|DISCo\ Pump|DISCoFinder|Download\ Demon|Download\ Wonder|Downloader|Drip|DSurf15a|DTS.Agent|EasyDL|eCatch|ecollector|efp@gmx\.net|EirGrabber|EmailCollector|EmailSiphon|EmailWolf|Express\ WebPictures|ExtractorPro|EyeNetIE|FavOrg|fastlwspider|Favorites\ Sweeper|Fetch|FEZhead|FileHound|FlashGet\ WebWasher|FlickBot|fluffy|FrontPage|GalaxyBot|Generic|Getleft|GetRight|GetSmart|GetWeb!|GetWebPage|gigabaz|Girafabot|Go\!Zilla|Go!Zilla|Go-Ahead-Got-It|GornKer|gotit|Grabber|GrabNet|Grafula|Green\ Research|grub-client|Harvest|hhjhj@yahoo|hloader|HMView|HomePageSearch|http\ generic|HTTrack|httpdown|httrack|ia_archiver|IBM_Planetwide|Image\ Stripper|Image\ Sucker|imagefetch|IncyWincy|Indy*Library|Indy\ Library|informant|Ingelin|InterGET|Internet\ Ninja|InternetLinkagent|Internet\ Ninja|InternetSeer\.com|Iria|Irvine|JBH*agent|JetCar|JOC|JOC\ Web\ Spider|JustView|KWebGet|Lachesis|larbin|LeechFTP|LexiBot|lftp|libwww|likse|Link|Link*Sleuth|LINKS\ ARoMATIZED|LinkWalker|LWP|lwp-trivial|Mag-Net|Magnet|Mac\ Finder|Mag-Net|Mass\ Downloader|MCspider|Memo|Microsoft.URL|MIDown\ tool|Mirror|Missigua\ Locator|Mister\ PiX|MMMtoCrawl\/UrlDispatcherLLL|^Mozilla$|Mozilla.*Indy|Mozilla.*NEWT|Mozilla*MSIECrawler|MS\ FrontPage*|MSFrontPage|MSIECrawler|MSProxy|multithreaddb|nationaldirectory|Navroad|NearSite|NetAnts|NetCarta|NetMechanic|netprospector|NetResearchServer|NetSpider|Net\ Vampire|NetZIP|NetZip\ Downloader|NetZippy|NEWT|NICErsPRO|Ninja|NPBot|Octopus|Offline\ Explorer|Offline\ Navigator|OpaL|Openfind|OpenTextSiteCrawler|OrangeBot|PageGrabber|Papa\ Foto|PackRat|pavuk|pcBrowser|PersonaPilot|Ping|PingALink|Pockey|Proxy|psbot|PSurf|puf|Pump|PushSite|QRVA|RealDownload|Reaper|Recorder|ReGet|replacer|RepoMonkey|Robozilla|Rover|RPT-HTTPClient|Rsync|Scooter|SearchExpress|searchhippo|searchterms\.it|Second\ Street\ Research|Seeker|Shai|Siphon|sitecheck|sitecheck.internetseer.com|SiteSnagger|SlySearch|SmartDownload|snagger|Snake|SpaceBison|Spegla|SpiderBot|sproose|SqWorm|Stripper|Sucker|SuperBot|SuperHTTP|Surfbot|SurfWalker|Szukacz|tAkeOut|tarspider|Teleport\ Pro|Templeton|TrueRobot|TV33_Mercator|UIowaCrawler|UtilMind|URLSpiderPro|URL_Spider_Pro|Vacuum|vagabondo|vayala|visibilitygap|VoidEYE|vspider|Web\ Downloader|w3mir|Web\ Data\ Extractor|Web\ Image\ Collector|Web\ Sucker|Wweb|WebAuto|WebBandit|web\.by\.mail|Webclipping|webcollage|webcollector|WebCopier|webcraft@bea|webdevil|webdownloader|Webdup|WebEMailExtrac|WebFetch|WebGo\ IS|WebHook|Webinator|WebLeacher|WEBMASTERS|WebMiner|WebMirror|webmole|WebReaper|WebSauger|Website|Website\ eXtractor|Website\ Quester|WebSnake|Webster|WebStripper|websucker|webvac|webwalk|webweasel|WebWhacker|WebZIP|Wget|Whacker|whizbang|WhosTalking|Widow|WISEbot|WWWOFFLE|x-Tractor|^Xaldon\ WebSpider|WUMPUS|Xenu|XGET|Zeus.*Webster|Zeus [NC]
+#RewriteRule ^.* - [F,L]
 
-# hotlink protection
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?neme\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?news\.neme\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?cyprus\.neme\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?forum\.neme\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?hblack\.net/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?google\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?google\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?altavista\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?altavista\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?msn\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?msn\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?a9\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?a9\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?bing\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?bing\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?ixquick\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?ixquick\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?yandex\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?yandex\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?yahoo\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?yahoo\.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?excite\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?excite\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?goo\.ne\.jp/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?wolframalpha\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?wolframalpha\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?picsearch\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?picsearch\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?duckduckgo\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?duckduckgo\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?tineye\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?tineye\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?archive\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?archive\.org/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?baidu\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?baidu\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?ask\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?ask\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?faganfinder\.com/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?faganfinder\.com/.*$ [NC]
-RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
-</ifModule>
+# # hotlink protection
+# <IfModule mod_rewrite.c>
+# RewriteEngine on
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?neme\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?news\.neme\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?cyprus\.neme\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?forum\.neme\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?hblack\.net/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?google\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?google\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?altavista\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?altavista\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?msn\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?msn\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?a9\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?a9\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?bing\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?bing\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?ixquick\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?ixquick\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?yandex\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?yandex\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?yahoo\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?yahoo\.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?excite\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?excite\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?goo\.ne\.jp/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?wolframalpha\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?wolframalpha\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?picsearch\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?picsearch\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?duckduckgo\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?duckduckgo\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?tineye\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?tineye\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?archive\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?archive\.org/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?baidu\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?baidu\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?ask\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?ask\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^https?://([^.]+\.)?faganfinder\.com/.*$ [NC]
+# RewriteCond %{HTTP_REFERER} !^http?://([^.]+\.)?faganfinder\.com/.*$ [NC]
+# RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
+# </ifModule>
 
 
 #RewriteRule ^/sitemap/ /texts/ [R=301,L]
@@ -153,7 +159,6 @@ Redirect 301 /workshops/workshops /workshops/
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
 #RewriteRule .* - [F]
 
-# spam referrers
 
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} (1-99seo) [NC,OR]
@@ -215,6 +220,7 @@ RewriteCond %{HTTP_REFERER} (b-styles) [NC,OR]
 RewriteCond %{HTTP_REFERER} (babyfashion96) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bad-stars) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bagcionderlab) [NC,OR]
+RewriteCond %{HTTP_REFERER} (baikalyachts) [NC,OR]
 RewriteCond %{HTTP_REFERER} (balashiha-evakuator) [NC,OR]
 RewriteCond %{HTTP_REFERER} (balkanfarma) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bania-msk) [NC,OR]
@@ -223,6 +229,7 @@ RewriteCond %{HTTP_REFERER} (bannermsk) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bazakanstovarov) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bazaprint) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bdsmgalls) [NC,OR]
+RewriteCond %{HTTP_REFERER} (beetarcow) [NC,OR]
 RewriteCond %{HTTP_REFERER} (belgorod) [NC,OR]
 RewriteCond %{HTTP_REFERER} (bestcurs) [NC,OR]
 RewriteCond %{HTTP_REFERER} (best-seo-solution) [NC,OR]
@@ -479,6 +486,7 @@ RewriteCond %{HTTP_REFERER} (mosrif) [NC,OR]
 RewriteCond %{HTTP_REFERER} (mozainka) [NC,OR]
 RewriteCond %{HTTP_REFERER} (mp3minus) [NC,OR]
 RewriteCond %{HTTP_REFERER} (msk-balkon) [NC,OR]
+RewriteCond %{HTTP_REFERER} (msk-eva) [NC,OR]
 RewriteCond %{HTTP_REFERER} (murmoney) [NC,OR]
 RewriteCond %{HTTP_REFERER} (musezone) [NC,OR]
 RewriteCond %{HTTP_REFERER} (musicstock) [NC,OR]
@@ -601,6 +609,7 @@ RewriteCond %{HTTP_REFERER} (sks-ural) [NC,OR]
 RewriteCond %{HTTP_REFERER} (sletat) [NC,OR]
 RewriteCond %{HTTP_REFERER} (smart-box) [NC,OR]
 RewriteCond %{HTTP_REFERER} (smartfoxclub) [NC,OR]
+RewriteCond %{HTTP_REFERER} (sn22) [NC,OR]
 RewriteCond %{HTTP_REFERER} (sobervoditel24) [NC,OR]
 RewriteCond %{HTTP_REFERER} (sok74) [NC,OR]
 RewriteCond %{HTTP_REFERER} (sotka) [NC,OR]
@@ -653,6 +662,7 @@ RewriteCond %{HTTP_REFERER} (ukrsmeta) [NC,OR]
 RewriteCond %{HTTP_REFERER} (usaring) [NC,OR]
 RewriteCond %{HTTP_REFERER} (util-master) [NC,OR]
 RewriteCond %{HTTP_REFERER} (varikoz24) [NC,OR]
+RewriteCond %{HTTP_REFERER} (varzi) [NC,OR]
 RewriteCond %{HTTP_REFERER} (vash-crim) [NC,OR]
 RewriteCond %{HTTP_REFERER} (vektorpress) [NC,OR]
 RewriteCond %{HTTP_REFERER} (vkeep) [NC,OR]
@@ -676,6 +686,7 @@ RewriteCond %{HTTP_REFERER} (wergin) [NC,OR]
 RewriteCond %{HTTP_REFERER} (westcomp) [NC,OR]
 RewriteCond %{HTTP_REFERER} (whatsappdownload10) [NC,OR]
 RewriteCond %{HTTP_REFERER} (wheelchairliftsarea) [NC,OR]
+RewriteCond %{HTTP_REFERER} (whipme) [NC,OR]
 RewriteCond %{HTTP_REFERER} (whiteproduct) [NC,OR]
 RewriteCond %{HTTP_REFERER} (win-automation) [NC,OR]
 RewriteCond %{HTTP_REFERER} (wispapp) [NC,OR]
@@ -711,7 +722,6 @@ RewriteCond %{HTTP_REFERER} (zona-aqua) [NC,OR]
 RewriteCond %{HTTP_REFERER} (zpd-krd) [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
 
-
 RewriteEngine On
 #RewriteCond %{HTTP_REFERER} .*xxx.org.*$ [OR]
 #RewriteCond %{HTTP_REFERER} .*yyy.org.*$ [OR]
@@ -730,10 +740,16 @@ RewriteRule .* http://127.0.0.1/ [R=301,L]
 #RewriteCond %{REMOTE_HOST} !^23\.108\.34\.202
 #RewriteRule \.html$ /indexthief.htm [R=302,L]
 
+
 Options +FollowSymlinks
 RewriteEngine on
 RewriteCond %{REMOTE_HOST} 1\.215\.226\.190
 RewriteRule .* http://www.neme.org/indexthief.htm [R,L]
+
+#Options +FollowSymlinks
+#RewriteEngine on
+#RewriteCond %{REMOTE_HOST} 84\.109\.137\.242
+#RewriteRule .* http://www.neme.org/indexwhy.htm [R,L]
 
 
 Order Deny,Allow
@@ -792,20 +808,25 @@ AddDefaultCharset utf-8
 </IfModule>
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
-# RewriteRule ^ - [F]
+# RewriteRule ^ - [F]
 
 
 # This prevents web browsers or spiders from seeing your .htaccess directives:
 
 ServerSignature Off
+Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 
-<Files .htaccess>
-deny from all
-</Files>
+#<Files .htaccess>
+#deny from all
+#</Files>
+
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RedirectMatch 404 /\..*$
 
 <Files config.php> 
 deny from all 
