@@ -727,7 +727,8 @@ RewriteCond %{HTTP_REFERER} (zlathunter) [NC,OR]
 RewriteCond %{HTTP_REFERER} (znaniyapolza) [NC,OR]
 RewriteCond %{HTTP_REFERER} (zobra) [NC,OR]
 RewriteCond %{HTTP_REFERER} (zona-aqua) [NC,OR]
-RewriteCond %{HTTP_REFERER} (zpd-krd) [NC]
+RewriteCond %{HTTP_REFERER} (zpd-krd) [NC,OR]
+RewriteCond %{HTTP_REFERER} (zrus) [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
 
 RewriteEngine On
