@@ -793,10 +793,8 @@ RewriteCond %{HTTP_REFERER} (zrus) [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
 
 RewriteEngine On
-#RewriteCond %{HTTP_REFERER} .*xxx.org.*$ [OR]
-#RewriteCond %{HTTP_REFERER} .*yyy.org.*$ [OR]
-#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [OR]
-#RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$
+#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC,OR]
+#RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
 #RewriteRule ^(.*)$ http://www.neme.org/kwangjubiennale.html
 
 RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|wordpress|blog|kcfinder|register|elfinder|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|cookies|joomla|templates|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
