@@ -80,6 +80,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:feed_link flavor="atom" format="link" label="Atom" section="" category="" />
 <txp:feed_link flavor="rss" format="link" label="RSS" section="" category="" />
+<link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />?kuo_json_feed" />
 
 <link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
