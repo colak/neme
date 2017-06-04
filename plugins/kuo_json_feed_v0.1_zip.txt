@@ -1,0 +1,49 @@
+# Name: kuo_json_feed v0.1 (compressed)
+# Type: Public plugin
+# Create JSON Feed Version 1 of articles.
+# Author: Petri Ikonen
+# URL: http://kuopassa.net/txp/
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
