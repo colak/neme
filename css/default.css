@@ -218,7 +218,7 @@ background: linear-gradient(to bottom, #191919 0%, #ffffff 5%, #ffffff 100%);
 #front .grid_6 ul li {list-style: none; list-style-position: outside;margin:0;}
 #meta {background-color:#BA0000;padding:5px;margin:0 0 1em 0;}
 #meta .linklist, #meta a {color:#fff; font-size: 1.2em}
-#side li, .submenu li {list-style:none !important;list-style-position: outside !important; padding: 0;margin: 0;}
+#side li,.submenu li, #workshops .announce li{list-style:none!important;padding:0;margin:0}
 .line {border: none; border-bottom: medium double #eee; color: #eee; text-align: center; margin:0 0 3em 0} 
 .line:after { content: "●"; display: inline-block; position: relative; top: .8em; font-size: 1.5em; padding: 0 0.25em; background: #191919 url("/images/350.jpg") repeat;}
 .line h3, .line h4, .line h6 {text-align:left}
