@@ -346,9 +346,7 @@ transform: translatez(0);
 
 .logo {max-height: 150px; margin-bottom:1em;} 
 
-.social {width:100%;background-color:#ffffff;border-top:4px solid #fff;border-bottom:4px solid #fff;display:block}
-.social img {margin-left:3px;}
-
+.social {width:100%;background-color:#ffffff;margin-top:4px;border-bottom:4px solid #fff;padding-top:8px;display:block}.social img {margin-left:3px;}
 .anchor {display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
 
