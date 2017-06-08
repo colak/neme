@@ -345,6 +345,10 @@ transform: translatez(0);
 .bx-wrapper .bx-controls-direction a.disabled {display: none;}
 
 .logo {max-height: 150px; margin-bottom:1em;} 
+
+.social {width:100%;background-color:#ffffff;border-top:4px solid #fff;border-bottom:4px solid #fff;display:block}
+.social img {margin-right:3px;}
+
 .anchor {display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
 
