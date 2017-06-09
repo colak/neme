@@ -863,7 +863,7 @@ RewriteEngine On
 #RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
 #RewriteRule ^(.*)$ http://www.neme.org/kwangjubiennale.html
 
-RewriteCond %{REQUEST_URI} (ckeditor|ckfinder|connector|connectors|wordpress|blog|kcfinder|register|elfinder|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|cookies|joomla|templates|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
+RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|blog|kcfinder|register|elfinder|trackback|fallback|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|cookies|joomla|templates|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* http://127.0.0.1/ [R=301,L]
 
 #RewriteCond %{REMOTE_ADDR} 23\.108\.34\.202
