@@ -540,12 +540,10 @@ Cyprus</p>
 <txp:if_section name="contact">
 <div class="clear">&nbsp;</div>
 
-<txp:images category='<txp:category_list type="image" parent="events" break=",">
-<txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
-<a href="<txp:site_url />events/"><txp:thumbnail class="grid_6 ds" /></a></txp:images>
+<txp:thumbnail id="166" class="grid_4 nosmall" />
 
 <div class="grid_12">
-<txp:zem_contact to="nemeorg@gmail.com" label=""  thanks="Thank you, your message has been sent.">
+<txp:zem_contact to="***@gmail.com" label=""  thanks="Thank you, your message has been sent.">
 <txp:zem_contact_text label="Your name" required="1" /><br />
 <txp:zem_contact_text label="Your surname" required="1" /><br />
 <txp:zem_contact_email label="Your email" required="1" /><br />
@@ -567,7 +565,6 @@ Cyprus</address></div>
 
 <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
 </div>
-<txp:hide><txp:thumbnail id="166" class="grid_4 prefix_2" /></txp:hide>
 
 <div class="clear">&nbsp;</div>
 </txp:if_section>
