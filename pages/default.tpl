@@ -543,7 +543,7 @@ Cyprus</p>
 <txp:thumbnail id="166" class="grid_4 nosmall" />
 
 <div class="grid_12">
-<txp:zem_contact to="***@gmail.com" label=""  thanks="Thank you, your message has been sent.">
+<txp:zem_contact to="***@domain.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:zem_contact_text label="Your name" required="1" /><br />
 <txp:zem_contact_text label="Your surname" required="1" /><br />
 <txp:zem_contact_email label="Your email" required="1" /><br />
@@ -703,7 +703,7 @@ Cyprus</address></div>
 
 <div class="grid_10">
 
-<txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:zem_contact to="***@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:zem_contact_text label="Your name" /><br />
 <txp:zem_contact_text label="Your Surname" /><br />
 <txp:zem_contact_email label="Your email" /><br />
