@@ -930,6 +930,10 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	#RewriteBase /relative/web/path/
+	
+	# json
+	RewriteRule ^feed.json$ ./index.php?kuo_json_feed
+	RewriteRule ^([\-a-zA-Z0-9]+)-feed.json$ ./index.php?kuo_json_feed=$1
 
 	RewriteCond %{REQUEST_FILENAME} -f [OR]
 	RewriteCond %{REQUEST_FILENAME} -d
