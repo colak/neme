@@ -1,5 +1,8 @@
 #neme2
 
+<FilesMatch \.php$>
+    SetHandler php56-fcgi
+</FilesMatch>
 
 # compression and cache control
 
