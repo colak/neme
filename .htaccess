@@ -26,11 +26,8 @@ Header set Connection keep-alive
 </IfModule>
 
 <IfModule mod_headers.c>
-Header unset ETag
-FileETag None
-</IfModule>
-
-<ifModule mod_headers.c>
+    Header unset ETag
+    FileETag None
     Header unset P3P
     Header append X-XSS-Protection "1; mode=block"
     Header append X-Frame-Options "DENY"
