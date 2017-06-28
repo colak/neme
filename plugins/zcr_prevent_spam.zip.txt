@@ -1,0 +1,23 @@
+# Name: zcr_prevent_spam v0.1 (compressed)
+# Type: Public plugin
+# Use patterns to prevent spam
+# Author: Stef Dawson
+# URL: http://stefdawson.com/
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+H4sIAAAAAAAAA11SwYrbMBC9B/IPg1hiB9LEzjrbRCE9tYXeCqW3gpHlUSxqW0aS0+4u+fdK
+sp3NVifz5s3Me8/DaJrSV0MzSlrWIDkamj5R8sJ13mm8YGtz07HG4w5mva2UDqSUkh8WBXxm
+f4xqA5RMhLzX0iPbLSWVtR3dbIzjloG65qrZ+OpHSi6ojRy6HylJ1uk0ukTDtezsWNzuKflp
+EDpmLerWgFUwyoNJnnPAVRkc7LYHSjSepduqc87qumD8dxx5V26lFM/RCqIXbLhqLeN2bfqi
+kTZaHuez+Uz0LfeL4Y0eL+ez1/kM3HvAhsn6q8S6hBNYLZu4M3H0xaPR0k8IrIK13yexJ8C/
+Xe20xeRXS1Yg0PIqF0o3gyTvIJ+sDTOmXRdW9yyIOcHijDZ/E52PRaXjt47NBr4JsBVCkAms
+LDUaAw1zK9GAahHUQDhLF98tUafK8dfDFCcNGa8gfmeDGXgY6UsY0wgqHThFcSPcFPknBYQK
+LBb+t53zICdAq/tAl+/m/p/Ah0/ezn0CxjLbmzidUvfvOnxep/0aba9bR7iOR2Kfu+HM3cGF
+Y6FE6RL1iO1GTNTsbO55rrXCuiPHgibDvTZlID+6K0/EPi2KhO8FHnbZU3FIDhnjuyIRuMUs
+y8jx+g/udwWUagMAAA==
