@@ -544,11 +544,11 @@ Cyprus</p>
 
 <div class="grid_12">
 <txp:zem_contact to="***@domain.tld" label=""  thanks="Thank you, your message has been sent.">
-<txp:zem_contact_text label="Your name" required="1" /><br />
-<txp:zem_contact_text label="Your surname" required="1" /><br />
+<txp:zem_contact_text name="Name" label="Your name" required="1" /><br />
+<txp:zem_contact_text name="Surname" label="Your surname" required="1" /><br />
 <txp:zem_contact_email label="Your email" name="Email" required="1" /><br />
-<txp:zem_contact_text label="Your website" required="0" /><br />
-<txp:zem_contact_textarea label="Your question" /><br />
+<txp:zem_contact_text name="Website" label="Your website" required="0" /><br />
+<txp:zem_contact_textarea name="Comment" label="Your question" /><br />
 <txp:zem_contact_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
 <txp:zem_contact_checkbox label="To prove that this is not spam, Check this box before clicking the send button." /><br />
 <txp:zem_contact_serverinfo name="REMOTE_ADDR" label="IP number" />
