@@ -135,6 +135,7 @@ Redirect 301 /about/about-neme /about/
 Redirect 301 /nac/neme-arts-centre /nac/
 Redirect 301 /workshops/workshops /workshops/
 Redirect 301 /main/42/open-city-stepping-in-from-the-edge /texts/open-city
+Redirect 301 /185/2030 /texts/2030
 
 #RewriteEngine on
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
