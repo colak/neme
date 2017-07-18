@@ -77,7 +77,7 @@ RewriteCond %{HTTP_USER_AGENT} DA$|Deweb|diagem|Digger|Digimarc|DIIbot|DISCo|DIS
 RewriteCond %{HTTP_USER_AGENT} EasyDL|ebingbong|eCatch|ecatch|ecollector|efp@gmx\.net|EirGrabber|EmailCollector|EmailSiphon|EmailWolf|erocrawler|exabot|Express\ WebPictures|ExtractorPro|EyeNetIE [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} fastlwspider|FavOrg|Favorites\ Sweeper|Fetch|FEZhead|FileHound|FlashGet\ WebWasher|FlickBot|fluffy|flunky|frontpage|FrontPage [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} GalaxyBot|Generic|Getleft|GetRight|GetSmart|GetWeb!|GetWebPage|gigabaz|Girafabot|Go!Zilla|Go-Ahead-Got-It|GornKer|gotit|gotit|Go\!Zilla|Grabber|GrabNet|Grafula|Green\ Research|grub-client [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Harvest|harvest|hhjhj@yahoo|hloader|hloader|HMView|HomePageSearch|httpdown|httplib|http\ generic|httrack|HTTrack|humanlinks [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Harvest|harvest|hhjhj@yahoo|hloader|HMView|HomePageSearch|httpdown|httplib|http\ generic|httrack|HTTrack|humanlinks [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} ia_archiver|IBM_Planetwide|ilsebot|imagefetch|Image\ Stripper|Image\ Sucker|IncyWincy|Indy*Library|Indy\ Library|infonavirobot|informant|infotekies|Ingelin|intelliseek|interget|InterGET|InternetLinkagent|internetseer|InternetSeer\.com|Internet\ Ninja|Iria|Irvine [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} JBH*agent|jennybot|jetcar|JetCar|JOC|JOC\ Web\ Spider|JustView|jyxobot [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} kenjin|keyword|KWebGet [NC,OR]
