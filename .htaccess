@@ -3,8 +3,14 @@
 <FilesMatch \.php$>
     SetHandler php56-fcgi
 </FilesMatch>
+#<FilesMatch \.php$>
+#SetHandler php70-cgi
+#</FilesMatch>
+
+# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
 
 # compression and cache control
+
 
 <IfModule deflate_module>
     AddOutputFilterByType DEFLATE text/css
@@ -25,11 +31,11 @@
 Header set Connection keep-alive
 Header unset ETag
 FileETag None
-Header unset P3P	
+Header unset P3P
 Header append X-XSS-Protection "1; mode=block"
 Header append X-Frame-Options "DENY"
 Header append X-Content-Type-Options "nosniff"
-Header set Cache-Control "no-transform"	
+Header set Cache-Control "no-transform"
 Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com http:/dev.colkides.com http://*.statemachines.eu"
 </ifModule>
 
@@ -67,6 +73,7 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+
 # deny access to evil robots site rippers offline browsers and other nasty scum
 # RewriteBase /
 
@@ -97,7 +104,7 @@ RewriteCond %{HTTP_USER_AGENT} x-Tractor|xaldon|Xaldon\ WebSpider|Xenu|xenu|XGET
 RewriteCond %{HTTP_USER_AGENT} Zeus|Zeus.*Webster|Zeus.*Webster|zyborg|^Mozilla$ [NC]
 #RewriteRule ^.* - [F,L]
 
-# hotlink protection
+# # hotlink protection
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
@@ -997,8 +1004,9 @@ RewriteCond %{HTTP_REFERER} ^http(s)?://[^/]+\.surgery/? [NC,OR]
 RewriteCond %{HTTP_REFERER} ^http(s)?://[^/]+\.taxi/? [NC]
 RewriteRule .* http://127.0.0.1/ [R,L]
 
+
 RewriteEngine On
-#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC,OR]
+#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC, OR]
 #RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
 #RewriteRule ^(.*)$ http://www.neme.org/kwangjubiennale.html
 
@@ -1027,6 +1035,7 @@ RewriteRule .* http://www.neme.org/indexthief.htm [R,L]
 
 Order Deny,Allow
 Deny from 84.109.137.242
+Deny from 82.80.230.228
 
 #DirectoryIndex index.php index.html
 
@@ -1060,8 +1069,8 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	#RewriteBase /relative/web/path/
-	
-	# json
+
+# json
 	RewriteRule ^feed.json$ ./index.php?kuo_json_feed
 	RewriteRule ^([\-a-zA-Z0-9]+)-feed.json$ ./index.php?kuo_json_feed=$1
 
