@@ -7,7 +7,6 @@
 #SetHandler php70-cgi
 #</FilesMatch>
 
-# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
 
 # compression and cache control
 
