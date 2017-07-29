@@ -1,8 +1,11 @@
 #neme2
 
+#Server specific code
 <FilesMatch \.php$>
-    SetHandler php56-fcgi
+SetHandler php56-fcgi
 </FilesMatch>
+
+#Server specific code
 #<FilesMatch \.php$>
 #SetHandler php70-cgi
 #</FilesMatch>
