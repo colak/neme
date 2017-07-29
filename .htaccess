@@ -104,7 +104,7 @@ RewriteCond %{HTTP_USER_AGENT} Vacuum|vagabondo|vayala|vci|visibilitygap|VoidEYE
 RewriteCond %{HTTP_USER_AGENT} w3mir|WebAuto|WebBandit|Webclipping|webcollage|webcollector|WebCopier|webcraft@bea|webdevil|webdownloader|Webdup|WebEMailExtrac|WebFetch|WebGo\ IS|WebHook|Webinator|WebLeacher|WEBMASTERS|WebMiner|WebMirror|webmole|WebReaper|WebSauger|Website|Website\ eXtractor|Website\ Quester|WebSnake|Webster|WebStripper|websucker|webvac|webwalk|webweasel|WebWhacker|WebZIP|web\.by\.mail|Web\ Data\ Extractor|Web\ Downloader|Web\ Image\ Collector|Web\ Sucker|Wget|Whacker|whizbang|WhosTalking|Widow|widow|WISEbot|wisenutbot|WUMPUS|WUMPUS|Wweb|WWWOFFLE|wwwoffle [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} x-Tractor|xaldon|Xaldon\ WebSpider|Xenu|xenu|XGET [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} Zeus|Zeus.*Webster|Zeus.*Webster|zyborg|^Mozilla$ [NC]
-#RewriteRule ^.* - [F,L]
+RewriteRule ^.* - [F,L]
 
 # # hotlink protection
 <IfModule mod_rewrite.c>
