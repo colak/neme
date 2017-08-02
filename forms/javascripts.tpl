@@ -8,6 +8,22 @@
 <![endif]-->
 <!--[if !IE]>-->
 <script src="<txp:site_url />js/jquery.js"></script>
+<script>
+$(function() {
+$("li").removeClass("customTarget");
+var myLocation = document.location.hash.replace("#","");
+if (myLocation) {
+document.getElementById(myLocation).className = "customTarget";
+}
+$("a").click(function () {
+$("li").removeClass("customTarget");
+var clickedLink = this.href.split("#");
+if (clickedLink.length > 1) {
+document.getElementById(clickedLink[1]).className = "customTarget";
+}
+});
+});
+</script>
 <!--<![endif]-->
 
 <script src="<txp:site_url />js/responsiveslides.js"></script>
