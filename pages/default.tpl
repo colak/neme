@@ -640,9 +640,10 @@ Cyprus</address></div>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
 <div class="clear">&nbsp;</div>
 <div class="grid_18"><txp:body /></div>
+<div class="grid_6">
 <div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php>
-
 </div>
+
 </div>
 
 <div class="clear">&nbsp;</div>
