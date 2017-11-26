@@ -1,27 +1,3 @@
- 
-<txp:hide>MIT License
-
-Copyright (ↄ) 2017 NeMe
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</txp:hide>
-
-
 <txp:php>
 if ($_POST['submit']) {
 $url = $_POST['site'].$_POST['terms'];
@@ -104,7 +80,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:feed_link flavor="atom" format="link" label="Atom" section="" category="" />
 <txp:feed_link flavor="rss" format="link" label="RSS" section="" category="" />
-<link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" />
+<txp:hide><link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" /></txp:hide>
 
 <link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -202,7 +178,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_section>
 </div>
 
-<txp:if_section name=""><h1><txp:site_slogan /></h1><txp:else /><h1><txp:page_title /></h1></txp:if_section>
+<h1><txp:page_title /></h1>
 
 <div class="clear">&nbsp;</div>
 
@@ -291,7 +267,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_6 frontthumbs">
 <h3>Announcements</h3>
 
-<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
+<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 
 </div>
 
@@ -334,7 +310,7 @@ Cyprus</address>
 </div>
 <div class="announce">
 <h3>Announcements</h3>
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
 </div>
 <div>
 <h4>Publications</h4>
@@ -418,7 +394,7 @@ Cyprus</p>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 
 <txp:if_custom_field name="pubs_by_others"><div class="line"><h4 class="line">Publications</h4>
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
@@ -567,7 +543,7 @@ Cyprus</p>
 <txp:thumbnail id="166" class="grid_4 nosmall" />
 
 <div class="grid_12">
-<txp:zem_contact to="***@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:zem_contact_text name="Name" label="Your name" required="1" /><br />
 <txp:zem_contact_text name="Surname" label="Your surname" required="1" /><br />
 <txp:zem_contact_email label="Your email" name="Email" required="1" /><br />
@@ -587,7 +563,7 @@ poBox 50325<br />
 Cyprus</address></div>
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -636,14 +612,13 @@ Cyprus</address></div>
 
 <txp:if_section name="workshops">
 <txp:article_custom id="2">
+
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:thumbnail id='<txp:custom_field name="img2" />' class="ds" /></figure>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
 <div class="clear">&nbsp;</div>
 <div class="grid_18"><txp:body /></div>
 <div class="grid_6">
-<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php>
-</div>
-
+<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -713,10 +688,10 @@ Cyprus</address></div>
 <txp:if_section name="neme">
 <div class="grid_24"><h6>This page lists random <a href="<txp:site_url />calls/" rel="external">calls</a>, <a href="http://www.neme.org/arts_info/" rel="external">arts information</a> and <a href="http://www.neme.org/texts/" rel="external">texts</a> from <a href="http://www.neme.org" rel="external">NeMe</a> as well as the latest entries from our <a href="http://forum.neme.org" rel="external">forum</a>.</h6></div><div class="clear">&nbsp;</div>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
 
 <div class="grid_6"><h3>Forum</h3>
-<ul><txp:php> echo file_get_contents('http://forum.neme.org/***.php');</txp:php></ul>
+<ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
 </div>
 <div class="clear">&nbsp;</div>
 </txp:if_section>
@@ -728,7 +703,7 @@ Cyprus</address></div>
 
 <div class="grid_10">
 
-<txp:zem_contact to="***@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:zem_contact_text label="Your name" /><br />
 <txp:zem_contact_text label="Your Surname" /><br />
 <txp:zem_contact_email name="Email" label="Your email" /><br />
@@ -787,7 +762,7 @@ Cyprus</address></div>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 
 
 <txp:variable name="publs" value='<txp:custom_field name="pubs_by_others" /><txp:custom_field name="pubs" /><txp:custom_field name="multi_event_pubs" />' />
@@ -840,7 +815,7 @@ Cyprus</address></div>
 <p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
 <txp:variable name="linkurl" value='<txp:link_url />' />
 <txp:if_variable name="linkurl" value="">
-<span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span><span itemprop="author"><txp:link_name /></span></span>
+<span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span>
 <txp:else />
 <a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
 </txp:if_variable>
@@ -851,7 +826,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=***');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
