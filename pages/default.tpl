@@ -795,7 +795,7 @@ Cyprus</address></div>
 <div class="clear">&nbsp;</div></txp:if_variable>
 
 <div class="sub"><txp:article_custom label='Other <txp:section />' labeltag="h4" section='<txp:section />' limit="600" wraptag="ul" class="submenu">
-<txp:if_article_id><li><span itemprop="image"><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
+<txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 
 </div>
