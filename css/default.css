@@ -326,9 +326,9 @@ column-gap: 10px;
 #related-links #content{line-height:2em}
 .zemSubmit{clear:both;width:50%}
 #nav{height:3em;position:relative}
-#header,#nav{background-color:#fff;background:-moz-linear-gradient(top,#fff 0,#fff 100%);background:-webkit-gradient(left top,left bottom,color-stop(0,#fff),color-stop(100%,#fff));background:-webkit-linear-gradient(top,#fff 0,#fff 100%);background:-o-linear-gradient(top,#fff 0,#fff 100%);background:-ms-linear-gradient(top,#fff 0,#fff 100%);background:linear-gradient(to bottom,#fff 0,#fff 100%)}
+#header,#nav{background-color:#fff;}
 #menu .active{color:#ccc}
-#menu a{color:#000}
+#menu a{color:#BA0000;}
 #menu a:hover{color:#666}
 #menu-primary-items,#menu-toggle-primary a.close-menu-primary{display:none}
 #menu-primary:target #menu-primary-items{display:block}
@@ -337,8 +337,9 @@ column-gap: 10px;
 nav{border-bottom:0;margin:0 auto}
 nav ul{display:none;height:auto;margin:0 1em}
 nav li:first-child a{padding-left:2em}
-nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.4em 0;background:#fff;background:-moz-linear-gradient(top,#fff 0,#e8e8e8 20%,#f2f2f2 80%,#ccc 100%);background:-webkit-gradient(left top,left bottom,color-stop(0,#fff),color-stop(20%,#e8e8e8),color-stop(80%,#f2f2f2),color-stop(100%,#ccc));background:-webkit-linear-gradient(top,#fff 0,#e8e8e8 20%,#f2f2f2 80%,#ccc 100%);background:-o-linear-gradient(top,#fff 0,#e8e8e8 20%,#f2f2f2 80%,#ccc 100%);background:-ms-linear-gradient(top,#fff 0,#e8e8e8 20%,#f2f2f2 80%,#ccc 100%);background:linear-gradient(to bottom,#fff 0,#e8e8e8 20%,#f2f2f2 80%,#ccc 100%)}
+nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.4em 0;background:#fff;}
 .menu-items li a{padding:0 2em;display:block}
+#menu-primary, #nav, #header {background-color: #fff;color: #ba0000}
 
 #content #side .announce li,#front .container_24 .announce li, .announce .linklist li {background-color:#eeeee0;padding:5px;border-bottom:1px #ffc solid}
 #front .container_24 .medium{display:block;clear:both;border:0;padding:0;margin:0}
