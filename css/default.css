@@ -270,6 +270,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 .social {width:100%;background-color:#ffffff;margin-top:10px;border-bottom:2px solid #fff;padding-top:6px;display:block}
 .social img {margin-left:3px;}
+.grid_18 .eu {display:block;background-color:#fff; color:#000;height:6em; padding:1em 0}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
