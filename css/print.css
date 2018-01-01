@@ -8,7 +8,7 @@ sup a:after {content: "" !important;}
 body {background-image: none;}
 .notes sup {display:none}
 #footer, .video {display:none;}
-#nav, img, iframe, video, script, .rslides, .grid_1, .logo {display:none;}
+#nav, iframe, video, script, .rslides, .grid_1, .logo {display:none;}
 #nav {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
 .container_24 {width:98%;max-width:98%;margin:1%}
 #side, nav, #footer {display:none;}
@@ -16,6 +16,7 @@ body {background-image: none;}
 #content .grid_18 {width:100%;color:#000; background:transparent; float:none;} 
 #content figcaption {color:#000}
 #publications a img, #publications img, #content figure, #content figure img, #content .grid_18 .clearboth {display:block}
+img {max-width: 100%}
 table, figure, img, .clearboth {page-break-inside: avoid;}
 #header {background:none;clear:both;height:auto;margin:0;padding:0}
 hr { width:80%; padding: 0; margin: 2em auto 0 auto; border: none; border-top: medium double #eee; color: #000; text-align: center; } 
