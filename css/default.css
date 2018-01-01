@@ -152,7 +152,7 @@ ol,p,ul{margin:0 0 1em}
 .clear{clear:both;display:block;visibility:hidden;width:0;height:0}
 #footer,#header,#nav,.table100,figure img{width:100%}
 .clearleft{clear:left}
-a{color:red}
+a{color:#cc0000}
 #header h2,h1{font-size:3em;text-align:left;line-height:100%;color:#191919}
 h2{padding:1em 0}
 p{text-align:left}
@@ -270,7 +270,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 .social {width:100%;background-color:#ffffff;margin-top:10px;border-bottom:2px solid #fff;padding-top:6px;display:block}
 .social img {margin-left:3px;}
-.grid_18 .eu {display:block;background-color:#fff; color:#000;height:6em; padding:1em 0}
+.grid_18 .eu {display:block;background-color:#fff; color:#000;height:6em; padding:1em 0; clear:both}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
@@ -296,6 +296,12 @@ column-width: 120px;
 -moz-column-gap: 10px;
 column-gap: 10px;
 }
+.eu {display:block;background-color:#fff; color:#000;padding:1em 0; clear:both;
+min-height:8em;
+height:auto !important;
+height:8em;
+}
+.eu img {max-width:230px}
 .sub{margin:1em 2em 1em 1em}
 #footer .grid_18,#footer .grid_6{width:95%;margin:1em auto;float:none}
 .grid_18 .rslides,.zemText,.zemTextarea{width:98%}
@@ -311,7 +317,7 @@ column-gap: 10px;
 .largeonsmall,.small100,.video .grid_9{width:98%;float:none}
 .bx-wrapper .bx-pager.bx-default-pager a{background:red;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
 #about #content .frontthumbs,#events #content .frontthumbs,#participations #content .frontthumbs{display:none}
-#about #content .grid_18,#about #content .grid_6,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4{width:98%}
+#about #content .grid_18,#about #content .grid_6,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:98%}
 #publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:95%;clear:both;margin:0 auto}
 #neme #content .grid_6,#publications #content .grid_3,#publications #content .grid_6{width:98%;clear:both;display:block;margin:1.5em auto}
 #publications #content img{clear:both;display:block;margin:1em auto;text-align:center;max-width:230px}
@@ -326,7 +332,7 @@ column-gap: 10px;
 #related-links #content{line-height:2em}
 .zemSubmit{clear:both;width:50%}
 #nav{height:3em;position:relative}
-#header,#nav{background-color:#fff;}
+#header, #nav{background-color:#fff;}
 #menu .active{color:#ccc}
 #menu a{color:#BA0000;}
 #menu a:hover{color:#666}
