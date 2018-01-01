@@ -15,8 +15,8 @@ body {background-image: none;}
 #content {color:#000;background:none;}
 #content .grid_18 {width:100%;color:#000; background:none;} 
 #content figcaption {color:#000}
-#publications a img, #publications img, #content figure, #content figure img {display:block}
-table, figure, img {page-break-inside: avoid;}
+#publications a img, #publications img, #content figure, #content figure img, #content .grid_18 .clearboth {display:block}
+table, figure, img, .clearboth {page-break-inside: avoid;}
 #header {background:none;clear:both;height:auto;margin:0;padding:0}
 hr { width:80%; padding: 0; margin: 2em auto 0 auto; border: none; border-top: medium double #eee; color: #000; text-align: center; } 
 hr:after { content: ""; display: inline-block; position: relative; top: -.8em; font-size: 1.5em; padding: 0 0.25em; background: #fff;}
