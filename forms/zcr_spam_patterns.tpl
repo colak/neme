@@ -1,4 +1,16 @@
+/fundingteam.*@business-capital-now.com/
+/fundingteam.*@businesscapitaladvisor.com/
 /fundingteam.*@businessloansfunded.com/
+/fundingteam.*@businessloansfundednow.com/
+/fundingteam.*@getabusinessfunded.com/
+/fundingteam.*@getbusinessfunded.com/
+/fundingteam.*@getabusinessfunded365.com/
 /fundingteam.*@getmybusinessfundednow.com/
 /fundingteam.*@profunding247.com/
-/fundingteam.*@getabusinessfunded.com/
+/fundingteam.*@profunding365.com/
+/fundingteam.*@fastfundingadvisors.com/
+/fundingteam.*@findbusinessfunding24-7.com/
+/fundingteam.*@findbusinessfunding365.com/
+/fundingteam.*@findfastbusinessfunds.com/
+/fundingteam.*@getabusinessloan365.com/
+/fundingteam.*@findbusinessfunding24-7.com/
