@@ -275,7 +275,8 @@ nav ul:after{content:"";display:table;clear:left}
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
 
-@media screen and (max-width:959px){.medium,.nosmall{visibility:hidden}
+@media screen and (max-width:960px){
+.medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
 #menu{clear:both;display:block}
 h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;width:97%;display:block}
@@ -345,11 +346,13 @@ nav ul{display:none;height:auto;margin:0 1em}
 nav li:first-child a{padding-left:2em}
 nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.4em 0;background:#fff;}
 .menu-items li a{padding:0 2em;display:block}
-#menu-primary, #nav, #header {background-color: #fff;color: #ba0000}
+#menu-primary {background-color: #fff;color: #ba0000}
 
 #content #side .announce li,#front .container_24 .announce li, .announce .linklist li {background-color:#eeeee0;padding:5px;border-bottom:1px #ffc solid}
 #front .container_24 .medium{display:block;clear:both;border:0;padding:0;margin:0}
 .medium{clear:both}
+
+#nav, #header {background:transparent; box-shadow:none;}
 }
 @media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:98%}
 }
