@@ -7,6 +7,7 @@
 /fundingteam.*@findbusinessfunding24-7.com/
 /fundingteam.*@findbusinessfunding365.com/
 /fundingteam.*@findfastbusinessfunds.com/
+/fundingteam.*@get-my-business-funded.com/
 /fundingteam.*@getabusinessfunded.com/
 /fundingteam.*@getabusinessfunded365.com/
 /fundingteam.*@getabusinessloan365.com/
