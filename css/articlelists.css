@@ -4,6 +4,13 @@ hr {width:100%}
 #texts h6, #events h6, #participations h6 {margin:0;padding:0 0 1.5em 0}
 #about h2 {margin-top:0}
 
+#social {width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;
+-moz-box-shadow: 0px 3px 5px #474347;
+-webkit-box-shadow: 0px 3px 5px #474347;
+box-shadow: 0px 3px 5px #474347;
+}
+#social .socialfeed, .fb_iframe_widget iframe {border-radius: 8px;}
+
 .line {border: none; border-bottom: medium double #eee; color: #eee; text-align: center; margin:0 0 3em 0;} 
 .clear {height:.1em;max-height:.1em;font-size:1pt}
 
