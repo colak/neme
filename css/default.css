@@ -24,7 +24,7 @@ hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;c
 hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350.jpg) #191919}
 
 hr.line {width:90%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
-hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350.jpg) #191919}
+hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:#001a00}
 :target {background: #666666;border: solid 1px #aaa;}
 
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -169,7 +169,7 @@ figure img{height:auto}
 .container_12{background:#fff}
 #meta,.frontthumbs h3{background-color:#BA0000}
 #content a:hover,.submenu .active a{color:#ddd}
-#content{color:#eee;background:url(/images/350.jpg) #191919;
+#content{color:#eee;background: #001a00;
 -moz-box-shadow: 0px 3px 5px #474347;
 -webkit-box-shadow: 0px 3px 5px #474347;
 box-shadow: 0px 3px 5px #474347;}
@@ -190,7 +190,7 @@ box-shadow: 0px 3px 5px #474347;}
 #meta .linklist,#meta a{color:#fff;font-size:1.2em}
 #side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
 .line{border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em}
-.line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background:url(/images/350.jpg) #191919}
+.line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background: #001a00}
 .announce,.announce h3{color:#000;background-color:#ffc}
 .announce hr:after {content:none;}
 .line h3,.line h4,.line h6{text-align:left}
@@ -271,7 +271,7 @@ nav ul:after{content:"";display:table;clear:left}
 #content {margin:0 0 10px 0;}
 .social {width:100%;background-color:#ffffff;margin-top:10px;border-bottom:2px solid #fff;padding-top:6px;display:block}
 .social img {margin-left:3px;}
-.grid_18 .eu {display:block;background-color:#fff; color:#000;height:auto; padding:1em 0; clear:both}
+.grid_18 .eu {display:block;background-color:#fff; color:#000;height:auto; padding:1em 0; clear:both;border-radius: 8px;}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
