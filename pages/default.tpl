@@ -30,12 +30,12 @@ header('content-type: text/html; charset=utf-8');
 </txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:rvm_css n="default" format="link" media="all" />
-<txp:if_article_list><txp:rvm_css n="articlelists" format="link" media="all" /></txp:if_article_list>
-<!--[if IE]><txp:rvm_css n="ie-fluid" format="link" /><![endif]-->
-<!--[if IE 7]><txp:rvm_css n="ie7" format="link" /><![endif]-->
+<txp:rvm_css name="default" format="link" media="all" />
+<txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
+<!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
+<!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:rvm_css n="print" format="link" media="print" />
+<txp:rvm_css name="print" format="link" media="print" />
 
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
