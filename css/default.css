@@ -279,6 +279,9 @@ nav ul:after{content:"";display:table;clear:left}
 #meta {border-radius: 8px 8px 0 0;}
 .announce {border-radius: 0 0 8px 8px;}
 .social {border-radius: 8px;}
+#cookies {display:table;background:#ffc;width:100%;border-radius: 8px;}
+#cookies p {font-size:1.3em;}
+#cookies a {color:#cc0000}
 @media screen and (max-width:960px){
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
