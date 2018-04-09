@@ -867,7 +867,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:variable name="cookie_warning_visible" value="true">
 <div class="container_24" id="cookie-monster">
 <div class="grid_24">
-<p>By continuing to use the site, you <a href="?hide_cookie_warning=1">agree</a> to the use of cookies. You can find out more about our use of cookies by following this <a href="/about/#cookies">link</a>.</p>
+<p class="centre">By continuing to use the site, you <a href="?hide_cookie_warning=1">agree</a> to the use of cookies. You can find out more about our use of cookies by following this <a href="/about/#cookies">link</a>.</p>
 </div></div>
 </txp:variable>
 
