@@ -863,13 +863,11 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
 
-<txp:output_form form="colak_cookie" />
-<txp:variable name="cookie_warning_visible" value="true">
-<div class="container_24" id="cookie-monster">
-<div class="grid_24">
-<p class="centre">By continuing to use the site, you <a href="?hide_cookie_warning=1">agree</a> to the use of cookies. You can find out more about our use of cookies by following this <a href="/about/#cookies">link</a>.</p>
-</div></div>
-</txp:variable>
+<txp:oui_cookie name="accept_cookies" values="yes" />
+<txp:oui_if_cookie name="accept_cookies">
+<txp:else />
+<div class="container_24" id="cookies"><div class="grid_24"><p class="centre">By continuing to use the site, you <a href="?accept_cookies=yes">agree</a> to the use of cookies. You can find out more about our use of cookies by following this <a href="/about/#cookies">link</a>.</p></div></div>
+</txp:oui_if_cookie>
 
 <txp:output_form form="javascripts" />
 </body>
