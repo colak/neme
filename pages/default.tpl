@@ -284,6 +284,20 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-about-======================</txp:hide>
 
 <txp:if_section name="about">
+<txp:if_search>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:if_search_results>
+<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<hr />
+<txp:else />
+<p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
+<h3>Suggestions:</h3>
+<ul><li>Make sure all words are spelled correctly.</li>
+<li>Try fewer keywords</li>
+<li>Try different keywords</li></ul>
+</txp:if_search_results>
+<txp:article limit="999" searchall="0" />
+<txp:else />
 <txp:article_custom id="1">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
@@ -359,6 +373,7 @@ Cyprus</address>
 </div>
 
 <div class="clear">&nbsp;</div>
+</txp:if_search>
 </txp:if_section>
 
 <txp:hide>==================-nac-======================</txp:hide>
@@ -854,7 +869,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=xxx-announce');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
 
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
