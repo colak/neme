@@ -27,11 +27,15 @@ search.addEvent(el, 'change', function() { search.ifSection(this); });
 ifSection : function(el) {
 switch (el.value) {
 case 'http://www.neme.org/?m=any&q=':
-search.createSection(section=[null, 'texts', 'participations', 'events']);
+search.createSection(section=[null, 'texts', 'participations', 'events', 'about']);
 break;
 
 case 'http://news.neme.org/?m=any&q=':
 search.createSection(section=[null, 'calls', 'arts_info', 'archives']);
+break;
+
+case 'http://respublika.neme.org/?m=any&q=':
+search.createSection(section=[null, 'art-projects', 'seminars', 'festival', 'who', 'archive']);
 break;
 
 default:
