@@ -24,7 +24,7 @@ hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;c
 hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350.jpg) #191919}
 
 hr.line {width:90%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
-hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:#001a00}
+hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:#000}
 :target {background: #666666;border: solid 1px #aaa;}
 
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -169,7 +169,7 @@ figure img{height:auto}
 .container_12{background:#fff}
 #meta,.frontthumbs h3{background-color:#BA0000}
 #content a:hover,.submenu .active a{color:#ddd}
-#content{color:#eee;background: #001a00;
+#content{color:#eee;background: #000000;
 -moz-box-shadow: 0px 3px 5px #474347;
 -webkit-box-shadow: 0px 3px 5px #474347;
 box-shadow: 0px 3px 5px #474347;}
@@ -190,7 +190,7 @@ box-shadow: 0px 3px 5px #474347;}
 #meta .linklist,#meta a{color:#fff;font-size:1.2em}
 #side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
 .line{border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em}
-.line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background: #001a00}
+.line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background: #000}
 .announce,.announce h3{color:#000;background-color:#ffc}
 .announce hr:after {content:none;}
 .line h3,.line h4,.line h6{text-align:left}
@@ -275,13 +275,15 @@ nav ul:after{content:"";display:table;clear:left}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
-#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after {content:" \21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
+#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:" \21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
 .announce {border-radius: 0 0 8px 8px;}
 .social {border-radius: 8px;}
 #eucookies {display:table;background:#ffc;width:100%;border-radius: 8px;}
 #eucookies p {font-size:1.3em;}
 #eucookies a {color:#cc0000}
+#eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
+#eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 5em;margin: -5em;}
 
 @media screen and (max-width:960px){
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
