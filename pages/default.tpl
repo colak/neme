@@ -30,12 +30,14 @@ header('content-type: text/html; charset=utf-8');
 </txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
+
 <txp:rvm_css name="default" format="link" media="all" />
 <txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
 <!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
 <!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
 <txp:rvm_css name="print" format="link" media="print" />
+
 
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
@@ -217,6 +219,8 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_section>
 
 <txp:if_section name="">
+<txp:if_search>
+<txp:else />
 <article class="grid_6 about" role="main">
 <txp:article_custom id="1">
 <h3><txp:title /></h3>
@@ -268,10 +272,9 @@ header('content-type: text/html; charset=utf-8');
 <h3>Announcements</h3>
 
 <div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
-
 </div>
-
 <div class="clear">&nbsp;</div>
+</txp:if_search>
 </txp:if_section>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -550,7 +553,7 @@ Cyprus</p>
 <txp:zem_contact_text name="Website" label="Your website" required="0" /><br />
 <txp:zem_contact_textarea name="Comment" label="Your question" /><br />
 <txp:zem_contact_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
-<txp:zem_contact_checkbox label="To prove that this is not spam, Check this box before clicking the send button." /><br />
+<txp:zem_contact_checkbox label="This is not spam!." /><br />
 <txp:zem_contact_serverinfo name="REMOTE_ADDR" label="IP number" />
 <txp:zem_contact_serverinfo name="HTTP_USER_AGENT" label="Browser" />
 <txp:zem_contact_submit label="Send" />
@@ -704,15 +707,17 @@ Cyprus</address></div>
 <div class="grid_10">
 
 <txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
-<txp:zem_contact_text label="Your name" /><br />
-<txp:zem_contact_text label="Your Surname" /><br />
-<txp:zem_contact_email name="Email" label="Your email" /><br />
+<txp:zem_contact_text label="Your name" required="1" /><br />
+<txp:zem_contact_text label="Your Surname" required="1" /><br />
+<txp:zem_contact_email name="Email" label="Your email" required="1" /><br />
 <txp:zem_contact_text label="Your website" required="0" /><br />
 <txp:zem_contact_checkbox label="Check this box if you wish to subscribe to our newsletter" /><br />
 <txp:zem_contact_serverinfo name="REMOTE_ADDR" label="IP number" />
 <txp:zem_contact_serverinfo name="HTTP_USER_AGENT" label="Browser" />
 <txp:zem_contact_submit label="Subscribe" />
 </txp:zem_contact>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=newsletter');</txp:php>
 </div>
 
 
@@ -723,7 +728,9 @@ Cyprus</address></div>
 
 <p>For those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
 
-<p>NeMe and&#47;or IMCA will not disclose your email address or other details to anyone else without your explicit permission (we hate spam too!).</p>
+<p>NeMe and&#47;or IMCA will not disclose your email address or other details to anyone else without your explicit permission (us, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
+
+
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -803,6 +810,27 @@ Cyprus</address></div>
 </txp:article>
 </txp:if_article_section>
 
+<txp:hide>==================-individual about-======================</txp:hide>
+
+<txp:if_article_section name="about">
+<txp:article>
+<article class="grid_18" role="main">
+<txp:body />
+</article>
+</txp:article>
+<div class="grid_6 frontthumbs" id="side" role="complementary">
+ <div id="meta"><h4>Address</h4><address>NeMe<br />
+poBox 50325<br />
+3603 Limassol<br />
+Cyprus</address>
+ </div>
+ <div class="announce">
+<h3>Announcements</h3>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
+ </div>
+</div>
+</txp:if_article_section>
+
 <txp:hide>==================-individual texts-======================</txp:hide>
 
 <txp:if_article_section name="texts">
@@ -826,7 +854,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <div class="announce"><h3>Announcements</h3>
 
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=xxx-announce');</txp:php></div>
 
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
@@ -864,9 +892,13 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="colak_foot" />
 
 <txp:oui_cookie name="accept_cookies" values="yes" />
+
 <txp:oui_if_cookie name="accept_cookies">
 <txp:else />
-<div class="container_24" id="eucookies"><div class="grid_24"><p class="centre">By continuing to use the site, you <a href="?accept_cookies=yes">agree</a> to the use of cookies. You can find out more about our use of cookies by following this <a href="/about/#cookies">link</a>.</p></div></div>
+<div id="eucookies"><div class="container_24">
+<p class="grid_18">
+To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are <a href="?accept_cookies=yes">happy</a> with that. You can find out more about our use of cookies by following this <a href="/about/#eucookies">link</a>.</p>
+<p class="grid_6"><a href="?accept_cookies=yes">Agree</a></p></div></div>
 </txp:oui_if_cookie>
 
 <txp:output_form form="javascripts" />
