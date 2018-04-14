@@ -13,7 +13,7 @@
 <div class="grid_12 socialfeed"><div class="fb-page" data-href="https://www.facebook.com/NeMeArtsCentre/" data-tabs="timeline" data-width="450" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/NeMeArtsCentre/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NeMeArtsCentre/">NeMe</a></blockquote></div>
 </div>
 
-<div class="grid_12 socialfeed"><a class="twitter-timeline" data-lang="en" data-width="470" data-height="500" data-link-color="#cc0000" href="https://twitter.com/NeMeOrg?ref_src=twsrc%5Etfw">Tweets by NeMeOrg</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+<div class="grid_12 socialfeed"><a class="twitter-timeline" data-lang="en" data-width="470" data-height="500" data-link-color="#cc0000" href="https://twitter.com/NeMeOrg?ref_src=twsrc%5Etfw">Tweets by NeMeOrg</a> <script async src="https://platform.twitter.com/widgets.js"></script></div>
 </div>
 
 <div class="clear">&nbsp;</div></div></txp:if_section>
