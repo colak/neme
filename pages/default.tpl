@@ -906,15 +906,15 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
 
-<txp:oui_cookie name="accept_cookies" values="yes" />
-
+<!--googleoff: all-->
 <txp:oui_if_cookie name="accept_cookies">
 <txp:else />
 <div id="eucookies"><div class="container_24">
 <p class="grid_18">
-To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are <a href="?accept_cookies=yes">happy</a> with that. You can find out more about our use of cookies by following this <a href="/about/#eucookies">link</a>.</p>
-<p class="grid_6"><a href="?accept_cookies=yes">Agree</a></p></div></div>
+To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are <a href="?accept_cookies=yes">happy</a> with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Agree</a></p></div></div>
 </txp:oui_if_cookie>
+<!--googleon: all-->
 
 <txp:output_form form="javascripts" />
 </body>
