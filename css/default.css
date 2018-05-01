@@ -316,6 +316,7 @@ height:8em;
 .sub{margin:1em 2em 1em 1em}
 #footer .grid_18,#footer .grid_6{width:95%;margin:1em auto;float:none}
 .grid_18 .rslides,.zemText,.zemTextarea{width:98%}
+#eucookies, #eucookies .grid_6, #eucookies .grid_18 {width:98%}
 #front .about,.slides{float:none;width:98%}
 .slides .rslides{width:100%;margin:0}
 .slides .rslides li img{width:100%;height:auto}
