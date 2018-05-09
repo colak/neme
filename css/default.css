@@ -275,7 +275,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
-#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:" \21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
+#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
 .announce {border-radius: 0 0 8px 8px;}
 .social {border-radius: 8px;}
