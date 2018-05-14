@@ -1,0 +1,33 @@
+# Name: etc_easter_eggs v0.2 
+# Type: Admin/Public/AJAX plugin
+# 
+# Author: 
+# URL: 
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+YToxMTp7czo0OiJuYW1lIjtzOjE1OiJldGNfZWFzdGVyX2VnZ3MiO3M6NjoiYXV0aG9yIjtz
+OjA6IiI7czoxMDoiYXV0aG9yX3VyaSI7czowOiIiO3M6NzoidmVyc2lvbiI7czozOiIwLjIi
+O3M6MTE6ImRlc2NyaXB0aW9uIjtzOjA6IiI7czo0OiJjb2RlIjtzOjc2MzoicmVnaXN0ZXJf
+Y2FsbGJhY2soJ2V0Y19wcmVmcycsICdwcmV0ZXh0X2VuZCcpOw0KcmVnaXN0ZXJfY2FsbGJh
+Y2soJ2V0Y19wcmVmcycsICdza2luJywgJycsIDEpOw0KDQpmdW5jdGlvbiBldGNfcHJlZnMo
+JGV2ZW50LCAkc3RlcCkgew0KICAgIGdsb2JhbCAkcHJlZnM7DQoNCiAgICAvLyBQSFAgZnVu
+Y3Rpb25zIHVzZWQgaW4gPHR4cDpldmFsdWF0ZSAvPjogY29tbWEtc2VwYXJhdGVkIGxpc3Qg
+b2YgJ25hbWUnIG9yICdhbGlhczpuYW1lJw0KICAgICRwcmVmc1sndHhwX2V2YWx1YXRlX2Z1
+bmN0aW9ucyddID0gJ21kNSwgcmVwbGFjZTpwcmVnX3JlcGxhY2UnOw0KDQogICAgLy8gTWF4
+IGZvcm0gbmVzdGluZyBkZXB0aA0KICAgICRwcmVmc1snZm9ybV9jaXJjdWxhcl9kZXB0aCdd
+ID0gMTU7DQoNCiAgICAvLyBQYXJzZSBjc3M/DQogICAgJHByZWZzWydwYXJzZV9jc3MnXSA9
+IGZhbHNlOw0KDQogICAgLy8gTWltZXR5cGVzDQogICAgJHByZWZzWydhc3NldHNfbWltZXR5
+cGVzJ10gPSAnO2Nzcz0idGV4dC9jc3MiLA0KICAgICAgICB0eHQ9InRleHQvcGxhaW4iLA0K
+ICAgICAgICBjc3Y9InRleHQvY3N2IiwNCiAgICAgICAgaHRtPSJ0ZXh0L2h0bWwiLA0KICAg
+ICAgICBodG1sPSJ0ZXh0L2h0bWwiLA0KICAgICAgICBqcz0iYXBwbGljYXRpb24vamF2YXNj
+cmlwdCIsDQogICAgICAgIGpzb249ImFwcGxpY2F0aW9uL2pzb24iLA0KICAgICAgICB4bWw9
+ImFwcGxpY2F0aW9uL3htbCIsDQogICAgICAgIHN2Zz0iaW1hZ2Uvc3ZnK3htbCInOw0KfSI7
+czo0OiJ0eXBlIjtzOjE6IjUiO3M6NToib3JkZXIiO3M6MToiNSI7czo1OiJmbGFncyI7czox
+OiIwIjtzOjQ6ImhlbHAiO2I6MDtzOjM6Im1kNSI7czozMjoiOTFlMjliOGIxYjgyNTlhZDE0
+MDBiM2EwMDYxYThiODciO30=
