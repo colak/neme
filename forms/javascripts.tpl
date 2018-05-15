@@ -64,7 +64,7 @@ namespace: "rslides",
 </script>
 
 
-<txp:rvm_if_privileged><txp:else />
+<txp:if_logged_in><txp:else />
 <!-- PW -->
 <script>
   var _paq = _paq || [];
@@ -102,4 +102,4 @@ ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'st
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-</txp:rvm_if_privileged>
+</txp:if_logged_in>
