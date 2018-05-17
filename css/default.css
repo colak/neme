@@ -277,8 +277,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 #content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
-.announce {border-radius: 0 0 8px 8px;}
-.social {border-radius: 8px;}
+.social {border-radius: 0 0 8px 8px;}
 #eucookies {display:table;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
 #eucookies p {font-size:1.3em;}
 #eucookies a {color:#cc0000}
