@@ -596,7 +596,7 @@ Cyprus</address></div>
 <txp:article_custom section="events, participations, about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 
 </txp:images>
@@ -609,7 +609,7 @@ Cyprus</address></div>
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
 <txp:if_different>
 <div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
-<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" class="ds" id="book_<txp:image_info type="id" />" /></a></span>
+<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" /></a></span>
 <figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
@@ -620,7 +620,7 @@ Cyprus</address></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
-<span itemprop="image" class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" class="ds" /></span>
+<span itemprop="image" class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
 <figcaption itemprop="caption" class="grid_9 omega"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in>
 </figcaption></figure>
