@@ -52,6 +52,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="geo.placename" content="Limassol" />
 <meta name="DC.title" content="<txp:page_title />" />
 
+
 <link rel="home" href="<txp:site_url />" />
 <link rel="canonical" href="http://www.neme.org<txp:page_url />" />
 
@@ -480,9 +481,11 @@ Cyprus</p>
 <txp:else />
 <div class="line">
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+
 
 <div class="clear">&nbsp;</div></div>
 
@@ -600,7 +603,7 @@ Cyprus</address></div>
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><txp:image id="177" class="grid_1 omega" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -613,7 +616,7 @@ Cyprus</address></div>
 </txp:if_different>
 </txp:images>
 
-<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><txp:image id="177" class="grid_1 omega" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
@@ -739,11 +742,11 @@ Cyprus</address></div>
 <div class="grid_10">
 <p>By filling this form you agree to receive emails from NeMe&#47;IMCA regarding our calls for participation, invitations and information about our events. These emails will be very infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
 
-<p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. Please mark our emails as safe to receive them in your inbox.</p>
+<p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
 
-<p>For those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
+<p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
 
-<p>NeMe and&#47;or IMCA will not disclose your email address or other details to anyone else without your explicit permission (us, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
+<p>A link to our privacy policy can be found on the bottom of the page.</p>
 
 
 </div>
@@ -760,7 +763,7 @@ Cyprus</address></div>
 <txp:hide>==================-individual events-participations-======================</txp:hide>
 
 <txp:if_article_section name="events,participations">
-<txp:article><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
+<txp:article form=""><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
 <txp:thumbnail class="ds" /></txp:images></figure>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
@@ -828,7 +831,7 @@ Cyprus</address></div>
 <txp:hide>==================-individual about-======================</txp:hide>
 
 <txp:if_article_section name="about">
-<txp:article>
+<txp:article form="">
 <article class="grid_18" role="main">
 <txp:body />
 </article>
@@ -849,7 +852,7 @@ Cyprus</address>
 <txp:hide>==================-individual texts-======================</txp:hide>
 
 <txp:if_article_section name="texts">
-<txp:article>
+<txp:article form="">
 <article class="grid_18" role="main">
 <txp:body />
 </article>
@@ -900,18 +903,20 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall"><a href="#landing"><txp:image id="177" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
+
+<txp:oui_cookie name="accept_cookies" values="yes" />
 
 <!--googleoff: all-->
 <txp:oui_if_cookie name="accept_cookies">
 <txp:else />
 <div id="eucookies" class="noprint"><div class="container_24">
 <p class="grid_18">
-To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are <a href="?accept_cookies=yes">happy</a> with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Agree</a></p></div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
