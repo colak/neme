@@ -332,7 +332,7 @@ Cyprus</address>
 <div>
 <h4>Publications</h4>
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
 <div class="clear">&nbsp;</div>
 </txp:images>
 </div>
