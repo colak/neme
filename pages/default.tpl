@@ -30,7 +30,6 @@ header('content-type: text/html; charset=utf-8');
 </txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-
 <txp:rvm_css name="default" format="link" media="all" />
 <txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
 <!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
@@ -799,19 +798,19 @@ Cyprus</address></div>
 
 <txp:if_custom_field name="multi_event_pubs">
 <txp:images id='<txp:custom_field name="multi_event_pubs" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs_by_others">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
 </txp:images>
 </txp:if_custom_field>
 
