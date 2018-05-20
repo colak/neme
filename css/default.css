@@ -31,7 +31,7 @@ sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sup{top:-.5em}
 sub{bottom:-.25em}
 em,i{font-style:italic}
-code{background-color:#8a0404;font-family:'Courier New',Courier,monospace}
+code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24{margin:0 auto;max-width:960px;padding:1em 0}
 #header .container_24{padding:0}
 #header{margin:5em 0 0}
