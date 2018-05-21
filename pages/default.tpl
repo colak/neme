@@ -498,9 +498,9 @@ Cyprus</p>
 <article><div class="grid_5"><txp:if_logged_in><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
 <div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
 <div class="grid_13"><txp:if_custom_field name="venues">
-<p><txp:custom_field name="venue" /> <txp:custom_field name="venues" /></p>
+<p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
 <txp:else />
-<p><txp:custom_field name="venue" /></p>
+<p><txp:custom_field name="venue" escape="" /></p>
 </txp:if_custom_field></div>
 <div class="clearboth"><hr /></div></article>
 </txp:article></section>
@@ -659,7 +659,7 @@ Cyprus</address></div>
 </div>
 <div>
 <h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of our projects</h4>
-<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value=""> <txp:link_name escape="" /> <txp:else /> <a class="ext" href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
+<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value=""> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
 
@@ -673,7 +673,7 @@ Cyprus</address></div>
 <txp:if_variable name="haslink" value="">
 <txp:link_name escape="html" />
 <txp:else />
-<a class="ext" href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
 </txp:if_variable>
 </txp:linklist></div>
 
@@ -686,7 +686,7 @@ Cyprus</address></div>
 <txp:if_variable name="haslink" value="">
 <txp:link_name escape="html" />
 <txp:else />
-<a class="ext" href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
 </txp:if_variable>
 </txp:linklist>
 
