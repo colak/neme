@@ -57,6 +57,16 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_description><txp:meta_description /></txp:if_description>
 
+<meta property="og:site_name" content="<txp:site_name />" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<txp:page_title />" />
+<meta property="og:description" content="<txp:if_description><txp:meta_description format="" /></txp:if_description>" />
+<meta property="og:url" content="http://www.neme.org<txp:page_url />" />
+<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="NeMe logo" />
+
 <txp:if_individual_article>
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
@@ -602,7 +612,7 @@ Cyprus</address></div>
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -615,7 +625,7 @@ Cyprus</address></div>
 </txp:if_different>
 </txp:images>
 
-<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
@@ -902,7 +912,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
