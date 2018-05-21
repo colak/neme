@@ -659,7 +659,7 @@ Cyprus</address></div>
 </div>
 <div>
 <h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of our projects</h4>
-<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value=""> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
+<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
 
@@ -670,7 +670,7 @@ Cyprus</address></div>
 
 <txp:linklist category="sponsors" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
 <txp:variable name="haslink" value='<txp:link_url />' />
-<txp:if_variable name="haslink" value="">
+<txp:if_variable name="haslink" value="#">
 <txp:link_name escape="html" />
 <txp:else />
 <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
@@ -683,7 +683,7 @@ Cyprus</address></div>
 
 <txp:linklist category="venues,venues-featured" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
 <txp:variable name="haslink" value='<txp:link_url />' />
-<txp:if_variable name="haslink" value="">
+<txp:if_variable name="haslink" value="#">
 <txp:link_name escape="html" />
 <txp:else />
 <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
@@ -775,7 +775,7 @@ Cyprus</address></div>
 <div class="grid_6" id="side" role="complementary">
 <div id="meta">
 <txp:if_custom_field name="venues"><h5>Venues</h5>
-<p><txp:custom_field name="venue" /> <txp:custom_field name="venues" /></p>
+<p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" /></p>
 <txp:else />
 <h5>Venue</h5>
 <p><txp:custom_field name="venue" /></p>
@@ -859,7 +859,7 @@ Cyprus</address>
 <div itemscope itemtype="http://schema.org/Person" id="meta">
 <p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
 <txp:variable name="linkurl" value='<txp:link_url />' />
-<txp:if_variable name="linkurl" value="">
+<txp:if_variable name="linkurl" value="#">
 <span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span>
 <txp:else />
 <a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
