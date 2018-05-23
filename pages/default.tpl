@@ -546,7 +546,7 @@ Cyprus</p>
 <div class="line">
 
 <article class="grid_6 about" role="main">
-<p>This page lists all <txp:mdn_count section="texts" /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
+<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 
 <p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
 </article>
