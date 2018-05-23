@@ -60,12 +60,8 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:site_name" content="<txp:site_name />" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="<txp:page_title />" />
-<meta property="og:description" content="<txp:if_description><txp:meta_description format="" /></txp:if_description>" />
+<txp:if_description><meta property="og:description" content="<txp:meta_description format="" />" /></txp:if_description>
 <meta property="og:url" content="http://www.neme.org<txp:page_url />" />
-<meta property="og:image" content="http://www.neme.org/images/1087.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
-<meta property="og:image:alt" content="NeMe logo" />
 
 <txp:if_individual_article>
 <meta name="twitter:card" content="summary" />
@@ -76,10 +72,23 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
+<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="NeMe logo" />
 <txp:else />
-<meta name="twitter:image" content="<txp:images id='<txp:custom_field name="img_main"/>' wraptag="" break="" sort="rand()" limit="1"><txp:image_url /></txp:images>" />
+<txp:variable name="imgmain"><txp:images break="" sort="rand()" limit="1" id='<txp:custom_field name="img_main" />'><txp:image_info type="id" /></txp:images></txp:variable>
+<meta name="twitter:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
+<meta property="og:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
+<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="width" /></txp:images>" />
+<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="height" /></txp:images>" />
+<meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
+<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="NeMe logo" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
 <meta name="twitter:creator" content="@nemeorg" />
@@ -924,9 +933,9 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:oui_if_cookie name="accept_cookies">
 <txp:else />
 <div id="eucookies" class="noprint"><div class="container_24">
-<p class="grid_18">
-To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
-<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Agree</a></p></div></div>
+<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Agree</a></p>
+</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
 
