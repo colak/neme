@@ -767,6 +767,7 @@ Cyprus</address></div>
 
 <p>A link to our privacy policy can be found on the bottom of the page.</p>
 
+<div class="social"><a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a></div>
 
 </div>
 
