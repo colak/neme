@@ -237,7 +237,7 @@ nav ul:after{content:"";display:table;clear:left}
 .rslides{position:relative;list-style:none;z-index:100}
 .rslides li{-webkit-backface-visibility:hidden;position:absolute;left:0;top:0;list-style:none!important;margin:0;display:block}
 .rslides li:first-child{position:relative;display:block;float:left}
-.rslides img{display:block;height:auto;float:left;width:100%;border:0}
+.rslides img{display:block;height:auto;float:left;width:100%;border:0;}
 .no-js ul.rslides li{display:none}
 .no-js ul.rslides li:first-child{display:inherit}
 .rslides{margin:0 auto}
@@ -278,11 +278,13 @@ nav ul:after{content:"";display:table;clear:left}
 #content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
+.ds {border-radius: 8px 0 0 8px;}
+.rslides li img {border-radius: 0 8px 8px 0;}
 #eucookies {display:table;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
-#eucookies p {font-size:1.3em;}
+#eucookies p {font-size:1.1em;}
 #eucookies a {color:#cc0000}
 #eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
-#eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 5em;margin: -5em;}
+#eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 1em 5em;margin: -5em;}
 
 @media screen and (max-width:960px){
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
@@ -314,8 +316,8 @@ height:8em;
 .eu img {max-width:230px}
 .sub{margin:1em 2em 1em 1em}
 #footer .grid_18,#footer .grid_6{width:95%;margin:1em auto;float:none}
-.grid_18 .rslides,.zemText,.zemTextarea{width:98%}
-#eucookies, #eucookies .grid_6, #eucookies .grid_18 {width:98%}
+.grid_18 .rslides,.zemText,.zemTextarea {width:98%}
+#eucookies, #eucookies .grid_6, #eucookies .grid_18, #contact .grid_4 {width:98%}
 #front .about,.slides{float:none;width:98%}
 .slides .rslides{width:100%;margin:0}
 .slides .rslides li img{width:100%;height:auto}
