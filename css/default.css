@@ -1,369 +1,951 @@
-h2,hr{text-align:center}
-#footer,#header,.white{background-color:#fff}
-.clear,.rslides{overflow:hidden}
-.rslides1_nav,a,a:hover{text-decoration:none}
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;vertical-align:baseline;margin:0;padding:0}
-b,dt,strong{font-weight:700}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-blockquote,q{quotes:none}
-blockquote:after,blockquote:before,q:after,q:before{content:none}
-table{border-collapse:collapse;border-spacing:0}
-body{background:#fff;border-bottom:10px solid #fff;color:#333;font-size:12px;font-size:13px;line-height:1.5;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
-a:focus{outline:dotted 1px}
-h2{font-size:23px}
-h3{font-size:21px}
-h4{font-size:19px}
-h5{font-size:17px}
-h6{font-size:15px}
-ol{list-style:decimal}
-ul{list-style:disc}
-li{margin-left:30px}
-address,dl,fieldset,h1,ol,p,pre,table,ul{margin-bottom:20px}
-h2,h3,h4,h5,h6 {margin: 1em 0 0 0}
-hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
-hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350.jpg) #191919}
-
-hr.line {width:90%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
-hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:#000}
-:target {background: #666666;border: solid 1px #aaa;}
-
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup{top:-.5em}
-sub{bottom:-.25em}
-em,i{font-style:italic}
-code{background-color:#585858;font-family:'Courier New',Courier,monospace}
-.container_24{margin:0 auto;max-width:960px;padding:1em 0}
-#header .container_24{padding:0}
-#header{margin:5em 0 0}
-.grid_1,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16,.grid_17,.grid_18,.grid_19,.grid_2,.grid_20,.grid_21,.grid_22,.grid_23,.grid_24,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9{display:inline;float:left;margin-left:.5%;margin-right:.5%}
-.alpha{margin-left:0}
-.omega{margin-right:0}
-.container_24 .grid_1{width:3.167%}
-.container_24 .grid_2{width:7.333%}
-.container_24 .grid_3{width:11.5%}
-.container_24 .grid_4{width:15.667%}
-.container_24 .grid_5{width:19.833%}
-.container_24 .grid_6{width:24%}
-.container_24 .grid_7{width:28.167%}
-.container_24 .grid_8{width:32.333%}
-.container_24 .grid_9{width:36.5%}
-.container_24 .grid_10{width:40.667%}
-.container_24 .grid_11{width:44.833%}
-.container_24 .grid_12{width:49%}
-.container_24 .grid_13{width:53.167%}
-.container_24 .grid_14{width:57.333%}
-.container_24 .grid_15{width:61.5%}
-.container_24 .grid_16{width:65.667%}
-.container_24 .grid_17{width:69.833%}
-.container_24 .grid_18{width:74%}
-.container_24 .grid_19{width:78.167%}
-.container_24 .grid_20{width:82.333%}
-.container_24 .grid_21{width:86.5%}
-.container_24 .grid_22{width:90.667%}
-.container_24 .grid_23{width:94.833%}
-.container_24 .grid_24{width:99%}
-.container_24 .prefix_1{padding-left:4.167%}
-.container_24 .prefix_2{padding-left:8.333%}
-.container_24 .prefix_3{padding-left:12.5%}
-.container_24 .prefix_4{padding-left:16.667%}
-.container_24 .prefix_5{padding-left:20.833%}
-.container_24 .prefix_6{padding-left:25%}
-.container_24 .prefix_7{padding-left:29.167%}
-.container_24 .prefix_8{padding-left:33.333%}
-.container_24 .prefix_9{padding-left:37.5%}
-.container_24 .prefix_10{padding-left:41.667%}
-.container_24 .prefix_11{padding-left:45.833%}
-.container_24 .prefix_12{padding-left:50%}
-.container_24 .prefix_13{padding-left:54.167%}
-.container_24 .prefix_14{padding-left:58.333%}
-.container_24 .prefix_15{padding-left:62.5%}
-.container_24 .prefix_16{padding-left:66.667%}
-.container_24 .prefix_17{padding-left:70.833%}
-.container_24 .prefix_18{padding-left:75%}
-.container_24 .prefix_19{padding-left:79.167%}
-.container_24 .prefix_20{padding-left:83.333%}
-.container_24 .prefix_21{padding-left:87.5%}
-.container_24 .prefix_22{padding-left:91.667%}
-.container_24 .prefix_23{padding-left:95.833%}
-.container_24 .prefix_24{padding-left:100%}
-.container_24 .suffix_1{padding-right:4.167%}
-.container_24 .suffix_2{padding-right:8.333%}
-.container_24 .suffix_3{padding-right:12.5%}
-.container_24 .suffix_4{padding-right:16.667%}
-.container_24 .suffix_5{padding-right:20.833%}
-.container_24 .suffix_6{padding-right:25%}
-.container_24 .suffix_7{padding-right:29.167%}
-.container_24 .suffix_8{padding-right:33.333%}
-.container_24 .suffix_9{padding-right:37.5%}
-.container_24 .suffix_10{padding-right:41.667%}
-.container_24 .suffix_11{padding-right:45.833%}
-.container_24 .suffix_12{padding-right:50%}
-.container_24 .suffix_13{padding-right:54.167%}
-.container_24 .suffix_14{padding-right:58.333%}
-.container_24 .suffix_15{padding-right:62.5%}
-.container_24 .suffix_16{padding-right:66.667%}
-.container_24 .suffix_17{padding-right:70.833%}
-.container_24 .suffix_18{padding-right:75%}
-.container_24 .suffix_19{padding-right:79.167%}
-.container_24 .suffix_20{padding-right:83.333%}
-.container_24 .suffix_21{padding-right:87.5%}
-.container_24 .suffix_22{padding-right:91.667%}
-.container_24 .suffix_23{padding-right:95.833%}
-.container_24 .suffix_24{padding-right:100%}
-.grid_sub_1,.grid_sub_10,.grid_sub_11,.grid_sub_12,.grid_sub_13,.grid_sub_14,.grid_sub_15,.grid_sub_16,.grid_sub_17,.grid_sub_18,.grid_sub_19,.grid_sub_2,.grid_sub_20,.grid_sub_21,.grid_sub_22,.grid_sub_23,.grid_sub_24,.grid_sub_3,.grid_sub_4,.grid_sub_5,.grid_sub_6,.grid_sub_7,.grid_sub_8,.grid_sub_9{display:inline;float:left;margin-left:0;margin-right:0}
-.sub_middle,.sub_omega{margin-left:1%}
-.sub_alpha,.sub_middle{margin-right:1%}
-.container_24 .grid_sub_1{width:2.25%}
-.container_24 .grid_sub_2{width:6.5%}
-.container_24 .grid_sub_3{width:10.75%}
-.container_24 .grid_sub_4{width:15%}
-.container_24 .grid_sub_5{width:19.25%}
-.container_24 .grid_sub_6{width:23.5%}
-.container_24 .grid_sub_7{width:27.75%}
-.container_24 .grid_sub_8{width:32%}
-.container_24 .grid_sub_9{width:36.25%}
-.container_24 .grid_sub_10{width:40.5%}
-.container_24 .grid_sub_11{width:44.75%}
-.container_24 .grid_sub_12{width:49%}
-.container_24 .grid_sub_13{width:53.25%}
-.container_24 .grid_sub_14{width:57.5%}
-.container_24 .grid_sub_15{width:61.75%}
-.container_24 .grid_sub_16{width:66%}
-.container_24 .grid_sub_17{width:70.25%}
-.container_24 .grid_sub_18{width:74.5%}
-.container_24 .grid_sub_19{width:78.75%}
-.container_24 .grid_sub_20{width:83%}
-.container_24 .grid_sub_21{width:87.25%}
-.container_24 .grid_sub_22{width:91.5%}
-.container_24 .grid_sub_23{width:95.75%}
-.container_24 .grid_sub_24{width:100%}
-ol,p,ul{margin:0 0 1em}
-.container_24 .grid_18 .grid_6{width:32.333%}
-.container_24 .grid_18 .grid_9{width:49%}
-.container_24 .grid_18 .grid_12{width:65.66%}
-.container_24 .grid_18 .grid_18{width:100%}
-.container_24 .grid_12 .grid_3{width:23.5%}
-.container_24 .grid_12 .grid_9{width:74.5%}
-.container_24 .grid_8 .grid_4{width:49%}
-.clear{clear:both;display:block;visibility:hidden;width:0;height:0}
-#footer,#header,#nav,.table100,figure img{width:100%}
-.clearleft{clear:left}
-.clearright{clear:right}
-a{color:#ff0000}
-a:visited{color:#eeeeee}
-#header h2,h1{font-size:3em;text-align:left;line-height:100%;color:#191919}
-h2{padding:1em 0}
-p{text-align:left}
-ol,ul{list-style-position:inside!important;padding:0}
-blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em}
-abbr,acronym{border-bottom:2px dotted #ccc;cursor:help}
-dt{margin-left:1em}
-dd{margin-left:2em}
-.grid_18 figure.grid_6{margin:0 .5% 1em 0}
-figcaption{font-size:.8em;width:100%}
-.line figcaption{font-size:1em}
-#main figure,.floatleft,article figure{display:inline-block;display:table;float:left;margin:0 .5% .5% 0}
-#main figcaption,article figcaption, section figcaption {display:table-caption;caption-side:bottom}
-figure img{height:auto}
-.centerthing,.centre{margin:0 auto 1em;text-align:center;display:block}
-.container_12{background:#fff}
-#meta,.frontthumbs h3{background-color:#BA0000}
-#content a:hover,.submenu .active a{color:#ddd}
-#content{color:#eee;background: #000000;
--moz-box-shadow: 0px 3px 5px #474347;
--webkit-box-shadow: 0px 3px 5px #474347;
-box-shadow: 0px 3px 5px #474347;}
-.submenu a{color:red}
-#footer a{color:#BA0000}
-#footer,#header{padding-top:2em}
-#nav ul{list-style-type:none;padding:5px 0}
-#nav ul li{float:left;font-size:14px}
-#related-links #content .container_24 .grid_8,.zemSubmit{float:right}
-#searchsites fieldset{border:1px solid #ddd;padding:1em}
-#searchsites label{margin:0 .7em}
-.frontthumbs h3{padding-left:5px;text-align:left;line-height:1.4em}
-.frontthumbs h3 a{display:block}
-#error #content h2,#front .frontthumbs a{color:#fff}
-#front .frontthumbs a:hover{color:#ccc}
-#front .grid_6 ul,#front .grid_6 ul li{list-style:none;margin:0}
-#meta{padding:5px;margin:0 0 1em}
-#meta .linklist,#meta a{color:#fff;font-size:1.2em}
-#side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
-.line{border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em}
-.line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background: #000}
-.announce,.announce h3{color:#000;background-color:#ffc}
-.announce hr:after {content:none;}
-.line h3,.line h4,.line h6{text-align:left}
-.announce{padding:5px}
-#front .announce a,.announce a{color:#ba0000}
-.zemSubmit{margin:1em 9em 0 0}
-.zemCheckbox{margin-top:1em}
-#neme #content ul{list-style:none!important;padding:0;margin:0}
-#neme #content ul li{margin:0;padding-bottom:.8em}
-.clear{margin:1em}
-.clearboth{clear:both}
-.aright{text-align:right}
-.floatright {float:right}
-.apology p,.bx-wrapper .bx-pager,.caption{text-align:center}
-#error-page #content p{font-size:2.2em;text-align:center}
-.apology,.ie{font-size:1.7em}
-#accessibility{position:absolute;top:-10000px}
-.grideven{min-height:250px;height:auto!important;height:250px}
-.grideven h3{font-size:14px;margin:0 0 .7em}
-.grideven p{font-size:1em}
-img{max-width:100%;height:auto}
-.embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
-.embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%}
-
-#nav{background: #990000 none repeat scroll 0 0 !important;height:5em;position:fixed;top:0;z-index:9999;display:block;
--moz-box-shadow: 0px 3px 5px #474347;
--webkit-box-shadow: 0px 3px 5px #474347;
-box-shadow: 0px 3px 5px #474347;
+<txp:php>
+if (isset($_POST['submit'])) {
+$url = $_POST['site'].$_POST['terms'];
+if ($_POST['section'] && ($_POST['section'] != 'null')) $url = $url.'&s='.$_POST['section'];
+header('Location: '.$url);
+} else {
+header('content-type: text/html; charset=utf-8');
 }
+</txp:php>
 
-#menu .active{color:#ccc}
-#menu a{color:#fff}
-#menu a:hover{color:#eee}
-#menu-toggle-primary a{margin:0;display:block;color:#000}
-#menu-toggle-primary a:after{content:"\2630";display:inline-block;position:absolute;top:0;font-size:1.75em;padding:0;background:#fff;right:4.5%}
-#menu-toggle-primary,.medium{display:none}
-#menu-primary-items,nav a{display:block}
-nav li{width:auto;float:left;display:inline;padding:0;margin:0}
-nav a, nav span{padding:.5em .75em}
-nav span {color:#fff;margin:-.5em .1em 0 .1em;display:inline-block;font-size:1.5em}
-.rslides,.rslides li{padding:0;width:100%}
-nav li:first-child a{padding-left:0}
-nav ul:after{content:"";display:table;clear:left}
-.rslides{position:relative;list-style:none;z-index:100}
-.rslides li{-webkit-backface-visibility:hidden;position:absolute;left:0;top:0;list-style:none!important;margin:0;display:block}
-.rslides li:first-child{position:relative;display:block;float:left}
-.rslides img{display:block;height:auto;float:left;width:100%;border:0;}
-.no-js ul.rslides li{display:none}
-.no-js ul.rslides li:first-child{display:inherit}
-.rslides{margin:0 auto}
-.rslides_container{margin-bottom:50px;position:relative;float:left;width:50%}
-.rslides1_nav,.rslides2_nav{position:absolute;-webkit-tap-highlight-color:transparent;overflow:hidden;text-indent:-9999px}
-.rslides1_nav{top:50%;left:0;z-index:99;opacity:.7;height:61px;width:38px;background:url(themes.gif) left top no-repeat;margin-top:-45px}
-.rslides1_nav:active{opacity:1}
-.rslides1_nav.next{left:auto;background-position:right top;right:0}
-.rslides2_nav{top:0;left:0;display:block;background:#fff;opacity:0;filter:alpha(opacity=1);width:48%;height:91%}
-.rslides2_nav.next{left:auto;right:0}
-.caption,.rslides3_nav{position:absolute;bottom:0;left:0}
-.rslides3_nav{-webkit-tap-highlight-color:transparent;opacity:.6;text-indent:-9999px;overflow:hidden;top:0;background:url(/images/702.gif) left 50% no-repeat #000;width:38px}
-.caption{display:block;right:0;padding:15px;background:#000;background:rgba(0,0,0,.8);color:#fff}
-.bx-wrapper{position:relative;margin:0 auto 60px;padding:0}
-.bx-wrapper img{max-width:100%;display:block}
-.bx-wrapper .bx-viewport{border:5px solid #ccc;left:-5px;background:#ccc;-webkit-transform:translatez(0);-moz-transform:translatez(0);-ms-transform:translatez(0);-o-transform:translatez(0);transform:translatez(0)}
-.bx-wrapper .bx-controls-auto,.bx-wrapper .bx-pager{position:absolute;bottom:-30px;width:100%}
-.bx-wrapper .bx-loading{min-height:50px;background:url(/images/428.gif) center center no-repeat #fff;height:100%;width:100%;position:absolute;top:0;left:0;z-index:2000}
-.bx-wrapper .bx-pager{font-size:.85em;font-family:Arial;font-weight:700;color:#666;padding-top:20px}
-.bx-wrapper .bx-controls-auto .bx-controls-auto-item,.bx-wrapper .bx-pager .bx-pager-item{display:inline-block}
-.bx-wrapper .bx-pager.bx-default-pager a{background:red;text-indent:-9999px;display:block;width:16px;height:16px;margin:0 5px;outline:0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
-.bx-wrapper .bx-pager.bx-default-pager a.active,.bx-wrapper .bx-pager.bx-default-pager a:hover{background:#CCC}
-.bx-wrapper .bx-prev{left:10px;background:url(/images/427.png) 0 -32px no-repeat}
-.bx-wrapper .bx-next{right:10px;background:url(/images/427.png) -43px -32px no-repeat}
-.bx-wrapper .bx-prev:hover{background-position:0 0}
-.bx-wrapper .bx-next:hover{background-position:-43px 0}
-.bx-wrapper .bx-controls-direction a{position:absolute;top:50%;margin-top:-16px;outline:0;width:32px;height:32px;text-indent:-9999px;z-index:8888}
-.bx-wrapper .bx-controls-direction a.disabled{display:none}
-.logo{max-height:150px;margin-bottom:1em}
+<!doctype html>
 
-#content {margin:0 0 10px 0;}
-.social {width:100%;background-color:#ffffff;margin-top:10px;border-bottom:2px solid #fff;padding-top:6px;display:block}
-.social img {margin-left:3px;}
-.grid_18 .eu {display:block;background-color:#fff; color:#000;height:auto; padding:1em 0; clear:both;border-radius: 8px;}
+<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
 
-.anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
+<head>
+<title><txp:page_title /></title>
 
-#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after {content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
-#meta {border-radius: 8px 8px 0 0;}
-.social {border-radius: 0 0 8px 8px;}
-.ds {border-radius: 8px 0 0 8px;}
-.rslides li img {border-radius: 0 8px 8px 0;}
-#eucookies {display:table;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
-#eucookies p {font-size:1.1em;}
-#eucookies a {color:#cc0000}
-#eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
-#eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 1em 5em;margin: -5em;}
+<meta charset="utf-8">
+<txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
+<meta name="generator" content="Textpattern CMS"/>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" />
+</txp:act_if_mobile>
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-@media screen and (max-width:960px){
-.medium,.nosmall, #landing{visibility:hidden;display:none;}
-.container_24{padding:0 1.5%;display:block}
-#menu{clear:both;display:block}
-h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;width:97%;display:block}
-#header{padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:2em 0 0}
-#header .container_24 .grid_18,#header .grid_20{width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
-#header .grid_6,.logo{float:none;display:block;width:30%;height:auto;margin:0 auto}
-.logo{clear:both}
-#front .container_24 .frontthumbs li,#side .submenu li,#texts #content ol li,.submenu li{display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1em 0 0;width:91%;padding:.6em}
-#footer .grid_18 p,#footer .grid_6 p{padding:0 2em}
-#side .submenu li,.submenu li{
--webkit-column-count: 2;
--moz-column-count: 2;
-column-count: 2;
--webkit-column-width: 120px;
--moz-column-width: 120px;
-column-width: 120px;
--webkit-column-gap: 10px;
--moz-column-gap: 10px;
-column-gap: 10px;
-}
-.eu {display:block;background-color:#fff; color:#000;padding:1em 0; clear:both;
-min-height:8em;
-height:auto !important;
-height:8em;
-}
-.eu img {max-width:230px}
-.sub{margin:1em 2em 1em 1em}
-#footer .grid_18,#footer .grid_6{width:95%;margin:1em auto;float:none}
-.grid_18 .rslides,.zemText,.zemTextarea {width:98%}
-#eucookies, #eucookies .grid_6, #eucookies .grid_18, #contact .grid_4 {width:98%}
-#front .about,.slides{float:none;width:98%}
-.slides .rslides{width:100%;margin:0}
-.slides .rslides li img{width:100%;height:auto}
-#front .frontthumbs{width:48%;margin-right:1%}
-#front .frontthumbs h3 a{font-size:.85em;display:block}
-#front .grid_18 .slides{float:none;width:98%}
-#front .slides .rslides li img{width:98%;height:auto}
-#texts .grid_6{width:98%}
-.nosmall{display:none}
-.largeonsmall,.small100,.video .grid_9{width:98%;float:none}
-.bx-wrapper .bx-pager.bx-default-pager a{background:red;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
-#about #content .frontthumbs,#events #content .frontthumbs,#participations #content .frontthumbs{display:none}
-#about #content .grid_18,#about #content .grid_6,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:98%}
-#publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:95%;clear:both;margin:0 auto}
-#neme #content .grid_6,#publications #content .grid_3,#publications #content .grid_6{width:98%;clear:both;display:block;margin:1.5em auto}
-#publications #content img{clear:both;display:block;margin:1em auto;text-align:center;max-width:230px}
-#contact #content .ds,#nac #content .frontthumbs,#newsletter .grid_4,#workshops #content .frontthumbs,#workshops #content .grid_6{display:none}
-#publications #content .grideven img{max-width:110px}
-#publications #content figcaption{width:95%}
-#contact #content .grid_6,#contact .grid_12,#nac #content .grid_18,#nac #content .grid_6,#newsletter .grid_10,#participations #content .vid,#texts .grid_18,#workshops #content .grid_18{width:98%}
-#publications #content .grid_9{border-bottom:1px solid #fff}
-#menu-toggle-primary,.zemSubmit{display:block}
-#menu-toggle-primary .grid_2 {width:30px;height:30px}
-#content{padding:1em}
-#related-links #content{line-height:2em}
-.zemSubmit{clear:both;width:50%}
-#nav{height:3em;position:relative}
-#header, #nav{background-color:#fff;}
-#menu .active{color:#ccc}
-#menu a{color:#BA0000;}
-#menu a:hover{color:#666}
-#menu-primary-items,#menu-toggle-primary a.close-menu-primary{display:none}
-#menu-primary:target #menu-primary-items{display:block}
-#menu-primary:target #menu-toggle-primary a.open-menu-primary{display:none}
-#menu-primary:target #menu-toggle-primary a.close-menu-primary{display:block}
-nav{border-bottom:0;margin:0 auto}
-nav ul{display:none;height:auto;margin:0 1em}
-nav li:first-child a{padding-left:2em}
-nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.4em 0;background:#fff;}
-.menu-items li a{padding:0 2em;display:block}
-#menu-primary {background-color: #fff;color: #ba0000}
+<txp:rvm_css name="default" format="link" media="all" />
+<txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
+<!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
+<!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
+<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:rvm_css name="print" format="link" media="print" />
 
-#content #side .announce li,#front .container_24 .announce li, .announce .linklist li {background-color:#eeeee0;padding:5px;border-bottom:1px #ffc solid}
-#front .container_24 .medium{display:block;clear:both;border:0;padding:0;margin:0}
-.medium{clear:both}
-#nav, #header, #footer {background:transparent; box-shadow:none;}
-}
-@media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:98%}
-}
+
+<txp:if_section name="contact,newsletter">
+<meta name="Robots" content="noindex,follow" />
+<txp:else />
+<meta name="author" content="NeMe and contributors" />
+<meta name="Robots" content="index,follow" />
+<meta name="revisit-after" content="10 days" />
+</txp:if_section>
+
+<meta name="author" content="NeMe" />
+<meta name="geo.region" content="CY" />
+<meta name="geo.placename" content="Limassol" />
+<meta name="DC.title" content="<txp:page_title />" />
+
+
+<link rel="home" href="<txp:site_url />" />
+<link rel="canonical" href="http://www.neme.org<txp:page_url />" />
+
+<txp:if_description><txp:meta_description /></txp:if_description>
+
+<meta property="og:site_name" content="<txp:site_name />" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<txp:page_title />" />
+<txp:if_description><meta property="og:description" content="<txp:meta_description format="" />" /></txp:if_description>
+<meta property="og:url" content="http://www.neme.org<txp:page_url />" />
+
+<txp:if_individual_article>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@nemeorg" />
+<meta name="twitter:creator" content="@nemeorg" />
+<meta name="twitter:url" content="<txp:permlink />" />
+<meta name="twitter:title" content="<txp:page_title />" />
+<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
+<txp:if_custom_field name="img_main" value="">
+<meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
+<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="NeMe logo" />
+<txp:else />
+<txp:variable name="imgmain"><txp:images break="" sort="rand()" limit="1" id='<txp:custom_field name="img_main" />'><txp:image_info type="id" /></txp:images></txp:variable>
+<meta name="twitter:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
+<meta property="og:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
+<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="width" /></txp:images>" />
+<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="height" /></txp:images>" />
+<meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
+</txp:if_custom_field>
+<txp:else />
+<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="NeMe logo" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@nemeorg" />
+<meta name="twitter:creator" content="@nemeorg" />
+<meta name="twitter:url" content="http://www.neme.org<txp:page_url />" />
+<meta name="twitter:title" content="<txp:page_title />" />
+<meta name="twitter:description" content="<txp:meta_description format="" />" />
+<meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
+</txp:if_individual_article>
+
+
+<txp:feed_link flavor="atom" format="link" label="Atom" section="" category="" />
+<txp:feed_link flavor="rss" format="link" label="RSS" section="" category="" />
+<txp:hide><link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" /></txp:hide>
+
+<link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194" />
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="manifest" href="/manifest.json" />
+<txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000" /></txp:hide>
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+
+
+
+<txp:hide>
+<!-- the google js is no longer working --> 
+<txp:if_section name="publications">
+<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
+</txp:if_section>
+<!-- support for battleforthenet.com -->
+<script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
+</txp:hide>
+
+</head>
+
+<txp:hide>==================-body-======================</txp:hide>
+
+<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
+<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
+
+<txp:hide>==================-accessibility-======================</txp:hide>
+
+<div id="accessibility">
+<ul>
+<li><a href="#menu"><txp:text item="go_menu" /></a></li>
+<li><a href="#content"><txp:text item="go_content" /></a></li>
+<li><a href="#footer"><txp:text item="go_search" /></a></li>
+</ul>
+</div>
+
+<txp:hide>==================-menu-======================</txp:hide>
+
+<div id="nav"><div class="container_24">
+<div class="grid_24" id="menu">
+<nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"  class="menu" id="menu-primary">
+<div class="menu-container">
+<div id="menu-toggle-primary">
+<a class="open-menu-primary" href="#menu-primary"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Menu</span></a>
+<a class="close-menu-primary" href="#"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Close menu</span></a>
+</div><!-- .menu-toggle -->
+<div class="wrap">
+<ul class="menu-items" id="menu-primary-items">
+<li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
+<li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
+<li><a href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
+<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
+<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
+<li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
+<li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
+<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="bookmark">Texts</a></li>
+<li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
+<li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
+<li class="nosmall">&nbsp;&nbsp;</li>
+<li><a href="http://forum.neme.org/" rel="external">Forum</a></li>
+<li><a href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li><txp:if_logged_in><txp:if_individual_article><li><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></li></txp:if_individual_article></txp:if_logged_in>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+</div><!-- end .container_24 --></div>
+
+<txp:hide>==================-header-======================</txp:hide>
+
+<div id="header"><div class="container_24">
+
+<div class="grid_2 logo nosmall">
+<txp:if_section name="">
+<txp:image id="792" />
+<txp:else />
+<a href="<txp:site_url />" rel="home"><txp:image id="792" /></a>
+<small>Est. 2004</small>
+</txp:if_section>
+</div>
+
+<h1><txp:page_title /></h1>
+
+<div class="clear">&nbsp;</div>
+
+</div><!-- end .container_24 --></div>
+
+<div id="content"><div class="container_24">
+
+<txp:hide>==================-home page-======================</txp:hide>
+
+<txp:if_section name="">
+<txp:if_search>
+<txp:variable name="searchterm_minchars" value="3" />
+<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';
+</txp:php></txp:variable>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:if_search_results>
+<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<hr />
+<txp:else />
+<p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
+<h3>Suggestions:</h3>
+<ul>
+<li>Make sure all words are spelled correctly.</li>
+<li>Try fewer keywords</li>
+<li>Try different keywords</li>
+<li>Use our menu links above. Parts of this site are not included in the search facility</li>
+</ul>
+</txp:if_search_results>
+<txp:if_variable name="searchterm_tooshort" value="yes">
+<p>Sorry, your search term <em><txp:search_term /></em> is too short. Please try again with a word with at least <txp:variable name="searchterm_minchars" /> letters.</p>
+<txp:else />
+<txp:article limit="999" searchall="0" />
+</txp:if_variable>
+
+</txp:if_search>
+</txp:if_section>
+
+<txp:if_section name="">
+<txp:if_search>
+<txp:else />
+<article class="grid_6 about" role="main">
+<txp:article_custom id="1">
+<h3><txp:title /></h3>
+<txp:excerpt />
+<p class="aright"><a href="<txp:site_url />about/">read more&#8230;</a></p>
+</txp:article_custom>
+</article>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
+<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
+<a href="/<txp:image_info type="name" />"><txp:image /></a>
+</txp:images>
+</figure>
+
+<div class="clear">&nbsp;</div>
+
+<div class="grid_6 frontthumbs">
+<txp:article_custom limit="10" section="events,participations" label="Activities" labeltag="h3" break="li" wraptag="ul">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</div>
+
+<div class="grid_6 frontthumbs">
+<txp:article_custom section="texts" limit="10" sort="rand()" break="li" wraptag="ul" labeltag="h3" label="Texts">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</div>
+
+<div class="medium">&nbsp;</div>
+
+<div class="grid_6 frontthumbs">
+<h3>Forum</h3>
+<ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
+</div>
+
+<txp:hide><div class="grid_6 frontthumbs">
+<h3><a href="/participations/">Participations</a></h3>
+
+<txp:images category='<txp:category_list type="image" parent="participations" break=",">
+<txp:category type="image" />
+</txp:category_list>' sort="rand()" limit="1">
+<a href="/participations/"><txp:thumbnail  class="ds image" /></a>
+</txp:images>
+
+</div></txp:hide>
+
+	
+<div class="grid_6 frontthumbs">
+<h3>Announcements</h3>
+
+<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+</div>
+<div class="clear">&nbsp;</div>
+</txp:if_search>
+</txp:if_section>
+
+<txp:hide>==================-article-lists-======================</txp:hide>
+
+<txp:if_article_list>
+
+<txp:hide>==================-about-======================</txp:hide>
+
+<txp:if_section name="about">
+<txp:if_search>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:if_search_results>
+<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<hr />
+<txp:else />
+<p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
+<h3>Suggestions:</h3>
+<ul><li>Make sure all words are spelled correctly.</li>
+<li>Try fewer keywords</li>
+<li>Try different keywords</li></ul>
+</txp:if_search_results>
+<txp:article limit="999" searchall="0" />
+<txp:else />
+<txp:article_custom id="1">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:if_custom_field name="pubs">
+<txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />">img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+</txp:images>
+<txp:else />
+<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
+<txp:thumbnail class="ds" />
+</txp:images>
+</txp:if_custom_field></figure>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
+
+<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<a href="<txp:site_url /><txp:image_info type="name" />"><txp:image /></a>
+</txp:images>
+</figure>
+
+<div class="clear">&nbsp;</div>
+<article class="grid_18" role="main"><txp:body /></article>
+
+<div class="grid_6 frontthumbs" id="side" role="complementary">
+<div id="meta"><h4>Address</h4><address>NeMe<br />
+poBox 50325<br />
+3603 Limassol<br />
+Cyprus</address>
+</div>
+<div class="announce">
+<h3>Announcements</h3>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
+</div>
+<div>
+<h4>Publications</h4>
+<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+<div class="clear">&nbsp;</div>
+</txp:images>
+</div>
+
+<txp:recent_articles section="events,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:article_custom>
+
+<div class="grid_6 frontthumbs">
+<h3>Events</h3>
+<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
+<a href="<txp:site_url />events/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="grid_6 frontthumbs">
+<h3>Publications</h3>
+
+<txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
+<a href="<txp:site_url />publications/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="grid_6 frontthumbs">
+<h3>Participations</h3>
+
+<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
+</div>
+	
+<div class="grid_6 frontthumbs">
+<h3>Workshops</h3>
+
+<txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
+<a href="<txp:site_url />workshops/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_search>
+</txp:if_section>
+
+<txp:hide>==================-nac-======================</txp:hide>
+
+<txp:if_section name="nac">
+<txp:article_custom id="44">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:if_custom_field name="pubs">
+<txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />">img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+</txp:images>
+<txp:else />
+<txp:images category='<txp:category_list type="image" parent="nac" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
+<txp:thumbnail class="ds" />
+</txp:images>
+</txp:if_custom_field></figure>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images category='<txp:category_list type="image" parent="nac" break="," class="ds"><txp:category type="image" /></txp:category_list>' limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:image />
+</txp:images>
+</figure>
+
+<div class="clear">&nbsp;</div>
+<article class="grid_18" role="main"><h2><txp:title /></h2><txp:body /></article>
+
+<div class="grid_6 frontthumbs" id="side" role="complementary">
+<div id="meta"><h4>Location</h4><address><p>NeMe Arts Centre<br />
+Corner of Ellados and Enoseos streets<br />
+Limassol<br />
+Cyprus</p></address>
+<h4>Postal Address</h4>
+<address><p>NeMe<br />
+poBox 50325<br />
+3603 Limassol<br />
+Cyprus</p>
+</address></div>
+
+<div class="announce"><h3>Announcements</h3>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+
+<txp:if_custom_field name="pubs_by_others"><div class="line"><h4 class="line">Publications</h4>
+<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<div class="clear">&nbsp;</div>
+</txp:images></div></txp:if_custom_field>
+
+</div>
+
+<txp:article_custom limit="999" label="Previously at NAC" venue="NeMe Arts Centre%" section="events,participations" labeltag="h3" break="li" wraptag="ul" class="submenu">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+
+<div class="clear">&nbsp;</div>
+</txp:article_custom>
+
+<div class="grid_6 frontthumbs">
+<h3>Events</h3>
+<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
+<a href="<txp:site_url />events/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="grid_6 frontthumbs">
+<h3>Publications</h3>
+
+<txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
+<a href="<txp:site_url />publications/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="grid_6 frontthumbs">
+<h3>Participations</h3>
+
+<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
+</div>
+	
+<div class="grid_6 frontthumbs">
+<h3>Workshops</h3>
+
+<txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
+<a href="<txp:site_url />workshops/"><txp:thumbnail /></a>
+</txp:images>
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_section>
+
+<txp:hide>==================-events-participations-======================</txp:hide>
+
+<txp:if_section name="events,participations">
+<txp:if_search>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:if_search_results>
+<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<hr />
+<txp:else />
+<p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
+<h3>Suggestions:</h3>
+<ul><li>Make sure all words are spelled correctly.</li>
+<li>Try fewer keywords</li>
+<li>Try different keywords</li></ul>
+</txp:if_search_results>
+<txp:article limit="999" searchall="0" />
+<txp:else />
+<div class="line">
+
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+
+
+<div class="clear">&nbsp;</div></div>
+
+<section><div class="line nosmall">
+<div class="grid_5 nosmall"><p>Dates</p></div>
+<div class="grid_6 nosmall"><p>Title</p></div>
+<div class="grid_13 nosmall"><p>Venue</p></div>
+<div class="clear nosmall">&nbsp;</div></div>
+
+<txp:article limit="999">
+<article><div class="grid_5"><txp:if_logged_in><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
+<div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<div class="grid_13"><txp:if_custom_field name="venues">
+<p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
+<txp:else />
+<p><txp:custom_field name="venue" escape="" /></p>
+</txp:if_custom_field></div>
+<div class="clearboth"><hr /></div></article>
+</txp:article></section>
+</txp:if_search>
+</txp:if_section>
+
+<txp:hide>==================-texts-======================</txp:hide>
+
+<txp:if_section name="texts">
+<txp:if_search>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:if_search_results>
+<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<hr />
+<txp:else />
+<p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
+<h3>Suggestions:</h3>
+<ul><li>Make sure all words are spelled correctly.</li>
+<li>Try fewer keywords</li>
+<li>Try different keywords</li></ul>
+</txp:if_search_results>
+<txp:article limit="999" searchall="0" />
+<txp:else />
+<div class="line">
+
+<article class="grid_6 about" role="main">
+<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
+<!--googleoff: all-->
+<p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
+<!--googleon: all-->
+</article>
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
+<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<a href="/<txp:image_info type="name" />"><txp:image /></a>
+</txp:images>
+</figure>
+
+<div class="clear">&nbsp;</div>
+
+<div class="clear">&nbsp;</div></div>
+
+<section><div class="line nosmall">
+<div class="grid_6 nosmall"><p>Author</p></div>
+<div class="grid_18 nosmall"><p>Title</p></div>
+<div class="clear nosmall">&nbsp;</div></div>
+
+<txp:article limit="999">
+<article><div class="grid_6"><txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:if_logged_in></div>
+<div class="grid_18"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<hr class="clearboth" /></article>
+</txp:article></section>
+</txp:if_search>
+</txp:if_section>
+
+<txp:hide>==================-contact-======================</txp:hide>
+
+<txp:if_section name="contact">
+<div class="clear">&nbsp;</div>
+
+<div class="grid_4">
+<txp:thumbnail id="166" class="nosmall" />
+<p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
+
+<div class="grid_12">
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect_text label="Your name" required="1" /><br />
+<txp:com_connect_text label="Your surname" required="1" /><br />
+<txp:com_connect_email label="Your email" name="Email" required="1" /><br />
+<txp:com_connect_text label="Your website" required="0" /><br />
+<txp:com_connect_textarea name="Comment" label="Your question" /><br />
+<txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
+<txp:com_connect_checkbox label="This is not spam!." /><br />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Send" />
+</txp:com_connect>
+</div>
+
+<div class="grid_8"><div id="meta"><h4>Address</h4><address>NeMe<br />
+poBox 50325<br />
+3603 Limassol<br />
+Cyprus</address></div>
+<div class="announce"><h3>Announcements</h3>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_section>
+
+<txp:hide>==================-publications-======================</txp:hide>
+
+<txp:if_section name="publications">
+<txp:article_custom section="events, participations, about" limit="999">
+<txp:if_custom_field name="pubs">
+<txp:images id='<txp:custom_field name="pubs" />' break="">
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
+<txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
+
+</txp:images>
+</txp:if_custom_field>
+</txp:article_custom> 
+
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+
+<txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
+<txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
+<txp:if_different>
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
+<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" /></a></span>
+<figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
+<div class="clear">&nbsp;</div>
+</div>
+</txp:if_different>
+</txp:images>
+
+<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+
+<txp:images category="cite" limit="999" sort="alt desc" break="">
+<div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
+<span itemprop="image" class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
+<figcaption itemprop="caption" class="grid_9 omega"><txp:image_info type="caption" escape="" />
+<txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in>
+</figcaption></figure>
+<div class="clear">&nbsp;</div>
+</div>
+</txp:images>
+</txp:if_section>
+
+<txp:hide>==================-workshops-======================</txp:hide>
+
+<txp:if_section name="workshops">
+<txp:article_custom id="2">
+
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:thumbnail id='<txp:custom_field name="img2" />' class="ds" /></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
+<div class="clear">&nbsp;</div>
+<div class="grid_18"><txp:body /></div>
+<div class="grid_6">
+<div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:article_custom>
+</txp:if_section>
+
+<txp:hide>==================-links-======================</txp:hide>
+
+<txp:if_section name="related-links">
+
+
+<div class="grid_8">
+<div id="meta">
+<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised or curated in the past <txp:fha_time_diff year="2004" />.</p>
+<p>We thank all of them.</p>
+<p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="/contact/">let us know</a>.</p>
+</div>
+</div>
+<div>
+<h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of our projects</h4>
+<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
+
+<div class="clear">&nbsp;</div>
+
+<hr />
+
+<div class="announce"><h4>Sponsors</h4>
+<p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, here are the organisations who helpped our projects in either a financial or in-kind way.</p>
+
+<txp:linklist category="sponsors" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
+<txp:variable name="haslink" value='<txp:link_url />' />
+<txp:if_variable name="haslink" value="#">
+<txp:link_name escape="html" />
+<txp:else />
+<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+</txp:if_variable>
+</txp:linklist></div>
+
+<hr />
+
+<h4>Venues</h4>
+
+<txp:linklist category="venues,venues-featured" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
+<txp:variable name="haslink" value='<txp:link_url />' />
+<txp:if_variable name="haslink" value="#">
+<txp:link_name escape="html" />
+<txp:else />
+<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+</txp:if_variable>
+</txp:linklist>
+
+
+<div class="clear">&nbsp;</div>
+
+<hr />
+
+<div class="announce"><h5 id="site_thanks">For their help and/or advice for the coding of our websites we thank:</h5>
+
+<txp:output_form form="site_thanks" /></div>
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_section>
+
+<txp:hide>==================-neme-to convert and adapt for news.neme.org-======================
+
+<txp:if_section name="neme">
+<div class="grid_24"><h6>This page lists random <a href="<txp:site_url />calls/" rel="external">calls</a>, <a href="http://www.neme.org/arts_info/" rel="external">arts information</a> and <a href="http://www.neme.org/texts/" rel="external">texts</a> from <a href="http://www.neme.org" rel="external">NeMe</a> as well as the latest entries from our <a href="http://forum.neme.org" rel="external">forum</a>.</h6></div><div class="clear">&nbsp;</div>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
+
+<div class="grid_6"><h3>Forum</h3>
+<ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
+</div>
+<div class="clear">&nbsp;</div>
+</txp:if_section>
+
+==================-newsletter-possibly move to blog-======================</txp:hide>
+
+<txp:if_section name="newsletter">
+<txp:thumbnail id="166" class="grid_4" />
+
+<div class="grid_10">
+
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect_text label="Your name" required="1" /><br />
+<txp:com_connect_text label="Your Surname" required="1" /><br />
+<txp:com_connect_email name="Email" label="Your email" required="1" /><br />
+<txp:com_connect_text label="Your website" required="0" /><br />
+<txp:com_connect_checkbox label="Check this box if you wish to subscribe to our newsletter" /><br />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Subscribe" />
+</txp:com_connect>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=newsletter');</txp:php>
+
+
+</div>
+
+
+<div class="grid_10">
+<p>By filling this form you agree to receive emails from NeMe&#47;IMCA regarding our calls for participation, invitations and information about our events. These emails will be very infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
+
+<p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
+
+<p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
+
+<p>A link to our privacy policy can be found on the bottom of the page.</p>
+
+<div class="social"><a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a></div>
+
+
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_section>
+
+</txp:if_article_list>
+
+<txp:hide>==================-individual articles-======================</txp:hide>
+
+<txp:if_individual_article>
+
+<txp:hide>==================-individual events-participations-======================</txp:hide>
+
+<txp:if_article_section name="events,participations">
+<txp:article form=""><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
+<txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
+<txp:thumbnail class="ds" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<div class="clear">&nbsp;</div>
+
+<div class="grid_18" role="main" id="main">
+<txp:body />
+</div>
+
+<div class="grid_6" id="side" role="complementary">
+<div id="meta">
+<txp:if_custom_field name="venues"><h5>Venues</h5>
+<p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" /></p>
+<txp:else />
+<h5>Venue</h5>
+<p><txp:custom_field name="venue" /></p>
+</txp:if_custom_field>
+<h5>Dates</h5>
+<p><txp:custom_field name="dates" escape="" /></p>
+</div>
+
+<div class="announce"><h3>Announcements</h3>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+
+
+<txp:variable name="publs" value='<txp:custom_field name="pubs_by_others" /><txp:custom_field name="pubs" /><txp:custom_field name="multi_event_pubs" />' />
+
+<txp:if_variable name="publs" value="">
+<txp:else />
+<h4>Publications</h4>
+</txp:if_variable>
+
+<txp:if_custom_field name="multi_event_pubs">
+<txp:images id='<txp:custom_field name="multi_event_pubs" />' break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+</txp:images>
+</txp:if_custom_field>
+
+<txp:if_custom_field name="pubs">
+<txp:images id='<txp:custom_field name="pubs" />' break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+</txp:images>
+</txp:if_custom_field>
+
+<txp:if_custom_field name="pubs_by_others">
+<txp:images id='<txp:custom_field name="pubs_by_others" />' break="">
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+</txp:images>
+</txp:if_custom_field>
+
+<txp:if_variable name="publs" value="">
+<txp:else />
+<div class="clear">&nbsp;</div></txp:if_variable>
+
+<div class="sub"><txp:article_custom label='Other <txp:section />' labeltag="h4" section='<txp:section />' limit="600" wraptag="ul" class="submenu">
+<txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
+</txp:article_custom></div>
+
+</div>
+<div class="clear">&nbsp;</div>
+</txp:article>
+</txp:if_article_section>
+
+<txp:hide>==================-individual about-======================</txp:hide>
+
+<txp:if_article_section name="about">
+<txp:article form="">
+<article class="grid_18" role="main">
+<txp:body />
+</article>
+</txp:article>
+<div class="grid_6 frontthumbs" id="side" role="complementary">
+ <div id="meta"><h4>Address</h4><address>NeMe<br />
+poBox 50325<br />
+3603 Limassol<br />
+Cyprus</address>
+ </div>
+ <div class="announce">
+<h3>Announcements</h3>
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
+ </div>
+</div>
+</txp:if_article_section>
+
+<txp:hide>==================-individual texts-======================</txp:hide>
+
+<txp:if_article_section name="texts">
+<txp:article form="">
+<article class="grid_18" role="main">
+<txp:body />
+</article>
+<div class="grid_6" id="side" role="complementary">
+<div itemscope itemtype="http://schema.org/Person" id="meta">
+<p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
+<txp:variable name="linkurl" value='<txp:link_url />' />
+<txp:if_variable name="linkurl" value="#">
+<span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span>
+<txp:else />
+<a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
+</txp:if_variable>
+</txp:linklist></p>
+<time class="published" datetime="<txp:posted format="%Y-%m-%dT%T" />">
+Posted: <txp:posted format="%b %d, %Y" /></time>
+</div>
+
+<div class="announce"><h3>Announcements</h3>
+
+<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
+
+<div class="sub">
+<txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
+<txp:if_variable name="find">
+<txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
+<txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
+{$<({#row}|21).?(<li><a href="<txp:permlink />"><txp:title /></a></li>)}
+</txp:etc_query>
+</txp:if_variable>
+<txp:variable name="relatedtitles" />
+<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4">
+<a href="<txp:permlink />"><txp:title /></a>
+</txp:article_custom>
+</div>
+
+<txp:if_custom_field name="pubs_by_others">
+<txp:images id='<txp:custom_field name="pubs_by_others" />'>
+<div class="nosmall"><h4>Off line reading</h4>
+<a rel="external" href="<txp:image_info type="caption" />"><txp:image /></a>
+</txp:images></div>
+</txp:if_custom_field>
+
+</div>
+</txp:article>
+</txp:if_article_section>
+
+<txp:hide>==================-end individual articles-======================</txp:hide>
+
+</txp:if_individual_article>
+<div class="clear">&nbsp;</div>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<div class="clear">&nbsp;</div>
+
+</div><!-- end .container_24 --></div>
+<txp:output_form form="colak_foot" />
+
+<txp:oui_cookie name="accept_cookies" values="yes" />
+
+<!--googleoff: all-->
+<txp:oui_if_cookie name="accept_cookies">
+<txp:else />
+<div id="eucookies" class="noprint"><div class="container_24">
+<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experiance in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Agree</a></p>
+</div></div>
+</txp:oui_if_cookie>
+<!--googleon: all-->
+
+<txp:output_form form="javascripts" />
+</body>
+</html>
