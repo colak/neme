@@ -1,4 +1,4 @@
 <txp:php>
-global $zem_contact_form;
-echo $zem_contact_form['State Machines Inquiry'];
+global $com_connect_form;
+echo $com_connect_form['State Machines Inquiry'];
 </txp:php>
