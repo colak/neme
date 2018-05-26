@@ -5,9 +5,9 @@
 <meta name="GOOGLEBOT" content="NOARCHIVE"> 
 
 <style>
-label, legend, .zemError {font-size:12px;font-family: sans-serif; -ms-text-size-adjust: 60%; -webkit-text-size-adjust: 60%;clear:both;display:block;text-align: left;display: block;}
+label, legend, .comError {font-size:12px;font-family: sans-serif; -ms-text-size-adjust: 60%; -webkit-text-size-adjust: 60%;clear:both;display:block;text-align: left;display: block;}
 fieldset {width:90%;clear:both;display:block;text-align: left;}
-input, zemTextarea, #Message {width:90%;clear:both;display:block;text-align: left;clear:both;} 
+input, comTextarea, #Message {width:90%;clear:both;display:block;text-align: left;clear:both;} 
 select {margin-bottom:1em;text-align: left;}
 .check {width: 100%;height: 1.5em;padding: 0;margin:0;vertical-align: bottom;position: relative;float:left;}
 </style>
