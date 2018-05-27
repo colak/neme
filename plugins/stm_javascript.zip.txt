@@ -1,0 +1,60 @@
+# Name: stm_javascript v0.1 (compressed)
+# Type: Admin/Public plugin
+# Stores JavaScript files within the database and handles them similar to CSS files.
+# Author: Stanislav Müller
+# URL: http://dhonishow.de
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
