@@ -7,7 +7,7 @@
 		header('content-type: text/html; charset=utf-8');
 	}
 </txp:php>
-
+<txp:pat_speeder gzip="0"/>
 <!doctype html>
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
 <!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
