@@ -1111,8 +1111,6 @@ AddDefaultCharset utf-8
 	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
-#php_value register_globals 0
-
 # SVG
 <IfModule mod_mime.c>
 	AddType image/svg+xml  svg svgz
