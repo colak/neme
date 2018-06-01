@@ -1,14 +1,12 @@
 #neme2
 
-#Server specific code
+#php versions
 <FilesMatch \.php$>
-SetHandler php56-fcgi
-</FilesMatch>
-
-#Server specific code
-#<FilesMatch \.php$>
+#SetHandler php55-fcgi
+#SetHandler php56-fcgi
 #SetHandler php70-cgi
-#</FilesMatch>
+SetHandler php72-cgi
+</FilesMatch>
 
 
 # compression and cache control
