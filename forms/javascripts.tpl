@@ -64,7 +64,7 @@ namespace: "rslides",
 </script>
 
 
-<txp:if_logged_in><txp:else />
+<txp:if_logged_in no>
 <!-- PW -->
 <script>
   var _paq = _paq || [];
