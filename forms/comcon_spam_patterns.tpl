@@ -17,6 +17,7 @@
 /noreply@findfastbusinessfunds.com/
 /noreply@findbusinessfunding24-7.com/
 /noreply@businessloansfundednow.com/
+/noreply@profunding247.net/
 /yaxxmdpcw@kylinara.ru/
 /yfhaxhzde@kylinara.ru/
 /uurdudxuf@smajok.ru/
