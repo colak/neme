@@ -269,10 +269,10 @@ nav ul:after{content:"";display:table;clear:left}
 .logo{max-height:150px;margin-bottom:1em}
 
 #content {margin:0 0 10px 0;}
-#vimeoeucookies {display:table;background-color:#ffc;width:90%;border-radius: 8px;margin:auto 2em}
-#vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.5em;padding:.7em .7em 0 .7em;}
-#vimeoeucookies a, .socialeucookies a {color:#cc0000}
-#vimeoeucookies p.red a, .socialeucookies a.red {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+.vimeoeucookies {display:table;background-color:#ffc;width:90%;border-radius: 8px;margin:auto 2em}
+.vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.5em;padding:.7em .7em 0 .7em;}
+.vimeoeucookies a, .socialeucookies a {color:#cc0000}
+.vimeoeucookies p.red a, .socialeucookies a.red {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
 .social {width:100%;background-color:#ffffff;margin-top:10px;border-bottom:2px solid #fff;padding-top:6px;display:block}
 .social img {margin-left:3px;}
@@ -280,7 +280,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
-#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after, #vimeoeucookies a[rel=external]:after, .socialeucookies a[rel=external]:after{content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
+#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after, .vimeoeucookies a[rel=external]:after, .socialeucookies a[rel=external]:after{content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
