@@ -549,7 +549,7 @@ Cyprus</p>
 <p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 <!--googleoff: all-->
 <p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
-<!--googleoon: all-->
+<!--googleon: all-->
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
@@ -580,24 +580,26 @@ Cyprus</p>
 <txp:if_section name="contact">
 <div class="clear">&nbsp;</div>
 
-<txp:thumbnail id="166" class="grid_4 nosmall" />
+<div class="grid_4">
+<txp:thumbnail id="166" class="nosmall" />
+<p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
 
 <div class="grid_12">
-<txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
-<txp:zem_contact_text name="Name" label="Your name" required="1" /><br />
-<txp:zem_contact_text name="Surname" label="Your surname" required="1" /><br />
-<txp:zem_contact_email label="Your email" name="Email" required="1" /><br />
-<txp:zem_contact_text name="Website" label="Your website" required="0" /><br />
-<txp:zem_contact_textarea name="Comment" label="Your question" /><br />
-<txp:zem_contact_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
-<txp:zem_contact_checkbox label="This is not spam!." /><br />
-<txp:zem_contact_serverinfo name="REMOTE_ADDR" label="IP number" />
-<txp:zem_contact_serverinfo name="HTTP_USER_AGENT" label="Browser" />
-<txp:zem_contact_submit label="Send" />
-</txp:zem_contact>
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect_text label="Your name" required="1" /><br />
+<txp:com_connect_text label="Your surname" required="1" /><br />
+<txp:com_connect_email label="Your email" name="Email" required="1" /><br />
+<txp:com_connect_text label="Your website" required="0" /><br />
+<txp:com_connect_textarea name="Comment" label="Your question" /><br />
+<txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
+<txp:com_connect_checkbox label="This is not spam!." /><br />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Send" />
+</txp:com_connect>
 </div>
 
-<div class="grid_6"><div id="meta"><h4>Address</h4><address>NeMe<br />
+<div class="grid_8"><div id="meta"><h4>Address</h4><address>NeMe<br />
 poBox 50325<br />
 3603 Limassol<br />
 Cyprus</address></div>
@@ -686,7 +688,7 @@ Cyprus</address></div>
 <hr />
 
 <div class="announce"><h4>Sponsors</h4>
-<p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, here are the organisations who helpped our projects in either a financial or in-kind way.</p>
+<p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, these the organisations helpped our projects in either a financial or in-kind way.</p>
 
 <txp:linklist category="sponsors" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
 <txp:variable name="haslink" value='<txp:link_url />' />
@@ -743,18 +745,20 @@ Cyprus</address></div>
 
 <div class="grid_10">
 
-<txp:zem_contact to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
-<txp:zem_contact_text label="Your name" required="1" /><br />
-<txp:zem_contact_text label="Your Surname" required="1" /><br />
-<txp:zem_contact_email name="Email" label="Your email" required="1" /><br />
-<txp:zem_contact_text label="Your website" required="0" /><br />
-<txp:zem_contact_checkbox label="Check this box if you wish to subscribe to our newsletter" /><br />
-<txp:zem_contact_serverinfo name="REMOTE_ADDR" label="IP number" />
-<txp:zem_contact_serverinfo name="HTTP_USER_AGENT" label="Browser" />
-<txp:zem_contact_submit label="Subscribe" />
-</txp:zem_contact>
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect_text label="Your name" required="1" /><br />
+<txp:com_connect_text label="Your Surname" required="1" /><br />
+<txp:com_connect_email name="Email" label="Your email" required="1" /><br />
+<txp:com_connect_text label="Your website" required="0" /><br />
+<txp:com_connect_checkbox label="Check this box if you wish to subscribe to our newsletter" /><br />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Subscribe" />
+</txp:com_connect>
 
 <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=newsletter');</txp:php>
+
+
 </div>
 
 
@@ -768,6 +772,7 @@ Cyprus</address></div>
 <p>A link to our privacy policy can be found on the bottom of the page.</p>
 
 <div class="social"><a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a></div>
+
 
 </div>
 
@@ -927,8 +932,8 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
-
 <txp:output_form form="colak_foot" />
+
 <txp:output_form form="javascripts" />
 <txp:oui_cookie name="accept_cookies" values="yes" />
 <!--googleoff: all-->
@@ -941,5 +946,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
+
 </body>
 </html>
