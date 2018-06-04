@@ -19,7 +19,7 @@ Tag:  <txp:euvids cat="link_category_name" presenting="something here" />
 </txp:linklist>
 </div>
 <txp:else />
-<div id="vimeoeucookies" class="noprint">
+<div class="vimeoeucookies noprint">
 <p class="centre">These videos, presenting {presenting} are hosted by Vimeo on <txp:linklist category="{cat}" limit="100" sort="id asc" form="" wraptag="" break=", "><a rel="external" href="https://vimeo.com/<txp:link_description escape="" />">vimeo.com/<txp:link_description escape="" /></a></txp:linklist>. By viewing them here, you accept Vimeo's <a rel="external" href="https://vimeo.com/privacy">privacy policy</a>.</p>
 <p class="red centre"><a rel="nofollow" href="?accept_vimeo_cookies=yes#{id}">View</a></p>
 </div>
