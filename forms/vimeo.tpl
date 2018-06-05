@@ -1,3 +1,5 @@
+<txp:hide>tag: <txp::vimeo id="vid" video="xxx" txt="yyy" /></txp:hide>
+
 <txp:oui_cookie name="accept_vimeo_cookies" values="yes" />
 <txp:oui_if_cookie name="accept_vimeo_cookies">
 <div class="embed-container"<txp:if_yield name="id"> id="<txp:yield name="id" />"</txp:if_yield>><iframe src="https://player.vimeo.com/video/<txp:yield name="video" />?title=0&amp;byline=0&amp;portrait=0" allowfullscreen></iframe></div>
