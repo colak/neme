@@ -160,7 +160,6 @@ abbr,acronym{border-bottom:2px dotted #ccc;cursor:help}
 dt{margin-left:1em}
 dd{margin-left:2em}
 .grid_18 figure.grid_6{margin:0 .5% 1em 0}
-figcaption{font-size:.8em;width:100%}
 .line figcaption{font-size:1em}
 #main figure,.floatleft,article figure{display:inline-block;display:table;float:left;margin:0 .5% .5% 0}
 #main figcaption,article figcaption, section figcaption {display:table-caption;caption-side:bottom}
@@ -291,13 +290,18 @@ nav ul:after{content:"";display:table;clear:left}
 #eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
 #eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 1em 5em;margin: -5em;}
 
+figure {display: block;border: 0;  /* adjust as needed */}
+figure img {vertical-align: bottom !important;}
+figure figcaption {padding:2px;text-align: center;font-size:.8em;width:100%;display:block}
+
 @media screen and (max-width:960px){
+#eucookies {display:table;background:#ffc;}
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
 #menu{clear:both;display:block}
 h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;width:97%;display:block}
 #header{padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:2em 0 0}
-#header .container_24 .grid_18,#header .grid_20{width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
+#header .container_24 .grid_18,#header .grid_20, #eucookies{width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 #header .grid_6,.logo{float:none;display:block;width:30%;height:auto;margin:0 auto}
 .logo{clear:both}
 #front .container_24 .frontthumbs li,#side .submenu li,#texts #content ol li,.submenu li{display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1em 0 0;width:91%;padding:.6em}
