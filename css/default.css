@@ -23,6 +23,7 @@ h2,h3,h4,h5,h6 {margin: 1em 0 0 0}
 hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
 hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350t.jpg) #191919}
 
+
 hr.line {width:90%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
 hr.line:after{content:"\25CF";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:#000}
 :target {background: #666666;border: solid 1px #aaa;}
@@ -290,9 +291,10 @@ nav ul:after{content:"";display:table;clear:left}
 #eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
 #eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 1em 5em;margin: -5em;}
 
-figure {display: block;border: 0;  /* adjust as needed */}
-figure img {vertical-align: bottom !important;}
-figure figcaption {padding:2px;text-align: center;font-size:.8em;width:100%;display:block}
+
+#texts figure {display: block !important;border: 0;}
+#texts figure img {vertical-align:top !important;display:block !important;width:100%;height:auto;}
+#texts figure figcaption {padding:2px;text-align: center;font-size:.8em;width:100% !important;display:block !important;}
 
 @media screen and (max-width:960px){
 #eucookies {display:table;background:#ffc;}
@@ -317,6 +319,7 @@ column-width: 120px;
 -moz-column-gap: 10px;
 column-gap: 10px;
 }
+
 .eu {display:block;background-color:#fff; color:#000;padding:1em 0; clear:both;
 min-height:8em;
 height:auto !important;
