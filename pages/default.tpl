@@ -37,7 +37,6 @@ header('content-type: text/html; charset=utf-8');
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
 <txp:rvm_css name="print" format="link" media="print" />
 
-
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
 <txp:else />
@@ -935,15 +934,15 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="colak_foot" />
 
 <txp:output_form form="javascripts" />
-<txp:oui_cookie name="accept_cookies" values="yes" />
+<txp:oui_cookie name="accept_cookies" duration="+1 year" values="yes" />
 <!--googleoff: all-->
 <txp:oui_if_cookie name="accept_cookies">
 <txp:output_form form="cookies" />
 <txp:else />
 <div id="eucookies" class="noprint"><div class="container_24">
-<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
-</div></div>
+</div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
 
