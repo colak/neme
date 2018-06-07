@@ -292,6 +292,7 @@ nav ul:after{content:"";display:table;clear:left}
 
 @media screen and (max-width:960px){
 #eucookies {display:table;background:#ffc;}
+.rslides li img {border-radius:8px;}
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
 #menu{clear:both;display:block}
