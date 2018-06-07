@@ -78,7 +78,7 @@ menu.removeAttr('style');
 
 
 </head>
-<body id="error" class="no-js">
+<body id="error">
 
 <div id="nav"><div class="container_24">
 <div class="grid_24" id="menu">
@@ -131,7 +131,7 @@ menu.removeAttr('style');
 <div id="content">
 <div class="container_24">
 
-<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist but it may exist on<br /><a rel="external" href="http://news.neme.org<txp:page_url />">news.neme.org<txp:page_url /></a><txp:else /><txp:error_message /></h2></txp:if_status></h2>
+<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist. Check that the url is typed correctly. We have noticed that links to our site are often mistyped. Alternatively the url may exist on<br /><a rel="external" href="http://news.neme.org<txp:page_url />">news.neme.org<txp:page_url /></a><txp:else /><txp:error_message /></txp:if_status></h2>
 
 <div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a rel="external" href="http://news.neme.org">news.neme.org</a> subdomain which is now hosting our legacy content.</p></div>
 
@@ -140,7 +140,7 @@ menu.removeAttr('style');
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="javascripts" />
-<txp:oui_cookie name="accept_cookies" values="yes" />
+<txp:oui_cookie name="accept_cookies" duration="+1 year" values="yes" />
 <!--googleoff: all-->
 <txp:oui_if_cookie name="accept_cookies">
 <txp:output_form form="cookies" />
@@ -148,7 +148,7 @@ menu.removeAttr('style');
 <div id="eucookies" class="noprint"><div class="container_24">
 <p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
-</div></div>
+</div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
 
