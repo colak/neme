@@ -279,7 +279,7 @@ nav ul:after{content:"";display:table;clear:left}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
 .rslides li img {border-radius: 0 8px 8px 0;}
-#eucookies {display:table;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
+#eucookies {display:block;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
 #eucookies p {font-size:1.1em;}
 #eucookies a {color:#cc0000}
 #eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
@@ -295,6 +295,7 @@ nav ul:after{content:"";display:table;clear:left}
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
 #menu{clear:both;display:block}
+#vids {display:block; padding-bottom:36%}
 h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;width:97%;display:block}
 #header{padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:2em 0 0}
 #header .container_24 .grid_18,#header .grid_20, #eucookies{width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
@@ -372,4 +373,5 @@ nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%
 #nav, #header, #footer {background:transparent; box-shadow:none;}
 }
 @media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:98%}
+#vids {display:block; padding-bottom:52%}
 }
