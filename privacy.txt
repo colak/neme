@@ -94,23 +94,21 @@ In addition, these sites and services may have their own privacy policies and cu
 
 h3. 4. Cookies
 
-The NeMe websites use cookies. Cookies are text files that are stored in a computer system via an Internet browser.
+The NeMe websites use cookies. Cookies are text files that are stored in a computer system via an Internet browser. No cookies are loaded in this website without the consent of the data-subject.
 
 Most Internet sites and servers use cookies. Many cookies contain a so-called cookie ID. A cookie ID is a unique identifier of the cookie. It consists of a character string through which Internet pages and servers can be assigned to the specific Internet browser in which the cookie was stored. This allows visited Internet sites and servers to differentiate the individual browser of the data subject from other Internet browsers that contain other cookies. A specific Internet browser can be recognised and identified using the unique cookie ID.
 
 Through the use of cookies, NeMe can provide the users of this website with more user-friendly services that would not be possible without the cookie setting.
 
-By means of a cookie, the information on our website can be optimised with the user in mind. Cookies allow us, as previously mentioned, to recognise our website users. The purpose of this recognition is to make it easier for users to utilise our website. The website user that uses cookies, e.g. does not have to enter access data each time the website is accessed, because this is taken over by the website, and the cookie is thus stored on the user's computer system. Another example is the cookie of a shopping cart in an online shop. The online store remembers the articles that a customer has placed in the virtual shopping cart via a cookie.
-
-The data subject may, at any time, prevent the setting of cookies through our website by means of a corresponding setting of the Internet browser used, and may thus permanently deny the setting of cookies. Furthermore, already set cookies may be deleted at any time via an Internet browser or other software programs. This is possible in all popular Internet browsers. If the data subject deactivates the setting of cookies in the Internet browser used, not all functions of our website may be entirely usable.
+By means of a cookie, the information on our website can be optimised with the user in mind. This includes the technologies NeMe uses to serve the site and what version browsers we support. 
 
 NeMe also uses a session cookie to keep you logged into the forum during your visit and, optionally, to keep you logged in for future forum visits.
 
-Third party cookies are used in this website from Facebook, Twitter, Google Analytics, and Vimeo.
+Third party cookies are used in this website from Facebook, Twitter, Google Analytics, SoundCloud, Mixcloud, and Vimeo but none of these are loaded without the data-subject's consent. 
 
 h3. 5. Collection of general data and information
 
-The website of NeMe collects a series of general data and information when a data subject or automated system calls up the website. This general data and information are stored in the server log files. Collected may be 
+On the data subject's approval, the NeMe websites  collect a series of general data and information when a data subject or automated system calls up the websites and accepts our cookie policy. This general data and information are stored in the server log files. Collected may be 
 
 # the browser types and versions used, 
 # the operating system used by the accessing system, 
@@ -136,7 +134,13 @@ h3. 6. Subscription to our newsletters
 
 On the website of NeMe, users are given the opportunity to subscribe to our organisation's newsletter. The input mask used for this purpose determines what personal data are transmitted, as well as when the newsletter is ordered from the controller.
 
-NeMe informs its visitors and supporters by means of an infrequent newsletter about the cultural events it organises or participates and artists' calls for entry. The organisation's newsletter may only be received by the data subject if 
+NeMe informs its visitors and supporters by means of an infrequent newsletter about:
+
+* the cultural events it organises, 
+* the cultural events it participates in 
+* artists' calls for entry. 
+
+The organisation's newsletter may only be received by the data subject if 
 
 # the data subject has a valid e-mail address and 
 # the data subject registers to the NeMe newsletter.
@@ -151,11 +155,11 @@ The newsletter of NeMe does not contain so-called tracking pixels or any other s
 
 h3. 7. Registering and posting in the NeMe forum
 
-On the website of NeMe, users are given the opportunity to register to our organisation's online forum where the controller is responsible to manually approve any new registrations. This method protects the forum from spammers.
+On the website of NeMe, users are given the opportunity to register to our organisation's online forum where the controller is responsible to manually approve any new registrations. This method protects the forum from spammers, bots and trolls.
 
-To register in the forum a valid email address and a user name need to be submitted and the IP is logged. The forum software also allows members to share other personal information in their profile as well as the visibility of their submitted email address. By default, the forum software hides the email address but allows contact between members via an online contact form. Users of the NeMe forum can choose to disable any contact from the other members of the forum. As with all such software, administrators and moderators of the forum can access all personal information but they make no use of it, commercial or otherwise.
+To register in the forum a valid email address and a user name need to be submitted and the IP is logged. The forum software also allows members to share other personal information in their profile as well as the visibility of their submitted email address and other personal information. By default, the forum software hides all personal information but allows contact between members via an online contact form. Users of the NeMe forum can choose to disable any contact from the other members of the forum. As with all such software, administrators and moderators of the forum can access all personal information but they make no use of it, commercial or otherwise.
 
-Only approved members are allowed to post to the forum but there are no qualitative criteria for those posts. As such NeMe can not be held responsible in any way for any inaccurate information posted by the forum members. 
+Only approved members are allowed to post to the forum but there are no qualitative criteria for those posts. As such NeMe can not be held responsible in any way for any inaccurate information posted by the forum members.
 
 More information about the forum software can be found on <a rel="external" href="http://punbb.informer.com/">punbb.informer.com/</a>.
 
@@ -225,18 +229,15 @@ h4. f) Right to data portability
 
 Each data subject shall have the right granted by the European legislator, to receive the personal data concerning him or her, which was provided to a controller, in a structured, commonly used and machine-readable format. He or she shall have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided, as long as the processing is based on consent pursuant to point (a) of Article 6(1) of the GDPR or point (a) of Article 9(2) of the GDPR, or on a contract pursuant to point (b) of Article 6(1) of the GDPR, and the processing is carried out by automated means, as long as the processing is not necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
 
-
 Furthermore, in exercising his or her right to data portability pursuant to Article 20(1) of the GDPR, the data subject shall have the right to have personal data transmitted directly from one controller to another, where technically feasible and when doing so does not adversely affect the rights and freedoms of others. In order to assert the right to data portability, the data subject may at any time contact the controller of NeMe.
 
 h4. g) Right to object
 
 Each data subject shall have the right granted by the European legislator to object, on grounds relating to his or her particular situation, at any time, to processing of personal data concerning him or her, which is based on point (e) or (f) of Article 6(1) of the GDPR. This also applies to profiling based on these provisions.
 
-
 NeMe shall no longer process the personal data in the event of the objection, unless we can demonstrate compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject, or for the establishment, exercise or defence of legal claims.
 
 If NeMe processes personal data for direct marketing purposes, the data subject shall have the right to object at any time to processing of personal data concerning him or her for such marketing. This applies to profiling to the extent that it is related to such direct marketing. If the data subject objects to NeMe to the processing for direct marketing purposes, NeMe will no longer process the personal data for these purposes.
-
 
 In addition, the data subject has the right, on grounds relating to his or her particular situation, to object to processing of personal data concerning him or her by NeMe for scientific or historical research purposes, or for statistical purposes pursuant to Article 89(1) of the GDPR, unless the processing is necessary for the performance of a task carried out for reasons of public interest.
 
