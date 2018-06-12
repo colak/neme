@@ -1,0 +1,1 @@
+<a href="<txp:yield name="url" />"<txp:if_yield name="rel"> rel="<txp:yield name="rel" /></txp:if_yield>"><txp:if_yield name="txt"><txp:yield name="txt" /><txp:else /><txp:yield name="url" /></txp:if_yield></a>
