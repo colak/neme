@@ -1,4 +1,5 @@
-<txp:if_logged_in no>
+<txp:if_logged_in>
+<txp:else />
 <!-- PW -->
 <script>
   var _paq = _paq || [];
