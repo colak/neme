@@ -440,21 +440,21 @@ Cyprus</p>
 
 </div>
 
-<txp:article_custom limit="999" label="Previously at NAC" venue="NeMe Arts Centre%" section="events,participations" labeltag="h3" break="li" wraptag="ul" class="submenu">
+<txp:article_custom limit="999" label="Previously at NAC" venue="NeMe Arts Centre%" section="events,participations" labeltag="h3" break="li" wraptag="ul" class="submenu noprint">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Events</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
 <a href="<txp:site_url />events/"><txp:thumbnail /></a>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
@@ -462,13 +462,13 @@ Cyprus</p>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Participations</h3>
 
 <txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
 </div>
 	
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
@@ -640,8 +640,8 @@ Cyprus</address></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
-<span itemprop="image" class="grid_3 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
-<figcaption itemprop="caption" class="grid_9 omega"><txp:image_info type="caption" escape="" />
+<span itemprop="image" class="grid_7 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
+<figcaption itemprop="caption" class="grid_17 omega"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in>
 </figcaption></figure>
 <div class="clear">&nbsp;</div>
@@ -762,7 +762,7 @@ Cyprus</address></div>
 
 
 <div class="grid_10">
-<p>By filling this form you agree to receive emails from NeMe&#47;IMCA regarding our calls for participation, invitations and information about our events. These emails will be very infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
+<p>By filling this form you agree to receive emails from NeMe regarding our calls for participation, invitations and information about our events. These emails will be very infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
 
 <p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
 
@@ -770,7 +770,9 @@ Cyprus</address></div>
 
 <p>A link to our privacy policy can be found on the bottom of the page.</p>
 
-<div class="social"><a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a></div>
+<div class="social">
+<a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a>
+<div class="clear">&nbsp;</div></div>
 
 
 </div>
@@ -939,12 +941,12 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:oui_if_cookie name="accept_cookies">
 <txp:output_form form="cookies" />
 <txp:else />
-<div id="eucookies" class="noprint"><div class="container_24">
-<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
-<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
+<div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
+<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
 </div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
 
 </body>
-</html>
+</html> 
