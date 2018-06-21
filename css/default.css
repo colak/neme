@@ -141,13 +141,14 @@ code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 ol,p,ul{margin:0 0 1em}
 .clear{clear:both;display:block;visibility:hidden;width:0;height:0}
 #footer,#header,#nav,.table100,figure img{width:100%}
+
 .clearleft{clear:left}
 .clearright{clear:right}
 a{color:#ff0000}
-a:visited{color:#eeeeee}
+a:visited{color:#ec7063 }
 #header h2,h1{font-size:3em;text-align:left;line-height:100%;color:#191919}
 h2{padding:1em 0}
-p{text-align:left}
+p, ol, ul{text-align:left;widows: 3; orphans: 2;}
 ol,ul{list-style-position:inside!important;padding:0}
 blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em}
 abbr,acronym{border-bottom:2px dotted #ccc;cursor:help}
@@ -194,7 +195,7 @@ box-shadow: 0px 3px 5px #474347;}
 #neme #content ul{list-style:none!important;padding:0;margin:0}
 #neme #content ul li{margin:0;padding-bottom:.8em}
 .clear{margin:1em}
-.clearboth{clear:both}
+.clearboth, .clearall{clear:both}
 .aright{text-align:right}
 .floatright {float:right}
 .apology p,.bx-wrapper .bx-pager,.caption{text-align:center}
@@ -263,7 +264,8 @@ nav ul:after{content:"";display:table;clear:left}
 .logo{max-height:150px;margin-bottom:1em}
 
 #content {margin:0 0 10px 0;}
-.vimeoeucookies {display:table;background-color:#ffc;width:90%;border-radius: 8px;margin:auto 2em}
+.vimeoeucookies {display:table;width:90%;border-radius: 8px;margin:auto 2em}
+.vimeoeucookies, .cookies {background-color:#f9eafb;}
 .vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.5em;padding:.7em .7em 0 .7em;}
 .vimeoeucookies a, .socialeucookies a {color:#cc0000}
 .vimeoeucookies p.red a, .socialeucookies a.red {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
@@ -279,7 +281,7 @@ nav ul:after{content:"";display:table;clear:left}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
 .rslides li img {border-radius: 0 8px 8px 0;}
-#eucookies {display:block;background:#ffc;width:100%;border-radius: 8px;margin:0 0 -25px 0}
+#eucookies {display:block;width:100%;border-radius: 8px;margin:0 0 -25px 0}
 #eucookies p {font-size:1.1em;}
 #eucookies a {color:#cc0000}
 #eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
@@ -290,7 +292,16 @@ nav ul:after{content:"";display:table;clear:left}
 #texts figure img {vertical-align:top !important;display:block !important;height:auto;}
 #texts figure figcaption {padding:2px;text-align: center;font-size:.8em;width:100% !important;display:block !important;}
 
+.tooltip {position: relative;display: inline-block;border-bottom: 1px dotted black;}
+.tooltip .tooltiptext {visibility: hidden;width: 200px;background-color: #BA0000;color: #fff;text-align: center;border-radius: 6px;padding: 5px 3px;position: absolute;z-index: 2;bottom: 150%;left: 50%;margin-left: -100px;font-size:1.4em;height:auto;line-height:1em}
+h2 .tooltip .tooltiptext {font-size:.8em;line-height:1em}
+h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em} 
+.tooltip .tooltiptext a {color:#fff;}
+.tooltip .tooltiptext::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: #BA0000 transparent transparent transparent;}
+.tooltip:hover .tooltiptext {visibility: visible;}
+
 @media screen and (max-width:960px){
+.tooltip:hover .tooltiptext {visibility: hidden;}
 #eucookies {display:table;background:#ffc;}
 .rslides li img {border-radius:8px;}
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
@@ -303,7 +314,7 @@ h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;
 #header .grid_6,.logo{float:none;display:block;width:30%;height:auto;margin:0 auto}
 .logo{clear:both}
 #front .container_24 .frontthumbs li,#side .submenu li,#texts #content ol li,.submenu li{display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1em 0 0;width:91%;padding:.6em}
-#footer .grid_18 p,#footer .grid_6 p{padding:0 2em}
+#footer .grid_18 p,#footer .grid_6 p{padding:0 2em;}
 #side .submenu li,.submenu li{
 -webkit-column-count: 2;
 -moz-column-count: 2;
