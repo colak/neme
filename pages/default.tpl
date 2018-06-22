@@ -361,14 +361,14 @@ Cyprus</address>
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 nosmall">
 <h3>Events</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
 <a href="<txp:site_url />events/"><txp:thumbnail /></a>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 nosmall">
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
@@ -580,10 +580,10 @@ Cyprus</p>
 <div class="clear">&nbsp;</div>
 
 <div class="grid_4">
-<txp:thumbnail id="166" class="nosmall" />
+<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="nosmall" />
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
 
-<div class="grid_12">
+<div class="grid_14">
 <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
@@ -598,7 +598,7 @@ Cyprus</p>
 </txp:com_connect>
 </div>
 
-<div class="grid_8"><div id="meta"><h4>Address</h4><address>NeMe<br />
+<div class="grid_6"><div id="meta"><h4>Address</h4><address>NeMe<br />
 poBox 50325<br />
 3603 Limassol<br />
 Cyprus</address></div>
@@ -742,7 +742,7 @@ Cyprus</address></div>
 <txp:if_section name="newsletter">
 <txp:thumbnail id="166" class="grid_4" />
 
-<div class="grid_10">
+<div class="grid_14">
 
 <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
@@ -761,20 +761,19 @@ Cyprus</address></div>
 </div>
 
 
-<div class="grid_10">
-<p>By filling this form you agree to receive emails from NeMe regarding our calls for participation, invitations and information about our events. These emails will be very infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
+<div class="grid_6">
+<p>By filling this form you agree to receive emails from NeMe regarding our calls for participation, invitations and information about our events. These emails will be infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
 
 <p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
 
 <p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
 
-<p>A link to our privacy policy can be found on the bottom of the page.</p>
-
-<div class="social">
-<a rel="nofollow" href="https://www.facebook.com/NeMeArtsCentre/"><img src="http://www.neme.org/images/956.jpg" alt="NeMe on facebook" width="50" height="50" /></a><a rel="nofollow" href="https://twitter.com/nemeorg/"><img src="http://www.neme.org/images/957.jpg" alt="NeMe on twitter" width="50" height="50" /></a><a rel="nofollow" href="https://plus.google.com/112320566517565607455"><img src="http://www.neme.org/images/955.jpg" alt="NeMe on G+" width="50" height="50" /></a><a rel="nofollow" href="https://vimeo.com/imca/"><img src="http://www.neme.org/images/954.jpg" alt="NeMe on vimeo" width="50" height="50" /></a>
+<div class="social nosmall">
+<span class="grid_6"><a href="https://www.facebook.com/NeMeArtsCentre/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_facebook.svg" alt="NeMe on facebook" /></a></span>
+<span class="grid_6"><a href="https://twitter.com/nemeorg/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_twitter.svg" alt="NeMe on Twitter" /></a></span>
+<span class="grid_6"><a href="https://plus.google.com/112320566517565607455" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_gplus.svg" alt="NeMe on G+"/></a></span>
+<span class="grid_6"><a href="https://vimeo.com/imca/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_vimeo.svg" alt="NeMe on Vimeo"/></a></span>
 <div class="clear">&nbsp;</div></div>
-
-
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -949,4 +948,4 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <!--googleon: all-->
 
 </body>
-</html> 
+</html>
