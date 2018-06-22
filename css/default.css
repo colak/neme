@@ -276,15 +276,15 @@ nav ul:after{content:"";display:table;clear:left}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
-#content .grid_18 a[rel=external]:after, #newsletter .grid_10 a[rel=external]:after, #content .grid_18 a[rel=license]:after, .vimeoeucookies a[rel=external]:after, .socialeucookies a[rel=external]:after{content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
+#content .grid_18 a[rel=external]:after, #newsletter .grid_14 a[rel=external]:after, #content .grid_18 a[rel=license]:after, .vimeoeucookies a[rel=external]:after, .socialeucookies a[rel=external]:after{content:"\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0 0 0 5px}
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
 .rslides li img {border-radius: 0 8px 8px 0;}
-#eucookies {display:block;width:100%;border-radius: 8px;margin:0 0 -25px 0}
+#eucookies {display:block;width:100%;margin:0 0 -25px 0;}
 #eucookies p {font-size:1.1em;}
 #eucookies a {color:#cc0000}
-#eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em}
+#eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
 #eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding: 1em 5em;margin: -5em;}
 
 
@@ -302,7 +302,7 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 
 @media screen and (max-width:960px){
 .tooltip:hover .tooltiptext {visibility: hidden;}
-#eucookies {display:table;background:#ffc;}
+#eucookies {display:table;}
 .rslides li img {border-radius:8px;}
 .medium,.nosmall, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
@@ -310,7 +310,7 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 #vids {display:block; padding-bottom:36%}
 h1{font-size:1.6em;height:1em;margin:.7em auto;padding:.5em 1.5% 1em;clear:both;width:97%;display:block}
 #header{padding:0;border:0;width:100%;border-bottom:4px solid #BA0000;margin:2em 0 0}
-#header .container_24 .grid_18,#header .grid_20, #eucookies{width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
+#header .container_24 .grid_18,#header .grid_20, #eucookies, #newsletter .grid_14 {width:95%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 #header .grid_6,.logo{float:none;display:block;width:30%;height:auto;margin:0 auto}
 .logo{clear:both}
 #front .container_24 .frontthumbs li,#side .submenu li,#texts #content ol li,.submenu li{display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1em 0 0;width:91%;padding:.6em}
@@ -333,30 +333,29 @@ height:auto !important;
 height:8em;
 }
 .eu img {max-width:230px}
+.eu .grid_3, .eu .grid_15 {width:100%}
 .sub{margin:1em 2em 1em 1em}
 #footer .grid_18,#footer .grid_6{width:95%;margin:1em auto;float:none}
-.grid_18 .rslides,.comText,.comTextarea {width:98%}
-#eucookies, #eucookies .grid_6, #eucookies .grid_18, #contact .grid_4 {width:98%}
-#front .about,.slides{float:none;width:98%}
+.grid_18 .rslides,.comText,.comTextarea {width:100%}
+#eucookies, #eucookies .grid_6, #eucookies .grid_18, #contact .grid_4 {width:100%}
+#front .about,.slides{float:none;width:100%}
 .slides .rslides{width:100%;margin:0}
 .slides .rslides li img{width:100%;height:auto}
 #front .frontthumbs{width:48%;margin-right:1%}
 #front .frontthumbs h3 a{font-size:.85em;display:block}
-#front .grid_18 .slides{float:none;width:98%}
-#front .slides .rslides li img{width:98%;height:auto}
-#texts .grid_6{width:98%}
+#front .grid_18 .slides{float:none;width:100%}
+#front .slides .rslides li img{width:100%;height:auto}
+#texts .grid_6{width:100%}
 .nosmall{display:none}
-.largeonsmall,.small100,.video .grid_9{width:98%;float:none}
+.largeonsmall,.small100,.video .grid_9{width:100%;float:none}
 .bx-wrapper .bx-pager.bx-default-pager a{background:red;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
-#about #content .frontthumbs,#events #content .frontthumbs,#participations #content .frontthumbs{display:none}
-#about #content .grid_18,#about #content .grid_6,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:98%}
-#publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:95%;clear:both;margin:0 auto}
-#neme #content .grid_6,#publications #content .grid_3,#publications #content .grid_6{width:98%;clear:both;display:block;margin:1.5em auto}
+#about #content .grid_18,#about #content .grid_6,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:100%}
+#publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
+#neme #content .grid_6,#publications #content .grid_3,#publications #content .grid_6{width:100%;clear:both;display:block;margin:1.5em auto}
 #publications #content img{clear:both;display:block;margin:1em auto;text-align:center;max-width:230px}
-#contact #content .ds,#nac #content .frontthumbs,#newsletter .grid_4,#workshops #content .frontthumbs,#workshops #content .grid_6{display:none}
 #publications #content .grideven img{max-width:110px}
 #publications #content figcaption{width:95%}
-#contact #content .grid_6,#contact .grid_12,#nac #content .grid_18,#nac #content .grid_6,#newsletter .grid_10,#participations #content .vid,#texts .grid_18,#workshops #content .grid_18{width:98%}
+#contact #content .grid_6,#contact .grid_12,#nac #content .grid_18,#nac #content .grid_6,#newsletter .grid_14,#newsletter .grid_6,#participations #content .vid,#texts .grid_18,#workshops #content .grid_18{width:100%}
 #publications #content .grid_9{border-bottom:1px solid #fff}
 #menu-toggle-primary,.comSubmit{display:block}
 #menu-toggle-primary .grid_2 {width:30px;height:30px}
@@ -384,6 +383,6 @@ nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%
 .medium{clear:both}
 #nav, #header, #footer {background:transparent; box-shadow:none;}
 }
-@media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:98%}
+@media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:100%}
 #vids {display:block; padding-bottom:52%}
 }
