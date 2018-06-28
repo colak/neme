@@ -190,10 +190,11 @@ header('content-type: text/html; charset=utf-8');
 <div id="header"><div class="container_24">
 
 <div class="grid_2 logo nosmall">
+<txp:hide>jpg logo<txp:image id="792" /></txp:hide>
 <txp:if_section name="">
-<txp:image id="792" />
+<img src="/themes/neme960/styles/neme.svg" alt="NeMe logo" width="70" height="70" />
 <txp:else />
-<a href="<txp:site_url />" rel="home"><txp:image id="792" /></a>
+<a href="<txp:site_url />" rel="home"><img src="/themes/neme960/styles/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
 <small>Est. 2004</small>
 </txp:if_section>
 </div>
@@ -255,13 +256,13 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <txp:article_custom limit="10" section="events,participations" label="Activities" labeltag="h3" break="li" wraptag="ul">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <txp:article_custom section="texts" limit="10" sort="rand()" break="li" wraptag="ul" labeltag="h3" label="Texts">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
@@ -269,12 +270,12 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="medium">&nbsp;</div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Forum</h3>
 <ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
 </div>
 
-<txp:hide><div class="grid_6 frontthumbs">
+<txp:hide><div class="grid_6 frontthumbs noprint">
 <h3><a href="/participations/">Participations</a></h3>
 
 <txp:images category='<txp:category_list type="image" parent="participations" break=",">
@@ -286,7 +287,7 @@ header('content-type: text/html; charset=utf-8');
 </div></txp:hide>
 
 	
-<div class="grid_6 frontthumbs">
+<div class="grid_6 frontthumbs noprint">
 <h3>Announcements</h3>
 
 <div class="announce"><txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php></div>
@@ -496,12 +497,12 @@ Cyprus</p>
 </txp:if_search_results>
 <txp:article limit="999" searchall="0" />
 <txp:else />
-<div class="line">
+<div class="line noprint">
 
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:section />'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
 
 <div class="clear">&nbsp;</div></div>
@@ -510,7 +511,7 @@ Cyprus</p>
 <div class="grid_5 nosmall"><p>Dates</p></div>
 <div class="grid_6 nosmall"><p>Title</p></div>
 <div class="grid_13 nosmall"><p>Venue</p></div>
-<div class="clear nosmall">&nbsp;</div></div>
+<div class="clear nosmall noprint">&nbsp;</div></div>
 
 <txp:article limit="999">
 <article><div class="grid_5"><txp:if_logged_in><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
@@ -520,7 +521,7 @@ Cyprus</p>
 <txp:else />
 <p><txp:custom_field name="venue" escape="" /></p>
 </txp:if_custom_field></div>
-<div class="clearboth"><hr /></div></article>
+<div class="clearboth"><hr class="noprint" /></div></article>
 </txp:article></section>
 </txp:if_search>
 </txp:if_section>
@@ -569,7 +570,7 @@ Cyprus</p>
 <txp:article limit="999">
 <article><div class="grid_6"><txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:if_logged_in></div>
 <div class="grid_18"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
-<hr class="clearboth" /></article>
+<hr class="clearboth noprint" /></article>
 </txp:article></section>
 </txp:if_search>
 </txp:if_section>
@@ -584,7 +585,7 @@ Cyprus</p>
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
 
 <div class="grid_14">
-<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect to="email@domain.com" label=""  thanks="Thank you, your message has been sent.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email label="Your email" name="Email" required="1" /><br />
@@ -623,7 +624,7 @@ Cyprus</address></div>
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned or acknowledged in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -740,11 +741,11 @@ Cyprus</address></div>
 ==================-newsletter-possibly move to blog-======================</txp:hide>
 
 <txp:if_section name="newsletter">
-<txp:thumbnail id="166" class="grid_4" />
+<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="grid_4 nosmall" />
 
 <div class="grid_14">
 
-<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect to="email@domain.com" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your Surname" required="1" /><br />
 <txp:com_connect_email name="Email" label="Your email" required="1" /><br />
@@ -788,10 +789,10 @@ Cyprus</address></div>
 <txp:hide>==================-individual events-participations-======================</txp:hide>
 
 <txp:if_article_section name="events,participations">
-<txp:article form=""><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
+<txp:article form=""><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
-<txp:thumbnail class="ds" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<txp:thumbnail class="ds noprint" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /> <txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
 <div class="clear">&nbsp;</div>
 
 <div class="grid_18" role="main" id="main">
