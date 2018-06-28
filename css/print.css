@@ -4,7 +4,8 @@ a[href]:after {content:" <URL: "attr(href)">"; background:inherit;}
 abbr[title]:after, acronym[title]:after {content: '(' attr(title) ')'; text-decoration:none; color:#000000}
 sup a:after {content: "" !important;}
 .container_24 {width:97%;margin:1%}
-.submenu, #search, #accessibility, #menu, #publications .grid_1, #publications #footer, #landing {display:none;}
+.submenu, #search, #accessibility, #menu, #publications .grid_1, #publications #footer, #landing, .noprint {display:none;}
+#content .container_24 figure .noprint {display: none;}
 body {background-image: none;}
 .notes sup {display:none}
 #footer, .video {display:none;}
@@ -12,7 +13,7 @@ body {background-image: none;}
 #nav {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
 .container_24 {width:98%;max-width:98%;margin:1%}
 #side, nav, #footer {display:none;}
-#content {color:#000; background:transparent; float:none;width:100%;}
+#content {color:#000; background:transparent; float:none;width:100%;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
 #content .grid_18 {width:100%;color:#000; background:transparent; float:none;} 
 #content figcaption {color:#000;width:100%;min-width:230px;display:block;}
 #publications a img, #publications img, #content figure, #content figure img, #content .grid_18 .clearboth {display:block}
@@ -21,12 +22,14 @@ page-break-before: auto;
 page-break-after: auto; 
 page-break-inside: avoid;
 }
+#events section .line, #participations section .line {color:#000;}
+#texts .about {width:100%;color: #000;}
 table, figure, img {page-break-inside: avoid;}
 #header {background:none;clear:both;height:auto;margin:0;padding:0}
 hr { width:80%; padding: 0; margin: 2em auto 0 auto; border: none; border-top: medium double #eee; color: #000; text-align: center; } 
 hr:after { content: ""; display: inline-block; position: relative; top: -.8em; font-size: 1.5em; padding: 0 0.25em; background: #fff;}
 code {background-color: #F9F98E;font-family: "Courier New", Courier, monospace}
-a[href^="#"]:after {content: "; // Kills the expanded links on anchor tags}
-h2, h3, h4, h5 {color:#000:margin:1em 0 0 0;page-break-after: avoid;}
-h1{color:#000:margin:0;padding:0;font-size: 30px;page-break-after: avoid;}
+a[href^="#"]:after {content: "";}
+h2, h3, h4, h5 {color:#000;margin:1em 0 0 0;page-break-after: avoid;}
+h1{color:#000;margin:0;padding:0;font-size: 30px;page-break-after: avoid;}
 .grideven {width:95%;clear:both}
