@@ -10,7 +10,7 @@ body {background-image: none;}
 .notes sup {display:none}
 #footer, .video {display:none;}
 #nav, iframe, video, script, .rslides, .grid_1, .logo {display:none;}
-#nav {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
+#nav, #eucookies {-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
 .container_24 {width:98%;max-width:98%;margin:1%}
 #side, nav, #footer {display:none;}
 #content {color:#000; background:transparent; float:none;width:100%;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
