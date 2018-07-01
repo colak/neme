@@ -1,0 +1,28 @@
+# Name: pap_comconnect v0.1.2 (compressed)
+# Type: Public plugin
+# Prevent Spam through com_connect
+# Author: tranquillo and Stef
+# URL: https://forum.textpattern.io/viewtopic.php?pid=312784#p312784
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+H4sIAAAAAAAAA4VUUW/aMBB+Bqn/4ZZOC5W6pElpoSllmva0t0ndniOTXIg1x/bsCx3q+t/n
+OKGAijYJCed89/n7vvOZZUmSPdtsmgWSNRjc2yxxa810XqimUFJiQV30NgtYS7UyPuUuC8gw
++avlQihgsoRHwspvXe0S89ZwX5lkQU2kbRbHlTJtExH+Js2I0MiIq3jD8YmU5kWka/1J8/Lh
+Okln8+m57v87kFkWbNBYrmT3dZMFV1ESpf5AB1+iLQzXNGxfp1nwzeAGJcGjZg1QbVS7rsFJ
+yg80OaGFKr3o2dRJMrjm1rHKCybEihU/J+GxEbnj34SX4T4S+cjF/dn4/8W2XTWcjsuHWAdw
+Nq5aWXQa4MSpkwt47nJG7yuOooQHCBcl34ClrcCHYMMtX3HBaZtBzcsSZbAMo4pL3dIk7Ax3
+5+paSQwvtZ0My4vLMDz+DfEoXKwMxG8hGsZFj+BXbwH6sKuPHbtl6HSNDFJrJPTEvdCXf6nt
+LdnrLWosfnK5zjvofKeeDG8mex6dgQepXsbb3EFd7/boPW6YaJnn8PAB1kiHNIZNZSZDehzD
+18pdJRwMBg9vgRl0SyGwBNXSpc9wIMQKgq5z8KRkSLBC6JURlu8cHK9gclLbO9faEP78gdNy
+/PaF82Z0JODjElhZHvlIjFo7Sbw1L6992DVgGADa6n7q3UgNo6VMiWaI3QyxSrC1PcxzpTUK
+7cdt7hIWdbL8xjR8GZR/EcgkmkXs4uPxaKGX32tuQYt2zWVH1QI9KeDS31yBOzdJwVa15nBU
+vYvRzvw3rp92/MP5PE1m99S1dW98tIj1Kx3csXG8Vsx2/ZNghVrn1j0a09RDrbbwvVYNs/BY
+1IY5Z14xnLIflq3xQGPiaEpnvBDDrfak8qI3AyqjmlMbEf2mqJ+4cRrBZzcXG0bohe0cc2/s
+E6Oi9sGOIJTcMq2R9Yx8J7KgKW92T2Bynd7NZlOWrtL5XZqy8gqn84Ldzm7vphWrXNtf/gLa
+BAXM/wUAAA==
