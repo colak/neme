@@ -200,11 +200,16 @@ header('content-type: text/html; charset=utf-8');
 </div>
 
 <h1><txp:page_title /></h1>
-
+<!--googleoff: all--><p class="printonly">www.neme.org<txp:page_url /></p><!--googleon: all-->
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
-
+<div class="share nosmall">
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:permlink />&text=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
+<a href="http://plus.google.com/share?url=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_gplus.svg" width="30" height="30" alt="share on G+" /></a>
+<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+</div>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-home page-======================</txp:hide>
@@ -362,14 +367,14 @@ Cyprus</address>
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 
-<div class="grid_6 nosmall">
+<div class="grid_6 nosmall frontthumbs">
 <h3>Events</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
 <a href="<txp:site_url />events/"><txp:thumbnail /></a>
 </txp:images>
 </div>
 
-<div class="grid_6 nosmall">
+<div class="grid_6 nosmall frontthumbs">
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
@@ -585,7 +590,7 @@ Cyprus</p>
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
 
 <div class="grid_14">
-<txp:com_connect to="email@domain.com" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email label="Your email" name="Email" required="1" /><br />
@@ -745,7 +750,7 @@ Cyprus</address></div>
 
 <div class="grid_14">
 
-<txp:com_connect to="email@domain.com" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your Surname" required="1" /><br />
 <txp:com_connect_email name="Email" label="Your email" required="1" /><br />
@@ -942,7 +947,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="cookies" />
 <txp:else />
 <div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
-<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, <a rel="nofollow" href="/about/cookies">uses cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
 </div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
