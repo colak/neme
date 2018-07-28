@@ -265,7 +265,7 @@ nav ul:after{content:"";display:table;clear:left}
 .logo{max-height:150px;margin-bottom:1em}
 
 #content {margin:0 0 10px 0;}
-.vimeoeucookies {display:table;width:90%;border-radius: 8px;margin:auto 2em}
+.vimeoeucookies {display:table;width:100%;border-radius: 8px;margin:1em 0}
 .vimeoeucookies, .cookies {background-color:#f9eafb;}
 .vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.5em;padding:.7em .7em 0 .7em;}
 .vimeoeucookies a, .socialeucookies a {color:#cc0000}
@@ -273,7 +273,7 @@ nav ul:after{content:"";display:table;clear:left}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
 .social {background-color:#fff;margin-top:10px;padding:2px;display:block;display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: center;}
 .social img {display: block;-webkit-flex: 1; flex: 1;padding:2px;}
-.share {width:30px !important;height:130px;display:block;position:fixed;margin:0 0 0 2em;}
+.share {width:30px !important;height:130px;display:block;position:fixed;margin:0 0 0 10px;}
 .grid_18 .eu {display:block;background-color:#fff; color:#000;height:auto; padding:1em 0; clear:both;border-radius: 8px;}
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
@@ -302,11 +302,14 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 .tooltip .tooltiptext::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: #BA0000 transparent transparent transparent;}
 .tooltip:hover .tooltiptext {visibility: visible;}
 
+@media screen and (max-width:1030px){
+.large {visibility:hidden;display:none;}
+}
 @media screen and (max-width:960px){
 .tooltip:hover .tooltiptext {visibility: hidden;}
 #eucookies {display:table;}
 .rslides li img {border-radius:8px;}
-.medium,.nosmall, #landing{visibility:hidden;display:none;}
+.medium,.nosmall, .large, #landing{visibility:hidden;display:none;}
 .container_24{padding:0 1.5%;display:block}
 #menu{clear:both;display:block}
 #vids {display:block; padding-bottom:36%}
