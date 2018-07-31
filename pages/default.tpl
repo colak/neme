@@ -52,7 +52,19 @@ header('content-type: text/html; charset=utf-8');
 
 
 <link rel="home" href="<txp:site_url />" />
+<txp:if_search>
 <link rel="canonical" href="http://www.neme.org<txp:page_url />" />
+<txp:else />
+<txp:if_article_list>
+<txp:if_section name="">
+<link rel="canonical" href="http://www.neme.org/" />
+<txp:else />
+<link rel="canonical" href="http://www.neme.org/<txp:section />/" />
+</txp:if_section>
+<txp:else />
+<link rel="canonical" href="http://www.neme.org/<txp:section />/<txp:custom_field name="url_title" />" />
+</txp:if_article_list>
+</txp:if_search>
 
 <txp:if_description><txp:meta_description /></txp:if_description>
 
@@ -164,7 +176,7 @@ header('content-type: text/html; charset=utf-8');
 <ul class="menu-items" id="menu-primary-items">
 <li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
 <li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
-<li><a href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
+<li><a title="NeMe Arts Centre" href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
 <li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
 <li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
 <li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
@@ -204,11 +216,11 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
-<div class="share nosmall">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:permlink />&text=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://plus.google.com/share?url=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_gplus.svg" width="30" height="30" alt="share on G+" /></a>
-<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow"><img src="/themes/neme960/styles/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<div class="share large nosmall">
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/styles/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/styles/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
+<a href="http://plus.google.com/share?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on G+"><img src="/themes/neme960/styles/sm_gplus.svg" width="30" height="30" alt="share on G+" /></a>
+<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="/themes/neme960/styles/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
 <div id="content"><div class="container_24">
 
@@ -947,7 +959,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="cookies" />
 <txp:else />
 <div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
-<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this ugly notice so as to alert you that this website, like most of the websites in the world, <a rel="nofollow" href="/about/cookies">uses cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, <a rel="nofollow" href="/about/cookies">uses cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
 </div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
