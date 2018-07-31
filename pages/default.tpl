@@ -62,7 +62,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="http://www.neme.org/<txp:section />/" />
 </txp:if_section>
 <txp:else />
-<link rel="canonical" href="http://www.neme.org/<txp:section />/<txp:custom_field name="url_title" />" />
+<link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
 </txp:if_search>
 
