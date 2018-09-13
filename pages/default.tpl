@@ -19,15 +19,13 @@ header('content-type: text/html; charset=utf-8');
 
 <head>
 <title><txp:page_title /></title>
-
 <meta charset="utf-8">
 <txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
 <meta name="generator" content="Textpattern CMS"/>
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" />
-</txp:act_if_mobile>
+<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:rvm_css name="default" format="link" media="all" />
@@ -889,6 +887,9 @@ Cyprus</address>
 <h3>Announcements</h3>
 <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=neme-announce');</txp:php>
  </div>
+<div class="sub"><txp:article_custom label="More" labeltag="h4" section='<txp:section />' exclude="1" limit="600" wraptag="ul" class="submenu">
+<txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
+</txp:article_custom></div>
 </div>
 </txp:if_article_section>
 
@@ -959,8 +960,10 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="cookies" />
 <txp:else />
 <div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
-<p class="grid_18 noprint">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, <a rel="nofollow" href="/about/cookies">uses cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We assume that you are happy with that and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<div class="grid_18 noprint"><h3>We value your privacy</h3>
+<p>To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, <a rel="nofollow" href="/about/cookies">uses cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We hope that you are happy with that, and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p></div>
 <p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
+
 </div><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
