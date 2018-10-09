@@ -214,7 +214,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
-<div class="share large nosmall">
+<div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/styles/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/styles/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://plus.google.com/share?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on G+"><img src="/themes/neme960/styles/sm_gplus.svg" width="30" height="30" alt="share on G+" /></a>
@@ -597,7 +597,7 @@ Cyprus</p>
 
 <div class="grid_4">
 <img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="nosmall" />
-<p>Your details will not be published and someone from the NeMe team will respond to you should your email requires an answer.</p></div>
+<p>Your details will not be published and someone from the NeMe team will respond to you should your email require an answer.</p></div>
 
 <div class="grid_14">
 <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
@@ -606,6 +606,7 @@ Cyprus</p>
 <txp:com_connect_email label="Your email" name="Email" required="1" /><br />
 <txp:com_connect_text label="Your website" required="0" /><br />
 <txp:com_connect_textarea name="Comment" label="Your question" /><br />
+<txp:if_logged_in><txp:com_connect_file label="Send file" max="8000000" accept=".pdf,.docx,.doc" /><br /></txp:if_logged_in>
 <txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
 <txp:com_connect_checkbox label="This is not spam!." /><br />
 <txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
@@ -784,7 +785,7 @@ Cyprus</address></div>
 
 <p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
 
-<div class="social nosmall">
+<div class="social nosmall noprint">
 <span class="grid_6"><a href="https://www.facebook.com/NeMeArtsCentre/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_facebook.svg" alt="NeMe on facebook" /></a></span>
 <span class="grid_6"><a href="https://twitter.com/nemeorg/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_twitter.svg" alt="NeMe on Twitter" /></a></span>
 <span class="grid_6"><a href="https://plus.google.com/112320566517565607455" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_gplus.svg" alt="NeMe on G+"/></a></span>
