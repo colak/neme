@@ -217,7 +217,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_article_list>
 
-<txp:hide>==================-blog-======================</txp:hide>
+<txp:hide>==================-article_list-======================</txp:hide>
 
 <txp:if_search>
 <txp:article pgonly="1" searchall="0" searchsticky="1" />
@@ -245,8 +245,8 @@ header('content-type: text/html; charset=utf-8');
 <txp:variable name="cf_t"><txp:custom_field name="type" /></txp:variable>
 <txp:if_variable name="cf_t" value="call"><h5>Deadline</h5><txp:else /><h5>Date(s)</h5></txp:if_variable>
 <txp:variable name="cf_d" />
-<h5>Posted</h5> 
-<p><txp:posted wraptag="" format="%d" /> <txp:posted wraptag="" format="%b" /> <txp:posted wraptag="" format="%Y" />, <txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:posted wraptag="" format="%T" /></a><txp:else /><txp:posted wraptag="" format="%T" /></txp:if_logged_in></p>
+<h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5> 
+<p><txp:posted wraptag="" format="%d" /> <txp:posted wraptag="" format="%b" /> <txp:posted wraptag="" format="%Y" />, <txp:posted wraptag="" format="%T" />/p>
 </div>
 <div class="clearboth"><hr class="noprint" /></div>
 </txp:article>
@@ -271,23 +271,26 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 
 <txp:hide>==================-individual blog-======================</txp:hide>
+
+<txp:hide>==================-sticky-======================</txp:hide>
+
 <txp:article status="sticky" limit="999" form="">
 <div class="grid_18" role="main" id="main">
 <article><txp:body /></article>
 
 <div class="clearboth"><hr class="noprint" /></div>
-<div class="prev grid_12"><txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next></div>
+<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
 <div class="clear">&nbsp;</div>
 
 </div>
 
 <div class="grid_6" id="side" role="complementary">
 <div id="meta">
-<txp:if_custom_field name="venue"><p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p><txp:else /><p><a href="http://www.neme.org" rel="home">A project from NeMe</a></p></txp:if_custom_field>
+<txp:if_custom_field name="venue"><p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p><txp:else /><p><a href="http://www.neme.org" rel="home">NeMe project</a></p></txp:if_custom_field>
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
-<h5>Posted<txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
+<h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
@@ -313,18 +316,26 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <article><txp:body /></article>
 
 <div class="clearboth"><hr class="noprint" /></div>
-<div class="prev grid_12"><txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next></div>
+<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
 <div class="clear">&nbsp;</div>
 
 </div>
 
 <div class="grid_6" id="side" role="complementary">
 <div id="meta">
-<txp:if_custom_field name="venue"><p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p><txp:else /><p><a href="http://www.neme.org" rel="home">A project from NeMe</a></p></txp:if_custom_field>
+<txp:if_custom_field name="venue">
+<txp:if_custom_field name="venue" value="#">
+<h4>Off line</h4>
+<txp:else />
+<p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p>
+</txp:if_custom_field>
+<txp:else />
+<p><a href="http://www.neme.org" rel="home">NeMe project</a></p>
+</txp:if_custom_field>
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
-<h5>Posted<txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
+<h5>Posted<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
