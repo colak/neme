@@ -7,7 +7,7 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
-<txp:pat_speeder gzip="0"/>
+<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
@@ -219,7 +219,6 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-blog-======================</txp:hide>
 
-<txp:if_section name="blog">
 <txp:if_search>
 <txp:article pgonly="1" searchall="0" searchsticky="1" />
 <txp:if_search_results>
@@ -237,7 +236,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article status="sticky" limit="999" listform="sticky_form" />
 </txp:evaluate>
-<txp:article limit="10">
+<txp:article limit="10" listform="sticky_form" form="">
 <article class="grid_18"><h3><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h3>
 <txp:excerpt />
 </article>
@@ -251,17 +250,18 @@ header('content-type: text/html; charset=utf-8');
 </div>
 <div class="clearboth"><hr class="noprint" /></div>
 </txp:article>
-
+<div class="pagination"><txp:etc_pagination range="5" prev="Previous" next="Next"  wraptag="ul" break="li" /></div>
+<txp:hide>
 <txp:evaluate test="older, newer" wraptag="nav" class="centre">
-    <txp:older wraptag="span">Older</txp:older>
-    <span><txp:page_url type="pg" />/<txp:php>
+<txp:older wraptag="span">Older</txp:older>
+<span><txp:page_url type="pg" />/<txp:php>
 global $thispage;
 echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 </txp:php> pages</span>
-    <txp:newer wraptag="span">Newer</txp:newer>
+<txp:newer wraptag="span">Newer</txp:newer>
 </txp:evaluate>
+</txp:hide>
 </txp:if_search>
-</txp:if_section>
 
 </txp:if_article_list>
 
@@ -271,9 +271,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 
 <txp:hide>==================-individual blog-======================</txp:hide>
-
-<txp:if_article_section name="blog">
-
+<txp:article status="sticky" limit="999" form="">
 <div class="grid_18" role="main" id="main">
 <article><txp:body /></article>
 
@@ -289,14 +287,11 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
-<h5>Posted</h5>
+<h5>Posted<txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
-<txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:posted class="time-time" wraptag="span" format="%T" /><txp:else /></txp:if_logged_in>
+<txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
 </div>
-
-
-<txp:hide><txp:article_custom status="sticky" section="blog" sort="posted desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom></div></txp:hide>
 
 <h3>Announcements</h3>
 <div class="announce">
@@ -309,11 +304,44 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:article_custom section="events,publications" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
 </div></div>
 
+</txp:article>
 
-</txp:if_article_section>
+<txp:hide>==================-live-======================</txp:hide>
 
+<txp:article status="live" form="">
+<div class="grid_18" role="main" id="main">
+<article><txp:body /></article>
 
+<div class="clearboth"><hr class="noprint" /></div>
+<div class="prev grid_12"><txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next></div>
+<div class="clear">&nbsp;</div>
 
+</div>
+
+<div class="grid_6" id="side" role="complementary">
+<div id="meta">
+<txp:if_custom_field name="venue"><p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p><txp:else /><p><a href="http://www.neme.org" rel="home">A project from NeMe</a></p></txp:if_custom_field>
+
+<txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+<txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+<h5>Posted<txp:if_logged_in><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
+<time datetime="<txp:posted format="iso8601" />">
+<txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
+</time>
+</div>
+
+<h3>Announcements</h3>
+<div class="announce">
+<txp:output_form form="announce" />
+</div>
+<txp:output_form form="social_logos" />
+
+<div>
+<h3>Latest Activities</h3>
+<txp:article_custom section="events,publications" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
+</div></div>
+
+</txp:article>
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 </txp:if_individual_article>
