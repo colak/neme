@@ -43,7 +43,6 @@ header('content-type: text/html; charset=utf-8');
 <meta name="revisit-after" content="10 days" />
 </txp:if_section>
 
-<meta name="author" content="NeMe" />
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
 <meta name="DC.title" content="<txp:page_title />" />
@@ -567,7 +566,7 @@ Cyprus</p>
 <div class="line">
 
 <article class="grid_6 about" role="main">
-<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://news.neme.org/15/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
+<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="http://www.neme.org/blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 <!--googleoff: all-->
 <p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
 <!--googleon: all-->
@@ -755,16 +754,29 @@ Cyprus</address></div>
 <div class="clear">&nbsp;</div>
 </txp:if_section>
 
-<txp:hide>==================-newsletter-possibly move to blog-======================</txp:hide>
+<txp:hide>==================-newsletter-======================</txp:hide>
 
 <txp:if_section name="newsletter">
-<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="grid_4 nosmall" />
 
-<div class="grid_14">
+<div class="grid_9">
+<p>By filling this form you agree to receive emails from NeMe regarding our calls for participation, invitations and information about our events. These emails will be infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
+
+<p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
+
+<p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
+
+<txp:if_logged_in>
+<txp:etc_query url="newsletter" markup="db" data="SELECT a, b, c FROM some_table">
+    {a?}*{b?}={c?}
+</txp:etc_query>
+</txp:if_logged_in>
+</div>
+
+<div class="grid_9">
 
 <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
-<txp:com_connect_text label="Your Surname" required="1" /><br />
+<txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email name="Email" label="Your email" required="1" /><br />
 <txp:com_connect_text label="Your website" required="0" /><br />
 <txp:com_connect_checkbox label="Check this box if you wish to subscribe to our newsletter" /><br />
@@ -772,24 +784,23 @@ Cyprus</address></div>
 <txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
 <txp:com_connect_submit label="Subscribe" />
 </txp:com_connect>
-
-<txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=newsletter');</txp:php>
-
-
 </div>
 
 
 <div class="grid_6">
-<p>By filling this form you agree to receive emails from NeMe regarding our calls for participation, invitations and information about our events. These emails will be infrequent. Should you wish to unsubscribe, we always provide a link for that in our newsletter.</p>
+<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="nosmall" />
 
-<p>Due to the nature of our newsletter system (automatic output to numerous users), emails sent to you maybe falsely detected as spam by some mail clients. As such, those who have online email addresses such as gmail, ymail or hotmail, but receive their emails via an email client such as outlook or apple mail, may not receive our newsletter unless they log into their emails on site and remove them from the automated spam filters.</p>
-
-<p>NeMe will not disclose your email address or other details to anyone else without your explicit permission (we, as well as our <txp:php>echo file_get_contents('http://news.neme.org/?rah_external_output=subscribers');</txp:php> subscribers hate spam too!).</p>
-
-<div class="social nosmall noprint">
-<span class="grid_6"><a href="https://www.facebook.com/NeMeArtsCentre/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_facebook.svg" alt="NeMe on facebook" /></a></span>
-<span class="grid_6"><a href="https://twitter.com/nemeorg/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_twitter.svg" alt="NeMe on Twitter" /></a></span>
-<span class="grid_6"><a href="https://vimeo.com/imca/" rel="nofollow"><img src="http://www.neme.org/themes/neme960/styles/sm_vimeo.svg" alt="NeMe on Vimeo"/></a></span>
+<txp:linklist category="active" sort="id desc" labeltag="h3" label="Latest emails" wraptag="ul" break="">
+<txp:variable name="sent"><txp:link_description /></txp:variable>
+<txp:if_variable name="sent" value="">
+<txp:else />
+<li><txp:variable name="sent" />: <a href="<txp:link_url />"><txp:link_name /></a></li>
+</txp:if_variable>
+</txp:linklist>
+<txp:linklist category="expired" sort="id desc" labeltag="h3" label="Past emails" wraptag="ul" break="li">
+<txp:link_description />: <a href="<txp:link_url />"><txp:link_name /></a>
+</txp:linklist>
+<div><txp:output_form form="social_logos" />
 <div class="clear">&nbsp;</div></div>
 </div>
 
