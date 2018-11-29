@@ -290,7 +290,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
-<h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
+<h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
@@ -335,7 +335,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
-<h5>Posted<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></txp:if_logged_in></h5>
+<h5>Posted<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
@@ -356,12 +356,10 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 </txp:if_individual_article>
-<txp:hide><txp:if_article_list></div></txp:if_article_list></txp:hide>
 <div class="clear">&nbsp;</div>
 <div class="grid_23 nosmall">&nbsp;</div>
 <div class="grid_1 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a></div>
 <div class="clear">&nbsp;</div>
-<txp:hide><txp:if_individual_article></div></txp:if_individual_article></txp:hide>
 </div>
 </div><!-- end .container_24 -->
 <txp:output_form form="colak_foot" />
