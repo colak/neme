@@ -16,9 +16,9 @@ In the case of material and/or non-material damages resulting from the use of th
 
 NeMe and the editors reserve the right to change the website in its entirety or in part without notice, or to stop publishing entirely.
 
-h3(#texts). Texts copyright and Disclaimer
+h3(#texts). Texts copyright and disclaimer
 
-Copyright to all texts on the www.neme.org site belongs to the authors and are published here with their permission. As such no text published in this site may be translated, reproduced, republished, photographed or stored on microfilm, in electronic databases, video disks, etc., without first obtaining written permission from the authors. The views expressed in these texts do not necessarily reflect those of NeMe as an organisation or its members.
+Copyright to all texts on the www.neme.org and respublica.neme.org sites belongs to the authors and are published here with their permission. As such no text published in this site may be translated, reproduced, republished, photographed or stored on microfilm, in electronic databases, video disks, etc., without first obtaining written permission from the authors. The views expressed in these texts do not necessarily reflect those of NeMe as an organisation or its members.
 
 h3. 1. Definitions
 
@@ -100,11 +100,20 @@ Most Internet sites and servers use cookies. Many cookies contain a so-called co
 
 Through the use of cookies, NeMe can provide the users of this website with more user-friendly services that would not be possible without the cookie setting.
 
+NeMe uses 4 kind of cookies
+
+* Session cookies: Set in our forum and assists in keeping its members logged in
+* Preferences cookies: Set to obtain the permission from our visitors to load analytics and 3rd party cookies 
+* Analytics cookies: Set by our analytics software 
+* 3rd party cookies: Set by our content providers 
+
 By means of a cookie, the information on our website can be optimised with the user in mind. This includes the technologies NeMe uses to serve the site and what version browsers we support. 
 
 NeMe also uses a session cookie to keep you logged into the forum during your visit and, optionally, to keep you logged in for future forum visits.
 
-Third party cookies are used in this website from Facebook, Twitter, Google Analytics, SoundCloud, Mixcloud, and Vimeo but none of these are loaded without the data-subject's consent. 
+Third party cookies are used in this website from Facebook, Twitter, Google, SoundCloud, Mixcloud, Youtube, and Vimeo but none of these are loaded without the data-subject's consent. 
+
+A list of cookies served by our websites can be found on <a rel="nofollow" href="http://www.neme.org/about/cookies">www.neme.org/about/cookies</a>.
 
 h3. 5. Collection of general data and information
 
@@ -293,7 +302,27 @@ In addition, the data subject has the possibility of objecting to a collection o
 
 Further information and the applicable data protection provisions of Google may be retrieved under <a rel="external" href="https://www.google.com/intl/en/policies/privacy/">www.google.com/intl/en/policies/privacy/</a> and under <a rel="external" href="http://www.google.com/analytics/terms/us.html">www.google.com/analytics/terms/us.html</a>. Google Analytics is further explained under the following Link <a rel="external" href="https://www.google.com/analytics/">www.google.com/analytics/</a>.
 
-h3. 13. Data protection provisions about the application and use of Google+
+h3. 13. Data protection provisions about the application and use of Google Maps
+
+On this website, the controller has integrated the component of Google Maps. Google Maps is a web mapping service developed by Google. It offers satellite imagery, street maps, 360° panoramic views of streets (Street View), real-time traffic conditions (Google Traffic), and route planning for traveling by foot, car, bicycle, or public transportation.
+
+The operator of the Google Maps component is Google Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043-1351, United States.
+
+By means of this application the IP address of the Internet connection of the data subject is abridged by Google when accessing our websites from a Member State of the European Union or another Contracting State to the Agreement on the European Economic Area.
+
+The Google Maps component is used in our sites to pinpoint specific addresses for NeMe events and projects.
+
+Google maps places a cookie on the information technology system of the data subject. The definition of cookies is explained above. With the setting of the cookie, Google is enabled to analyse the use of Google Maps in our websites. With each call-up to any of the individual pages of our Internet sites, where the Google maps component is intergrated, the data subject will automatically submit data through the Google Maps component for the purpose of online advertising and the settlement of commissions to Google. During the course of this technical procedure,Google gains knowledge of personal information, such as the IP address of the data subject, which serves Google, inter alia, to understand the origin of visitors and clicks, and subsequently create commission settlements.
+
+The cookie is used to store personal information, such as the access time, the location from which the access was made, and the frequency of visits of our website by the data subject. With each visit to our Internet site, such personal data, including the IP address of the Internet access used by the data subject, will be transmitted to Google in the United States of America. These personal data are stored by Google in the United States of America. Google may pass these personal data collected through the technical procedure to third parties.
+
+The data subject may, as stated above, prevent the setting of cookies through our website at any time by means of a corresponding adjustment of the web browser used and thus permanently deny the setting of cookies. Such an adjustment to the Internet browser used would also prevent Google Maps from setting a cookie on the information technology system of the data subject. In addition, cookies already in use by Google Maps may be deleted at any time via a web browser or other software programs.
+
+In addition, the data subject has the possibility of objecting to a collection of data that are generated by Google Maps, which is related to the use of this website, as well as the processing of this data by Google and the chance to preclude any such. For this purpose, the data subject must download a browser add-on under the link <a rel="external" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a> and install it. This browser add-on tells Google through a JavaScript, that any data and information about the visits of Internet pages may not be transmitted to Google. The installation of the browser add-ons is considered an objection by Google. If the information technology system of the data subject is later deleted, formatted, or newly installed, then the data subject must reinstall the browser add-ons to disable tracking by Google. If the browser add-on was uninstalled by the data subject or any other person who is attributable to their sphere of competence, or is disabled, it is possible to execute the reinstallation or reactivation of the browser add-ons.
+
+Further information and the applicable data protection provisions of Google may be retrieved under <a rel="external" href="https://www.google.com/intl/en/policies/privacy/">www.google.com/intl/en/policies/privacy/</a> and under <a rel="external" href="https://www.google.com/intl/en/policies/terms/">www.google.com/intl/en/policies/terms/</a>. Google Maps is further explained under the following Link <a rel="external" href="https://www.google.com/maps/about/">www.google.com/maps/about/</a>.
+
+h3. 14. Data protection provisions about the application and use of Google+
 
 On this website, the controller has integrated the Google+ button as a component. Google+ is a so-called social network. A social network is a social meeting place on the Internet, an online community, which usually allows users to communicate with each other and interact in a virtual space. A social network may serve as a platform for the exchange of opinions and experiences, or enable the Internet community to provide personal or business-related information. Google+ allows users of the social network to include the creation of private profiles, upload photos and network through friend requests.
 
@@ -311,7 +340,7 @@ If the data subject does not wish to transmit personal data to Google, he or she
 
 Further information and the data protection provisions of Google may be retrieved under <a rel="external" href="https://www.google.com/intl/en/policies/privacy/">www.google.com/intl/en/policies/privacy/</a>. More references from Google about the Google+ 1 button may be obtained under <a rel="external" href="https://developers.google.com/+/web/buttons-policy">developers.google.com/+/web/buttons-policy</a>.
 
-h3. 14. Data protection provisions about the application and use of Matomo
+h3. 15. Data protection provisions about the application and use of Matomo
 
 On this website, the controller has integrated the Matomo component. Matomo is an open-source software tool for web analysis. Web analysis is the collection, gathering and evaluation of data on the behaviour of visitors from Internet sites. A web analysis tool collects, inter alia, data on the website from which a data subject came to a website (so-called referrer), which pages of the website were accessed or how often and for which period of time a sub-page was viewed. The web analysis is used for the optimisation of our website
 
@@ -331,7 +360,7 @@ With each setting of the opt-out cookie, however, there is the possibility that 
 
 Further information and the applicable data protection provisions of Matomo may be retrieved on <a rel="external" href="https://matomo.org/privacy/">matomo.org/privacy/</a>.
 
-h3. 15. Data protection provisions about the application and use of Twitter
+h3. 16. Data protection provisions about the application and use of Twitter
 
 On this website, the controller has integrated components of Twitter. Twitter is a multilingual, publicly-accessible microblogging service on which users may publish and spread so-called 'tweets,' e.g. short messages, which are limited to 140 characters. These short messages are available for everyone, including those who are not logged on to Twitter. The tweets are also displayed to so-called followers of the respective user. Followers are other Twitter users who follow a user's tweets. Furthermore, Twitter allows you to address a wide audience via hashtags, links or retweets.
 
@@ -343,9 +372,9 @@ If the data subject is logged in at the same time on Twitter, Twitter detects wi
 
 Twitter receives information via the Twitter component that the data subject has visited our website, provided that the data subject is logged in on Twitter at the time of the call-up to our website. This occurs regardless of whether the person clicks on the Twitter component or not. If such a transmission of information to Twitter is not desirable for the data subject, then he or she may prevent this by logging off from their Twitter account before a call-up to our website is made.
 
-The applicable data protection provisions of Twitter may be accessed under <a rel="external" href="https://twitter.com/privacy?lang=en">twitter.com/privacy?lang=en</a>.
+The applicable data protection provisions of Twitter may be accessed under <a rel="external" href="https://twitter.com/privacy">twitter.com/privacy</a>.
 
- <txp:hide>h3. 16. Data protection provisions about the application and use of YouTube
+h3. 17. Data protection provisions about the application and use of YouTube
 
 On this website, the controller has integrated components of YouTube. YouTube is an Internet video portal that enables video publishers to set video clips and other users free of charge, which also provides free viewing, review and commenting on them. YouTube allows you to publish all kinds of videos, so you can access both full movies and TV broadcasts, as well as music videos, trailers, and videos made by users via the Internet portal.
 
@@ -359,9 +388,7 @@ YouTube and Google will receive information through the YouTube component that t
 
 YouTube's data protection provisions, available at <a rel="external" href="https://www.google.com/intl/en/policies/privacy/">www.google.com/intl/en/policies/privacy/</a>, provide information about the collection, processing and use of personal data by YouTube and Google.
 
- </txp:hide>
-
-h3. 16. Data protection provisions about the application and use of Vimeo
+h3. 18. Data protection provisions about the application and use of Vimeo
 
 On this website, the controller has integrated components of Vimeo. Vimeo is an Internet video portal that enables video publishers to set video clips and other users free of charge, which also provides free viewing, review and commenting on them. Vimeo allows you to publish all kinds of videos, so you can access both full movies and broadcasts, as well as music videos, trailers, and videos made by users via the Internet portal.
 
@@ -375,7 +402,7 @@ Vimeo will receive information through the vimeo component that the data subject
 
 Vimeo's data protection provisions, available at <a rel="external" href="https://vimeo.com/privacy">vimeo.com/privacy</a>, provide information about the collection, processing and use of personal data by Vimeo.
 
-h3. 17. Data protection provisions about the application and use of SoundCloud
+h3. 19. Data protection provisions about the application and use of SoundCloud
 
 On this website, the controller has integrated components of SoundCloud. SoundCloud is an Internet sound portal that enables sound and music publishers to set sound clips and other users free of charge, which also provides free listening, review and commenting on them. SoundCloud allows you to publish all kinds of audio files, so you can access both full recordings and broadcasts, as well as music, interviews, and other audio made by users via the Internet portal.
 
@@ -387,9 +414,9 @@ If the data subject is logged in on SoundCloud, SoundCloud recognises with each 
 
 SoundCloud will receive information through the SoundCloud component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on SoundCloud; this occurs regardless of whether the person clicks on a SoundCloud audio component or not. If such a transmission of this information to SoundCloud is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own SoundCloud account before a call-up to our website is made.
 
-SoundCloud's data protection provisions, available at soundcloud.com/pages/privacy, provide information about the collection, processing and use of personal data by SoundCloud.
+SoundCloud's data protection provisions, available at <a rel="external" href="https://soundcloud.com/pages/privacy">soundcloud.com/pages/privacy</a>, provide information about the collection, processing and use of personal data by SoundCloud.
 
-h3. 18. Data protection provisions about the application and use of Mixcloud
+h3. 20. Data protection provisions about the application and use of Mixcloud
 
 On this website, the controller has integrated components of Mixcloud. Mixcloud is an Internet audio streaming platform hosting radio for listeners, curators, and brands. Mixcloud allows you to publish all kinds of audio files, so you can access both full recordings and broadcasts, as well as music, interviews, and other audio made by users via the platform.
 
@@ -401,33 +428,33 @@ If the data subject is logged in on Mixcloud, Mixcloud recognises with each call
 
 Mixcloud will receive information through the Mixcloud component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on Mixcloud; this occurs regardless of whether the person clicks on a SoundCloud audio component or not. If such a transmission of this information to Mixcloud is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own Mixcloud account before a call-up to our website is made.
 
-Mixcloud's data protection provisions, available at mixcloud.com/privacy/, provide information about the collection, processing and use of personal data by Mixcloud.
+Mixcloud's data protection provisions, available at <a rel="external" href="https://www.mixcloud.com/privacy/">mixcloud.com/privacy/</a>, provide information about the collection, processing and use of personal data by Mixcloud.
 
-h3. 19. Ad Servers
+h3. 21. Ad Servers
 
 NeMe does not partner with or have a special or any other relationship with any ad server companies.
 
-h3. 20. Legal basis for the processing
+h3. 22. Legal basis for the processing
 
 Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain consent for a specific processing purpose. If the processing of personal data is necessary for the performance of a contract to which the data subject is party, as is the case, for example, when processing operations are necessary for the supply of goods or to provide any other service, the processing is based on Article 6(1) lit. b GDPR. The same applies to such processing operations which are necessary for carrying out pre-contractual measures, for example in the case of inquiries concerning our products or services. Is our organisation subject to a legal obligation by which processing of personal data is required, such as for the fulfilment of tax obligations, the processing is based on Art. 6(1) lit. c GDPR. In rare cases, the processing of personal data may be necessary to protect the vital interests of the data subject or of another natural person. This would be the case, for example, if a visitor were injured in our organisation and his name, age, health insurance data or other vital information would have to be passed on to a doctor, hospital or other third party. Then the processing would be based on Art. 6(1) lit. d GDPR. Finally, processing operations could be based on Article 6(1) lit. f GDPR. This legal basis is used for processing operations which are not covered by any of the abovementioned legal grounds, if processing is necessary for the purposes of the legitimate interests pursued by our organisation or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. Such processing operations are particularly permissible because they have been specifically mentioned by the European legislator. He considered that a legitimate interest could be assumed if the data subject is a client of the controller (Recital 47 Sentence 2 GDPR).
 
-h3. 21. The legitimate interests pursued by the controller or by a third party
+h3. 23. The legitimate interests pursued by the controller or by a third party
 
 Where the processing of personal data is based on Article 6(1) lit. our legitimate interest is to carry out our projects in favour of our audience.
 
-h3. 22. Period for which the personal data will be stored
+h3. 24. Period for which the personal data will be stored
 
 The criteria used to determine the period of storage of personal data is the respective statutory retention period. After expiration of that period, the corresponding data is routinely deleted, as long as it is no longer necessary for the fulfilment of the contract or the initiation of a contract.
 
-h3. 23. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
+h3. 25. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
 
 We clarify that the provision of personal data is partly required by law (e.g. tax regulations) or can also result from contractual provisions (e.g. information on the contractual partner). Sometimes it may be necessary to conclude a contract that the data subject provides us with personal data, which must subsequently be processed by us. The data subject is, for example, obliged to provide us with personal data when our organisation signs a contract with him or her. The non-provision of the personal data would have the consequence that the contract with the data subject could not be concluded. Before personal data is provided by the data subject, the data subject must contact the controller. The controller clarifies to the data subject whether the provision of the personal data is required by law or contract or is necessary for the conclusion of the contract, whether there is an obligation to provide the personal data and the consequences of non-provision of the personal data.
 
-h3. 24. Existence of automated decision-making
+h3. 26. Existence of automated decision-making
 
 As a responsible organisation, we do not use so called algorithmic or automatic decision-making or profiling.
 
-h3. 25. Changes to this privacy policy
+h3. 27. Changes to this privacy policy
 
 NeMe has the discretion to update this privacy policy at any time. When it does, the date at the bottom of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.
 
