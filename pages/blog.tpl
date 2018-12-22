@@ -35,13 +35,9 @@ header('content-type: text/html; charset=utf-8');
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
 <txp:rvm_css name="print" format="link" media="print" />
 
-<txp:if_section name="contact,newsletter">
-<meta name="Robots" content="noindex,follow" />
-<txp:else />
 <meta name="author" content="NeMe and contributors" />
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
-</txp:if_section>
 
 <meta name="author" content="NeMe" />
 <meta name="geo.region" content="CY" />
@@ -236,20 +232,8 @@ header('content-type: text/html; charset=utf-8');
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article status="sticky" limit="999" listform="sticky_form" />
 </txp:evaluate>
-<txp:article limit="10" listform="sticky_form" form="">
-<article class="grid_18"><h3><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h3>
-<txp:excerpt />
-</article>
-<div class="grid_6 meta" role="complementary">
-<txp:variable name="cf_d"><txp:custom_field name="dates" /></txp:variable>
-<txp:variable name="cf_t"><txp:custom_field name="type" /></txp:variable>
-<txp:if_variable name="cf_t" value="call"><h5>Deadline</h5><txp:else /><h5>Date(s)</h5></txp:if_variable>
-<txp:variable name="cf_d" />
-<h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5> 
-<p><txp:posted wraptag="" format="%d" /> <txp:posted wraptag="" format="%b" /> <txp:posted wraptag="" format="%Y" />, <txp:posted wraptag="" format="%T" />/p>
-</div>
-<div class="clearboth"><hr class="noprint" /></div>
-</txp:article>
+<txp:article limit="10" listform="live_form" form="" />
+
 <div class="pagination"><txp:etc_pagination range="5" prev="Previous" next="Next"  wraptag="ul" break="li" /></div>
 <txp:hide>
 <txp:evaluate test="older, newer" wraptag="nav" class="centre">
@@ -304,7 +288,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <div>
 <h3>Latest Activities</h3>
-<txp:article_custom section="events,publications" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
+<txp:article_custom section="events,participations" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
 </div></div>
 
 </txp:article>
@@ -348,8 +332,8 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:output_form form="social_logos" />
 
 <div>
-<h3>Latest Activities</h3>
-<txp:article_custom section="events,publications" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
+<h3>Latest Blog posts</h3>
+<txp:article_custom section="blog" sort="posted desc" limit="5" status="live" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
 </div></div>
 
 </txp:article>
