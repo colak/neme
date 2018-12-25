@@ -7,7 +7,7 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
-<txp:pat_speeder gzip="0"/>
+<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
@@ -34,6 +34,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
 <txp:rvm_css name="print" format="link" media="print" />
+
 
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
@@ -174,12 +175,12 @@ header('content-type: text/html; charset=utf-8');
 <li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
 <li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
 <li><a title="NeMe Arts Centre" href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
-<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
-<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
+<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="archives">Events</a></li>
+<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="archives">Participations</a></li>
 <li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
 <li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
-<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="bookmark">Texts</a></li>
-<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section> rel="nofollow">Blog</a></li>
+<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="archives">Texts</a></li>
+<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section> rel="follow">Blog</a></li>
 <li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
 <li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
 <li class="nosmall">&nbsp;&nbsp;</li>
@@ -202,9 +203,9 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_2 logo nosmall">
 <txp:hide>jpg logo<txp:image id="792" /></txp:hide>
 <txp:if_section name="">
-<img src="/themes/neme960/styles/neme.svg" alt="NeMe logo" width="70" height="70" />
+<img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" />
 <txp:else />
-<a href="<txp:site_url />" rel="home"><img src="/themes/neme960/styles/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
+<a href="<txp:site_url />" rel="home"><img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
 <small>Est. 2004</small>
 </txp:if_section>
 </div>
@@ -215,9 +216,9 @@ header('content-type: text/html; charset=utf-8');
 
 </div><!-- end .container_24 --></div>
 <div class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/styles/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/styles/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="/themes/neme960/styles/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
+<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="/themes/neme960/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
 <div id="content"><div class="container_24">
 
@@ -306,6 +307,10 @@ header('content-type: text/html; charset=utf-8');
 <div class="announce">
 <txp:output_form form="announce" />
 </div>
+<h3>Blog</h3>
+<txp:article_custom section="blog" limit="4" status="live" break="li" wraptag="ul">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
 <txp:output_form form="social_logos" />
 
 </div>
@@ -601,7 +606,7 @@ Cyprus</p>
 <div class="clear">&nbsp;</div>
 
 <div class="grid_4">
-<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="nosmall" />
+<img src="/themes/neme960/forms/svg/nospam.svg" alt="no spam" class="nosmall" />
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email require an answer.</p></div>
 
 <div class="grid_14">
@@ -647,7 +652,7 @@ Cyprus</address></div>
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned or acknowledged in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe and/or IMCA are mentioned or acknowledged in&#8230;</h4><a class="nosmall" href="#landing"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="events, participations, about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -660,7 +665,7 @@ Cyprus</address></div>
 </txp:if_different>
 </txp:images>
 
-<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:images category="cite" limit="999" sort="alt desc" break="">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
@@ -788,7 +793,7 @@ Cyprus</address></div>
 
 
 <div class="grid_6">
-<img src="/themes/neme960/styles/nospam.svg" alt="no spam" class="nosmall" />
+<img src="/themes/neme960/forms/svg/nospam.svg" alt="no spam" class="nosmall" />
 
 <txp:linklist category="active" sort="id desc" labeltag="h3" label="Latest emails" wraptag="ul" break="">
 <txp:variable name="sent"><txp:link_description /></txp:variable>
@@ -965,7 +970,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/styles/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
