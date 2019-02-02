@@ -28,12 +28,12 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:rvm_css name="default" format="link" media="all" />
-<txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
-<!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
-<!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
+<txp:css name="default" media="all" format="flat.link" />
+<txp:if_article_list><txp:css name="articlelists" media="all" format="flat.link" /></txp:if_article_list>
+<!--[if IE]><txp:css name="ie-fluid" media="all" format="flat.link" /><![endif]-->
+<!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:rvm_css name="print" format="link" media="print" />
+<txp:css name="print" format="flat.link" media="print" />
 
 <meta name="author" content="NeMe and contributors" />
 <meta name="Robots" content="index,follow" />
@@ -59,6 +59,8 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
 </txp:if_search>
+<txp:older wraptag='<link rel="prev" href="<+>" />' />
+<txp:newer wraptag='<link rel="next" href="<+>" />' />
 
 <txp:if_description><txp:meta_description /></txp:if_description>
 
@@ -77,22 +79,22 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
-<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
+<meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <txp:else />
 <txp:variable name="imgmain"><txp:images break="" sort="rand()" limit="1" id='<txp:custom_field name="img_main" />'><txp:image_info type="id" /></txp:images></txp:variable>
 <meta name="twitter:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
 <meta property="og:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
-<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="width" /></txp:images>" />
-<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="height" /></txp:images>" />
+<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="w" /></txp:images>" />
+<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="h" /></txp:images>" />
 <meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
-<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
+<meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
@@ -160,11 +162,11 @@ header('content-type: text/html; charset=utf-8');
 <li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
 <li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
 <li><a title="NeMe Arts Centre" href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
-<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="archives">Events</a></li>
-<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="archives">Participations</a></li>
+<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
+<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
 <li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
 <li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
-<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="archives">Texts</a></li>
+<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="section">Texts</a></li>
 <li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section> rel="follow">Blog</a></li>
 <li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
 <li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
@@ -216,9 +218,9 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-article_list-======================</txp:hide>
 
 <txp:if_search>
-<txp:article pgonly="1" searchall="0" searchsticky="1" />
 <txp:if_search_results>
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<txp:article limit="999" />
 <hr />
 <txp:else />
 <p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
@@ -246,7 +248,6 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 </txp:evaluate>
 </txp:hide>
 </txp:if_search>
-
 </txp:if_article_list>
 
 <txp:hide>==================-individual articles-======================</txp:hide>
@@ -263,7 +264,18 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <article><txp:body /></article>
 
 <div class="clearboth"><hr class="noprint" /></div>
-<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
+<txp:variable name="prev1" value='<txp:link_to_prev />' />
+<txp:if_variable name="prev1" value="">
+<div class="prev grid_12">&nbsp;</div>
+<txp:else />
+<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div>
+</txp:if_variable>
+<txp:variable name="next1" value='<txp:link_to_next />' />
+<txp:if_variable name="next1" value="">
+<div class="prev grid_12">&nbsp;</div>
+<txp:else />
+<div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
+</txp:if_variable>
 <div class="clear">&nbsp;</div>
 
 </div>
@@ -273,7 +285,12 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:if_custom_field name="venue"><p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p><txp:else /><p><a href="http://www.neme.org" rel="home">NeMe project</a></p></txp:if_custom_field>
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+
+<txp:if_custom_field name="Dates">
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+<txp:else />
+</txp:if_custom_field>
+
 <h5>Posted <txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
@@ -287,6 +304,10 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:output_form form="social_logos" />
 
 <div>
+<h3>Other Blog posts</h3>
+<txp:article_custom section="blog" limit="5" break="li" wraptag="ul">
+<txp:if_article_id><txp:else /><txp:permlink><txp:title /></txp:permlink></txp:if_article_id>
+</txp:article_custom>
 <h3>Latest Activities</h3>
 <txp:article_custom section="events,participations" sort="id desc" limit="10" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
 </div></div>
@@ -300,7 +321,18 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <article><txp:body /></article>
 
 <div class="clearboth"><hr class="noprint" /></div>
-<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div><div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
+<txp:variable name="prev1" value='<txp:link_to_prev />' />
+<txp:if_variable name="prev1" value="">
+<div class="prev grid_12">&nbsp;</div>
+<txp:else />
+<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div>
+</txp:if_variable>
+<txp:variable name="next1" value='<txp:link_to_next />' />
+<txp:if_variable name="next1" value="">
+<div class="prev grid_12">&nbsp;</div>
+<txp:else />
+<div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
+</txp:if_variable>
 <div class="clear">&nbsp;</div>
 
 </div>
@@ -318,7 +350,10 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 </txp:if_custom_field>
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+<txp:if_custom_field name="Dates">
 <txp:if_custom_field name="type" value="info"><h3>Date(s)</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
+<txp:else />
+</txp:if_custom_field>
 <h5>Posted<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
@@ -333,7 +368,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <div>
 <h3>Latest Blog posts</h3>
-<txp:article_custom section="blog" sort="posted desc" limit="5" status="live" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
+<txp:article_custom section="blog" sort="posted desc" limit="6" status="live" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
 </div></div>
 
 </txp:article>
