@@ -220,7 +220,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_search>
 <txp:if_search_results>
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
-<txp:article limit="999" />
+<txp:article limit="900" />
 <hr />
 <txp:else />
 <p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
@@ -229,7 +229,7 @@ header('content-type: text/html; charset=utf-8');
 <li>Try fewer keywords</li>
 <li>Try different keywords</li></ul>
 </txp:if_search_results>
-<txp:article limit="999" searchall="1" />
+<txp:article limit="10" searchall="1" />
 <txp:else />
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article status="sticky" limit="999" listform="sticky_form" />
@@ -368,7 +368,9 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <div>
 <h3>Latest Blog posts</h3>
-<txp:article_custom section="blog" sort="posted desc" limit="6" status="live" break="li" wraptag="ul"><txp:permlink><txp:title /></txp:permlink></txp:article_custom>
+<txp:article_custom section="blog" sort="posted desc" exclude='<txp:article_id />' limit="8" status="live" break="li" wraptag="ul">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
 </div></div>
 
 </txp:article>
