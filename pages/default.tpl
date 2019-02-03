@@ -28,12 +28,13 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:rvm_css name="default" format="link" media="all" />
-<txp:if_article_list><txp:rvm_css name="articlelists" format="link" media="all" /></txp:if_article_list>
-<!--[if IE]><txp:rvm_css name="ie-fluid" format="link" /><![endif]-->
-<!--[if IE 7]><txp:rvm_css name="ie7" format="link" /><![endif]-->
+<txp:css name="default" format="flat.link" media="all" />
+<txp:if_article_list><txp:css name="articlelists" format="flat.link" media="all" /></txp:if_article_list>
+<!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
+<!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:rvm_css name="print" format="link" media="print" />
+<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
+<txp:css name="print" format="flat.link" media="print" />
 
 
 <txp:if_section name="contact,newsletter">
@@ -81,22 +82,22 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
-<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
+<meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <txp:else />
 <txp:variable name="imgmain"><txp:images break="" sort="rand()" limit="1" id='<txp:custom_field name="img_main" />'><txp:image_info type="id" /></txp:images></txp:variable>
 <meta name="twitter:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
 <meta property="og:image" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_url /></txp:images>" />
-<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="width" /></txp:images>" />
-<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="height" /></txp:images>" />
+<meta property="og:image:width" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="w" /></txp:images>" />
+<meta property="og:image:height" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="h" /></txp:images>" />
 <meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
-<meta property="og:image" content="http://www.neme.org/images/1087.png" />
+<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
+<meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
@@ -175,12 +176,12 @@ header('content-type: text/html; charset=utf-8');
 <li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
 <li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
 <li><a title="NeMe Arts Centre" href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
-<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="archives">Events</a></li>
-<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="archives">Participations</a></li>
+<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
+<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
 <li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
 <li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
-<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="archives">Texts</a></li>
-<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section> rel="follow">Blog</a></li>
+<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="section">Texts</a></li>
+<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section>>Blog</a></li>
 <li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
 <li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
 <li class="nosmall">&nbsp;&nbsp;</li>
@@ -610,7 +611,7 @@ Cyprus</p>
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email require an answer.</p></div>
 
 <div class="grid_14">
-<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect to=“email@site.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email label="Your email" name="Email" required="1" /><br />
@@ -779,7 +780,7 @@ Cyprus</address></div>
 
 <div class="grid_9">
 
-<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect to=“email@site.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email name="Email" label="Your email" required="1" /><br />
