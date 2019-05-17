@@ -7,7 +7,9 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
-<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+
+
+<txp:if_logged_in><txp:else /><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
@@ -167,7 +169,7 @@ header('content-type: text/html; charset=utf-8');
 <li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
 <li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
 <li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="section">Texts</a></li>
-<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section> rel="follow">Blog</a></li>
+<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section>>Blog</a></li>
 <li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
 <li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
 <li class="nosmall">&nbsp;&nbsp;</li>
@@ -305,7 +307,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <div>
 <h3>Other Blog posts</h3>
-<txp:article_custom section="blog" limit="5" break="li" wraptag="ul">
+<txp:article_custom section="blog" limit="10" break="li" wraptag="ul">
 <txp:if_article_id><txp:else /><txp:permlink><txp:title /></txp:permlink></txp:if_article_id>
 </txp:article_custom>
 <h3>Latest Activities</h3>
@@ -368,7 +370,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 
 <div>
 <h3>Latest Blog posts</h3>
-<txp:article_custom section="blog" sort="posted desc" exclude='<txp:article_id />' limit="8" status="live" break="li" wraptag="ul">
+<txp:article_custom section="blog" sort="posted desc" exclude='<txp:article_id />' limit="10" status="live" break="li" wraptag="ul">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div></div>
