@@ -7,6 +7,8 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
+
+
 <txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
@@ -373,8 +375,8 @@ Cyprus</address>
 </div>
 <txp:output_form form="social_logos" />
 <div>
-<h4>Publications</h4>
-<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="alt desc" break="">
+<h4>Publications (random)</h4>
+<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" break=""><txp:hide>sort="alt desc"</txp:hide>
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
 <div class="clear">&nbsp;</div>
 </txp:images>
@@ -611,7 +613,7 @@ Cyprus</p>
 <p>Your details will not be published and someone from the NeMe team will respond to you should your email require an answer.</p></div>
 
 <div class="grid_14">
-<txp:com_connect to=“email@site.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email label="Your email" name="Email" required="1" /><br />
@@ -780,7 +782,7 @@ Cyprus</address></div>
 
 <div class="grid_9">
 
-<txp:com_connect to=“email@site.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
+<txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, you are now subscribed to NeMe&#39;s newsletter.">
 <txp:com_connect_text label="Your name" required="1" /><br />
 <txp:com_connect_text label="Your surname" required="1" /><br />
 <txp:com_connect_email name="Email" label="Your email" required="1" /><br />
@@ -803,7 +805,7 @@ Cyprus</address></div>
 <li><txp:variable name="sent" />: <a href="<txp:link_url />"><txp:link_name /></a></li>
 </txp:if_variable>
 </txp:linklist>
-<txp:linklist category="expired" sort="id desc" labeltag="h3" label="Past emails" wraptag="ul" break="li">
+<txp:linklist category="expired" sort="id desc" labeltag="h3" label="Past emails" wraptag="ul" break="li"   limit="7">
 <txp:link_description />: <a href="<txp:link_url />"><txp:link_name /></a>
 </txp:linklist>
 <div><txp:output_form form="social_logos" />
