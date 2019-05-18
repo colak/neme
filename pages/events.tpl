@@ -8,7 +8,7 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
-<txp:if_logged_in><txp:pat_speeder gzip="0"/><txp:else /></txp:if_logged_in>
+<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
