@@ -231,7 +231,8 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_section name="workshops">
 <txp:article_custom id="2002">
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:thumbnail id='<txp:custom_field name="img2" />' class="ds" /></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall">
+<txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure>
 <div class="clear">&nbsp;</div>
 <div class="grid_18"><txp:body /></div>
