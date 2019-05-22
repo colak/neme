@@ -240,7 +240,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="line"><h4 class="grid_23 alpha" id="cited">NeMe and/or IMCA published content is cited in&#8230;</h4><a class="nosmall" href="#other"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
-<txp:images category="cite" limit="999" sort="alt desc" break="">
+<txp:images category="cite" breakby="2" break="<div class='clear'>&nbsp;</div>" limit="999" sort="alt desc">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
 <span itemprop="image" class="grid_7 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
 <figcaption itemprop="caption" class="grid_17 omega"><txp:image_info type="caption" escape="" />
