@@ -405,7 +405,7 @@ nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%
 .medium{clear:both}
 #nav, #header, #footer {background:transparent; box-shadow:none;}
 #side .grid_24 {display: -webkit-flex; display: flex;}
-#side .otherpubs {display: -webkit-flex; display: flex; justify-content: center;}
+#side .otherpubs {display: -webkit-flex; display: flex; justify-content: center;align-self: flex-end;}
 }
 @media screen and (max-width:450px){#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:100%}
 #vids {display:block; padding-bottom:52%}
