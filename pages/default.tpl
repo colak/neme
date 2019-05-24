@@ -364,7 +364,7 @@ header('content-type: text/html; charset=utf-8');
 <article class="grid_18" role="main"><txp:body /></article>
 
 <div class="grid_6 frontthumbs" id="side" role="complementary">
-<div id="meta"><h4>Address</h4><address>NeMe<br />
+<div id="meta"><h4>Address<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4><address>NeMe<br />
 poBox 50325<br />
 3603 Limassol<br />
 Cyprus</address>
@@ -374,14 +374,13 @@ Cyprus</address>
 <txp:output_form form="announce" />
 </div>
 <txp:output_form form="social_logos" />
-<div>
-<h4>Publications (random)</h4>
-<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" break=""><txp:hide>sort="alt desc"</txp:hide>
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
-<div class="clear">&nbsp;</div>
+
+<h4>Publications (random)</h4><div class="grid_24">
+<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
+<div class="otherpubs"><a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a></div>
 </txp:images>
 </div>
-
+<div class="clear">&nbsp;</div>
 <txp:recent_articles section="events,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 </div>
 
@@ -403,13 +402,13 @@ Cyprus</address>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs">
+<div class="grid_6 nosmall frontthumbs">
 <h3>Participations</h3>
 
 <txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
 </div>
 	
-<div class="grid_6 frontthumbs">
+<div class="grid_6 nosmall frontthumbs">
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
