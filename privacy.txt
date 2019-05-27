@@ -78,7 +78,7 @@ NeMe
  poBox 50325 3603 
 Limassol
  Cyprus
-Websites: www.neme.org, forum.neme.org, respublica.neme.org, news.neme.org.
+Websites: www.neme.org, forum.neme.org, respublica.neme.org.
 
 h3. 3. External Links
 
