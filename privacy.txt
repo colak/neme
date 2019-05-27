@@ -456,7 +456,7 @@ As a responsible organisation, we do not use so called algorithmic or automatic 
 
 h3. 27. Changes to this privacy policy
 
-NeMe has the discretion to update this privacy policy at any time. When it does, the date at the bottom of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the changes to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blame/master/privacy.txt" txt="github" />.
+NeMe has the discretion to update this privacy policy at any time. When it does, the date at the bottom of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the modifications to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blame/master/privacy.txt" txt="github" />.
 
  <hr />
 
