@@ -399,7 +399,7 @@ nav li:first-child a{padding-left:2em}
 nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.4em 0;background:#fff;}
 .menu-items li a{padding:0 2em;display:block}
 #menu-primary {background-color: #fff;color: #ba0000}
-#workshops .container_24 .grid_6 .announce {width:100%}
+#workshops .container_24 #side {width:100%}
 #content #side .announce li,#content .side .announce li,#front .container_24 .announce li, .announce .linklist li {background-color:#eeeee0;padding:5px;border-bottom:1px #ffc solid;}
 #front .container_24 .medium{display:block;clear:both;border:0;padding:0;margin:0}
 .medium{clear:both}
