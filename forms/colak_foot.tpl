@@ -36,7 +36,7 @@
 
 <div class="grid_6" id="copyright">
 <p><a href="<txp:site_url />about/privacy-policy" rel="license">Privacy policy</a> <txp:article_custom id="2178">(Modified on <txp:modified format="%d %B %G at %r" />)</txp:article_custom><br />
-This site features <txp:variable name="article_count" value='<txp:article_custom section="participations,events,about,blog,texts,nac,workshops" pageby="1" pgonly status="live" />' /><txp:variable name="article_count" add='<txp:article_custom section="participations,events,about,blog,texts,nac,workshops" pageby="1" pgonly status="sticky" />' output /> posts since it was launched <txp:fha_time_diff year="2004" month="11" day="18" /> ago and it was last modified on 
+This site features <txp:article_custom section="participations,events,about,blog,texts,nac,workshops" pageby="1" pgonly status /> posts since it was launched <txp:fha_time_diff year="2004" month="11" day="18" /> ago and it was last modified on 
 <txp:article_custom section="events,participations,texts,blog,about" sort="LastMod desc" limit="1" form="">
 <txp:modified format="%d %B %G at %r" />.
 </txp:article_custom><br />
