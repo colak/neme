@@ -13,20 +13,37 @@ SetHandler php72-cgi
 
 # compression and cache control
 
-<IfModule deflate_module>
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE text/plain
-    AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/xml
-    AddOutputFilterByType DEFLATE application/xml
-    AddOutputFilterByType DEFLATE application/xhtml+xml
-    AddOutputFilterByType DEFLATE application/rss+xml
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/x-javascript
-    BrowserMatch ^Mozilla/4 gzip-only-text/html
-    BrowserMatch ^Mozilla/4\.0[678] no-gzip
-    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
 </IfModule>
+
 
 <IfModule mod_headers.c>
 Header set Connection keep-alive
@@ -40,13 +57,15 @@ Header set Cache-Control "no-transform"
 Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com http:/dev.colkides.com http://*.statemachines.eu"
 </ifModule>
 
+
+
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 15 days"
+ExpiresByType text/css "access plus 10 days"
 ExpiresByType text/html "access plus 10 seconds"
 ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
@@ -58,6 +77,7 @@ ExpiresByType application/atom+xml "access plus 1 hour"
 ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
 </IfModule>
+
 
 #ErrorDocument 403 /403.php
 Header append X-FRAME-OPTIONS "SAMEORIGIN"
@@ -133,29 +153,30 @@ RewriteRule ^.* - [F,L]
 #RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
 #</ifModule>
 
+
 #RewriteRule ^/sitemap/ /texts/ [R=301,L]
 RedirectMatch 301 ^/main/?(.+)?$ http://www.neme.org/$1
 RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
 Redirect 301 /reblog/out/ http://www.neme.org/
 # Redirect 301 /sitemap/ http://www.neme.org/
-Redirect 301 /arts_info/ http://news.neme.org/arts_info/
-Redirect 301 /archives/ http://news.neme.org/archives/
-Redirect 301 /archives2005/ http://news.neme.org/archives2005/
-Redirect 301 /archives2006/ http://news.neme.org/archives2006/
-Redirect 301 /archives2007/ http://news.neme.org/archives2007/
-Redirect 301 /archives2008/ http://news.neme.org/archives2008/
-Redirect 301 /archives2009/ http://news.neme.org/archives2009/
-Redirect 301 /archives2010/ http://news.neme.org/archives2010/
-Redirect 301 /archives2011/ http://news.neme.org/archives2011/
-Redirect 301 /archives2012/ http://news.neme.org/archives2012/
-Redirect 301 /archives2013/ http://news.neme.org/archives2013/
-Redirect 301 /archives2014/ http://news.neme.org/archives2014/
-Redirect 301 /archives2015/ http://news.neme.org/archives2015/
-Redirect 301 /archives2016/ http://news.neme.org/archives2016/
-Redirect 301 /calls/ http://news.neme.org/calls/
-Redirect 301 /category/calls http://news.neme.org/calls/
+Redirect 301 /arts_info/ http://www.neme.org/blog/
+Redirect 301 /archives/ http://www.neme.org/blog/
+Redirect 301 /archives2005/ http://www.neme.org/blog/
+Redirect 301 /archives2006/ http://www.neme.org/blog/
+Redirect 301 /archives2007/ http://www.neme.org/blog/
+Redirect 301 /archives2008/ http://www.neme.org/blog/
+Redirect 301 /archives2009/ http://www.neme.org/blog/
+Redirect 301 /archives2010/ http://www.neme.org/blog/
+Redirect 301 /archives2011/ http://www.neme.org/blog/
+Redirect 301 /archives2012/ http://www.neme.org/blog/
+Redirect 301 /archives2013/ http://www.neme.org/blog/
+Redirect 301 /archives2014/ http://www.neme.org/blog/
+Redirect 301 /archives2015/ http://www.neme.org/blog/
+Redirect 301 /archives2016/ http://www.neme.org/blog/
+Redirect 301 /calls/ http://www.neme.org/blog/
+Redirect 301 /category/calls http://www.neme.org/blog/
 Redirect 301 /article/ /texts/
-Redirect 301 /call/ http://news.neme.org/calls/
+Redirect 301 /call/ http://www.neme.org/blog/
 Redirect 301 /category/intransition /events/in-transition-cyprus-2006
 Redirect 301 /category/ideodrome2006 /events/ideodrome-2006
 Redirect 301 /about/about-neme /about/
@@ -179,7 +200,7 @@ RewriteEngine On
 #RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
 #RewriteRule ^(.*)$ http://www.neme.org/kwangjubiennale.html
 
-RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|blog|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
+RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|upload|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* http://127.0.0.1/ [R=301,L]
 
 #RewriteCond %{REMOTE_ADDR} 23\.108\.34\.202
@@ -269,7 +290,7 @@ RewriteRule ^sitemap.xml$  index.php?s=sitemap [L]
 # RewriteRule ^ - [F]
 
 
-# servers protection:
+# This prevents web browsers or spiders from seeing your .htaccess directives:
 
 ServerSignature Off
 Options All -Indexes
@@ -277,8 +298,6 @@ Options All -Indexes
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
-
-# This prevents web browsers or spiders from seeing your .htaccess directives:
 
 <Files .htaccess>
 deny from all
