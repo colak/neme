@@ -369,7 +369,7 @@ height:8em;
 .nosmall{display:none}
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
 .bx-wrapper .bx-pager.bx-default-pager a{background:red;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
-#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_10,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:100%}
+#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#events #content .grid_12,#events #content .grid_18,#events #content .grid_6,#participations #content .grid_18,#participations #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:100%}
 #publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
 #blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:100%;clear:both;}
 #neme #content .grid_6,#publications #content .grid_3,#publications #content .grid_6{width:100%;clear:both;display:block;margin:1.5em auto}
