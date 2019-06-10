@@ -53,13 +53,13 @@ header('content-type: text/html; charset=utf-8');
 
 <link rel="home" href="<txp:site_url />" />
 <txp:if_search>
-<link rel="canonical" href="http://www.neme.org<txp:page_url />" />
+<link rel="canonical" href="<txp:site_url /><txp:page_url />" />
 <txp:else />
 <txp:if_article_list>
 <txp:if_section name="">
-<link rel="canonical" href="http://www.neme.org/" />
+<link rel="canonical" href="<txp:site_url />" />
 <txp:else />
-<link rel="canonical" href="http://www.neme.org/<txp:section />/" />
+<link rel="canonical" href="<txp:site_url /><txp:section />/" />
 </txp:if_section>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
@@ -72,7 +72,7 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:type" content="website" />
 <meta property="og:title" content="<txp:page_title />" />
 <txp:if_description><meta property="og:description" content="<txp:meta_description format="" />" /></txp:if_description>
-<meta property="og:url" content="http://www.neme.org<txp:page_url />" />
+<meta property="og:url" content="<txp:site_url /><txp:page_url />" />
 
 <txp:if_individual_article>
 <meta name="twitter:card" content="summary" />
@@ -83,7 +83,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
-<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
+<meta property="og:image" content="<txp:site_url />images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
@@ -96,14 +96,14 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
-<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
+<meta property="og:image" content="<txp:site_url />images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
 <meta name="twitter:creator" content="@nemeorg" />
-<meta name="twitter:url" content="http://www.neme.org<txp:page_url />" />
+<meta name="twitter:url" content="<txp:site_url /><txp:page_url />" />
 <meta name="twitter:title" content="<txp:page_title />" />
 <meta name="twitter:description" content="<txp:meta_description format="" />" />
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
