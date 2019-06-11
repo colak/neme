@@ -103,7 +103,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
 <meta name="twitter:creator" content="@nemeorg" />
-<meta name="twitter:url" content="<txp:site_url /><txp:page_url />" />
+<meta name="twitter:url" content="http://www.neme.org<txp:page_url />" />
 <meta name="twitter:title" content="<txp:page_title />" />
 <meta name="twitter:description" content="<txp:meta_description format="" />" />
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
