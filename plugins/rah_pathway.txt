@@ -1,0 +1,59 @@
+# Name: rah_pathway v0.1.0
+# Custom article permlinks
+# Author: Jukka Svahn
+# URL: https://github.com/gocom/rah_pathway
+# Recommended load order: 5
+# .....................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the "Install plugin" box:
+# .....................................................................
+
+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
+
+TXP Builders – finely
