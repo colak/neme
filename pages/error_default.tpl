@@ -7,7 +7,9 @@
 		header('content-type: text/html; charset=utf-8');
 	}
 </txp:php>
-<txp:pat_speeder gzip="0"/>
+
+
+<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
 <!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
@@ -31,22 +33,22 @@
 <txp:feed_link flavor="atom" format="link" label="Atom" />
 <txp:feed_link flavor="rss" format="link" label="RSS" />
 
-<txp:rvm_css n="default" format="link" media="all" />
+<txp:css name="default" format="flat.link" media="all" />
 
 <!--[if IE]>
-<txp:rvm_css n="ie-fluid" format="link" />
+<txp:css name="ie-fluid" format="flat.link" />
 <![endif]-->
 
-<txp:rvm_css n="print" format="link" media="print" />
+<txp:css name="print" format="flat.link" media="print" />
 
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
-<txp:spf_js name="jquery1x" />
+<script src="<txp:output_form form="jquery1x.js" context="flat.url" />"></script>
 <![endif]-->
 <!--[if gte IE 9]>
-<txp:spf_js name="jquery" />
+<script src="<txp:output_form form="jquery.js" context="flat.url" />"></script>
 <![endif]-->
 <!--[if !IE]>-->
-<txp:spf_js name="jquery" />
+<script src="<txp:output_form form="jquery.js" context="flat.url" />"></script>
 <!--<![endif]-->
 
 
@@ -131,9 +133,9 @@ menu.removeAttr('style');
 <div id="content">
 <div class="container_24">
 
-<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist. Check that the url is typed correctly. We have noticed that links to our site are often mistyped. Alternatively the url may exist on<br /><a rel="external" href="http://news.neme.org<txp:page_url />">news.neme.org<txp:page_url /></a><txp:else /><txp:error_message /></txp:if_status></h2>
+<h2 class="error-msg"><txp:if_status status="404">The page<br /><strong>neme.org<txp:page_url /></strong><br />does not exist. Check that the url is typed correctly.<txp:else /><txp:error_message /></txp:if_status></h2>
 
-<div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a rel="external" href="http://news.neme.org">news.neme.org</a> subdomain which is now hosting our legacy content.</p></div>
+<div class="announce"><p>Note that since the redesign of our site many urls might return a 404 error. Except from the <a rel="bookmark" href="/texts/">texts</a> all our previously published international arts information and calls have been relocated to our <a href="http://www.neme.org/blog/">blog</a> section which is now hosting our legacy content.</p></div>
 
 </div><!-- end .container_24 -->
 </div>
@@ -148,7 +150,7 @@ menu.removeAttr('style');
 <div id="eucookies" class="noprint"><div class="container_24">
 <p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
 <p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
-</div><div class="clear">&nbsp;</div></div>
+</div></div>
 </txp:oui_if_cookie>
 <!--googleon: all-->
 
