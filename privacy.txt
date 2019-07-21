@@ -75,8 +75,8 @@ h3. 2. Name and Address of the controller
 Controller for the purposes of the General Data Protection Regulation (GDPR), other data protection laws applicable in Member states of the European Union and other provisions related to data protection is:
 
 NeMe
- poBox 50325 3603 
-Limassol
+ poBox 50325 
+3603 Limassol
  Cyprus
 Websites: www.neme.org, forum.neme.org, respublica.neme.org.
 
@@ -160,7 +160,7 @@ The personal data collected as part of a registration for the newsletter will on
 
 h3. 6a. Newsletter-Tracking
 
-The newsletter of NeMe does not contain so-called tracking pixels or any other such technologies and as such no statistical analysis of the success or failure of newsletter campaigns is carried out.
+The newsletter of NeMe does not contain so-called tracking pixels or any other such technologies and as such no statistical analysis of the success or failure of our newsletter campaigns is carried out.
 
 h3. 7. Registering and posting in the NeMe forum
 
@@ -186,7 +186,7 @@ h3. 10. Rights of the data subject
 
 h4. a) Right of confirmation
 
-Each data subject shall have the right granted by the European legislator to obtain from the controller the confirmation as to whether or not personal data concerning him or her are being processed. If a data subject wishes to avail himself of this right of confirmation, he or she may, at any time, contact NeMe.
+Each data subject shall have the right granted by the European legislator to obtain from the controller the confirmation as to whether or not personal data concerning him or her are being processed. If a data subject wishes to avail him/her-self of this right of confirmation, he or she may, at any time, contact NeMe.
 
 h4. b) Right of access
 
