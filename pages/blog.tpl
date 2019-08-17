@@ -236,7 +236,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article_custom status="live" section="blog" c10="x"  form="sticky_form" limit="9999" />
 </txp:evaluate>
-<txp:article limit="10" listform="live_form" form="" />
+<txp:article limit="10" c10="" listform="live_form" form="" />
 
 
 <div class="pagination"><txp:etc_pagination range="5" prev="Previous" next="Next"  wraptag="ul" break="li" /></div>
