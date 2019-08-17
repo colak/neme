@@ -1,4 +1,3 @@
-<txp:if_custom_field name="c10" value="">
 <article class="grid_18"><h3><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h3>
 <txp:excerpt />
 </article>
@@ -11,5 +10,3 @@
 <p><txp:posted wraptag="" format="%d" /> <txp:posted wraptag="" format="%b" /> <txp:posted wraptag="" format="%Y" />, <txp:posted wraptag="" format="%T" /></p>
 </div>
 <div class="clearboth"><hr class="noprint" /></div>
-<txp:else />
-</txp:if_custom_field>
