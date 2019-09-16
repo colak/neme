@@ -249,7 +249,7 @@ header('content-type: text/html; charset=utf-8');
 <article class="grid_18" role="main"><h2><txp:title /></h2><txp:body /></article>
 
 <div class="grid_6 frontthumbs" id="side" role="complementary">
-<div id="meta"><h4>Location</h4><address><p>NeMe Arts Centre<br />
+<div id="meta"><h4>Location<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2044">2044</a></txp:if_logged_in></h4><address><p>NeMe Arts Centre<br />
 Corner of Ellados and Enoseos streets<br />
 Limassol<br />
 Cyprus</p></address>
@@ -281,14 +281,14 @@ Cyprus</p>
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 
-<div class="grid_6 frontthumbs noprint">
+<div class="grid_6 frontthumbs noprint nosmall">
 <h3>Events</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
 <a href="<txp:site_url />events/"><txp:thumbnail /></a>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs noprint">
+<div class="grid_6 frontthumbs noprint nosmall">
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
@@ -296,13 +296,13 @@ Cyprus</p>
 </txp:images>
 </div>
 
-<div class="grid_6 frontthumbs noprint">
+<div class="grid_6 frontthumbs noprint nosmall">
 <h3>Participations</h3>
 
 <txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
 </div>
 	
-<div class="grid_6 frontthumbs noprint">
+<div class="grid_6 frontthumbs noprint nosmall">
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
@@ -335,7 +335,7 @@ Cyprus</p>
 <txp:else />
 <div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
 <div class="grid_18 noprint"><h3>We value your privacy</h3>
-<p>To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to inform you that this website, like most of the websites in the world, works best with <a rel="nofollow" href="/about/cookies">cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We hope that you are happy with that, and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p></div>
+<p>To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to inform you that this website, like most of the websites in the world, works best with <a rel="canonical" href="/about/cookies">cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We hope that you are happy with that, and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p></div>
 <p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
 
 </div><div class="clear">&nbsp;</div></div>
