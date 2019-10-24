@@ -275,10 +275,23 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 
 <div class="grid_6 frontthumbs noprint">
+<h3>Announcements</h3>
+<div class="announce">
+<txp:output_form form="announce" />
+</div>
+<h3>Blog</h3>
+<txp:article_custom section="blog" limit="4" c10="" status="live" break="li" wraptag="ul">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</div>
+
+<div class="grid_6 frontthumbs noprint">
 <txp:article_custom limit="10" section="events,participations" label="Activities" labeltag="h3" break="li" wraptag="ul">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div>
+
+<div class="smallbreak">&nbsp;</div>
 
 <div class="grid_6 frontthumbs noprint">
 <txp:article_custom section="texts" limit="10" sort="rand()" break="li" wraptag="ul" labeltag="h3" label="Texts">
@@ -291,6 +304,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_6 frontthumbs noprint">
 <h3>Forum</h3>
 <ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
+<txp:output_form form="social_logos" />
 </div>
 
 <txp:hide><div class="grid_6 frontthumbs noprint">
@@ -304,19 +318,6 @@ header('content-type: text/html; charset=utf-8');
 
 </div></txp:hide>
 
-	
-<div class="grid_6 frontthumbs noprint">
-<h3>Announcements</h3>
-<div class="announce">
-<txp:output_form form="announce" />
-</div>
-<h3>Blog</h3>
-<txp:article_custom section="blog" limit="4" status="live" break="li" wraptag="ul">
-<txp:permlink><txp:title /></txp:permlink>
-</txp:article_custom>
-<txp:output_form form="social_logos" />
-
-</div>
 <div class="clear">&nbsp;</div>
 </txp:if_search>
 </txp:if_section>
@@ -804,8 +805,12 @@ Cyprus</address></div>
 <li><txp:variable name="sent" />: <a href="<txp:link_url />"><txp:link_name /></a></li>
 </txp:if_variable>
 </txp:linklist>
-<txp:linklist category="expired" sort="id desc" labeltag="h3" label="Past emails" wraptag="ul" break="li"   limit="7">
-<txp:link_description />: <a href="<txp:link_url />"><txp:link_name /></a>
+<txp:linklist category="expired" sort="id desc" labeltag="h3" label="Past emails" wraptag="ul" break="" limit="7">
+<txp:variable name="sent"><txp:link_description /></txp:variable>
+<txp:if_variable name="sent" value="">
+<txp:else />
+<li><txp:link_description />: <a href="<txp:link_url />"><txp:link_name /></a></li>
+</txp:if_variable>
 </txp:linklist>
 <div><txp:output_form form="social_logos" />
 <div class="clear">&nbsp;</div></div>
@@ -980,18 +985,15 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <txp:output_form form="javascripts" />
 <txp:oui_cookie name="accept_cookies" duration="+1 year" values="yes" />
-<!--googleoff: all-->
 <txp:oui_if_cookie name="accept_cookies">
 <txp:output_form form="cookies" />
 <txp:else />
-<div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
-<div class="grid_18 noprint"><h3>We value your privacy</h3>
-<p>To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to inform you that this website, like most of the websites in the world, works best with <a rel="nofollow" href="/about/cookies">cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We hope that you are happy with that, and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p></div>
-<p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
-
-</div><div class="clear">&nbsp;</div></div>
+<div id="eucookies" class="noprint"><div class="container_24">
+<p class="grid_18">To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to alert you that this website, like most of the websites in the world, uses cookies. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in this site. By continuing to use the site, we assume that you are happy with that. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p>
+<p class="grid_6"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
+<div class="clear">&nbsp;</div>
+</div></div>
 </txp:oui_if_cookie>
-<!--googleon: all-->
 
 </body>
 </html>
