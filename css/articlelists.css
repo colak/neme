@@ -1,24 +1,16 @@
-hr {width:100%}
-
-#events h6 a, #participations h6 a {font-size: 14px}
-#texts h6, #events h6, #participations h6 {margin:0;padding:0 0 1.5em 0}
-#about h2 {margin-top:0}
-
-#social{width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;
--moz-box-shadow: 0px 3px 5px #474347;
--webkit-box-shadow: 0px 3px 5px #474347;
-box-shadow: 0px 3px 5px #474347;}
-#social .socialfeed, .fb_iframe_widget iframe {border-radius: 0 0 8px 8px;}
-
-.line {border: none; border-bottom: medium double #eee; color: #eee; text-align: center; margin:0 0 3em 0;} 
+hr{width:100%}
+#events h6 a, #participations h6 a{font-size:14px}
+#texts h6, #events h6, #participations h6{margin:0;padding:0 0 1.5em 0}
+#about h2{margin-top:0}
+#social {width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;-moz-box-shadow:0px 3px 5px #474347;-webkit-box-shadow:0px 3px 5px #474347;box-shadow:0px 3px 5px #474347;}
+#social .socialfeed, .fb_iframe_widget iframe {border-radius:0 0 8px 8px;}
+#blog .sticky {background-color:#ffc; color: #000}
+#blog .sticky a {color:#ba0000;}
+.line {border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em 0;}
 .clear {height:.1em;max-height:.1em;font-size:1pt}
-
-@media screen and (max-width: 960px) {
-.grid_18 {width:100%}
-
+@media screen and (max-width:960px){
+.grid_18{width:100%}
 #participations section .grid_5, #participations section .grid_6, #participations section .grid_13 {width:98%}
 #events section .grid_5, #events section .grid_6, #events section .grid_13 {width:98%}
-
 #blog .grid_6, #blog .grid_18 {width:100%;clear:both;}
-
 }
