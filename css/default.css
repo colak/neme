@@ -186,10 +186,10 @@ box-shadow: 0px 3px 5px #474347;}
 .side li, #side li,.side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
 .line{border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em}
 .line:after{content:"\25CF";display:inline-block;position:relative;top:.8em;font-size:1.5em;padding:0 .25em;background: #000}
-.announce,.announce h3{color:#000;background-color:#ffc}
+.announce,.announce h3 {color:#000;background-color:#ffc}
 .announce hr:after {content:none;}
+.announce{padding:5px;}
 .line h3,.line h4,.line h6{text-align:left}
-.announce{padding:5px}
 #front .announce a,.announce a{color:#BA0000}
 .comSubmit{margin:1em 9em 0 0}
 .comCheckbox{margin-top:1em}
@@ -291,7 +291,7 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
 .rslides li img {border-radius: 0 8px 8px 0;}
-#eucookies {display:block;width:100%;margin:0 0 -25px 0;-moz-box-shadow: 0 -3px 5px #bbb;-webkit-box-shadow: 0px -3px 5px #bbb;box-shadow: 0px -3px 5px #bbb;}
+#eucookies {display:block;width:100%;margin:0 0 -25px 0;-moz-box-shadow: 0 -3px 5px #bbb;-webkit-box-shadow: 0px -3px 5px #bbb;box-shadow: 0px -3px 5px #bbb;background-color:#000;color:#fff}
 #eucookies h3 {margin:0;padding:0}
 #eucookies p {font-size:1.1em;}
 #eucookies a {color:#cc0000}
@@ -312,6 +312,7 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 .tooltip:hover .tooltiptext {visibility: visible;}
 .sticky {background-color:#333;padding:0 0 1em 1em}
 .required {color:#cc0000}
+.smallbreak {display:none;}
 
 @media screen and (max-width:1030px){
 .large {visibility:hidden;display:none;}
@@ -345,7 +346,7 @@ column-width: 120px;
 -moz-column-gap: 10px;
 column-gap: 10px;
 }
-
+.smallbreak {display:block;clear:both}
 .eu {display:block;background-color:#fff; color:#000;padding:1em 0; clear:both;
 min-height:8em;
 height:auto !important;
