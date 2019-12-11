@@ -148,7 +148,6 @@ ol,p,ul{margin:0 0 1em}
 a{color:#ff0000}
 a:visited{color:#ec7063 }
 #header h2,h1{font-size:3em;text-align:left;line-height:100%;color:#191919}
-h2{padding:1em 0}
 p, ol, ul{text-align:left;widows: 3; orphans: 2;}
 ol,ul{list-style-position:inside!important;padding:0}
 blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em}
