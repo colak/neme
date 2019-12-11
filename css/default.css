@@ -19,7 +19,7 @@ ol{list-style:decimal}
 ul{list-style:disc}
 li{margin-left:30px}
 address,dl,fieldset,h1,ol,p,pre,table,ul{margin-bottom:20px}
-h2,h3,h4,h5,h6 {margin: 1em 0 0 0}
+h2,h3,h4,h5,h6 {margin: 0 0 1em 0}
 hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
 hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350t.jpg) #191919}
 
