@@ -80,7 +80,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:creator" content="@nemeorg" />
 <meta name="twitter:url" content="<txp:permlink />" />
 <meta name="twitter:title" content="<txp:page_title />" />
-<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:smd_wrap_all transform="strip_tags"><txp:excerpt /></txp:smd_wrap_all></txp:if_description>" />
+<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
 <meta property="og:image" content="<txp:site_url />images/1087.jpg" />
