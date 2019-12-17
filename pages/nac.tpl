@@ -53,7 +53,7 @@ header('content-type: text/html; charset=utf-8');
 
 <link rel="home" href="<txp:site_url />" />
 <txp:if_search>
-<link rel="canonical" href="http://www.neme.org<txp:page_url />" />
+<link rel="canonical" href="http://www.neme.org<txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
 <txp:if_section name="">
