@@ -18,7 +18,7 @@ h6{font-size:15px}
 ol{list-style:decimal}
 ul{list-style:disc}
 li{margin-left:30px}
-address,dl,fieldset,h1,ol,p,pre,table,ul{margin-bottom:20px}
+address,dl,fieldset,h1,ol,p,pre,table,ul{margin-bottom:1em}
 h2,h3,h4,h5,h6 {margin: 1em 0 0 0}
 hr{width:80%;padding:0;margin:2em auto 0;border:none;border-top:1px solid #eee;color:#eee}
 hr:after{content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.4em;padding:0 .25em;background:url(/images/350t.jpg) #191919}
@@ -139,6 +139,7 @@ code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 .grid_sub_23{width:95.75%}
 .container_24 .grid_sub_24{width:100%}
 ol,p,ul{margin:0 0 1em}
+li ul, li ol {margin:0}
 .clear{clear:both;display:block;visibility:hidden;width:0;height:0}
 .printonly {display:none;}
 #footer,#header,#nav,figure img{width:100%}
