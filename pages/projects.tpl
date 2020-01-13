@@ -191,7 +191,7 @@ header('content-type: text/html; charset=utf-8');
 <h1><txp:category1 title="1" />: <txp:page_title /></h1>
 </txp:if_variable>
 
-<!--googleoff: all--><p class="printonly">www.neme.org<txp:page_url /></p><!--googleon: all-->
+<!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
