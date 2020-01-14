@@ -1,3 +1,4 @@
+<txp:zem_redirect />
 <txp:if_logged_in>
 <txp:php>
 if (isset($_POST['submit'])) {
@@ -175,9 +176,9 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_2 logo nosmall">
 <txp:hide>jpg logo<txp:image id="792" /></txp:hide>
 <txp:if_section name="">
-<img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" />
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" />
 <txp:else />
-<a href="<txp:site_url />" rel="home"><img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
+<a href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
 <small>Est. 2004</small>
 </txp:if_section>
 </div>
@@ -196,9 +197,9 @@ header('content-type: text/html; charset=utf-8');
 
 </div><!-- end .container_24 --></div>
 <div class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="/themes/neme960/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
 <div id="content"><div class="container_24">
 
@@ -267,7 +268,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom status section="projects" c10="x" form="" limit="999">
 <txp:if_article_category>
 <article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h6></div>
+<div class="grid_6"><h6><strong><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></strong></h6></div>
 
 <txp:else />
 
@@ -281,7 +282,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field></div>
 <div class="clearboth"><hr class="noprint" /></div></article>
 </txp:article_custom>
-<p class="centre">Also see: <a href=/projects/hosted/>Hosted Projects</a> | <a href=/projects/participations/>Participations in other projects</a>
+<p class="centre">Also see:</p>
+<p class="grid_12 centre"><strong class="announce grid_24"><a href=/projects/hosted/>Hosted Projects</a></strong></p>
+<p class="grid_12 centre"><strong class="announce grid_24"><a href=/projects/participations/>Participations in other projects</a></strong></p>
 </section>
 
 </txp:if_category>
@@ -370,7 +373,7 @@ header('content-type: text/html; charset=utf-8');
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
