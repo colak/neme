@@ -1,4 +1,3 @@
-<txp:zem_redirect />
 <txp:if_logged_in>
 <txp:php>
 if (isset($_POST['submit'])) {
@@ -252,7 +251,10 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_article_category number="2">
 &hellip; / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> 
 </txp:if_article_category></p></txp:article_custom>
-<txp:article limit="999" match="Category1=2, Category2=3" form="list_cat_projects" c10="y" />
+<txp:article limit="999" match="Category1=2, Category2=3" listform="list_cat2_projects" c10="y" />
+
+
+
 </txp:if_variable>
 
 <txp:else />
@@ -268,7 +270,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom status section="projects" c10="x" form="" limit="999">
 <txp:if_article_category>
 <article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><strong><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></strong></h6></div>
+<div class="grid_6"><h6><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h6></div>
 
 <txp:else />
 
