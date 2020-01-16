@@ -182,8 +182,6 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_section>
 </div>
 
-<txp:hide><txp:article_custom limit="1" status listform="" form="">
-<txp:if_article_category number="2"><txp:category1 title="1" />: </txp:if_article_category></txp:article_custom></txp:hide>
 <txp:variable name="categ2" value='<txp:page_url type="3" />' />
 <txp:if_variable name="categ2" value="">
 <h1><txp:page_title /></h1>
@@ -244,36 +242,25 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_variable name="cat2" value="">
 <txp:article status limit="30" listform="list_cat2_projects" form="" c10="" />
 <txp:else />
-
 <txp:hide>==================-Category 2-======================</txp:hide>
-
 <txp:article_custom limit="1" status listform="" form=""><p class="centre">
 <txp:if_article_category number="2">
 &hellip; / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> 
 </txp:if_article_category></p></txp:article_custom>
-<txp:article limit="999" match="Category1=2, Category2=3" listform="list_cat2_projects" c10="y" />
-
-
-
+<txp:article limit="999" match="Category1=2, Category2=3" form="list_cat_projects" c10="y" />
 </txp:if_variable>
-
 <txp:else />
-
 <txp:hide>==================-section landing page-======================</txp:hide>
-
 <section><div class="line nosmall">
 <div class="grid_5 nosmall"><p>Dates</p></div>
 <div class="grid_6 nosmall"><p>Title</p></div>
 <div class="grid_13 nosmall"><p>Venue</p></div>
 <div class="clear nosmall noprint">&nbsp;</div></div>
-
 <txp:article_custom status section="projects" c10="x" form="" limit="999">
 <txp:if_article_category>
 <article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
 <div class="grid_6"><h6><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h6></div>
-
 <txp:else />
-
 <article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
 <div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
 </txp:if_article_category>
@@ -284,11 +271,8 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field></div>
 <div class="clearboth"><hr class="noprint" /></div></article>
 </txp:article_custom>
-<p class="centre">Also see:</p>
-<p class="grid_12 centre"><strong class="announce grid_24"><a href=/projects/hosted/>Hosted Projects</a></strong></p>
-<p class="grid_12 centre"><strong class="announce grid_24"><a href=/projects/participations/>Participations in other projects</a></strong></p>
+<p class="centre">Also see: <a href=/projects/hosted/>Hosted Projects</a> | <a href=/projects/participations/>Participations in other projects</a>
 </section>
-
 </txp:if_category>
 </txp:if_search>
 </txp:if_section>
