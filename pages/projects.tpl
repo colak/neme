@@ -248,7 +248,10 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field></div>
 <div class="clearboth"><hr class="noprint" /></div></article>
 </txp:article_custom>
-<p class="centre">Also see: <a href=/projects/hosted/>Hosted Projects</a> | <a href=/projects/participations/>Participations in other projects</a>
+<p class="centre">Also see:</p>
+<div class="grid_12"><span class="announce"><a class="centre" href=/projects/hosted/>Hosted Projects</a></span></div>
+<div class="grid_12"><span class="announce"><a class="centre" href=/projects/participations/>Participations in other projects</a></span></div>
+<div class="clear">&nbsp;</div>
 </section>
 </txp:if_category>
 </txp:if_search>
@@ -270,7 +273,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main" id="main">
-<h1><txp:page_title /></h1>
+<h1><txp:title /></h1>
 <txp:body />
 </article>
 
@@ -289,9 +292,11 @@ header('content-type: text/html; charset=utf-8');
 </div>
 
 <h3>Announcements</h3>
-<div class="announce">
+
 <txp:output_form form="announce" />
-</div>
+
+
+<div class="clear">&nbsp;</div>
 <txp:output_form form="social_logos" />
 
 
