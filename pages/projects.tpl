@@ -58,11 +58,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
-<txp:else />
-<link rel="canonical" href="h<txp:site_url /><txp:section />/" />
-</txp:if_section>
+<link rel="canonical" href="h<txp:site_url trim="/" /><txp:page_url />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -137,16 +133,6 @@ header('content-type: text/html; charset=utf-8');
 <meta name="theme-color" content="#ffffff" />
 
 
-
-<txp:hide>
-<!-- the google js is no longer working --> 
-<txp:if_section name="publications">
-<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
-</txp:if_section>
-<!-- support for battleforthenet.com -->
-<script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
-</txp:hide>
-
 </head>
 
 <txp:hide>==================-body-======================</txp:hide>
@@ -185,6 +171,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-projects-======================</txp:hide>
 
 <txp:if_section name="projects">
+
 <txp:hide>==================-search-======================</txp:hide>
 <txp:if_search>
 <txp:article pgonly="1" searchall="1" searchsticky="0" />
@@ -211,7 +198,6 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div></div>
 
-<txp:variable name="cats1" value='<txp:category1 />' /> 
 <txp:variable name="cat1" value='<txp:page_url type="2" />' /> 
 <txp:variable name="cat2" value='<txp:page_url type="3" />' />
 
@@ -219,16 +205,17 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_category>
 <txp:if_variable name="cat2" value="">
-<div class="24 noprint">
+<div class="grid_24 noprint">
 <txp:article status limit="1" listform="" form="" c10="">
 <p class="aright">&hellip; / <txp:section link="1" /> / <txp:category1 /> /</p>
 <div class="clearboth noprint"><hr class="noprint" /></div>
 </txp:article>
 <txp:article status limit="30" listform="list_cat2_projects" form="" c10="" />
+</div>
 <txp:else />
 
 <txp:hide>==================-Category 2-======================</txp:hide>
-<div class="24 noprint">
+<div class="grid_24 noprint">
 <txp:article limit="1" listform="" match="Category1=2, Category2=3" form="" c10="y">
 <p class="aright">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
 </div>
