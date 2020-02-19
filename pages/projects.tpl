@@ -1,4 +1,3 @@
-<txp:if_logged_in>
 <txp:php>
 if (isset($_POST['submit'])) {
 $url = $_POST['site'].$_POST['terms'];
@@ -144,18 +143,19 @@ header('content-type: text/html; charset=utf-8');
 
 <div id="accessibility">
 <ul>
-<li><a href="#menu"><txp:text item="go_menu" /></a></li>
-<li><a href="#content"><txp:text item="go_content" /></a></li>
-<li><a href="#footer"><txp:text item="go_search" /></a></li>
+<li><a href="#menu">go to menu</a></li>
+<li><a href="#content">go to content</a></li>
+<li><a href="#footer">go to search</a></li>
 </ul>
 </div>
 
 <txp:hide>==================-menu-======================</txp:hide>
 
+<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-header-======================</txp:hide>
-
+<txp:hide>==================-social-======================</txp:hide>
 
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
@@ -175,7 +175,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-search-======================</txp:hide>
 <txp:if_search>
 <txp:article pgonly="1" searchall="1" searchsticky="0" />
-<txp:if_search_results>
+<txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
 <hr />
 <txp:else />
@@ -194,7 +194,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class=" grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="6" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -207,47 +207,60 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_variable name="cat2" value="">
 <div class="grid_24 noprint">
 <txp:article status limit="1" listform="" form="" c10="">
-<p class="aright">&hellip; / <txp:section link="1" /> / <txp:category1 /> /</p>
-<div class="clearboth noprint"><hr class="noprint" /></div>
+<div class="grid_24 aright">
+<p aria-label="Breadcrumb" class="aright breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p></div>
+<div class="clear">&nbsp;></div>
 </txp:article>
-<txp:article status limit="30" listform="list_cat2_projects" form="" c10="" />
+<main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
+<txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
+</main>
 </div>
 <txp:else />
 
 <txp:hide>==================-Category 2-======================</txp:hide>
 <div class="grid_24 noprint">
 <txp:article limit="1" listform="" match="Category1=2, Category2=3" form="" c10="y">
-<p class="aright">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
+<p aria-label="Breadcrumb" class="aright">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
 </div>
-<div class="clearboth noprint"><hr class="noprint" /></div>
+<div class="clear">&nbsp;</div>
 </txp:article>
+<main aria-label="main content"" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:article limit="999" listform="list_cat_projects" match="Category1=2, Category2=3" form="" c10="y" />
+</main>
 </txp:if_variable>
 
 <txp:else />
 <txp:hide>==================-section landing page-======================</txp:hide>
-<section><div class="line nosmall">
+<main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage"><div class="line nosmall">
 <div class="grid_5 nosmall"><p>Dates</p></div>
 <div class="grid_6 nosmall"><p>Title</p></div>
 <div class="grid_13 nosmall"><p>Venue</p></div>
 <div class="clear nosmall noprint">&nbsp;</div></div>
+
 <txp:article_custom status section="projects" c10="x" form="" limit="999">
 <txp:if_article_category>
-<article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h5><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h5></div>
-<txp:else />
-<article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
-</txp:if_article_category>
+<article class="preg">
+<div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
+<div class="grid_6"><h6><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h6></div>
 <div class="grid_13"><txp:if_custom_field name="venues">
 <p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
 <txp:else />
 <p><txp:custom_field name="venue" escape="" /></p>
 </txp:if_custom_field></div>
-<div class="clearboth"><hr class="noprint" /></div></article>
+<div class="clear">&nbsp;</div></article>
+<txp:else />
+<article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
+<div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<div class="grid_13"><txp:if_custom_field name="venues">
+<p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
+<txp:else />
+<p><txp:custom_field name="venue" escape="" /></p>
+</txp:if_custom_field></div>
+<div class="clear">&nbsp;</div></article>
+</txp:if_article_category>
 </txp:article_custom>
 <p class="centre announce">Also see:<br />[&nbsp;<a href=/projects/hosted/>Hosted Projects</a>&nbsp;] [&nbsp;<a href=/projects/participations/>Participations in other projects</a>&nbsp;]</p><div class="clear">&nbsp;</div>
-</section>
+</main> 
 </txp:if_category>
 </txp:if_search>
 </txp:if_section>
@@ -269,6 +282,7 @@ header('content-type: text/html; charset=utf-8');
 
 <article class="grid_18" role="main" id="main">
 <h1><txp:title /></h1>
+<!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
 <txp:body />
 </article>
 
@@ -282,7 +296,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field>
 <h5>Dates</h5>
 <p><txp:custom_field name="dates" escape="" /></p>
-<p>&hellip; / <txp:section link="1" /> /
+<p role="navigation" aria-label="breadcrumbs">&hellip; / <txp:section link="1" /> /
 <txp:if_article_category number="1"><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / </txp:if_article_category number="2"><txp:if_article_category number="2"><a href="/<txp:section />/<txp:category1 />/<txp:category2 />/"><txp:category2 /></a> / </txp:if_article_category></p>
 </div>
 
@@ -346,4 +360,3 @@ header('content-type: text/html; charset=utf-8');
 
 </body>
 </html>
-</txp:if_logged_in>
