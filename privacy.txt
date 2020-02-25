@@ -113,7 +113,7 @@ NeMe also uses a session cookie to keep you logged into the forum during your vi
 
 Third party cookies are used in this website from Facebook, Twitter, Google, SoundCloud, Mixcloud, Youtube, and Vimeo but none of these are loaded without the data-subject's consent. 
 
-A list of cookies served by our websites can be found on <a rel="nofollow" href="http://www.neme.org/about/cookies">www.neme.org/about/cookies</a>.
+A list of cookies served by our websites can be found on ==<a rel="nofollow" href="<txp:permlink id=2181 />"><txp:permlink id=2181 /></a>==.
 
 h3. 5. Collection of general data and information
 
