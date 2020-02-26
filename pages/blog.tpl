@@ -9,7 +9,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 
-<txp:if_logged_in not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 <!doctype html>
 
 <!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
@@ -49,13 +49,13 @@ header('content-type: text/html; charset=utf-8');
 
 <link rel="home" href="<txp:site_url />" />
 <txp:if_search>
-<link rel="canonical" href="http://www.neme.org<txp:page_url escape="" />" />
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
 <txp:if_section name="">
-<link rel="canonical" href="http://www.neme.org/" />
+<link rel="canonical" href="<txp:site_url />" />
 <txp:else />
-<link rel="canonical" href="http://www.neme.org<txp:page_url />" />
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
 </txp:if_section>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
@@ -70,7 +70,7 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:type" content="website" />
 <meta property="og:title" content="<txp:page_title />" />
 <txp:if_description><meta property="og:description" content="<txp:meta_description format="" />" /></txp:if_description>
-<meta property="og:url" content="http://www.neme.org<txp:page_url />" />
+<meta property="og:url" content="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 
 <txp:if_individual_article>
 <meta name="twitter:card" content="summary" />
@@ -81,7 +81,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>" />
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
-<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
+<meta property="og:image" content="<txp:site_url />images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
@@ -94,14 +94,14 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
-<meta property="og:image" content="http://www.neme.org/images/1087.jpg" />
+<meta property="og:image" content="<txp:site_url />images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nemeorg" />
 <meta name="twitter:creator" content="@nemeorg" />
-<meta name="twitter:url" content="http://www.neme.org<txp:page_url />" />
+<meta name="twitter:url" content="<txp:site_url trim="/" /><txp:page_url />" />
 <meta name="twitter:title" content="<txp:page_title />" />
 <meta name="twitter:description" content="<txp:meta_description format="" />" />
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>" />
@@ -143,71 +143,24 @@ header('content-type: text/html; charset=utf-8');
 
 <div id="accessibility">
 <ul>
-<li><a href="#menu"><txp:text item="go_menu" /></a></li>
-<li><a href="#content"><txp:text item="go_content" /></a></li>
-<li><a href="#footer"><txp:text item="go_search" /></a></li>
+<li><a href="#menu">go to menu</a></li>
+<li><a href="#content">go to content</a></li>
+<li><a href="#footer">go to search</a></li>
 </ul>
 </div>
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<div id="nav"><div class="container_24">
-<div class="grid_24" id="menu">
-<nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope"  class="menu" id="menu-primary">
-<div class="menu-container">
-<div id="menu-toggle-primary">
-<a class="open-menu-primary" href="#menu-primary"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Menu</span></a>
-<a class="close-menu-primary" href="#"><span itemprop="image" class="screen-reader-text"><txp:image id="792" class="grid_2" /> Close menu</span></a>
-</div><!-- .menu-toggle -->
-<div class="wrap">
-<ul class="menu-items" id="menu-primary-items">
-<li><a href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
-<li><a href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
-<li><a title="NeMe Arts Centre" href="<txp:site_url />nac/"<txp:if_section name="nac"> class="active"</txp:if_section> rel="bookmark">NAC</a></li>
-<li><a href="<txp:site_url />events/"<txp:if_section name="events"> class="active"</txp:if_section> rel="section">Events</a></li>
-<li><a href="<txp:site_url />participations/"<txp:if_section name="participations"> class="active"</txp:if_section> rel="section">Participations</a></li>
-<li><a href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
-<li><a href="<txp:site_url />workshops/"<txp:if_section name="workshops"> class="active"</txp:if_section> rel="bookmark">Workshops</a></li>
-<li><a href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="section">Texts</a></li>
-<li><a href="<txp:site_url />blog/"<txp:if_section name="blog"> class="active"</txp:if_section>>Blog</a></li>
-<li><a href="<txp:site_url />newsletter/"<txp:if_section name="newsletter"> class="active"</txp:if_section> rel="nofollow">Newsletter</a></li>
-<li><a href="<txp:site_url />contact/"<txp:if_section name="contact"> class="active"</txp:if_section> rel="nofollow">Contact</a></li>
-<li class="nosmall">&nbsp;&nbsp;</li>
-<li><a href="http://forum.neme.org/" rel="external">Forum</a></li>
-<li><a href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li>
-</ul>
-</div>
-</div>
-</nav>
-</div>
+<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
 
-<div class="clear">&nbsp;</div>
+<txp:output_form form="colak_menu" />
 
-</div><!-- end .container_24 --></div>
+<txp:hide>==================-social-======================</txp:hide>
 
-<txp:hide>==================-header-======================</txp:hide>
-
-<div id="header"><div class="container_24">
-
-<div class="grid_2 logo nosmall">
-<txp:hide>jpg logo<txp:image id="792" /></txp:hide>
-<txp:if_section name="">
-<img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" />
-<txp:else />
-<a href="<txp:site_url />" rel="home"><img src="/themes/neme960/forms/svg/neme.svg" alt="NeMe logo" width="70" height="70" /></a>
-<small>Est. 2004</small>
-</txp:if_section>
-</div>
-
-<h1><txp:page_title /></h1>
-<!--googleoff: all--><p class="printonly">www.neme.org<txp:page_url /></p><!--googleon: all-->
-<div class="clear">&nbsp;</div>
-
-</div><!-- end .container_24 --></div>
 <div class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="/themes/neme960/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="/themes/neme960/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=http://www.neme.org<txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="/themes/neme960/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
 <div id="content"><div class="container_24">
 
@@ -233,57 +186,72 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_search_results>
 <txp:article limit="10" searchall="1" />
 <txp:else />
+<main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
-<txp:article_custom status="live" section="blog" c10="x" form="sticky_form" limit="9999" />
+<txp:article_custom status="live" section="blog" c10="x" form="sticky_form" limit="30" />
 </txp:evaluate>
 <txp:article limit="10" c10="" listform="live_form" form="" />
+</main>
 
-
-<div class="pagination"><txp:etc_pagination range="5" prev="Previous" next="Next"  wraptag="ul" break="li" /></div>
-<txp:hide>
-<txp:evaluate test="older, newer" wraptag="nav" class="centre">
-<txp:older wraptag="span">Older</txp:older>
-<span><txp:page_url type="pg" />/<txp:php>
-global $thispage;
-echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
-</txp:php> pages</span>
-<txp:newer wraptag="span">Newer</txp:newer>
+<div class="clear">&nbsp;</div>
+<txp:evaluate test="3,7,5">
+<nav aria-label="page nav" class="pagination">
+<ul>
+<txp:newer showalways break="li"><span aria-label="Go to previous page">&#x2962;</span></txp:newer>
+<txp:newer shift break="li"><span aria-label="Go to first page"><txp:yield item="page" /></span></txp:newer>
+<txp:newer shift="5-3" limit="1" break="li"><span role="separator" aria-label="More pages">&hellip;</span></txp:newer>
+<txp:newer total shift="2" break="li"><span aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:newer>
+<txp:pages shift="0" break="li"><span aria-label="You are on page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:pages>
+<txp:older total shift="2" break="li"><span aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:older>
+<txp:older shift="5-3" limit="1" break="li"><span role="separator" aria-label="More pages">&hellip;</span></txp:older>
+<txp:older shift break="li"><span aria-label="Go to last page"><txp:yield item="page" /></span></txp:older>
+<txp:older showalways break="li"><span aria-label="Go to next page">&#x2964;</span></txp:older>
+</ul>
+</nav>
 </txp:evaluate>
-</txp:hide>
+
+
 </txp:if_search>
 </txp:if_article_list>
 
-<txp:hide>==================-individual articles-======================</txp:hide>
+<txp:hide>==================-individual blog-======================</txp:hide>
 
 <txp:if_individual_article>
 
-
-<txp:hide>==================-individual blog-======================</txp:hide>
-
 <txp:article status="live" form="">
-<div class="grid_18" role="main" id="main">
+<div class="grid_18" id="main">
+<main aria-label="main content" itemscope itemtype="https://schema.org/Blog">
 <txp:if_custom_field name="img2"><txp:image id='<txp:custom_field name="img2" />' class="grid_8" /><txp:else />
 <txp:if_custom_field name="img_main"><txp:image id='<txp:custom_field name="img_main" />' class="grid_24 alpha omega" /><div class="clear">&nbsp;</div></txp:if_custom_field>
 </txp:if_custom_field>
-<article><txp:body /></article>
 
-<div class="clearboth"><hr class="noprint" /></div>
+<article>
+<h1><txp:title /></h1>
+<!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
+<txp:body /></article>
+</txp:article>
+</main>
+<txp:article section="blog" status="live" c10="">
+<div class="clear">&nbsp;</div>
+<nav class="paginator" aria-label="page_nav">
 <txp:variable name="prev1" value='<txp:link_to_prev />' />
 <txp:if_variable name="prev1" value="">
-<div class="prev grid_12">&nbsp;</div>
+<div class="prev">&nbsp;</div>
 <txp:else />
-<div class="prev grid_12">&#8612; <txp:link_to_prev><txp:prev_title /></txp:link_to_prev></div>
+<div class="prev noprint"><txp:link_to_prev>&#8666; <txp:title /></txp:link_to_prev></div>
 </txp:if_variable>
 <txp:variable name="next1" value='<txp:link_to_next />' />
 <txp:if_variable name="next1" value="">
-<div class="prev grid_12">&nbsp;</div>
+<div class="prev" noprint>&nbsp;</div>
 <txp:else />
-<div class="next grid_12 aright"><txp:link_to_next><txp:next_title /></txp:link_to_next> &#8614;</div>
+<div class="next aright noprint"><txp:link_to_next><txp:title /> &#8667;</txp:link_to_next></div>
 </txp:if_variable>
+</nav>
+</txp:article>
 <div class="clear">&nbsp;</div>
 
 </div>
-
+<txp:article form="">
 <div class="grid_6" id="side" role="complementary">
 <div id="meta">
 <txp:if_custom_field name="venue">
@@ -293,7 +261,7 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p>
 </txp:if_custom_field>
 <txp:else />
-<p><a href="http://www.neme.org" rel="home">NeMe project</a></p>
+<p><a href="<txp:site_url />" rel="home">NeMe project</a></p>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="type" value="call"><h3>Deadline</h3><txp:custom_field name="Dates" /></txp:if_custom_field>
@@ -301,16 +269,16 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 <txp:if_custom_field name="type" value="info"><h5>Date(s)</h5><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:else />
 </txp:if_custom_field>
-<h5>Posted<txp:if_logged_in> <a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
+<h5>Posted</h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
 </div>
-
+</txp:article>
 <h3>Announcements</h3>
-<div class="announce">
+
 <txp:output_form form="announce" />
-</div>
+
 <txp:output_form form="social_logos" />
 
 <div>
@@ -320,32 +288,20 @@ echo empty($thispage['numPages']) ? "None" : $thispage['numPages'];
 </txp:article_custom>
 </div></div>
 
-</txp:article>
+
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
 <div class="grid_23 nosmall">&nbsp;</div>
-<div class="grid_1 nosmall"><a href="#landing"><img src="/themes/neme960/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
+<div class="grid_1 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
 <div class="clear">&nbsp;</div>
 </div>
 </div><!-- end .container_24 -->
+
 <txp:output_form form="colak_foot" />
-
-<txp:output_form form="javascripts" />
-<txp:oui_cookie name="accept_cookies" duration="+1 year" values="yes" />
-<!--googleoff: all-->
-<txp:oui_if_cookie name="accept_cookies">
 <txp:output_form form="cookies" />
-<txp:else />
-<div id="eucookies" class="noprint cookies"><div class="container_24 noprint">
-<div class="grid_18 noprint"><h3>We value your privacy</h3>
-<p>To make sure that this website remains accessible in the European Union, we are forced to include this annoying notice so as to inform you that this website, like most of the websites in the world, works best with <a rel="canonical" href="/about/cookies">cookies</a>. We do not profile you or use the data for any commercial purposes except to study ways to enhance user experience in ours sites. We hope that you are happy with that, and that you will help us continue this research by <a rel="nofollow" href="?accept_cookies=yes">accepting our cookies</a> but, unlike with other websites,  surfing our site in privacy is still possible should you decide not to. You can find out more about our use of cookies by reading our <a rel="nofollow" href="http://www.neme.org/about/privacy-policy">privacy policy</a>.</p></div>
-<p class="grid_6 noprint"><a rel="nofollow" href="?accept_cookies=yes">Accept</a></p>
-
-</div><div class="clear">&nbsp;</div></div>
-</txp:oui_if_cookie>
-<!--googleon: all-->
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
