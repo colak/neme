@@ -1,4 +1,4 @@
-<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall">
+<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
 <input type="hidden" value="any" name="m" />
@@ -8,9 +8,9 @@
 // simple way to auto-generate <options>
 $sites = array(
 // site title => url/?q=
-'NeMe' => 'http://www.neme.org/?m=any&amp;q=',
-'News' => 'http://news.neme.org/?m=any&amp;q=',
-'Forum' => 'http://forum.neme.org/search.php?action=search&amp;keywords=',
+'NeMe' => '<txp:site_url />?m=any&amp;q=',
+'Respublika' => 'http://respublika.neme.org/?m=any&amp;q=',
+'Forum' => '<txp:site_url />search.php?action=search&amp;keywords=',
 );
 // asort($sites);
 foreach ($sites as $title => $url) {
@@ -20,9 +20,10 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 </txp:php>
 </select>
 </label>
-<label for="terms">Terms
-<input id="terms" name="terms" type="text" value="<txp:page_url type="q" />"/>
-</label>
+
+<label class="accessibility hidden" for="terms" aria-hidden="false">Search</label>
+<input id="terms" name="terms" type="text" value="<txp:page_url type="q" />" itemprop="query-input" placeholder="Search"/>
+
 
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
@@ -31,12 +32,16 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <p><txp:if_article_list>
 
 <txp:if_section name="nac">
-&copy; 2014-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a>.
+&copy; 2014-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.
 <txp:else />
-<txp:if_section name="events,participations,texts">
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a> and/or respective contributors.
+<txp:if_section name="about,projects,texts">
+&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 <txp:else />
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a>.
+<txp:if_section name="blog">
+2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.
+<txp:else />
+&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.
+</txp:if_section>
 </txp:if_section>
 </txp:if_section>
 <txp:else />
@@ -47,23 +52,26 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <txp:variable name="textauthor"><txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag=""><span itemscope itemtype="http://schema.org/Text"><span itemprop="author"><txp:link_name /></span></span></txp:linklist></txp:variable>
 
 <txp:if_variable name="year" value='<txp:posted format="%Y" />'>
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a> &bull; Text &copy; <txp:variable name="year" /> <txp:variable name="textauthor" />
+&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> &bull; Text &copy; <txp:variable name="year" /> <txp:variable name="textauthor" />
 <txp:else />
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="http://www.neme.org">NeMe</a> &bull; Text &copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <txp:variable name="textauthor" />
+&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> &bull; Text &copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <txp:variable name="textauthor" />
 </txp:if_variable>
 
 <txp:else />
 
 <txp:if_variable name="year" value='<txp:posted format="%Y" />'>
-&copy; <txp:variable name="year" /> <a href="http://www.neme.org">NeMe</a> and/or respective contributors.
+&copy; <txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 <txp:else />
-&copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <a href="http://www.neme.org">NeMe</a> and/or respective contributors.
+&copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 </txp:if_variable>
 
 </txp:if_article_section>
+
+<txp:if_article_section name="blog">
+2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.
+
+
+</txp:if_article_section>
+
 </txp:if_article_list></p>
-
-
-<txp:hide><a href="https://twitter.com/share" class="twitter-share-button" data-via="NeMeOrg" data-size="large" data-hashtags="arts">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></txp:hide>
-<script defer src="http://www.neme.org/js/default.js"></script>
+<txp:hide><script src="<txp:page_url type="theme_path" />/forms/javascripts/main.js"></script></txp:hide>
