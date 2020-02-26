@@ -1,2 +1,6 @@
 */ slider */
 .bx-wrapper {*zoom: 1;} .bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {*zoom: 1; *display: inline;}
+
+#nav a {color:#ba0000;}
+
+#footer {filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#424242', endColorstr='#dddddd', gradientType=0);}
