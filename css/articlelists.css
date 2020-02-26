@@ -1,16 +1,29 @@
 hr{width:100%}
-#events h6 a, #participations h6 a{font-size:14px}
-#texts h6, #events h6, #participations h6{margin:0;padding:0 0 1.5em 0}
+#projects h6 a, #participations h6 a{font-size:14px}
+#texts h6, #projects h6, #participations h6{margin:0;padding:0 0 1.5em 0}
 #about h2{margin-top:0}
-#social {width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;-moz-box-shadow:0px 3px 5px #474347;-webkit-box-shadow:0px 3px 5px #474347;box-shadow:0px 3px 5px #474347;}
+#social1 {width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;-moz-box-shadow:0px 3px 5px #474347;-webkit-box-shadow:0px 3px 5px #474347;box-shadow:0px 3px 5px #474347;}
+
 #social .socialfeed, .fb_iframe_widget iframe {border-radius:0 0 8px 8px;}
+#related-links #social {background-color:#000;width:100%;}
 #blog .sticky {background-color:#ffc; color: #000}
 #blog .sticky a {color:#ba0000;}
-.line {border:none;border-bottom:medium double #eee;color:#eee;text-align:center;margin:0 0 3em 0;}
+.line {border:none;border-bottom:1px solid #eee;color:#eee;text-align:center;margin:0 0 .8em 0;}
 .clear {height:.1em;max-height:.1em;font-size:1pt}
+.preg {display:block;background-color: #282828;}
+#projects article, #texts article, #blog article {border-bottom: 1px solid #fff;display:block;padding-top:1.5em}
+#blog article.sticky {border-bottom: 4px solid #000;display:block;padding-top:1.5em}
+#texts article.about {border-bottom: none}
+
+.pagination {float:right;position:relative;left:-50%;text-align:left;}
+.pagination ul{list-style:none;position:relative;left:50%;}
+.pagination li{float:left;position:relative;text-align:center;background-color:#ddd;margin:.2em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.pagination li span {color: #000;font-size:1em;font-weight: bold;}
+.pagination li a span {color: #ba0000;font-size:1.2em;font-weight: normal;padding:.5em .5em 0.2em .5em;}
+
+
 @media screen and (max-width:960px){
 .grid_18{width:100%}
-#participations section .grid_5, #participations section .grid_6, #participations section .grid_13 {width:98%}
-#events section .grid_5, #events section .grid_6, #events section .grid_13 {width:98%}
+#projects section .grid_5, #projects section .grid_6, #projects section .grid_13 {width:98%}
 #blog .grid_6, #blog .grid_18 {width:100%;clear:both;}
 }
