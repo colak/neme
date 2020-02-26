@@ -1,0 +1,49 @@
+# Name: wet_opensearch v0.1 (compressed)
+# Type: Public plugin
+# Adds OpenSearch to your site
+# Author: Robert Wetzlmayr
+# URL: http://awasteofwords.com/article/wet_opensearch-add-opensearch-to-a-textpattern-powered-site
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
+lE0nfDrNVhfTYPb4PyoXy2QIEgAA
