@@ -38,9 +38,9 @@
 <txp:feed_link flavor="atom" format="link" label="Atom" />
 <txp:feed_link flavor="rss" format="link" label="RSS" />
 
-<link rel="shortcut icon" href="http://www.neme.org/favicon.ico" />
-<link rel="icon" href="http://www.neme.org/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="http://www.neme.org/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<txp:site_url />favicon.ico" />
+<link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
 
 
 <script src="<txp:output_form form="jquery" context="flat.url" />"></script>
@@ -70,7 +70,6 @@ menu.removeAttr('style');
 <txp:css name="ie" media="all" format="flat.link" />
 <![endif]-->
 <txp:css name="print" media="print" format="flat.link" />
-
 
 </head>
 
