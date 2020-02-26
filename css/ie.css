@@ -1,1 +1,11 @@
-.clearfix{zoom:1} .grideven {height: expression( this.scrollHeight < 251 ? "250px" : "auto" );} nav li {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fcfcfc', GradientType=0 );}
+.clearfix{zoom:1} .grideven {height: expression( this.scrollHeight < 251 ? "250px" : "auto" );} 
+nav li {filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fcfcfc', GradientType=0 );}
+.social {padding-bottom:50px;height:60px}
+.social:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+.soc {visibility:visible}
