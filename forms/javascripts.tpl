@@ -1,13 +1,15 @@
-<script defer="defer" src="http://www.neme.org/js/css3-mediaqueries.js"></script>
+<script src="<txp:site_url />js/default.js"></script>
+<script src="<txp:site_url />js/css3-mediaqueries.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
-<script src="http://www.neme.org/js/html5shiv.js"></script>
-<script src="http://www.neme.org/js/jquery1x.js"></script>
+<script src="<txp:site_url />js/html5shiv.js"></script>
+<script src="<txp:site_url />js/jquery1x.js"></script>
 <![endif]-->
 <!--[if gte IE 9]>
-<script src="http://www.neme.org/js/jquery.js"></script>
+<script src="<txp:site_url />js/jquery.js"></script>
 <![endif]-->
 <!--[if !IE]>-->
-<script src="http://www.neme.org/js/jquery.js"></script>
+<script src="<txp:site_url />js/jquery.js"></script>
+<txp:output_form form="responsiveslides.js" format="flat.script" />
 <script>
 $(function() {
 $("li").removeClass("customTarget");
@@ -25,10 +27,7 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 });
 </script>
 <!--<![endif]-->
-
-<script src="http://www.neme.org/js/responsiveslides.js"></script>
-<script src="http://www.neme.org/js/bxslider.js"></script>
-
+<txp:output_form form="bxslider.js" format="flat.script" />
 <script>
 $(document).ready(function(){
 // change class
@@ -36,11 +35,11 @@ $('body').removeClass('no-js').addClass('js');
 // bxslider 
 if(window.innerWidth < 960) {
 $('.slider').bxSlider({
-slideWidth: 600,
-minSlides: 1,
-maxSlides: 1,
-moveSlides: 1,
-slideMargin: 10
+slideWidth: 340,
+minSlides: 2,
+maxSlides: 2,
+moveSlides: 2,
+slideMargin: 5
 });
 } else {
 $('.slider').bxSlider({
@@ -62,3 +61,5 @@ namespace: "rslides",
 });
 });
 </script>
+
+<txp:hide><txp:output_form form="scrolling1.js" format="flat.script" /></txp:hide>
