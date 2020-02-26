@@ -39,13 +39,11 @@ header('content-type: text/html; charset=utf-8');
 <txp:css name="print" format="flat.link" media="print" />
 
 
-<txp:if_section name="contact,newsletter">
-<meta name="Robots" content="noindex,follow" />
-<txp:else />
+
 <meta name="author" content="NeMe" />
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
-</txp:if_section>
+
 
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
@@ -136,7 +134,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-body-======================</txp:hide>
 
-<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
+<body id="<txp:section />" class="no-js">
 <span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
