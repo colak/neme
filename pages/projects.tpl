@@ -42,7 +42,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_section name="contact,newsletter">
 <meta name="Robots" content="noindex,follow" />
 <txp:else />
-<meta name="author" content="NeMe and contributors" />
+<meta name="author" content="NeMe" />
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
 </txp:if_section>
@@ -168,6 +168,10 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_article_list>
 
+<txp:hide>==================-projects-======================</txp:hide>
+
+<txp:if_section name="projects">
+
 <txp:hide>==================-search-======================</txp:hide>
 <txp:if_search>
 <txp:article pgonly="1" searchall="1" searchsticky="0" />
@@ -259,6 +263,7 @@ header('content-type: text/html; charset=utf-8');
 </main> 
 </txp:if_category>
 </txp:if_search>
+</txp:if_section>
 
 </txp:if_article_list>
 
