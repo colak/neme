@@ -161,6 +161,7 @@ blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em
 abbr,acronym{border-bottom:2px dotted #ccc;cursor:help}
 dt{margin-left:1em}
 dd{margin-left:2em}
+table {border:3px #464646 solid}
 table tr:nth-child(odd) {background-color: #464646;}
 .grid_18 figure.grid_6{margin:0 .5% 1em 0}
 .line figcaption{font-size:1em}
@@ -301,7 +302,7 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 #texts figure figcaption {padding:2px;text-align: center;font-size:.8em;width:100% !important;display:block !important;}
 
 .tooltip {position: relative;display: inline-block;border-bottom: 1px dotted black;}
-.tooltip .tooltiptext {visibility: hidden;width: 200px;background-color: #BA0000;color: #fff;text-align: center;border-radius: 6px;padding: 5px 3px;position: absolute;z-index: 2000;bottom: 150%;left: 50%;margin-left: -100px;font-size:1.4em;height:auto;line-height:1em}
+.tooltip .tooltiptext {visibility: hidden;width: 200px;background-color: #BA0000;color: #fff;text-align: center;border-radius: 6px;padding: 5px 3px;position: absolute;z-index: 2000;bottom: 150%;left: 50%;margin-left: -100px;margin-bottom:1em;font-size:1.4em;height:auto;line-height:1em}
 h2 .tooltip .tooltiptext {font-size:.8em;line-height:1em}
 h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em} 
 .tooltip .tooltiptext a {color:#fff;}
