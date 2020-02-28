@@ -281,7 +281,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:output_form form="social_logos" />
 
-<div>
+<div class="sub">
 <h3>Latest Blog posts</h3>
 <txp:article_custom section="blog" c10="" sort="posted desc" exclude='<txp:article_id />' limit="10" status="live" break="li" wraptag="ul">
 <txp:permlink><txp:title /></txp:permlink>
