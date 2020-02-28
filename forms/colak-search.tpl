@@ -1,4 +1,6 @@
-<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
+<txp:act_if_mobile>
+<txp:else />
+><form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
 <input type="hidden" value="any" name="m" />
@@ -28,7 +30,7 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
 </form>
-
+</act_if_mobile>
 <p><txp:if_article_list>
 
 <txp:if_section name="nac">
