@@ -4,9 +4,9 @@
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:site_url />js/html5shiv.js"></script>
-</txp:act_if_mobile>
 <script src="<txp:site_url />js/jquery1x.js"></script>
 <![endif]-->
+</txp:act_if_mobile>
 <!--[if gte IE 9]>
 <script src="<txp:site_url />js/jquery.js"></script>
 <![endif]-->
