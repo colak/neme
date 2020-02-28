@@ -220,7 +220,8 @@ header('content-type: text/html; charset=utf-8');
 <div id="meta">
 
 
-<address><h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4>
+<h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4>
+<address>
 <p>NeMe Arts Centre<br />
 Corner of Ellados and Enoseos streets<br />
 Limassol<br />
@@ -239,9 +240,11 @@ Cyprus</p>
 <txp:output_form form="announce" />
 
 <txp:output_form form="social_logos" />
-<div class="sub"><txp:article_custom label="More" labeltag="h4" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
+<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
+
+<txp:recent_articles section="projects,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
@@ -249,7 +252,7 @@ Cyprus</p>
 </txp:images>
 </div>
 <div class="clear">&nbsp;</div>
-<txp:recent_articles section="projects,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
+
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -318,7 +321,8 @@ Cyprus</p>
  <div id="meta">
 <h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4>
 <p>NeMe Arts Centre<br />
-Corner of Ellados and Enoseos streets<br />
+<address>
+<p>Corner of Ellados and Enoseos streets<br />
 Limassol<br />
 Cyprus</p></address>
 <h4>Postal Address</h4>
@@ -335,7 +339,7 @@ Cyprus</p>
 
 <txp:output_form form="social_logos" />
 
-<div class="sub"><txp:article_custom label="More" labeltag="h4" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
+<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 </div>
