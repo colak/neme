@@ -320,9 +320,8 @@ Cyprus</p>
 <div class="grid_6 frontthumbs" id="side" role="complementary">
  <div id="meta">
 <h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4>
-<p>NeMe Arts Centre<br />
-<address>
-<p>Corner of Ellados and Enoseos streets<br />
+<address><p>NeMe Arts Centre<br />
+Corner of Ellados and Enoseos streets<br />
 Limassol<br />
 Cyprus</p></address>
 <h4>Postal Address</h4>
