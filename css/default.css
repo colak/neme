@@ -1,4 +1,4 @@
-h2,hr{text-align:center}
+hr{text-align:center}
 .white{background-color:#fff}
 .clear,.rslides{overflow:hidden}
 .rslides1_nav,a,a:hover{text-decoration:none}
@@ -170,7 +170,7 @@ table tr:nth-child(odd) {background-color: #464646;}
 figure img{height:auto}
 .centerthing,.centre{margin:0 auto;text-align:center;display:block}
 .container_12{background:#fff}
-#meta,.frontthumbs h3{background-color:#BA0000}
+#meta,.frontthumbs h3, .sub h3 {background-color:#BA0000;padding: 0 5px}
 #content a:hover,.submenu .active a{color:#ddd}
 #content{color:#eee;background: #000000;}
 .submenu a{color:#ee0000}
@@ -417,7 +417,6 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 #copyright, #searchsites {width:100%;background:#ddd;display:block;clear:both;}
 #texts .container_24 .grid_18 {clear:both;width:99%;display:block}
 article ol.notes {list-style-position: inside;list-style-type:initial; list-style:decimal}
-
 }
 
 
