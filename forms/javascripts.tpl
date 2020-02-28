@@ -1,7 +1,10 @@
+<txp:act_if_mobile>
+<txp:else />
 <script src="<txp:site_url />js/default.js"></script>
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:site_url />js/html5shiv.js"></script>
+</txp:act_if_mobile>
 <script src="<txp:site_url />js/jquery1x.js"></script>
 <![endif]-->
 <!--[if gte IE 9]>
