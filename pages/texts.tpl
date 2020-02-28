@@ -39,6 +39,8 @@ header('content-type: text/html; charset=utf-8');
 
 <meta name="author" content="NeMe and/or <txp:linklist id='<txp:custom_field name="venue" escape="" />' break="" wraptag=""><txp:link_name /></txp:linklist>" />
 
+
+
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
 
@@ -52,7 +54,11 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
+<txp:if_section name="">
+<link rel="canonical" href="<txp:site_url />" />
+<txp:else />
 <link rel="canonical" href="<txp:site_url /><txp:section />/" />
+</txp:if_section>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -136,7 +142,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-body-======================</txp:hide>
 
-<body id="<txp:section />" class="no-js">
+<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
 <span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
@@ -259,13 +265,13 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
 <txp:if_variable name="find">
-<txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="More texts by the author" labeltag="h4">
+<txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="By the same author" labeltag="h3">
 <txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
 {$<({#row}|21).?(<li><a href="<txp:permlink />"><txp:title /></a></li>)}
 </txp:etc_query>
 </txp:if_variable>
 <txp:variable name="relatedtitles" />
-<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h4">
+<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h3">
 <a href="<txp:permlink />"><txp:title /></a>
 </txp:article_custom>
 </div>
