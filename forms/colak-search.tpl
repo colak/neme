@@ -1,6 +1,6 @@
 <txp:act_if_mobile>
 <txp:else />
-><form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
+<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
 <input type="hidden" value="any" name="m" />
