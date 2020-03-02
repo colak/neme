@@ -30,7 +30,7 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
 </form>
-</act_if_mobile>
+</txp:act_if_mobile>
 <p><txp:if_article_list>
 
 <txp:if_section name="nac">
