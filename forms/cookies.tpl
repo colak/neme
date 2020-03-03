@@ -1,5 +1,5 @@
 <txp:oui_cookie name="accept_cookies" duration="+1 year" values="yes" />
-<!--googleoff: all-->
+
 <txp:oui_if_cookie name="accept_cookies">
 <txp:if_logged_in>
 <txp:else />
@@ -23,6 +23,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </script>
 </txp:if_logged_in>
 <txp:else />
+<!--googleoff: all-->
 <div id="eucookies" class="noprint cookies">
 <div class="container_24 noprint">
 <div class="grid_18 noprint">
