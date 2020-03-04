@@ -334,12 +334,12 @@ header img {margin-left:auto;margin-right:auto;display: block;}
 .rslides li img {border-radius:8px;}
 .medium,.nosmall, .large, #landing{visibility:hidden;display:none;}
 .nolarge {display:block}
-.container_24{padding:0 1.5%;display:block}
+.container_24{padding:1.5% 0;display:block}
 #menu{clear:both;display:block}
 h1{font-size:1.6em;clear:both;width:97%;display:block}
 #eucookies, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 .logo{clear:both}
-#front .container_24 .frontthumbs li,#side .submenu li,.side .submenu li,#texts #content ol li,.submenu li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1em 0 0;width:91%;padding:.6em}
+#front .container_24 .frontthumbs li,#side .submenu li,.side .submenu li,#texts #content ol li,.submenu li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0;width:100%;padding:.6em 0}
 
 .overflow {overflow-x:auto;}
 .smallbreak {display:block;clear:both}
@@ -393,6 +393,8 @@ nav li{display:block;float:none;border-bottom:#ddd solid 1px;margin:0;width:100%
 nav ul.menu-items > li:last-child {display:block;float:none;border-bottom: 1px solid #ddd;}
 .menu-items li a{padding:.7em 2em;display:block}
 ul.menu-items > li:nth-of-type(odd) {background-color: #282828;}
+#side .sub ul.submenu > li:nth-of-type(odd) {background-color: #282828;}
+#side ul.related_articles > li:nth-of-type(odd) {background-color: #282828;padding:.6em 0}
 ul.menu-items > li:hover {background-color: #ba0000;}
 #menu-primary {background-color: #000;color: #ba0000;}
 #content #side .announce li,#content .side .announce li,#front .container_24 .announce li, .announce .linklist li {background-color:#ffc;padding:5px 0;border-bottom:1px #ffc solid;}
@@ -405,7 +407,7 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 .grid_18 {width:100%}
 #copyright, #searchsites {width:100%;background:#ddd;display:block;clear:both;}
 #texts .container_24 .grid_18 {clear:both;width:100%;display:block}
-article ol.notes {list-style-position: inside;list-style-type:initial; list-style:decimal;
+article ol.notes, article .tooltip {list-style-position: inside;list-style-type:initial; list-style:decimal;
 overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word;}
 }
 
