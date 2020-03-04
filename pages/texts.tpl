@@ -163,12 +163,14 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
+<txp:act_if_mobile>
+<txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-
+</txp:act_if_mobile>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
@@ -239,9 +241,10 @@ header('content-type: text/html; charset=utf-8');
 <txp:article form="" listform="">
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 <h1><txp:title /></h1>
-<!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
+<p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p>
 <txp:body />
 </article>
+</txp:article>
 <div class="grid_6" id="side" role="complementary">
 <div itemscope itemtype="http://schema.org/Person" id="meta">
 <p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
@@ -255,8 +258,6 @@ header('content-type: text/html; charset=utf-8');
 <time class="published" datetime="<txp:posted format="%Y-%m-%dT%T" />">
 Posted: <txp:posted format="%b %d, %Y" /></time>
 </div>
-
-<h3>Announcements</h3>
 
 <txp:output_form form="announce" />
 
