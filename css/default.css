@@ -21,7 +21,7 @@ li{margin-left:30px}
 address,dl,fieldset,ol,p,pre,table,ul{margin-bottom:1em}
 h2,h3,h4,h5,h6 {margin: 0}
 hr, hr.line {width:90%;padding:0;margin:1em auto;border:none;border-top:1px solid #eee;color:#eee}
-hr.line:after {content:"\25CB";display:inline-block;position:relative;top:-.8em#;font-size:1.3em;padding:0 .25em;background-color: #000}
+hr.line:after {content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.3em;padding:0 .25em;background-color: #000}
 
 tr,td {padding:5px;margin:5px}
 :target {background: #666666;border: solid 1px #aaa;}
@@ -341,7 +341,7 @@ h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 #vids {display:block; padding-bottom:36%}
 .comText,.comTextarea {width:100%}
 
-.rslides li img {border-radius:5px;}
+.rslides li img, .round {border-radius:5px;}
 
 #eucookies, #eucookies .grid_18, #contact .grid_4 {width:100%;clear:both}
 #eucookies, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
@@ -360,7 +360,7 @@ h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 .sub{margin:1em 0; display:block}
 #texts .grid_6{width:100%;clear:both}
 
-#footer .grid_18,#footer .grid_6{width:98%;padding:0 auto; clear:both;display:block;}
+#footer .grid_18,#footer .grid_6{width:98%;clear:both;display:block;}
 #footer .grid_18 p,#footer .grid_6 p{padding:0;}
 
 #front .about,.slides{float:none;width:100%;clear:both;}
@@ -368,14 +368,13 @@ h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 #front .frontthumbs h3 a{font-size:.85em;display:block}
 #front .grid_18 .slides{float:none;width:99%}
 
-
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
 .bx-wrapper .bx-pager.bx-default-pager a{background:#cc0000;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
 #about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:99%}
 #publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
 #blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}
 #publications #content .grid_3,#publications #content .grid_6{width:99%;clear:both;display:block;margin:1.5em auto}
-#publications #content img{clear:both;display:block;margin:1em auto;text-align:center;max-width:230px}
+#publications #content img{clear:both;display:block;max-width:230px}
 #publications #content .grideven img{max-width:110px}
 #publications #content figcaption{width:95%}
 #publications #content .grid_9{border-bottom:1px solid #fff}
