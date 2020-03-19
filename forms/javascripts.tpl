@@ -1,6 +1,9 @@
 <txp:act_if_mobile>
 <txp:else />
+<txp:act_if_mobile>
+<txp:else />
 <script src="<txp:site_url />js/default.js"></script>
+</txp:act_if_mobile>
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:site_url />js/html5shiv.js"></script>
@@ -30,7 +33,9 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 });
 </script>
 <!--<![endif]-->
+<txp:if_individual_article>
 <txp:output_form form="bxslider.js" format="flat.script" />
+</txp:if_individual_article>
 <script>
 $(document).ready(function(){
 // change class
@@ -64,5 +69,3 @@ namespace: "rslides",
 });
 });
 </script>
-
-<txp:hide><txp:output_form form="scrolling1.js" format="flat.script" /></txp:hide>
