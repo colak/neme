@@ -50,4 +50,6 @@ h3. Useful links
 
 h3. About
 
+Image credit: <txp::ext url="https://pixabay.com/users/tumisu-148124/" txt="Tumisou" />. Free for commercial use. No attribution required.
+
 p>. Last modified: ==<txp:modified format="%d %B %G" />; <txp:modified format="%r" />==
