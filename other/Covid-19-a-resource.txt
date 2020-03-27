@@ -41,6 +41,7 @@ h3. Protect Yourself (and Others)
 ** Stay at least 2 metres away from others in public places.
 ** Call friends and family or visit by video.
 * Persuade your employer that it's possible to work from home.
+* Avoid public transport. Walk instead. 
 * Avoid people who appear sick.
 * Go grocery shopping and run errands during off-peak times.
 * Practice good hygiene wherever you are.
@@ -78,15 +79,4 @@ h4. Anything else we should add?
 
 Let us know
 
-notextile. <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
-<txp:com_connect_text label="Your name" required="1" class="grid_24" />
-<txp:com_connect_text label="Your surname" required="1" class="grid_24" />
-<txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" />
-<txp:com_connect_text label="Web address" required="0" class="grid_24" />
-<txp:com_connect_textarea name="Comment" label="Your suggestion" class="grid_24" />
-<txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." />
-<txp:com_connect_checkbox label="This is not spam!." />
-<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
-<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
-<txp:com_connect_submit label="Send" />
-</txp:com_connect>
+notextile. <txp:output_form form="covid_19_contact" />
