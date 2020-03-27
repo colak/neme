@@ -66,6 +66,7 @@ h2. Videos
 h2. Useful links
 
 * An automatically updated site designed by a Avi Schiffmann, a 17 high school junior from Mercer Island outside Seattle. It tracks the alarming ==<txp::ext url="https://ncov2019.live/" txt="spread of the virus" />== internationally and by country.
+* An article in The Guardian by ==<txp::ext url="https://www.theguardian.com/world/2020/mar/27/a-letter-to-the-uk-from-italy-this-is-what-we-know-about-your-future" txt="Francesca Melandri" />==
 * ==<txp::ext url="https://www.theatlantic.com/category/what-you-need-know-coronavirus/" txt="The Atlantic" />== has made all vital coverage of the coronavirus available to all readers. 
 * The ==<txp::ext url="https://www.technologyreview.com/collection/coronavirus/" txt="MIT Technology Review" />== has made all their reporting on the COVID-19 outbreak available to all readers.
 * ==<txp::ext url="https://twitter.com/BiellaColeman/status/1241036962884173825" txt="Gabriella Coleman&#x27;s" />== Twitter thread about the ethical hacking of equipment in order to use them in medicine as well as links to open source resources for 3d printing medical instruments. 
