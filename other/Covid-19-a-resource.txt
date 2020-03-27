@@ -8,7 +8,7 @@ bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistanc
 
 h2. Advice
 
-This list is still under audit. If you are a doctor do let us know, using the form at the bottom. Many thanks to Dr Dan Pinkel for the corrections so far.
+This list is still under audit. If you are a doctor do let us know of any corrections we need to do, using the form at the bottom. Many thanks to Dr Dan Pinkel for the corrections so far.
 
 * Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  it replicates itself within the cells, and it is believed that eventually kills that cell and disperses the new virus particles to infect other cells in a chain reaction.
@@ -71,6 +71,9 @@ h2. Useful links
 * ==<txp::ext url="https://twitter.com/BiellaColeman/status/1241036962884173825" txt="Gabriella Coleman&#x27;s" />== Twitter thread about the ethical hacking of equipment in order to use them in medicine as well as links to open source resources for 3d printing medical instruments. 
 * The ==<txp::ext url="https://www.who.int/" txt="World Health Organisation" />== official website.
 * An article on Medium by Adrien Burch arguing, against the World Health Organisation's position that facemasks do not help. ==<txp::ext url="https://medium.com/@adrien.burch/whats-the-evidence-on-face-masks-5f3c27a18cc" txt="What You Heard Was Probably Wrong" />==
+* Coverage of the Coronavirus outbreak from ==<txp::ext url="https://www.theguardian.com/world/coronavirus-outbreak" txt="The Guardian" />==
+* Coverage of the Coronavirus outbreak from ==<txp::ext url="https://www.motherjones.com/topics/coronavirus/" txt="Mother Jones" />==
+* Advise on how to ==<txp::ext url="https://time.com/5810782/grocery-store-safety-coronavirus/" txt="shop for groceries" />== from Time magazine.
 
 h3. Image credit
 
