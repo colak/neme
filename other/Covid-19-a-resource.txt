@@ -8,13 +8,13 @@ bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistanc
 
 h2. Advice
 
-The following was emailed to us by Sheila Pinkel, and it is allegedly originally authored by physician Irene Ken. Corrections were kindly sent to us by Dan Pinkel: 
+This list is still under audit. If you are a doctor do let us know, using the form at the bottom. Many thanks to Dr Dan Pinkel for the corrections so far.
 
+* Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  it replicates itself within the cells, and it is believed that eventually kills that cell and disperses the new virus particles to infect other cells in a chain reaction.
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
 * The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap or detergent is the best remedy, because the foam CUTS the FAT (that is why you have to rub so much: for 20 seconds or more, to make a lot of foam). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
 * Alcohol or any mixture with alcohol over 65% DISSOLVES ANY FAT, especially the external lipid layer of the virus. 
-* Any mix with 1 part bleach and 5 parts water directly dissolves the RNA molecule, breaks it down from the inside. 
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
 * NEVER shake used or unused clothing, sheets or cloth. While it is glued to a porous surface, it is very inert and disintegrates only between 
 ** 3 hours (fabric and porous), 
@@ -22,16 +22,16 @@ The following was emailed to us by Sheila Pinkel, and it is allegedly originally
 ** 24 hours (cardboard), 
 ** 42 hours (metal) 
 ** and 72 hours (plastic). 
-* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. The inactivation rate depends on the environment, and the virus does not necessarily become magically inactivate after that time.
-* The virus molecules remain very stable in external cold, or artificial ventilation systems such as air conditioners in houses and cars. They also need moisture to stay stable, and especially darkness. Therefore, dehumidified, dry, warm and bright environments will degrade it faster. 
+* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. The inactivation rate depends on the environment, and the virus does not necessarily become inactivate after that time.
+* The virus molecules remain very stable in external cold, or artificial ventilation systems such as air conditioners in houses, the fridge, the freezer, and cars. They also need moisture to stay stable, and especially darkness. It is believed that, dehumidified, dry, warm and bright environments can degrade it faster. 
 * UV LIGHT on any object that may contain it breaks down the virus protein. For example, to disinfect and reuse a mask is perfect. Be careful, it also breaks down collagen (which is protein) in the skin. 
-* The virus CANNOT go through healthy skin. 
+* It is believed that the virus cannot go through healthy skin. 
 * Vinegar is NOT useful because it does not break down the protective layer of fat. 
 * NO SPIRITS, NOR VODKA, serve. The strongest vodka is 40% alcohol, and you need 65%. 
-* The more confined the space, the more concentration of the virus there can be. The more open or naturally ventilated, the less. 
+* Naturally ventilate your homes as much as possible. 
 * You have to wash your hands before and after touching mucosa, food, locks, knobs, switches, remote control, cell phone, watches, computers, desks, TV, etc. And when using the bathroom. 
 * You have to Moisturise dry hands from so much washing them, because the molecules can hide in the micro cracks. The thicker the moisturiser, the better. 
-* Also keep your NAILS SHORT so that the virus does not hide there.
+* Also keep your nails short so that the virus does not hide there.
 
  <hr />
 
