@@ -22,7 +22,7 @@ This list is still under audit. If you are a doctor do let us know, using the fo
 ** 24 hours (cardboard), 
 ** 42 hours (metal) 
 ** and 72 hours (plastic). 
-* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. The inactivation rate depends on the environment, and the virus does not necessarily become inactivate after that time.
+* But if you shake fabrics or use a feather duster, the virus molecules float in the air can lodge in your nose. The inactivation rate depends on the environment, and the virus does not necessarily become inactivate after that time.
 * The virus molecules remain very stable in external cold, or artificial ventilation systems such as air conditioners in houses, the fridge, the freezer, and cars. They also need moisture to stay stable, and especially darkness. It is believed that, dehumidified, dry, warm and bright environments can degrade it faster. 
 * UV LIGHT on any object that may contain it breaks down the virus protein. For example, to disinfect and reuse a mask is perfect. Be careful, it also breaks down collagen (which is protein) in the skin. 
 * It is believed that the virus cannot go through healthy skin. 
