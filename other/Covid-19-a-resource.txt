@@ -38,7 +38,7 @@ h3. Videos
 
  <txp::youtube video="sjDuwc9KBps" id="vid1" txt="safety measures needed for grocery shopping in COVID-19 Pandemic," setcookie="1" />
 
- <txp::youtube video="2xLjCfmx0iE" id="vid1" txt="How to wear a mask," setcookie="1" />
+ <txp::youtube video="2xLjCfmx0iE" id="vid2" txt="How to wear a mask," setcookie="1" />
 
 h3. Useful links
 
