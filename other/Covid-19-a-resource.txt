@@ -1,1 +1,53 @@
-As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem of course is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more information becomes available. If we violate any copyrights with this action, we apologise. 
+As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem of course is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
+
+In order to see the changes to this page, please visit it on <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" /> and click on the 
+
+ <hr />
+
+The following was sent to us by Sheila Pinkel, and it is originally authored by physician Irene Ken: 
+
+* The virus is not a living organism, but a protein molecule (DNA) covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa, changes their genetic code. (mutation) and convert them into aggressor and multiplier cells. 
+* Since the virus is not a living organism but a protein molecule, it is not killed, but decays on its own. The disintegration time depends on the temperature, humidity and type of material where it lies. 
+* The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap or detergent is the best remedy, because the foam CUTS the FAT (that is why you have to rub so much: for 20 seconds or more, to make a lot of foam). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
+* HEAT melts fat; this is why it is so good to use water above 77 degrees Fahrenheit for washing hands, clothes and everything. In addition, hot water makes more foam and that makes it even more useful. 
+* Alcohol or any mixture with alcohol over 65% DISSOLVES ANY FAT, especially the external lipid layer of the virus. 
+* Any mix with 1 part bleach and 5 parts water directly dissolves the protein, breaks it down from the inside. 
+* Oxygenated water helps long after soap, alcohol and chlorine, because peroxide dissolves the virus protein, but you have to use it pure and it hurts your skin. 
+* NO BACTERICIDE OR ANTIBIOTIC SERVES. The virus is not a living organism like bacteria; antibodies cannot kill what is not alive. 
+* NEVER shake used or unused clothing, sheets or cloth. While it is glued to a porous surface, it is very inert and disintegrates only between 
+** 3 hours (fabric and porous), 
+** 4 hours (copper and wood), 
+** 24 hours (cardboard), 
+** 42 hours (metal) 
+** and 72 hours (plastic). 
+* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. 
+* The virus molecules remain very stable in external cold, or artificial as air conditioners in houses and cars. They also need moisture to stay stable, and especially darkness. Therefore, dehumidified, dry, warm and bright environments will degrade it faster. 
+* UV LIGHT on any object that may contain it breaks down the virus protein. For example, to disinfect and reuse a mask is perfect. Be careful, it also breaks down collagen (which is protein) in the skin. 
+* The virus CANNOT go through healthy skin. 
+* Vinegar is NOT useful because it does not break down the protective layer of fat. 
+* NO SPIRITS, NOR VODKA, serve. The strongest vodka is 40% alcohol, and you need 65%. 
+* LISTERINE IF IT SERVES! It is 65% alcohol. 
+* The more confined the space, the more concentration of the virus there can be. The more open or naturally ventilated, the less. 
+* You have to wash your hands before and after touching mucosa, food, locks, knobs, switches, remote control, cell phone, watches, computers, desks, TV, etc. And when using the bathroom. 
+* You have to Moisturise dry hands from so much washing them, because the molecules can hide in the micro cracks. The thicker the moisturiser, the better. 
+* Also keep your NAILS SHORT so that the virus does not hide there.
+
+ <hr />
+
+h3. Videos
+
+ <txp::youtube video="sjDuwc9KBps" id="yt1" txt="safety measures needed for grocery shopping in COVID-19 Pandemic," />
+
+ <txp::youtube video="2xLjCfmx0iE" id="yt2" txt="How to wear a mask," />
+
+h3. Useful links
+
+* An automatically updated site designed by a Avi Schiffmann, a 17 high school junior from Mercer Island outside Seattle. It tracks the alarming ==<txp::ext url="https://ncov2019.live/" txt="spread of the virus" />== internationally and by country.
+* ==<txp::ext url="https://www.theatlantic.com/category/what-you-need-know-coronavirus/" txt="The Atlantic" />== has made all vital coverage of the coronavirus available to all readers. 
+* ==<txp::ext url="https://twitter.com/BiellaColeman/status/1241036962884173825" txt="Gabriella Coleman&#x27;s" />== Twitter thread about the ethical hacking of equipment in order to use them in medicine as well as links to open source resources for 3d printing medical instruments. 
+* The ==<txp::ext url="https://www.who.int/" txt="World Health Organisation" />== official website.
+* An article on Medium by Adrien Burch arguing, against the World Health Organisation's position that facemasks do not help. ==<txp::ext url="https://medium.com/@adrien.burch/whats-the-evidence-on-face-masks-5f3c27a18cc" txt="What You Heard Was Probably Wrong" />==
+
+h3. About
+
+p>. Last modified: ==<txp:modified format="%d %B %G" />; <txp:modified format="%r" />==
