@@ -1,12 +1,12 @@
-As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem of course is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
+As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem, of course, is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
 
 In order to see the changes to this page, please visit <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
 
-To start here's a tweet by <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="Brent Toderian" />:
+To start here is a tweet by <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="Brent Toderian" />:
 
 bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 #coronavirus</p>
 
- <hr />
+h2. Advice
 
 The following was sent to us by Sheila Pinkel, and it is originally authored by physician Irene Ken: 
 
@@ -43,8 +43,8 @@ h3. Protect Yourself (and Others)
 * Stay home as much as possible and reduce visitors.
 * Practice spatial distancing:
 ** Stay at least 2 metres away from others in public places.
-** Call friends and family or visit by video.
-* Persuade your employer that it's possible to work from home.
+** Call friends and family or meet using online video services such as Skype, Viber, etc.
+* If you are not working in a sector which is vital to your community, such as health, social work, food sales and distribution, etc, persuade your employer that it is possible to work from home.
 * Avoid public transport. Walk instead. 
 * Avoid people who appear sick. 
 * Remember that people who appear well, might be infected by the virus and they can transmit it.
@@ -60,13 +60,13 @@ h3. Protect Yourself (and Others)
 
  <hr />
 
-h3. Videos
+h2. Videos
 
  <txp::youtube video="sjDuwc9KBps" id="vid1" txt="safety measures needed for grocery shopping in COVID-19 Pandemic," setcookie="1" />
 
  <txp::youtube video="2xLjCfmx0iE" id="vid2" txt="How to wear a mask," setcookie="1" />
 
-h3. Useful links
+h2. Useful links
 
 * An automatically updated site designed by a Avi Schiffmann, a 17 high school junior from Mercer Island outside Seattle. It tracks the alarming ==<txp::ext url="https://ncov2019.live/" txt="spread of the virus" />== internationally and by country.
 * ==<txp::ext url="https://www.theatlantic.com/category/what-you-need-know-coronavirus/" txt="The Atlantic" />== has made all vital coverage of the coronavirus available to all readers. 
@@ -74,9 +74,9 @@ h3. Useful links
 * The ==<txp::ext url="https://www.who.int/" txt="World Health Organisation" />== official website.
 * An article on Medium by Adrien Burch arguing, against the World Health Organisation's position that facemasks do not help. ==<txp::ext url="https://medium.com/@adrien.burch/whats-the-evidence-on-face-masks-5f3c27a18cc" txt="What You Heard Was Probably Wrong" />==
 
-h3. About
+h3. Image credit
 
-Image credit: <txp::ext url="https://pixabay.com/users/tumisu-148124/" txt="Tumisou" />. Free for commercial use. No attribution required.
+<txp::ext url="https://pixabay.com/users/tumisu-148124/" txt="Tumisou" />. Free for commercial use. No attribution required.
 
 p>. Last modified: ==<txp:modified format="%d %B %G" />; <txp:modified format="%r" />==
 
