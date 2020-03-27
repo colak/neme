@@ -34,6 +34,26 @@ The following was sent to us by Sheila Pinkel, and it is originally authored by 
 
  <hr />
 
+h3. Protect Yourself (and Others)
+
+* Stay home as much as possible and reduce visitors.
+* Practice spatial distancing:
+** Stay at least 2 metres away from others in public places.
+** Call friends and family or visit by video.
+* Persuade your employer that it's possible to work from home.
+* Avoid people who appear sick.
+* Go grocery shopping and run errands during off-peak times.
+* Practice good hygiene wherever you are.
+** Wash your hands with soap and water frequently and thoroughly for at least 20 seconds, especially:
+*** After being in public places and touching any metal or plastic surfaces such as door handles, shopping carts, elevator buttons, etc.
+*** After using the bathroom
+*** Before preparing food
+** If soap and water are not available, use hand sanitizer with at least 60% alcohol.
+** Avoid touching your eyes, nose or mouth, especially with unwashed hands.
+** If you cough or sneeze, do so in the bend of your elbow. If you use a tissue, throw it away immediately.
+
+ <hr />
+
 h3. Videos
 
  <txp::youtube video="sjDuwc9KBps" id="vid1" txt="safety measures needed for grocery shopping in COVID-19 Pandemic," setcookie="1" />
@@ -53,3 +73,20 @@ h3. About
 Image credit: <txp::ext url="https://pixabay.com/users/tumisu-148124/" txt="Tumisou" />. Free for commercial use. No attribution required.
 
 p>. Last modified: ==<txp:modified format="%d %B %G" />; <txp:modified format="%r" />==
+
+h4. Anything else we should add?
+
+Let us know
+
+notextile. <txp:com_connect to="email@domain.tld" label=""  thanks="Thank you, your message has been sent.">
+<txp:com_connect_text label="Your name" required="1" class="grid_24" />
+<txp:com_connect_text label="Your surname" required="1" class="grid_24" />
+<txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" />
+<txp:com_connect_text label="Web address" required="0" class="grid_24" />
+<txp:com_connect_textarea name="Comment" label="Your suggestion" class="grid_24" />
+<txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." />
+<txp:com_connect_checkbox label="This is not spam!." />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Send" />
+</txp:com_connect>
