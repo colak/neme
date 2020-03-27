@@ -8,23 +8,22 @@ bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistanc
 
 h2. Advice
 
-The following was emailed to us by Sheila Pinkel, and it is originally authored by physician Irene Ken: 
+The following was emailed to us by Sheila Pinkel, and it is allegedly originally authored by physician Irene Ken. Corrections were kindly sent to us by Dan Pinkel: 
 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  it replicates itself within the cells, and it is believed that eventually kills that cell and disperses the new virus particles to infect other cells in a chain reaction.
-* Since the virus is not a living organism but a protein molecule, it is not killed, but decays on its own. The disintegration time depends on the temperature, humidity and type of material where it lies. 
+* The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
 * The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap or detergent is the best remedy, because the foam CUTS the FAT (that is why you have to rub so much: for 20 seconds or more, to make a lot of foam). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
-* HEAT melts fat; this is why it is so good to use water above 77 degrees Fahrenheit for washing hands, clothes and everything. In addition, hot water makes more foam and that makes it even more useful. 
 * Alcohol or any mixture with alcohol over 65% DISSOLVES ANY FAT, especially the external lipid layer of the virus. 
-* Any mix with 1 part bleach and 5 parts water directly dissolves the protein, breaks it down from the inside. 
-* NO BACTERICIDE OR ANTIBIOTIC SERVES. The virus is not a living organism like bacteria; antibodies cannot kill what is not alive. 
+* Any mix with 1 part bleach and 5 parts water directly dissolves the RNA molecule, breaks it down from the inside. 
+* Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
 * NEVER shake used or unused clothing, sheets or cloth. While it is glued to a porous surface, it is very inert and disintegrates only between 
 ** 3 hours (fabric and porous), 
 ** 4 hours (copper and wood), 
 ** 24 hours (cardboard), 
 ** 42 hours (metal) 
 ** and 72 hours (plastic). 
-* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. (The inactivation rate depends on the environment, and the virus does not necessarily become magically inactivate after that.)
-* The virus molecules remain very stable in external cold, or artificial as air conditioners in houses and cars. They also need moisture to stay stable, and especially darkness. Therefore, dehumidified, dry, warm and bright environments will degrade it faster. 
+* But if you shake fabrics or use a feather duster, the virus molecules float in the air for up to 3 hours, and can lodge in your nose. The inactivation rate depends on the environment, and the virus does not necessarily become magically inactivate after that time.
+* The virus molecules remain very stable in external cold, or artificial ventilation systems such as air conditioners in houses and cars. They also need moisture to stay stable, and especially darkness. Therefore, dehumidified, dry, warm and bright environments will degrade it faster. 
 * UV LIGHT on any object that may contain it breaks down the virus protein. For example, to disinfect and reuse a mask is perfect. Be careful, it also breaks down collagen (which is protein) in the skin. 
 * The virus CANNOT go through healthy skin. 
 * Vinegar is NOT useful because it does not break down the protective layer of fat. 
