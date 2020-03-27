@@ -4,7 +4,7 @@ In order to see the changes to this page, please visit <txp::ext url="https://gi
 
 To start here's a tweet by <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="Brent Toderian" />:
 
-bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 </p>
+bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 #coronavirus</p>
 
  <hr />
 
