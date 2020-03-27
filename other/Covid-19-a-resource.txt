@@ -1,6 +1,10 @@
 As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem of course is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
 
-In order to see the changes to this page, please visit it on <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
+In order to see the changes to this page, please visit <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
+
+To start here's a tweet by <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="Brent Toderian" />:
+
+bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 </p>
 
  <hr />
 
@@ -42,7 +46,8 @@ h3. Protect Yourself (and Others)
 ** Call friends and family or visit by video.
 * Persuade your employer that it's possible to work from home.
 * Avoid public transport. Walk instead. 
-* Avoid people who appear sick.
+* Avoid people who appear sick. 
+* Remember that people who appear well, might be infected by the virus and they can transmit it.
 * Go grocery shopping and run errands during off-peak times.
 * Practice good hygiene wherever you are.
 ** Wash your hands with soap and water frequently and thoroughly for at least 20 seconds, especially:
