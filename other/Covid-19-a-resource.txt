@@ -75,6 +75,7 @@ h2. Useful links
 * Coverage of the Coronavirus outbreak from ==<txp::ext url="https://www.theguardian.com/world/coronavirus-outbreak" txt="The Guardian" />==
 * Coverage of the Coronavirus outbreak from ==<txp::ext url="https://www.motherjones.com/topics/coronavirus/" txt="Mother Jones" />==
 * Advise on how to ==<txp::ext url="https://time.com/5810782/grocery-store-safety-coronavirus/" txt="shop for groceries" />== from Time magazine.
+* Although Channel 4's ==<txp::ext url="https://www.channel4.com/news/factcheck" txt="factcheck" />== does not necessarily only cover Covid-19 updates, they are nevertheless correctly monopolising the feed.
 
 h3. Image credit
 
