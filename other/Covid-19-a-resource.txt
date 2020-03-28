@@ -22,6 +22,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 ** 42 hours (metal) 
 ** and 72 hours (plastic). 
 * If you think a surface may be infected, clean it with simple disinfectant to kill the virus. The active ingredient in bleach - sodium hypochlorite - is very effective at killing the virus. Make sure you leave the bleach to work for 10-15 minutes then give the surface a wipe with a clean cloth.
+* Antiseptic surface wipes, although they kill gems, appear to make no difference to the spread of Covid-19.
 * It is believed that the virus cannot go through healthy skin.
 * Vinegar is not useful because it does not break down the protective layer of fat. 
 * Alcoholic drinks do not help. 
@@ -30,6 +31,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Excess washing dries hands. Moisturisers can help remedy this. 
 * Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
 * There is no evidence that a dog, cat, or any pet can transmit COVID-19.
+* Human coronaviruses can remain infectious on inanimate surfaces at room temperature for up to 9 days. At a temperature of 30°C or more the duration of persistence is shorter.
 
  <hr />
 
@@ -59,7 +61,7 @@ h2. Videos
 
  <txp::youtube video="sjDuwc9KBps" id="vid1" txt="safety measures needed for grocery shopping in COVID-19 Pandemic," setcookie="1" />
 
- <txp::youtube video="2xLjCfmx0iE" id="vid2" txt="How to wear a mask," setcookie="1" />
+ <txp::youtube video="2xLjCfmx0iE" id="vid2" txt="a demonstration on how to wear a surgical mask," setcookie="1" />
 
 h2. Useful links
 
@@ -75,6 +77,7 @@ h2. Useful links
 * Advise on how to ==<txp::ext url="https://time.com/5810782/grocery-store-safety-coronavirus/" txt="shop for groceries" />== from Time magazine.
 * Although Channel 4's ==<txp::ext url="https://www.channel4.com/news/factcheck" txt="factcheck" />== does not necessarily only cover Covid-19 updates, they are nevertheless correctly monopolising the feed.
 * Why ==<txp::ext url="https://www.nationalgeographic.com/science/2020/03/why-soap-preferable-bleach-fight-against-coronavirus/" txt="soap is better than bleach" />== from the National Geographic. 
+* A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
 
 h3. Image credit
 
