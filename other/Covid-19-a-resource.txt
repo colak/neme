@@ -13,7 +13,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  replicates itself within the cells, and it is believed that eventually kills those cells and disperses the new virus particles to infect other cells in a chain reaction.
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
-* The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap is the best remedy, because the foam cuts the fat (that is why you have to rub so much: for 20 seconds or more, to make a lot of foam). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
+* The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap is the best remedy, because the foam cuts the fat (that is why you have to rub for 20 seconds or more). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
 * Alcohol or any mixture with alcohol over 65% dissolves any fat, especially the external lipid layer of the virus. 
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
 * It has been reported that in laboratory conditions Covid 19 disintegrates after 
@@ -22,14 +22,15 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 ** 24 hours (cardboard), 
 ** 42 hours (metal) 
 ** and 72 hours (plastic). 
-* It is believed that virus molecules remain very stable in external cold, or artificial ventilation systems such as air conditioners in houses, the fridge, the freezer, and cars. It has been reported that, dehumidified, dry, warm and bright environments can degrade it faster. 
-* It is believed that the virus cannot go through healthy skin. 
+* If you think a surface may be infected, clean it with simple disinfectant to kill the virus. Clean your hands with an alcohol-based hand rub or wash them with soap and water.  
+* It is believed that the virus cannot go through healthy skin.
 * Vinegar is not useful because it does not break down the protective layer of fat. 
-* Alcoholic beverages do not help. The strongest vodka is 40% alcohol, and you need 65%. 
+* Alcoholic drinks do not help. 
 * Naturally ventilate your homes as much as possible. 
 * You have to wash your hands before and after touching mucosa, food, locks, knobs, switches, remote control, cell phone, watches, computers, desks, TV, etc. 
 * Excess washing dries hands. Moisturisers can help remedy this. 
-* Masks are not made for more than one use. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
+* Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
+* There is no evidence that a dog, cat, or any pet can transmit COVID-19.
 
  <hr />
 
@@ -75,7 +76,6 @@ h2. Useful links
 * Advise on how to ==<txp::ext url="https://time.com/5810782/grocery-store-safety-coronavirus/" txt="shop for groceries" />== from Time magazine.
 * Although Channel 4's ==<txp::ext url="https://www.channel4.com/news/factcheck" txt="factcheck" />== does not necessarily only cover Covid-19 updates, they are nevertheless correctly monopolising the feed.
 * Why ==<txp::ext url="https://www.nationalgeographic.com/science/2020/03/why-soap-preferable-bleach-fight-against-coronavirus/" txt="soap is better than bleach" />== from the National Geographic. 
-
 
 h3. Image credit
 
