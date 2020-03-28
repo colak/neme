@@ -15,7 +15,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
 * The virus is very fragile; the only thing that protects it is a thin outer layer of fat. Soap destroys the lipid layer and that is why you have to rub for 20 seconds.
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
-* It has been reported that in laboratory conditions Covid 19 disintegrates after 
+* Human coronaviruses can remain infectious on inanimate surfaces at room temperature for up to 9 days. At a temperature of 30°C or more the duration of persistence is shorter. It has been reported that in laboratory conditions Covid 19 disintegrates after 
 ** 3 hours (fabric and porous), 
 ** 4 hours (copper and wood), 
 ** 24 hours (cardboard), 
@@ -31,7 +31,6 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Excess washing dries hands. Moisturisers can help remedy this. 
 * Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
 * There is no evidence that a dog, cat, or any pet can transmit COVID-19.
-* Human coronaviruses can remain infectious on inanimate surfaces at room temperature for up to 9 days. At a temperature of 30°C or more the duration of persistence is shorter.
 
  <hr />
 
