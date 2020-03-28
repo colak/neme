@@ -4,7 +4,7 @@ Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. T
 
 In order to see the changes to this page, please visit <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
 
-To start here is a tweet by <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="Brent Toderian" />:
+To start here is a <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="tweet" /> by <txp::ext url="http://www.toderianurbanworks.com/" txt="Brent Toderian" />:
 
 bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 #coronavirus</p>
 
