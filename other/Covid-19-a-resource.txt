@@ -15,12 +15,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
 * The virus is very fragile; the only thing that protects it is a thin outer layer of fat. Soap destroys the lipid layer and that is why you have to rub for 20 seconds.
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
-* Human coronaviruses can remain infectious on inanimate surfaces at room temperature for up to 9 days. At a temperature of 30°C or more the duration of persistence is shorter. It has been reported that in laboratory conditions Covid 19 disintegrates after 
-** 3 hours (fabric and porous), 
-** 4 hours (copper and wood), 
-** 24 hours (cardboard), 
-** 42 hours (metal) 
-** and 72 hours (plastic). 
+* Human coronaviruses can remain infectious on inanimate surfaces at room temperature for up to 9 days. At a temperature of 30°C or more the duration of persistence is shorter. 
 * If you think a surface may be infected, clean it with simple disinfectant to kill the virus. The active ingredient in bleach - sodium hypochlorite - is very effective at killing the virus. Make sure you leave the bleach to work for 10-15 minutes then give the surface a wipe with a clean cloth.
 * Antiseptic surface wipes, although they kill gems, appear to make no difference to the spread of Covid-19.
 * It is believed that the virus cannot go through healthy skin.
