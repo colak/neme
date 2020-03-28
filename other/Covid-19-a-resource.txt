@@ -13,8 +13,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  replicates itself within the cells, and it is believed that eventually kills those cells and disperses the new virus particles to infect other cells in a chain reaction.
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
-* The virus is very fragile; the only thing that protects it is a thin outer layer of fat. That is why any soap is the best remedy, because the foam cuts the fat (that is why you have to rub for 20 seconds or more). By dissolving the fat layer, the protein molecule disperses and breaks down on its own. 
-* Alcohol or any mixture with alcohol over 65% dissolves any fat, especially the external lipid layer of the virus. 
+* The virus is very fragile; the only thing that protects it is a thin outer layer of fat. Soap destroys the lipid layer and that is why you have to rub for 20 seconds.
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
 * It has been reported that in laboratory conditions Covid 19 disintegrates after 
 ** 3 hours (fabric and porous), 
