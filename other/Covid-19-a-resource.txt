@@ -26,7 +26,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * You have to wash your hands before and after touching mucosa, food, locks, knobs, switches, remote control, cell phone, watches, computers, desks, TV, etc. 
 * Excess washing dries hands. Moisturisers can help remedy this. 
 * Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
-* There is no evidence that a dog, cat, or any pet can transmit COVID-19.
+* Although there is one reported case of a dog contracting Covid-19, there is no evidence that pets such as dogs, or cats, can transmit COVID-19 to humans.
 
  <hr />
 
@@ -71,6 +71,7 @@ h2. Useful links
 * Coverage of the Coronavirus outbreak from ==<txp::ext url="https://www.motherjones.com/topics/coronavirus/" txt="Mother Jones" />==
 * Advise on how to ==<txp::ext url="https://time.com/5810782/grocery-store-safety-coronavirus/" txt="shop for groceries" />== from Time magazine.
 * Although Channel 4's ==<txp::ext url="https://www.channel4.com/news/factcheck" txt="factcheck" />== does not necessarily only cover Covid-19 updates, they are nevertheless correctly monopolising the feed.
+* Coverage of the pandemic from ==<txp::ext url="https://theconversation.com/uk/covid-19" txt="The Conversation" />==.
 * Why ==<txp::ext url="https://www.nationalgeographic.com/science/2020/03/why-soap-preferable-bleach-fight-against-coronavirus/" txt="soap is better than bleach" />== from the National Geographic. 
 * A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
 
