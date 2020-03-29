@@ -6,7 +6,7 @@ In order to see the changes to this page, please visit <txp::ext url="https://gi
 
 To start here is a <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="tweet" /> by <txp::ext url="http://www.toderianurbanworks.com/" txt="Brent Toderian" />:
 
-bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVIDー19 #coronavirus</p>
+bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVID-19 #coronavirus</p>
 
 h2. Advice
 
@@ -74,6 +74,8 @@ h2. Useful links
 * Coverage of the pandemic from ==<txp::ext url="https://theconversation.com/uk/covid-19" txt="The Conversation" />==.
 * Why ==<txp::ext url="https://www.nationalgeographic.com/science/2020/03/why-soap-preferable-bleach-fight-against-coronavirus/" txt="soap is better than bleach" />== from the National Geographic. 
 * A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
+* Advice from the Guardian. How to ==<txp::ext url="https://www.theguardian.com/world/2020/mar/28/coronavirus-shopping-five-tips-for-social-distancing-at-supermarket-rules-lockdown-shop-safely" txt="shop safely" />==.
+
 
 h3. Image credit
 
