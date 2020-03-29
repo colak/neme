@@ -61,6 +61,7 @@ h2. Videos
 h2. Useful links
 
 * An automatically updated site designed by a Avi Schiffmann, a 17 high school junior from Mercer Island outside Seattle. It tracks the alarming ==<txp::ext url="https://ncov2019.live/" txt="spread of the virus" />== internationally and by country.
+* Another automatically updated site tracking the ==<txp::ext url=https://www.worldometers.info/coronavirus/" txt="spread of the virus" />== internationally and by country. We are adding this as it appears to have additional information.
 * An article in The Guardian by ==<txp::ext url="https://www.theguardian.com/world/2020/mar/27/a-letter-to-the-uk-from-italy-this-is-what-we-know-about-your-future" txt="Francesca Melandri" />==
 * ==<txp::ext url="https://www.theatlantic.com/category/what-you-need-know-coronavirus/" txt="The Atlantic" />== has made all vital coverage of the coronavirus available to all readers. 
 * The ==<txp::ext url="https://www.technologyreview.com/collection/coronavirus/" txt="MIT Technology Review" />== has made all their reporting on the COVID-19 outbreak available to all readers.
