@@ -1,18 +1,28 @@
 As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem, of course, is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
 
-Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. 
+Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, fatigue, body aches, and in more severe cases, difficulty breathing. Symptoms may also include vomiting, diarrhoea, and/or anosmia.
 
 In order to see the changes to this page, please visit <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
 
 To start here is a <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="tweet" /> by <txp::ext url="http://www.toderianurbanworks.com/" txt="Brent Toderian" />:
 
-bq. Attention World: <p>We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. </p><p>Spread the word. Language matters. #COVID-19 #coronavirus</p>
+bq. Attention World: <br />We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. <br />Spread the word. Language matters. #COVID-19 #coronavirus
 
 h2. Advice
 
 This list is still under audit. If you are a scientist with knowledge on the subject do let us know of any corrections we need to do, using the form at the bottom. Many thanks to Dr Dan Pinkel for the corrections so far.
 
 * The virus is an RNA molecule covered by a protective layer of lipid (fat), which, when absorbed by the cells of the ocular, nasal or buccal mucosa,  replicates itself within the cells, and it is believed that eventually kills those cells and disperses the new virus particles to infect other cells in a chain reaction.
+* There is currently no vaccine to prevent COVID-19 and, if/when one is developed, it is not expected to be produced for mass vaccination before September 2021.
+* Most susceptible to serious complications of COVID-19 include people who:
+** Are over 60 years old, although deaths of people in their 20s have been recorded.
+** Have cancer.
+** Have hypertension.
+** Have lung disease.
+** Have diabetes.
+** Have heart disease.
+** Have another condition that compromises the immune system.
+** Are taking medications that suppress the immune system.
 * The disintegration time of the virus depends on the temperature, humidity, and type of material where it lies. 
 * The virus is very fragile; the only thing that protects it is a thin outer layer of fat. Soap destroys the lipid layer and that is why you have to rub for 20 seconds.
 * Antibacterial agents do not kill viruses because they are not bacteria, and so the things antibiotics target, the viruses do not have.
@@ -24,6 +34,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Alcoholic drinks do not help. 
 * Naturally ventilate your homes as much as possible. 
 * You have to wash your hands before and after touching mucosa, food, locks, knobs, switches, remote control, cell phone, watches, computers, desks, TV, etc. 
+* Avoid hand dryers as they increase the air circulation of the viruses. 
 * Excess washing dries hands. Moisturisers can help remedy this. 
 * Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
 * Although there is one reported case of a dog contracting Covid-19, there is no evidence that pets such as dogs, or cats, can transmit COVID-19 to humans.
