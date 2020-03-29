@@ -8,16 +8,10 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
-
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -30,11 +24,13 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
+
 <txp:css name="default" media="all" format="flat.link" />
 <txp:if_article_list><txp:css name="articlelists" media="all" format="flat.link" /></txp:if_article_list>
 <!--[if IE]><txp:css name="ie-fluid" media="all" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:act_if_mobile><txp:css name="mobile" media="all" format="flat.link" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 <meta name="author" content="NeMe and contributors" />
@@ -151,17 +147,20 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
 <txp:hide>==================-social-======================</txp:hide>
 
+<txp:act_if_mobile>
+<txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
+</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 
@@ -222,7 +221,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_18" id="main">
 <main aria-label="main content" itemscope itemtype="https://schema.org/Blog">
 <txp:if_custom_field name="img2"><txp:image id='<txp:custom_field name="img2" />' class="grid_8" /><txp:else />
-<txp:if_custom_field name="img_main"><txp:image id='<txp:custom_field name="img_main" />' class="grid_24 alpha omega" /><div class="clear">&nbsp;</div></txp:if_custom_field>
+<txp:if_custom_field name="img_main"><txp:image id='<txp:custom_field name="img_main" />' class="grid_24 alpha omega round" /><div class="clear">&nbsp;</div></txp:if_custom_field>
 </txp:if_custom_field>
 
 <article>
@@ -242,7 +241,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_variable>
 <txp:variable name="next1" value='<txp:link_to_next />' />
 <txp:if_variable name="next1" value="">
-<div class="prev" noprint>&nbsp;</div>
+<div class="prev noprint">&nbsp;</div>
 <txp:else />
 <div class="next aright noprint"><txp:link_to_next><txp:title /> &#8667;</txp:link_to_next></div>
 </txp:if_variable>
@@ -275,7 +274,6 @@ header('content-type: text/html; charset=utf-8');
 </time>
 </div>
 </txp:article>
-<h3>Announcements</h3>
 
 <txp:output_form form="announce" />
 
@@ -283,7 +281,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="sub">
 <h3>Latest Blog posts</h3>
-<txp:article_custom section="blog" c10="" sort="posted desc" exclude='<txp:article_id />' limit="10" status="live" break="li" wraptag="ul">
+<txp:article_custom section="blog" c10="" sort="posted desc" exclude='<txp:article_id />' limit="10" status="live" break="li" wraptag="ul" class="submenu">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div></div>
