@@ -89,6 +89,8 @@ h2. Useful links
 * Why ==<txp::ext url="https://www.nationalgeographic.com/science/2020/03/why-soap-preferable-bleach-fight-against-coronavirus/" txt="soap is better than bleach" />== from the National Geographic. 
 * A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
 * Advice from the Guardian. How to ==<txp::ext url="https://www.theguardian.com/world/2020/mar/28/coronavirus-shopping-five-tips-for-social-distancing-at-supermarket-rules-lockdown-shop-safely" txt="shop safely" />==.
+* Is Covid-19 airborne and are masks effective? ==<txp::ext url="https://www.theatlantic.com/health/archive/2020/04/coronavirus-pandemic-airborne-go-outside-masks/609235/" txt="Nobody knows" />==.
+
 
 
 h3. Image credit
