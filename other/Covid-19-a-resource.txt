@@ -90,8 +90,7 @@ h2. Useful links
 * A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
 * Advice from the Guardian. How to ==<txp::ext url="https://www.theguardian.com/world/2020/mar/28/coronavirus-shopping-five-tips-for-social-distancing-at-supermarket-rules-lockdown-shop-safely" txt="shop safely" />==.
 * Is Covid-19 airborne and are masks effective? ==<txp::ext url="https://www.theatlantic.com/health/archive/2020/04/coronavirus-pandemic-airborne-go-outside-masks/609235/" txt="Nobody knows" />==.
-
-
+* Research from Hong Kong advices ==<txp::ext url="https://www.consumer.org.hk/ws_en/news/2020/covid-19-diymasks" txt="not re-use face masks" />==.
 
 h3. Image credit
 
