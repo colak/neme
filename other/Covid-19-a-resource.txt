@@ -1,5 +1,7 @@
 As our world is falling apart, and most people are spatially distancing themselves, social media and electronic communications are stronger than ever. The problem, of course, is that social media threads and emails tend to disappear after a few days. As such, here at NeMe,  we decided to compile a resource of information that we think that it will be useful to our community. We will be updating this page as more factual information becomes available. If we violate any copyrights with this action, we apologise. 
 
+bq. No longer were there individual destinies; only a collective destiny, made of plague and the emotions shared by all. (Albert Camus. _The Plague_)
+
 Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, fatigue, body aches, and in more severe cases, difficulty breathing. Symptoms may also include vomiting, diarrhoea, and/or anosmia.
 
 In order to see the changes to this page, please visit <txp::ext url="https://github.com/colak/neme/blame/master/other/Covid-19-a-resource.txt" txt="GitHub" />.
@@ -7,6 +9,8 @@ In order to see the changes to this page, please visit <txp::ext url="https://gi
 To start here is a <txp::ext url="https://twitter.com/BrentToderian/status/1241569035642376193" txt="tweet" /> by <txp::ext url="http://www.toderianurbanworks.com/" txt="Brent Toderian" />:
 
 bq. Attention World: <br />We don't need #SocialDistancing. We need #SpatialDistancing, & #SocialBridging. Keep physical distance from others, but do all you can to stay socially connected to friends, family & your communities. <br />Spread the word. Language matters. #COVID-19 #coronavirus
+
+ <txp:image class="grid_24 alpha omega" id="1588" />
 
 h2. Advice
 
@@ -90,7 +94,8 @@ h2. Useful links
 * A scientific paper on the ==<txp::ext url="https://www.journalofhospitalinfection.com/article/S0195-6701(20)30046-3/fulltext" txt="persistence of coronaviruses on inanimate surfaces and their inactivation with biocidal agents" />==.
 * Advice from the Guardian. How to ==<txp::ext url="https://www.theguardian.com/world/2020/mar/28/coronavirus-shopping-five-tips-for-social-distancing-at-supermarket-rules-lockdown-shop-safely" txt="shop safely" />==.
 * Is Covid-19 airborne and are masks effective? ==<txp::ext url="https://www.theatlantic.com/health/archive/2020/04/coronavirus-pandemic-airborne-go-outside-masks/609235/" txt="Nobody knows" />==.
-* Research from Hong Kong advices ==<txp::ext url="https://www.consumer.org.hk/ws_en/news/2020/covid-19-diymasks" txt="not re-use face masks" />==.
+* Research from Hong Kong advices ==<txp::ext url="https://www.consumer.org.hk/ws_en/news/2020/covid-19-diymasks" txt="not to re-use face masks" />==.
+* A PDF from the American Medical Association listing the steps <txp::ext url="https://cdn.jamanetwork.com/ama/content_public/journal/jama/0/jvp200035supp1_prod.pdf?Expires=2147483647&Signature=bIZCLS7ZLWTJd~U~H40JgiEGdFb3ggVUJpBvJ7KdANK7HgK1zaj4uWHvqweGym1nWfO~nXt9Y5i1vX79pF7zjjqfzmJAy3udTdpVVZQe07xnQIPcBMXLwZ5XjgTO8yKFXVIpxsXhrmOu8sGSpKiEmQ86ZCKfOTar7fMAGmUCtjiYVFwf31K3REWAA-r3hZyoZpqz3QKpVgpsRpF9fV9thQCq0~yvbvRKTH4PcoB~CZgmXH7rpVb6bILXQn5zBCphf6pyLAa4zIebUEKfCdCYdSdi9LeIEUsesqsYpNWgHJcr4K1LC0hFlst0RHQz-vZ7I-OvrX~5jel6zjjtuDQzjQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" txt="Taiwan did to flatten the curve" />.
 
 h3. Image credit
 
