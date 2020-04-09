@@ -41,7 +41,7 @@ This list is still under audit. If you are a scientist with knowledge on the sub
 * Avoid hand dryers as they increase the air circulation of the viruses. 
 * Excess washing dries hands. Moisturisers can help remedy this. 
 * Masks are not made for more than one use. WHO advises rational use of medical masks to avoid unnecessary wastage of precious resources and misuse of masks. Before using a mask, consider if you actually need one. If you have an N95 mask and you are a healthy person not taking care of an infected individual, you could donate that unused mask to health care providers who need it more than you. 
-* Although there is one reported case of a dog contracting Covid-19, there is no evidence that pets such as dogs, or cats, can transmit COVID-19 to humans.
+* Although there is one reported case of a dog and a number of cats contracting Covid-19, there is no evidence that pets, can transmit COVID-19 to humans.
 
  <hr />
 
@@ -95,6 +95,7 @@ h2. Useful links
 * Advice from the Guardian. How to ==<txp::ext url="https://www.theguardian.com/world/2020/mar/28/coronavirus-shopping-five-tips-for-social-distancing-at-supermarket-rules-lockdown-shop-safely" txt="shop safely" />==.
 * Is Covid-19 airborne and are masks effective? ==<txp::ext url="https://www.theatlantic.com/health/archive/2020/04/coronavirus-pandemic-airborne-go-outside-masks/609235/" txt="Nobody knows" />==.
 * Research from Hong Kong advices ==<txp::ext url="https://www.consumer.org.hk/ws_en/news/2020/covid-19-diymasks" txt="not to re-use face masks" />==.
+* An article in the Medium presenting evidence from a Belgian study that ==<txp::ext url="https://medium.com/@jurgenthoelen/belgian-dutch-study-why-in-times-of-covid-19-you-can-not-walk-run-bike-close-to-each-other-a5df19c77d08" txt="walking, running, and biking distances" />== should be over 4 metres. 
 * A PDF from the American Medical Association listing the steps <txp::ext url="https://cdn.jamanetwork.com/ama/content_public/journal/jama/0/jvp200035supp1_prod.pdf?Expires=2147483647&Signature=bIZCLS7ZLWTJd~U~H40JgiEGdFb3ggVUJpBvJ7KdANK7HgK1zaj4uWHvqweGym1nWfO~nXt9Y5i1vX79pF7zjjqfzmJAy3udTdpVVZQe07xnQIPcBMXLwZ5XjgTO8yKFXVIpxsXhrmOu8sGSpKiEmQ86ZCKfOTar7fMAGmUCtjiYVFwf31K3REWAA-r3hZyoZpqz3QKpVgpsRpF9fV9thQCq0~yvbvRKTH4PcoB~CZgmXH7rpVb6bILXQn5zBCphf6pyLAa4zIebUEKfCdCYdSdi9LeIEUsesqsYpNWgHJcr4K1LC0hFlst0RHQz-vZ7I-OvrX~5jel6zjjtuDQzjQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" txt="Taiwan did to flatten the curve" />.
 
 h3. Image credit
