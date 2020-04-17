@@ -98,6 +98,7 @@ h2. Useful links
 * An article in the Medium presenting evidence from a Belgian study that ==<txp::ext url="https://medium.com/@jurgenthoelen/belgian-dutch-study-why-in-times-of-covid-19-you-can-not-walk-run-bike-close-to-each-other-a5df19c77d08" txt="walking, running, and biking distances" />== should be over 4 metres. 
 * Experts reactions to questions about COVID-19 and viral load published at the <txp::ext txt="Science Media Centre" url="https://www.sciencemediacentre.org/expert-reaction-to-questions-about-covid-19-and-viral-load/" />
 * A PDF from the American Medical Association listing <txp::ext url="https://cdn.jamanetwork.com/ama/content_public/journal/jama/0/jvp200035supp1_prod.pdf?Expires=2147483647&Signature=bIZCLS7ZLWTJd~U~H40JgiEGdFb3ggVUJpBvJ7KdANK7HgK1zaj4uWHvqweGym1nWfO~nXt9Y5i1vX79pF7zjjqfzmJAy3udTdpVVZQe07xnQIPcBMXLwZ5XjgTO8yKFXVIpxsXhrmOu8sGSpKiEmQ86ZCKfOTar7fMAGmUCtjiYVFwf31K3REWAA-r3hZyoZpqz3QKpVgpsRpF9fV9thQCq0~yvbvRKTH4PcoB~CZgmXH7rpVb6bILXQn5zBCphf6pyLAa4zIebUEKfCdCYdSdi9LeIEUsesqsYpNWgHJcr4K1LC0hFlst0RHQz-vZ7I-OvrX~5jel6zjjtuDQzjQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" txt="the steps Taiwan did to flatten the curve" />.
+* <txp::ext url="https://www.nytimes.com/2020/04/10/well/live/coronavirus-face-masks-guides-protection-personal-protective-equipment.html" txt="Know your masks" /> from NY Times.
 
 h3. Image credit
 
