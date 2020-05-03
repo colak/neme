@@ -9,6 +9,7 @@
 </txp:evaluate>
 </url>
 </txp:section_list>
+<txp:hide>custom urls</txp:hide>
 <url><loc><txp:site_url />projects/state-machines/</loc></url>
 <url><loc><txp:site_url />projects/ttr/</loc></url>
 <url><loc><txp:site_url />projects/respublika/</loc></url>
@@ -17,6 +18,7 @@
 <url><loc><txp:site_url />projects/respublika/screenings/</loc></url>
 <url><loc><txp:site_url />projects/respublika/seminars/</loc></url>
 <url><loc><txp:site_url />projects/respublika/performances/</loc></url>
+<txp:hide>/custom urls</txp:hide>
 <txp:article_custom section="projects,about,texts,blog" exclude="2001,2240,2241" limit="9999" status="live">
 <url><loc><txp:permlink /></loc><lastmod><txp:modified format="%Y-%m-%dT%H:%M:%SZ" /></lastmod></url>
 </txp:article_custom>
