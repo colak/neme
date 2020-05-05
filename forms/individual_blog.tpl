@@ -31,7 +31,7 @@
 <txp:if_custom_field name="venue" value="#">
 <h4>Off line</h4>
 <txp:else />
-<p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p>
+<p><a rel="external noopener" href="<txp:custom_field name="venue" escape="" />">Website</a></p>
 </txp:if_custom_field>
 <txp:else />
 <p><a href="<txp:site_url />" rel="home">NeMe project</a></p>
