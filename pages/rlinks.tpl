@@ -9,14 +9,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -38,9 +33,13 @@ header('content-type: text/html; charset=utf-8');
 <txp:css name="print" format="flat.link" media="print" />
 
 
+<txp:if_section name="contact,newsletter">
+<meta name="Robots" content="noindex,follow" />
+<txp:else />
 <meta name="author" content="NeMe" />
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
+</txp:if_section>
 
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
@@ -52,7 +51,11 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
+<txp:if_section name="">
+<link rel="canonical" href="<txp:site_url />" />
+<txp:else />
 <link rel="canonical" href="<txp:site_url /><txp:section />/" />
+</txp:if_section>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -130,7 +133,9 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>
 <!-- the google js is no longer working --> 
+<txp:if_section name="publications">
 <script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
+</txp:if_section>
 <!-- support for battleforthenet.com -->
 <script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
 </txp:hide>
@@ -139,7 +144,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-body-======================</txp:hide>
 
-<body id="<txp:section />" class="no-js">
+<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
 <span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
@@ -154,17 +159,21 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
 <txp:hide>==================-social-======================</txp:hide>
 
+<txp:act_if_mobile>
+<txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
+</txp:act_if_mobile>
+
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -172,6 +181,9 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_article_list>
 
 <txp:hide>==================-links-======================</txp:hide>
+
+<txp:if_section name="related-links">
+
 
 <div class="grid_8">
 <div id="meta">
@@ -182,7 +194,7 @@ header('content-type: text/html; charset=utf-8');
 </div>
 <div>
 <h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of our projects</h4>
-<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
+<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
 
@@ -196,7 +208,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_variable name="haslink" value="#">
 <txp:link_name escape="html" />
 <txp:else />
-<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+<a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a>
 </txp:if_variable>
 </txp:linklist></div>
 
@@ -209,7 +221,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_variable name="haslink" value="#">
 <txp:link_name escape="html" />
 <txp:else />
-<a href="<txp:link_url />" rel="external"><txp:link_name escape="html" /></a>
+<a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a>
 </txp:if_variable>
 </txp:linklist>
 
@@ -225,6 +237,9 @@ header('content-type: text/html; charset=utf-8');
 </div>
 
 <div class="clear">&nbsp;</div>
+
+</txp:if_section>
+
 
 </txp:if_article_list>
 
@@ -252,7 +267,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_12 socialfeed"><div class="fb-page" data-href="https://www.facebook.com/NeMeArtsCentre/" data-tabs="timeline" data-width="450" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/NeMeArtsCentre/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NeMeArtsCentre/">NeMe</a></blockquote></div>
 </div>
 <txp:else />
-<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external" href="https://www.facebook.com/NeMeArtsCentre/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
+<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://www.facebook.com/NeMeArtsCentre/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external noopener" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 
 <txp:oui_cookie name="accept_twitter_cookies" duration="+1 year" values="yes" />
@@ -260,7 +275,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_12 socialfeed"><a class="twitter-timeline" data-lang="en" data-width="470" data-height="500" data-link-color="#cc0000" href="https://twitter.com/NeMeOrg?ref_src=twsrc%5Etfw">Tweets by NeMeOrg</a> <script async src="https://platform.twitter.com/widgets.js"></script></div><div class="clear">&nbsp;</div>
 </div>
 <txp:else />
-<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external" href="https://twitter.com/NeMeOrg">Twitter feed</a>. By viewing it here, you agree with Twitter's <a rel="external" href="https://twitter.com/privacy?lang=en">Privacy Policy</a>.</p><p class="centre" style="margin-bottom:1em;"><a class="red" rel="nofollow" href="?accept_twitter_cookies=yes">View Twitter feed</a></p><div class="clear">&nbsp;</div></div>
+<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://twitter.com/NeMeOrg">Twitter feed</a>. By viewing it here, you agree with Twitter's <a rel="external noopener" href="https://twitter.com/privacy?lang=en">Privacy Policy</a>.</p><p class="centre" style="margin-bottom:1em;"><a class="red" rel="nofollow" href="?accept_twitter_cookies=yes">View Twitter feed</a></p><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 
 <div class="clear">&nbsp;</div></div></div>
@@ -272,9 +287,8 @@ header('content-type: text/html; charset=utf-8');
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
-
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
