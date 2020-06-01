@@ -19,7 +19,6 @@
 <li role="menuitem"><a href="<txp:site_url />about/contact-us" <txp:if_article_id id="2240"> class="active" </txp:if_article_id> rel="nofollow noopener">Contact</a></li>
 <li role="menuitem"><a href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li>
 <li role="menuitem"><a href="http://forum.neme.org/" rel="external noopener">Forum</a></li>
-<txp:if_logged_in group="publisher"><txp:if_individual_article><li><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></li></txp:if_individual_article></txp:if_logged_in>
 </ul>
 </div>
 </div>
