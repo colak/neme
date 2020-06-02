@@ -10,14 +10,9 @@ header('content-type: text/html; charset=utf-8');
 
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -156,17 +151,20 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-menu-======================</txp:hide>
 
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
 <txp:hide>==================-social-======================</txp:hide>
 
+<txp:act_if_mobile><txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
+</txp:act_if_mobile>
+
 <div id="content"><div class="container_24">
 
 
@@ -178,7 +176,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_section name="about">
 <txp:if_search>
-<txp:article pgonly="1" searchall="0" searchsticky="1" />
+<txp:article pgonly="1" searchall="0" searchsticky="0" />
 <txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
 <hr />
@@ -204,7 +202,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
 
-<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="random" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
 </txp:images>
 </figure>
@@ -236,7 +234,6 @@ Cyprus</p>
 </div>
 <div class="clear">&nbsp;</div>
 
-<h3>Announcements</h3>
 <txp:output_form form="announce" />
 
 <txp:output_form form="social_logos" />
@@ -304,11 +301,13 @@ Cyprus</p>
 
 <txp:hide>==================-individual about-======================</txp:hide>
 
-<txp:if_article_section name="about">
-<txp:article form="">
+
+<txp:hide>=============================-live-========================</txp:hide>
+
+<txp:article form="" status="live">
 <txp:article_custom id='<txp:article_id />'>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="6"><txp:image /></txp:images></figure></txp:article_custom>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>'><txp:image /></txp:images></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
@@ -319,7 +318,7 @@ Cyprus</p>
 </txp:article>
 <div class="grid_6 frontthumbs" id="side" role="complementary">
  <div id="meta">
-<h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=2001"><txp:article_id /></a></txp:if_logged_in></h4>
+<h4>Address<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h4>
 <address><p>NeMe Arts Centre<br />
 Corner of Ellados and Enoseos streets<br />
 Limassol<br />
@@ -332,7 +331,6 @@ Cyprus</p>
 </address>
 </div>
 <div class="clear">&nbsp;</div>
-<h3>Announcements</h3>
 
 <txp:output_form form="announce" />
 
@@ -342,7 +340,6 @@ Cyprus</p>
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 </div>
-</txp:if_article_section>
 
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
@@ -354,8 +351,8 @@ Cyprus</p>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
