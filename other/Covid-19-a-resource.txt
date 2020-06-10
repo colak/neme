@@ -75,6 +75,8 @@ h2. Videos
 
  <txp::youtube video="2xLjCfmx0iE" id="vid3" txt="a demonstration on how to wear a surgical mask," setcookie="1" />
 
+ <txp::youtube video="ciUniZGD4tY" id="vid4" txt="a demonstration on how to wear a fabric mask," setcookie="1" />
+
 h2. Useful links
 
 * An automatically updated site designed by a Avi Schiffmann, a 17 high school junior from Mercer Island outside Seattle. It tracks the alarming ==<txp::ext url="https://ncov2019.live/" txt="spread of the virus" />== internationally and by country.
