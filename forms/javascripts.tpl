@@ -1,9 +1,6 @@
 <txp:act_if_mobile>
 <txp:else />
-<txp:act_if_mobile>
-<txp:else />
-<script src="<txp:site_url />js/default.js"></script>
-</txp:act_if_mobile>
+<txp:hide><script src="<txp:site_url />js/default-uncompressed.js"></script></txp:hide>
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:site_url />js/html5shiv.js"></script>
@@ -11,10 +8,10 @@
 <![endif]-->
 </txp:act_if_mobile>
 <!--[if gte IE 9]>
-<script src="<txp:site_url />js/jquery.js"></script>
+<script src="<txp:site_url />js/jquery2xx.js"></script>
 <![endif]-->
 <!--[if !IE]>-->
-<script src="<txp:site_url />js/jquery.js"></script>
+<script src="<txp:site_url />js/jquery2xx.js"></script>
 <txp:output_form form="responsiveslides.js" format="flat.script" />
 <script>
 $(function() {
@@ -33,13 +30,14 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 });
 </script>
 <!--<![endif]-->
-<txp:if_individual_article>
+
 <txp:output_form form="bxslider.js" format="flat.script" />
-</txp:if_individual_article>
+
 <script>
 $(document).ready(function(){
 // change class
 $('body').removeClass('no-js').addClass('js');
+
 // bxslider 
 if(window.innerWidth < 960) {
 $('.slider').bxSlider({
