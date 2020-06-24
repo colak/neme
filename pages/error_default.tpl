@@ -10,13 +10,9 @@
 
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+
 <!doctype html>
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<html lang="en-gb">
 
 <head>
 <meta charset="utf-8" />
@@ -45,10 +41,10 @@
 <script src="<txp:output_form form="jquery1x.js" context="flat.url" />"></script>
 <![endif]-->
 <!--[if gte IE 9]>
-<script src="<txp:output_form form="jquery.js" context="flat.url" />"></script>
+<script src="<txp:output_form form="jquery2xx.js" context="flat.url" />"></script>
 <![endif]-->
 <!--[if !IE]>-->
-<script src="<txp:output_form form="jquery.js" context="flat.url" />"></script>
+<script src="<txp:output_form form="jquery2xx.js" context="flat.url" />"></script>
 <!--<![endif]-->
 
 
@@ -83,7 +79,7 @@ menu.removeAttr('style');
 <body id="error">
 
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
@@ -108,8 +104,8 @@ menu.removeAttr('style');
 </div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
