@@ -91,7 +91,7 @@ header('content-type: text/html; charset=utf-8');
 <meta property="og:image:alt" content="<txp:images break="" id='<txp:variable name="imgmain" />'><txp:image_info type="alt" /></txp:images>" />
 </txp:if_custom_field>
 <txp:else />
-<meta property="og:image" content="h<txp:site_url />images/1087.jpg" />
+<meta property="og:image" content="<txp:site_url />images/1087.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="400" />
 <meta property="og:image:alt" content="NeMe logo" />
