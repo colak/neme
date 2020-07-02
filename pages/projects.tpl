@@ -55,7 +55,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<link rel="canonical" href="h<txp:site_url trim="/" /><txp:page_url />" />
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
