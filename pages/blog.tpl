@@ -48,11 +48,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
-<txp:else />
-<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
-</txp:if_section>
+<link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -268,7 +264,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_custom_field name="type" value="info"><h5>Date(s)</h5><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:else />
 </txp:if_custom_field>
-<h5>Posted</h5>
+<h5>Posted<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
