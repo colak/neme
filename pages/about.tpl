@@ -8,6 +8,9 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
+<txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
+    <txp:txp_die status="404" />
+</txp:evaluate>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
@@ -52,11 +55,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
-<txp:else />
-<link rel="canonical" href="<txp:site_url /><txp:section />/" />
-</txp:if_section>
+<link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -202,7 +201,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
 
-<txp:images category="random" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="random" limit='<txp:act_if_mobile>5<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
 </txp:images>
 </figure>
@@ -331,6 +330,7 @@ Cyprus</p>
 </address>
 </div>
 <div class="clear">&nbsp;</div>
+
 
 <txp:output_form form="announce" />
 
