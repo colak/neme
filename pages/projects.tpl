@@ -9,14 +9,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -55,7 +50,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
+<link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -149,17 +144,20 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
 <txp:hide>==================-social-======================</txp:hide>
 
+<txp:act_if_mobile>
+<txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
+</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -192,7 +190,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -271,11 +269,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-individual projects-======================</txp:hide>
 
-<txp:if_article_section name="projects">
-<txp:article form=""><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
+<txp:article form="">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
 <txp:thumbnail class="ds noprint" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main" id="main">
@@ -292,16 +290,14 @@ header('content-type: text/html; charset=utf-8');
 <h5>Venue</h5>
 <p><txp:custom_field name="venue" /></p>
 </txp:if_custom_field>
-<h5>Dates</h5>
+<h5>Dates<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <p><txp:custom_field name="dates" escape="" /></p>
 <p role="navigation" aria-label="breadcrumbs">&hellip; / <txp:section link="1" /> /
 <txp:if_article_category number="1"><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / </txp:if_article_category number="2"><txp:if_article_category number="2"><a href="/<txp:section />/<txp:category1 />/<txp:category2 />/"><txp:category2 /></a> / </txp:if_article_category></p>
 </div>
 
-<h3>Announcements</h3>
-<div class="announce">
 <txp:output_form form="announce" />
-</div>
+
 <txp:output_form form="social_logos" />
 
 
@@ -341,7 +337,6 @@ header('content-type: text/html; charset=utf-8');
 </div>
 <div class="clear">&nbsp;</div>
 </txp:article>
-</txp:if_article_section>
 
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
@@ -353,8 +348,8 @@ header('content-type: text/html; charset=utf-8');
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
