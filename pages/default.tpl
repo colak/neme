@@ -8,15 +8,11 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
-<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -37,12 +33,14 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
-<meta name="author" content="NeMe and/or <txp:linklist id='<txp:custom_field name="venue" escape="" />' break="" wraptag=""><txp:link_name /></txp:linklist>" />
 
-
-
+<txp:if_section name="contact,newsletter">
+<meta name="Robots" content="noindex,follow" />
+<txp:else />
+<meta name="author" content="NeMe and contributors" />
 <meta name="Robots" content="index,follow" />
 <meta name="revisit-after" content="10 days" />
+</txp:if_section>
 
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
@@ -54,11 +52,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
-<txp:else />
-<link rel="canonical" href="<txp:site_url /><txp:section />/" />
-</txp:if_section>
+<link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -133,7 +127,12 @@ header('content-type: text/html; charset=utf-8');
 <meta name="theme-color" content="#ffffff" />
 
 
+
 <txp:hide>
+<!-- the google js is no longer working --> 
+<txp:if_section name="publications">
+<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
+</txp:if_section>
 <!-- support for battleforthenet.com -->
 <script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
 </txp:hide>
@@ -157,7 +156,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
@@ -165,132 +164,99 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile>
 <txp:else />
-<div class="share large nosmall noprint">
+<div class="share large nosmall noprint" aria-hidden="true">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
 </txp:act_if_mobile>
-
-<txp:hide>==================-article-lists-======================</txp:hide>
-
 <div id="content"><div class="container_24">
-<txp:if_article_list>
 
+<txp:hide>==================-home page-======================</txp:hide>
 
-<txp:hide>==================-texts-======================</txp:hide>
-
+<txp:if_section name="">
 <txp:if_search>
-<txp:article pgonly="1" searchall="1" searchsticky="0" />
+<txp:variable name="searchterm_minchars" value="3" />
+<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';
+</txp:php></txp:variable>
+<txp:article pgonly="1" searchall="0" searchsticky="1" />
 <txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
 <hr />
 <txp:else />
 <p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
 <h3>Suggestions:</h3>
-<ul><li>Make sure all words are spelled correctly.</li>
+<ul>
+<li>Make sure all words are spelled correctly.</li>
 <li>Try fewer keywords</li>
-<li>Try different keywords</li></ul>
+<li>Try different keywords</li>
+<li>Use our menu links above. Parts of this site are not included in the search facility</li>
+</ul>
 </txp:if_search_results>
-<txp:article limit="999" searchall="0" />
+<txp:if_variable name="searchterm_tooshort" value="yes">
+<p>Sorry, your search term <em><txp:search_term /></em> is too short. Please try again with a word with at least <txp:variable name="searchterm_minchars" /> letters.</p>
 <txp:else />
-<div class="">
+<txp:article limit="999" searchall="0" />
+</txp:if_variable>
 
+</txp:if_search>
+</txp:if_section>
+
+<txp:if_section name="">
+<txp:if_search>
+<txp:else />
 <article class="grid_6 about" role="main">
-<h1>Texts</h1>
-<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
-<!--googleoff: all-->
-<p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
-<!--googleon: all-->
+<txp:article_custom id="2001">
+<h1><txp:title /></h1>
+<txp:excerpt />
+<p class="aright"><a href="<txp:site_url />about/">read more&#8230;</a></p>
+</txp:article_custom>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
-<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides" aria-hidden="true">
+<txp:images category="random" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
 </txp:images>
 </figure>
 
 <div class="clear">&nbsp;</div>
-</div>
 
-<main>
-<article class="titles">
-<div class="grid_6 nosmall"><h6>Author</h6></div>
-<div class="grid_18 nosmall"><h6>Title</h6></div>
-<div class="clear nosmall">&nbsp;</div>
-</article>
-
-<txp:article limit="999">
-<article><div class="grid_6"><txp:if_logged_in group="publisher"><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:if_logged_in></div>
-<div class="grid_18"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
-<div class="clear noprint">&nbsp;</div></article>
-</txp:article>
-</main>
-</txp:if_search>
-</txp:if_article_list>
-
-
-<txp:hide>==================-individual articles-======================</txp:hide>
-
-<txp:if_individual_article>
-
-
-<txp:hide>==================-individual texts-======================</txp:hide>
-
-
-<txp:article form="" listform="">
-<article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
-<h1><txp:title /></h1>
-<span class="clear">&nbsp;</span>
-<!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
-<txp:body />
-</article>
-<div class="grid_6" id="side" role="complementary">
-<div itemscope itemtype="http://schema.org/Person" id="meta">
-<p class="linklist">Text by <txp:linklist id='<txp:custom_field name="venue" escape="" />' break=" &amp; " wraptag="">
-<txp:variable name="linkurl" value='<txp:link_url />' />
-<txp:if_variable name="linkurl" value="#">
-<span itemprop="author"><txp:link_name /></span>
-<txp:else />
-<a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
-</txp:if_variable>
-</txp:linklist></p>
-<time class="published" datetime="<txp:posted format="%Y-%m-%dT%T" />">
-Posted: <txp:posted format="%b %d, %Y" /></time>
-</div>
-
-<h3>Announcements</h3>
+<div class="grid_6 frontthumbs noprint">
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-
-<div class="sub">
-<txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
-<txp:if_variable name="find">
-<txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="By the same author" labeltag="h3">
-<txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
-{$<({#row}|21).?(<li><a href="<txp:permlink />"><txp:title /></a></li>)}
-</txp:etc_query>
-</txp:if_variable>
-<txp:variable name="relatedtitles" />
-<txp:article_custom sort="rand()" section="texts" exclude='<txp:article_id />,<txp:variable name="relatedtexts" />' limit='<txp:if_variable name="relatedtexts">15<txp:else />20</txp:if_variable>' break="li" wraptag="ul" class="submenu" label="Other Texts" labeltag="h3">
-<a href="<txp:permlink />"><txp:title /></a>
+<h3>Blog</h3>
+<txp:article_custom section="blog" limit="4" c10="" status="live" break="li" wraptag="ul">
+<txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div>
 
-<txp:if_custom_field name="pubs_by_others">
-<txp:images id='<txp:custom_field name="pubs_by_others" />'>
-<div class="nosmall"><h4>Off line reading</h4>
-<a rel="external" href="<txp:image_info type="caption" />"><txp:image /></a>
-</txp:images></div>
-</txp:if_custom_field>
-
+<div class="grid_6 frontthumbs noprint">
+<txp:article_custom limit="10" section="projects" label="Activities" labeltag="h3" break="li" wraptag="ul" sort="Posted desc">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
 </div>
-</txp:article>
-</txp:if_individual_article>
 
-<txp:hide>==================-end individual articles-======================</txp:hide>
+<div class="smallbreak">&nbsp;</div>
+
+<div class="grid_6 frontthumbs noprint">
+<txp:article_custom section="texts" limit="10" sort="rand()" break="li" wraptag="ul" labeltag="h3" label="Texts">
+<txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</div>
+
+
+
+<div class="grid_6 frontthumbs noprint">
+<h3>Forum</h3>
+<ul><txp:php> echo file_get_contents('http://forum.neme.org/extern-1.php');</txp:php></ul>
+<txp:output_form form="social_logos" />
+</div>
+
+<div class="clear">&nbsp;</div>
+</txp:if_search>
+</txp:if_section>
+
 
 <div class="clear">&nbsp;</div>
 <span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
@@ -299,8 +265,8 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
