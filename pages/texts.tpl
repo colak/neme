@@ -9,14 +9,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -29,7 +24,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:css name="default" format="flat.link" media="all" />
+<txp:css name="default" media="all" format="flat.link" />
 <txp:if_article_list><txp:css name="articlelists" format="flat.link" media="all" /></txp:if_article_list>
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
@@ -54,11 +49,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
-<txp:else />
-<link rel="canonical" href="<txp:site_url /><txp:section />/" />
-</txp:if_section>
+<link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -157,7 +148,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
@@ -240,9 +231,12 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:article form="" listform="">
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
+
 <h1><txp:title /></h1>
 <p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p>
+
 <txp:body />
+
 </article>
 </txp:article>
 <div class="grid_6" id="side" role="complementary">
@@ -255,6 +249,7 @@ header('content-type: text/html; charset=utf-8');
 <a rel="author external" href="<txp:link_url />"><txp:link_name /></a>
 </txp:if_variable>
 </txp:linklist></p>
+<txp:if_logged_in><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></p></txp:if_logged_in>
 <time class="published" datetime="<txp:posted format="%Y-%m-%dT%T" />">
 Posted: <txp:posted format="%b %d, %Y" /></time>
 </div>
@@ -291,14 +286,15 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 alpha omega nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
