@@ -271,11 +271,11 @@ nav ul:after{content:"";display:table;clear:left}
 .logo1{max-height:150px;margin-bottom:1em}
 
 #content {margin:0;padding:2em 0 0 0}
-.vimeoeucookies {display:table;width:100%;border-radius: 8px;margin:1em 0}
+vimeoeucookies {display:table;width:100%;border-radius: 8px;margin:1em 0}
 .vimeoeucookies, .cookies {background-color:#ffc;}
-.vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.25em;padding:.7em .0 0 .7em;margin:0 0 1em 0}
+.vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.25em;padding:.7em;margin:0 0 1em 0}
 .vimeoeucookies a, .socialeucookies a {color:#cc0000}
-.vimeoeucookies p.red a, .socialeucookies a.red {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+.vimeoeucookies p.red a, .socialeucookies a.red {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
 .social {background-color:#fff;margin-top:10px;padding:2px;display:block;
 display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: center;}
