@@ -271,7 +271,7 @@ nav ul:after{content:"";display:table;clear:left}
 .logo1{max-height:150px;margin-bottom:1em}
 
 #content {margin:0;padding:2em 0 0 0}
-vimeoeucookies {display:table;width:100%;border-radius: 8px;margin:1em 0}
+.vimeoeucookies {display:table;width:100%;border-radius: 8px;margin:1em 0}
 .vimeoeucookies, .cookies {background-color:#ffc;}
 .vimeoeucookies p, .socialeucookies p {color:#000;font-size:1.25em;padding:.7em;margin:0 0 1em 0}
 .vimeoeucookies a, .socialeucookies a {color:#cc0000}
