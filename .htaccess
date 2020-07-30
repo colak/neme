@@ -5,7 +5,8 @@
 #SetHandler php55-fcgi
 #SetHandler php56-fcgi
 #SetHandler php70-cgi
-SetHandler php72-cgi
+#SetHandler php72-cgi
+SetHandler php74-cgi
 </FilesMatch>
 
 
