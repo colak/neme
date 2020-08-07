@@ -7,13 +7,13 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
-
+<txp:adi_mobile />
 
 <txp:hide><txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in></txp:hide>
 
 <!doctype html>
 <html lang="en-gb">
-<txp:adi_mobile />
+
 <head>
 <title><txp:page_title /></title>
 <meta charset="utf-8">
