@@ -1,16 +1,16 @@
-<txp:act_if_mobile>
+<txp:adi_if_mobile>
 <txp:else />
 <form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
-<input type="hidden" value="any" name="m" />
+<input type="hidden" value="all" name="m" />
 <label for="site">Site
 <select id="site" name="site">
 <txp:php>
 // simple way to auto-generate <options>
 $sites = array(
 // site title => url/?q=
-'NeMe' => '<txp:site_url />?m=any&amp;q=',
+'NeMe' => '<txp:site_url />?m=all&amp;q=',
 'Respublika' => 'http://respublika.neme.org/?m=any&amp;q=',
 'Forum' => '<txp:site_url />search.php?action=search&amp;keywords=',
 );
@@ -30,8 +30,9 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
 </form>
-</txp:act_if_mobile>
+</txp:adi_if_mobile>
 <p><txp:if_article_list>
+
 
 <txp:if_section name="about,projects,texts">
 &copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
