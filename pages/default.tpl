@@ -1,3 +1,5 @@
+<txp:adi_mobile />
+
 <txp:php>
 if (isset($_POST['submit'])) {
 $url = $_POST['site'].$_POST['terms'];
@@ -7,7 +9,6 @@ header('Location: '.$url);
 header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
-<txp:adi_mobile />
 
 <txp:hide><txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in></txp:hide>
 
