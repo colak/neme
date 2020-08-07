@@ -9,14 +9,15 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
-<!doctype html>
 
-<!--[if lt IE 7]> <html lang="en-gb" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7]> <html lang="en-gb" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8]> <html lang="en-gb" class="ie ie8 lte9 lte8"> <![endif]-->
-<!--[if IE 9]> <html lang="en-gb" class="ie ie9 lte9"> <![endif]-->
-<!--[if gt IE 9]> <html lang="en-gb" class="ie10"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en-gb"> <!--<![endif]-->
+<txp:if_article_list>
+<txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
+    <txp:txp_die status="404" />
+</txp:evaluate>
+</txp:if_article_list>
+
+<!doctype html>
+<html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
@@ -26,7 +27,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
+<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:css name="default" format="flat.link" media="all" />
@@ -34,7 +35,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
+<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 <meta name="author" content="NeMe or other publishers" />
@@ -144,18 +145,22 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<header class="header noprint"><a class="" href="<txp:site_url />" rel="home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" width="50" height="50" /></a></header>
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
 
 <txp:output_form form="colak_menu" />
 
 <txp:hide>==================-social-======================</txp:hide>
 
 <div class="clear">&nbsp;</div>
+
+<txp:adi_if_mobile>
+</txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
+</txp:adi_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-publications-======================</txp:hide>
@@ -165,7 +170,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom section="projects,about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:if_custom_field>
@@ -178,7 +183,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_different>
 <div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
 <a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" /></a></span>
-<figcaption itemprop="caption" class="grid_17 prefix_1"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
+<figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
 </txp:if_different>
@@ -205,8 +210,8 @@ header('content-type: text/html; charset=utf-8');
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
 <txp:output_form form="cookies" />
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
