@@ -8,11 +8,15 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
+<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+
+
+<txp:if_article_list>
 <txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
     <txp:txp_die status="404" />
 </txp:evaluate>
+</txp:if_article_list>
 
-<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
 <!doctype html>
 <html lang="en-gb">
@@ -25,7 +29,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
+<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:css name="default" format="flat.link" media="all" />
@@ -33,7 +37,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
+<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 
@@ -156,13 +160,13 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile><txp:else />
+<txp:adi_if_mobile><txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-</txp:act_if_mobile>
+</txp:adi_if_mobile>
 
 <div id="content"><div class="container_24">
 
@@ -201,7 +205,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
 
-<txp:images category="random" limit='<txp:act_if_mobile>5<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="random" limit='<txp:adi_if_mobile>5<txp:else />8</txp:adi_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
 </txp:images>
 </figure>
@@ -306,7 +310,7 @@ Cyprus</p>
 <txp:article form="" status="live">
 <txp:article_custom id='<txp:article_id />'>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>'><txp:image /></txp:images></figure></txp:article_custom>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit='<txp:adi_if_mobile>4<txp:else />8</txp:adi_if_mobile>'><txp:image /></txp:images></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
