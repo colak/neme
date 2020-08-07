@@ -1,4 +1,4 @@
-<txp:act_if_mobile>
+<txp:adi_if_mobile>
 <txp:else />
 <txp:hide><script src="<txp:site_url />js/default-uncompressed.js"></script></txp:hide>
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
@@ -6,7 +6,7 @@
 <script src="<txp:site_url />js/html5shiv.js"></script>
 <script src="<txp:site_url />js/jquery1x.js"></script>
 <![endif]-->
-</txp:act_if_mobile>
+</txp:adi_if_mobile>
 <!--[if gte IE 9]>
 <script src="<txp:site_url />js/jquery2xx.js"></script>
 <![endif]-->
