@@ -1,4 +1,4 @@
-<txp:adi_mobile />
+<txp:adi_mobile include="tablet" />
 
 <txp:php>
 if (isset($_POST['submit'])) {
