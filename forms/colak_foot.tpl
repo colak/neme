@@ -3,12 +3,12 @@
 <div class="container_24">
 <div class="grid_18" id="searchsites">
 <txp:output_form form="colak-search" />
-<txp:hide><txp:search_input match="any" /></txp:hide>
+<txp:hide><txp:search_input match="all" /></txp:hide>
 </div>
 
-<div class="grid_6" id="copyright">
+<txp:adi_if_mobile><div class="grid_24" id="copyright"><txp:else /><div class="grid_6" id="copyright"></txp:adi_if_mobile>
 <p><a href="<txp:site_url />about/privacy-policy" rel="license">Privacy policy</a> <txp:article_custom id="2178">(Modified on <txp:modified format="%d %B %G at %r" />)</txp:article_custom><br />
-This site archives <txp:article_custom section="projects,about,blog,texts" pageby="1" pgonly /> posts since it was launched <txp:fha_time_diff year="2003" month="1" day="18" /> ago and it was last modified on 
+This site archives <txp:article_custom section="projects,about,blog,texts" pageby="1" pgonly escape="number" /> posts since it was launched <txp:fha_time_diff year="2003" month="1" day="18" /> ago and it was last modified on 
 <txp:article_custom section="projects,texts,blog,about" sort="LastMod desc" limit="1" form="">
 <txp:modified format="%d %B %G at %r" />.
 </txp:article_custom><br />
