@@ -21,7 +21,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
+<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:hide><link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/fonts.css"></txp:hide>
@@ -30,7 +30,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
+<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 
@@ -51,6 +51,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:else />
 <txp:if_article_list>
 <link rel="canonical" href="<txp:page_url context />" />
+<txp:hide><link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" /></txp:hide>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -150,14 +151,14 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile>
+<txp:adi_if_mobile>
 <txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-</txp:act_if_mobile>
+</txp:adi_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -190,7 +191,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:adi_if_mobile>4<txp:else />8</txp:adi_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -273,7 +274,7 @@ header('content-type: text/html; charset=utf-8');
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
 <txp:thumbnail class="ds noprint" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit='<txp:adi_if_mobile>4<txp:else />8</txp:adi_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main" id="main">
