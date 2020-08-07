@@ -9,21 +9,22 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 
-<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+<txp:hide><txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in></txp:hide>
 
 <!doctype html>
 <html lang="en-gb">
-
+<txp:adi_mobile />
 <head>
 <title><txp:page_title /></title>
 <meta charset="utf-8">
-<txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
 <meta name="generator" content="Textpattern CMS"/>
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<txp:adi_if_mobile>
+<meta http-equiv="x-rim-auto-match" content="none" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+</txp:adi_if_mobile>
 
 <txp:css name="default" format="flat.link" media="all" />
 <txp:if_article_list><txp:css name="articlelists" format="flat.link" media="all" /></txp:if_article_list>
