@@ -9,6 +9,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+<txp:hide><txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context="id, s, c, context, q, m, month, author, commented, pg" />"'>
+    <txp:txp_die status="404" />
+</txp:evaluate></txp:hide>
 
 <!doctype html>
 <html lang="en-gb">
@@ -21,7 +24,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
+<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
@@ -30,7 +33,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" media="all" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:act_if_mobile><txp:css name="mobile" media="all" format="flat.link" /></txp:act_if_mobile>
+<txp:adi_if_mobile><txp:css name="mobile" media="all" format="flat.link" /></txp:adi_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 <meta name="author" content="NeMe and contributors" />
@@ -48,7 +51,11 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<link rel="canonical" href="<txp:page_url context />" />
+<txp:if_section name="">
+<link rel="canonical" href="<txp:site_url />" />
+<txp:else />
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
+</txp:if_section>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_article_list>
@@ -149,14 +156,14 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile>
+<txp:adi_if_mobile>
 <txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-</txp:act_if_mobile>
+</txp:adi_if_mobile>
 <div id="content"><div class="container_24">
 
 
@@ -264,7 +271,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:if_custom_field name="type" value="info"><h5>Date(s)</h5><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:else />
 </txp:if_custom_field>
-<h5>Posted<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
+<h5>Posted<txp:if_logged_in> <a class="noprint" href="<txp:site_url type="admin" />index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
