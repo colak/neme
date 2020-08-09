@@ -275,6 +275,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:etc_query name="relatedtitles" data='(<txp:variable name="find" />) AND ID != <txp:article_id />' markup="db" populate="article"  wraptag="ul" class="related_articles" label="By the same author" labeltag="h3">
 <txp:variable name="relatedtexts" value='<txp:variable name="relatedtexts" />,<txp:article_id />' />
 {$<({#row}|21).?(<li><a href="<txp:permlink />"><txp:title /></a></li>)}
+<txp:else />
 </txp:etc_query>
 </txp:if_variable>
 <txp:variable name="relatedtitles" />
