@@ -233,7 +233,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:body /></article>
 </txp:article>
 </main>
-<txp:article section="blog" status="live" c10="">
+<txp:article status="live" c10="">
 <div class="clear">&nbsp;</div>
 <nav class="paginator" aria-label="page_nav">
 <txp:variable name="prev1" value='<txp:link_to_prev />' />
