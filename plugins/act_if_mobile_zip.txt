@@ -1,0 +1,51 @@
+# Name: act_if_mobile v0.1.2 (compressed)
+# Updated for txp 4.8.2
+# Type: Public plugin
+# This plugin adds conditional tag to determine, if user is browsing from mobile device, or not
+# Author: Andrew Ilin (and Andy Moore)
+# URL: http://www.angrycat.info
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+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
+9gHIrOsRAAA=
