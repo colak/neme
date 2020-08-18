@@ -27,7 +27,7 @@ hr{width:100%}
 #projects section .grid_5, #projects section .grid_6, #projects section .grid_13 {width:98%}
 #blog .grid_6, #blog .grid_18 {width:100%;clear:both;}
 nav.pagination {display:block}
-#menu-primary-items,nav a{display:block}
+/* #menu-primary-items,nav a{display:block} */
 nav.pagination ul {width:auto;float:left;display:inline;padding:0;margin:0}
 nav.pagination li{width:auto;float:left;display:inline;padding:0;margin:1px}
 nav.pagination a, nav.pagination span{padding:2px}
