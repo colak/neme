@@ -307,4 +307,4 @@ Disallow:/
 User-agent: ahrefsbot
 Disallow:/
 
-Sitemap: http://www.neme.org/?rah_sitemap=sitemap
+Sitemap: http://www.neme.org/sitemap/
