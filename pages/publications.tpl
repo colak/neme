@@ -27,7 +27,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
+<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:css name="default" format="flat.link" media="all" />
@@ -35,7 +35,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
+<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 <meta name="author" content="NeMe or other publishers" />
@@ -153,14 +153,14 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 </txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-publications-======================</txp:hide>
@@ -170,7 +170,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom section="projects,about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" loading="lazy" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:if_custom_field>
@@ -182,7 +182,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
 <txp:if_different>
 <div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
-<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" /></a></span>
+<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" loading="lazy" /></a></span>
 <figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
@@ -190,11 +190,13 @@ header('content-type: text/html; charset=utf-8');
 </txp:images>
 
 
+<txp:act_if_mobile>
+<txp:else />
 <div class="line"><h4 class="grid_23 alpha" id="cited">NeMe citations</h4><a class="nosmall noprint" href="#other"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:images category="cite" breakby="2" break="<div class='clear'>&nbsp;</div>" limit="999" sort="alt desc">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
-<span itemprop="image" class="grid_7 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" /></span>
+<span itemprop="image" class="grid_7 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" loading="lazy"/></span>
 <figcaption itemprop="caption" class="grid_17 omega"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in>
 </figcaption></figure>
@@ -205,6 +207,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 <span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+</txp:act_if_mobile>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
