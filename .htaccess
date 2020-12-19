@@ -79,10 +79,6 @@ ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
 </IfModule>
 
-
-#ErrorDocument 403 /403.php
-Header append X-FRAME-OPTIONS "SAMEORIGIN"
-
 #RewriteEngine on
 #RewriteCond %{HTTP_HOST} ^neme.org [NC]
 #RewriteRule ^(.*)$ http://www.neme.org/$1 [L,R=301] 
