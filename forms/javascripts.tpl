@@ -1,17 +1,19 @@
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 <txp:else />
-<txp:hide><script src="<txp:site_url />js/default-uncompressed.js"></script></txp:hide>
+<txp:hide>
+<script src="<txp:site_url />js/default-uncompressed.js"></script></txp:hide>
 <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
-<!--[if (IE 6)|(IE 7)|(IE 8)]>
+<txp:hide><!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:site_url />js/html5shiv.js"></script>
 <script src="<txp:site_url />js/jquery1x.js"></script>
 <![endif]-->
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 <!--[if gte IE 9]>
 <script src="<txp:site_url />js/jquery2xx.js"></script>
 <![endif]-->
 <!--[if !IE]>-->
-<script src="<txp:site_url />js/jquery2xx.js"></script>
+</txp:hide>
+<script src="<txp:site_url />js/jquery3x.js"></script>
 <txp:output_form form="responsiveslides.js" format="flat.script" />
 <script>
 $(function() {
