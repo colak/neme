@@ -8,7 +8,7 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
-<txp:hide><txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in></txp:hide>
+<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
 <!doctype html>
 <html lang="en-gb">
