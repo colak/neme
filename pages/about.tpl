@@ -46,7 +46,11 @@ header('content-type: text/html; charset=utf-8');
 <meta name="Robots" content="noindex,follow" />
 <txp:else />
 <meta name="author" content="NeMe" />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
+<meta name="Robots" content="noindex,nofollow" />
+<txp:else />
 <meta name="Robots" content="index,follow" />
+</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
 </txp:if_article_id>
 
