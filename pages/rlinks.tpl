@@ -27,7 +27,7 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:adi_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:adi_if_mobile>
+<txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:css name="default" format="flat.link" media="all" />
@@ -35,17 +35,18 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
+<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 
-<txp:if_section name="contact,newsletter">
-<meta name="Robots" content="noindex,follow" />
-<txp:else />
 <meta name="author" content="NeMe" />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
+<meta name="Robots" content="noindex,nofollow" />
+<txp:else />
 <meta name="Robots" content="index,follow" />
+</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
-</txp:if_section>
+
 
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
@@ -171,14 +172,14 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 <txp:else />
 <div class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" loading="lazy" width="30" height="30" alt="share on facebook" /></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="share on twitter"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" loading="lazy"  alt="share on Redit"/></a>
 </div>
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 
 <div id="content"><div class="container_24">
 
