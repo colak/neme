@@ -27,17 +27,17 @@ header('content-type: text/html; charset=utf-8');
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 <meta http-equiv="x-rim-auto-match" content="none" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 
 <txp:css name="default" media="all" format="flat.link" />
 <txp:if_article_list><txp:css name="articlelists" format="flat.link" media="all" /></txp:if_article_list>
 <!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
 <!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:adi_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:adi_if_mobile>
+<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
 <txp:if_individual_article>
@@ -46,8 +46,11 @@ header('content-type: text/html; charset=utf-8');
 <meta name="author" content="NeMe and/or respective authors" />
 </txp:if_individual_article>
 
-
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
+<meta name="Robots" content="noindex,nofollow" />
+<txp:else />
 <meta name="Robots" content="index,follow" />
+</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
 
 <meta name="geo.region" content="CY" />
@@ -165,14 +168,14 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 <txp:else />
 <div class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
 </div>
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
@@ -286,9 +289,11 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <txp:if_custom_field name="pubs_by_others">
 <txp:images id='<txp:custom_field name="pubs_by_others" />'>
-<div class="nosmall"><h4>Off line reading</h4>
-<a rel="external" href="<txp:image_info type="caption" />"><txp:image /></a>
-</txp:images></div>
+<div class="nosmall">
+<h4>Off line reading</h4>
+<a rel="external" href="<txp:image_info type="caption" />"><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:custom_field name="pubs_by_others" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image at NeMe" />" class="<txp:yield name="class" default="image" />" /></a>
+</txp:images>
+</div>
 </txp:if_custom_field>
 
 </div>
