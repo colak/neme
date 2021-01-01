@@ -8,7 +8,7 @@ header('content-type: text/html; charset=utf-8');
 }
 </txp:php>
 
-<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
+<txp:hide><txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in></txp:hide>
 
 <!doctype html>
 <html lang="en-gb">
@@ -33,10 +33,12 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
 <txp:css name="print" format="flat.link" media="print" />
 
-
-
 <meta name="author" content="NeMe" />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
+<meta name="Robots" content="noindex,nofollow" />
+<txp:else />
 <meta name="Robots" content="index,follow" />
+</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
 
 
