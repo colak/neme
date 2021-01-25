@@ -307,7 +307,7 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 .smallbreak {display:none;}
 .paginator .prev, .paginator .next {width:49%;clear:none;display:inline;float:left;margin-left:.5%;margin-right:.5%}
 
-.comRequired::after{content:'\0261A';font-size:1.5em;margin-left:.25em;color:#EE0000}
+label.comRequired::after{content:'\0261A';font-size:1.5em;margin-left:.25em;color:#EE0000}
 .tooltip .tooltiptext {display:none}
 
 @media screen and (min-width: 960px){
