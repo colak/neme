@@ -52,10 +52,21 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
+<txp:if_section>
 <link rel="canonical" href="<txp:page_url context />" />
-<txp:hide><link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" /></txp:hide>
+<txp:else />
+<txp:if_category>
+<txp:variable name="ct2" value'<txp:category2 />' />
+<link rel="canonical" href="<txp:page_url context />" /><txp:category1 />/<txp:if_variable name="ct2"><txp:variable name="ct2" /></txp:if_variable>/>
+<txp:else />
+<link rel="canonical" href="<txp:page_url context />" /><txp:category1 />/>
+</txp:if_category>
+</txp:if_section>
+<txp:else />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
+</txp:evaluate>
 </txp:if_article_list>
 </txp:if_search>
 
@@ -159,11 +170,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile>
 <txp:else />
-<div class="share large nosmall noprint">
+<aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
-</div>
+</aside>
 </txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
