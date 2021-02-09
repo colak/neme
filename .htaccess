@@ -55,7 +55,7 @@ Header append X-XSS-Protection "1; mode=block"
 Header append X-Frame-Options "DENY"
 Header append X-Content-Type-Options "nosniff"
 Header set Cache-Control "no-transform"
-Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
+Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
 </ifModule>
 
 
@@ -213,10 +213,35 @@ Redirect 301 /events/ttr2-everybody-knows-this-is-nowhere /projects/ttr/ttr2-eve
 Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-culture-memory-and-trauma
 Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time
 Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1
-Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttps://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation
+Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation
+Redirect 301 /1800/differentiating-between-access-interaction-and-participation /texts/differentiating-between-access-interaction-and-participation
 RedirectMatch 301 ^/participations/?(.+)?$ /projects/participations/$1
 RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
 Redirect 301 /events/the-state /projects/hosted/the-state
+Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear
+Redirect 301 /671/flashflood-2007 /blog/flashflood-2007
+
+Redirect 301 /82/why-have-there-been-no-great-net-artists /texts/why-have-there-been-no-great-net-artists?redirected=1
+Redirect 301 /118/leaps-of-faith /texts/leaps-of-faith?redirected=1
+Redirect 301 /137/nomadism /texts/nomadism?redirected=1
+Redirect 301 /250/from-zombie-to-cyborg /texts/from-zombie-to-cyborg?redirected=1
+Redirect 301 /271/negotiating-identities /texts/negotiating-identities?redirected=1
+Redirect 301 /279/pragmatic-media-philosophy /texts/pragmatic-media-philosophy?redirected=1
+Redirect 301 /303/analytic-of-the-dimensionless /texts/analytic-of-the-dimensionless?redirected=1
+Redirect 301 /350/norwich-international-animation-festival-2006 /blog/norwich-international-animation-festival-2006?redirected=1
+Redirect 301 /354/news-from-nowhere /texts/news-from-nowhere?redirected=1
+Redirect 301 /452/knowing-bodies /texts/knowing-bodies?redirected=1
+Redirect 301 /492/unframed-landscapes /texts/unframed-landscapes?redirected=1
+Redirect 301 /524/collecting-new-media-art /texts/collecting-new-media-art?redirected=1
+Redirect 301 /548/environmental-awareness /texts/environmental-awareness?redirected=1
+Redirect 301 /571/preserving-new-media /texts/preserving-new-media?redirected=1
+Redirect 301 /591/trouble-at-the-interface-2 /texts/trouble-at-the-interface-2?redirected=1
+Redirect 301 /645/immersive-sight /texts/immersive-sight?redirected=1
+Redirect 301 /662/shaken-hands-with-statues /texts/shaken-hands-with-statues?redirected=1
+Redirect 301 /843/the-archival-event /texts/the-archival-event?redirected=1
+Redirect 301 /1000/locative-media-and-spatial-narratives /texts/locative-media-and-spatial-narratives?redirected=1
+Redirect 301 /1111/writing-within-the-map /texts/writing-within-the-map?redirected=1
+
 
 
 RewriteEngine on
