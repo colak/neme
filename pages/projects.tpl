@@ -52,16 +52,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section>
-<link rel="canonical" href="<txp:page_url context />" />
-<txp:else />
-<txp:if_category>
-<txp:variable name="ct2" value'<txp:category2 />' />
-<link rel="canonical" href="<txp:page_url context />" /><txp:category1 />/<txp:if_variable name="ct2"><txp:variable name="ct2" /></txp:if_variable>/>
-<txp:else />
-<link rel="canonical" href="<txp:page_url context />" /><txp:category1 />/>
-</txp:if_category>
-</txp:if_section>
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
 <txp:else />
 <txp:evaluate query='contains("<txp:page_url />","?accept_")'>
 <txp:else />
