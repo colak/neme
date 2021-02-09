@@ -46,11 +46,8 @@ header('content-type: text/html; charset=utf-8');
 <meta name="author" content="NeMe and/or respective authors" />
 </txp:if_individual_article>
 
-<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nofollow" />
-<txp:else />
+
 <meta name="Robots" content="index,follow" />
-</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
 
 <meta name="geo.region" content="CY" />
@@ -170,11 +167,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile>
 <txp:else />
-<div class="share large nosmall noprint">
+<aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
-</div>
+</aside>
 </txp:act_if_mobile>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -203,10 +200,7 @@ header('content-type: text/html; charset=utf-8');
 
 <article class="grid_6 about" role="main">
 <h1>Texts</h1>
-<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
-<!--googleoff: all-->
-<p>We apologise that since our site's redesign in October 2016 all of the bookmarks to these texts are broken but it was the only way to move the site forward.</p>
-<!--googleon: all-->
+<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. Our published texts are cited in a number of <a href="/publications/cited/">publications</a>, sites, and are used in the reading lists of many university courses. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
@@ -231,6 +225,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear noprint">&nbsp;</div></article>
 </txp:article>
 </main>
+<div class="line"><h5 class="grid_23 alpha" id="cited"><a href="/publications/cited/">Publications citing our content</a></h5><div class="clear">&nbsp;</div></div>
 </txp:if_search>
 </txp:if_article_list>
 
@@ -244,9 +239,15 @@ header('content-type: text/html; charset=utf-8');
 
 
 <txp:article form="" listform="">
+
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 
+<txp:if_request type="get" name="redirected">
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="bookmark"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+</txp:if_request>
+
 <h1><txp:title /></h1>
+
 <p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p>
 
 <txp:body />
