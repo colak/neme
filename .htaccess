@@ -215,7 +215,6 @@ RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
 Redirect 301 /events/the-state /projects/hosted/the-state
 Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear
 Redirect 301 /671/flashflood-2007 /blog/flashflood-2007
-#Redirect 301 /42/open-city-stepping-in-from-the-edge /texts/open-city
 
 RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?redirected=1
 Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?redirected=1
