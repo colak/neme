@@ -312,7 +312,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
-<txp:output_form form="javascripts" />
+<txp:if_article_list><txp:output_form form="javascripts" /></if_article_list>
 
 </body>
 </html>
