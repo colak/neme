@@ -155,7 +155,6 @@ RewriteRule ^.* - [F,L]
 RedirectMatch 301 ^/main/?(.+)?$ https://www.neme.org/$1
 RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
 Redirect 301 /reblog/out/ https://www.neme.org/
-# Redirect 301 /sitemap/ https://www.neme.org/
 Redirect 301 /arts_info/ https://www.neme.org/blog/
 Redirect 301 /archives/ https://www.neme.org/blog/
 Redirect 301 /archives2005/ https://www.neme.org/blog/
@@ -176,16 +175,13 @@ Redirect 301 /1721/pq-2015 https://www.neme.org/blog/pq-2015
 Redirect 301 /category/calls https://www.neme.org/blog/
 Redirect 301 /article/ /texts/
 Redirect 301 /call/ https://www.neme.org/blog/
-Redirect 301 /category/intransition /events/in-transition-cyprus-2006
+Redirect 301 /category/intransition /projects/in-transition-cyprus-2006
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
-Redirect 301 /category/ideodrome2006 /events/ideodrome-2006
+Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006
 Redirect 301 /about/about-neme /about/
-Redirect 301 /185/2030 https://www.neme.org/texts/2030
 Redirect 301 /nac/neme-arts-centre /nac/
 Redirect 301 /workshops/workshops /workshops/
-Redirect 301 /main/42/open-city-stepping-in-from-the-edge /texts/open-city
-Redirect 301 /185/2030 /texts/2030
-Redirect 301 /events/my-name-is-janez-jansa /events/improper-names
+Redirect 301 /events/my-name-is-janez-jansa /projects/improper-names
 Redirect 301 /blog/jonas-lund-and-elisa-lasowski /blog/jonas-lund-and-elisa-lasowski-press
 Redirect 301 /nac/ /about/neme-arts-centre
 Redirect 301 /workshops/ /about/workshops
@@ -214,35 +210,15 @@ Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-c
 Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time
 Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1
 Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation
-Redirect 301 /1800/differentiating-between-access-interaction-and-participation /texts/differentiating-between-access-interaction-and-participation
 RedirectMatch 301 ^/participations/?(.+)?$ /projects/participations/$1
 RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
 Redirect 301 /events/the-state /projects/hosted/the-state
 Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear
 Redirect 301 /671/flashflood-2007 /blog/flashflood-2007
+#Redirect 301 /42/open-city-stepping-in-from-the-edge /texts/open-city
 
-Redirect 301 /82/why-have-there-been-no-great-net-artists /texts/why-have-there-been-no-great-net-artists?redirected=1
-Redirect 301 /118/leaps-of-faith /texts/leaps-of-faith?redirected=1
-Redirect 301 /137/nomadism /texts/nomadism?redirected=1
-Redirect 301 /250/from-zombie-to-cyborg /texts/from-zombie-to-cyborg?redirected=1
-Redirect 301 /271/negotiating-identities /texts/negotiating-identities?redirected=1
-Redirect 301 /279/pragmatic-media-philosophy /texts/pragmatic-media-philosophy?redirected=1
-Redirect 301 /303/analytic-of-the-dimensionless /texts/analytic-of-the-dimensionless?redirected=1
-Redirect 301 /350/norwich-international-animation-festival-2006 /blog/norwich-international-animation-festival-2006?redirected=1
-Redirect 301 /354/news-from-nowhere /texts/news-from-nowhere?redirected=1
-Redirect 301 /452/knowing-bodies /texts/knowing-bodies?redirected=1
-Redirect 301 /492/unframed-landscapes /texts/unframed-landscapes?redirected=1
-Redirect 301 /524/collecting-new-media-art /texts/collecting-new-media-art?redirected=1
-Redirect 301 /548/environmental-awareness /texts/environmental-awareness?redirected=1
-Redirect 301 /571/preserving-new-media /texts/preserving-new-media?redirected=1
-Redirect 301 /591/trouble-at-the-interface-2 /texts/trouble-at-the-interface-2?redirected=1
-Redirect 301 /645/immersive-sight /texts/immersive-sight?redirected=1
-Redirect 301 /662/shaken-hands-with-statues /texts/shaken-hands-with-statues?redirected=1
-Redirect 301 /843/the-archival-event /texts/the-archival-event?redirected=1
-Redirect 301 /1000/locative-media-and-spatial-narratives /texts/locative-media-and-spatial-narratives?redirected=1
-Redirect 301 /1111/writing-within-the-map /texts/writing-within-the-map?redirected=1
-
-
+RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?redirected=1
+Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?redirected=1
 
 RewriteEngine on
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
