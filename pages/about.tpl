@@ -166,11 +166,11 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-social-======================</txp:hide>
 
 <txp:act_if_mobile><txp:else />
-<div class="share large nosmall noprint">
+<aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
-</div>
+</aside>
 </txp:act_if_mobile>
 
 <div id="content"><div class="container_24">
@@ -253,7 +253,7 @@ Cyprus</p>
 
 <h4>Publications (random)</h4><div class="grid_24">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
-<div class="otherpubs"><a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a></div>
+<div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><img src="/images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a></div>
 </txp:images>
 </div>
 <div class="clear">&nbsp;</div>
@@ -266,7 +266,7 @@ Cyprus</p>
 <div class="grid_6 nosmall frontthumbs">
 <h3>Projects</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
-<a href="<txp:site_url />projects/"><txp:thumbnail /></a>
+<a href="<txp:site_url />projects/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
 </txp:images>
 </div>
 
@@ -274,21 +274,21 @@ Cyprus</p>
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />publications/"><txp:thumbnail /></a>
+<a href="<txp:site_url />publications/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
 </txp:images>
 </div>
 
 <div class="grid_6 nosmall frontthumbs">
 <h3>Participations</h3>
 
-<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail /></a></txp:images>
+<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a></txp:images>
 </div>
 	
 <div class="grid_6 nosmall frontthumbs">
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />workshops/"><txp:thumbnail /></a>
+<a href="<txp:site_url />workshops/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
 </txp:images>
 </div>
 
