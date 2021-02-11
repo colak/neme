@@ -52,11 +52,7 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_category name="cited">
-<link rel="canonical" href="<txp:site_url /><txp:section />/<txp:category />/" />
-<txp:else />
-<link rel="canonical" href="<txp:site_url /><txp:section />/" />
-</txp:if_category>
+<link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
 </txp:if_section>
@@ -193,7 +189,7 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 
 <div class="grid_8"><p>Did you write an article citing any of our books or content in this website?</p>
-<p>Do send us the pdf, and the information we require, and we will be adding it to our list.</p></div>
+<p>Do send us the pdf of your text or book, and the remaining information we require, and we will be adding it to our list.</p></div>
 <div class="grid_16">
 <txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' label="" thanks="thank you your submission will be reviewed shortly." subject="NeMe Citations">
  <txp:com_connect_text name="FirstName" label="Your Name:" required="1" class="grid_24" /><br />
@@ -205,7 +201,7 @@ header('content-type: text/html; charset=utf-8');
  <txp:com_connect_file label="Select file" max="8000000" accept=".pdf" required="1" /><br />
  <txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
  <txp:com_connect_checkbox label="This is not spam" /><br />
- <txp:com_connect_secret label="This article"><txp:site_url />publications/cited/</txp:com_connect_secret>
+<txp:com_connect_secret label="This article"><txp:permlink /></txp:com_connect_secret>
  <txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
  <txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" /><br />
  <txp:com_connect_submit label="Submit" />
@@ -255,7 +251,6 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
-<txp:output_form form="javascripts" />
 
 </body>
 </html>
