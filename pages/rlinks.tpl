@@ -39,14 +39,13 @@ header('content-type: text/html; charset=utf-8');
 <txp:css name="print" format="flat.link" media="print" />
 
 
-<meta name="author" content="NeMe" />
-<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nofollow" />
+<txp:if_section name="contact,newsletter">
+<meta name="Robots" content="noindex,follow" />
 <txp:else />
+<meta name="author" content="NeMe" />
 <meta name="Robots" content="index,follow" />
-</txp:evaluate>
 <meta name="revisit-after" content="10 days" />
-
+</txp:if_section>
 
 <meta name="geo.region" content="CY" />
 <meta name="geo.placename" content="Limassol" />
@@ -174,11 +173,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile>
 <txp:else />
-<div class="share large nosmall noprint">
+<aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" loading="lazy" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" loading="lazy"  alt="share on Redit"/></a>
-</div>
+</aside>
 </txp:act_if_mobile>
 
 <div id="content"><div class="container_24">
@@ -295,7 +294,6 @@ header('content-type: text/html; charset=utf-8');
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
-<txp:output_form form="javascripts" />
 
 </body>
 </html>
