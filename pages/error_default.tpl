@@ -105,7 +105,6 @@ menu.removeAttr('style');
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
-<txp:output_form form="javascripts" />
 
 </body>
 </html>
