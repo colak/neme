@@ -1,4 +1,4 @@
-<txp:adi_if_mobile>
+<txp:act_if_mobile>
 <txp:else />
 <form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
@@ -10,9 +10,9 @@
 // simple way to auto-generate <options>
 $sites = array(
 // site title => url/?q=
-'NeMe' => '<txp:site_url />?m=all&amp;q=',
-'Respublika' => 'http://respublika.neme.org/?m=any&amp;q=',
-'Forum' => '<txp:site_url />search.php?action=search&amp;keywords=',
+'NeMe' => 'https://www.neme.org?m=all&amp;q=',
+'Respublika' => 'https://respublika.neme.org/?m=any&amp;q=',
+'Forum' => 'https://forum.neme.org/search.php?action=search&amp;keywords=',
 );
 // asort($sites);
 foreach ($sites as $title => $url) {
@@ -30,7 +30,7 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <input name="submit" type="submit" value="search" id="searchbutton" />
 </fieldset>
 </form>
-</txp:adi_if_mobile>
+</txp:act_if_mobile>
 <p><txp:if_article_list>
 
 
