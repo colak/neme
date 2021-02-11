@@ -9,9 +9,9 @@ header('content-type: text/html; charset=utf-8');
 </txp:php>
 
 <txp:if_logged_in group="publisher" not><txp:pat_speeder group="publisher" gzip="0"/></txp:if_logged_in>
-<txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context="id, s, c, context, q, m, month, author, commented, pg, accept_vimeo_cookies" />"'>
+<txp:hide><txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context="id, s, c, context, q, m, month, author, commented, pg, accept_vimeo_cookies" />"'>
     <txp:txp_die status="404" />
-</txp:evaluate>
+</txp:evaluate></txp:hide>
 <!doctype html>
 <html lang="en-gb">
 
@@ -161,11 +161,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile>
 <txp:else />
-<div class="share large nosmall noprint">
+<aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
 <a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
-</div>
+</aside>
 </txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
@@ -305,7 +305,6 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
-<txp:output_form form="javascripts" />
 
 </body>
 </html>
