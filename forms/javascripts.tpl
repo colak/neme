@@ -1,3 +1,4 @@
+<txp:if_search not>
 <script src="<txp:site_url />js/jquery3x.js"></script>
 <txp:output_form form="responsiveslides.js" format="flat.script" />
 <script>
@@ -54,3 +55,4 @@ namespace: "rslides",
 });
 });
 </script>
+</txp:if_search>
