@@ -197,9 +197,9 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-slides-======================</txp:hide>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>4<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>6<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -281,8 +281,8 @@ header('content-type: text/html; charset=utf-8');
 <txp:article form="">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
-<txp:thumbnail class="ds noprint" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit='<txp:act_if_mobile>4<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image /></txp:images></txp:if_variable></figure>
+<txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></txp:if_variable></figure>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main" id="main">
@@ -319,19 +319,19 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_custom_field name="multi_event_pubs">
 <txp:images id='<txp:custom_field name="multi_event_pubs" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" />" /></a>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" /></a>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs_by_others">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" /></a>
 </txp:images>
 </txp:if_custom_field>
 
