@@ -218,8 +218,8 @@ header('content-type: text/html; charset=utf-8');
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides" aria-hidden="true">
-<txp:images category="random" limit='<txp:act_if_mobile>3<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
+<txp:images category="random" limit='<txp:act_if_mobile>5<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
 
