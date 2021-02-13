@@ -131,12 +131,7 @@ header('content-type: text/html; charset=utf-8');
 <meta name="theme-color" content="#ffffff" />
 
 
-
 <txp:hide>
-<!-- the google js is no longer working --> 
-<txp:if_section name="publications">
-<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
-</txp:if_section>
 <!-- support for battleforthenet.com -->
 <script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
 </txp:hide>
@@ -218,7 +213,7 @@ header('content-type: text/html; charset=utf-8');
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides" aria-hidden="true">
-<txp:images category="random" limit='<txp:act_if_mobile>5<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
