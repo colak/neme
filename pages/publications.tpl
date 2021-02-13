@@ -177,7 +177,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:images category="cite" breakby="2" break="<div class='clear'>&nbsp;</div>" limit="999" sort="alt desc">
 <div class="grid_12 grideven"><figure itemscope itemtype="http://schema.org/ImageObject">
-<span itemprop="image" class="grid_7 alpha"><img src="<txp:site_url />images/<txp:image_info type="id" />t<txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" loading="lazy"/></span>
+<span itemprop="image" class="grid_7 alpha"><txp:image loading="lazy" /></span>
 <figcaption itemprop="caption" class="grid_17 omega"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in>
 </figcaption></figure>
@@ -222,7 +222,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom section="projects,about" limit="999">
 <txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" id="book_<txp:image_info type="id" />" loading="lazy" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
+<div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink><txp:image loading="lazy" loading="lazy" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:if_custom_field>
@@ -234,7 +234,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
 <txp:if_different>
 <div class="line"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6">
-<a href="<txp:site_url /><txp:image_info type="name" />"><img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" alt="<txp:image_info type="alt" />" title="<txp:image_info type="alt" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" id="book_<txp:image_info type="id" />" loading="lazy" /></a></span>
+<a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" loading="lazy" /></a></span>
 <figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
