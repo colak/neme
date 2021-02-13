@@ -200,12 +200,12 @@ header('content-type: text/html; charset=utf-8');
 
 <article class="grid_6 about" role="main">
 <h1>Texts</h1>
-<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. Our published texts are cited in a number of <a href="/publications/cited/">publications</a>, sites, and are used in the reading lists of many university courses. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
+<p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. Our published texts are <a href="/publications/cited/">cited</a> in a number of publications, sites, and are used in the reading lists of many university courses. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
 <txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
+<txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
 
