@@ -200,18 +200,17 @@ header('content-type: text/html; charset=utf-8');
 <txp:article_custom id="2001">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />">img src="<txp:site_url />images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" class="ds" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image class="ds" loading="lazy" /></a>
 </txp:images>
 <txp:else />
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
-<txp:thumbnail class="ds" />
+<txp:thumbnail class="ds" loading="lazy" />
 </txp:images>
 </txp:if_custom_field></figure>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
-
-<txp:images category="random" limit='<txp:act_if_mobile>5<txp:else />8</txp:act_if_mobile>' sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
+<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
 
@@ -253,7 +252,7 @@ Cyprus</p>
 
 <h4>Publications (random)</h4><div class="grid_24">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
-<div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><img src="/images/<txp:image_info type="id" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a></div>
+<div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" /></a></div>
 </txp:images>
 </div>
 <div class="clear">&nbsp;</div>
@@ -266,7 +265,7 @@ Cyprus</p>
 <div class="grid_6 nosmall frontthumbs">
 <h3>Projects</h3>
 <txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
-<a href="<txp:site_url />projects/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
+<a href="<txp:site_url />projects/"><txp:thumbnail loading="lazy" /></a>
 </txp:images>
 </div>
 
@@ -274,21 +273,21 @@ Cyprus</p>
 <h3>Publications</h3>
 
 <txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />publications/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
+<a href="<txp:site_url />publications/"><txp:thumbnail loading="lazy" /></a>
 </txp:images>
 </div>
 
 <div class="grid_6 nosmall frontthumbs">
 <h3>Participations</h3>
 
-<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a></txp:images>
+<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail loading="lazy" /></a></txp:images>
 </div>
 	
 <div class="grid_6 nosmall frontthumbs">
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />workshops/"><img src="/images/<txp:image_info type="id" />t<txp:image_info type="ext" />" width="<txp:image_info type="thumb_w" />" height="<txp:image_info type="thumb_h" />" title="<txp:image_info type="alt" />" alt="<txp:image_info type="alt" />" loading="lazy" /></a>
+<a href="<txp:site_url />workshops/"><txp:thumbnail loading="lazy" /></a>
 </txp:images>
 </div>
 
@@ -314,8 +313,8 @@ Cyprus</p>
 
 <txp:article form="" status="live">
 <txp:article_custom id='<txp:article_id />'>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit='<txp:act_if_mobile>4<txp:else />8</txp:act_if_mobile>'><txp:image /></txp:images></figure></txp:article_custom>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" loading="lazy" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
