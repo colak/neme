@@ -199,7 +199,7 @@ header('content-type: text/html; charset=utf-8');
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>6<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></figure>
 
 <div class="clear">&nbsp;</div></div>
 
