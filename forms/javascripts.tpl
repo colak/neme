@@ -19,13 +19,16 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 </script>
 <!--<![endif]-->
 
+<txp:if_article_section name="projects">
 <txp:output_form form="bxslider.js" format="flat.script" />
+</txp:if_article_section>
 
 <script>
 $(document).ready(function(){
 // change class
 $('body').removeClass('no-js').addClass('js');
 
+<txp:if_article_section name="projects">
 // bxslider 
 if(window.innerWidth < 960) {
 $('.slider').bxSlider({
@@ -44,6 +47,7 @@ moveSlides: 2,
 slideMargin: 10
 });
 }
+</txp:if_article_section>
 // slides
 $(".rslides").responsiveSlides({
 auto: true,
