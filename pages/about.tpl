@@ -15,7 +15,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
     <txp:txp_die status="404" />
 </txp:evaluate>
-
 </txp:if_article_list></txp:hide>
 
 
@@ -25,7 +24,6 @@ header('content-type: text/html; charset=utf-8');
 <head>
 <title><txp:page_title /></title>
 <meta charset="utf-8">
-<txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
 <meta name="generator" content="Textpattern CMS"/>
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -360,7 +358,13 @@ Cyprus</p>
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
+<txp:if_article_list>
 <txp:output_form form="javascripts" />
+</txp:else />
+<txp:if_article_id id="2044,2002">
+<txp:output_form form="javascripts" />
+</txp:if_article_id>
+</txp:if_article_list>
 
 </body>
 </html>
