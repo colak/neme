@@ -337,7 +337,6 @@ Cyprus</p>
 </div>
 <div class="clear">&nbsp;</div>
 
-
 <txp:output_form form="announce" />
 
 <txp:output_form form="social_logos" />
