@@ -194,7 +194,9 @@ figure img{height:auto}
 .announce{padding:1.5%;width:97%;display:block}
 .line h3,.line h4,.line h6{text-align:left}
 #front .announce a,.announce a{color:#B30000}
-.comSubmit, .comFile{margin:1em 0; width:20%;height:3em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;clear:both;display:block}
+.comSubmit {margin:1em 0; width:20%;height:3em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;clear:both;display:block}
+.comFile::-webkit-file-upload-button, .comFile::-ms-browse, [type="file"]::-webkit-file-upload-button, [type="file"]::file-selector-button {background-color: #eee; color:#000; border: 1px solid #ccc; border-radius: 5px; font-weight: 300; padding:1em; width:140px; height:3em;margin:1em 1em 1em 0;}
+.comFile::file-selector-button {background-color: #eee; color:#000; border: 1px solid #ccc; border-radius: 5px; font-weight: 300; padding:1em; width:140px; height:3em;margin:1em 1em 1em 0;}
 .comCheckbox{margin-top:1em}
 #neme #content ul{list-style:none!important;padding:0;margin:0}
 #neme #content ul li{margin:0;padding-bottom:.8em}
