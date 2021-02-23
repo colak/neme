@@ -154,12 +154,11 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 
-<txp:act_if_mobile>
-</txp:else />
+<txp:act_if_mobile not>
 <aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"/></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"/></a>
 </aside>
 </txp:act_if_mobile>
 
@@ -188,25 +187,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 
-<div class="grid_8"><p>Did you write an article citing any of our books or content in this website?</p>
-<p>Do send us the pdf of your text or book, and the remaining information we require, and we will be adding it to our list.</p></div>
-<div class="grid_16">
-<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' label="" thanks="thank you your submission will be reviewed shortly." subject="NeMe Citations">
- <txp:com_connect_text name="FirstName" label="Your Name:" required="1" class="grid_24" /><br />
- <txp:com_connect_text name="LastName" label="Your Surame:" required="1" class="grid_24" /><br />
- <txp:com_connect_email name="Email" label="Your Email:" required="1" class="grid_24" /><br />
- <txp:com_connect_text label="Your website:" required="0" class="grid_24" /><br />
- <txp:com_connect_text name="PublicationTitle" label="Publication Title:" required="1" class="grid_24" /><br />
- <txp:com_connect_text name="PublicationURL" label="Publication URL:" required="1" class="grid_24" /><br />
- <txp:com_connect_file label="Select file" max="8000000" accept=".pdf" required="1" /><br />
- <txp:com_connect_checkbox required="0" label="Check this box if you wish to subscribe to our newsletter." /><br />
- <txp:com_connect_checkbox label="This is not spam" /><br />
-<txp:com_connect_secret label="This article"><txp:permlink /></txp:com_connect_secret>
- <txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
- <txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" /><br />
- <txp:com_connect_submit label="Submit" />
- </txp:com_connect>
-</div>
+<txp::pub_forms />
 
 <div class="clear">&nbsp;</div>
 
@@ -241,6 +222,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_different>
 </txp:images>
 <div class="line"><h4 class="grid_23 alpha" id="cited"><a href="/publications/cited/">Publications citing our content</a></h4><a class="nosmall noprint" href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<txp::pub_forms />
 </txp:if_section>
 </txp:if_category>
 <div class="clear">&nbsp;</div>
