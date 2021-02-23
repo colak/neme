@@ -7,6 +7,7 @@
 #SetHandler php70-cgi
 #SetHandler php72-cgi
 #SetHandler php74-cgi
+#SetHandler php80-cgi
 #</FilesMatch>
 
 
@@ -55,9 +56,8 @@ Header append X-XSS-Protection "1; mode=block"
 Header append X-Frame-Options "DENY"
 Header append X-Content-Type-Options "nosniff"
 Header set Cache-Control "no-transform"
-Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
+Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://*.youtube.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
 </ifModule>
-
 
 
 <IfModule mod_expires.c>
@@ -119,44 +119,12 @@ RewriteCond %{HTTP_USER_AGENT} x-Tractor|xaldon|Xaldon\ WebSpider|Xenu|xenu|XGET
 RewriteCond %{HTTP_USER_AGENT} Zeus|Zeus.*Webster|Zeus.*Webster|zyborg|^Mozilla$ [NC]
 RewriteRule ^.* - [F,L]
 
-# # hotlink protection
-#<IfModule mod_rewrite.c>
-#RewriteEngine on
-#RewriteCond %{HTTP_REFERER} !^$
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?neme\.org/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?news\.neme\.org/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?cyprus\.neme\.org/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?forum\.neme\.org/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !^http://(www\.)?hblack\.net/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*a9.*$  [NC]
-#RewriteCond %{HTTP_REFERER} !.*altavista.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*ask.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*duckduckgo.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*google.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*yahoo.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*bing.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*baidu.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*excite.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*faganfinder.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*ixquick.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*microsofttranslator.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*msn.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*picsearch.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*tineye.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*wolframalpha.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !.*yandex.*  [NC]
-#RewriteCond %{HTTP_REFERER} !^http(s)?://([^.]+\.)?goo\.ne\.jp/.*$ [NC]
-#RewriteCond %{HTTP_REFERER} !^http(s)?://([^.]+\.)?archive\.org/.*$ [NC]
-#RewriteRule .*\.(gif|jpg|png|svg)$ https://lh3.googleusercontent.com/-KDvIl3r2wdM/AAAAAAAAAAI/AAAAAAAAAAA/fZTmVSnqmxA/s120-c/photo.jpg [R,NC,L]
-#</ifModule>
 
-
-#RewriteRule ^/sitemap/ /texts/ [R=301,L]
 RedirectMatch 301 ^/main/?(.+)?$ https://www.neme.org/$1
 RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
 Redirect 301 /reblog/out/ https://www.neme.org/
-Redirect 301 /arts_info/ https://www.neme.org/blog/
-Redirect 301 /archives/ https://www.neme.org/blog/
+Redirect 301 /arts_info/ /blog/
+Redirect 301 /archives/ /blog/
 Redirect 301 /archives2005/ https://www.neme.org/blog/
 Redirect 301 /archives2006/ https://www.neme.org/blog/
 Redirect 301 /archives2007/ https://www.neme.org/blog/
@@ -171,10 +139,10 @@ Redirect 301 /archives2015/ https://www.neme.org/blog/
 Redirect 301 /archives2016/ https://www.neme.org/blog/
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
 Redirect 301 /calls/ https://www.neme.org/blog/
-Redirect 301 /1721/pq-2015 https://www.neme.org/blog/pq-2015
-Redirect 301 /category/calls https://www.neme.org/blog/
+Redirect 301 /1721/pq-2015 /blog/pq-2015
+Redirect 301 /category/calls /blog/
 Redirect 301 /article/ /texts/
-Redirect 301 /call/ https://www.neme.org/blog/
+Redirect 301 /call/ /blog/
 Redirect 301 /category/intransition /projects/in-transition-cyprus-2006
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
 Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006
@@ -209,12 +177,13 @@ Redirect 301 /events/ttr2-everybody-knows-this-is-nowhere /projects/ttr/ttr2-eve
 Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-culture-memory-and-trauma
 Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time
 Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1
-Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation
+Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation?redirected=1
 RedirectMatch 301 ^/participations/?(.+)?$ /projects/participations/$1
 RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
 Redirect 301 /events/the-state /projects/hosted/the-state
 Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear
 Redirect 301 /671/flashflood-2007 /blog/flashflood-2007
+#Redirect 301 /42/open-city-stepping-in-from-the-edge /texts/open-city
 
 RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?redirected=1
 Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?redirected=1
@@ -263,6 +232,7 @@ Deny from 82.80.230.228
 
 RewriteEngine on
 # Options +FollowSymlinks
+RewriteCond %{HTTP_REFERER} buxtome\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
 RewriteCond %{HTTP_REFERER} greenshop\.su [NC,OR]
