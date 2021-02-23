@@ -159,12 +159,11 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile>
-<txp:else />
+<txp:act_if_mobile not>
 <aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"/></a>
+<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"/></a>
 </aside>
 </txp:act_if_mobile>
 <div id="content"><div class="container_24">
@@ -319,7 +318,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_custom_field name="multi_event_pubs">
 <txp:images id='<txp:custom_field name="multi_event_pubs" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" />" /></a>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" /></a>
 </txp:images>
 </txp:if_custom_field>
 
