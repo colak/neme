@@ -182,7 +182,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:if_section name="about">
 <txp:if_search>
-<txp:article pgonly="1" searchall="0" searchsticky="0" />
+<txp:article pgonly="1" searchall="1" searchsticky="0" />
 <txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
 <hr />
@@ -193,7 +193,7 @@ header('content-type: text/html; charset=utf-8');
 <li>Try fewer keywords</li>
 <li>Try different keywords</li></ul>
 </txp:if_search_results>
-<txp:article limit="999" searchall="0" />
+<txp:article limit="999" searchall="1" />
 <txp:else />
 <txp:article_custom id="2001">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:if_custom_field name="pubs">
@@ -246,7 +246,7 @@ Cyprus</p>
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 
-<txp:recent_articles section="projects,participations" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
+<txp:recent_articles section="projects" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
