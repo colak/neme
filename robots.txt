@@ -1,13 +1,11 @@
 #
 # A list of bad bots.
-# This file is not needed by textpattern
 #
-
 User-agent: *
 Disallow: /file_download/
-
+#
 # Begin block Bad-Robots from robots.txt
-
+#
 User-agent: AhrefsBot
 Disallow: /
 User-agent: asterias
@@ -296,8 +294,9 @@ User-agent: Zeus 32297 Webster Pro V2.9 Win32
 Disallow: /
 User-agent: ZyBORG
 Disallow: /
-
+#
 # SEO-related bots
+#
 User-agent: rogerbot
 Disallow:/
 User-agent: mj12bot
@@ -306,5 +305,5 @@ User-agent: dotbot
 Disallow:/
 User-agent: ahrefsbot
 Disallow:/
-
-Sitemap: http://www.neme.org/sitemap/
+#
+Sitemap: https://www.neme.org/sitemap/
