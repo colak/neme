@@ -56,8 +56,6 @@ User-agent: Anthill
 Disallow:/
 User-agent: Apexoo
 Disallow:/
-User-agent: archive.org_bot
-Disallow:/
 User-agent: arquivo.pt
 Disallow:/
 User-agent: arquivo-web-crawler
