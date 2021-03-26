@@ -216,8 +216,8 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;></div>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
-<txp:article status="live" limit="300" listform="list_cat2_projects" form="" c10="" />
-<txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' status="sticky" limit="1">
+<txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
+<txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
 <txp:body />
 </txp:article_custom>
 </main>
