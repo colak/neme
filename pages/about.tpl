@@ -351,7 +351,7 @@ Cyprus</p>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
