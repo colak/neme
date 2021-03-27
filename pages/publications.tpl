@@ -191,7 +191,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="clear">&nbsp;</div>
 
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 
 <txp:else />
 <txp:if_section name="publications">
@@ -209,7 +209,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field>
 </txp:article_custom> 
 
-<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe is mentioned or acknowledged in&#8230;</h4><a class="nosmall noprint" href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="other">Beside the articles appearing in numerous newspapers, magazines and websites showcasing our activities, NeMe is mentioned or acknowledged in&#8230;</h4><a class="nosmall noprint" href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="projects,about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field></txp:article_custom>' />
 <txp:images id='<txp:variable name="otherpubs" />' sort="alt desc" limit="999" break="">
@@ -221,7 +221,7 @@ header('content-type: text/html; charset=utf-8');
 </div>
 </txp:if_different>
 </txp:images>
-<div class="line"><h4 class="grid_23 alpha" id="cited"><a href="/publications/cited/">Publications citing our content</a></h4><a class="nosmall noprint" href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
+<div class="line"><h4 class="grid_23 alpha" id="cited"><a href="/publications/cited/">Publications citing our content</a></h4><a class="nosmall noprint" href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a><div class="clear">&nbsp;</div></div>
 <txp::pub_forms />
 </txp:if_section>
 </txp:if_category>
