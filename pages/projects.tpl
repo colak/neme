@@ -217,9 +217,12 @@ header('content-type: text/html; charset=utf-8');
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
-<txp:body />
+<article><txp:body /></article>
 </txp:article_custom>
 <txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
+<txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
+<txp:excerpt />
+</txp:article_custom>
 </main>
 </div>
 <txp:else />
