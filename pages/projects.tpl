@@ -216,10 +216,10 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;></div>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
-<txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
 <txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
 <txp:body />
 </txp:article_custom>
+<txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
 </main>
 </div>
 <txp:else />
@@ -353,7 +353,7 @@ header('content-type: text/html; charset=utf-8');
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<aside class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></aside>
+<aside class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></aside>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
