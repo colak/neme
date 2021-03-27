@@ -297,7 +297,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
 <div class="grid_23 nosmall">&nbsp;</div>
-<div class="grid_1 nosmall noprint"><a href="#landing"><img src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
+<div class="grid_1 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
 <div class="clear">&nbsp;</div>
 </div>
 </div><!-- end .container_24 -->
