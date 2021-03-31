@@ -217,11 +217,16 @@ header('content-type: text/html; charset=utf-8');
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
-<article><txp:body /></article>
+<article><txp:body /><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />">Edit</a></txp:if_logged_in></article>
 </txp:article_custom>
 <txp:article status limit="300" listform="list_cat2_projects" form="" c10="" />
 <txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
+<txp:if_excerpt>
+<div class="eu">
 <txp:excerpt />
+<div class="clear">&nbsp;</div>
+</div>
+</txp:if_excerpt>
 </txp:article_custom>
 </main>
 </div>
