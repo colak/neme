@@ -325,7 +325,7 @@ deny from all
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
-RedirectMatch 404 /\..*$
+RedirectMatch 403 /\..*$
 
 <Files config.php> 
 deny from all 
