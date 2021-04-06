@@ -56,7 +56,7 @@ Header append X-XSS-Protection "1; mode=block"
 Header append X-Frame-Options "DENY"
 Header append X-Content-Type-Options "nosniff"
 Header set Cache-Control "no-transform"
-Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' www.google.com ajax.googleapis.com *.google-analytics.com https://www.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://*.youtube.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
+#Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://wwww.google.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' *.google.com ajax.googleapis.com *.google-analytics.com https://*.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://*.youtube.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
 </ifModule>
 
 
@@ -125,18 +125,18 @@ RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
 Redirect 301 /reblog/out/ https://www.neme.org/
 Redirect 301 /arts_info/ /blog/
 Redirect 301 /archives/ /blog/
-Redirect 301 /archives2005/ https://www.neme.org/blog/
-Redirect 301 /archives2006/ https://www.neme.org/blog/
-Redirect 301 /archives2007/ https://www.neme.org/blog/
-Redirect 301 /archives2008/ https://www.neme.org/blog/
-Redirect 301 /archives2009/ https://www.neme.org/blog/
-Redirect 301 /archives2010/ https://www.neme.org/blog/
-Redirect 301 /archives2011/ https://www.neme.org/blog/
-Redirect 301 /archives2012/ https://www.neme.org/blog/
-Redirect 301 /archives2013/ https://www.neme.org/blog/
-Redirect 301 /archives2014/ https://www.neme.org/blog/
-Redirect 301 /archives2015/ https://www.neme.org/blog/
-Redirect 301 /archives2016/ https://www.neme.org/blog/
+Redirect 301 /archives2005/ /blog/
+Redirect 301 /archives2006/ /blog/
+Redirect 301 /archives2007/ /blog/
+Redirect 301 /archives2008/ /blog/
+Redirect 301 /archives2009/ /blog/
+Redirect 301 /archives2010/ /blog/
+Redirect 301 /archives2011/ /blog/
+Redirect 301 /archives2012/ /blog/
+Redirect 301 /archives2013/ /blog/
+Redirect 301 /archives2014/ /blog/
+Redirect 301 /archives2015/ /blog/
+Redirect 301 /archives2016/ /blog/
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
 Redirect 301 /calls/ https://www.neme.org/blog/
 Redirect 301 /1721/pq-2015 /blog/pq-2015
@@ -198,7 +198,7 @@ RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.xyz/? [NC]
 RewriteRule .* - [F]
 
 
-RewriteEngine On
+#RewriteEngine On
 #RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC, OR]
 #RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
 #RewriteRule ^(.*)$ https://www.neme.org/kwangjubiennale.html
@@ -232,13 +232,20 @@ Deny from 82.80.230.228
 
 RewriteEngine on
 # Options +FollowSymlinks
+RewriteCond %{HTTP_REFERER} bez-trusikov\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} bigbangonline\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} buxtome\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
+RewriteCond %{HTTP_REFERER} freefotogirls\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} greenshop\.su [NC,OR]
+RewriteCond %{HTTP_REFERER} nashi-devki\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} own-ahrefs\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC]
-RewriteRule .* - [F] 
+RewriteCond %{HTTP_REFERER} pornofoto4ki\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} kino-rf\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} zvideos\.ru [NC]
+RewriteRule .* - [F]
 
 #DirectoryIndex index.php index.html
 
