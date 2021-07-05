@@ -141,7 +141,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -255,13 +254,15 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_search>
 </txp:if_section>
 
-
-<div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
 
+<txp:output_form form="YouTubeChannel" />
+<div class="container_24">
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#front"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<div class="clear">&nbsp;</div>
+</div>
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
 <txp:output_form form="javascripts" />
