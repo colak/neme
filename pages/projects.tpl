@@ -139,7 +139,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:section />" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -240,7 +239,20 @@ header('content-type: text/html; charset=utf-8');
 <div class="clear">&nbsp;</div>
 </txp:article>
 <main aria-label="main content"" itemscope itemtype="https://schema.org/CollectionPage">
+<txp:article_custom listform="" form="" section='<txp:section />' match="Category1=2, Category2=3" status="sticky" limit="1">
+<txp:variable name="bod"><txp:body /></txp:variable>
+<txp:if_variable name="bod">
+<article>
+<txp:body />
+</article>
+</txp:if_variable>
+</txp:article_custom>
 <txp:article limit="999" listform="list_cat_projects" match="Category1=2, Category2=3" form="" c10="y" />
+<txp:article_custom listform="" form="" section='<txp:section />' match="Category1=2, Category2=3" status="sticky" limit="1">
+<txp:if_custom_field name="Type">
+<txp:output_form form='<txp:custom_field name="Type" />' />
+</txp:if_custom_field>
+</txp:article_custom>
 </main>
 </txp:if_variable>
 
@@ -361,11 +373,14 @@ header('content-type: text/html; charset=utf-8');
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<aside class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></aside>
-<div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
 
+<txp:if_article_list><txp:output_form form="YouTubeChannel" /></txp:if_article_list>
+<div class="container_24">
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#front"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<div class="clear">&nbsp;</div>
+</div>
 <txp:output_form form="colak_foot" />
 <txp:output_form form="cookies" />
 <txp:output_form form="javascripts" />
