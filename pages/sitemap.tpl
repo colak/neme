@@ -1,4 +1,5 @@
-<txp:header name="Content-Type" value="application/xml; charset=utf-8" /><?xml version="1.0" encoding="UTF-8"?>
+<txp:header name="Content-Type" value="application/xml; charset=utf-8" />
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc><txp:site_url /></loc></url>
 <txp:section_list break="" exclude="sitemap,newsletter-unsubscribe">
