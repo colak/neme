@@ -278,10 +278,12 @@ nav ul:after{content:"";display:table;clear:left}
 #content {padding:2em 0 0 0}
 .vimeoeucookies, .gdpr {display:table;width:100%;border-radius: 8px;margin:1em 0}
 .vimeoeucookies, .gdpr, .cookies {background-color:#ffc;}
-.vimeoeucookies p, .socialeucookies p, .gdpr p {color:#000;font-size:1.25em;padding:.7em;margin:0 0 1em 0}
+.vimeoeucookies p, .socialeucookies p, .gdpr p {color:#000;font-size:1.25em;padding:.2em;margin:0 0 0 0}
 .vimeoeucookies a, .socialeucookies a, .gdpr a {color:#cc0000}
+.gdpr img {width:100%; height:auto}
 .gdpr p {text-align:center;}
-p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+p.red {margin:.5em 0;}
+p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;margin:20px 0;}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
 .social {background-color:#fff;margin-top:10px;padding:2px;display:block;
 display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: center;}
@@ -426,7 +428,6 @@ overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; wor
 #eucookies .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
 }
-
 
 @media screen and (max-width:450px){
 #front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:96%}
