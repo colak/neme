@@ -18,13 +18,13 @@
 					</txp:if_yield>
 				</txp:if_logged_in>
 			<txp:else />
-				<div class="gdpr<txp:if_yield name="class"> <txp:yield name="class" /></txp:if_yield>">
+				<div class="gdpr <txp:if_yield name="class"> <txp:yield name="class" /></txp:if_yield>">
 					<txp:if_yield name="0" not>
 						<txp:if_yield name="img">
 							<txp:variable name="img" />
 						<txp:else />
 							<txp:if_yield name="url" not>
-								<img loading="lazy" src="https://i3.ytimg.com/vi/<txp:yield name="media" />/hqdefault.jpg" srcset="https://i3.ytimg.com/vi/<txp:yield name="media" />/hqdefault.jpg 480w, https://i3.ytimg.com/vi/<txp:yield name="media" />/maxresdefault.jpg 1280w" alt="<txp:yield name="title" escape="textile, tags" default="External video still" />" itemscope itemtype="http://schema.org/ImageObject" />
+								<img loading="lazy" srcset="https://i3.ytimg.com/vi/<txp:yield name="media" />/hqdefault.jpg 480w, https://i3.ytimg.com/vi/<txp:yield name="media" />/maxresdefault.jpg 1280w" sizes="(max-width: 600px) 480px, 960px" src="https://i3.ytimg.com/vi/<txp:yield name="media" />/hqdefault.jpg" alt="<txp:yield name="title" escape="textile, tags" default="External video still" />" itemscope itemtype="http://schema.org/ImageObject" />
 							</txp:if_yield>
 						</txp:if_yield>
 					</txp:if_yield>
