@@ -211,7 +211,7 @@ header('content-type: text/html; charset=utf-8');
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides" aria-hidden="true">
-<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
@@ -241,7 +241,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 </div>
-
 
 
 <div class="grid_6 frontthumbs noprint">
