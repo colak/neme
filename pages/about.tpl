@@ -142,7 +142,6 @@ header('content-type: text/html; charset=utf-8');
 
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -207,7 +206,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field></figure>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
-<txp:images category="random" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
@@ -351,7 +350,7 @@ Cyprus</p>
 
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#<txp:section />"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
