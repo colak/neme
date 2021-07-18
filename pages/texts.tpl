@@ -145,7 +145,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -169,7 +168,7 @@ header('content-type: text/html; charset=utf-8');
 <aside class="share large nosmall noprint">
 <a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"/></a>
 <a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit" loading="lazy"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit"/></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"/></a>
 </aside>
 </txp:act_if_mobile>
 
@@ -203,7 +202,7 @@ header('content-type: text/html; charset=utf-8');
 </article>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
-<txp:images category="random" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
+<txp:images category="promote" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
 <txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
 </txp:images>
 </figure>
@@ -303,7 +302,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:hide>==================-end individual articles-======================</txp:hide>
 
 <div class="clear">&nbsp;</div>
-<span class="grid_1 prefix_23 alpha omega nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 alpha omega nosmall noprint"><a href="#<txp:section />"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 
 <div class="clear">&nbsp;</div>
 
