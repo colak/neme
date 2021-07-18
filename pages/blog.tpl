@@ -139,7 +139,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -230,6 +229,10 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_custom_field>
 
 <article>
+<txp:if_request type="get" name="redirected">
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="bookmark"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+</txp:if_request>
+
 <h1><txp:title /></h1>
 <!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
 <txp:body /></article>
@@ -297,7 +300,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_individual_article>
 <div class="clear">&nbsp;</div>
 <div class="grid_23 nosmall">&nbsp;</div>
-<div class="grid_1 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
+<div class="grid_1 nosmall noprint"><a href="#<txp:section />"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></div>
 <div class="clear">&nbsp;</div>
 </div>
 </div><!-- end .container_24 -->
