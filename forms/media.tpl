@@ -4,7 +4,7 @@ https://github.com/colak/txp-media-shortcode
 </txp:hide>
 
 <txp:hide>Change with a prefix you prefer. Default is the site name</txp:hide>
-<txp:variable name="sitename"><txp:site_name trim="/\s+/" replace="_" /></txp:variable>
+<txp:variable name="sitename">accept_<txp:site_name trim="/\s+/" replace="_" /></txp:variable>
 
 <txp:hide>Hide warnings visible only to logged in users. Change the duration below to the one you prefer between warnings. A duration under +1 hour is recommended</txp:hide>
 <txp:oui_cookie name='<txp:variable name="sitename" />_hide' duration="+30 minutes" values="yes" />
