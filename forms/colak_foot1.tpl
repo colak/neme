@@ -2,17 +2,17 @@
 
 <div class="grid_18" id="searchsites">
 <txp:output_form form="colak-search" />
-<txp:hide><txp:search_input match="any" /></txp:hide>
+<txp:hide><txp:search_input match="all" /></txp:hide>
 </div>
 
 <div class="grid_6" id="copyright">
 <p><a href="<txp:site_url />about/#disclaimer" rel="license">Disclaimer and privacy policy</a></p>
-<p>On line for <txp:fha_time_diff year="2005" month="2" day="28" />.<br />
+<p>On line for <txp:fha_time_diff year="2004" month="8" day="18" />.<br />
 Site last modified on: 
 <txp:article_custom sort="LastMod" limit="1" form="">
 <pubDate><txp:modified format="%a, %m %b %Y %X GMT" /></pubDate>
 </txp:article_custom>
-Valid <a href="http://validator.w3.org/check?uri=referer" rel="external noopener">HTML5</a>, <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.neme.org%2Fthemes%2Fneme960%2Fstyles%2Fdefault.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="external">CSS</a>, <a href="http://feedvalidator.org/check.cgi?url=http://www.neme.org/rss/" rel="external">RSS</a>, <a href="http://feedvalidator.org/check.cgi?url=http://www.neme.org/atom/" rel="external">ATOM</a><txp:if_section name="">, <txp:hide><a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=http%3A//www.neme.org/" rel="external"></txp:hide>508</txp:if_section><txp:if_individual_article>, <a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=http%3A//www.neme.org<txp:page_url />" rel="external">508</a></txp:if_individual_article></p>
+Valid <a href="https://validator.w3.org/check?uri=referer" rel="external noopener">HTML5</a>, <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.neme.org%2Fthemes%2Fneme960%2Fstyles%2Fdefault.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="external">CSS</a>, <a href="http://feedvalidator.org/check.cgi?url=https://www.neme.org/rss/" rel="external">RSS</a>, <a href="http://feedvalidator.org/check.cgi?url=https://www.neme.org/atom/" rel="external">ATOM</a><txp:if_section name="">, <txp:hide><a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=https%3A//www.neme.org/" rel="external"></txp:hide>508</txp:if_section><txp:if_individual_article>, <a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=https%3A//www.neme.org<txp:page_url />" rel="external">508</a></txp:if_individual_article></p>
 </div>
 
 <div class="clear">&nbsp;</div>
@@ -20,7 +20,7 @@ Valid <a href="http://validator.w3.org/check?uri=referer" rel="external noopener
 </div><!-- end .container_24 --></div>
 <script src="<txp:page_url type="theme_path" />/forms/javascripts/html5shiv.js"></script>
 <script src="<txp:page_url type="theme_path" />/forms/javascripts/css3-mediaqueries.js"></script>
-<script src="<txp:page_url type="theme_path" />/forms/javascripts/jquery2xx.js"></script>
+<script src="<txp:page_url type="theme_path" />/forms/javascripts/jquery3x.js"></script>
 <!--[if (IE 6)|(IE 7)|(IE 8)]>
 <script src="<txp:page_url type="theme_path" />/forms/javascripts/jquery1x.js"></script>
 <![endif]-->
