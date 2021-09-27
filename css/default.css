@@ -8,6 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:none}
 table{border-collapse:collapse;border-spacing:0;width:100%}
+html {scroll-behavior: smooth;}
 body{background:#000;border-bottom:10px solid #000;color:#333;font-size:13px;line-height:1.5;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
 a:focus{outline:dotted 1px}
 h2{font-size:23px}
