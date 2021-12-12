@@ -315,6 +315,9 @@ Cyprus</p>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
+<txp:if_request type="get" name="redirected">
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="bookmark"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+</txp:if_request>
 <h1><txp:title /></h1>
 <!--googleoff: all--><p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p><!--googleon: all-->
 <txp:body />
