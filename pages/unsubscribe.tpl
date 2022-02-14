@@ -131,7 +131,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:section />" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -163,10 +162,13 @@ header('content-type: text/html; charset=utf-8');
 
 <p class="grid_9">Should you wish to unsubscribe from our newsletter, do tell us your email with which you have subscribed, and fill the relevant checkboxes below.</p><div class="clear">&nbsp;</div>
 
-<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' label=""  thanks_form="unsubscribe" subject="NeMe Unsubscribe">
+<txp:com_connect to='<txp:authors name=""><txp:author_email /></txp:authors>' label=""  thanks_form="unsubscribe" subject="NeMe Unsubscribe">
 <txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" />
 <txp:com_connect_secret label="This article"><txp:page_url /></txp:com_connect_secret>
-<txp:com_connect_checkbox required="0" label="Check this box if you wish to unsubscribe from our newsletter." />
+<txp:com_connect_radio label="I no longer want to receive these emails" group="Reason" /><br />
+<txp:com_connect_radio label="I never signed up for this mailing list" /><br />
+<txp:com_connect_radio label="Other" /><br />
+<txp:com_connect_checkbox required="0" label="Check this box if you wish to unsubscribe from our newsletter." /><br />
 <txp:com_connect_checkbox label="Confirm!" />
 <txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
 <txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
