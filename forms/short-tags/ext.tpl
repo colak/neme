@@ -1,1 +1,1 @@
-<a rel="external noopener" href="<txp:yield name="url" />"><txp:if_yield name="txt"><txp:yield name="txt" /><txp:else /><txp:yield name="url" /></txp:if_yield></a>
+<a rel="external noopener" href="<txp:yield name="url" />" <txp:if_yield name="style" value="1">style="color:#ba0000;text-decoration:none;"</txp:if_yield>><txp:if_yield name="txt"><txp:yield name="txt" /><txp:else /><txp:yield name="url" /></txp:if_yield></a>
