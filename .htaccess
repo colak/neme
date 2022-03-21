@@ -10,6 +10,17 @@
 #SetHandler php80-cgi
 #</FilesMatch>
 
+<IfModule mod_headers.c>
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+# Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+  Header set Permissions-Policy "interest-cohort=(), accelerometer=(), camera=(self), geolocation=(), ambient-light-sensor=(), autoplay=(), battery=(),  display-capture=(), fullscreen=(self), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), sync-xhr=(self),usb=(), xr-spatial-tracking=()"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+# Header set Referrer-Policy "same-origin"
+</IfModule>
+
 
 # RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
 
@@ -38,8 +49,7 @@
   AddOutputFilterByType DEFLATE text/javascript
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/xml
-
-  # Remove browser bugs (only needed for really old browsers)
+# Remove browser bugs (for really old browsers)
   BrowserMatch ^Mozilla/4 gzip-only-text/html
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
@@ -47,33 +57,22 @@
 </IfModule>
 
 
-<IfModule mod_headers.c>
-Header set Connection keep-alive
-Header unset ETag
-FileETag None
-Header unset P3P
-Header append X-XSS-Protection "1; mode=block"
-Header append X-Frame-Options "DENY"
-Header append X-Content-Type-Options "nosniff"
-Header set Cache-Control "no-transform"
-#Header append Content-Security-Policy "default-src 'self'; img-src 'self' data: * https://*; style-src 'self' 'unsafe-inline' ajax.googleapis.com platform.twitter.com https://ajax.googleapis.com https://fonts.googleapis.com https://wwww.google.com https://platform.twitter.com; script-src 'self' 'unsafe-inline' *.google.com ajax.googleapis.com *.google-analytics.com https://*.google.com https://ajax.googleapis.com https://stats.g.doubleclick.net https://*.google-analytics.com https://*.twitter.com; frame-src *.youtube-nocookie.com https://*.youtube-nocookie.com *.twitter.com https://*.twitter.com twitter.com https://twitter.com http://*.vimeo.com https://*.vimeo.com https://*.youtube.com https://dev.colakides.com http://*.statemachines.eu http://*.w3.org"
-</ifModule>
-
-
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 20 days"
-ExpiresByType text/html "access plus 10 seconds"
+ExpiresByType text/css "access plus 1 hour"
+ExpiresByType text/html "access plus 1 month"
 ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType application/x-javascript "access plus 1 month"
 ExpiresByType text/javascript "access plus 1 month"
 ExpiresByType application/x-shockwave-flash "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType image/svg+xml "access 1 month"
 ExpiresByType application/atom+xml "access plus 1 hour"
 ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
@@ -87,37 +86,6 @@ RewriteCond %{HTTP_HOST} !^$
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-
-# deny access to evil robots site rippers offline browsers and other nasty scum
-# RewriteBase /
-
-RewriteCond %{HTTP_USER_AGENT} ADSARobot|aesop_com_spiderman|ah-ha|aktuelles|alexibot|almaden|amzn_assoc|Anarchie|anonymouse|ASPSeek|ASSORT|asterias|ATHENS|Atomz|attach|attach|attache|autoemailspider [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} backdoorbot|BackWeb|Bandit|BatchFTP|bdfetch|big.brother|bigfoot|BlackWidow|blowfish|bmclient|Boston\ Project|botalot|Bot\ mailto:craftbot@yahoo.com|BravoBrian\ SpiderEngine\ MarcoPolo|Buddy|builtbottough|Bullseye|bumblebee [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} capture|cheesebot|CherryPicker|ChinaClaw|CICC|clipping|Collector|Copier|copyrightcheck|cosmos|Crescent|Crescent\ Internet\ ToolPak|curl|Custo|cyberalert [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} DA$|Deweb|diagem|Digger|Digincore|Digimarc|DIIbot|DISCo|DISCoFinder|DISCo\ Pump|dittospyder|Downloader|Download\ Demon|Download\ Wonder|dragonfly|Drip|DSurf15a|DTS.Agent [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} EasyDL|ebingbong|eCatch|ecatch|ecollector|efp@gmx\.net|EirGrabber|EmailCollector|EmailSiphon|EmailWolf|erocrawler|exabot|Express\ WebPictures|ExtractorPro|EyeNetIE [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} fastlwspider|FavOrg|Favorites\ Sweeper|Fetch|FEZhead|FileHound|FlashGet\ WebWasher|FlickBot|fluffy|flunky|frontpage|FrontPage [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} GalaxyBot|Generic|Getleft|GetRight|GetSmart|GetWeb!|GetWebPage|gigabaz|Girafabot|Go!Zilla|Go-Ahead-Got-It|GornKer|gotit|gotit|Go\!Zilla|Grabber|GrabNet|Grafula|Green\ Research|grub-client [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Harvest|harvest|hhjhj@yahoo|hloader|HMView|HomePageSearch|httpdown|httplib|http\ generic|httrack|HTTrack|humanlinks [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} ia_archiver|IBM_Planetwide|ilsebot|imagefetch|Image\ Stripper|Image\ Sucker|IncyWincy|Indy*Library|Indy\ Library|infonavirobot|informant|infotekies|Ingelin|intelliseek|interget|InterGET|InternetLinkagent|internetseer|InternetSeer\.com|Internet\ Ninja|Iria|Irvine [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} JBH*agent|jennybot|jetcar|JetCar|JOC|JOC\ Web\ Spider|JustView|jyxobot [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} kenjin|keyword|KWebGet [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Lachesis|larbin|larbin|LeechFTP|leechftp|LexiBot|lexibot|lftp|Lftp|libweb|libwww|libwww-perl|likse|likse|Link|Link*Sleuth|linkscan|LINKS\ ARoMATIZED|LinkWalker|lnspiderguy|LWP|lwp|lwp-trivial [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Mac\ Finder|Mag-Net|mag-net|Mag-Net|Magnet|magnet|markwatch|Mass\ Downloader|MCspider|Memo|memo|Microsoft.URL|MIDown\ tool|miixpc|Mirror|Missigua\ Locator|mister.pix|Mister\ PiX|MMMtoCrawl\/UrlDispatcherLLL|moget|Mozilla*MSIECrawler|Mozilla.*Indy|Mozilla.*NEWT|MSFrontPage|MSIECrawler|MSProxy|MS\ FrontPage*|multithreaddb [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} nameprotect|nationaldirectory|navroad|Navroad|NearSite|NetAnts|NetCarta|netcraft|NetMechanic|netprospector|NetResearchServer|NetSpider|NetZIP|NetZippy|NetZip\ Downloader|Net\ Vampire|NEWT|nextgensearchbot|NICErsPRO|nimblecrawler|Ninja|NPBot [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Octopus|Offline\ Explorer|Offline\ Navigator|OpaL|Openfind|OpenTextSiteCrawler|OrangeBot|outfoxbot [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} PackRat|PageGrabber|papa|Papa\ Foto|pavuk|pavuk|pcbrowser|pcBrowser|PersonaPilot|php.?version.?tracker|Ping|PingALink|Pockey|propowerbot|prowebwalker|Proxy|psbot|psbot|PSurf|puf|Pump|PushSite [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} QRVA|queryn [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} RealDownload|realdownload|Reaper|reaper|recorder|Recorder|ReGet|replacer|RepoMonkey|rma|Robozilla|Rover|RPT-HTTPClient|Rsync|Scooter [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} SearchExpress|searchhippo|searchterms\.it|Second\ Street\ Research|Seeker|Shai|Siphon|sitecheck|sitecheck.internetseer.com|SiteSnagger|SlySearch|SmartDownload|snagger|Snake|snapbot|snoopy|sogou|SpaceBison|spankbot|spanner|Spegla|SpiderBot|sproose|SqWorm|Stripper|Sucker|SuperBot|SuperHTTP|SurfBot|SurfWalker|suzuran|Szukacz [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} takeout|tAkeOut|tarspider|teleport|Teleport\ Pro|telesoft|Templeton|thenomad|tighttwatbot|titan|TrueRobot|true_robot|turingos|turnitinbot|TV33_Mercator [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} UIowaCrawler|URLdispatcher|URLSpiderPro|URL_Spider_Pro|UtilMind [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Vacuum|vagabondo|vayala|vci|visibilitygap|VoidEYE|vspider [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} w3mir|WebAuto|WebBandit|Webclipping|webcollage|webcollector|WebCopier|webcraft@bea|webdevil|webdownloader|Webdup|WebEMailExtrac|WebFetch|WebGo\ IS|WebHook|Webinator|WebLeacher|WEBMASTERS|WebMiner|WebMirror|webmole|WebReaper|WebSauger|Website|Website\ eXtractor|Website\ Quester|WebSnake|Webster|WebStripper|websucker|webvac|webwalk|webweasel|WebWhacker|WebZIP|web\.by\.mail|Web\ Data\ Extractor|Web\ Downloader|Web\ Image\ Collector|Web\ Sucker|Wget|Whacker|whizbang|WhosTalking|Widow|widow|WISEbot|wisenutbot|WUMPUS|WUMPUS|Wweb|WWWOFFLE|wwwoffle [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} x-Tractor|xaldon|Xaldon\ WebSpider|Xenu|xenu|XGET|XoviBot [NC,OR]
-RewriteCond %{HTTP_USER_AGENT} Zeus|Zeus.*Webster|Zeus.*Webster|zyborg|^Mozilla$ [NC]
-RewriteRule ^.* - [F,L]
 
 
 RedirectMatch 301 ^/main/?(.+)?$ https://www.neme.org/$1
@@ -137,64 +105,92 @@ Redirect 301 /archives2013/ /blog/
 Redirect 301 /archives2014/ /blog/
 Redirect 301 /archives2015/ /blog/
 Redirect 301 /archives2016/ /blog/
-Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
+Redirect 301 /496/27-bienal-de-sao-paulo https://www.neme.org/blog/27-bienal-de-sao-paulo?redirected=1
+Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?redirected=1
+Redirect 301 /250/ https://www.neme.org/texts/from-zombie-to-cyborg?redirected=1
 Redirect 301 /calls/ https://www.neme.org/blog/
-Redirect 301 /1721/pq-2015 /blog/pq-2015
+Redirect 301 /1721/pq-2015 /blog/pq-2015?redirected=1
 Redirect 301 /category/calls /blog/
 Redirect 301 /article/ /texts/
 Redirect 301 /call/ /blog/
-Redirect 301 /category/intransition /projects/in-transition-cyprus-2006
-Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009
-Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006
+Redirect 301 /category/intransition /projects/in-transition-cyprus-2006?redirected=1
+Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?redirected=1
+Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006?redirected=1
 Redirect 301 /about/about-neme /about/
-Redirect 301 /nac/neme-arts-centre /nac/
-Redirect 301 /workshops/workshops /workshops/
+Redirect 301 /nac/neme-arts-centre /about/neme-arts-centre?redirected=1
 Redirect 301 /events/my-name-is-janez-jansa /projects/improper-names
-Redirect 301 /blog/jonas-lund-and-elisa-lasowski /blog/jonas-lund-and-elisa-lasowski-press
-Redirect 301 /nac/ /about/neme-arts-centre
-Redirect 301 /workshops/ /about/workshops
+Redirect 301 /blog/jonas-lund-and-elisa-lasowski /blog/jonas-lund-and-elisa-lasowski-press?redirected=1
+Redirect 301 /nac/ /about/neme-arts-centre?redirected=1
+Redirect 301 /workshops/ /about/workshops?redirected=1
 Redirect 301 /events/cpt-2019 /projects/hosted/cpt-2019
-Redirect 301 /events/see-you-hear /projects/hosted/see-you-hear
-Redirect 301 /events/sublime-internal-subliminal /projects/hosted/sublime-internal-subliminal
-Redirect 301 /events/self-as-actor /projects/state-machines/self-as-actor
-Redirect 301 /events/stateless /projects/state-machines/stateless
-Redirect 301 /events/diwo-from-the-web-to-the-blockchain /projects/state-machines/diwo-from-the-web-to-the-blockchain
-Redirect 301 /events/new-imaginaries-for-crypto-design /projects/state-machines/new-imaginaries-for-crypto-design
-Redirect 301 /events/monitorial-citizen /projects/state-machines/monitorial-citizen
-Redirect 301 /events/unbuilding-citizenship /projects/state-machines/unbuilding-citizenship
-Redirect 301 /events/improper-names /projects/state-machines/improper-names
-Redirect 301 /events/ttr2-right-brain-problems /projects/ttr/ttr2-right-brain-problems
-Redirect 301 /events/stateless /projects/state-machines/stateless
-Redirect 301 /events/through-the-roadblocks /projects/ttr/through-the-roadblocks
-Redirect 301 /events/ttr2-all-the-other-lovers /projects/ttr/ttr2-all-the-other-lovers
-Redirect 301 /events/ttr2-hand-to-hand /projects/ttr/ttr2-hand-to-hand
-Redirect 301 /events/ttr2-lemesos-documentary-film-festival /projects/ttr/ttr2-lemesos-documentary-film-festival
-Redirect 301 /events/ttr2-ties-of-the-transitory-seminar /projects/ttr/ttr2-ties-of-the-transitory-seminar
-Redirect 301 /events/ttr2-bound /projects/ttr/ttr2-bound
-Redirect 301 /events/ttr2-inter-alios /projects/ttr/ttr2-inter-alios
-Redirect 301 /events/ttr2-nomadism-and-trans-cities /projects/ttr/ttr2-nomadism-and-trans-cities
-Redirect 301 /events/ttr2-everybody-knows-this-is-nowhere /projects/ttr/ttr2-everybody-knows-this-is-nowhere
-Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-culture-memory-and-trauma
-Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time
-Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1
+Redirect 301 /events/see-you-hear /projects/hosted/see-you-hear?redirected=1
+Redirect 301 /events/sublime-internal-subliminal /projects/hosted/sublime-internal-subliminal?redirected=1
+Redirect 301 /events/self-as-actor /projects/state-machines/self-as-actor?redirected=1
+Redirect 301 /events/stateless /projects/state-machines/stateless?redirected=1
+Redirect 301 /events/diwo-from-the-web-to-the-blockchain /projects/state-machines/diwo-from-the-web-to-the-blockchain?redirected=1
+Redirect 301 /events/new-imaginaries-for-crypto-design /projects/state-machines/new-imaginaries-for-crypto-design?redirected=1
+Redirect 301 /events/monitorial-citizen /projects/state-machines/monitorial-citizen?redirected=1
+Redirect 301 /events/unbuilding-citizenship /projects/state-machines/unbuilding-citizenship?redirected=1
+Redirect 301 /events/improper-names /projects/state-machines/improper-names?redirected=1
+Redirect 301 /events/ttr2-right-brain-problems /projects/ttr/ttr2-right-brain-problems?redirected=1
+Redirect 301 /events/stateless /projects/state-machines/stateless?redirected=1
+Redirect 301 /events/through-the-roadblocks /projects/ttr/through-the-roadblocks?redirected=1
+Redirect 301 /projects/emap/emap /projects/emap/
+Redirect 301 /events/ttr2-all-the-other-lovers /projects/ttr/ttr2-all-the-other-lovers?redirected=1
+Redirect 301 /events/ttr2-hand-to-hand /projects/ttr/ttr2-hand-to-hand?redirected=1
+Redirect 301 /events/ttr2-lemesos-documentary-film-festival /projects/ttr/ttr2-lemesos-documentary-film-festival?redirected=1
+Redirect 301 /events/ttr2-ties-of-the-transitory-seminar /projects/ttr/ttr2-ties-of-the-transitory-seminar?redirected=1
+Redirect 301 /events/ttr2-bound /projects/ttr/ttr2-bound?redirected=1
+Redirect 301 /events/ttr2-inter-alios /projects/ttr/ttr2-inter-alios?redirected=1
+Redirect 301 /events/ttr2-nomadism-and-trans-cities /projects/ttr/ttr2-nomadism-and-trans-cities?redirected=1
+Redirect 301 /events/ttr2-everybody-knows-this-is-nowhere /projects/ttr/ttr2-everybody-knows-this-is-nowhere?redirected=1
+Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-culture-memory-and-trauma?redirected=1
+Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time?redirected=1
+Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1?redirected=1
 Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation?redirected=1
 RedirectMatch 301 ^/participations/?(.+)?$ /projects/participations/$1
 RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
-Redirect 301 /events/the-state /projects/hosted/the-state
-Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear
-Redirect 301 /671/flashflood-2007 /blog/flashflood-2007
+Redirect 301 /events/the-state /projects/hosted/the-state?redirected=1
+Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear?redirected=1
+Redirect 301 /671/flashflood-2007 /blog/flashflood-2007?redirected=1
 #Redirect 301 /42/open-city-stepping-in-from-the-edge /texts/open-city
 
 RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?redirected=1
 Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?redirected=1
+Redirect 301 /texts/istanbul-biennial-10-nightcomers /blog/istanbul-biennial-10-nightcomers?redirected=1
+Redirect 301 /texts/roc-14 /blog/roc-14?redirected=1
+Redirect 301 /571/preserving-new-media.html /texts/preserving-new-media?redirected=1
+Redirect 301 /texts/qed-saturday-12-october-2013 /blog/qed-saturday-12-october-2013?redirected=1
+Redirect 301 /1615/ /blog/qed-saturday-12-october-2013?redirected=1
+Redirect 301 /texts/tive-2008 /blog/tive-2008?redirected=1
+Redirect 301 /texts/dok-leipzig-2010 /blog/dok-leipzig-2010?redirected=1
+Redirect 301 /texts/performa-11 /blog/performa-11?redirected=1
+Redirect 301 /texts/lisbon-architecture-triennale /blog/lisbon-architecture-triennale?redirected=1
+Redirect 301 /respublika /projects/respublika/
+Redirect 301 /texts/female-shorts /blog/female-shorts?redirected=1
+Redirect 301 /texts/idensitat-07 /blog/idensitat-07?redirected=1
+Redirect 301 /texts/biacs2 /blog/biacs2?redirected=1
+Redirect 301 /texts/24th-ube-biennale /blog/24th-ube-biennale?redirected=1
+Redirect 301 /texts/correlations-of-violence /blog/correlations-of-violence
+Redirect 301 /texts/untitled12th-istanbul-biennial-2011 /blog/untitled12th-istanbul-biennial-2011?redirected=1
+Redirect 301 /texts/tampere-xxxviii /blog/tampere-xxxviii?redirected=1
+Redirect 301 /texts/facade-window-project /blog/facade-window-project?redirected=1
+Redirect 301 /texts/electric-renaissance-2005call /blog/electric-renaissance-2005call?redirected=1
+Redirect 301 /texts/the-united-nations-plaza /blog/the-united-nations-plaza?redirected=1
+Redirect 301 /category/srecko-horvat/ /texts/
+Redirect 301 /category/jeremy-hight/ /texts/
+Redirect 301 /texts/1st-athens-video-art-festival-call-for-entries /blog/1st-athens-video-art-festival-call-for-entries?redirected=1
+Redirect 301 /projects/workshops/ /about/workshops
+
+
 
 RewriteEngine on
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.ru/? [NC,OR]
-RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC,OR]
-RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.xyz/? [NC]
+RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC]
+#RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.xyz/? [NC]
 RewriteRule .* - [F]
 
 
@@ -226,24 +222,46 @@ RewriteRule .* https://www.neme.org/indexthief.htm [R,L]
 #RewriteRule .* https://www.neme.org/indexwhy.htm [R,L]
 
 
+
+RewriteEngine on
+RewriteCond %{REMOTE_ADDR} 104\.227\.54\.177
+RewriteRule $ /jenny.htm [R=301,L]
+
+
 Order Deny,Allow
 Deny from 84.109.137.242
 Deny from 82.80.230.228
 
 RewriteEngine on
 # Options +FollowSymlinks
+RewriteCond %{HTTP_REFERER} all-stick\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} altemamarket\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} bez-trusikov\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} bigbangonline\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} buxtome\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
+RewriteCond %{HTTP_REFERER} cdamkv\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} cutt\.us [NC,OR]
+RewriteCond %{HTTP_REFERER} danilastroitel\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http?://([^.]+\.)*exaccess\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://([^.]+\.)*exaccess\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} freefotogirls\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} greenshop\.su [NC,OR]
-RewriteCond %{HTTP_REFERER} nashi-devki\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} own-ahrefs\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} pornofoto4ki\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} kino-rf\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} livetaiga\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} megagrabber\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} mini-modus\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} mojastopa\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} nashi-devki\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} odinon\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} own-ahrefs\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} pc-lessons\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} pornofoto4ki\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} shopmaybay\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} twitch\.tv [NC,OR]
+RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
+RewriteCond %{HTTP_REFERER} z-audi\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} zvideos\.ru [NC]
 RewriteRule .* - [F]
 
@@ -259,16 +277,6 @@ RewriteRule .* - [F]
 RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
 RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
 RewriteRule ^ - [F]
-
-# block QUERY_STRINGs
-#<IfModule mod_rewrite.c>
-# RewriteEngine On
-# RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).* [NC,OR]
-# RewriteCond %{QUERY_STRING} ^.*(\.|\*|;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).* [NC,OR]
-# RewriteCond %{QUERY_STRING} ^.*(md5|benchmark|union|select|insert|cast|set|declare|drop|update).* [NC]
-# RewriteRule ^(.*)$ - [F,L]
-#</IfModule>
-
 
 # turn off ipv6
 #Listen 0.0.0.0:80
@@ -323,9 +331,6 @@ RewriteRule "(^|/)\." - [F]
 deny from all
 </Files>
 
-RewriteCond %{SCRIPT_FILENAME} -d [OR]
-RewriteCond %{SCRIPT_FILENAME} -f
-RedirectMatch 403 /\..*$
 
 <Files config.php> 
 deny from all 
