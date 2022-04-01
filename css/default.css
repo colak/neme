@@ -31,7 +31,7 @@ tr,td {padding:5px;margin:5px}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sup{top:-.5em}
 sub{bottom:-.25em}
-em,i{font-style:italic}
+em,i,.italic{font-style:italic}
 code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 {margin:0 auto;max-width:960px;padding:1em 0}
 .grid_1,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16,.grid_17,.grid_18,.grid_19,.grid_2,.grid_20,.grid_21,.grid_22,.grid_23,.grid_24,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9{display:inline;float:left;margin-left:.5%;margin-right:.5%}
@@ -364,7 +364,8 @@ h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 .smallbreak {display:block;clear:both}
 
 .eu {display:block;background-color:#fff;color:#000;padding:1em 0;clear:both;min-height:8em;height:8em;height:auto !important;}
-.eu .grid_3, .eu .grid_15 {width:100%;clear:both}
+.eu .grid_3, .eu .grid_15, .eu .grid_16 {width:100%;clear:both}
+.eu .grid_2 {max-width:60px}
 .eu img {max-width:150px}
 
 .sub{margin:1em 0; display:block}
@@ -433,4 +434,6 @@ overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; wor
 @media screen and (max-width:450px){
 #front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:96%}
 #vids {display:block; padding-bottom:52%}
+.eu .grid_2 {clear:both;}
+.eu .grid_16 {width:74%}
 }
