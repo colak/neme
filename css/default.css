@@ -295,7 +295,7 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 
 .anchor{display: block;height: 3em; margin-top: -3em; visibility: hidden;}
 
-#content .grid_18 a[rel~=external]:after, #newsletter .grid_14 a[rel~=external]:after, #copyright a[rel~=nofollow]:after, #content .grid_18 a[rel=license]:after, .vimeoeucookies a[rel~=external]:after, .gdpr a[rel~=external]:after, .socialeucookies a[rel~=external]:after, #publications figcaption a[rel~=external]:after, .eu p a[rel~=external]:after, .cookies a[rel~=external]:after {content:"\00a0\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0}
+#content .grid_18 a[rel~=external]:after, #newsletter .grid_14 a[rel~=external]:after, .announce a[rel~=external]:after, #copyright a[rel~=nofollow]:after, #content .grid_18 a[rel=license]:after, .vimeoeucookies a[rel~=external]:after, .gdpr a[rel~=external]:after, .socialeucookies a[rel~=external]:after, #publications figcaption a[rel~=external]:after, .eu p a[rel~=external]:after, .cookies a[rel~=external]:after {content:"\00a0\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0}
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
