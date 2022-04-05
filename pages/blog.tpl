@@ -54,13 +54,15 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
-<txp:if_section name="">
-<link rel="canonical" href="<txp:site_url />" />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
 <txp:else />
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />" />
-</txp:if_section>
+</txp:evaluate>
+<txp:else />
+<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
 <txp:else />
 <link rel="canonical" href="<txp:permlink />" />
+</txp:evaluate>
 </txp:if_article_list>
 </txp:if_search>
 <txp:older wraptag='<link rel="prev" href="<+>" />' />
@@ -230,7 +232,7 @@ header('content-type: text/html; charset=utf-8');
 
 <article>
 <txp:if_request type="get" name="redirected">
-<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="bookmark"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
 <h1><txp:title /></h1>
