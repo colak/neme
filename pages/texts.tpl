@@ -60,9 +60,13 @@ header('content-type: text/html; charset=utf-8');
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url escape="" />" />
 <txp:else />
 <txp:if_article_list>
+
 <link rel="canonical" href="<txp:page_url context />" />
 <txp:else />
+<txp:evaluate query='contains("<txp:permlink />","?accept_")'>
+<txp:else />
 <link rel="canonical" href="<txp:permlink />" />
+</txp:evaluate>
 </txp:if_article_list>
 </txp:if_search>
 
@@ -241,7 +245,7 @@ header('content-type: text/html; charset=utf-8');
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 
 <txp:if_request type="get" name="redirected">
-<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="bookmark"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
 <h1><txp:title /></h1>
@@ -263,7 +267,7 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_variable>
 </txp:linklist></p>
 <txp:if_logged_in><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></p></txp:if_logged_in>
-<time class="published" datetime="<txp:posted format="%Y-%m-%dT%T" />">
+<time class="published" datetime="<txp:posted format="%Y-%m-%d" />">
 Posted: <txp:posted format="%b %d, %Y" /></time>
 </div>
 
