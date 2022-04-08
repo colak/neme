@@ -10,7 +10,7 @@
 <p>On line for <txp:fha_time_diff year="2004" month="8" day="18" />.<br />
 Site last modified on: 
 <txp:article_custom sort="LastMod" limit="1" form="">
-<pubDate><txp:modified format="%a, %m %b %Y %X GMT" /></pubDate>
+<pubDate><txp:modified format="%a, %m %b %Y %X 'GMT'" /></pubDate>
 </txp:article_custom>
 Valid <a href="https://validator.w3.org/check?uri=referer" rel="external noopener">HTML5</a>, <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.neme.org%2Fthemes%2Fneme960%2Fstyles%2Fdefault.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" rel="external">CSS</a>, <a href="http://feedvalidator.org/check.cgi?url=https://www.neme.org/rss/" rel="external">RSS</a>, <a href="http://feedvalidator.org/check.cgi?url=https://www.neme.org/atom/" rel="external">ATOM</a><txp:if_section name="">, <txp:hide><a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=https%3A//www.neme.org/" rel="external"></txp:hide>508</txp:if_section><txp:if_individual_article>, <a href="http://www.contentquality.com/mynewtester/cynthia.exe?rptmode=-1&amp;url1=https%3A//www.neme.org<txp:page_url />" rel="external">508</a></txp:if_individual_article></p>
 </div>
