@@ -6,7 +6,7 @@
 <txp:section_list break="" exclude="sitemap,newsletter-unsubscribe">
 <url>
 <loc><txp:section url="1" /></loc>
-<txp:evaluate test="article_custom"><lastmod><txp:article_custom section='<txp:section />' limit="1" exclude="2240,2241" sort="LastMod desc" status="live"><txp:modified format="%Y-%m-%dT%H:%M:%SZ" /></txp:article_custom></lastmod></txp:evaluate></url>
+<txp:evaluate test="article_custom"><lastmod><txp:article_custom section='<txp:section />' limit="1" exclude="2240,2241" sort="LastMod desc" status="live"><txp:modified format="%Y-%m-%d\T%H:%M:%S\Z" /></txp:article_custom></lastmod></txp:evaluate></url>
 </txp:section_list>
 
 <txp:if_logged_in>
@@ -32,6 +32,6 @@
 <url><loc><txp:variable name="siteurl" />projects/respublika/performances/</loc></url>
 <url><loc><txp:variable name="siteurl" />publications/cited/</loc></url>
 <txp:article_custom section="projects,about,texts,blog" exclude="2001,2189,2190,2240,2241" limit="9999" status="live">
-<url><loc><txp:permlink /></loc><lastmod><txp:modified format="%Y-%m-%dT%H:%M:%SZ" /></lastmod></url>
+<url><loc><txp:permlink /></loc><lastmod><url><loc><txp:permlink /></loc><lastmod><txp:modified format="%Y-%m-%d\T%H:%M:%S\Z" /></lastmod></url></lastmod></url>
 </txp:article_custom>
 </urlset>
