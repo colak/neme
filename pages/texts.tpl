@@ -294,7 +294,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:images id='<txp:custom_field name="pubs_by_others" />'>
 <div class="nosmall">
 <h4>Off line reading</h4>
-<a rel="external" href="<txp:image_info type="caption" />"><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:custom_field name="pubs_by_others" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image at NeMe" />" class="<txp:yield name="class" default="image" />" /></a>
+<a class="nostyle" rel="external" href="<txp:image_info type="caption" />"><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:custom_field name="pubs_by_others" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image at NeMe" />" class="<txp:yield name="class" default="image" />" /></a>
 </txp:images>
 </div>
 </txp:if_custom_field>
