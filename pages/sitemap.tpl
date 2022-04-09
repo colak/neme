@@ -6,10 +6,10 @@
 <txp:section_list break="" exclude="sitemap,newsletter-unsubscribe">
 <url>
 <loc><txp:section url="1" /></loc>
-<txp:evaluate test="article_custom"><lastmod><txp:article_custom section='<txp:section />' limit="1" exclude="2240,2241" sort="LastMod desc" status="live"><txp:modified format="%Y-%m-%d\T%H:%M:%S\Z" /></txp:article_custom></lastmod></txp:evaluate></url>
+<txp:evaluate test="article_custom"><lastmod><txp:article_custom section='<txp:section />' limit="1" exclude="2240,2241" sort="LastMod desc" status="live"><txp:modified format="w3c" /></txp:article_custom></lastmod></txp:evaluate></url>
 </txp:section_list>
 
-<txp:if_logged_in>
+<txp:hide>
 <txp:section_list>
 <txp:page_url s="blog">
 <txp:pages total='<txp:article_custom section="blog" pgonly limit="10" listform="" form="" />' />
@@ -18,7 +18,7 @@
 </txp:pages>
 </txp:page_url>
 </txp:section_list>
-</txp:if_logged_in>
+</txp:hide>
 
 <url><loc><txp:variable name="siteurl" />projects/state-machines/</loc></url>
 <url><loc><txp:variable name="siteurl" />projects/a-sea-change/</loc></url>
@@ -32,6 +32,7 @@
 <url><loc><txp:variable name="siteurl" />projects/respublika/performances/</loc></url>
 <url><loc><txp:variable name="siteurl" />publications/cited/</loc></url>
 <txp:article_custom section="projects,about,texts,blog" exclude="2001,2189,2190,2240,2241" limit="9999" status="live">
-<url><loc><txp:permlink /></loc><lastmod><url><loc><txp:permlink /></loc><lastmod><txp:modified format="%Y-%m-%d\T%H:%M:%S\Z" /></lastmod></url></lastmod></url>
+<url><loc><txp:permlink /></loc>
+<lastmod><txp:evaluate query='<txp:posted format="%s" /> < <txp:modified format="%s" />'><txp:modified format="w3c" /><txp:else /><txp:posted format="w3c" /></txp:evaluate></lastmod></url>
 </txp:article_custom>
 </urlset>
