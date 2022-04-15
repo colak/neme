@@ -22,7 +22,7 @@
 </IfModule>
 
 
-# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
+# RewriteMap mapname "dbm:/path/to/site/map.map"
 
 # compression and cache control
 
