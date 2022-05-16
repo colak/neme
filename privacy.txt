@@ -2,7 +2,7 @@ We are very delighted that you have shown interest in our organisation. Data pro
 
 The processing of personal data, such as the name, address, e-mail address, or telephone number of a data subject shall always be in line with the General Data Protection Regulation (GDPR), and in accordance with the country-specific data protection regulations applicable to NeMe. By means of this data protection declaration, our organisation would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.
 
-As the controller, NeMe has implemented numerous technical and organisational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means.
+As the controller, NeMe has implemented <txp::ext txt="numerous" url="https://themarkup.org/blacklight?url=neme.org" /> <txp::ext txt="technical" url="https://securityheaders.com/?q=https%3A%2F%2Fwww.neme.org&hide=on" /> and organisational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means.
 
 Every effort is made to keep the website up and running smoothly. However, NeMe takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
 
@@ -109,8 +109,6 @@ NeMe uses 4 kind of cookies
 
 By means of a cookie, the information on our website can be optimised with the user in mind. This includes the technologies NeMe uses to serve the site and what version browsers we support. 
 
-NeMe also uses a session cookie to keep you logged into the forum during your visit and, optionally, to keep you logged in for future forum visits.
-
 Third party cookies are used in this website from Facebook, Twitter, Google, SoundCloud, Mixcloud, Youtube, and Vimeo but none of these are loaded without the data-subject's consent. 
 
 A list of cookies served by our websites can be found on ==<a rel="nofollow" href="<txp:permlink id=2181 />"><txp:permlink id=2181 /></a>==.
@@ -154,13 +152,13 @@ The organisation's newsletter may only be received by the data subject if
 # the data subject has a valid e-mail address and 
 # the data subject registers to the NeMe newsletter.
 
-During the registration for the newsletter, we also store the IP address of the computer system assigned by the Internet service provider (ISP) and used by the data subject at the time of the registration, as well as the date and time of the registration. The collection of this data is necessary in order to understand the (possible) misuse of the e-mail address of a data subject at a later date, and it therefore serves the aim of the legal protection of the controller.
+During the registration for the newsletter, we also store the IP address of the computer system assigned by the Internet service provider (ISP) and used by the data subject at the time of the registration, as well as the date and time of the registration. The collection of this data is necessary in order to understand the (possible) misuse of the e-mail address of a data subject at a later date, and it therefore serves the aim of the legal protection of NeMe.
 
 The personal data collected as part of a registration for the newsletter will only be used to send our newsletter. In addition, subscribers to the newsletter may be informed by e-mail, as long as this is necessary for the operation of the newsletter service or a registration in question, as this could be the case in the event of modifications to the newsletter, or in the event of a change in technical circumstances. There will be no transfer of personal data collected by the newsletter service to third parties. The subscription to our newsletter may be easily terminated by the data subject at any time. The consent to the storage of personal data, which the data subject has given for receiving the newsletter, may be revoked at any time. For the purpose of revocation of consent, a corresponding link is found in each newsletter.
 
 h3. 6a. Newsletter-Tracking
 
-The newsletter of NeMe does not contain so-called tracking pixels or any other such technologies and as such no statistical analysis of the success or failure of our newsletter campaigns is carried out.
+The newsletter of NeMe does not contain any tracking technologies and as such no statistical analysis of the success or failure of our newsletter campaigns is carried out.
 
 h3. 7. Registering and posting in the NeMe forum
 
@@ -170,7 +168,7 @@ To register in the forum a valid email address and a user name need to be submit
 
 Only approved members are allowed to post to the forum but there are no qualitative criteria for those posts. As such NeMe can not be held responsible in any way for any inaccurate information posted by the forum members.
 
-More information about the forum software can be found on <a rel="external" href="http://punbb.informer.com/">punbb.informer.com/</a>.
+More information about the forum software can be found on <txp::ext url="https://punbb.informer.com/" txt="punbb.informer.com" />.
 
 h3. 8. Contact possibility via the website
 
