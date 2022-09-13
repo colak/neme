@@ -22,7 +22,6 @@ header('content-type: text/html; charset=utf-8');
 <head>
 <title><txp:page_title /></title>
 <meta charset="utf-8">
-<txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
 <meta name="generator" content="Textpattern CMS"/>
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -151,7 +150,6 @@ header('content-type: text/html; charset=utf-8');
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
-<span class="anchor" id="landing">&nbsp;</span> <txp:hide>This is needed for anchors to lead to the top of the page. .anchor class in the css has same hight as the fixed menu</txp:hide>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -192,7 +190,7 @@ header('content-type: text/html; charset=utf-8');
 
 <div class="grid_8">
 <div id="meta">
-<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised or curated in the past <txp:fha_time_diff year="2004" />.</p>
+<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised or curated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
 <p>We thank all of them.</p>
 <p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="/contact/">let us know</a>.</p>
 </div>
@@ -262,14 +260,7 @@ header('content-type: text/html; charset=utf-8');
 <txp:oui_cookie name="accept_fb_cookies" duration="+1 year" values="yes" />
 <txp:oui_if_cookie name="accept_fb_cookies">
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="grid_12 socialfeed"><div class="fb-page" data-href="https://www.facebook.com/NeMeArtsCentre/" data-tabs="timeline" data-width="450" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/NeMeArtsCentre/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NeMeArtsCentre/">NeMe</a></blockquote></div>
+<div class="grid_12 socialfeed"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNeMeArtsCentre&tabs=timeline&width=470&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="470" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
 <txp:else />
 <div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://www.facebook.com/NeMeArtsCentre/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external noopener" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
@@ -287,7 +278,7 @@ header('content-type: text/html; charset=utf-8');
 
 <!-- ========================================= -->
 
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#landing"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#<txp:section />"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
