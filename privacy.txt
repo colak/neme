@@ -103,8 +103,7 @@ Through the use of cookies, NeMe can provide the users of this website with more
 NeMe uses 4 kind of cookies
 
 * Session cookies: Set in our forum and assists in keeping its members logged in
-* Preferences cookies: Set to obtain the permission from our visitors to load analytics and 3rd party cookies 
-* Analytics cookies: Set by our analytics software 
+* Preferences cookies: Set to obtain the permission from our visitors to load 3rd party cookies 
 * 3rd party cookies: Set by our content providers 
 
 By means of a cookie, the information on our website can be optimised with the user in mind. This includes the technologies NeMe uses to serve the site and what version browsers we support. 
