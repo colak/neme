@@ -114,7 +114,7 @@ A list of cookies served by our websites can be found on ==<a rel="nofollow" hre
 
 h3. 5. Collection of general data and information
 
-The server of NeMe websites are hosted, collects a series of general data and information when a data subject or automated system calls up the websites and accepts our cookie policy. This general data and information are stored in the server log files. Collected data icludes: 
+The server of NeMe websites are hosted, collects a series of general data and information when a data subject or automated system calls up the websites and accepts our cookie policy. This general data and information are stored in the server log files. Collected data includes: 
 
 # the browser types and versions used, 
 # the operating system used by the accessing system, 
