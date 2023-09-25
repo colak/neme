@@ -114,11 +114,11 @@ A list of cookies served by our websites can be found on ==<a rel="nofollow" hre
 
 h3. 5. Collection of general data and information
 
-On the data subject's approval, the NeMe websites  collect a series of general data and information when a data subject or automated system calls up the websites and accepts our cookie policy. This general data and information are stored in the server log files. Collected may be 
+The server of NeMe websites are hosted, collects a series of general data and information when a data subject or automated system calls up the websites and accepts our cookie policy. This general data and information are stored in the server log files. Collected data icludes: 
 
 # the browser types and versions used, 
 # the operating system used by the accessing system, 
-# the website from which an accessing system reaches our website (so-called referrers),
+# the website from which an accessing system reaches our website (so-called HTTP referers),
 # the sub-websites,
 # the date and time of access to the Internet site, 
 # an Internet protocol address (IP address),
@@ -134,7 +134,7 @@ When using these general data and information, NeMe does not draw any conclusion
 # provide law enforcement authorities with the information necessary for criminal prosecution in case of a cyber-attack,
 
 
-Therefore, NeMe analyses anonymously collected data and information statistically, with the aim of increasing the data protection and data security of our organisation, and to ensure an optimal level of protection for the personal data we process. The anonymous data of the server log files are stored separately from all personal data provided by a data subject.
+Therefore, NeMe analyses anonymously collected data and information statistically, with the aim of increasing the data protection and data security of our organisation, and to ensure an optimal level of protection for the personal data we process. The anonymous data of the server log files are stored separately from all personal data provided by a data subject. All such data is deleted every 2 months.
 
 h3. 6. Subscription to our newsletters
 
