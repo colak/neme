@@ -1,20 +1,11 @@
-<txp:php>
-if (isset($_POST['submit'])) {
-$url = $_POST['site'].$_POST['terms'];
-if ($_POST['section'] && ($_POST['section'] != 'null')) $url = $url.'&s='.$_POST['section'];
-header('Location: '.$url);
-} else {
-header('content-type: text/html; charset=utf-8');
-}
-</txp:php>
-
+<txp:output_form form="section_search" />
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
-<txp:if_article_list>
+<txp:hide><txp:if_article_list>
 <txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
     <txp:txp_die status="404" />
 </txp:evaluate>
-</txp:if_article_list>
+</txp:if_article_list></txp:hide>
 
 <!doctype html>
 <html lang="en-gb">
@@ -29,13 +20,14 @@ header('content-type: text/html; charset=utf-8');
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none" /></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:css name="default" format="flat.link" media="all" />
-<txp:if_article_list><txp:css name="articlelists" format="flat.link" media="all" /></txp:if_article_list>
-<!--[if IE]><txp:css name="ie-fluid" format="flat.link" /><![endif]-->
-<!--[if IE 7]><txp:css name="ie7" format="flat.link" /><![endif]-->
+
+<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
+<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
+<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
 <!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
-<txp:act_if_mobile><txp:css name="mobile" format="flat.link" media="screen" /></txp:act_if_mobile>
-<txp:css name="print" format="flat.link" media="print" />
+<txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
+<link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
 
 <txp:if_section name="contact,newsletter">
@@ -110,29 +102,30 @@ header('content-type: text/html; charset=utf-8');
 </txp:if_individual_article>
 
 
-<txp:feed_link flavor="atom" format="link" label="Atom" section="" category="" />
-<txp:feed_link flavor="rss" format="link" label="RSS" section="" category="" />
+<link rel="alternate" type="application/atom+xml" title="Atom feed" href="<txp:site_url />atom/">
+<link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss/">
 <txp:hide><link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" /></txp:hide>
 
-<link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194" />
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-<link rel="manifest" href="/manifest.json" />
+<link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon">
+<link rel="icon" href="<txp:site_url />favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
 <txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000" /></txp:hide>
-<meta name="msapplication-TileColor" content="#ffffff" />
-<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-<meta name="theme-color" content="#ffffff" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 
 
@@ -163,7 +156,7 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_white.svg" alt="NeMe logo" class="logo" width="50" height="50" />
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
@@ -171,9 +164,9 @@ header('content-type: text/html; charset=utf-8');
 
 <txp:act_if_mobile not>
 <aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" loading="lazy" width="30" height="30" alt="share on facebook" /></a>
-<a href="http://www.twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="share on twitter"/></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" loading="lazy"  alt="share on Redit"/></a>
+<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" loading="lazy" width="30" height="30" alt="share on facebook"></a>
+<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="share on twitter"></a>
+<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" loading="lazy" alt="share on Redit"></a>
 </aside>
 </txp:act_if_mobile>
 
@@ -192,7 +185,7 @@ header('content-type: text/html; charset=utf-8');
 <div id="meta">
 <p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised or curated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
 <p>We thank all of them.</p>
-<p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="/contact/">let us know</a>.</p>
+<p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="<txp:permlink id="2240"/>">let us know</a>.</p>
 </div>
 </div>
 <div>
@@ -256,14 +249,14 @@ header('content-type: text/html; charset=utf-8');
 
 <!-- ====================================== -->
 
-<div id="social" class="nosmall"><div class="container_24">
+<txp:hide><div id="social" class="nosmall"><div class="container_24">
 <txp:oui_cookie name="accept_fb_cookies" duration="+1 year" values="yes" />
 <txp:oui_if_cookie name="accept_fb_cookies">
 <div id="fb-root"></div>
-<div class="grid_12 socialfeed"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNeMeArtsCentre&tabs=timeline&width=470&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="470" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<div class="grid_12 socialfeed"><iframe loading="lazy" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnemeorg&tabs=timeline&width=470&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="470" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 </div>
 <txp:else />
-<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://www.facebook.com/NeMeArtsCentre/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external noopener" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
+<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://www.facebook.com/nemeorg/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external noopener" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 
 <txp:oui_cookie name="accept_twitter_cookies" duration="+1 year" values="yes" />
@@ -274,16 +267,16 @@ header('content-type: text/html; charset=utf-8');
 <div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://twitter.com/NeMeOrg">Twitter feed</a>. By viewing it here, you agree with Twitter's <a rel="external noopener" href="https://twitter.com/privacy?lang=en">Privacy Policy</a>.</p><p class="centre" style="margin-bottom:1em;"><a class="red" rel="nofollow" href="?accept_twitter_cookies=yes">View Twitter feed</a></p><div class="clear">&nbsp;</div></div>
 </txp:oui_if_cookie>
 
-<div class="clear">&nbsp;</div></div></div>
+<div class="clear">&nbsp;</div></div></div></txp:hide>
 
 <!-- ========================================= -->
 
-<span class="grid_1 prefix_23 nosmall noprint"><a href="#<txp:section />"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
+<span class="grid_1 prefix_23 nosmall noprint"><a href="#"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top" /></a></span>
 <div class="clear">&nbsp;</div>
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
-<txp:output_form form="cookies" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
