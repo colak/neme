@@ -8,7 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:none}
 table{border-collapse:collapse;border-spacing:0;width:100%}
-html {scroll-behavior: smooth;}
+html {scroll-behavior: smooth;scroll-padding-top:60px;}
 body{background:#000;border-bottom:10px solid #000;color:#333;font-size:13px;line-height:1.5;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
 a:focus{outline:dotted 1px}
 h2{font-size:23px}
@@ -23,8 +23,9 @@ address,dl,fieldset,ol,p,pre,table,ul{margin-bottom:1em}
 h2,h3,h4,h5,h6 {margin: 0}
 a[rel~=external]:after {content:"\00a0\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0}
 a.nostyle[rel~=external]:after {content:none}
-hr, hr.line {width:90%;padding:0;margin:1em auto;border:none;border-top:1px solid #eee;color:#eee}
-hr.line:after {content:"\25CB";display:inline-block;position:relative;top:-.8em;font-size:1.3em;padding:0 .25em;background-color: #000}
+hr {width:90%;padding:0;border-top:1px dashed #eee;}
+hr.l50 {width:50%;padding:0;border-top:1px dashed #eee;}
+hr.l100 {width:100%;padding:0;border-top:1px solid #eee;}
 
 tr,td {padding:5px;margin:5px}
 :target {background: #666666;border: solid 1px #aaa;}
@@ -35,7 +36,7 @@ sup{top:-.5em}
 sub{bottom:-.25em}
 em,i,.italic{font-style:italic}
 code{background-color:#585858;font-family:'Courier New',Courier,monospace}
-.container_24 {margin:0 auto;max-width:960px;padding:1em 0}
+.container_24 {margin:0 auto;max-width:1080px;padding:1em 0}
 .grid_1,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16,.grid_17,.grid_18,.grid_19,.grid_2,.grid_20,.grid_21,.grid_22,.grid_23,.grid_24,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9{display:inline;float:left;margin-left:.5%;margin-right:.5%}
 .alpha{margin-left:0}
 .omega{margin-right:0}
@@ -161,7 +162,7 @@ article h1{color:#fff}
 p, ol, ul{text-align:left;widows: 3; orphans: 2;}
 ol,ul{list-style-position:inside!important;padding:0}
 blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em}
-abbr,acronym{border-bottom:2px dotted #ccc;cursor:help}
+abbr,acronym{border-bottom:2px #ccc;cursor:help}
 dt{margin-left:1em}
 dd{margin-left:2em}
 table tr:nth-child(odd) {background-color: #464646;}
@@ -279,12 +280,12 @@ nav ul:after{content:"";display:table;clear:left}
 .logo1{max-height:150px;margin-bottom:1em}
 
 #content {padding:2em 0 0 0}
-.vimeoeucookies, .gdpr {display:table;width:100%;border-radius: 8px;margin:1em 0}
-.vimeoeucookies, .gdpr, .cookies {background-color:#ffc;}
-.vimeoeucookies p, .socialeucookies p, .gdpr p {color:#000;font-size:1.25em;padding:.2em;margin:0 0 0 0}
-.vimeoeucookies a, .socialeucookies a, .gdpr a {color:#cc0000}
-.gdpr img {width:100%; height:auto}
-.gdpr p {text-align:center;}
+.vimeoeucookies, .theylive {display:block;width:100%;border-radius: 8px;margin:1em 0;overflow-x:auto;}
+.vimeoeucookies, .theylive, .cookies {background-color:#ffc;}
+.vimeoeucookies p, .socialeucookies p, .theylive p {color:#000;font-size:1.25em;padding:.2em;margin:0 0 0 0}
+.vimeoeucookies a, .socialeucookies a, .theylive a {color:#cc0000}
+.theylive img {width:100%; height:auto}
+.theylive p {text-align:center;}
 p.red {margin:.5em 0;}
 p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;margin:20px 0;}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
@@ -300,13 +301,13 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
-#eucookies {display:block;width:100%;margin:0 0 -25px 0;-moz-box-shadow: 0 -3px 5px #bbb;-webkit-box-shadow: 0px -3px 5px #bbb;box-shadow: 0px -3px 5px #bbb;background-color:#000;color:#fff}
-#eucookies h3 {margin:0;padding:0}
-#eucookies p {font-size:1.1em;}
-#eucookies a {color:#EE0000}
-#eucookies .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
-#eucookies .grid_6 p {text-align:center;margin:0;padding:0;display:block;clear:both}
-#eucookies .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding:.1em 1em;}
+#soylentgreen {display:block;width:100%;margin:0 0 -25px 0;-moz-box-shadow: 0 -3px 5px #bbb;-webkit-box-shadow: 0px -3px 5px #bbb;box-shadow: 0px -3px 5px #bbb;background-color:#000;color:#fff}
+#soylentgreen h3 {margin:0;padding:0}
+#soylentgreen p {font-size:1.1em;}
+#soylentgreen a {color:#EE0000}
+#soylentgreen .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+#soylentgreen .grid_6 p {text-align:center;margin:0;padding:0;display:block;clear:both}
+#soylentgreen .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding:.1em 1em;}
 
 #texts figure {display: block !important;border: 0;}
 #texts figure img {vertical-align:top !important;display:block !important;height:auto;}
@@ -342,7 +343,7 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 .logo {position:relative;margin-left:auto;margin-right:auto;display: block;clear:both}
 .nolarge {display:block}
 .medium,.nosmall, .large, #landing, .tooltip:hover .tooltiptext {display:none;}
-#content, #eucookies { -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none;}
+#content, #soylentgreen { -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none;}
 .container_24{width:97%; padding:0 1.5%; display:block}
 h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 
@@ -354,8 +355,8 @@ h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 
 .rslides li img, .round {border-radius:5px;}
 
-#eucookies, #eucookies .grid_18, #contact .grid_4 {width:100%;clear:both}
-#eucookies, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
+#soylentgreen, #soylentgreen .grid_18, #contact .grid_4 {width:100%;clear:both}
+#soylentgreen, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 
 
 #front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, #texts #content ol li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
@@ -428,7 +429,7 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 article ol.notes {list-style-position: inside;list-style-type:initial; list-style:decimal}
 article ol.notes, article .tooltip {list-style-position: inside;list-style-type:initial; list-style:decimal;
 overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word;}
-#eucookies .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
+#soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
 }
 
