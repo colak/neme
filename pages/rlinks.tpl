@@ -194,7 +194,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<hr />
+<hr>
 
 <div class="announce"><h4>Sponsors</h4>
 <p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, these the organisations helpped our projects in either a financial or in-kind way.</p>
@@ -208,7 +208,7 @@
 </txp:if_variable>
 </txp:linklist></div>
 
-<hr />
+<hr>
 
 <h4>Venues</h4>
 
@@ -224,7 +224,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<hr />
+<hr>
 
 <div class="announce"><h5 id="site_thanks">For their help and/or advice for the coding of our websites we thank:</h5>
 
