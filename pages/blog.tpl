@@ -176,7 +176,7 @@
 <txp:if_search_results>
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
 <txp:article limit="900" />
-<hr />
+<hr>
 <txp:else />
 <p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
 <h3>Suggestions:</h3>
