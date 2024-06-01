@@ -1,9 +1,8 @@
-<txp:act_if_mobile>
-<txp:else />
+<txp:act_if_mobile not>
 <form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
-<input type="hidden" value="all" name="m" />
+<input type="hidden" value="all" name="m">
 <label for="site">Site
 <select id="site" name="site">
 <txp:php>
@@ -11,8 +10,8 @@
 $sites = array(
 // site title => url/?q=
 'NeMe' => 'https://www.neme.org?m=all&amp;q=',
-'Respublika' => 'https://respublika.neme.org/?m=any&amp;q=',
-'Forum' => 'https://forum.neme.org/search.php?action=search&amp;keywords=',
+'A Sea Change' => 'https://a-sea-change.net/search/?q=',
+'Toolkit of Care' => 'https://toolkitof.care/?m=any&amp;q='
 );
 // asort($sites);
 foreach ($sites as $title => $url) {
@@ -24,24 +23,24 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 </label>
 
 <label class="accessibility hidden" for="terms" aria-hidden="false">Search</label>
-<input id="terms" name="terms" type="text" value="<txp:page_url type="q" />" itemprop="query-input" placeholder="Search"/>
+<input id="terms" name="terms" type="text" value="<txp:page_url type="q" />" itemprop="query-input" placeholder="Search">
 
 
-<input name="submit" type="submit" value="search" id="searchbutton" />
+<input name="submit" type="submit" value="search" id="searchbutton">
 </fieldset>
 </form>
 </txp:act_if_mobile>
-<p><txp:if_article_list>
+<txp:if_article_list>
 
 
 <txp:if_section name="about,projects,texts">
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
-<txp:else />
-<txp:if_section name="blog">
-2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.
-<txp:else />
-&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.
+<p>&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.</p>
 </txp:if_section>
+<txp:if_section name="blog">
+<p>2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.</p>
+</txp:if_section>
+<txp:if_section name="publications,related-links,newsletter-unsubscribe,default">
+<p>&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.</p>
 </txp:if_section>
 <txp:else />
 
@@ -56,21 +55,16 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 &copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> &bull; Text &copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <txp:variable name="textauthor" />
 </txp:if_variable>
 
-<txp:else />
-
 <txp:if_variable name="year" value='<txp:posted format="%Y" />'>
 &copy; <txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 <txp:else />
 &copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 </txp:if_variable>
-
 </txp:if_article_section>
 
 <txp:if_article_section name="blog">
 2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.
-
-
 </txp:if_article_section>
 
-</txp:if_article_list></p>
+</txp:if_article_list>
 <txp:hide><script src="<txp:page_url type="theme_path" />/forms/javascripts/main.js"></script></txp:hide>
