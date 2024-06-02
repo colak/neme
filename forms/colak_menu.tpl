@@ -18,7 +18,6 @@
 <li role="menuitem"><a href="<txp:site_url />about/subscribe-to-our-newsletter"<txp:if_article_id id="2241"> class="active"</txp:if_article_id> rel="nofollow noopener">Newsletter</a></li>
 <li role="menuitem"><a href="<txp:site_url />about/contact-us" <txp:if_article_id id="2240"> class="active" </txp:if_article_id> rel="nofollow noopener">Contact</a></li>
 <li role="menuitem"><a href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li>
-<li role="menuitem"><a href="http://forum.neme.org/" rel="external noopener">Forum</a></li>
 </ul>
 </div>
 </div>
