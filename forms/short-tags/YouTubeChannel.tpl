@@ -14,7 +14,7 @@
 <aside class="cookies noprint">
 <div class="container_24">
 <div class="grid_24">
-<p class="centre">Concider following us on YouTube on <a rel="external noopener" href="https://youtube.com/user/nemeorg/?sub_confirmation=1">https://youtube.com/user/nemeorg</a>, or <a rel="nofollow noindex noodp noydir noarchive nocache" href="?accept_NeMe_youtube=yes">view our channel feed in this site</a>.</p>
+<p class="centre">Concider following us on YouTube on <a rel="external noopener" href="https://youtube.com/nemeorg/?sub_confirmation=1">youtube.com/nemeorg</a>, or <a rel="nofollow noindex noodp noydir noarchive nocache" href="?accept_NeMe_youtube=yes">view our channel feed in this site</a>.</p>
 <p class="accept red centre"><a rel="nofollow noindex noodp noydir noarchive nocache" href="?accept_NeMe_youtube=yes">Watch here</a></p>
 <p class="licence centre"><a rel="external noopener licence" href="https://youtube.com/privacy">YouTube’s privacy policy</a>.</p>
 </div>
