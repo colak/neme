@@ -21,7 +21,7 @@
 
 <url><loc><txp:variable name="siteurl" />projects/state-machines/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/toolkit-of-care/</loc><changefreq>monthly</changefreq></url>
-<url><loc><txp:variable name="siteurl" />projects/a-sea-change/</loc><changefreq>monthly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />projects/a-sea-change/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/emap/</loc><changefreq>monthly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/ttr/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/respublika/</loc><changefreq>yearly</changefreq></url>
