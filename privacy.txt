@@ -103,6 +103,7 @@ Through the use of cookies, NeMe can provide the users of this website with more
 NeMe uses 4 kind of cookies
 
 * Session cookies: Set in our forum and assists in keeping its members logged in
+* Preferences cookies for visitors to load articles translated to Greek
 * Preferences cookies: Set to obtain the permission from our visitors to load 3rd party cookies 
 * 3rd party cookies: Set by our content providers 
 
