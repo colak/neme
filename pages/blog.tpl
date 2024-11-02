@@ -28,9 +28,13 @@
 
 <meta name="author" content="NeMe and contributors">
 <txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nofollow">
+<meta name="Robots" content="noindex,nocache,follow">
+<txp:else />
+<txp:evaluate query='contains("<txp:page_url />","?lang")'>
+<meta name="Robots" content="noindex,nocache,follow">
 <txp:else />
 <meta name="Robots" content="index,follow">
+</txp:evaluate>
 </txp:evaluate>
 <meta name="revisit-after" content="10 days">
 
@@ -221,7 +225,7 @@
 <txp:article status="live" form="">
 <div class="grid_18" id="main">
 <main aria-label="main content" itemscope itemtype="https://schema.org/Blog">
-<txp:if_custom_field name="img2"><txp:image id='<txp:custom_field name="img2" />' class="grid_8" /><txp:else />
+<txp:if_custom_field name="img2"><txp:thumbnail id='<txp:custom_field name="img2" />' class="grid_8" /><txp:else />
 <txp:if_custom_field name="img_main"><txp:image id='<txp:custom_field name="img_main" />' class="grid_24 alpha omega round" /><div class="clear">&nbsp;</div></txp:if_custom_field>
 </txp:if_custom_field>
 
