@@ -27,9 +27,13 @@
 
 <meta name="author" content="NeMe">
 <txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,follow" />
+<meta name="Robots" content="noindex,nocache,follow" />
+<txp:else />
+<txp:evaluate query='contains("<txp:page_url />","?lang")'>
+<meta name="Robots" content="noindex,nocache,follow" />
 <txp:else />
 <meta name="Robots" content="index,follow">
+</txp:evaluate>
 </txp:evaluate>
 <meta name="revisit-after" content="10 days">
 
