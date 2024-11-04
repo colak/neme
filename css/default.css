@@ -219,9 +219,13 @@ figure img{height:auto}
 .grideven h3{font-size:14px;margin:0 0 .7em}
 .grideven p{font-size:1em}
 img{max-width:100%;height:auto}
+
+.if169 {aspect-ratio: 16 / 9; width: 100%;}
+@supports not (aspect-ratio: 1) {
 .embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
 .embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%}
 .vids {display:block; padding-bottom:34%}
+}
 
 #nav{background: #990000 none repeat scroll 0 0 !important;height:5em;position:fixed;position:-webkit-sticky;position:sticky;top:0;z-index:9999;display:block;
 -moz-box-shadow: 0px 3px 5px #474347;
@@ -347,10 +351,6 @@ h3 .tooltip .tooltiptext {font-size:.9em;line-height:1em}
 .container_24{width:97%; padding:0 1.5%; display:block}
 h1{font-size:1.6em;margin:.7em auto;padding:0;clear:both;display:block}
 
-.embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
-.embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%}
-.vids {display:block; padding-bottom:38%}
-#vids {display:block; padding-bottom:36%}
 .comText,.comTextarea {width:100%}
 
 .rslides li img, .round {border-radius:5px;}
