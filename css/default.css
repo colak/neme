@@ -208,7 +208,7 @@ figure img{height:auto}
 #neme #content ul{list-style:none!important;padding:0;margin:0}
 #neme #content ul li{margin:0;padding-bottom:.8em}
 .clear{margin:1em}
-.clearboth, .clearall{clear:both}
+.clearboth, .clearall{clear:both;margin:1em 0;}
 .aright{text-align:right}
 .floatright {float:right}
 .apology p,.bx-wrapper .bx-pager,.caption{text-align:center}
