@@ -10,7 +10,6 @@
 #SetHandler php80-cgi
 #</FilesMatch>
 
-
 #php versions
 #AddHandler fcgid-script .php 
 #FCGIWrapper "/dh/cgi-system/php74.cgi" .php
@@ -28,7 +27,8 @@
   Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' https://a.sa.a-sea-change.net/latest.js; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com https://a.sa.a-sea-change.net/simple.gif; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
 # Header set Expect-CT: max-age=86400,enforce
 # Header set Referrer-Policy "same-origin"
-# Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+# SecFilterEngine Off
+# SecFilterScanPOST Off
 </IfModule>
 
 
@@ -115,6 +115,7 @@ Redirect 301 /archives2013/ /blog/
 Redirect 301 /archives2014/ /blog/
 Redirect 301 /archives2015/ /blog/
 Redirect 301 /archives2016/ /blog/
+Redirect 301 /?f=linktree.htm /?f=linktree
 Redirect 301 /496/27-bienal-de-sao-paulo https://www.neme.org/blog/27-bienal-de-sao-paulo?redirected=1
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?redirected=1
 Redirect 301 /250/ https://www.neme.org/texts/from-zombie-to-cyborg?redirected=1
@@ -194,6 +195,8 @@ Redirect 301 /projects/workshops/ /about/workshops
 
 
 RewriteEngine on
+RewriteRule  /linktree.htm [QSA,L]
+
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
@@ -333,9 +336,7 @@ RewriteRule ^sitemap.xml$  index.php?s=sitemap [L]
 
 # This prevents web browsers or spiders from seeing your .htaccess directives:
 
-ServerSignature Off 
-Header unset Server
-
+ServerSignature Off
 Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
