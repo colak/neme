@@ -10,19 +10,29 @@
 #SetHandler php80-cgi
 #</FilesMatch>
 
+
+#php versions
+#AddHandler fcgid-script .php 
+#FCGIWrapper "/dh/cgi-system/php74.cgi" .php
+#FCGIWrapper "/dh/cgi-system/php80.cgi" .php
+
 <IfModule mod_headers.c>
+# SecFilterEngine Off
+# SecFilterScanPOST Off
   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
   Header set X-XSS-Protection "1; mode=block"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-Content-Type-Options "nosniff"
-# Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
-  Header set Permissions-Policy "interest-cohort=(), accelerometer=(), camera=(self), geolocation=(), ambient-light-sensor=(), autoplay=(), battery=(),  display-capture=(), fullscreen=(self), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), sync-xhr=(self),usb=(), xr-spatial-tracking=()"
+  Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), fullscreen=(self '*.vimeo.com' '*.youtube.com'), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), speaker-selection=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' https://a.sa.a-sea-change.net/latest.js; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com https://a.sa.a-sea-change.net/simple.gif; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
+# Header set Expect-CT: max-age=86400,enforce
 # Header set Referrer-Policy "same-origin"
+# Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
 </IfModule>
 
 
-# RewriteMap mapname "dbm:/path/to/site/map.map"
+# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
 
 # compression and cache control
 
@@ -70,7 +80,7 @@ ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType application/x-javascript "access plus 1 month"
 ExpiresByType text/javascript "access plus 1 month"
-ExpiresByType application/x-shockwave-flash "access plus 1 month"
+# ExpiresByType application/x-shockwave-flash "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 month"
 ExpiresByType image/svg+xml "access 1 month"
 ExpiresByType application/atom+xml "access plus 1 hour"
@@ -183,14 +193,17 @@ Redirect 301 /texts/1st-athens-video-art-festival-call-for-entries /blog/1st-ath
 Redirect 301 /projects/workshops/ /about/workshops
 
 
-
 RewriteEngine on
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
 #RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.ru/? [NC,OR]
+#RewriteCond %{HTTP_REFERER} ^https\://.* youtu\.be/3WXr139x1Jw [NC,OR]
+
+#RewriteCond %{HTTP_REFERER} ^https\://.* kok7\.ru/ [NC,OR]
+#RewriteCond %{HTTP_REFERER} ^https\://.* info-sovety\.ru/ [NC,OR]
+#RewriteCond %{HTTP_REFERER} ^https\://.* man-das\.ru/ [NC,OR]
 RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC]
-#RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.xyz/? [NC]
 RewriteRule .* - [F]
 
 
@@ -315,12 +328,14 @@ RewriteRule ^sitemap.xml$  index.php?s=sitemap [L]
 </IfModule>
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
-# RewriteRule ^ - [F]
+#†RewriteRule ^ - [F]
 
 
 # This prevents web browsers or spiders from seeing your .htaccess directives:
 
-ServerSignature Off
+ServerSignature Off 
+Header unset Server
+
 Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
