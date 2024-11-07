@@ -236,7 +236,7 @@
 
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 
-<txp:if_request type="get" name="redirected">
+<txp:if_request type="get" name="_neme_redirected">
 <div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
