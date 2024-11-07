@@ -37,8 +37,8 @@
 <meta name="Robots" content="noindex,follow">
 <txp:else />
 <meta name="author" content="NeMe">
-<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nofollow">
+<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
+<meta name="Robots" content="noindex,nocache,follow" />
 <txp:else />
 <meta name="Robots" content="index,follow">
 </txp:evaluate>
@@ -75,7 +75,7 @@
 <meta name="twitter:creator" content="@nemeorg">
 <meta name="twitter:url" content="<txp:permlink />">
 <meta name="twitter:title" content="<txp:page_title />">
-<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>" />
+<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>">
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>">
 <meta property="og:image" content="<txp:site_url />images/1087.jpg">
@@ -310,7 +310,7 @@ Cyprus</p>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
-<txp:if_request type="get" name="redirected">
+<txp:if_request type="get" name="_neme_redirected">
 <div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 <h1><txp:title /></h1>
