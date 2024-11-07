@@ -143,7 +143,8 @@ On the website of NeMe, users are given the opportunity to subscribe to our orga
 NeMe informs its visitors and supporters by means of an infrequent newsletter about:
 
 * the cultural events it organises, 
-* the cultural events it participates in 
+* the cultural events it participates in ,
+* the cultural events it hosts ,
 * artists' calls for entry. 
 
 The organisation's newsletter may only be received by the data subject if 
