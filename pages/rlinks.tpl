@@ -247,29 +247,6 @@
 
 <div class="clear">&nbsp;</div>
 
-<!-- ====================================== -->
-
-<txp:hide><div id="social" class="nosmall"><div class="container_24">
-<txp:oui_cookie name="accept_fb_cookies" duration="+1 year" values="yes" />
-<txp:oui_if_cookie name="accept_fb_cookies">
-<div id="fb-root"></div>
-<div class="grid_12 socialfeed"><iframe loading="lazy" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnemeorg&tabs=timeline&width=470&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="470" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-</div>
-<txp:else />
-<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://www.facebook.com/nemeorg/">Facebook feed</a>. By viewing it here you agree with Facebook's <a rel="external noopener" href="https://facebook.com/about/privacy/">Privacy Policy</a>.</p><p class="centre"><a class="red" rel="nofollow" href="?accept_fb_cookies=yes">View Facebook feed</a></p><div class="clear">&nbsp;</div></div>
-</txp:oui_if_cookie>
-
-<txp:oui_cookie name="accept_twitter_cookies" duration="+1 year" values="yes" />
-<txp:oui_if_cookie name="accept_twitter_cookies">
-<div class="grid_12 socialfeed"><a class="twitter-timeline" data-lang="en" data-width="470" data-height="500" data-link-color="#cc0000" href="https://twitter.com/NeMeOrg?ref_src=twsrc%5Etfw">Tweets by NeMeOrg</a> <script async src="https://platform.twitter.com/widgets.js"></script></div><div class="clear">&nbsp;</div>
-</div>
-<txp:else />
-<div class="grid_12 socialeucookies"><p class="centre">This is the space we embed our <a rel="external noopener" href="https://twitter.com/NeMeOrg">Twitter feed</a>. By viewing it here, you agree with Twitter's <a rel="external noopener" href="https://twitter.com/privacy?lang=en">Privacy Policy</a>.</p><p class="centre" style="margin-bottom:1em;"><a class="red" rel="nofollow" href="?accept_twitter_cookies=yes">View Twitter feed</a></p><div class="clear">&nbsp;</div></div>
-</txp:oui_if_cookie>
-
-<div class="clear">&nbsp;</div></div></div></txp:hide>
-
-<!-- ========================================= -->
 
 <span class="grid_1 prefix_23 nosmall noprint"><a href="#"><img class="margintop" src="<txp:page_url type="theme_path" />/forms/svg/top.svg" width="30" height="30" alt="back to top"></a></span>
 <div class="clear">&nbsp;</div>
