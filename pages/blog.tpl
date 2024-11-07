@@ -27,14 +27,10 @@
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
 <meta name="author" content="NeMe and contributors">
-<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nocache,follow">
-<txp:else />
-<txp:evaluate query='contains("<txp:page_url />","?lang")'>
-<meta name="Robots" content="noindex,nocache,follow">
+<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
+<meta name="Robots" content="noindex,nocache,follow" />
 <txp:else />
 <meta name="Robots" content="index,follow">
-</txp:evaluate>
 </txp:evaluate>
 <meta name="revisit-after" content="10 days">
 
@@ -230,7 +226,7 @@
 </txp:if_custom_field>
 
 <article>
-<txp:if_request type="get" name="redirected">
+<txp:if_request type="get" name="_neme_redirected">
 <div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
