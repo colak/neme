@@ -38,7 +38,7 @@
 <txp:else />
 <meta name="author" content="NeMe">
 <txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
-<meta name="Robots" content="noindex,nocache,follow" />
+<meta name="Robots" content="noindex,nocache,follow">
 <txp:else />
 <meta name="Robots" content="index,follow">
 </txp:evaluate>
