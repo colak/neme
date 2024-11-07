@@ -233,16 +233,6 @@
 </txp:article_custom>
 </div>
 
-
-
-<txp:hide><div class="grid_6 frontthumbs noprint">
-<h3>Forum</h3>
-<ul><txp:php> echo file_get_contents('https://forum.neme.org/extern-1.php');</txp:php></ul>
-<txp:output_form form="social_logos" />
-</div></txp:hide>
-
-
-
 <div class="grid_6 frontthumbs noprint">
 <h3>Blog</h3>
 <txp:article_custom section="blog" limit="5" c10="" status="live" break="li" wraptag="ul">
