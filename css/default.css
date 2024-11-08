@@ -220,11 +220,18 @@ figure img{height:auto}
 .grideven p{font-size:1em}
 img{max-width:100%;height:auto}
 
-.if169 {aspect-ratio: 16 / 9; width: 100%;}
+.if169 {aspect-ratio: 16 / 9; width: 100%;} /* default */
+.if43 {aspect-ratio: 4 / 3; width: 100%;} /* common */
+.if11 {aspect-ratio: 1 / 1; width: 100%;} /* square */
+.if219 {aspect-ratio: 21 / 9; width: 100%;} /* cinematic widescreen */
+.if54 {aspect-ratio: 5 / 4; width: 100%;} /* Wide */
+.if191 {aspect-ratio: 1.90 / 1; width: 100%;} /* 4096 x 2160 (4K UHD) */
+.if916 {aspect-ratio: 9 / 16; width: 100%;} /* vertical */
+.if45 {aspect-ratio: 4 / 5; width: 100%;} /* tall */
+
 @supports not (aspect-ratio: 1) {
 .embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
 .embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%}
-.vids {display:block; padding-bottom:34%}
 }
 
 #nav{background: #990000 none repeat scroll 0 0 !important;height:5em;position:fixed;position:-webkit-sticky;position:sticky;top:0;z-index:9999;display:block;
