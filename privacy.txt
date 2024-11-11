@@ -300,7 +300,7 @@ If the data subject is logged in on Vimeo, Vimeo recognises with each call-up to
 
 Vimeo will receive information through the vimeo component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on Vimeo; this occurs regardless of whether the person clicks on a Vimeo video or not. If such a transmission of this information to Vimeo is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own Vimeo account before a call-up to our website is made.
 
-Vimeo's data protection provisions, available at <txp::ext url="https://vimeo.com/privacy>vimeo.com/privacy" />, provide information about the collection, processing and use of personal data by Vimeo.
+Vimeo's data protection provisions, available at <txp::ext url="https://vimeo.com/privacy" />, provide information about the collection, processing and use of personal data by Vimeo.
 
 h3. 13. Data protection provisions about the application and use of SoundCloud
 
