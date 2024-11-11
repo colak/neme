@@ -108,7 +108,7 @@ NeMe uses 3 kind of cookies
 
 By means of a cookie, the information on our website can be optimised with the user in mind. This includes the technologies NeMe uses to serve the site and what version browsers we support. 
 
-Third party cookies are used in this website from SoundCloud, Mixcloud, Youtube, and Vimeo but none of these are loaded without the data-subject's consent. 
+Third party cookies are used in this website from Mixcloud, Youtube, and Vimeo but none of these are loaded without the data-subject's consent. 
 
 A list of cookies served by our websites can be found on ==<a rel="nofollow" href="<txp:permlink id=2181 />"><txp:permlink id=2181 /></a>==.
 
@@ -302,21 +302,7 @@ Vimeo will receive information through the vimeo component that the data subject
 
 Vimeo's data protection provisions, available at <txp::ext url="https://vimeo.com/privacy" />, provide information about the collection, processing and use of personal data by Vimeo.
 
-h3. 13. Data protection provisions about the application and use of SoundCloud
-
-On this website, the controller has integrated components of SoundCloud. SoundCloud is an Internet sound portal that enables sound and music publishers to set sound clips and other users free of charge, which also provides free listening, review and commenting on them. SoundCloud allows you to publish all kinds of audio files, so you can access both full recordings and broadcasts, as well as music, interviews, and other audio made by users via the Internet portal.
-
-The operating company of SoundCloud is SoundCloud Limited, Rheinsberger Str. 76/77, 10115 Berlin, Germany.
-
-With each call-up to one of the individual pages of this Internet site, which is operated by the controller and on which a SoundCloud component (SoundCloud audio) was integrated, the Internet browser on the information technology system of the data subject is automatically prompted to download a display of the corresponding SoundCloud component. Further information about SoundCloud may be obtained under soundcloud.com/imprint. During the course of this technical procedure, SoundCloud gains knowledge of what specific sub-page of our website was visited by the data subject.
-
-If the data subject is logged in on SoundCloud, SoundCloud recognises with each call-up to a sub-page that contains a SoundCloud audio, which specific sub-page of our Internet site was visited by the data subject. This information is collected by SoundCloud and assigned to the respective SoundCloud account of the data subject.
-
-SoundCloud will receive information through the SoundCloud component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on SoundCloud; this occurs regardless of whether the person clicks on a SoundCloud audio component or not. If such a transmission of this information to SoundCloud is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own SoundCloud account before a call-up to our website is made.
-
-SoundCloud's data protection provisions, available at <txp::ext url="https://soundcloud.com/pages/privacy" />, provide information about the collection, processing and use of personal data by SoundCloud.
-
-h3. 14. Data protection provisions about the application and use of Mixcloud
+h3. 13. Data protection provisions about the application and use of Mixcloud
 
 On this website, the controller has integrated components of Mixcloud. Mixcloud is an Internet audio streaming platform hosting radio for listeners, curators, and brands. Mixcloud allows you to publish all kinds of audio files, so you can access both full recordings and broadcasts, as well as music, interviews, and other audio made by users via the platform.
 
@@ -326,35 +312,35 @@ With each call-up to one of the individual pages of this Internet site, which is
 
 If the data subject is logged in on Mixcloud, Mixcloud recognises with each call-up to a sub-page that contains a Mixcloud audio, which specific sub-page of our Internet site was visited by the data subject. This information is collected by Mixcloud and assigned to the respective Mixcloud account of the data subject.
 
-Mixcloud will receive information through the Mixcloud component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on Mixcloud; this occurs regardless of whether the person clicks on a SoundCloud audio component or not. If such a transmission of this information to Mixcloud is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own Mixcloud account before a call-up to our website is made.
+Mixcloud will receive information through the Mixcloud component that the data subject has visited our website, if the data subject at the time of the call to our website is logged in on Mixcloud; this occurs regardless of whether the person clicks on a Mixcloud audio component or not. If such a transmission of this information to Mixcloud is not desirable for the data subject, the delivery may be prevented if the data subject logs off from their own Mixcloud account before a call-up to our website is made.
 
 Mixcloud's data protection provisions, available at <txp::ext url="https://www.mixcloud.com/privacy/" />, provide information about the collection, processing and use of personal data by Mixcloud.
 
-h3. 15. Ad Servers
+h3. 14. Ad Servers
 
 NeMe does not partner with or have a special or any other relationship with any ad server companies.
 
-h3. 16. Legal basis for the processing
+h3. 15. Legal basis for the processing
 
 Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain consent for a specific processing purpose. If the processing of personal data is necessary for the performance of a contract to which the data subject is party, as is the case, for example, when processing operations are necessary for the supply of goods or to provide any other service, the processing is based on Article 6(1) lit. b GDPR. The same applies to such processing operations which are necessary for carrying out pre-contractual measures, for example in the case of inquiries concerning our products or services. Is our organisation subject to a legal obligation by which processing of personal data is required, such as for the fulfilment of tax obligations, the processing is based on Art. 6(1) lit. c GDPR. In rare cases, the processing of personal data may be necessary to protect the vital interests of the data subject or of another natural person. This would be the case, for example, if a visitor were injured in our organisation and his name, age, health insurance data or other vital information would have to be passed on to a doctor, hospital or other third party. Then the processing would be based on Art. 6(1) lit. d GDPR. Finally, processing operations could be based on Article 6(1) lit. f GDPR. This legal basis is used for processing operations which are not covered by any of the abovementioned legal grounds, if processing is necessary for the purposes of the legitimate interests pursued by our organisation or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. Such processing operations are particularly permissible because they have been specifically mentioned by the European legislator. He considered that a legitimate interest could be assumed if the data subject is a client of the controller (Recital 47 Sentence 2 GDPR).
 
-h3. 17. The legitimate interests pursued by the controller or by a third party
+h3. 16. The legitimate interests pursued by the controller or by a third party
 
 Where the processing of personal data is based on Article 6(1) lit. our legitimate interest is to carry out our projects in favour of our audience.
 
-h3. 18. Period for which the personal data will be stored
+h3. 17. Period for which the personal data will be stored
 
 The criteria used to determine the period of storage of personal data is the respective statutory retention period. After expiration of that period, the corresponding data is routinely deleted, as long as it is no longer necessary for the fulfilment of the contract or the initiation of a contract.
 
-h3. 19. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
+h3. 18. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
 
 We clarify that the provision of personal data is partly required by law (e.g. tax regulations) or can also result from contractual provisions (e.g. information on the contractual partner). Sometimes it may be necessary to conclude a contract that the data subject provides us with personal data, which must subsequently be processed by us. The data subject is, for example, obliged to provide us with personal data when our organisation signs a contract with him or her. The non-provision of the personal data would have the consequence that the contract with the data subject could not be concluded. Before personal data is provided by the data subject, the data subject must contact the controller. The controller clarifies to the data subject whether the provision of the personal data is required by law or contract or is necessary for the conclusion of the contract, whether there is an obligation to provide the personal data and the consequences of non-provision of the personal data.
 
-h3. 20. Existence of automated decision-making
+h3. 19. Existence of automated decision-making
 
 As a responsible organisation, we do not use so called algorithmic or automatic decision-making or profiling.
 
-h3. 21. Changes to this privacy policy
+h3. 20. Changes to this privacy policy
 
 NeMe has the discretion to update this privacy policy at any time. When it does, the date at the bottom of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the modifications to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blame/master/privacy.txt" txt="github" />.
 
