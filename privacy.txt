@@ -156,7 +156,7 @@ During the registration for the newsletter, we also store the IP address of the 
 
 The personal data collected as part of a registration for the newsletter will only be used to send our newsletter. In addition, subscribers to the newsletter may be informed by e-mail, as long as this is necessary for the operation of the newsletter service or a registration in question, as this could be the case in the event of modifications to the newsletter, or in the event of a change in technical circumstances. There will be no transfer of personal data collected by the newsletter service to third parties. The subscription to our newsletter may be easily terminated by the data subject at any time. The consent to the storage of personal data, which the data subject has given for receiving the newsletter, may be revoked at any time. For the purpose of revocation of consent, a corresponding link is found in each newsletter.
 
-h3. 6a. Newsletter-Tracking
+h4. 6a. Newsletter-Tracking
 
 The newsletter of NeMe does not contain any tracking technologies and as such no statistical analysis of the success or failure of our newsletter campaigns is carried out.
 
@@ -316,7 +316,7 @@ SoundCloud will receive information through the SoundCloud component that the da
 
 SoundCloud's data protection provisions, available at <txp::ext url="https://soundcloud.com/pages/privacy" />, provide information about the collection, processing and use of personal data by SoundCloud.
 
-h3. 14. Data protection provisions about the application and use of Mixcloud
+h3. 13. Data protection provisions about the application and use of Mixcloud
 
 On this website, the controller has integrated components of Mixcloud. Mixcloud is an Internet audio streaming platform hosting radio for listeners, curators, and brands. Mixcloud allows you to publish all kinds of audio files, so you can access both full recordings and broadcasts, as well as music, interviews, and other audio made by users via the platform.
 
@@ -330,31 +330,31 @@ Mixcloud will receive information through the Mixcloud component that the data s
 
 Mixcloud's data protection provisions, available at <txp::ext url="https://www.mixcloud.com/privacy/" />, provide information about the collection, processing and use of personal data by Mixcloud.
 
-h3. 15. Ad Servers
+h3. 14. Ad Servers
 
 NeMe does not partner with or have a special or any other relationship with any ad server companies.
 
-h3. 16. Legal basis for the processing
+h3. 15. Legal basis for the processing
 
 Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain consent for a specific processing purpose. If the processing of personal data is necessary for the performance of a contract to which the data subject is party, as is the case, for example, when processing operations are necessary for the supply of goods or to provide any other service, the processing is based on Article 6(1) lit. b GDPR. The same applies to such processing operations which are necessary for carrying out pre-contractual measures, for example in the case of inquiries concerning our products or services. Is our organisation subject to a legal obligation by which processing of personal data is required, such as for the fulfilment of tax obligations, the processing is based on Art. 6(1) lit. c GDPR. In rare cases, the processing of personal data may be necessary to protect the vital interests of the data subject or of another natural person. This would be the case, for example, if a visitor were injured in our organisation and his name, age, health insurance data or other vital information would have to be passed on to a doctor, hospital or other third party. Then the processing would be based on Art. 6(1) lit. d GDPR. Finally, processing operations could be based on Article 6(1) lit. f GDPR. This legal basis is used for processing operations which are not covered by any of the abovementioned legal grounds, if processing is necessary for the purposes of the legitimate interests pursued by our organisation or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. Such processing operations are particularly permissible because they have been specifically mentioned by the European legislator. He considered that a legitimate interest could be assumed if the data subject is a client of the controller (Recital 47 Sentence 2 GDPR).
 
-h3. 17. The legitimate interests pursued by the controller or by a third party
+h3. 16. The legitimate interests pursued by the controller or by a third party
 
 Where the processing of personal data is based on Article 6(1) lit. our legitimate interest is to carry out our projects in favour of our audience.
 
-h3. 18. Period for which the personal data will be stored
+h3. 17. Period for which the personal data will be stored
 
 The criteria used to determine the period of storage of personal data is the respective statutory retention period. After expiration of that period, the corresponding data is routinely deleted, as long as it is no longer necessary for the fulfilment of the contract or the initiation of a contract.
 
-h3. 19. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
+h3. 18. Provision of personal data as statutory or contractual requirement; Requirement necessary to enter into a contract; Obligation of the data subject to provide the personal data; possible consequences of failure to provide such data
 
 We clarify that the provision of personal data is partly required by law (e.g. tax regulations) or can also result from contractual provisions (e.g. information on the contractual partner). Sometimes it may be necessary to conclude a contract that the data subject provides us with personal data, which must subsequently be processed by us. The data subject is, for example, obliged to provide us with personal data when our organisation signs a contract with him or her. The non-provision of the personal data would have the consequence that the contract with the data subject could not be concluded. Before personal data is provided by the data subject, the data subject must contact the controller. The controller clarifies to the data subject whether the provision of the personal data is required by law or contract or is necessary for the conclusion of the contract, whether there is an obligation to provide the personal data and the consequences of non-provision of the personal data.
 
-h3. 20. Existence of automated decision-making
+h3. 19. Existence of automated decision-making
 
 As a responsible organisation, we do not use so called algorithmic or automatic decision-making or profiling.
 
-h3. 21. Changes to this privacy policy
+h3. 20. Changes to this privacy policy
 
 NeMe has the discretion to update this privacy policy at any time. When it does, the date at the bottom of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the modifications to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blame/master/privacy.txt" txt="github" />.
 
