@@ -190,7 +190,7 @@ Each data subject shall have the right granted by the European legislator to obt
 * the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4) of the GDPR and, at least in those cases, meaningful information about the logic involved, as well as the significance and envisaged consequences of such processing for the data subject.
 * Furthermore, the data subject shall have a right to obtain information as to whether personal data are transferred to a third country or to an international organisation. Where this is the case, the data subject shall have the right to be informed of the appropriate safeguards relating to the transfer.
 
-If a data subject wishes to avail himself of this right of access, he or she may, at any time, contact the controller.
+If a data subject wishes to avail himself or herself of this right of access, he or she may, at any time, contact the controller.
 
 h4. c) Right to rectification
 
