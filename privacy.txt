@@ -2,7 +2,7 @@ We are very delighted that you have shown interest in our organisation. Data pro
 
 The processing of personal data, such as the name, address, e-mail address, or telephone number of a data subject shall always be in line with the General Data Protection Regulation (GDPR), and in accordance with the country-specific data protection regulations applicable to NeMe. By means of this data protection declaration, our organisation would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.
 
-As the controller, NeMe has implemented <txp::ext txt="numerous" url="https://themarkup.org/blacklight?url=neme.org" /> <txp::ext txt="technical" url="https://securityheaders.com/?q=https%3A%2F%2Fwww.neme.org&hide=on" /> and organisational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means.
+As the controller, NeMe has implemented <txp::ext txt="numerous technical" url="https://securityheaders.com/?q=https%3A%2F%2Fwww.neme.org&hide=on" /> and organisational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means.
 
 Every effort is made to keep the website up and running smoothly. However, NeMe takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
 
@@ -318,7 +318,7 @@ Mixcloud's data protection provisions, available at <txp::ext url="https://www.m
 
 h3. 14. Ad Servers
 
-NeMe does not partner with or have a special or any other relationship with any ad server companies.
+NeMe <txp::ext url="https://themarkup.org/blacklight?url=https%3A%2F%2Fwww.neme.org%2F&device=mobile&location=us-ca&force=false" txt="does not partner with" /> or have a special or any other relationship with any ad server companies.
 
 h3. 15. Legal basis for the processing
 
