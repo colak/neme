@@ -160,7 +160,7 @@ a:visited{color:#ec7063 }
 h1{font-size:2.5em;text-align:left;line-height:1em;color:#fff; padding:0 0 10px 0}
 article h1{color:#fff}
 p, ol, ul{text-align:left;widows: 3; orphans: 2;}
-ol,ul{list-style-position:inside!important;padding:0}
+ol,ul{list-style-position:outside!important;padding:0}
 blockquote{margin: 0 0 1.5em 1.5em;border-left:2px dotted #eee;padding-left:.8em}
 abbr,acronym{border-bottom:2px #ccc;cursor:help}
 dt{margin-left:1em}
@@ -219,6 +219,7 @@ figure img{height:auto}
 .grideven h3{font-size:14px;margin:0 0 .7em}
 .grideven p{font-size:1em}
 img{max-width:100%;height:auto}
+.wrap {overflow-wrap: break-word;hyphens: manual;}
 
 .if169 {aspect-ratio: 16 / 9; width: 100%; height:auto;} /* default */
 .if43 {aspect-ratio: 4 / 3; width: 100%; height:auto;} /* common */
@@ -449,7 +450,6 @@ overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; wor
 #vids {display:block; padding-bottom:52%}
 .eu .grid_2 {clear:both;}
 .eu .grid_16 {width:74%}
-.wrap {overflow-wrap: break-word;}
 }
 
 @media screen and (orientation:portrait) { 
