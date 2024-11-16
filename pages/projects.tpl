@@ -15,7 +15,20 @@
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<txp:hide><link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/fonts.css"></txp:hide>
+<txp:if_individual_article>
+<txp:evaluate query='contains("<txp:page_url type="req" />" != "fbclid="'>
+<txp:php>header("Refresh:0; url=<txp:permlink />"); </txp:php>
+</txp:evaluate>
+</txp:if_individual_article>
+
+<txp:hide>
+<txp:variable name="fbclid" value='<txp:page_url type="fbclid" />' />
+<txp:if_variable name="fbclid">
+<txp:if_individual_article>
+<txp:php>header("Refresh:0; url=<txp:permlink />"); </txp:php>
+</txp:if_individual_article>
+</txp:if_variable>
+</txp:hide>
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -26,14 +39,10 @@
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
 <meta name="author" content="NeMe">
-<txp:evaluate query='contains("<txp:page_url />","?accept_")'>
-<meta name="Robots" content="noindex,nocache,follow" />
-<txp:else />
-<txp:evaluate query='contains("<txp:page_url />","?lang")'>
-<meta name="Robots" content="noindex,nocache,follow" />
+<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
+<meta name="Robots" content="noindex,nocache,follow">
 <txp:else />
 <meta name="Robots" content="index,follow">
-</txp:evaluate>
 </txp:evaluate>
 <meta name="revisit-after" content="10 days">
 
@@ -192,9 +201,11 @@
 
 <txp:hide>==================-slides-======================</txp:hide>
 
+<aside>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>6<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></figure>
+</aside>
 
 <div class="clear">&nbsp;</div></div>
 
@@ -299,6 +310,7 @@
 <txp:hide>==================-individual projects-======================</txp:hide>
 
 <txp:article form="">
+<aside>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:if_custom_field name="img2">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
@@ -308,6 +320,7 @@
 </txp:if_custom_field>
 </figure>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></txp:if_variable></figure>
+</aside>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main" id="main">
