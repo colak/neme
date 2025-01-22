@@ -21,6 +21,7 @@ ul{list-style:disc}
 li{margin-left:30px}
 address,dl,fieldset,ol,p,pre,table,ul{margin-bottom:1em}
 h2,h3,h4,h5,h6 {margin: 0}
+a[rel~=external] {cursor: ne-resize;}
 a[rel~=external]:after {content:"\00a0\21D7";display:inline-block;position:relative;font-size:1.2em;padding:0}
 a.nostyle[rel~=external]:after {content:none}
 hr {width:90%;padding:0;border-top:1px dashed #eee;}
@@ -141,6 +142,8 @@ code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 .grid_sub_24{width:100%}
 ol,p,ul{margin:0 0 1em}
 li ul, li ol {margin:0}
+ol.el {list-style-type: lower-greek;}
+ol.en {list-style-type: lower-alpha;}
 .clear{clear:both;display:block;visibility:hidden;width:0;height:0}
 .printonly, .nolarge {display:none;}
 #footer,#nav,figure img{width:100%}
@@ -229,6 +232,13 @@ img{max-width:100%;height:auto}
 .if191 {aspect-ratio: 1.90 / 1; width: 100%; height:auto;} /* 4096 x 2160 (4K UHD) */
 .if916 {aspect-ratio: 9 / 16; width: 100%; height:auto;} /* vertical */
 .if45 {aspect-ratio: 4 / 5; width: 100%; height:auto;} /* tall */
+
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-justify {text-align: justify;}
+.text-start {text-align: start;}
+.text-end {text-align: end;}
 
 @supports not (aspect-ratio: 1) {
 .embed-container{position:relative;padding-bottom:56.25%;height:0;padding-top: 30px;overflow:hidden;max-width:100%}
