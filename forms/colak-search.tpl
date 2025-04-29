@@ -32,8 +32,10 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 </txp:act_if_mobile>
 <txp:if_article_list>
 
-
-<txp:if_section name="about,projects,texts">
+<txp:if_section name="about">
+<p>&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.</p>
+</txp:if_section>
+<txp:if_section name="projects,texts">
 <p>&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.</p>
 </txp:if_section>
 <txp:if_section name="blog">
@@ -42,8 +44,9 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <txp:if_section name="publications,related-links,newsletter-unsubscribe,default">
 <p>&copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a>.</p>
 </txp:if_section>
-<txp:else />
+</txp:if_article_list>
 
+<txp:if_individual_article>
 <txp:variable name="year" value='<txp:php>echo safe_strftime("%Y");</txp:php>' />
 
 <txp:if_article_section name="texts">
@@ -54,7 +57,17 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <txp:else />
 &copy; 2004-<txp:php>echo safe_strftime("%Y");</txp:php> <a href="<txp:site_url />">NeMe</a> &bull; Text &copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <txp:variable name="textauthor" />
 </txp:if_variable>
+</txp:if_article_section>
 
+<txp:if_article_section name="about">
+<txp:if_variable name="year" value='<txp:posted format="%Y" />'>
+&copy; <txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a>.
+<txp:else />
+&copy; <txp:posted format="%Y" />-<txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a>.
+</txp:if_variable>
+</txp:if_article_section>
+
+<txp:if_article_section name="projects">
 <txp:if_variable name="year" value='<txp:posted format="%Y" />'>
 &copy; <txp:variable name="year" /> <a href="<txp:site_url />">NeMe</a> and/or respective contributors.
 <txp:else />
@@ -66,5 +79,6 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 2004-<txp:php>echo safe_strftime("%Y");</txp:php> The content in the <a href="/blog/">Blog</a> section of this site is licensed under a <a rel="external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> International license.
 </txp:if_article_section>
 
-</txp:if_article_list>
+</txp:if_individual_article>
+
 <txp:hide><script src="<txp:page_url type="theme_path" />/forms/javascripts/main.js"></script></txp:hide>
