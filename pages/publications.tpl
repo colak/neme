@@ -219,7 +219,7 @@
 <div class="line" id="book_<txp:image_info type="id" />">
 <figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
 <txp:image fetchpriority="high" /></txp:permlink></txp:else /><txp:permlink>
-<txp:image loading="lazy" /></txp:permlink><</txp:if_first_article></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
+<txp:image loading="lazy" /></txp:permlink></txp:if_first_article></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:article_custom> 
