@@ -1,19 +1,12 @@
 <txp:output_form form="section_search" />
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
-<txp:hide><txp:if_article_list>
-<txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
-    <txp:txp_die status="404" />
-</txp:evaluate>
-</txp:if_article_list></txp:hide>
-
 <!doctype html>
 <html lang="en-gb">
 
 <head>
 <title><txp:page_title /></title>
 <meta charset="utf-8">
-<txp:hide><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></txp:hide>
 <meta name="generator" content="Textpattern CMS">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,7 +90,6 @@
 
 <link rel="alternate" type="application/atom+xml" title="Atom feed" href="<txp:site_url />atom/">
 <link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss/">
-<txp:hide><link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" /></txp:hide>
 
 <link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon">
 <link rel="icon" href="<txp:site_url />favicon.svg" type="image/svg+xml">
@@ -115,7 +107,6 @@
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="/manifest.json">
-<txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000" /></txp:hide>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#ffffff">
@@ -222,7 +213,7 @@
 
 <txp:variable name="ids"><txp:article_custom section="projects,about" pubs limit="999" break=","><txp:article_id /></txp:article_custom></txp:variable>
 
-<txp:article_custom id='<txp:variable name="ids" />' limit="1999">
+<txp:article_custom id='<txp:variable name="ids" />' limit="999">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <div class="line" id="book_<txp:image_info type="id" />">
 <figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
@@ -231,18 +222,6 @@
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:article_custom> 
-
-<txp:hide>
-<txp:article_custom id='<txp:variable name="ids" />' limit="999" offset="1">
-<txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line" id="book_<txp:image_info type="id" />">
-<figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink>
-<txp:image loading="lazy" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
-<txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
-</txp:images>
-</txp:article_custom>
-</txp:hide>
-
 
 <div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
 
