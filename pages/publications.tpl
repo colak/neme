@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default_1" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
 <!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
@@ -222,6 +222,18 @@
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
 </txp:article_custom> 
+
+<txp:hide>
+<txp:article_custom id='<txp:variable name="ids" />' limit="999" offset="1">
+<txp:images id='<txp:custom_field name="pubs" />' break="">
+<div class="line" id="book_<txp:image_info type="id" />">
+<figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:permlink>
+<txp:image loading="lazy" /></txp:permlink></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
+<txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
+</txp:images>
+</txp:article_custom>
+</txp:hide>
+
 
 <div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
 
