@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default_1" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
 <!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
@@ -211,9 +211,9 @@
 <div class="line"><h4 class="grid_23 alpha" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">NeMe publications</a></txp:if_logged_in></h4><div class="clear">&nbsp;</div></div>
 
 
-<txp:variable name="ids"><txp:article_custom section="projects,about" pubs limit="999" break=","><txp:article_id /></txp:article_custom></txp:variable>
+<txp:variable name="ids"><txp:article_custom section="projects,about" pubs fields="list(thisid)"><txp:article_id /></txp:article_custom></txp:variable>
 
-<txp:article_custom id='<txp:variable name="ids" />' limit="999">
+<txp:article_custom id='<txp:variable name="ids" />' limit="999" sort="posted desc">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <div class="line" id="book_<txp:image_info type="id" />">
 <figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
