@@ -24,7 +24,7 @@
   Header set X-Content-Type-Options "nosniff"
   Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), fullscreen=(self '*.vimeo.com' '*.youtube.com'), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), speaker-selection=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' https://a.sa.a-sea-change.net/latest.js; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com https://a.sa.a-sea-change.net/simple.gif; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
+  Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
 # Header set Expect-CT: max-age=86400,enforce
 # Header set Referrer-Policy "same-origin"
 # SecFilterEngine Off
@@ -74,7 +74,7 @@ ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 1 hour"
+ExpiresByType text/css "access plus 1 week"
 ExpiresByType text/html "access plus 1 month"
 ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
@@ -115,6 +115,10 @@ Redirect 301 /archives2013/ /blog/
 Redirect 301 /archives2014/ /blog/
 Redirect 301 /archives2015/ /blog/
 Redirect 301 /archives2016/ /blog/
+Redirect 301 /publications/cited/citations https://www.neme.org/publications/cited/
+Redirect 301 /publications/mentioned/mentions https://www.neme.org/publications/mentioned/
+Redirect 301 /blog//non-machines  https://www.neme.org/projects/participations/non-machines
+Redirect 301 /blog/short-matters https://www.neme.org/projects/hosted/short-matters
 Redirect 301 /?f=linktree.htm /?f=linktree
 Redirect 301 /496/27-bienal-de-sao-paulo https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?_NeMe_redirected=1
@@ -124,6 +128,7 @@ Redirect 301 /1721/pq-2015 /blog/pq-2015?_NeMe_redirected=1
 Redirect 301 /category/calls /blog/
 Redirect 301 /article/ /texts/
 Redirect 301 /call/ /blog/
+Redirect 301 /309 /texts/nostalgic-technology?_NeMe_redirected=1
 Redirect 301 /category/intransition /projects/in-transition-cyprus-2006?_NeMe_redirected=1
 Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?_NeMe_redirected=1
 Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006?_NeMe_redirected=1
