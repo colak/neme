@@ -1,19 +1,11 @@
 #neme2
 
-#php versions
-#<FilesMatch \.php$>
-#SetHandler php55-fcgi
-#SetHandler php56-fcgi
-#SetHandler php70-cgi
-#SetHandler php72-cgi
-#SetHandler php74-cgi
-#SetHandler php80-cgi
-#</FilesMatch>
-
-#php versions
-#AddHandler fcgid-script .php 
-#FCGIWrapper "/dh/cgi-system/php74.cgi" .php
-#FCGIWrapper "/dh/cgi-system/php80.cgi" .php
+# prevent DoS attacks
+# <IfModule ratelimit_module>
+# SetOutputFilter RATE_LIMIT
+# SetEnv rate-limit 50
+# SetEnv rate-initial-burst 200
+# </IfModule>
 
 <IfModule mod_headers.c>
 # SecFilterEngine Off
@@ -27,8 +19,6 @@
   Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
 # Header set Expect-CT: max-age=86400,enforce
 # Header set Referrer-Policy "same-origin"
-# SecFilterEngine Off
-# SecFilterScanPOST Off
 </IfModule>
 
 
@@ -74,7 +64,7 @@ ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/css "access plus 10 days"
 ExpiresByType text/html "access plus 1 month"
 ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
@@ -149,7 +139,6 @@ Redirect 301 /events/monitorial-citizen /projects/state-machines/monitorial-citi
 Redirect 301 /events/unbuilding-citizenship /projects/state-machines/unbuilding-citizenship?_NeMe_redirected=1
 Redirect 301 /events/improper-names /projects/state-machines/improper-names?_NeMe_redirected=1
 Redirect 301 /events/ttr2-right-brain-problems /projects/ttr/ttr2-right-brain-problems?_NeMe_redirected=1
-Redirect 301 /events/stateless /projects/state-machines/stateless?_NeMe_redirected=1
 Redirect 301 /events/through-the-roadblocks /projects/ttr/through-the-roadblocks?_NeMe_redirected=1
 Redirect 301 /projects/emap/emap /projects/emap/
 Redirect 301 /events/ttr2-all-the-other-lovers /projects/ttr/ttr2-all-the-other-lovers?_NeMe_redirected=1
@@ -169,8 +158,6 @@ RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
 Redirect 301 /events/the-state /projects/hosted/the-state?_NeMe_redirected=1
 Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear?_NeMe_redirected=1
 Redirect 301 /671/flashflood-2007 /blog/flashflood-2007?_NeMe_redirected=1
-#Redirect 301 /42/open-city-stepping-in-from-the-edge /texts/open-city
-
 RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?_NeMe_redirected=1
 Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?_NeMe_redirected=1
 Redirect 301 /texts/istanbul-biennial-10-nightcomers /blog/istanbul-biennial-10-nightcomers?_NeMe_redirected=1
@@ -198,22 +185,10 @@ Redirect 301 /category/jeremy-hight/ /texts/
 Redirect 301 /texts/1st-athens-video-art-festival-call-for-entries /blog/1st-athens-video-art-festival-call-for-entries?_NeMe_redirected=1
 Redirect 301 /projects/workshops/ /about/workshops
 
-
-RewriteEngine on
-RewriteRule  /linktree.htm [QSA,L]
-
-#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hDdcMe [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2hsQ0zD [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^http\://.* bit\.ly/2gK7XFW [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.ru/? [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^https\://.* youtu\.be/3WXr139x1Jw [NC,OR]
-
-#RewriteCond %{HTTP_REFERER} ^https\://.* kok7\.ru/ [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^https\://.* info-sovety\.ru/ [NC,OR]
+#RewriteEngine On
 #RewriteCond %{HTTP_REFERER} ^https\://.* man-das\.ru/ [NC,OR]
-RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC]
-RewriteRule .* - [F]
-
+#RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC]
+#RewriteRule .* - [F]
 
 #RewriteEngine On
 #RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC, OR]
@@ -221,16 +196,7 @@ RewriteRule .* - [F]
 #RewriteRule ^(.*)$ https://www.neme.org/kwangjubiennale.html
 
 RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
-RewriteRule .* http://127.0.0.1/ [R=301,L]
-
-#RewriteCond %{REMOTE_ADDR} 23\.108\.34\.202
-#RewriteRule .* https://www.neme.org/indexthief.htm [R,L]
-
-#Options +FollowSymlinks
-#RewriteEngine on
-#RewriteCond %{REMOTE_HOST} !^23\.108\.34\.202
-#RewriteRule \.html$ /indexthief.htm [R=302,L]
-
+RewriteRule .* - [F,L]
 
 Options +FollowSymlinks
 RewriteEngine on
@@ -243,23 +209,34 @@ RewriteRule .* https://www.neme.org/indexthief.htm [R,L]
 #RewriteRule .* https://www.neme.org/indexwhy.htm [R,L]
 
 
+# RewriteEngine on
+# RewriteCond %{REMOTE_ADDR} 104\.227\.54\.177
+# RewriteRule $ /jenny.htm [R=301,L]
 
-RewriteEngine on
-RewriteCond %{REMOTE_ADDR} 104\.227\.54\.177
-RewriteRule $ /jenny.htm [R=301,L]
+<RequireAll>
+Require all granted
+Require not ip 34.174.0.0/16
+Require not ip 84.109.137.242
+Require not ip 82.80.230.228
+Require not ip 91.246.53.225
+Require not ip 217.147.172.206
+</RequireAll>
 
+#RewriteEngine On
+#RewriteCond %{REMOTE_ADDR} ^34\.174\.
+#RewriteRule ^.*$ https://neme.org/temp-redirect.htm [R=302,L]
 
-Order Deny,Allow
-Deny from 84.109.137.242
-Deny from 82.80.230.228
 
 RewriteEngine on
 # Options +FollowSymlinks
 RewriteCond %{HTTP_REFERER} all-stick\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} altemamarket\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} bbva\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} bethesda\.net [NC,OR]
 RewriteCond %{HTTP_REFERER} bez-trusikov\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} bigbangonline\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} bukalapak\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} buxtome\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} cdamkv\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} cutt\.us [NC,OR]
@@ -268,6 +245,7 @@ RewriteCond %{HTTP_REFERER} ^http?://([^.]+\.)*exaccess\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} ^https?://([^.]+\.)*exaccess\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} freefotogirls\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} greenshop\.su [NC,OR]
+RewriteCond %{HTTP_REFERER} homdepot.\com [NC,OR]
 RewriteCond %{HTTP_REFERER} kino-rf\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} livetaiga\.ru [NC,OR]
@@ -276,15 +254,42 @@ RewriteCond %{HTTP_REFERER} mini-modus\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} mojastopa\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} nashi-devki\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} odinon\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} orbitz\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} own-ahrefs\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} pc-lessons\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} pornofoto4ki\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} sears\.com [NC,OR]
 RewriteCond %{HTTP_REFERER} shopmaybay\.ru [NC,OR]
 RewriteCond %{HTTP_REFERER} twitch\.tv [NC,OR]
 RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
 RewriteCond %{HTTP_REFERER} z-audi\.ru [NC,OR]
+RewriteCond %{HTTP_REFERER} npr\.org [NC,OR]
 RewriteCond %{HTTP_REFERER} zvideos\.ru [NC]
 RewriteRule .* - [F]
+
+BrowserMatchNoCase "libwww-perl" bad_bot
+BrowserMatchNoCase "wget" bad_bot
+BrowserMatchNoCase "LieBaoFast" bad_bot
+BrowserMatchNoCase "Mb2345Browser" bad_bot
+BrowserMatchNoCase "zh-CN" bad_bot
+BrowserMatchNoCase "MicroMessenger" bad_bot
+BrowserMatchNoCase "zh_CN" bad_bot
+BrowserMatchNoCase "Kinza" bad_bot
+BrowserMatchNoCase "Bytespider" bad_bot
+BrowserMatchNoCase "Baiduspider" bad_bot
+BrowserMatchNoCase "Sogou" bad_bot
+BrowserMatchNoCase "Datanyze" bad_bot
+BrowserMatchNoCase "AspiegelBot" bad_bot
+BrowserMatchNoCase "adscanner" bad_bot
+BrowserMatchNoCase "serpstatbot" bad_bot
+BrowserMatchNoCase "spaziodat" bad_bot
+BrowserMatchNoCase "undefined" bad_bot
+BrowserMatchNoCase "claudebot" bad_bot
+
+<RequireAll>
+Require all granted
+Require not env bad_bot
+</RequireAll>
 
 #DirectoryIndex index.php index.html
 
@@ -341,18 +346,19 @@ RewriteRule ^sitemap.xml$  index.php?s=sitemap [L]
 
 # This prevents web browsers or spiders from seeing your .htaccess directives:
 
-ServerSignature Off
+# Only works in httpd.conf
+# ServerSignature Off
 Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 
-<Files .htaccess>
-deny from all
+
+<Files "config.php">
+Require all denied
 </Files>
 
-
-<Files config.php> 
-deny from all 
+<Files ".htaccess">
+Require all denied
 </Files>
