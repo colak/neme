@@ -181,7 +181,6 @@ AddEncoding gzip       svgz
 # Refuse directory listings
 Options All -Indexes
 
-
 # These prevent web browsers or spiders from seeing sensitive documents
 
 # prevent access to any file or directory starting with a .
