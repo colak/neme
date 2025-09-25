@@ -1,5 +1,28 @@
 #neme2
 
+<RequireAll>
+Require all granted
+#Require not ip 84.109.137.242
+#Require not ip 82.80.230.228
+#Require not ip 91.246.53.225
+#Require not ip 217.147.172.206
+Require not ip 34.174
+# Require not ip 34.174.0.0/16
+</RequireAll>
+
+# <IfModule mod_authz_core.c>
+# Require all granted
+# Require not ip 34.174
+# </IfModule>
+
+<If "%{REMOTE_ADDR} =~ /^34\.174\.\d{1,3}\.\d{1,3}/">
+Require all denied
+</If>
+
+# <If "%{REMOTE_ADDR} =~ /^34\.174\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})\.(?:25[0-5]|2[0-4]\d|1?\d{1,2})/">
+# Require all denied
+# </If>
+
 # prevent DoS attacks
 # <IfModule ratelimit_module>
 # SetOutputFilter RATE_LIMIT
@@ -70,7 +93,6 @@ ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType application/x-javascript "access plus 1 month"
 ExpiresByType text/javascript "access plus 1 month"
-# ExpiresByType application/x-shockwave-flash "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 month"
 ExpiresByType image/svg+xml "access 1 month"
 ExpiresByType application/atom+xml "access plus 1 hour"
@@ -198,33 +220,10 @@ Redirect 301 /projects/workshops/ /about/workshops
 RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* - [F,L]
 
-Options +FollowSymlinks
-RewriteEngine on
-RewriteCond %{REMOTE_HOST} 1\.215\.226\.190
-RewriteRule .* https://www.neme.org/indexthief.htm [R,L]
-
 #Options +FollowSymlinks
 #RewriteEngine on
 #RewriteCond %{REMOTE_HOST} 84\.109\.137\.242
 #RewriteRule .* https://www.neme.org/indexwhy.htm [R,L]
-
-
-# RewriteEngine on
-# RewriteCond %{REMOTE_ADDR} 104\.227\.54\.177
-# RewriteRule $ /jenny.htm [R=301,L]
-
-<RequireAll>
-Require all granted
-Require not ip 34.174.0.0/16
-Require not ip 84.109.137.242
-Require not ip 82.80.230.228
-Require not ip 91.246.53.225
-Require not ip 217.147.172.206
-</RequireAll>
-
-#RewriteEngine On
-#RewriteCond %{REMOTE_ADDR} ^34\.174\.
-#RewriteRule ^.*$ https://neme.org/temp-redirect.htm [R=302,L]
 
 
 RewriteEngine on
