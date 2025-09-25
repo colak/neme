@@ -30,16 +30,17 @@ Require all denied
 # SetEnv rate-initial-burst 200
 # </IfModule>
 
-<IfModule mod_headers.c>
 # SecFilterEngine Off
 # SecFilterScanPOST Off
-  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
-  Header set X-XSS-Protection "1; mode=block"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-Content-Type-Options "nosniff"
-  Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), fullscreen=(self '*.vimeo.com' '*.youtube.com'), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), speaker-selection=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
+
+<IfModule mod_headers.c>
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), fullscreen=(self '*.vimeo.com' '*.youtube.com'), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), speaker-selection=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
 # Header set Expect-CT: max-age=86400,enforce
 # Header set Referrer-Policy "same-origin"
 </IfModule>
@@ -50,33 +51,12 @@ Require all denied
 # compression and cache control
 
 <IfModule mod_deflate.c>
-  # Compress HTML, CSS, JavaScript, Text, XML and fonts
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/rss+xml
-  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
-  AddOutputFilterByType DEFLATE application/x-font
-  AddOutputFilterByType DEFLATE application/x-font-opentype
-  AddOutputFilterByType DEFLATE application/x-font-otf
-  AddOutputFilterByType DEFLATE application/x-font-truetype
-  AddOutputFilterByType DEFLATE application/x-font-ttf
-  AddOutputFilterByType DEFLATE application/x-javascript
-  AddOutputFilterByType DEFLATE application/xhtml+xml
-  AddOutputFilterByType DEFLATE application/xml
-  AddOutputFilterByType DEFLATE font/opentype
-  AddOutputFilterByType DEFLATE font/otf
-  AddOutputFilterByType DEFLATE font/ttf
-  AddOutputFilterByType DEFLATE image/svg+xml
-  AddOutputFilterByType DEFLATE image/x-icon
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/javascript
-  AddOutputFilterByType DEFLATE text/plain
-  AddOutputFilterByType DEFLATE text/xml
-# Remove browser bugs (for really old browsers)
-  BrowserMatch ^Mozilla/4 gzip-only-text/html
-  BrowserMatch ^Mozilla/4\.0[678] no-gzip
-  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-  Header append Vary User-Agent
+AddOutputFilterByType DEFLATE "(application/(javascript|rss\+xml|x-font|x-font-opentype|x-font-otf|x-font-truetype|x-font-ttf)|font/(opentype|otf|ttf)|image/svg\+xml|image/x-icon|text/(css|html|javascript|plain|xml)|application/xml)"
+# Browser bug fixes
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent
 </IfModule>
 
 
@@ -109,181 +89,48 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+RewriteEngine On
+RewriteRule ^main/?(.*)$ https://www.neme.org/$1 [R=301,L]
+RewriteRule ^forum/?(.*)$ http://forum.neme.org/$1 [R=301,L]
+RewriteRule ^reblog/out/?$ https://www.neme.org/ [R=301,L]
+RewriteRule ^arts_info/?$ /blog/ [R=301,L]
+RewriteRule ^archives/?$ /blog/ [R=301,L]
+RewriteRule ^archives(2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015|2016)/?$ /blog/ [R=301,L]
+RewriteRule ^publications/cited/citations/?$ https://www.neme.org/publications/cited/ [R=301,L]
+RewriteRule ^publications/mentioned/mentions/?$ https://www.neme.org/publications/mentioned/ [R=301,L]
+RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines [R=301,L]
+RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters [R=301,L]
+RewriteCond %{QUERY_STRING} ^f=linktree\.htm$
+RewriteRule ^$ /?f=linktree [R=301,L]
+RewriteRule ^496/27-bienal-de-sao-paulo/?$ https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1 [R=301,L]
+RewriteRule ^blog/newport-beach-film-festival-2009/?$ /blog/nbff-2009?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^250/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^calls/?$ https://www.neme.org/blog/ [R=301,L]
+RewriteRule ^1721/pq-2015/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^category/calls/?$ /blog/ [R=301,L]
+RewriteRule ^category/intransition/?$ /projects/in-transition-cyprus-2006?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^category/ideodrome2006/?$ /projects/ideodrome-2006?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^category/srecko-horvat/?$ /texts/ [R=301,L]
+RewriteRule ^category/jeremy-hight/?$ /texts/ [R=301,L]
+RewriteRule ^article/?$ /texts/ [R=301,L]
+RewriteRule ^call/?$ /blog/ [R=301,L]
+RewriteRule ^(\d+)/([\w\-]+)$ /texts/$2?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^texts/open-city-stepping-in-from-the-edge/?$ /texts/open-city?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^texts/istanbul-biennial-10-nightcomers/?$ /blog/istanbul-biennial-10-nightcomers?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^texts/roc-14/?$ /blog/roc-14?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^571/preserving-new-media\.html/?$ /texts/preserving-new-media?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nightcomers|roc-14|qed-saturday-12-october-2013|tive-2008|dok-leipzig-2010|performa-11|lisbon-architecture-triennale|female-shorts|idensitat-07|biacs2|24th-ube-biennale|untitled12th-istanbul-biennial-2011|tampere-xxxviii|facade-window-project|electric-renaissance-2005call|the-united-nations-plaza)/?$ /blog/$1?_NeMe_redirected=1 [R=301,L]
 
-RedirectMatch 301 ^/main/?(.+)?$ https://www.neme.org/$1
-RedirectMatch 301 /forum/?(.+)?$ http://forum.neme.org/$1
-Redirect 301 /reblog/out/ https://www.neme.org/
-Redirect 301 /arts_info/ /blog/
-Redirect 301 /archives/ /blog/
-Redirect 301 /archives2005/ /blog/
-Redirect 301 /archives2006/ /blog/
-Redirect 301 /archives2007/ /blog/
-Redirect 301 /archives2008/ /blog/
-Redirect 301 /archives2009/ /blog/
-Redirect 301 /archives2010/ /blog/
-Redirect 301 /archives2011/ /blog/
-Redirect 301 /archives2012/ /blog/
-Redirect 301 /archives2013/ /blog/
-Redirect 301 /archives2014/ /blog/
-Redirect 301 /archives2015/ /blog/
-Redirect 301 /archives2016/ /blog/
-Redirect 301 /publications/cited/citations https://www.neme.org/publications/cited/
-Redirect 301 /publications/mentioned/mentions https://www.neme.org/publications/mentioned/
-Redirect 301 /blog//non-machines  https://www.neme.org/projects/participations/non-machines
-Redirect 301 /blog/short-matters https://www.neme.org/projects/hosted/short-matters
-Redirect 301 /?f=linktree.htm /?f=linktree
-Redirect 301 /496/27-bienal-de-sao-paulo https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1
-Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?_NeMe_redirected=1
-Redirect 301 /250/ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1
-Redirect 301 /calls/ https://www.neme.org/blog/
-Redirect 301 /1721/pq-2015 /blog/pq-2015?_NeMe_redirected=1
-Redirect 301 /category/calls /blog/
-Redirect 301 /article/ /texts/
-Redirect 301 /call/ /blog/
-Redirect 301 /309 /texts/nostalgic-technology?_NeMe_redirected=1
-Redirect 301 /category/intransition /projects/in-transition-cyprus-2006?_NeMe_redirected=1
-Redirect 301 /blog/newport-beach-film-festival-2009 /blog/nbff-2009?_NeMe_redirected=1
-Redirect 301 /category/ideodrome2006 /projects/ideodrome-2006?_NeMe_redirected=1
-Redirect 301 /about/about-neme /about/
-Redirect 301 /nac/neme-arts-centre /about/neme-arts-centre?_NeMe_redirected=1
-Redirect 301 /events/my-name-is-janez-jansa /projects/improper-names
-Redirect 301 /blog/jonas-lund-and-elisa-lasowski /blog/jonas-lund-and-elisa-lasowski-press?_NeMe_redirected=1
-Redirect 301 /nac/ /about/neme-arts-centre?_NeMe_redirected=1
-Redirect 301 /workshops/ /about/workshops?_NeMe_redirected=1
-Redirect 301 /events/cpt-2019 /projects/hosted/cpt-2019
-Redirect 301 /events/see-you-hear /projects/hosted/see-you-hear?_NeMe_redirected=1
-Redirect 301 /events/sublime-internal-subliminal /projects/hosted/sublime-internal-subliminal?_NeMe_redirected=1
-Redirect 301 /events/self-as-actor /projects/state-machines/self-as-actor?_NeMe_redirected=1
-Redirect 301 /events/stateless /projects/state-machines/stateless?_NeMe_redirected=1
-Redirect 301 /events/diwo-from-the-web-to-the-blockchain /projects/state-machines/diwo-from-the-web-to-the-blockchain?_NeMe_redirected=1
-Redirect 301 /events/new-imaginaries-for-crypto-design /projects/state-machines/new-imaginaries-for-crypto-design?_NeMe_redirected=1
-Redirect 301 /events/monitorial-citizen /projects/state-machines/monitorial-citizen?_NeMe_redirected=1
-Redirect 301 /events/unbuilding-citizenship /projects/state-machines/unbuilding-citizenship?_NeMe_redirected=1
-Redirect 301 /events/improper-names /projects/state-machines/improper-names?_NeMe_redirected=1
-Redirect 301 /events/ttr2-right-brain-problems /projects/ttr/ttr2-right-brain-problems?_NeMe_redirected=1
-Redirect 301 /events/through-the-roadblocks /projects/ttr/through-the-roadblocks?_NeMe_redirected=1
-Redirect 301 /projects/emap/emap /projects/emap/
-Redirect 301 /events/ttr2-all-the-other-lovers /projects/ttr/ttr2-all-the-other-lovers?_NeMe_redirected=1
-Redirect 301 /events/ttr2-hand-to-hand /projects/ttr/ttr2-hand-to-hand?_NeMe_redirected=1
-Redirect 301 /events/ttr2-lemesos-documentary-film-festival /projects/ttr/ttr2-lemesos-documentary-film-festival?_NeMe_redirected=1
-Redirect 301 /events/ttr2-ties-of-the-transitory-seminar /projects/ttr/ttr2-ties-of-the-transitory-seminar?_NeMe_redirected=1
-Redirect 301 /events/ttr2-bound /projects/ttr/ttr2-bound?_NeMe_redirected=1
-Redirect 301 /events/ttr2-inter-alios /projects/ttr/ttr2-inter-alios?_NeMe_redirected=1
-Redirect 301 /events/ttr2-nomadism-and-trans-cities /projects/ttr/ttr2-nomadism-and-trans-cities?_NeMe_redirected=1
-Redirect 301 /events/ttr2-everybody-knows-this-is-nowhere /projects/ttr/ttr2-everybody-knows-this-is-nowhere?_NeMe_redirected=1
-Redirect 301 /events/ttr2-art-culture-memory-and-trauma /projects/ttr/ttr2-art-culture-memory-and-trauma?_NeMe_redirected=1
-Redirect 301 /events/ttr2-re-collecting-city-re-collecting-time /projects/ttr/ttr2-re-collecting-city-re-collecting-time?_NeMe_redirected=1
-Redirect 301 /events/through-the-roadblocks-stage-1 /projects/ttr/through-the-roadblocks-stage-1?_NeMe_redirected=1
-Redirect 301 /1800/differentiating-between-access-interaction-and-participationhttp://www.neme.org/1800/differentiating-between-access-interaction-and-participationhttp://www6.univali.br/seer/index.php/vd/article/view/5294/3257Vol /texts/differentiating-between-access-interaction-and-participation?_NeMe_redirected=1
-RedirectMatch 301 ^/participations/?(.+)?$ /projects/participations/$1
-RedirectMatch 301 ^/events/?(.+)?$ /projects/$1
-Redirect 301 /events/the-state /projects/hosted/the-state?_NeMe_redirected=1
-Redirect 301 /projects/participations/see-you-hear /projects/hosted/see-you-hear?_NeMe_redirected=1
-Redirect 301 /671/flashflood-2007 /blog/flashflood-2007?_NeMe_redirected=1
-RedirectMatch 301 /(\d+)/([\w\-]+)$ /texts/$2?_NeMe_redirected=1
-Redirect 301 /texts/open-city-stepping-in-from-the-edge /texts/open-city?_NeMe_redirected=1
-Redirect 301 /texts/istanbul-biennial-10-nightcomers /blog/istanbul-biennial-10-nightcomers?_NeMe_redirected=1
-Redirect 301 /texts/roc-14 /blog/roc-14?_NeMe_redirected=1
-Redirect 301 /571/preserving-new-media.html /texts/preserving-new-media?_NeMe_redirected=1
-Redirect 301 /texts/qed-saturday-12-october-2013 /blog/qed-saturday-12-october-2013?_NeMe_redirected=1
-Redirect 301 /1615/ /blog/qed-saturday-12-october-2013?_NeMe_redirected=1
-Redirect 301 /texts/tive-2008 /blog/tive-2008?_NeMe_redirected=1
-Redirect 301 /texts/dok-leipzig-2010 /blog/dok-leipzig-2010?_NeMe_redirected=1
-Redirect 301 /texts/performa-11 /blog/performa-11?_NeMe_redirected=1
-Redirect 301 /texts/lisbon-architecture-triennale /blog/lisbon-architecture-triennale?_NeMe_redirected=1
-Redirect 301 /respublika /projects/respublika/
-Redirect 301 /texts/female-shorts /blog/female-shorts?_NeMe_redirected=1
-Redirect 301 /texts/idensitat-07 /blog/idensitat-07?_NeMe_redirected=1
-Redirect 301 /texts/biacs2 /blog/biacs2?_NeMe_redirected=1
-Redirect 301 /texts/24th-ube-biennale /blog/24th-ube-biennale?_NeMe_redirected=1
-Redirect 301 /texts/correlations-of-violence /blog/correlations-of-violence
-Redirect 301 /texts/untitled12th-istanbul-biennial-2011 /blog/untitled12th-istanbul-biennial-2011?_NeMe_redirected=1
-Redirect 301 /texts/tampere-xxxviii /blog/tampere-xxxviii?_NeMe_redirected=1
-Redirect 301 /texts/facade-window-project /blog/facade-window-project?_NeMe_redirected=1
-Redirect 301 /texts/electric-renaissance-2005call /blog/electric-renaissance-2005call?_NeMe_redirected=1
-Redirect 301 /texts/the-united-nations-plaza /blog/the-united-nations-plaza?_NeMe_redirected=1
-Redirect 301 /category/srecko-horvat/ /texts/
-Redirect 301 /category/jeremy-hight/ /texts/
-Redirect 301 /texts/1st-athens-video-art-festival-call-for-entries /blog/1st-athens-video-art-festival-call-for-entries?_NeMe_redirected=1
-Redirect 301 /projects/workshops/ /about/workshops
+# Final catch-all for any URLs not matched (optional)
+# Uncomment if you want all other URLs to redirect to homepage or a specific page
+# RewriteRule ^.*$ / [R=301,L]
 
-#RewriteEngine On
-#RewriteCond %{HTTP_REFERER} ^https\://.* man-das\.ru/ [NC,OR]
-#RewriteCond %{HTTP_REFERER} ^https?://[^/]+\.best/? [NC]
-#RewriteRule .* - [F]
-
-#RewriteEngine On
-#RewriteCond %{HTTP_REFERER} .*zzz.com.*$ [NC, OR]
-#RewriteCond %{HTTP_REFERER} .*kwangjubiennale.org.*$ [NC]
-#RewriteRule ^(.*)$ https://www.neme.org/kwangjubiennale.html
 
 RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* - [F,L]
 
-#Options +FollowSymlinks
-#RewriteEngine on
-#RewriteCond %{REMOTE_HOST} 84\.109\.137\.242
-#RewriteRule .* https://www.neme.org/indexwhy.htm [R,L]
 
-
-RewriteEngine on
-# Options +FollowSymlinks
-RewriteCond %{HTTP_REFERER} all-stick\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} altemamarket\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} anti-crisis-seo\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} bbva\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} bethesda\.net [NC,OR]
-RewriteCond %{HTTP_REFERER} bez-trusikov\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} bigbangonline\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} bukalapak\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} buxtome\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} cdamkv\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} cutt\.us [NC,OR]
-RewriteCond %{HTTP_REFERER} danilastroitel\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} ^http?://([^.]+\.)*exaccess\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} ^https?://([^.]+\.)*exaccess\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} freefotogirls\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} greenshop\.su [NC,OR]
-RewriteCond %{HTTP_REFERER} homdepot.\com [NC,OR]
-RewriteCond %{HTTP_REFERER} kino-rf\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} link-building-economy\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} livetaiga\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} megagrabber\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} mini-modus\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} mojastopa\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} nashi-devki\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} odinon\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} orbitz\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} own-ahrefs\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} pc-lessons\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} pornofoto4ki\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} sears\.com [NC,OR]
-RewriteCond %{HTTP_REFERER} shopmaybay\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} twitch\.tv [NC,OR]
-RewriteCond %{HTTP_REFERER} xn--d1abj0abs9d\.in\.ua [NC,OR]
-RewriteCond %{HTTP_REFERER} z-audi\.ru [NC,OR]
-RewriteCond %{HTTP_REFERER} npr\.org [NC,OR]
-RewriteCond %{HTTP_REFERER} zvideos\.ru [NC]
-RewriteRule .* - [F]
-
-BrowserMatchNoCase "libwww-perl" bad_bot
-BrowserMatchNoCase "wget" bad_bot
-BrowserMatchNoCase "LieBaoFast" bad_bot
-BrowserMatchNoCase "Mb2345Browser" bad_bot
-BrowserMatchNoCase "zh-CN" bad_bot
-BrowserMatchNoCase "MicroMessenger" bad_bot
-BrowserMatchNoCase "zh_CN" bad_bot
-BrowserMatchNoCase "Kinza" bad_bot
-BrowserMatchNoCase "Bytespider" bad_bot
-BrowserMatchNoCase "Baiduspider" bad_bot
-BrowserMatchNoCase "Sogou" bad_bot
-BrowserMatchNoCase "Datanyze" bad_bot
-BrowserMatchNoCase "AspiegelBot" bad_bot
-BrowserMatchNoCase "adscanner" bad_bot
-BrowserMatchNoCase "serpstatbot" bad_bot
-BrowserMatchNoCase "spaziodat" bad_bot
-BrowserMatchNoCase "undefined" bad_bot
-BrowserMatchNoCase "claudebot" bad_bot
+BrowserMatchNoCase "libwww-perl|wget|LieBaoFast|Mb2345Browser|zh-CN|MicroMessenger|zh_CN|Kinza|Bytespider|Baiduspider|Sogou|Datanyze|AspiegelBot|adscanner|serpstatbot|spaziodat|undefined|claudebot" bad_bot
 
 <RequireAll>
 Require all granted
