@@ -81,17 +81,18 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# redirects old urls to new urls
 RewriteEngine On
 RewriteRule ^main/?(.*)$ https://www.neme.org/$1 [R=301,L]
 RewriteRule ^forum/?(.*)$ http://forum.neme.org/$1 [R=301,L]
 RewriteRule ^reblog/out/?$ https://www.neme.org/ [R=301,L]
 RewriteRule ^arts_info/?$ /blog/ [R=301,L]
 RewriteRule ^archives/?$ /blog/ [R=301,L]
-RewriteRule ^archives(2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015|2016)/?$ /blog/ [R=301,L]
+RewriteRule ^archives(2005|2006|2007|2008|2009|2010|2011|2012|2013|2014|2015|2016)/?$ /blog/?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^publications/cited/citations/?$ https://www.neme.org/publications/cited/ [R=301,L]
 RewriteRule ^publications/mentioned/mentions/?$ https://www.neme.org/publications/mentioned/ [R=301,L]
-RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines [R=301,L]
-RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters [R=301,L]
+RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters?_NeMe_redirected=1 [R=301,L]
 RewriteCond %{QUERY_STRING} ^f=linktree\.htm$
 RewriteRule ^$ /?f=linktree [R=301,L]
 RewriteRule ^496/27-bienal-de-sao-paulo/?$ https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1 [R=301,L]
@@ -99,7 +100,7 @@ RewriteRule ^blog/newport-beach-film-festival-2009/?$ /blog/nbff-2009?_NeMe_redi
 RewriteRule ^250/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^calls/?$ https://www.neme.org/blog/ [R=301,L]
 RewriteRule ^1721/pq-2015/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^category/calls/?$ /blog/ [R=301,L]
+RewriteRule ^category/calls/?$ /blog/?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^category/intransition/?$ /projects/in-transition-cyprus-2006?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^category/ideodrome2006/?$ /projects/ideodrome-2006?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^category/srecko-horvat/?$ /texts/ [R=301,L]
