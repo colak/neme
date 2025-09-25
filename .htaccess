@@ -45,11 +45,7 @@ Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'u
 # Header set Referrer-Policy "same-origin"
 </IfModule>
 
-
-# RewriteMap mapname "dbm:/home/colak/webapps/neme2/map.map"
-
 # compression and cache control
-
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE "(application/(javascript|rss\+xml|x-font|x-font-opentype|x-font-otf|x-font-truetype|x-font-ttf)|font/(opentype|otf|ttf)|image/svg\+xml|image/x-icon|text/(css|html|javascript|plain|xml)|application/xml)"
 # Browser bug fixes
@@ -58,7 +54,6 @@ BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 Header append Vary User-Agent
 </IfModule>
-
 
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -153,58 +148,53 @@ RewriteRule ^ - [F]
 # turn off ipv6
 #Listen 0.0.0.0:80
 
-
 AddDefaultCharset utf-8
 
+# BEGIN Textpattern
+
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-	#RewriteBase /relative/web/path/
+#RewriteBase /relative/web/path/
 RewriteRule ^sitemap.xml$  index.php?s=sitemap [L]
 
-# json
-#	RewriteRule ^feed.json$ ./index.php?kuo_json_feed
-#	RewriteRule ^([\-a-zA-Z0-9]+)-feed.json$ ./index.php?kuo_json_feed=$1
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+) - [PT,L]
 
-	RewriteCond %{REQUEST_FILENAME} -f [OR]
-	RewriteCond %{REQUEST_FILENAME} -d
-	RewriteRule ^(.+) - [PT,L]
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteRule ^(.*) index.php
 
-	RewriteCond %{REQUEST_URI} !=/favicon.ico
-	RewriteRule ^(.*) index.php
-
-	RewriteCond %{HTTP:Authorization}  !^$
-	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+RewriteCond %{HTTP:Authorization}  !^$
+RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
 
 # SVG
 <IfModule mod_mime.c>
-	AddType image/svg+xml  svg svgz
-	AddEncoding gzip       svgz
+AddType image/svg+xml  svg svgz
+AddEncoding gzip       svgz
 </IfModule>
+
+# END Textpattern
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
 #†RewriteRule ^ - [F]
 
-
-# This prevents web browsers or spiders from seeing your .htaccess directives:
-
 # Only works in httpd.conf
 # ServerSignature Off
+
+# Refuse directory listings
 Options All -Indexes
 
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 
+# These prevents web browsers or spiders from seeing sensitive documents
 
-<Files "config.php">
+<FilesMatch "^(\.htaccess|config\.php)$">
 Require all denied
-</Files>
-
-<Files ".htaccess">
-Require all denied
-</Files>
+</FilesMatch>
