@@ -144,7 +144,6 @@ RewriteRule ^ - [F]
 AddDefaultCharset utf-8
 
 # BEGIN txp
-
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # RewriteCond %{HTTPS} off
@@ -169,7 +168,6 @@ RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 AddType image/svg+xml  svg svgz
 AddEncoding gzip       svgz
 </IfModule>
-
 # END txp
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
@@ -183,11 +181,13 @@ AddEncoding gzip       svgz
 # Refuse directory listings
 Options All -Indexes
 
+
+# These prevent web browsers or spiders from seeing sensitive documents
+
+# prevent access to any file or directory starting with a .
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
-
-# These prevents web browsers or spiders from seeing sensitive documents
 
 <FilesMatch "^(\.htaccess|config\.php)$">
 Require all denied
