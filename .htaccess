@@ -75,10 +75,7 @@ ExpiresByType application/rss+xml "access plus 1 hour"
 ExpiresDefault "access plus 1 month"
 </IfModule>
 
-#RewriteEngine on
-#RewriteCond %{HTTP_HOST} ^neme.org [NC]
-#RewriteRule ^(.*)$ https://www.neme.org/$1 [L,R=301] 
-
+# redirects any non-www HTTP or HTTPS
 RewriteCond %{HTTP_HOST} !^$
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
