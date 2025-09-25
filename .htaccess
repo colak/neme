@@ -141,9 +141,6 @@ RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
 RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
 RewriteRule ^ - [F]
 
-# turn off ipv6
-#Listen 0.0.0.0:80
-
 AddDefaultCharset utf-8
 
 # BEGIN txp
@@ -178,8 +175,10 @@ AddEncoding gzip       svgz
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
 #†RewriteRule ^ - [F]
 
-# Only works in httpd.conf
+# Only work in httpd.conf
 # ServerSignature Off
+# turn off ipv6
+#Listen 0.0.0.0:80
 
 # Refuse directory listings
 Options All -Indexes
