@@ -120,13 +120,12 @@ RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nig
 # Uncomment if you want all other URLs to redirect to homepage or a specific page
 # RewriteRule ^.*$ / [R=301,L]
 
-
+# block hackers
 RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* - [F,L]
 
-
+# block bad bots
 BrowserMatchNoCase "libwww-perl|wget|LieBaoFast|Mb2345Browser|zh-CN|MicroMessenger|zh_CN|Kinza|Bytespider|Baiduspider|Sogou|Datanyze|AspiegelBot|adscanner|serpstatbot|spaziodat|undefined|claudebot" bad_bot
-
 <RequireAll>
 Require all granted
 Require not env bad_bot
@@ -150,7 +149,7 @@ RewriteRule ^ - [F]
 
 AddDefaultCharset utf-8
 
-# BEGIN Textpattern
+# BEGIN txp
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -171,14 +170,13 @@ RewriteCond %{HTTP:Authorization}  !^$
 RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
-
 # SVG
 <IfModule mod_mime.c>
 AddType image/svg+xml  svg svgz
 AddEncoding gzip       svgz
 </IfModule>
 
-# END Textpattern
+# END txp
 
 # RewriteCond %{QUERY_STRING} ^m\=any$- [F]
 #†RewriteRule ^ - [F]
