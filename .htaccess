@@ -42,6 +42,8 @@ Header set Cross-Origin-Resource-Policy "same-origin"
 Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), fullscreen=(self *.vimeo.com *.youtube.com), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), encrypted-media=(), publickey-credentials-get=(), clipboard-read=(), speaker-selection=(), sync-xhr=(self), vibrate=(), usb=(), xr-spatial-tracking=()"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header set Content-Security-Policy: "default-src 'self' data: 'unsafe-inline' 'unsafe-eval'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' 'unsafe-eval' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
+Header set Expect-CT "max-age=86400, enforce"
+Header set Referrer-Policy "same-origin"
 </IfModule>
 
 # compression and cache control
