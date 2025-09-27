@@ -128,7 +128,7 @@ RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nig
 # Final catch-all for any URLs not matched (optional)
 # RewriteRule ^.*$ / [R=301,L]
 
-# Redirect old cookie url to the caqnonical one
+# Redirect old cookie url to the canonical one
 RewriteCond %{QUERY_STRING} (^|&)accept_cookies=yes(&|$)
 RewriteRule ^(.*)$ /$1? [R=301,L]
 
