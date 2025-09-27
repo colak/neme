@@ -43,7 +43,7 @@ Require all denied
 # SetEnv rate-initial-burst 200
 # </IfModule>
 
-# Only uncomment if you have issues with posing articles or templates
+# Only uncomment if you have issues with posting articles or templates
 # SecFilterEngine Off
 # SecFilterScanPOST Off
 
