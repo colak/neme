@@ -1,19 +1,15 @@
-#neme2.4
+#neme2
 
+# Block bad actors
 <RequireAll>
 Require all granted
 #Require not ip 84.109.137.242
 #Require not ip 82.80.230.228
 #Require not ip 91.246.53.225
-#Require not ip 217.147.172.206
-Require not ip 34.174
+Require not ip 217.147.172.206
+# Require not ip 34.174
 # Require not ip 34.174.0.0/16
 </RequireAll>
-
-# <IfModule mod_authz_core.c>
-# Require all granted
-# Require not ip 34.174
-# </IfModule>
 
 <If "%{REMOTE_ADDR} =~ /^34\.174\.\d{1,3}\.\d{1,3}/">
 Require all denied
@@ -23,13 +19,31 @@ Require all denied
 # Require all denied
 # </If>
 
-# prevent DoS attacks
+# The following require custom models to be installed
+# <IfModule mod_authz_core.c>
+# Require all granted
+# Require not ip 34.174
+# </IfModule>
+
+#<IfModule mod_bw.c>
+# <If "%{REMOTE_ADDR} =~ /^34\.174\./">
+# Set bandwidth limit in KB/sec.
+# BandwidthLimit 10
+# </If>
+# </IfModule>
+
+# <IfModule mod_qos.c>
+# QS_LimitBandwidth 34.174.0.0/16 100
+# </IfModule>
+
+# prevent DoS attacks by limiting the bandwidth
 # <IfModule ratelimit_module>
 # SetOutputFilter RATE_LIMIT
 # SetEnv rate-limit 50
 # SetEnv rate-initial-burst 200
 # </IfModule>
 
+# Only uncomment if you have issues with posing articles or templates
 # SecFilterEngine Off
 # SecFilterScanPOST Off
 
@@ -46,7 +60,7 @@ Header set Expect-CT "max-age=86400, enforce"
 Header set Referrer-Policy "same-origin"
 </IfModule>
 
-# compression and cache control
+# compression
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE "(application/(javascript|rss\+xml|x-font|x-font-opentype|x-font-otf|x-font-truetype|x-font-ttf)|font/(opentype|otf|ttf)|image/svg\+xml|image/x-icon|text/(css|html|javascript|plain|xml)|application/xml)"
 # Browser bug fixes
@@ -56,6 +70,7 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 Header append Vary User-Agent
 </IfModule>
 
+# cache control
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType image/jpg "access plus 1 year"
@@ -88,14 +103,12 @@ RewriteRule ^main/?(.*)$ https://www.neme.org/$1 [R=301,L]
 RewriteRule ^forum/?(.*)$ http://forum.neme.org/$1 [R=301,L]
 RewriteRule ^reblog/out/?$ https://www.neme.org/ [R=301,L]
 RewriteRule ^arts_info/?$ /blog/ [R=301,L]
-RewriteRule ^archives/?$ /blog/ [R=301,L]
+RewriteRule ^archives/?$ /blog/?_NeMe_redirected=1  [R=301,L]
 RewriteRule ^archives(20\d{2})/?$ /blog/?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^publications/cited/citations/?$ https://www.neme.org/publications/cited/ [R=301,L]
 RewriteRule ^publications/mentioned/mentions/?$ https://www.neme.org/publications/mentioned/ [R=301,L]
 RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters?_NeMe_redirected=1 [R=301,L]
-RewriteCond %{QUERY_STRING} ^f=linktree\.htm$
-RewriteRule ^$ /?f=linktree [R=301,L]
 RewriteRule ^496/27-bienal-de-sao-paulo/?$ https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1 [R=301,L]
 RewriteRule ^blog/newport-beach-film-festival-2009/?$ /blog/nbff-2009?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^250/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
@@ -104,19 +117,15 @@ RewriteRule ^1721/pq-2015/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_N
 RewriteRule ^category/calls/?$ /blog/?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^category/intransition/?$ /projects/in-transition-cyprus-2006?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^category/ideodrome2006/?$ /projects/ideodrome-2006?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^category/srecko-horvat/?$ /texts/ [R=301,L]
-RewriteRule ^category/jeremy-hight/?$ /texts/ [R=301,L]
-RewriteRule ^article/?$ /texts/ [R=301,L]
-RewriteRule ^call/?$ /blog/ [R=301,L]
+RewriteRule ^article/?$ /texts/?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^call/?$ /blog/?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^(\d+)/([\w\-]+)$ /texts/$2?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^texts/open-city-stepping-in-from-the-edge/?$ /texts/open-city?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^texts/istanbul-biennial-10-nightcomers/?$ /blog/istanbul-biennial-10-nightcomers?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^texts/roc-14/?$ /blog/roc-14?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^571/preserving-new-media\.html/?$ /texts/preserving-new-media?_NeMe_redirected=1 [R=301,L]
 RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nightcomers|roc-14|qed-saturday-12-october-2013|tive-2008|dok-leipzig-2010|performa-11|lisbon-architecture-triennale|female-shorts|idensitat-07|biacs2|24th-ube-biennale|untitled12th-istanbul-biennial-2011|tampere-xxxviii|facade-window-project|electric-renaissance-2005call|the-united-nations-plaza)/?$ /blog/$1?_NeMe_redirected=1 [R=301,L]
-
 # Final catch-all for any URLs not matched (optional)
-# Uncomment if you want all other URLs to redirect to homepage or a specific page
 # RewriteRule ^.*$ / [R=301,L]
 
 # block hackers
@@ -124,7 +133,7 @@ RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpr
 RewriteRule .* - [F,L]
 
 # block bad bots
-BrowserMatchNoCase "libwww-perl|wget|LieBaoFast|Mb2345Browser|zh-CN|MicroMessenger|zh_CN|Kinza|Bytespider|Baiduspider|Sogou|Datanyze|AspiegelBot|adscanner|serpstatbot|spaziodat|undefined|claudebot" bad_bot
+BrowserMatchNoCase "12soso|libwww-perl|wget|LieBaoFast|Mb2345Browser|zh-CN|MicroMessenger|zh_CN|Kinza|Bytespider|Baiduspider|Sogou|Datanyze|AspiegelBot|adscanner|SemrushBot|serpstatbot|spaziodat|undefined|claudebot" bad_bot
 <RequireAll>
 Require all granted
 Require not env bad_bot
@@ -134,10 +143,7 @@ Require not env bad_bot
 
 #Options +FollowSymLinks
 #Options -Indexes
-#ErrorDocument 403 default
-
-#RewriteCond %{QUERY_STRING} m=any&q=1
-#RewriteRule - [F]
+Options All -Indexes
 
 RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
 RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
@@ -172,19 +178,12 @@ AddEncoding gzip       svgz
 </IfModule>
 # END txp
 
-# RewriteCond %{QUERY_STRING} ^m\=any$- [F]
-#†RewriteRule ^ - [F]
-
 # Only work in httpd.conf
 # ServerSignature Off
 # turn off ipv6
 #Listen 0.0.0.0:80
 
-# Refuse directory listings
-Options All -Indexes
-
 # These prevent web browsers or spiders from seeing sensitive documents
-
 # prevent access to any file or directory starting with a .
 RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
