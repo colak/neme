@@ -19,7 +19,7 @@ Require all denied
 # Require all denied
 # </If>
 
-# The following require custom models to be installed
+# The following require custom modules to be installed
 # <IfModule mod_authz_core.c>
 # Require all granted
 # Require not ip 34.174
