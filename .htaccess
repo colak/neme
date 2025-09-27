@@ -128,6 +128,10 @@ RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nig
 # Final catch-all for any URLs not matched (optional)
 # RewriteRule ^.*$ / [R=301,L]
 
+# Redirect old cookie url to the caqnonical one
+RewriteCond %{QUERY_STRING} (^|&)accept_cookies=yes(&|$)
+RewriteRule ^(.*)$ /$1? [R=301,L]
+
 # block hackers
 RewriteCond %{REQUEST_URI} (bitrix|ckeditor|ckfinder|connector|connectors|wordpress|kcfinder|register|elfinder|trackback|fallback|gastenboek|guestbook|gaestebuch|bigdump|dump|noscript|editor|FileZilla|fckeditor|Tester|uploadTester|wp|wp-admin|rob-chiu|wp-content|webmanage|convert|manage|eshop|jomestate|joomla|templates|tinymce|magmi|login|cms|console|udd|ycportal|cgi|dedecms|phpcms|oecms|CHANGELOG|lazycms|drupal|mail|webmail|dede|utility|wp-login|bbs|utility|convert|xmlrpc|plus) [NC]
 RewriteRule .* - [F,L]
