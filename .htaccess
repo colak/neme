@@ -43,7 +43,7 @@ Require all denied
 # SetEnv rate-initial-burst 200
 # </IfModule>
 
-# Only uncomment if you have issues with posting articles or templates
+# Only uncomment if you have issues with posing articles or templates
 # SecFilterEngine Off
 # SecFilterScanPOST Off
 
@@ -128,7 +128,6 @@ RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nig
 # Final catch-all for any URLs not matched (optional)
 # RewriteRule ^.*$ / [R=301,L]
 
-# Redirect old cookie url to the canonical one
 RewriteCond %{QUERY_STRING} (^|&)accept_cookies=yes(&|$)
 RewriteRule ^(.*)$ /$1? [R=301,L]
 
@@ -185,7 +184,7 @@ AddEncoding gzip       svgz
 # Only work in httpd.conf
 # ServerSignature Off
 # turn off ipv6
-#Listen 0.0.0.0:80
+# Listen 0.0.0.0:80
 
 # These prevent web browsers or spiders from seeing sensitive documents
 # prevent access to any file or directory starting with a .
@@ -193,6 +192,6 @@ RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 
-<FilesMatch "^(\.htaccess|config\.php)$">
+<FilesMatch "^(\.htaccess|config\.php|\.env)$">
 Require all denied
 </FilesMatch>
