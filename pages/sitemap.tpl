@@ -34,7 +34,7 @@
 <txp:variable name="latest_posted_article"><txp:article_custom section="blog" limit="1" exclude="2240,2241" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
 
 <txp:php>
-$siteUrl = 'https://www.neme.org';
+$siteUrl = '<txp:variable name="siteurl" trim="/" />';
 $section = 'blog';
 $startPage = 2;
 $endPage = 174;
