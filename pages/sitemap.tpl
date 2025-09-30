@@ -33,19 +33,11 @@
 
 <txp:variable name="latest_posted_article"><txp:article_custom section="blog" limit="1" exclude="2240,2241" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
 
-<txp:php>
-$siteUrl = '<txp:variable name="siteurl" trim="/" />';
-$section = 'blog';
-$startPage = 2;
-$endPage = 174;
-$latestModified = '<txp:variable name="latest_posted_article" />';
+<txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
 
-for ($i = $startPage; $i <= $endPage; $i++) {
-echo "<url>";
-echo "<loc>{$siteUrl}/{$section}/?pg={$i}</loc>";
-echo "<lastmod>{$latestModified}</lastmod>";
-echo "</url>";
-}
-</txp:php>
+<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1">
+    <loc><txp:variable name="siteurl" />blog/?pg=<txp:yield item="page" /></loc>
+    <lastmod><txp:variable name="lastmodified_article" /></lastmod>
+</txp:pages>
 
 </urlset>
