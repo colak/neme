@@ -56,9 +56,8 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 Header set Content-Security-Policy "frame-ancestors 'self'"
 Header set X-Content-Type-Options "nosniff"
 Header set Cross-Origin-Resource-Policy "same-origin"
-Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), browsing-topics=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self *.vimeo.com *.youtube.com), geolocation=(), gyroscope=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), speaker-selection=(), sync-xhr=(self), vibrate=(), usb=(), xr-spatial-tracking=()"
+Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self '*.vimeo.com' '*.youtube.com'), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
-Header set Content-Security-Policy "default-src 'self' data: 'unsafe-inline'; font-src 'self'; manifest-src 'self'; object-src 'none'; img-src 'self' data: 'unsafe-inline' *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com; frame-src 'self' data: *.vimeo.com *.youtube.com *.ytimg.com *.youtube-nocookie.com *.vimeocdn.com;"
 Header set Expect-CT "max-age=86400, enforce"
 Header set Referrer-Policy "same-origin"
 </IfModule>
@@ -141,8 +140,8 @@ RewriteRule .* - [F,L]
 #DirectoryIndex index.php index.html
 
 #Options +FollowSymLinks
-#Options -Indexes
-Options All -Indexes
+#Options All -Indexes
+Options -Indexes
 
 RewriteCond %{QUERY_STRING} ^m\=any$- [NC]
 RewriteCond %{QUERY_STRING} ^m\=any\&q=1$- [NC]
