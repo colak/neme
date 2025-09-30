@@ -132,6 +132,10 @@ RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nig
 
 RewriteCond %{QUERY_STRING} (^|&)accept_cookies=yes(&|$)
 RewriteRule ^(.*)$ /$1? [R=301,L]
+RewriteCond %{QUERY_STRING} ^context=image(&p=\d+)?$
+RewriteRule ^(.*)$ /$1? [R=301,L]
+RewriteCond %{QUERY_STRING} ^m=\d+$
+RewriteRule ^(.*)$ /$1? [R=301,L]
 
 # block hackers
 RewriteCond %{REQUEST_URI} (bbs|bigdump|bitrix|cgi|CHANGELOG|ckeditor|ckfinder|cms|connectors|connector|console|convert|dedecms|dede|drupal|dump|editor|elfinder|eshop|fallback|fckeditor|FileZilla|gaestebuch|gastenboek|guestbook|jomestate|joomla|kcfinder|lazycms|login|magmi|mail|manage|noscript|oecms|phpcms|plus|register|rob-chiu|templates|Tester|tinymce|trackback|udd|uploadTester|utility|webmail|webmanage|wordpress|wp-admin|wp-content|wp-login|wp|xmlrpc|ycportal) [NC]
