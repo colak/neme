@@ -31,13 +31,7 @@
 </url>
 </txp:article_custom>
 
-<txp:variable name="latest_posted_article"><txp:article_custom section="blog" limit="1" exclude="2240,2241" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
-
 <txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
-
-<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1">
-    <loc><txp:variable name="siteurl" />blog/?pg=<txp:yield item="page" /></loc>
-    <lastmod><txp:variable name="lastmodified_article" /></lastmod>
-</txp:pages>
+<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1"><loc><txp:variable name="siteurl" />blog/?pg=<txp:yield item="page" /></loc><lastmod><txp:variable name="lastmodified_article" /></lastmod></txp:pages>
 
 </urlset>
