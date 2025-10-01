@@ -20,8 +20,9 @@
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile>
 <meta http-equiv="x-rim-auto-match" content="none">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
+
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -37,8 +38,11 @@
 <meta name="author" content="NeMe and/or respective authors">
 </txp:if_individual_article>
 
-
+<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
+<meta name="Robots" content="noindex,nocache,follow">
+<txp:else />
 <meta name="Robots" content="index,follow">
+</txp:evaluate>
 <meta name="revisit-after" content="10 days">
 
 <meta name="geo.region" content="CY">
@@ -158,16 +162,6 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
-
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"></a>
-</aside>
-</txp:act_if_mobile>
-
 <txp:hide>==================-article-lists-======================</txp:hide>
 
 <div id="content"><div class="container_24">
@@ -236,8 +230,8 @@
 
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 
-<txp:if_request type="get" name="_neme_redirected">
-<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+<txp:if_request type="get" name="_NeMe_redirected">
+<div class="grid_24"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
 <h1><txp:title /></h1>
@@ -286,7 +280,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:images id='<txp:custom_field name="pubs_by_others" />'>
 <div class="nosmall">
 <h4>Off line reading</h4>
-<a class="nostyle" rel="external" href="<txp:image_info type="caption" />"><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:custom_field name="pubs_by_others" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image at NeMe" />" class="<txp:yield name="class" default="grid_24" />"></a>
+<a class="nostyle" rel="external noopener" href="<txp:image_info type="caption" />"><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:custom_field name="pubs_by_others" /><txp:image_info type="ext" />" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image at NeMe" />" class="<txp:yield name="class" default="grid_24" />"></a>
 </txp:images>
 </div>
 </txp:if_custom_field>
@@ -305,7 +299,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list><txp:output_form form="javascripts" /></txp:if_article_list>
 
 </body>
