@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -160,15 +160,6 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
-
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" loading="lazy" width="30" height="30" alt="share on facebook"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="share on twitter"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" loading="lazy" alt="share on Redit"></a>
-</aside>
-</txp:act_if_mobile>
 
 <div id="content"><div class="container_24">
 
@@ -183,18 +174,17 @@
 
 <div class="grid_8">
 <div id="meta">
-<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised or curated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
+<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised, hosted or participated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
 <p>We thank all of them.</p>
 <p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="<txp:permlink id="2240"/>">let us know</a>.</p>
 </div>
 </div>
 <div>
-<h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of our projects</h4>
+<h1>Related People, Places, and Organisations</h1>
+<h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of the projects we organised, hosted, or participated in</h4>
 <txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
-
-<hr>
 
 <div class="announce"><h4>Sponsors</h4>
 <p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, these the organisations helpped our projects in either a financial or in-kind way.</p>
@@ -207,8 +197,6 @@
 <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a>
 </txp:if_variable>
 </txp:linklist></div>
-
-<hr>
 
 <h4>Venues</h4>
 
@@ -224,8 +212,6 @@
 
 <div class="clear">&nbsp;</div>
 
-<hr>
-
 <div class="announce"><h5 id="site_thanks">For their help and/or advice for the coding of our websites we thank:</h5>
 
 <txp:output_form form="site_thanks" /></div>
@@ -235,6 +221,8 @@
 <div class="clear">&nbsp;</div>
 
 </txp:if_section>
+
+<txp::media from="yt" url="pl" media="PLg8kx0E5hQm5MTZIq5tOAxVZTzHz7JdlN" title="Videos mentioning NeMe." />
 
 
 </txp:if_article_list>
@@ -253,7 +241,6 @@
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
