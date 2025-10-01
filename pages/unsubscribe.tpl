@@ -155,7 +155,7 @@
 
 <p class="grid_9">Should you wish to unsubscribe from our newsletter, do tell us your email with which you have subscribed, and fill the relevant checkboxes below.</p><div class="clear">&nbsp;</div>
 
-<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="emailexample.tld" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
+<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="email@example.tld" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
 <txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" /><br><br>
 <txp:com_connect_secret label="This article"><txp:page_url /></txp:com_connect_secret>
 <txp:com_connect_select label="" name="reason" options="{Select},I no longer want to receive these emails,I never signed up for this mailing list,Oher" required="1" /><br><br>
