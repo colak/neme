@@ -19,7 +19,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -154,7 +155,7 @@
 
 <p class="grid_9">Should you wish to unsubscribe from our newsletter, do tell us your email with which you have subscribed, and fill the relevant checkboxes below.</p><div class="clear">&nbsp;</div>
 
-<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="email@unsubscribe.tld" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
+<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="emailexample.tld" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
 <txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" /><br><br>
 <txp:com_connect_secret label="This article"><txp:page_url /></txp:com_connect_secret>
 <txp:com_connect_select label="" name="reason" options="{Select},I no longer want to receive these emails,I never signed up for this mailing list,Oher" required="1" /><br><br>
@@ -168,7 +169,6 @@
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
