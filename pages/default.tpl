@@ -13,7 +13,7 @@
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile>
 <meta http-equiv="x-rim-auto-match" content="none">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
 
 
@@ -118,7 +118,7 @@
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="/manifest.json">
-<txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000" /></txp:hide>
+<txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000"></txp:hide>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#ffffff">
@@ -151,15 +151,7 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint" aria-hidden="true">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"></a>
-</aside>
-</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-home page-======================</txp:hide>
@@ -167,8 +159,7 @@
 <txp:if_section name="">
 <txp:if_search>
 <txp:variable name="searchterm_minchars" value="3" />
-<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';
-</txp:php></txp:variable>
+<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';</txp:php></txp:variable>
 <txp:article pgonly="1" searchall="0" searchsticky="1" />
 <txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
@@ -199,17 +190,13 @@
 <txp:article_custom id="2001">
 <h1><txp:title /></h1>
 <txp:excerpt />
-<p class="aright"><a href="<txp:site_url />about/">read more&#8230;</a></p>
+<p class="text-right"><a href="<txp:site_url />about/">read more&#8230;</a></p>
 </txp:article_custom>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides" aria-hidden="true">
-<txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
-</txp:images>
-</figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides"><txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink></txp:images></figure>
 
-<div class="clear">&nbsp;</div>
+<div class="clearboth">&nbsp;</div>
 
 <div class="grid_6 frontthumbs noprint">
 <txp:output_form form="announce" />
@@ -241,7 +228,7 @@
 <txp:output_form form="social_logos" />
 </div>
 
-<div class="clear">&nbsp;</div>
+<div class="clearboth">&nbsp;</div>
 </txp:if_search>
 </txp:if_section>
 
@@ -255,7 +242,6 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="javascripts" />
 
 </body>
