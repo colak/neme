@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -115,38 +115,23 @@
 </head>
 
 
-
 <txp:hide>==================-body-======================</txp:hide>
-
-
 
 <body id="<txp:section />" class="no-js">
 
 
-
 <txp:hide>==================-accessibility-======================</txp:hide>
 
-
-
 <div id="accessibility">
-
 <ul>
-
 <li><a href="#menu">go to menu</a></li>
-
 <li><a href="#content">go to content</a></li>
-
 <li><a href="#footer">go to search</a></li>
-
 </ul>
-
 </div>
 
 
-
 <txp:hide>==================-menu-======================</txp:hide>
-
-
 
 <img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo noprint" width="50" height="50">
 <txp:output_form form="colak_menu" />
@@ -155,14 +140,14 @@
 
 <txp:if_article_list>
 
-<txp:hide>==================-citations-======================</txp:hide>
 
+<txp:hide>==================-citations-======================</txp:hide>
 
 <txp:if_category name="cited">
 <txp:images category="cited" break="" limit="8" sort="rand()">
-<div class="noprint g_3">
+<aside class="noprint g_3">
 <txp:image loading="lazy" style="width:100%; height:auto;" />
-</div>
+</aside>
 </txp:images>
 
 <div class="clearboth">&nbsp;</div>
@@ -176,14 +161,12 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="clearboth">&nbsp;</div>
-<txp::pub_forms />
+<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="clearboth">&nbsp;</div>
+<txp:hide><txp::pub_forms /></txp:hide>
 
 <div class="clear">&nbsp;</div>
 
-
 <txp:else />
-
 
 
 <txp:hide>==================-mentions-======================</txp:hide>
@@ -191,7 +174,7 @@
 <txp:if_category name="mentioned">
 
 <txp:images category="other-publications" limit="8" sort="rand()" break="">
-<div class="noprint g_3"><txp:image loading="lazy" style="width:100%; height:auto;" /></div>
+<aside class="noprint g_3"><txp:image loading="lazy" style="width:100%; height:auto;" /></aside>
 </txp:images>
 
 <div class="clearboth">&nbsp;</div>
@@ -203,15 +186,13 @@
 </article>
 </txp:article_custom>
 
-
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
 
-<txp::pub_forms />
+<txp:hide><txp::pub_forms /></txp:hide>
 
 <div class="clear">&nbsp;</div>
-
 
 <txp:else />
 
@@ -224,7 +205,7 @@
 
 <txp:variable name="ids"><txp:article_custom section="projects,about" pubs fields="list(thisid)"><txp:article_id /></txp:article_custom></txp:variable>
 
-<txp:article_custom id='<txp:variable name="ids" />' limit="999">
+<txp:article_custom id='<txp:variable name="ids" />' limit="999" sort="posted desc">
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <div class="line" id="book_<txp:image_info type="id" />">
 <figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
@@ -234,18 +215,7 @@
 </txp:images>
 </txp:article_custom> 
 
-
-
-
-
-
-
-
-
-
 <div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
-
-
 
 <txp:variable name="otherpubs" value='<txp:article_custom section="projects,about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field><txp:if_custom_field name="multi_event_pubs"><txp:custom_field name="multi_event_pubs" /></txp:if_custom_field></txp:article_custom>' />
 
@@ -260,13 +230,12 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="g_12 preg alpha"><h5 class="centre"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
-<txp::pub_forms />
+<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
+<txp:hide><txp::pub_forms /></txp:hide>
 </txp:if_section>
 </txp:if_category>
 <div class="clear">&nbsp;</div>
 </txp:if_article_list>
-
 
 </div><!-- end .container_24 --></div>
 
