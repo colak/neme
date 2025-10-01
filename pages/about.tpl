@@ -21,7 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -38,7 +38,7 @@
 <txp:else />
 <meta name="author" content="NeMe">
 <txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
-<meta name="Robots" content="noindex,nocache,follow">
+<meta name="Robots" content="noindex,nocache,follow" />
 <txp:else />
 <meta name="Robots" content="index,follow">
 </txp:evaluate>
@@ -49,6 +49,7 @@
 <meta name="geo.placename" content="Limassol">
 <meta name="DC.title" content="<txp:page_title />">
 
+<txp:if_article_id id="2366"><script src="/js/echarts.min.js"></script></txp:if_article_id>
 
 <link rel="home" href="<txp:site_url />">
 <txp:if_search>
@@ -154,15 +155,6 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
-
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit" tabindex="-1"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"></a>
-</aside>
-</txp:act_if_mobile>
 
 <div id="content"><div class="container_24">
 
@@ -222,12 +214,6 @@
 Corner of Ellados and Enoseos streets<br>
 Limassol<br>
 Cyprus</p></address>
-<h4>Postal Address</h4>
-<address><p>NeMe<br>
-poBox 50325<br>
-3603 Limassol<br>
-Cyprus</p>
-</address>
 
 </div>
 <div class="clear">&nbsp;</div>
@@ -242,7 +228,7 @@ Cyprus</p>
 <txp:recent_articles section="projects" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
-<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" ><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
+<txp:images category="participated" id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="4" break="">
 <div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a></div>
 <div class="clear">&nbsp;</div>
 </txp:images>
@@ -279,7 +265,7 @@ Cyprus</p>
 <h3>Workshops</h3>
 
 <txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />workshops/"><txp:thumbnail loading="lazy" class="grid_24" /></a>
+<a href="<txp:site_url />about/workshops"><txp:thumbnail loading="lazy" class="grid_24" /></a>
 </txp:images>
 </div>
 
@@ -305,8 +291,9 @@ Cyprus</p>
 
 <txp:article form="" status="live">
 <txp:article_custom id='<txp:article_id />'>
+<txp:if_article_id id="2366,2361,2181,2178" not>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" loading="lazy" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:article_custom>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:if_article_id></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
@@ -325,12 +312,6 @@ Cyprus</p>
 Corner of Ellados and Enoseos streets<br>
 Limassol<br>
 Cyprus</p></address>
-<h4>Postal Address</h4>
-<address><p>NeMe<br>
-poBox 50325<br>
-3603 Limassol<br>
-Cyprus</p>
-</address>
 </div>
 <div class="clear">&nbsp;</div>
 
@@ -354,7 +335,6 @@ Cyprus</p>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list>
 <txp:output_form form="javascripts" />
 </txp:else />
