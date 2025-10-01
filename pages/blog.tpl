@@ -1,8 +1,15 @@
 <txp:output_form form="section_search" />
 <txp:if_logged_in group="publisher" not><txp:pat_speeder group="publisher" gzip="0"/></txp:if_logged_in>
-<txp:hide><txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context="id, s, c, context, q, m, month, author, commented, pg, accept_vimeo_cookies" />"'>
+<txp:hide><txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context="id, s, c, context, q, m, month, author, commented, pg, _NeMe_" />"'>
     <txp:txp_die status="404" />
 </txp:evaluate></txp:hide>
+
+<txp:if_individual_article>
+<txp:evaluate query='contains("<txp:page_url type="req" />" != "?fbclid="'>
+<txp:php>header("Refresh:0; url=<txp:permlink />"); </txp:php>
+</txp:evaluate>
+</txp:if_individual_article>
+
 <!doctype html>
 <html lang="en-gb">
 
@@ -15,8 +22,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
-
+<meta name="mobile-web-app-capable" content="yes">
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -28,7 +34,7 @@
 
 <meta name="author" content="NeMe and contributors">
 <txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
-<meta name="Robots" content="noindex,nocache,follow" />
+<meta name="Robots" content="noindex,nocache,follow">
 <txp:else />
 <meta name="Robots" content="index,follow">
 </txp:evaluate>
@@ -152,26 +158,17 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"></a>
-<a href="https://mastodonshare.com/share" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_mastodon.svg" width="30" height="30" alt="share on Mastodon" loading="lazy"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"></a>
-</aside>
-</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 
+<txp:if_request type="get" name="_NeMe_redirected">
+<div class="grid_24"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. <txp:if_individual_article>The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</txp:if_individual_article></strong></div><div class="clear">&nbsp;</div>
+</txp:if_request>
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
 <txp:if_article_list>
-
-<txp:hide>==================-article_list-======================</txp:hide>
-
 <txp:if_search>
 <txp:if_search_results>
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
@@ -240,13 +237,13 @@
 <nav class="paginator" aria-label="page_nav">
 <txp:variable name="prev1" value='<txp:link_to_prev />' />
 <txp:if_variable name="prev1" value="">
-<div class="prev">&nbsp;</div>
+<div class="prev g_12">&nbsp;</div>
 <txp:else />
 <div class="prev noprint"><txp:link_to_prev>&#8666; <txp:title /></txp:link_to_prev></div>
 </txp:if_variable>
 <txp:variable name="next1" value='<txp:link_to_next />' />
 <txp:if_variable name="next1" value="">
-<div class="prev noprint">&nbsp;</div>
+<div class="prev g_12 noprint">&nbsp;</div>
 <txp:else />
 <div class="next aright noprint"><txp:link_to_next><txp:title /> &#8667;</txp:link_to_next></div>
 </txp:if_variable>
@@ -262,7 +259,7 @@
 <txp:if_custom_field name="venue" value="#">
 <h4>Off line</h4>
 <txp:else />
-<p><a rel="external" href="<txp:custom_field name="venue" escape="" />">Website</a></p>
+<p><txp::ext url='<txp:custom_field name="venue" escape="" />' txt="Website" /></p>
 </txp:if_custom_field>
 <txp:else />
 <p><a href="<txp:site_url />" rel="home">NeMe project</a></p>
@@ -303,7 +300,6 @@
 </div><!-- end .container_24 -->
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
