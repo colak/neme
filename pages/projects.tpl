@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 <txp:if_individual_article>
 <txp:evaluate query='contains("<txp:page_url type="req" />" != "fbclid="'>
@@ -29,6 +29,7 @@
 </txp:if_individual_article>
 </txp:if_variable>
 </txp:hide>
+
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -162,15 +163,7 @@
 
 <txp:output_form form="colak_menu" />
 
-<txp:hide>==================-social-======================</txp:hide>
 
-<txp:act_if_mobile not>
-<aside class="share large nosmall noprint">
-<a href="http://www.facebook.com/sharer/sharer.php?u=<txp:permlink />&amp;t=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Facebook"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" alt="share on facebook" loading="lazy"></a>
-<a href="https://twitter.com/intent/tweet?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Twitter"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" alt="share on twitter" loading="lazy"></a>
-<a href="http://www.reddit.com/submit?url=<txp:site_url trim="/" /><txp:page_url />" rel="nofollow" title="Share on Reddit"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_redit.svg" width="30" height="30" alt="share on Redit" loading="lazy"></a>
-</aside>
-</txp:act_if_mobile>
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-article-lists-======================</txp:hide>
@@ -219,7 +212,8 @@
 <div class="grid_24 noprint">
 <txp:article status limit="1" listform="" form="" c10="">
 <div class="grid_24 aright">
-<p aria-label="Breadcrumb" class="aright breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p></div>
+<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
+<p aria-label="Breadcrumb" class="text-right breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p></div>
 <div class="clear">&nbsp;></div>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
@@ -236,6 +230,8 @@
 </div>
 </txp:if_excerpt>
 </txp:article_custom>
+<txp:if_category name="hosted"><div class="clear">&nbsp;</div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h5></div><div class="clear">&nbsp;</div></txp:if_category>
+<txp:if_category name="participations"><div class="clear">&nbsp;</div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h5></div><div class="clear">&nbsp;</div></txp:if_category>
 </main>
 </div>
 <txp:else />
@@ -243,7 +239,8 @@
 <txp:hide>==================-Category 2-======================</txp:hide>
 <div class="grid_24 noprint">
 <txp:article limit="1" listform="" match="Category1=2, Category2=3" form="" c10="y">
-<p aria-label="Breadcrumb" class="aright">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
+<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
+<p aria-label="Breadcrumb" class="text-right">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
 </div>
 <div class="clear">&nbsp;</div>
 </txp:article>
@@ -295,7 +292,13 @@
 <div class="clear">&nbsp;</div></article>
 </txp:if_article_category>
 </txp:article_custom>
-<p class="centre announce">Also see:<br>[&nbsp;<a href=/projects/hosted/>Hosted Projects</a>&nbsp;] [&nbsp;<a href=/projects/participations/>Participations in other projects</a>&nbsp;]</p><div class="clear">&nbsp;</div>
+
+<div class="clear">&nbsp;</div>
+
+<div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h5></div>
+
+<div class="clear">&nbsp;</div>
+
 </main> 
 </txp:if_category>
 </txp:if_search>
@@ -340,6 +343,7 @@
 <h5>Dates<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
 <p><txp:custom_field name="dates" escape="" /></p>
 <p>Posted: <txp:posted format="%b %d, %Y" /></p>
+<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
 <p role="navigation" aria-label="breadcrumbs">&hellip; / <txp:section link="1" /> /
 <txp:if_article_category number="1"><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / </txp:if_article_category><txp:if_article_category number="2"><a href="/<txp:section />/<txp:category1 />/<txp:category2 />/"><txp:category2 /></a> / </txp:if_article_category></p>
 </div>
@@ -372,7 +376,7 @@
 
 <txp:if_custom_field name="pubs_by_others">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' break="">
-<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a>
+<a href="<txp:site_url />publications/mentioned/"><txp:image loading="lazy" class="grid_24" /></a>
 <div class="clear">&nbsp;</div>
 </txp:images>
 </txp:if_custom_field>
@@ -402,7 +406,6 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="javascripts" />
 
 </body>
