@@ -2,7 +2,7 @@
 	<txp:if_yield name="media">
 		<txp:oui_cookie name='<txp:variable name="sitename" />_youtube' duration='<txp:variable name="cookielife" />' values="yes" />
 			<txp:oui_if_cookie name='<txp:variable name="sitename" />_youtube'>
-				<div class='embed-container <txp:yield name="class" default="if169" />' id="m_<txp:yield name="media" />" itemscope itemtype="http://schema.org/VideoObject">
+				<div class="embed-container <txp:yield name="class" default="if169" />" id="m_<txp:yield name="media" />" itemscope itemtype="http://schema.org/VideoObject">
 					<txp:if_yield name="url" value="pl"><iframe class='<txp:yield name="class" default="if169" />' loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=<txp:yield name="media" />" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; height:100%"></iframe></txp:if_yield>
 					<txp:if_yield name="url" value="user"><iframe class='<txp:yield name="class" default="if169" />' loading="lazy" style="width:100%; height:100%" src="https://www.youtube-nocookie.com/embed?listType=user_uploads&amp;list=<txp:yield name="media" />" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></txp:if_yield>
 					<txp:if_yield name="url" not><iframe loading="lazy" class='<txp:yield name="class" default="if169" />' src="https://www.youtube-nocookie.com/embed/<txp:yield name="media" />" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></txp:if_yield>
