@@ -5,7 +5,7 @@
 <div class="grid_24"><h3>NeMe's feed on YouTube</h3></div>
 
 <div class="embed-container grid_24" itemscope itemtype="http://schema.org/VideoObject">
-<iframe class="<txp:yield name="if_class" default="if169" />" loading="lazy" src="https://www.youtube-nocookie.com/embed?listType=user_uploads&amp;list=nemeorg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width:100%; height:100%" allowfullscreen></iframe>
+<iframe class="<txp:yield name="if_class" default="if169" />" loading="lazy" src="https://www.youtube-nocookie.com/embed?listType=user_uploads&amp;list=nemeorg" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" style="width:100%; height:100%" allowfullscreen></iframe>
 </div>
 
 </div>
