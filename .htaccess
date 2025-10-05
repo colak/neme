@@ -22,33 +22,7 @@ Require not env bad_bot
 Require all denied
 </If>
 
-
-
-# The following require custom modules to be installed
-# <IfModule mod_authz_core.c>
-# Require all granted
-# Require not ip 34.174
-# </IfModule>
-
-# <IfModule mod_bw.c>
-# <If "%{REMOTE_ADDR} =~ /^34\.174\./">
-# Set bandwidth limit in KB/sec.
-# BandwidthLimit 10
-# </If>
-# </IfModule>
-
-# <IfModule mod_qos.c>
-# QS_LimitBandwidth 34.174.0.0/16 100
-# </IfModule>
-
-# prevent DoS attacks by limiting the bandwidth
-# <IfModule ratelimit_module>
-# SetOutputFilter RATE_LIMIT
-# SetEnv rate-limit 50
-# SetEnv rate-initial-burst 200
-# </IfModule>
-
-# Only uncomment if you have issues with posing articles or templates
+# Only uncomment if you have issues with posting or saving your content
 # SecFilterEngine Off
 # SecFilterScanPOST Off
 
@@ -59,6 +33,7 @@ Header set Content-Security-Policy "frame-ancestors 'self'; object-src 'none'; b
 Header set X-Content-Type-Options "nosniff"
 Header set Cross-Origin-Resource-Policy "same-origin"
 Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self \"https://www.youtube.com\" \"https://i.ytimg.com\" \"https://www.youtube-nocookie.com\"), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
+
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header set Expect-CT "max-age=86400, enforce"
 Header set Referrer-Policy "same-origin"
