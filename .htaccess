@@ -22,13 +22,15 @@ Require not env bad_bot
 Require all denied
 </If>
 
+
+
 # The following require custom modules to be installed
 # <IfModule mod_authz_core.c>
 # Require all granted
 # Require not ip 34.174
 # </IfModule>
 
-#<IfModule mod_bw.c>
+# <IfModule mod_bw.c>
 # <If "%{REMOTE_ADDR} =~ /^34\.174\./">
 # Set bandwidth limit in KB/sec.
 # BandwidthLimit 10
@@ -53,10 +55,15 @@ Require all denied
 # CSP
 <IfModule mod_headers.c>
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
-Header set Content-Security-Policy "frame-ancestors 'self'"
+Header set Content-Security-Policy "frame-ancestors 'self'; object-src 'none'; base-uri 'self'; frame-src 'self' https://www.youtube-nocookie.com; img-src 'self' https://i.ytimg.com"
+
 Header set X-Content-Type-Options "nosniff"
 Header set Cross-Origin-Resource-Policy "same-origin"
+
+# Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self 'https://.youtube.com' 'https://i.ytimg.co' 'https://www.youtube-nocookie.com'), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
+
 Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self \"https://www.youtube.com\" \"https://i.ytimg.com\" \"https://www.youtube-nocookie.com\"), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
+
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header set Expect-CT "max-age=86400, enforce"
 Header set Referrer-Policy "same-origin"
@@ -105,28 +112,28 @@ RewriteRule ^main/?(.*)$ https://www.neme.org/$1 [R=301,L]
 RewriteRule ^forum/?(.*)$ http://forum.neme.org/$1 [R=301,L]
 RewriteRule ^reblog/out/?$ https://www.neme.org/ [R=301,L]
 RewriteRule ^arts_info/?$ /blog/ [R=301,L]
-RewriteRule ^archives/?$ /blog/?_NeMe_redirected=1  [R=301,L]
-RewriteRule ^archives(20\d{2})/?$ /blog/?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^archives/?$ /blog/ [R=301,L]
+RewriteRule ^archives(20\d{2})/?$ /blog/ [R=301,L]
 RewriteRule ^publications/cited/citations/?$ https://www.neme.org/publications/cited/ [R=301,L]
 RewriteRule ^publications/mentioned/mentions/?$ https://www.neme.org/publications/mentioned/ [R=301,L]
-RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^blog//non-machines/?$ https://www.neme.org/projects/participations/non-machines [R=301,L]
+RewriteRule ^blog/short-matters/?$ https://www.neme.org/projects/hosted/short-matters [R=301,L]
 RewriteRule ^496/27-bienal-de-sao-paulo/?$ https://www.neme.org/blog/27-bienal-de-sao-paulo?_NeMe__NeMe_redirected=1 [R=301,L]
-RewriteRule ^blog/newport-beach-film-festival-2009/?$ /blog/nbff-2009?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^250/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^blog/newport-beach-film-festival-2009/?$ /blog/nbff-2009 [R=301,L]
+RewriteRule ^250/?$ https://www.neme.org/texts/from-zombie-to-cyborg [R=301,L]
 RewriteRule ^calls/?$ https://www.neme.org/blog/ [R=301,L]
-RewriteRule ^1721/pq-2015/?$ https://www.neme.org/texts/from-zombie-to-cyborg?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^category/calls/?$ /blog/?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^category/intransition/?$ /projects/in-transition-cyprus-2006?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^category/ideodrome2006/?$ /projects/ideodrome-2006?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^article/?$ /texts/?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^call/?$ /blog/?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^(\d+)/([\w\-]+)$ /texts/$2?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^texts/open-city-stepping-in-from-the-edge/?$ /texts/open-city?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^texts/istanbul-biennial-10-nightcomers/?$ /blog/istanbul-biennial-10-nightcomers?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^texts/roc-14/?$ /blog/roc-14?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^571/preserving-new-media\.html/?$ /texts/preserving-new-media?_NeMe_redirected=1 [R=301,L]
-RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nightcomers|roc-14|qed-saturday-12-october-2013|tive-2008|dok-leipzig-2010|performa-11|lisbon-architecture-triennale|female-shorts|idensitat-07|biacs2|24th-ube-biennale|untitled12th-istanbul-biennial-2011|tampere-xxxviii|facade-window-project|electric-renaissance-2005call|the-united-nations-plaza)/?$ /blog/$1?_NeMe_redirected=1 [R=301,L]
+RewriteRule ^1721/pq-2015/?$ https://www.neme.org/texts/from-zombie-to-cyborg [R=301,L]
+RewriteRule ^category/calls/?$ /blog/ [R=301,L]
+RewriteRule ^category/intransition/?$ /projects/in-transition-cyprus-2006 [R=301,L]
+RewriteRule ^category/ideodrome2006/?$ /projects/ideodrome-2006 [R=301,L]
+RewriteRule ^article/?$ /texts/ [R=301,L]
+RewriteRule ^call/?$ /blog/ [R=301,L]
+RewriteRule ^(\d+)/([\w\-]+)$ /texts/$2 [R=301,L]
+RewriteRule ^texts/open-city-stepping-in-from-the-edge/?$ /texts/open-city [R=301,L]
+RewriteRule ^texts/istanbul-biennial-10-nightcomers/?$ /blog/istanbul-biennial-10-nightcomers [R=301,L]
+RewriteRule ^texts/roc-14/?$ /blog/roc-14 [R=301,L]
+RewriteRule ^571/preserving-new-media\.html/?$ /texts/preserving-new-media [R=301,L]
+RewriteRule ^texts/(open-city-stepping-in-from-the-edge|istanbul-biennial-10-nightcomers|roc-14|qed-saturday-12-october-2013|tive-2008|dok-leipzig-2010|performa-11|lisbon-architecture-triennale|female-shorts|idensitat-07|biacs2|24th-ube-biennale|untitled12th-istanbul-biennial-2011|tampere-xxxviii|facade-window-project|electric-renaissance-2005call|the-united-nations-plaza)/?$ /blog/$1 [R=301,L]
 # Final catch-all for any URLs not matched (optional)
 # RewriteRule ^.*$ / [R=301,L]
 
@@ -136,6 +143,15 @@ RewriteCond %{QUERY_STRING} ^context=image(&p=\d+)?$
 RewriteRule ^(.*)$ /$1? [R=301,L]
 RewriteCond %{QUERY_STRING} ^m=\d+$
 RewriteRule ^(.*)$ /$1? [R=301,L]
+
+# redirect m=##
+RewriteCond %{QUERY_STRING} (^|&)m=\d+(&|$)
+RewriteCond %{QUERY_STRING} ^(.*)&m=\d+&(.*)$
+RewriteRule ^(.*)$ /$1?%1&%2 [R=302,L]
+RewriteCond %{QUERY_STRING} ^(.*)&m=\d+$ 
+RewriteRule ^(.*)$ /$1?%1 [R=302,L]
+RewriteCond %{QUERY_STRING} ^m=\d+&?(.*)$
+RewriteRule ^(.*)$ /$1?%1 [R=302,L]
 
 # block hackers
 RewriteCond %{REQUEST_URI} (bbs|bigdump|bitrix|cgi|CHANGELOG|ckeditor|ckfinder|cms|connectors|connector|console|convert|dedecms|dede|drupal|dump|editor|elfinder|eshop|fallback|fckeditor|FileZilla|gaestebuch|gastenboek|guestbook|jomestate|joomla|kcfinder|lazycms|login|magmi|mail|manage|noscript|oecms|phpcms|plus|register|rob-chiu|templates|Tester|tinymce|trackback|udd|uploadTester|utility|webmail|webmanage|wordpress|wp-admin|wp-content|wp-login|wp|xmlrpc|ycportal) [NC]
