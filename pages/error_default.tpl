@@ -8,8 +8,10 @@
 <meta charset="utf-8">
 
 <title><txp:site_name />: <txp:error_status /></title>
-<meta name="Robots" content="noindex,follow">
-<link rel="home" href="<txp:site_url />">
+
+<meta name="author" content="NeMe">
+<meta name="Robots" content="noindex,nocache,follow">
+<meta name="GOOGLEBOT" content="NOARCHIVE"><link rel="home" href="<txp:site_url />">
 
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
