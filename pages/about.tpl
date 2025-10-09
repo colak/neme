@@ -180,7 +180,7 @@
 </txp:if_search_results>
 <txp:article limit="999" searchall="1" />
 <txp:else />
-<txp:article_custom id="2001">
+<txp:article_custom id="2001" status="sticky">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image class="ds" loading="lazy" /></a>
