@@ -34,7 +34,17 @@
 <meta name="Robots" content="noindex,follow">
 <txp:else />
 <meta name="author" content="NeMe">
+<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
+<meta name="Robots" content="noindex,nocache,follow">
+<meta name="GOOGLEBOT" content="NOARCHIVE">
+<txp:else />
+<txp:evaluate query='contains("<txp:page_url />","?accept_cookies=yes")'>
+<meta name="Robots" content="noindex,nocache,follow" />
+<meta name="GOOGLEBOT" content="NOARCHIVE">
+<txp:else />
 <meta name="Robots" content="index,follow">
+</txp:evaluate>
+</txp:evaluate>
 <meta name="revisit-after" content="10 days">
 </txp:if_section>
 
@@ -174,7 +184,8 @@
 
 <div class="grid_8">
 <div id="meta">
-<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised, hosted or participated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
+<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised, hosted or participated in the past <txp:evaluate query='<txp:date format="%Y" /> - 2004' />  years.</p>
+
 <p>We thank all of them.</p>
 <p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="<txp:permlink id="2240"/>">let us know</a>.</p>
 </div>
