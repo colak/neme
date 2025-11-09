@@ -19,20 +19,12 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 </script>
 <!--<![endif]-->
 
-<txp:if_article_section name="projects">
-<txp:oui_if_cookie name="accept_vimeo_cookies">
-<txp:output_form form="bxslider.js" format="flat.script" />
-</txp:oui_if_cookie>
-</txp:if_article_section>
-
 <script>
 $(document).ready(function(){
 // change class
 $('body').removeClass('no-js').addClass('js');
 
-
-<txp:if_article_section name="projects">
-<txp:oui_if_cookie name="accept_vimeo_cookies">
+<txp:if_article_section name="projects"><txp:oui_if_cookie name="_NeMe_vimeo">
 // bxslider 
 if(window.innerWidth < 960) {
 $('.slider').bxSlider({
@@ -51,8 +43,7 @@ moveSlides: 2,
 slideMargin: 10
 });
 }
-</txp:oui_if_cookie>
-</txp:if_article_section>
+</txp:oui_if_cookie></txp:if_article_section>
 // slides
 $(".rslides").responsiveSlides({
 auto: true,
