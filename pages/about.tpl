@@ -21,7 +21,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -49,7 +49,10 @@
 <meta name="geo.placename" content="Limassol">
 <meta name="DC.title" content="<txp:page_title />">
 
+<txp:hide><txp;if_article_id id="2366"><script src="<txp:page_url type="theme_path" />/forms/javascripts/echarts.min.js"></script></txp:if_article_id></txp:hide>
+
 <txp:if_article_id id="2366"><script src="/js/echarts.min.js"></script></txp:if_article_id>
+
 
 <link rel="home" href="<txp:site_url />">
 <txp:if_search>
@@ -180,7 +183,7 @@
 </txp:if_search_results>
 <txp:article limit="999" searchall="1" />
 <txp:else />
-<txp:article_custom id="2001" status="sticky">
+<txp:article_custom id="2001">
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:if_custom_field name="pubs">
 <txp:images id='<txp:custom_field name="pubs" />' limit="1" sort="rand()" break="">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image class="ds" loading="lazy" /></a>
@@ -228,7 +231,7 @@ Cyprus</p></address>
 <txp:recent_articles section="projects" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
-<txp:images category="participated" id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="4" break="">
+<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" break=""><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
 <div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a></div>
 <div class="clear">&nbsp;</div>
 </txp:images>
@@ -291,9 +294,8 @@ Cyprus</p></address>
 
 <txp:article form="" status="live">
 <txp:article_custom id='<txp:article_id />'>
-<txp:if_article_id id="2366,2361,2181,2178" not>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" loading="lazy" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:if_article_id></txp:article_custom>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
@@ -335,6 +337,7 @@ Cyprus</p></address>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list>
 <txp:output_form form="javascripts" />
 </txp:else />
