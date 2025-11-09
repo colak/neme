@@ -16,6 +16,7 @@ article p{font-size:1rem;}
 article li{font-size:1rem;}
 article li li, article li li li, article li li li {font-size:1rem;}
 a:focus{outline:dotted 1px}
+h1,h2,h3,h4,h5,h6 {line-height:110%}
 h2{font-size:2.2rem; text-wrap:balance;}
 h3{font-size:1.7rem; text-wrap:balance;}
 h4{font-size:1.5rem}
@@ -45,8 +46,8 @@ em,i,.italic{font-style:italic}
 code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 {margin:0 auto;max-width:1080px;padding:1rem 0}
 .grid_1,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16,.grid_17,.grid_18,.grid_19,.grid_2,.grid_20,.grid_21,.grid_22,.grid_23,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.g_3,.g_12 {display:inline;float:left;margin-left:.5%;margin-right:.5%}
-.alpha{margin-left:0}
-.omega{margin-right:0}
+.alpha{margin-left:1%}
+.omega{margin-right:1%}
 .container_24 .grid_1{width:3.167%}
 .container_24 .grid_2 {width:7.333%}
 .container_24 .grid_3, .container_24 .g_3{ width:11.5%}
@@ -70,7 +71,7 @@ code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 .grid_21{width:86.5%}
 .container_24 .grid_22{width:90.667%}
 .container_24 .grid_23{width:94.833%}
-.container_24 .grid_24{width:99%;break:both;float:none;display:block;margin-left:.5%;margin-right:.5%}
+.container_24 .grid_24{width:98%;break:both;float:none;display:block;margin-left:1%;margin-right:1%}
 .container_24 .prefix_1{padding-left:4.167%}
 .container_24 .prefix_2{padding-left:8.333%}
 .container_24 .prefix_3{padding-left:12.5%}
@@ -135,11 +136,11 @@ background: -ms-linear-gradient(top,  #424242 0%, #333 3%);
 background-image: linear-gradient(to bottom, #424242 0%, #333 3%);
 }
 #landing {margin-bottom:5em;}
-.clearleft{clear:left}
+.clearleft{clear:left;margin:1rem 0 0 0}
 .clearright{clear:right}
 a{color:#ff0000}
 a:visited{color:#ec7063 }
-h1{font-size:2.2rem;text-align:left;line-height:1em;color:#fff; padding:0 0 10px 0; text-wrap:balance;}
+h1{font-size:2.2rem;text-align:left;color:#fff; padding:0 0 10px 0; text-wrap:balance;}
 article h1{color:#fff}
 p, ol, ul{text-align:left;widows: 3; orphans: 2; text-wrap:pretty;}
 ol,ul{list-style-position:outside!important;padding:0}
@@ -190,6 +191,7 @@ figure img{height:auto}
 #neme #content ul li{margin:0;padding-bottom:.8em}
 .clear{margin:1em}
 .clearboth, .clearall{clear:both;margin:1em 0;}
+.clearleft {clear:left}
 .aright{text-align:right}
 .floatright {float:right}
 .apology p,.bx-wrapper .bx-pager,.caption{text-align:center}
@@ -253,6 +255,7 @@ height:auto;float:left;width:100%;border:0;}
 }
 .no-js ul.rslides li{display:none}
 .no-js ul.rslides li:first-child{display:inherit}
+.no-js .no_script_hide {display:none}
 .rslides{margin:0 auto}
 .rslides_container{margin-bottom:50px;position:relative;float:left;width:50%}
 .rslides1_nav,.rslides2_nav{position:absolute;-webkit-tap-highlight-color:transparent;overflow:hidden;text-indent:-9999px}
