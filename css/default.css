@@ -194,7 +194,7 @@ figure img{height:auto}
 .clearleft {clear:left}
 .aright{text-align:right}
 .floatright {float:right}
-.apology p,.bx-wrapper .bx-pager,.caption{text-align:center}
+.apology p,.caption{text-align:center}
 #error-page #content p{font-size:2rem;text-align:center}
 .apology,.ie{font-size:1.7rem}
 #accessibility{position:absolute;top:-10000px}
@@ -268,21 +268,6 @@ height:auto;float:left;width:100%;border:0;}
 .rslides3_nav{-webkit-tap-highlight-color:transparent;opacity:.6;text-indent:-9999px;overflow:hidden;top:0;background:url(/images/702.gif) left 50% no-repeat #000;width:38px}
 
 .caption{display:block;right:0;padding:15px;background:#000;background:rgba(0,0,0,.8);color:#fff}
-.bx-wrapper{position:relative;margin:0 auto 60px;padding:0}
-.bx-wrapper img{max-width:100%;display:block}
-.bx-wrapper .bx-viewport{border:5px solid #ccc;left:-5px;background:#ccc;-webkit-transform:translatez(0);-moz-transform:translatez(0);-ms-transform:translatez(0);-o-transform:translatez(0);transform:translatez(0)}
-.bx-wrapper .bx-controls-auto,.bx-wrapper .bx-pager{position:absolute;bottom:-30px;width:100%}
-.bx-wrapper .bx-loading{min-height:50px;background:url(/images/428.gif) center center no-repeat #fff;height:100%;width:100%;position:absolute;top:0;left:0;z-index:999}
-.bx-wrapper .bx-pager{font-size:.85rem;font-family:Arial;font-weight:700;color:#666;padding-top:20px}
-.bx-wrapper .bx-controls-auto .bx-controls-auto-item,.bx-wrapper .bx-pager .bx-pager-item{display:inline-block}
-.bx-wrapper .bx-pager.bx-default-pager a{background:#cc0000;text-indent:-9999px;display:block;width:16px;height:16px;margin:0 5px;outline:0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
-.bx-wrapper .bx-pager.bx-default-pager a.active,.bx-wrapper .bx-pager.bx-default-pager a:hover{background:#CCC}
-.bx-wrapper .bx-prev{left:10px;background:url(/images/427.png) 0 -32px no-repeat}
-.bx-wrapper .bx-next{right:10px;background:url(/images/427.png) -43px -32px no-repeat}
-.bx-wrapper .bx-prev:hover{background-position:0 0}
-.bx-wrapper .bx-next:hover{background-position:-43px 0}
-.bx-wrapper .bx-controls-direction a{position:absolute;top:50%;margin-top:-16px;outline:0;width:32px;height:32px;text-indent:-9999px;z-index:8888}
-.bx-wrapper .bx-controls-direction a.disabled{display:none}
 .logo1{max-height:150px;margin-bottom:1em}
 
 #content {padding:2em 0 0 0}
@@ -385,7 +370,6 @@ h1{font-size:1.6rem;margin:.7em auto;padding:0;clear:both;display:block}
 #front .grid_18 .slides{float:none;width:99%}
 
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
-.bx-wrapper .bx-pager.bx-default-pager a{background:#cc0000;text-indent:-9999px;display:block;width:22px;height:22px;margin:0 5px;outline:0;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
 #about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:95%}
 #publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
 #blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}
