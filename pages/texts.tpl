@@ -20,9 +20,8 @@
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile>
 <meta http-equiv="x-rim-auto-match" content="none">
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
-
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -231,7 +230,7 @@
 <article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
 
 <txp:if_request type="get" name="_NeMe_redirected">
-<div class="grid_24"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
+<div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
 
 <h1><txp:title /></h1>
@@ -299,6 +298,7 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list><txp:output_form form="javascripts" /></txp:if_article_list>
 
 </body>
