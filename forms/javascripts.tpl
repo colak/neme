@@ -19,6 +19,10 @@ document.getElementById(clickedLink[1]).className = "customTarget";
 </script>
 <!--<![endif]-->
 
+<txp:if_article_section name="projects"><txp:oui_if_cookie name="_NeMe_vimeo">
+<txp:output_form form="bxslider.js" format="flat.script" />
+</txp:oui_if_cookie></txp:if_article_section>
+
 <script>
 $(document).ready(function(){
 // change class
