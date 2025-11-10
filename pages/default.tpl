@@ -13,7 +13,7 @@
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile>
 <meta http-equiv="x-rim-auto-match" content="none">
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
 
 
@@ -151,7 +151,6 @@
 
 <txp:output_form form="colak_menu" />
 
-
 <div id="content"><div class="container_24">
 
 <txp:hide>==================-home page-======================</txp:hide>
@@ -159,7 +158,8 @@
 <txp:if_section name="">
 <txp:if_search>
 <txp:variable name="searchterm_minchars" value="3" />
-<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';</txp:php></txp:variable>
+<txp:variable name="searchterm_tooshort"><txp:php>global $variable, $q; echo ( strlen(trim($q)) < intval($variable['searchterm_minchars']) ) ? 'yes' : '';
+</txp:php></txp:variable>
 <txp:article pgonly="1" searchall="0" searchsticky="1" />
 <txp:if_search_results max="200">
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
@@ -194,7 +194,8 @@
 </txp:article_custom>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides"><txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides"><txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
+</txp:images></figure>
 
 <div class="clearboth">&nbsp;</div>
 
@@ -242,6 +243,7 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="javascripts" />
 
 </body>
