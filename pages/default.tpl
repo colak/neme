@@ -243,7 +243,7 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
+
 <txp:output_form form="javascripts" />
 
 </body>
