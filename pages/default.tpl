@@ -194,8 +194,7 @@
 </txp:article_custom>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides"><txp:permlink id='<txp:image_info type="name" />'><txp:image /></txp:permlink>
-</txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" wraptag="ul" class="carousel" wrapclass="" break="li" sort="rand()" limit="8"><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink></txp:images></figure>
 
 <div class="clearboth">&nbsp;</div>
 
@@ -243,7 +242,7 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="javascripts" />
 
 </body>
