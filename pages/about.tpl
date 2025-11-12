@@ -194,11 +194,9 @@
 </txp:images>
 </txp:if_custom_field></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18">
-<txp:images category="promote" limit="8" sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
-</txp:images>
-</figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint">
+<txp:images category="promote" wraptag="ul" class="carousel" break="li" sort="rand()" limit="8">
+<txp:image loading="lazy" /></txp:images></figure> 
 
 <div class="clear">&nbsp;</div>
 <div class="clear">&nbsp;</div>
@@ -293,12 +291,14 @@ Cyprus</p></address>
 <txp:hide>=============================-live-========================</txp:hide>
 
 <txp:article form="" status="live">
-<txp:article_custom id='<txp:article_id />'>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall"><txp:images id='<txp:custom_field name="img2" />' wraptag="" break="" sort="rand()" limit="1"><txp:thumbnail class="ds" loading="lazy" /></txp:images></figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" break="li" class="rslides" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:article_custom>
+<txp:article_custom id='<txp:article_id />'><txp:if_custom_field name="img2"><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint">
+<txp:images id='<txp:custom_field name="img2"/>' wraptag="" class="" break="" sort="rand()" limit="1"><txp:thumbnail loading="lazy" /></txp:images></figure></txp:if_custom_field></txp:article_custom>
+
+<txp:article_custom id='<txp:article_id />'><txp:if_custom_field name="img_main"><figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint"><txp:images id='<txp:custom_field name="img_main"/>' wraptag="ul" class="carousel" break="li" sort="rand()" limit="8"><txp:image loading="lazy" /></txp:images></figure></txp:if_custom_field></txp:article_custom>
 <div class="clear">&nbsp;</div>
 
 <article class="grid_18" role="main">
+
 <txp:if_request type="get" name="_neme_redirected">
 <div class="grid_24 alpha omega"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</strong></div><div class="clear">&nbsp;</div>
 </txp:if_request>
