@@ -1,5 +1,5 @@
 <txp:output_form form="section_search" />
-<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="1"/></txp:if_logged_in>
+<txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
 <!doctype html>
 <html lang="en-gb">
@@ -197,7 +197,8 @@
 <aside>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit='<txp:act_if_mobile>6<txp:else />8</txp:act_if_mobile>' wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint">
+<txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="8" wraptag="ul" class="carousel" break="li"><txp:image loading="lazy" /></txp:images></figure>
 </aside>
 
 <div class="clear">&nbsp;</div></div>
@@ -322,7 +323,8 @@
 &nbsp;
 </txp:if_custom_field>
 </figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else /><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" break="li" class="rslides"><txp:image loading="lazy" /></txp:images></txp:if_variable></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else />
+<txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" class="carousel" break="li"><txp:image loading="lazy" /></txp:images></txp:if_variable></figure>
 </aside>
 <div class="clear">&nbsp;</div>
 
@@ -406,6 +408,7 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="javascripts" />
 
 </body>
