@@ -21,8 +21,8 @@
 <url><loc><txp:variable name="siteurl" />projects/respublika/screenings/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/respublika/seminars/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />projects/respublika/performances/</loc><changefreq>yearly</changefreq></url>
-<url><loc><txp:variable name="siteurl" />publications/cited/</loc><lastmod><txp:article_custom id="2373"><txp:modified format="w3c" /></txp:article_custom></lastmod><changefreq>weekly</changefreq></url>
-<url><loc><txp:variable name="siteurl" />publications/mentioned/</loc><lastmod><txp:article_custom id="2375"><txp:modified format="w3c" /></txp:article_custom></lastmod><changefreq>weekly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />publications/cited/</loc><changefreq>weekly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />publications/mentioned/</loc><changefreq>weekly</changefreq></url>
 
 <txp:article_custom section="projects,about,texts,blog" exclude="2001,2189,2190,2240,2241,2372" limit="9999" status="live">
 <url>
@@ -30,8 +30,4 @@
 <lastmod><txp:evaluate query='<txp:posted format="%s" /> < <txp:modified format="%s" />'><txp:modified format="w3c" /><txp:else /><txp:posted format="w3c" /></txp:evaluate></lastmod>
 </url>
 </txp:article_custom>
-
-<txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:modified format="w3c" /></txp:article_custom></txp:variable>
-<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1"><loc><txp:variable name="siteurl" />blog/?pg=<txp:yield item="page" /></loc><lastmod><txp:variable name="lastmodified_article" /></lastmod></txp:pages>
-
 </urlset>
