@@ -30,4 +30,12 @@
 <lastmod><txp:evaluate query='<txp:posted format="%s" /> < <txp:modified format="%s" />'><txp:modified format="w3c" /><txp:else /><txp:posted format="w3c" /></txp:evaluate></lastmod>
 </url>
 </txp:article_custom>
+
+<txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:posted format="w3c" /></txp:article_custom></txp:variable>
+
+<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1">
+    <loc><txp:site_url />section_name/?pg=<txp:yield item="page" /></loc>
+    <lastmod><txp:variable name="lastmodified_article" /></lastmod>
+</txp:pages>
+
 </urlset>
