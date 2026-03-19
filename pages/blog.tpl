@@ -22,7 +22,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 <txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
@@ -154,21 +155,18 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
+<txp:hide>==================-article-lists-======================</txp:hide>
 
 <div id="content"><div class="container_24">
 
-
-<txp:if_request type="get" name="_NeMe_redirected">
-<div class="grid_24"><strong class="announce">Please note that you have arrived here via an outdated URL. Please update your bookmark. <txp:if_individual_article>The new URL for this article is: <a href="<txp:permlink />" rel="canonical"><txp:permlink /></a>.</txp:if_individual_article></strong></div><div class="clear">&nbsp;</div>
-</txp:if_request>
-
-<txp:hide>==================-article-lists-======================</txp:hide>
-
 <txp:if_article_list>
+
+<txp:hide>==================-article_list-======================</txp:hide>
+
 <txp:if_search>
 <txp:if_search_results>
 <h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
@@ -187,7 +185,7 @@
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article_custom status="live" section="blog" c10="x" form="sticky_form" limit="30" />
 </txp:evaluate>
-<txp:article limit="10" c10="" listform="live_form" form="" />
+<txp:article limit="10" c10="" listform="live_form" form="" limit=20 />
 </main>
 
 <div class="clear">&nbsp;</div>
@@ -237,13 +235,13 @@
 <nav class="paginator" aria-label="page_nav">
 <txp:variable name="prev1" value='<txp:link_to_prev />' />
 <txp:if_variable name="prev1" value="">
-<div class="prev g_12">&nbsp;</div>
+<div class="prev">&nbsp;</div>
 <txp:else />
 <div class="prev noprint"><txp:link_to_prev>&#8666; <txp:title /></txp:link_to_prev></div>
 </txp:if_variable>
 <txp:variable name="next1" value='<txp:link_to_next />' />
 <txp:if_variable name="next1" value="">
-<div class="prev g_12 noprint">&nbsp;</div>
+<div class="prev noprint">&nbsp;</div>
 <txp:else />
 <div class="next aright noprint"><txp:link_to_next><txp:title /> &#8667;</txp:link_to_next></div>
 </txp:if_variable>
@@ -300,6 +298,7 @@
 </div><!-- end .container_24 -->
 
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
