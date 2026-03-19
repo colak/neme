@@ -33,7 +33,7 @@
 
 <txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:posted format="w3c" /></txp:article_custom></txp:variable>
 
-<txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1">
+<txp:pages total='<txp:article_custom section="blog" pageby="20" pgonly />' break="url" link="" offset="1">
 <loc><txp:site_url />section_name/?pg=<txp:yield item="page" /></loc>
 <changefreq>monthly</changefreq>
 <lastmod><txp:variable name="lastmodified_article" /></lastmod>
