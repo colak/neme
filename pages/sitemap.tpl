@@ -35,7 +35,7 @@
 
 <txp:pages total='<txp:article_custom section="blog" pageby="10" pgonly />' break="url" link="" offset="1">
 <loc><txp:site_url />section_name/?pg=<txp:yield item="page" /></loc>
-<changefreq>monthy</changefreq>
+<changefreq>monthly</changefreq>
 <lastmod><txp:variable name="lastmodified_article" /></lastmod>
 </txp:pages>
 
