@@ -10,13 +10,13 @@ Require all granted
 BrowserMatchNoCase "12soso|AspiegelBot|Baiduspider|Bytespider|Datanyze|Kinza|LieBaoFast|Mb2345Browser|MicroMessenger|SemrushBot|Sogou|adscanner|claudebot|libwww-perl|serpstatbot|spaziodat|undefined|wget|zh-CN|zh_CN" bad_bot
 
 # Block bad actors and bots
-<RequireAll>
-Require all granted
-Require not ip 217.147.172.206
+# <RequireAll>
+# Require all granted
+# Require not ip 217.147.172.206
 # Require not ip 34.174
 # Require not ip 34.174.0.0/16
-Require not env bad_bot
-</RequireAll>
+# Require not env bad_bot
+# </RequireAll>
 
 # <If "%{REMOTE_ADDR} =~ /^34\.174\.\d{1,3}\.\d{1,3}/">
 # Require all denied
