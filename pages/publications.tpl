@@ -202,17 +202,12 @@
 
 <div class="line"><h4 class="grid_23 alpha" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">NeMe publications</a></txp:if_logged_in></h4><div class="clear">&nbsp;</div></div>
 
-<txp:variable name="ids"><txp:article_custom section="projects,about" pubs fields="list(thisid)"><txp:article_id /></txp:article_custom></txp:variable>
-
-<txp:article_custom id='<txp:variable name="ids" />' limit="999" sort="posted desc">
-<txp:images id='<txp:custom_field name="pubs" />' break="">
-<div class="line" id="book_<txp:image_info type="id" />">
-<figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
-<txp:image fetchpriority="high" /></txp:permlink><txp:else /><txp:permlink>
-<txp:image loading="lazy" /></txp:permlink></txp:if_first_article></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
-<txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
+<txp:images category="publications" sort="alt desc" limit="999" break="">
+<div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span>
+<figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
+<div class="clear">&nbsp;</div>
+</div>
 </txp:images>
-</txp:article_custom> 
 
 <div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
 
