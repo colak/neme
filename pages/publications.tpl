@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -38,7 +38,6 @@
 <link rel="canonical" href="<txp:site_url trim="/" /><txp:page_url />">
 <txp:else />
 <link rel="canonical" href="<txp:permlink />">
-</txp:if_section>
 </txp:if_article_list>
 </txp:if_search>
 <txp:if_description><txp:meta_description /></txp:if_description>
@@ -133,7 +132,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo noprint" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo noprint" width="50" height="50">
 <txp:output_form form="colak_menu" />
 <div class="clear">&nbsp;</div>
 <div id="content"><div class="container_24">
@@ -209,7 +208,7 @@
 <txp:images id='<txp:custom_field name="pubs" />' break="">
 <div class="line" id="book_<txp:image_info type="id" />">
 <figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><txp:if_first_article><txp:permlink>
-<txp:image fetchpriority="high" /></txp:permlink></txp:else /><txp:permlink>
+<txp:image fetchpriority="high" /></txp:permlink><txp:else /><txp:permlink>
 <txp:image loading="lazy" /></txp:permlink></txp:if_first_article></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" />
 <txp:if_logged_in group="publisher"><p class="noprint"><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div>
 </txp:images>
@@ -217,15 +216,12 @@
 
 <div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
 
-<txp:variable name="otherpubs" value='<txp:article_custom section="projects,about" limit="999" break=","><txp:if_custom_field name="pubs_by_others"><txp:custom_field name="pubs_by_others" /></txp:if_custom_field><txp:if_custom_field name="multi_event_pubs"><txp:custom_field name="multi_event_pubs" /></txp:if_custom_field></txp:article_custom>' />
-
-<txp:images id='<txp:variable name="otherpubs" />' category="participated" sort="alt desc" limit="999" break="">
-<txp:if_different>
-<div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" loading="lazy" /></a></span>
+<txp:images category="participated" sort="alt desc" limit="999" break="">
+<div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span>
 <figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
 <div class="clear">&nbsp;</div>
 </div>
-</txp:if_different>
+
 </txp:images>
 
 <div class="clear">&nbsp;</div>
