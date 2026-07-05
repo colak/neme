@@ -10,7 +10,7 @@
 </txp:article_custom>
 <txp:article_custom section='<txp:section />' category='<txp:category />' break="article" c10="">
 <div class="grid_5"><txp:if_logged_in group="publisher"><p><a href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<div class="grid_6"><h2 class="h6"><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h2></div>
 <div class="grid_13"><txp:if_custom_field name="venues">
 <p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
 <txp:else />
