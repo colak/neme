@@ -160,7 +160,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="clearboth">&nbsp;</div>
 <txp:hide><txp::pub_forms /></txp:hide>
 
 <div class="clear">&nbsp;</div>
@@ -200,7 +200,8 @@
 
 <txp:if_section name="publications">
 
-<div class="line"><h4 class="grid_23 alpha" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">NeMe publications</a></txp:if_logged_in></h4><div class="clear">&nbsp;</div></div>
+<div class="line"><h1 class="grid_23 alpha h4" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">Publications</a></txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
+<div class="grid_24 line"><h2 class="h4">Published or co-published</h2></div>
 
 <txp:images category="publications" sort="alt desc" limit="999" break="">
 <div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span>
@@ -209,19 +210,13 @@
 </div>
 </txp:images>
 
-<div class="line grid_24"><h4 id="contributed">NeMe contributed to the following publications.</h4></div>
+<div class="line grid_24"><h2 class="h4" id="contributed">NeMe contributed to the following publications.</h2></div>
 
-<txp:images category="participated" sort="alt desc" limit="999" break="">
-<div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span>
-<figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
-<div class="clear">&nbsp;</div>
-</div>
-
-</txp:images>
+<txp:images category="participated" sort="alt desc" limit="999" break=""><div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div></txp:images>
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h4></div><div class="clearboth">&nbsp;</div>
 <txp:hide><txp::pub_forms /></txp:hide>
 </txp:if_section>
 </txp:if_category>
