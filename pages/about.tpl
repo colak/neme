@@ -154,7 +154,7 @@
 <txp:hide>==================-menu-======================</txp:hide>
 
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
@@ -226,11 +226,15 @@ Cyprus</p></address>
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 
-<txp:recent_articles section="projects" limit="10" label="Previous activities" labeltag="h3" break="li" wraptag="ul" class="submenu" />
+<txp:recent_articles section="projects" limit="10" label="Previously" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
 <txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" break=""><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
+<txp:evaluate query='"<txp:image_info type="category" />" = "participated"'>
 <div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a></div>
+<txp:else />
+<div class="otherpubs"><a href="/publications/mentioned"><txp:image loading="lazy" class="grid_24" /></a></div>
+</txp:evaluate>
 <div class="clear">&nbsp;</div>
 </txp:images>
 </div>
@@ -340,7 +344,7 @@ Cyprus</p></address>
 <txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list>
 <txp:output_form form="javascripts" />
-</txp:else />
+<txp:else />
 <txp:if_article_id id="2044,2002">
 <txp:output_form form="javascripts" />
 </txp:if_article_id>
