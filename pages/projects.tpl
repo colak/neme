@@ -223,6 +223,8 @@
 <txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
 <p aria-label="Breadcrumb" class="text-right breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p></div>
 <div class="clear">&nbsp;></div>
+<txp:if_category name="hosted"><h1>Hosted Projects</h1></txp:if_category>
+<txp:if_category name="participations"><h1>Participations</h1></txp:if_category>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:article_custom listform="" form="" section='<txp:section />' category='<txp:category />' Type="sponsors" status="sticky" limit="1">
@@ -238,8 +240,8 @@
 </div>
 </txp:if_excerpt>
 </txp:article_custom>
-<txp:if_category name="hosted"><div class="clear">&nbsp;</div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h5></div><div class="clear">&nbsp;</div></txp:if_category>
-<txp:if_category name="participations"><div class="clear">&nbsp;</div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h5></div><div class="clear">&nbsp;</div></txp:if_category>
+<txp:if_category name="hosted"><div class="clear">&nbsp;</div><div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h2></div><div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h2></div><div class="clear">&nbsp;</div></txp:if_category>
+<txp:if_category name="participations"><div class="clear">&nbsp;</div><div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h2></div><div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/>Projects</a></h5></div><div class="clear">&nbsp;</div></txp:if_category>
 </main>
 </div>
 <txp:else />
@@ -273,16 +275,17 @@
 <txp:else />
 <txp:hide>==================-section landing page-======================</txp:hide>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage"><div class="line nosmall">
-<div class="grid_5 nosmall"><p>Dates</p></div>
+<h1>NeMe Projects</h1>
 <div class="grid_6 nosmall"><p>Title</p></div>
+<div class="grid_5 nosmall"><p>Dates</p></div>
 <div class="grid_13 nosmall"><p>Venue</p></div>
 <div class="clear nosmall noprint">&nbsp;</div></div>
 
 <txp:article_custom status section="projects" c10="x" form="" limit="999">
 <txp:if_article_category>
 <article class="preg">
+<div class="grid_6"><h2 class="h6"><a rel="bookmark" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h2></div>
 <div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><a rel="follow" href="/<txp:section />/<txp:category1 />/"><txp:title /></a></h6></div>
 <div class="grid_13"><txp:if_custom_field name="venues">
 <p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
 <txp:else />
@@ -290,8 +293,9 @@
 </txp:if_custom_field></div>
 <div class="clear">&nbsp;</div></article>
 <txp:else />
-<article><div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
-<div class="grid_6"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<article>
+<div class="grid_6"><h2 class="h6"><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h2></div>
+<div class="grid_5"><txp:if_logged_in group="publisher"><p><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:custom_field name="dates" escape="" /></a></p><txp:else /><p><txp:custom_field name="dates" escape="" /></p></txp:if_logged_in></div>
 <div class="grid_13"><txp:if_custom_field name="venues">
 <p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" escape="" /></p>
 <txp:else />
@@ -303,7 +307,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h5></div><div class="preg g_12"><h5 class="centre" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h5></div>
+<div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/hosted/>Hosted</a></h2></div><div class="preg g_12"><h2 class="centre h5" style="padding:.5rem 0;"><a href=/projects/participations/>Participations</a></h2></div>
 
 <div class="clear">&nbsp;</div>
 
