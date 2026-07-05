@@ -252,7 +252,7 @@
 </div>
 <div class="clear">&nbsp;</div>
 </txp:article>
-<main aria-label="main content"" itemscope itemtype="https://schema.org/CollectionPage">
+<main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
 <txp:article_custom listform="" form="" section='<txp:section />' match="Category1=2, Category2=3" status="sticky" limit="1">
 <txp:variable name="bod"><txp:body /></txp:variable>
 <txp:if_variable name="bod">
