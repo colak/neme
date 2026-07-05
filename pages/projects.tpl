@@ -159,7 +159,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
@@ -178,7 +178,7 @@
 <txp:if_search>
 <txp:article pgonly="1" searchall="1" searchsticky="0" />
 <txp:if_search_results max="200">
-<h3>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h3>
+<h2>You searched for <strong><txp:page_url type="q" /></strong>. <txp:search_result_count />.</h2>
 <hr>
 <txp:else />
 <p>Your search for <strong><txp:page_url type="q" /></strong> did not match any documents.</p>
@@ -194,12 +194,19 @@
 
 <txp:hide>==================-slides-======================</txp:hide>
 
+<txp:variable name="cat1" value='<txp:page_url type="2" />' /> 
+<txp:variable name="cat2" value='<txp:page_url type="3" />' />
+
+<txp:article limit="1" listform="" match="Category1=2, Category2=3" form="" c10="y">
+<txp:else />
 <aside>
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 nosmall noprint"><txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1"><txp:thumbnail class="ds noprint" loading="lazy" /></txp:images></figure>
 
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint">
 <txp:images category='<txp:category_list type="image" parent=''<txp:if_category><txp:category /><txp:else />events</txp:if_category>'' break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="8" wraptag="ul" class="carousel" break="li"><txp:image loading="lazy" /></txp:images></figure>
 </aside>
+</txp:article>
+
 
 <div class="clear">&nbsp;</div></div>
 
@@ -336,13 +343,13 @@
 
 <div class="grid_6" id="side" role="complementary">
 <div id="meta">
-<txp:if_custom_field name="venues"><h5>Venues</h5>
+<txp:if_custom_field name="venues"><h2 class="h5">Venues</h2>
 <p><txp:custom_field name="venue" escape="" /> <txp:custom_field name="venues" /></p>
 <txp:else />
-<h5>Venue</h5>
+<h2 class="h5">Venue</h2>
 <p><txp:custom_field name="venue" /></p>
 </txp:if_custom_field>
-<h5>Dates<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
+<h3 class="h5">Dates<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h3>
 <p><txp:custom_field name="dates" escape="" /></p>
 <p>Posted: <txp:posted format="%b %d, %Y" /></p>
 <txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
@@ -363,22 +370,28 @@
 </txp:if_variable>
 
 <txp:if_custom_field name="multi_event_pubs">
-<txp:images id='<txp:custom_field name="multi_event_pubs" />' break="">
+<txp:images id='<txp:custom_field name="multi_event_pubs" />' break="" limit="999">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a>
 <div class="clear">&nbsp;</div>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs">
-<txp:images id='<txp:custom_field name="pubs" />' break="">
+<txp:images id='<txp:custom_field name="pubs" />' break="" limit="999">
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a>
 <div class="clear">&nbsp;</div>
 </txp:images>
 </txp:if_custom_field>
 
 <txp:if_custom_field name="pubs_by_others">
-<txp:images id='<txp:custom_field name="pubs_by_others" />' break="">
+
+<txp:images id='<txp:custom_field name="pubs_by_others" />' break="" limit="999">
+<txp:evaluate query='"<txp:image_info type="category" />" = "participated"'>
+<a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a>
+<txp:else />
 <a href="<txp:site_url />publications/mentioned/"><txp:image loading="lazy" class="grid_24" /></a>
+</txp:evaluate>
+
 <div class="clear">&nbsp;</div>
 </txp:images>
 </txp:if_custom_field>
