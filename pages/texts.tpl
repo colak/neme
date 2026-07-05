@@ -157,7 +157,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
@@ -190,29 +190,24 @@
 <p>This page lists all <txp:article_custom section="texts" pageby="1" pgonly /> texts collected for our online visitors since the launch of our site in 2005. Our published texts are <a href="/publications/cited/">cited</a> in a number of publications, sites, and are used in the reading lists of many university courses. If you have a text which is relevant to this database please do <a href="<txp:site_url />blog/submit-a-text" rel="nofollow">submit it</a> to us. We read all submissions.</p>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides">
-<txp:images category="promote" limit="6" sort="rand()" wraptag="ul" break="li" class="rslides">
-<txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink>
-</txp:images>
-</figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint"><txp:images category="promote" limit="6" sort="rand()" wraptag="ul" break="li" class="carousel"><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink></txp:images></figure>
 
 <div class="clear">&nbsp;</div>
 </div>
 
 <main>
 <article class="titles">
-<div class="grid_6 nosmall"><h6>Author</h6></div>
-<div class="grid_18 nosmall"><h6>Title</h6></div>
+<div class="grid_18 nosmall"><h2 class="h6">Title</h2></div>
+<div class="grid_6 nosmall"><h3 class="h6">Author</h3></div>
 <div class="clear nosmall">&nbsp;</div>
 </article>
 
 <txp:article limit="999">
-<article><div class="grid_6"><txp:if_logged_in group="publisher"><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:if_logged_in></div>
-<div class="grid_18"><h6><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h6></div>
+<article><div class="grid_18"><h2 class="h6"><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></h2></div><div class="grid_6"><txp:if_logged_in group="publisher"><a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="p" break=" &amp; "><txp:link_name /></txp:linklist></txp:if_logged_in></div>
 <div class="clear noprint">&nbsp;</div></article>
 </txp:article>
 </main>
-<div class="line"><h5 class="grid_23 alpha" id="cited"><a href="/publications/cited/">Publications citing our content</a></h5><div class="clear">&nbsp;</div></div>
+<div class="line"><h3 class="h5 grid_24" id="cited"><a class="centre" href="/publications/cited/">Publications citing our content</a></h3><div class="clear">&nbsp;</div></div>
 </txp:if_search>
 </txp:if_article_list>
 
