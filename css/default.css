@@ -23,7 +23,7 @@ h3, .h3 {font-size:1.7rem; text-wrap:balance;}
 h4, .h4{font-size:1.5rem}
 h5, .h5 {font-size:1.3rem}
 h6, .h6{font-size:1.1rem}
-ol{list-style:decimal}
+ol, ol.notes{list-style-type:decimal}
 ul{list-style:disc}
 li{margin-left:30px}
 address,dl,fieldset,ol,p,pre,table,ul{margin-bottom:1em}
@@ -423,9 +423,7 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 #side .otherpubs {align-self: flex-end;}
 #copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
 #texts .container_24 .grid_18 {clear:both;width:99%;display:block}
-article ol.notes {list-style-position: inside;list-style-type:decimal;}
-article ol.notes, 
-article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;word-wrap: break-word;-ms-word-break: break-all; word-break: break-word;}
+article ol.notes, article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;word-wrap: break-word;-ms-word-break: break-all; word-break: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
 }
