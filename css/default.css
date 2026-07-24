@@ -1,5 +1,5 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;vertical-align:baseline;margin:0;padding:0}
-html {scroll-behavior: smooth;scroll-padding-top:60px;srollbar-gutter:stable;font-size: 18px;font-weight:300}
+html {scroll-behavior: smooth;scroll-padding-top:60px;scrollbar-gutter:stable;font-size: 18px;font-weight:300}
 body{background:#000;border-bottom:10px solid #000;color:#333;line-height:1.5;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;}
 hr{text-align:center}
 .white{background-color:#fff}
@@ -269,10 +269,6 @@ ul.carousel li {margin-left: 0;}
 .no-js ul.carousel li{display:none}
 .no-js ul.carousel li:first-child{display:block}	
 .no-js ul.carousel li:first-child {opacity: 1;z-index: 1;}
-
-@supports not (aspect-ratio: 1) {
-height:auto;float:left;width:100%;border:0;}
-}
 
 .caption{display:block;right:0;padding:15px;background:#000;background:rgba(0,0,0,.8);color:#fff}
 .logo1{max-height:150px;margin-bottom:1em}
