@@ -16,19 +16,20 @@ article p{font-size:1rem;}
 article li{font-size:1rem;}
 article li li, article li li li, article li li li {font-size:1rem;}
 a:focus{outline:dotted 1px}
-h1,h2,h3,h4,h5,h6 {line-height:110%}
-h2{font-size:2.2rem; text-wrap:balance;}
-h3{font-size:1.7rem; text-wrap:balance;}
-h4{font-size:1.5rem}
-h5{font-size:1.3rem}
-h6{font-size:1.1rem}
+h1,h2,h3,h4,h5,h6 {line-height:100%}
+h1, .h1{font-size:2.2rem; text-wrap:balance;}
+h2{font-size:1.9rem; text-wrap:balance;}
+h3, .h3 {font-size:1.7rem; text-wrap:balance;}
+h4, .h4{font-size:1.5rem}
+h5, .h5 {font-size:1.3rem}
+h6, .h6{font-size:1.1rem}
 ol{list-style:decimal}
 ul{list-style:disc}
 li{margin-left:30px}
 address,dl,fieldset,ol,p,pre,table,ul{margin-bottom:1em}
 h2,h3,h4,h5,h6 {margin: 0}
 a[rel~=external] {cursor: ne-resize;}
-a[rel~=external]:after {content:"\00A0\21D7";display:inline-block;position:relative;font-size:1rem;padding:0}
+a[rel~=external]:after{content:"\21D7";display:inline-block;position:relative;font-size:1rem;padding-inline-start: .25ch;}
 a.nostyle[rel~=external]:after {content:none}
 hr {width:90%;padding:0;border-top:1px dashed #eee;}
 hr.l50 {width:50%;padding:0;border-top:1px dashed #eee;}
@@ -71,7 +72,7 @@ code{background-color:#585858;font-family:'Courier New',Courier,monospace}
 .container_24 .grid_21{width:86.5%}
 .container_24 .grid_22{width:90.667%}
 .container_24 .grid_23{width:94.833%}
-.container_24 .grid_24{width:98%;clear:both;float:none;display:block;margin-left:1%;margin-right:1%}
+.container_24 .grid_24{width:96%;clear:both;float:none;display:block;margin-left:1%;margin-right:1%}
 .container_24 .prefix_1{padding-left:4.167%}
 .container_24 .prefix_2{padding-left:8.333%}
 .container_24 .prefix_3{padding-left:12.5%}
@@ -140,7 +141,6 @@ background-image: linear-gradient(to bottom, #424242 0%, #333 3%);
 .clearright{clear:right}
 a{color:#ff0000}
 a:visited{color:#ec7063 }
-h1{font-size:2.2rem;text-align:left;color:#fff; padding:0 0 10px 0; text-wrap:balance;}
 article h1{color:#fff}
 p, ol, ul{text-align:left;widows: 3; orphans: 2; text-wrap:pretty;}
 ol,ul{list-style-position:outside!important;padding:0}
@@ -159,7 +159,7 @@ figure img{height:auto}
 #meta,.frontthumbs h3{background-color:#BA0000}
 #content a:hover,.submenu .active a{color:#ddd}
 #content{color:#eee;background: #000000;margin-top:1.5em;}
-.submenu a{color:#ee0000}
+.submenu a{color:#FF4500}
 #nav ul {list-style-type:none;padding:5px 0;margin:-1.3rem 0 0 0}
 #nav li:last-child {float:right}
 #nav li a {font-size:1rem}
@@ -168,9 +168,11 @@ figure img{height:auto}
 #searchsites label{margin:0 .7em}
 .frontthumbs h3{padding-left:5px;text-align:left;line-height:1.4em}
 .frontthumbs h3 a{display:block}
+
 #error #content h2,#front .frontthumbs a{color:#fff}
 #front .frontthumbs a:hover{color:#ccc}
 #front .grid_6 ul,#front .grid_6 ul li{list-style:none;margin:0}
+#front h2 {background-color:#BA0000; padding:6px;}
 #meta{width:97%;padding:1.5%;margin:0}
 #meta .linklist,#meta a{color:#fff;font-size:1rem}
 .side li, #side li,.side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
@@ -192,7 +194,6 @@ figure img{height:auto}
 .clear{margin:1em}
 .clearboth, .clearall{clear:both;margin:1em 0;}
 .clearleft {clear:left}
-.aright{text-align:right}
 .floatright {float:right}
 .apology p,.caption{text-align:center}
 #error-page #content p{font-size:2rem;text-align:center}
@@ -221,11 +222,12 @@ img{max-width:100%;height:auto}
 
 .text-left {text-align: left;}
 .text-center {text-align: center;}
-.text-right {text-align: right;}
+.text-right, .aright {text-align: right;}
 .text-justify {text-align: justify;}
 .text-start {text-align: start;}
 .text-end {text-align: end;}
 .gdpr p {text-align: center;}
+.gdpr img {width:100%;height:auto;}
 
 @supports not (aspect-ratio: 1) {
 .embed-container{position:relative;padding-bottom:56.25%;height:0;padding-top: 30px;overflow:hidden;max-width:100%}
@@ -345,7 +347,8 @@ h3 .tooltip .tooltiptext {font-size:.9rem;line-height:1em}
 .medium,.nosmall, .large, #landing, .tooltip:hover .tooltiptext {display:none;}
 #content, #soylentgreen { -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none;}
 .container_24{width:97%; padding:0 1.5%; display:block}
-h1{font-size:1.6rem;margin:.7em auto;padding:0;clear:both;display:block}
+h1{font-size:1.6rem;margin:0 .7em auto;padding:0;clear:both;display:block}
+h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 .grid_16 {max-width: 90%;}
 
 .comText,.comTextarea {width:100%}
@@ -357,6 +360,7 @@ h1{font-size:1.6rem;margin:.7em auto;padding:0;clear:both;display:block}
 
 
 #front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, #texts #content ol li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
+ol.notes {list-style-type: decimal;}
 #side .related_articles li:nth-of-type(odd), #side .submenu li:nth-of-type(odd) {background-color: #282828;}
 
 .overflow {overflow-x:auto;}
@@ -424,7 +428,8 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 #copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
 #texts .container_24 .grid_18 {clear:both;width:99%;display:block}
 article ol.notes {list-style-position: inside;list-style-type:decimal;}
-article ol.notes, article .tooltip {list-style-position: inside;list-style-type:decimal;list-style: overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word;}
+article ol.notes, 
+article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;word-wrap: break-word;-ms-word-break: break-all; word-break: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
 }
