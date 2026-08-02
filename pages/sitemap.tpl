@@ -23,20 +23,22 @@
 <url><loc><txp:variable name="siteurl" />projects/respublika/performances/</loc><changefreq>yearly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />publications/cited/</loc><changefreq>weekly</changefreq></url>
 <url><loc><txp:variable name="siteurl" />publications/mentioned/</loc><changefreq>weekly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />publications/participations/</loc><changefreq>monthly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />projects/participations/</loc><changefreq>monthly</changefreq></url>
+<url><loc><txp:variable name="siteurl" />projects/hosted/</loc><changefreq>monthly</changefreq></url>
 
-<txp:article_custom section="projects,about,texts,blog" exclude="2001,2189,2190,2240,2241,2372" limit="9999" status="live">
+<txp:article_custom section="projects,about,texts,blog,publications" exclude="2001,2189,2190,2240,2241,2372" limit="9999" status="live">
 <url>
 <loc><txp:permlink /></loc>
 <lastmod><txp:evaluate query='<txp:posted format="%s" /> < <txp:modified format="%s" />'><txp:modified format="w3c" /><txp:else /><txp:posted format="w3c" /></txp:evaluate></lastmod>
 </url>
 </txp:article_custom>
 
-<txp:variable name="lastmodified_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:posted format="w3c" /></txp:article_custom></txp:variable>
-
+<txp:variable name="latest_article"><txp:article_custom section="blog" limit="1" sort="posted desc" status="live"><txp:posted format="w3c" /></txp:article_custom></txp:variable>
 <txp:pages total='<txp:article_custom section="blog" pageby="20" pgonly />' break="url" link="" offset="1">
 <loc><txp:site_url />blog/?pg=<txp:yield item="page" /></loc>
 <changefreq>monthly</changefreq>
-<lastmod><txp:variable name="lastmodified_article" /></lastmod>
+<lastmod><txp:variable name="latest_article" /></lastmod>
 </txp:pages>
 
 </urlset>
