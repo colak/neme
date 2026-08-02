@@ -334,8 +334,9 @@
 &nbsp;
 </txp:if_custom_field>
 </figure>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint"><txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" value="">&nbsp;<txp:else />
-<txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" class="carousel" break="li"><txp:image loading="lazy" /></txp:images></txp:if_variable></figure>
+<txp:variable name="aimg" value='<txp:custom_field name="img_main" />' /><txp:if_variable name="aimg" not><txp:else />
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides noprint"><txp:images id='<txp:variable name="aimg" />' sort="rand()" limit="8" wraptag="ul" class="carousel" break="li"><txp:image loading="lazy" /></txp:images></figure>
+</txp:if_variable>
 </aside>
 <div class="clear">&nbsp;</div>
 
