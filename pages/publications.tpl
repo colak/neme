@@ -53,7 +53,7 @@
 <meta name="twitter:creator" content="@nemeorg">
 <meta name="twitter:url" content="<txp:permlink />">
 <meta name="twitter:title" content="<txp:page_title />">
-<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>" />
+<meta name="twitter:description" content="<txp:if_description><txp:meta_description format="" /><txp:else /><txp:excerpt escape="textile,tags,html" /></txp:if_description>">
 <txp:if_custom_field name="img_main" value="">
 <meta name="twitter:image" content="<txp:images id="3"><txp:image_url /></txp:images>">
 <meta property="og:image" content="<txp:site_url />images/1087.jpg">
@@ -73,7 +73,7 @@
 
 <meta property="og:image" content="<txp:site_url />images/1087.jpg">
 <meta property="og:image:width" content="1200">
- <meta property="og:image:height" content="400">
+<meta property="og:image:height" content="400">
 <meta property="og:image:alt" content="NeMe logo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@nemeorg">
@@ -187,9 +187,20 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h5></div><div class="g_12 preg"><h5 class="centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h5></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h2></div><div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h2></div><div class="clearboth">&nbsp;</div>
 
-<txp:hide><txp::pub_forms /></txp:hide>
+<div class="clear">&nbsp;</div>
+
+<txp:else />
+
+<txp:hide>==================-Participations-======================</txp:hide>
+
+<txp:if_category name="participations">
+
+<div class="line grid_24"><h1 class="h4" id="contributed">NeMe contributed to the following publications</h1></div>
+
+<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure>
+</txp:article_custom>
 
 <div class="clear">&nbsp;</div>
 
@@ -203,25 +214,83 @@
 <div class="line"><h1 class="grid_23 alpha h4" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">Publications</a></txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
 <div class="grid_24 line"><h2 class="h4">Published or co-published</h2></div>
 
-<txp:images category="publications" sort="alt desc" limit="999" break="">
-<div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span>
-<figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure>
+
+<txp:article_custom section="publications" exclude="category1" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
-</div>
-</txp:images>
+<div class="line">&nbsp;</div>
+
+
 
 <div class="line grid_24"><h2 class="h4" id="contributed">NeMe contributed to the following publications.</h2></div>
 
-<txp:images category="participated" sort="alt desc" limit="999" break=""><div class="line" id="book_<txp:image_info type="id" />"><figure itemscope itemtype="http://schema.org/ImageObject"><span itemprop="image" class="grid_6"><a href="<txp:site_url /><txp:image_info type="name" />"><txp:image loading="lazy" /></a></span><figcaption itemprop="caption" class="grid_17"><txp:image_info type="caption" escape="" /><txp:if_logged_in><p><a href="/textpattern/index.php?event=image&amp;step=image_edit&amp;id=<txp:image_info type="id" />">edit</a></p></txp:if_logged_in></figcaption></figure><div class="clear">&nbsp;</div></div></txp:images>
-
+<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h3 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h3></figcaption></figure>
+</txp:article_custom>
+<div class="clearboth">&nbsp;</div>
 <div class="clear">&nbsp;</div>
 
 <div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h4></div><div class="clearboth">&nbsp;</div>
-<txp:hide><txp::pub_forms /></txp:hide>
 </txp:if_section>
 </txp:if_category>
+</txp:if_category>
+</txp:if_category>
 <div class="clear">&nbsp;</div>
+</txp:article>
 </txp:if_article_list>
+
+
+<txp:hide>==================-Individual articles-======================</txp:hide>
+
+<txp:if_individual_article>
+<txp:article form="" listform="">
+<article class="grid_18" role="main" itemscope itemtype="http://schema.org/Text">
+<h1><txp:title /></h1>
+<p class="printonly"><txp:site_url trim="/" /><txp:page_url /></p>
+<txp:body />
+</article>
+</txp:article>
+
+<div class="grid_6" id="side" role="complementary">
+
+<div itemscope itemtype="http://schema.org/Person" id="meta">
+<time class="published" datetime="<txp:posted format="%Y-%m-%d" />">
+Posted: <txp:posted format="%b %d, %Y" /></time> 
+<txp:if_logged_in>(<a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a>)</txp:if_logged_in>
+</div>
+
+<txp:output_form form="announce" />
+
+<txp:output_form form="social_logos" />
+
+<div class="sub">
+
+<txp:if_article_category name="participations" not>
+<txp:article_custom section="publications" exclude="Category1" limit="100" break="li" wraptag="ul" class="submenu" label="Other Publications" labeltag="h3">
+<txp:if_article_id>
+<txp:title />
+<txp:else />
+<a rel="bookmark" href="<txp:permlink />"><txp:title /></a>
+</txp:if_article_id>
+</txp:article_custom>
+</txp:if_article_category>
+
+
+<txp:if_article_category name="participations">
+<txp:article_custom section="publications" category="participations" match="Category1" limit="100" break="li" wraptag="ul" class="submenu" label="Other Publications" labeltag="h3">
+<txp:if_article_id>
+<txp:title />
+<txp:else />
+<a rel="bookmark" href="<txp:permlink />"><txp:title /></a>
+</txp:if_article_id>
+</txp:if_article_category>
+</txp:article_custom>
+</div>
+
+</div>
+<div class="clear">&nbsp;</div>
+<txp:output_form form="tabs.js" format="flat.script" />
+</txp:if_individual_article>
+
+<txp:hide>==================-end individual articles-======================</txp:hide>
 
 </div><!-- end .container_24 --></div>
 
