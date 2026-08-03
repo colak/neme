@@ -366,7 +366,7 @@ h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 
 
 #front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
-#texts #content ol li ol.notes {list-style-type: decimal;}
+#texts #content ol li, ol.notes {list-style-type: decimal;}
 #side .related_articles li:nth-of-type(odd), #side .submenu li:nth-of-type(odd) {background-color: #282828;}
 
 .overflow {overflow-x:auto;}
