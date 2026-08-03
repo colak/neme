@@ -31,15 +31,15 @@ BrowserMatchNoCase "12soso|AspiegelBot|Baiduspider|Bytespider|Datanyze|Kinza|Lie
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set Content-Security-Policy "frame-ancestors 'self'; object-src 'none'; base-uri 'self'; frame-src 'self' https://www.youtube-nocookie.com; img-src 'self' https://i3.ytimg.com"
 Header set X-Content-Type-Options "nosniff"
-Header set Cross-Origin-Resource-Policy "same-origin"
+# Header set Cross-Origin-Resource-Policy "same-origin"
 SetEnvIf Request_URI "\.(jpg|jpeg|png|gif|css|js|ico|svg|woff2?)$" EXCLUDE_COOP=1
 Header always set Cross-Origin-Opener-Policy "same-origin" env=!EXCLUDE_COOP
-Header set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self \"https://www.youtube.com\" \"https://i.ytimg.com\" \"https://www.youtube-nocookie.com\"), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
+# Header always set Cross-Origin-Embedder-Policy "require-corp"
+Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(self), display-capture=(), encrypted-media=(), fullscreen=(self https://www.youtube.com https://i.ytimg.com https://www.youtube-nocookie.com), geolocation=(), gyroscope=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), clipboard-read=(), screen-wake-lock=(), sync-xhr=(self), usb=(), xr-spatial-tracking=()"
 Header set Expect-CT "max-age=86400, enforce"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 SetEnvIf Referer "https?://(www\.)?youtube\.com" is_youtube
 Header set Referrer-Policy "same-origin" env=is_youtube
-Header always set Cross-Origin-Embedder-Policy "require-corp"
 </IfModule>
 
 # compression
