@@ -205,6 +205,16 @@ figure img{height:auto}
 img{max-width:100%;height:auto}
 .wrap {overflow-wrap: break-word;hyphens: manual;}
 
+.tab-container {background: #282828;overflow: hidden;margin-top:2rem;}
+.tab-buttons {display: flex;background-color: #666;}
+.tab-btn {flex: 1;padding: 15px;border: none;background: none;cursor: pointer;transition: all 0.3s ease;outline: none;color:#fff;font-size:1rem}
+.tab-btn:hover {background-color: #dcdcdc;color: #ba0000;border-bottom: 3px solid #ba0000;}
+.tab-btn.active {background-color: #282828;color: #fff; border-bottom: 3px solid #282828;}
+.tab-content {display: none;padding: 1em 1em .1em 1em;animation: fadeIn 0.4s ease;}
+.tab-content.active {display: block;}
+@keyframes fadeIn {from {opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); }}
+.tab-container h2 {margin-bottom: 1rem;color: #eee;}
+
 .if169 {aspect-ratio: 16 / 9; width: 100%; height:auto; display:block;} /* default */
 @supports not (aspect-ratio: 16 / 9) {
 .if169 {height: 0; padding-top: 56.25%;}
@@ -355,8 +365,8 @@ h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 #soylentgreen, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 
 
-#front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, #texts #content ol li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
-ol.notes {list-style-type: decimal;}
+#front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
+#texts #content ol li ol.notes {list-style-type: decimal;}
 #side .related_articles li:nth-of-type(odd), #side .submenu li:nth-of-type(odd) {background-color: #282828;}
 
 .overflow {overflow-x:auto;}
@@ -422,7 +432,7 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 #side .grid_24 {display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;}
 #side .otherpubs {align-self: flex-end;}
 #copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
-#texts .container_24 .grid_18 {clear:both;width:99%;display:block}
+#texts .container_24 .grid_18, #publications .container_24 .grid_18 {clear:both;width:99%;display:block}
 article ol.notes, article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;word-wrap: break-word;-ms-word-break: break-all; word-break: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
