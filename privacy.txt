@@ -8,7 +8,7 @@ Every effort is made to keep the website up and running smoothly. However, NeMe 
 
 NeMe is a non-profit organisation and no data collected is used for commercial purposes. NeMe sells no products or advertising space, either on or off line and all our events are offered for free. This privacy policy explains how the collected data is used.
 
-h3. Content Disclaimer
+h2. Content Disclaimer
 
 Despite careful scrutiny, NeMe and the editors do not guarantee the correctness, relevance, accuracy, suitability, completeness or availability of the information published on this website. 
 
