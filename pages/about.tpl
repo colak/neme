@@ -229,14 +229,7 @@ Cyprus</p></address>
 <txp:recent_articles section="projects" limit="10" label="Previously" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4>Publications (random)</h4><div class="grid_24">
-<txp:images id='<txp:custom_field name="pubs_by_others" />' sort="rand()" limit="6" break=""><txp:hide>sort="alt desc"breakby="2" break="<div class='clear'>&nbsp;</div>"</txp:hide>
-<txp:evaluate query='"<txp:image_info type="category" />" = "participated"'>
-<div class="otherpubs"><a href="/publications/#book_<txp:image_info type="id" />"><txp:image loading="lazy" class="grid_24" /></a></div>
-<txp:else />
-<div class="otherpubs"><a href="/publications/mentioned"><txp:image loading="lazy" class="grid_24" /></a></div>
-</txp:evaluate>
-<div class="clear">&nbsp;</div>
-</txp:images>
+<txp:article_custom section="publications" limit="6" sort="rand()" break='<div class="clear">&nbsp;</div>'><txp:permlink><txp:article_image loading="lazy" class="grid_24" /></txp:permlink></txp:article_custom>
 </div>
 <div class="clear">&nbsp;</div>
 
@@ -245,34 +238,7 @@ Cyprus</p></address>
 <div class="clear">&nbsp;</div>
 </txp:article_custom>
 
-<div class="grid_6 nosmall frontthumbs">
-<h3>Projects</h3>
-<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
-<a href="<txp:site_url />projects/"><txp:thumbnail loading="lazy" class="grid_24" /></a>
-</txp:images>
-</div>
 
-<div class="grid_6 nosmall frontthumbs">
-<h3>Publications</h3>
-
-<txp:images category="publications" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />publications/"><txp:thumbnail loading="lazy" class="grid_24" /></a>
-</txp:images>
-</div>
-
-<div class="grid_6 nosmall frontthumbs">
-<h3>Participations</h3>
-
-<txp:images category='<txp:category_list type="image" parent="participations" break=","><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1" class="ds"><a href="<txp:site_url />participations/"><txp:thumbnail loading="lazy" class="grid_24" /></a></txp:images>
-</div>
-	
-<div class="grid_6 nosmall frontthumbs">
-<h3>Workshops</h3>
-
-<txp:images category="workshops" limit="1" sort="rand()" class="ds" break="">
-<a href="<txp:site_url />about/workshops"><txp:thumbnail loading="lazy" class="grid_24" /></a>
-</txp:images>
-</div>
 
 <div class="clear">&nbsp;</div>
 </txp:if_search>
@@ -286,7 +252,6 @@ Cyprus</p></address>
 <txp:hide>==================-individual articles-======================</txp:hide>
 
 <txp:if_individual_article>
-
 
 
 <txp:hide>==================-individual about-======================</txp:hide>
