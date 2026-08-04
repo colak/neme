@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
 
 <link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
@@ -34,17 +34,7 @@
 <meta name="Robots" content="noindex,follow">
 <txp:else />
 <meta name="author" content="NeMe">
-<txp:evaluate query='contains("<txp:page_url />","?_NeMe_")'>
-<meta name="Robots" content="noindex,nocache,follow">
-<meta name="GOOGLEBOT" content="NOARCHIVE">
-<txp:else />
-<txp:evaluate query='contains("<txp:page_url />","?accept_cookies=yes")'>
-<meta name="Robots" content="noindex,nocache,follow" />
-<meta name="GOOGLEBOT" content="NOARCHIVE">
-<txp:else />
 <meta name="Robots" content="index,follow">
-</txp:evaluate>
-</txp:evaluate>
 <meta name="revisit-after" content="10 days">
 </txp:if_section>
 
@@ -166,7 +156,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
+<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
 <txp:output_form form="colak_menu" />
 
@@ -182,23 +172,23 @@
 <txp:if_section name="related-links">
 
 
-<div class="grid_8">
+<main class="grid_8">
 <div id="meta">
-<p>This page lists all the venues, sponsors and the people and groups who participated in at least one of the projects we organised, hosted or participated in the past <txp:evaluate query='<txp:date format="%Y" /> - 2004' />  years.</p>
-
+<h1>Links</h1>
+<p>This page lists all the venues, funders and the people and groups who participated in at least one of the projects we organised, hosted or participated in the past <txp:php>echo safe_strftime("%Y") - 2004;</txp:php> years.</p>
 <p>We thank all of them.</p>
 <p>If you participated in one of our projects and your name is not here or if we link to a wrong website, please <a rel="nofollow" href="<txp:permlink id="2240"/>">let us know</a>.</p>
 </div>
-</div>
+</main>
 <div>
-<h1>Related People, Places, and Organisations</h1>
-<h4><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of the projects we organised, hosted, or participated in</h4>
+<h2>Contributors</h2>
+<p><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of the projects we organised, hosted, or participated in</p>
 <txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
 
-<div class="announce"><h4>Sponsors</h4>
-<p>NeMe seeks, accepts and welcomes sponsorship for its events. To date, these the organisations helpped our projects in either a financial or in-kind way.</p>
+<div class="announce"><h3>Funding</h3>
+<p>NeMe seeks, accepts and welcomes funding for its events. To date, these the organisations helpped our projects in either a financial or in-kind way.</p>
 
 <txp:linklist category="sponsors" limit="999999" sort="linkname" break=" &bull; " wraptag="p">
 <txp:variable name="haslink" value='<txp:link_url />' />
@@ -223,7 +213,8 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="announce"><h5 id="site_thanks">For their help and/or advice for the coding of our websites we thank:</h5>
+<div class="announce"><h5 id="site_thanks"><h5>Site help</h5>
+<p>For their help and/or advice for the coding of our websites we thank:</p>
 
 <txp:output_form form="site_thanks" /></div>
 
@@ -252,6 +243,7 @@
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
 </html>
