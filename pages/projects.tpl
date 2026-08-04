@@ -371,7 +371,7 @@
 
 <txp:if_variable name="publs" value="">
 <txp:else />
-<h4>Publications</h4>
+<h3 class="h4">Publications</h3>
 </txp:if_variable>
 
 <txp:if_custom_field name="multi_event_pubs">
