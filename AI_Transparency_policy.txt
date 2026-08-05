@@ -5,7 +5,7 @@ Last Updated: <txp:modified format="%d %B %G" />; <txp:modified format="%r" />
 # Human Oversight and Decision Making
 ** While AI assists in our operations named above, all decisions are subject to human review. We do not engage in solely automated decision-making, that produces legal effects or similarly significant effects.
 # Data Processing and Input
-** Our sites do not have any AI features. See <txp:permlink id="2178">our Privacy Policy</txp:permlink> regarding data processing.
+** Our sites do not have any AI features. See our <txp:permlink id="2178">Privacy Policy</txp:permlink> regarding data processing.
 # Accuracy and Limitations
 ** AI-generated content is based on patterns in data and may produce inaccurate, incomplete, or outdated information and it should not be relied upon. In the case of our translated texts to Greek or English, readers should verify critical information by reading the original texts in English or Greek. Our translated pages indicate the original language of the text.
 # Model Information
