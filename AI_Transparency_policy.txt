@@ -1,7 +1,7 @@
 Last Updated: <txp:modified format="%d %B %G" />; <txp:modified format="%r" />
 
 # Use of Artificial Intelligence
-** This website does not utilise Artificial Intelligence (AI), Machine Learning (ML), or automated decision-making systems to process any data, or interact with users. It does however utilise third party artificial intelligence (AI) tools to create graphics for some of our projects, translate content from English to Greek, and Greek to English. These third party tools that their operations are based on machine learning models that analyse input data to provide relevant responses and are hosted in sites other than our own, and and are not integrated any any way with our sites.
+** This website does not utilise Artificial Intelligence (AI), Machine Learning (ML), or automated decision-making systems to process any data, or interact with users. It does however utilise third party artificial intelligence (AI) tools to create graphics for some of our projects, translate content from English to Greek, and Greek to English. These third party tools are hosted in sites other than our own, and and are not integrated any any way with our sites.
 # Human Oversight and Decision Making
 ** While AI assists in our operations named above, all decisions are subject to human review. We do not engage in solely automated decision-making, including profiling, that produces legal effects or similarly significant effects.
 # Data Processing and Input
