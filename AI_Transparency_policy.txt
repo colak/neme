@@ -1,14 +1,14 @@
 Last Updated: <txp:modified format="%d %B %G" />; <txp:modified format="%r" />
 
 # Use of Artificial Intelligence
-** This website utilises artificial intelligence (AI) tools to create graphics for some of our projects, translate content from English to Greek, and Greek to English. For these, we use third party tools that their operations are based on machine learning models that analyse input data to provide relevant responses and are hosted in sites other than our own.
+** This website does not utilise Artificial Intelligence (AI), Machine Learning (ML), or automated decision-making systems to process any data, or interact with users. It does however utilise third party artificial intelligence (AI) tools to create graphics for some of our projects, translate content from English to Greek, and Greek to English. These third party tools that their operations are based on machine learning models that analyse input data to provide relevant responses and are hosted in sites other than our own, and and are not integrated any any way with our sites.
 # Human Oversight and Decision Making
-** While AI assists in our operations named above, all decisions affecting users are subject to human review. We do not engage in solely automated decision-making, including profiling, that produces legal effects or similarly significant effects.
+** While AI assists in our operations named above, all decisions are subject to human review. We do not engage in solely automated decision-making, including profiling, that produces legal effects or similarly significant effects.
 # Data Processing and Input
-** Our sites do not have any AI features that our users or webmasters can interact with.
+** Our sites do not have any AI features.
 # Accuracy and Limitations
 ** AI-generated content is based on patterns in data and may occasionally produce inaccurate, incomplete, or outdated information and it should not be relied upon. In the case of our translated texts to Greek, verify critical information by reading the original texts in English or Greek. Our translated pages indicate the original language of the text.
 # Model Information
-** We use various AI models found through the net but none are embedded in our websites.
+** We use various AI models found through the net but none are embedded or installed in our websites.
 # Changes to this AI Transparency policy
-NeMe has the discretion to update this AI Transparency policy at any time. When it does, the date at the top of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the modifications to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blame/master/AI_tansparency_policy.txt" txt="github" />.
+NeMe has the discretion to update this AI Transparency policy at any time. When it does, the date at the top of this page is updated. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. A history of all the modifications to this policy can be viewed on <txp::ext url="https://github.com/colak/neme/blob/master/AI_Transparency_policy.txt" txt="github" />.
