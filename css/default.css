@@ -157,8 +157,29 @@ figure img{height:auto}
 #nav li:last-child {float:right}
 #nav li a {font-size:1rem}
 #related-links #content .container_24 .grid_8 {float:right}
-#searchsites fieldset{border:1px solid #ddd;padding:.5em}
-#searchsites label{margin:0 .7em}
+
+#searchsites fieldset, #searchsites select, #searchsites input, #searchsites label {box-sizing: border-box;}
+#searchsites form {display: flex;flex-wrap: wrap;gap: 10px;align-items: stretch;}
+#searchsites fieldset {border-radius: 4px;padding: 10px;display: flex;flex-wrap: wrap;gap: 10px;align-items: center;background: #111;width: 96%; align-items: flex-end;}
+#searchsites legend {font-weight: 600;color: #fff;padding: 0 5px;font-size: 0.9rem;}
+#searchsites .accessibility.hidden {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip-path: rect(0 0 0 0);white-space: nowrap;border: 0;}
+#searchsites label {display: flex;flex-direction: column;font-size: 0.85rem;color: #fff;font-weight: 500;}
+#searchsites select, #searchsites input[type="text"] {appearance: none;padding: 10px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 1rem;background-color: #fff;min-width: 100px;}
+#searchsites select {background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");background-repeat: no-repeat;background-position: right 12px center;background-size: 11px;padding-right: 35px;cursor: pointer;}
+#searchsites select:focus, #searchsites input[type="text"]:focus {border-color: red;outline: none;z-index: 1;}
+#searchsites input[type="text"] {flex-grow: 1; min-width: 100px;}
+#searchsites input[type="text"]::placeholder {color: #aaa;font-style: italic;}
+#searchsites input[type="submit"] {background-color: #BA0000;color: #fff;border: none;border-radius: 6px;padding: 10px 20px;font-size: 1rem;font-weight: 600;cursor: pointer;transition: background-color 0.2s;align-self: flex-end;height: 42px;}
+#searchsites input[type="submit"]:hover {background-color: #aaa;color:#000;}
+#searchsites input[type="submit"]:active {background-color: #ba0000;}
+#searchsites [type=submit]:focus-visible {outline: 2px solid white;outline-offset: 2px;}
+/* 5. Narrow */
+@media (max-width: 600px) {
+#searchsites fieldset {flex-direction: column;align-items: stretch;}
+#searchsites label {width: 100%;}
+#searchsites select,#searchsites input[type="text"],#searchsites input[type="submit"] {width: 100%;box-sizing: border-box;}
+}
+
 .frontthumbs h3{padding-left:5px;text-align:left;line-height:1.4em}
 .frontthumbs h3 a{display:block}
 
@@ -176,7 +197,7 @@ figure img{height:auto}
 .videofeed h3 {color:#fff;}
 .line h3,.line h4,.line h6{text-align:left}
 #front .announce a,.announce a{color:#990000}
-.comSubmit {margin:1em 0; width:20%;height:3em;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;clear:both;display:block}
+.comSubmit {margin:1em 0; width:20%;height:3em;border-radius:5px;clear:both;display:block}
 .comFile::file-selector-button {background-color: #eee; color:#000; border: 1px solid #ccc; border-radius: 5px; padding:1em; width:140px; height:3em;margin:1em 1em 1em 0;}
 .comfile::-ms-browse {background-color: #eee; color:#000; border: 1px solid #ccc; border-radius: 5px; padding:1em; width:140px; height:3em;margin:1em 1em 1em 0;}
 .comCheckbox{margin-top:1em}
@@ -237,9 +258,7 @@ img{max-width:100%;height:auto}
 .embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%;display:block;}
 }
 
-#nav{background: #990000 none repeat scroll 0 0 !important;height:5em;position:fixed;position:-webkit-sticky;position:sticky;top:0;z-index:9999;display:block;
--moz-box-shadow: 0px 3px 5px #474347;
--webkit-box-shadow: 0px 3px 5px #474347;
+#nav{background: #990000 none repeat scroll 0 0 !important;height:5em;position:fixed;position:sticky;top:0;z-index:9999;display:block;
 box-shadow: 0px 3px 5px #474347;}
 #nav .menu-items a {font-size:1.2rem; margin:.5em 0}
 .logo {position:fixed;top:.5em;left:1em;z-index:99999;display:block;}
@@ -284,11 +303,11 @@ ul.carousel li {margin-left: 0;}
 .theylive img {width:100%; height:auto}
 .theylive p {text-align:center;}
 p.red {margin:.5em 0;}
-p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;margin:20px 0;}
+p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;border-radius:5px;margin:20px 0;}
 .socialeucookies {display:table;background-color:#ffc;border-radius: 8px;}
 .social {background-color:#fff;margin-top:10px;padding:2px;display:block;
-display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: center;}
-.social img {display: block;-webkit-flex: 1; flex: 1;padding:2px;}
+align-items: center;display: flex;}
+.social img {display: block; flex: 1;padding:2px;}
 .eu {display:block;background-color:#fff; color:#000;height:auto; padding:1em; clear:both;border-radius: 8px;margin:1em 0;}
 .margintop {margin-top:1em}
 
@@ -297,11 +316,11 @@ display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: cen
 #meta {border-radius: 8px 8px 0 0;}
 .social {border-radius: 0 0 8px 8px;}
 .ds {border-radius: 8px 0 0 8px;}
-#soylentgreen {display:block;width:100%;margin:0 0 -25px 0;-moz-box-shadow: 0 -3px 5px #bbb;-webkit-box-shadow: 0px -3px 5px #bbb;box-shadow: 0px -3px 5px #bbb;background-color:#000;color:#fff}
+#soylentgreen {display:block;width:100%;margin:0 0 -25px 0;box-shadow: 0px -3px 5px #bbb;background-color:#000;color:#fff}
 #soylentgreen h3 {margin:0;padding:0}
 #soylentgreen p {font-size:1.1rem;}
 #soylentgreen a {color:#EE0000}
-#soylentgreen .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6rem;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+#soylentgreen .grid_6 {background-color:#cc0000;text-align:center;font-size:1.6rem;border-radius:5px}
 #soylentgreen .grid_6 p {text-align:center;margin:0;padding:0;display:block;clear:both}
 #soylentgreen .grid_6 a {color:#fff; display: inline-block;position: relative;z-index: 1;padding:.1em 1em;}
 
@@ -344,7 +363,7 @@ h3 .tooltip .tooltiptext {font-size:.9rem;line-height:1em}
 .logo {position:relative;margin-left:auto;margin-right:auto;display: block;clear:both}
 .nolarge {display:block}
 .medium,.nosmall, .large, #landing, .tooltip:hover .tooltiptext {display:none;}
-#content, #soylentgreen { -webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none;}
+#content, #soylentgreen { box-shadow:none;}
 .container_24{width:97%; padding:0 1.5%; display:block}
 h1{font-size:1.6rem;margin:0 .7em auto;padding:0;clear:both;display:block}
 h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
@@ -424,7 +443,7 @@ ul.menu-items > li:hover {background-color: #ba0000;}
 
 #side .grid_24 {display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;}
 #side .otherpubs {align-self: flex-end;}
-#copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
+#copyright {width:98%;background:#333;display:block;clear:both;}
 #texts .container_24 .grid_18, #publications .container_24 .grid_18 {clear:both;width:99%;display:block}
 article ol.notes, article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;word-wrap: break-word;-ms-word-break: break-all; word-break: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
