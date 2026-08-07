@@ -158,26 +158,43 @@ figure img{height:auto}
 #nav li a {font-size:1rem}
 #related-links #content .container_24 .grid_8 {float:right}
 
-#searchsites fieldset, #searchsites select, #searchsites input, #searchsites label {box-sizing: border-box;}
+ /* Forms */
+
+fieldset, select, input, label, checkbox {box-sizing: border-box;}
 #searchsites form {display: flex;flex-wrap: wrap;gap: 10px;align-items: stretch;}
-#searchsites fieldset {border-radius: 4px;padding: 10px;display: flex;flex-wrap: wrap;gap: 10px;align-items: center;background: #111;width: 96%; align-items: flex-end;}
-#searchsites legend {font-weight: 600;color: #fff;padding: 0 5px;font-size: 0.9rem;}
-#searchsites .accessibility.hidden {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip-path: rect(0 0 0 0);white-space: nowrap;border: 0;}
+.contact_form form {align-items: stretch;}
+
+fieldset {border-radius: 4px;padding: 10px;display: flex;flex-wrap: wrap;gap: 10px;align-items: center;background: #111;width: 96%; align-items: flex-end;}
+legend {font-weight: 600;color: #fff;padding: 0 5px;font-size: 0.9rem;}
+.accessibility.hidden {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip-path: rect(0 0 0 0);white-space: nowrap;border: 0;}
 #searchsites label {display: flex;flex-direction: column;font-size: 0.85rem;color: #fff;font-weight: 500;}
-#searchsites select, #searchsites input[type="text"] {appearance: none;padding: 10px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 1rem;background-color: #fff;min-width: 100px;}
-#searchsites select {background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");background-repeat: no-repeat;background-position: right 12px center;background-size: 11px;padding-right: 35px;cursor: pointer;}
-#searchsites select:focus, #searchsites input[type="text"]:focus {border-color: red;outline: none;z-index: 1;}
-#searchsites input[type="text"] {flex-grow: 1; min-width: 100px;}
-#searchsites input[type="text"]::placeholder {color: #aaa;font-style: italic;}
-#searchsites input[type="submit"] {background-color: #BA0000;color: #fff;border: none;border-radius: 6px;padding: 10px 20px;font-size: 1rem;font-weight: 600;cursor: pointer;transition: background-color 0.2s;align-self: flex-end;height: 42px;}
-#searchsites input[type="submit"]:hover {background-color: #aaa;color:#000;}
-#searchsites input[type="submit"]:active {background-color: #ba0000;}
-#searchsites [type=submit]:focus-visible {outline: 2px solid white;outline-offset: 2px;}
-/* 5. Narrow */
+select, input[type="text"], input[type="email"], input[type="url"], input[type="tel"] {appearance: none;padding: 10px 12px;border: 1px solid #ccc;border-radius: 6px;font-size: 1rem;background-color: #fff;min-width: 100px;}
+.contact_form label {font-weight: 500;margin:10px 0 0 3px;}
+#searchsites select, .contact_form select {background-image: url("/forms/svg/neme.svg")!important;background-repeat: no-repeat;background-position: right 12px center;background-size: 11px;padding-right: 40px;cursor: pointer;color:#000;}
+select:focus, input[type="text"]:focus, textarea:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="tel"]:focus, input[type="checkbox"]:focus {border-color: red;outline: none;z-index: 1;}
+input[type="text"] {flex-grow: 1; min-width: 100px;}
+input[type="text"]::placeholder {color: #aaa;font-style: italic;}
+input[type="submit"] {background-color: #BA0000;color: #fff;border: none;border-radius: 6px;padding: 10px 20px;font-size: 1rem;font-weight: 600;cursor: pointer;height: 42px;}
+textarea {border-radius: 6px;}
+#searchsites input[type="submit"] {align-self: flex-end;}
+.contact_form {display:block;margin-bottom: 2em;}
+.comCheckbox {width:30px; height: 30px;cursor: pointer;}
+.comCheckbox label {margin:0 0 0 0;}
+.comCheckbox:checked {background-color: #ba0000; color: #fff;}
+input[type="submit"]:hover {background-color: #aaa;color:#000;}
+input[type="submit"]:active {background-color: #ba0000;}
+input [type=submit]:focus-visible {outline: 2px solid white;outline-offset: 2px;}
+label.comRequired::after{content:'\0261A';font-size:1.5rem;margin-left:.25em;color:#EE0000}
+.contact_form input[type="submit"] {display:block;clear:left;margin-top:20px;}
+input[type="file"].comFile {padding: 5px;border-radius: 4px;cursor: pointer;}
+input[type="file"].comFile::file-selector-button {background-color: #ba0000;color: white;border: none;padding: 6px 12px;margin-right: 10px;border-radius: 4px;cursor: pointer;font-weight: bold;}
+input[type="file"].comFile::file-selector-button:hover {background-color: #aaa;color:#000;}
+
+/* 5. Narrow forms */
 @media (max-width: 600px) {
-#searchsites fieldset {flex-direction: column;align-items: stretch;}
-#searchsites label {width: 100%;}
-#searchsites select,#searchsites input[type="text"],#searchsites input[type="submit"] {width: 100%;box-sizing: border-box;}
+fieldset {flex-direction: column;align-items: stretch;}
+label {width: 100%;}
+select, textarea, input[type="text"], input[type="submit"], input[type="email"], input[type="url"], input[type="tel"] {width: 100%;box-sizing: border-box;}
 }
 
 .frontthumbs h3{padding-left:5px;text-align:left;line-height:1.4em}
