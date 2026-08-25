@@ -2,7 +2,6 @@
 <txp:if_logged_in group="publisher" not><txp:pat_speeder gzip="0"/></txp:if_logged_in>
 
 <!doctype html>
-
 <html lang="en-gb">
 <head>
 <title><txp:page_title /></title>
@@ -15,11 +14,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -132,8 +131,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo noprint" width="50" height="50">
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 <div class="clear">&nbsp;</div>
 <div id="content"><div class="container_24">
 
@@ -152,15 +150,17 @@
 <div class="clearboth">&nbsp;</div>
 
 <txp:article_custom status="sticky" id="2373">
+<main>
 <article class="grid_22 prefix_1 suffix_1">
 <h1><txp:if_logged_in not><txp:title /><txp:else /><a href="/textpattern/index.php?event=article&step=edit&ID=2373"><txp:title /></a></txp:if_logged_in></h1>
 <txp:body />
 </article>
+</main>
 </txp:article_custom>
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/participations/">Contributions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="clearboth">&nbsp;</div>
 <txp:hide><txp::pub_forms /></txp:hide>
 
 <div class="clear">&nbsp;</div>
@@ -178,16 +178,19 @@
 
 <div class="clearboth">&nbsp;</div>
 
+
 <txp:article_custom status="sticky" id="2375">
+<main>
 <article class="grid_22 prefix_1 suffix_1">
 <h1><txp:if_logged_in not><txp:title /><txp:else /><a href="/textpattern/index.php?event=article&step=edit&ID=2375"><txp:title /></a></txp:if_logged_in></h1>
 <txp:body />
 </article>
+</main>
 </txp:article_custom>
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/">Publications</a></h2></div><div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h2></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/participations/">Contributions</a></h2></div><div class="g_12 preg"><h2 class="h5 centre" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h2></div><div class="clearboth">&nbsp;</div>
 
 <div class="clear">&nbsp;</div>
 
@@ -197,12 +200,16 @@
 
 <txp:if_category name="participations">
 
-<div class="line grid_24"><h1 class="h4" id="contributed">NeMe contributed to the following publications</h1></div>
+<main>
+<div class="line grid_24"><h1 class="h4" id="contributed">Contributions to publications</h1></div>
 
-<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure>
+<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure class="grid_6" id="book_<txp:custom_field name="article_image" />"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure>
 </txp:article_custom>
 
-<div class="clear">&nbsp;</div>
+</main>
+
+<div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h4></div><div class="clearboth">&nbsp;</div>
 
 <txp:else />
 
@@ -215,15 +222,15 @@
 <div class="grid_24 line"><h2 class="h4">Published or co-published</h2></div>
 
 
-<txp:article_custom section="publications" exclude="category1" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure></txp:article_custom>
+<txp:article_custom section="publications" exclude="category1" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure id="book_<txp:custom_field name="article_image" />" class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure></txp:article_custom>
 <div class="clear">&nbsp;</div>
 <div class="line">&nbsp;</div>
 
 
 
-<div class="line grid_24"><h2 class="h4" id="contributed">NeMe contributed to the following publications.</h2></div>
+<div class="line grid_24"><h2 class="h4" id="contributed">Contributions to publications</h2></div>
 
-<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth">&nbsp;</div>'><figure class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h3 id="book_<txp:custom_field name="article_image" />" class="h6"><txp:permlink><txp:title /></txp:permlink></h3></figcaption></figure>
+<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure id="book_<txp:custom_field name="article_image" />" class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h3 class="h6"><txp:permlink><txp:title /></txp:permlink></h3></figcaption></figure>
 </txp:article_custom>
 <div class="clearboth">&nbsp;</div>
 <div class="clear">&nbsp;</div>
@@ -259,8 +266,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-
 <div class="sub">
 
 <txp:if_article_category name="participations" not>
@@ -287,7 +292,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 </div>
 <div class="clear">&nbsp;</div>
-<txp:output_form form="tabs.js" format="flat.script" />
 </txp:if_individual_article>
 
 <txp:hide>==================-end individual articles-======================</txp:hide>
@@ -295,6 +299,9 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
+
+<txp:output_form form="menu.js" format="flat.script" />
+<txp:if_individual_article><txp:output_form form="tabs.js" format="flat.script" /></txp:if_individual_article>
 
 </body>
 
