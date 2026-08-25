@@ -21,11 +21,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -104,7 +104,6 @@
 
 <link rel="alternate" type="application/atom+xml" title="Atom feed" href="<txp:site_url />atom/">
 <link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss/">
-<txp:hide><link rel="alternate" type="application/json" title="JSON feed" href="<txp:site_url />feed.json" /></txp:hide>
 
 <link rel="icon" href="<txp:site_url />favicon.ico" type="image/x-icon">
 <link rel="icon" href="<txp:site_url />favicon.svg" type="image/svg+xml">
@@ -122,7 +121,6 @@
 <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="/manifest.json">
-<txp:hide><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ba0000" /></txp:hide>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#ffffff">
@@ -130,10 +128,6 @@
 
 
 <txp:hide>
-<!-- the google js is no longer working --> 
-<txp:if_section name="publications">
-<script type="text/javascript" src="http://books.google.com/books/previewlib.js"></script>
-</txp:if_section>
 <!-- support for battleforthenet.com -->
 <script type="text/javascript" src="//widget.battleforthenet.com/widget.min.js" async="async"></script>
 </txp:hide>
@@ -156,9 +150,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 
 <div id="content"><div class="container_24">
@@ -243,7 +235,7 @@
 
 </div><!-- end .container_24 --></div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="menu.js" format="flat.script" />
 
 </body>
 </html>
