@@ -16,12 +16,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
 
-
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
+</txp:if_logged_in>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -147,9 +147,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 <div id="content"><div class="container_24">
 
@@ -194,7 +192,7 @@
 </txp:article_custom>
 </article>
 
-<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" wraptag="ul" class="carousel" wrapclass="" break="li" sort="rand()" limit="8"><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink></txp:images></figure>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" wraptag="ul" class="carousel" break="li" sort="rand()" limit="8"><txp:if_first_image><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="eager" /></txp:permlink><txp:else /><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink></txp:if_first_image></txp:images></figure>
 
 <div class="clearboth">&nbsp;</div>
 
@@ -225,7 +223,6 @@
 <txp:article_custom section="blog" limit="5" c10="" status="live" break="li" wraptag="ul">
 <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
-<txp:output_form form="social_logos" />
 </div>
 
 <div class="clearboth">&nbsp;</div>
@@ -243,6 +240,7 @@
 </div>
 <txp:output_form form="colak_foot" />
 <txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="menu.js" format="flat.script" />
 <txp:output_form form="javascripts" />
 
 </body>
