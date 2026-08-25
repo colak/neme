@@ -1,0 +1,43 @@
+@import "/themes/neme960_v3/styles/default_2026.css";
+
+hr{width:100%}
+#projects h6 a {font-size:14px}
+#texts h6, #projects h6 {margin:0;padding:0 0 1.5em 0}
+#about h2{margin-top:0}
+#social1 {width:100%;margin:-30px 0 20px 0;padding:20px 0;border:0;background:#ddd;box-shadow:0px 3px 5px #474347;}
+
+#social .socialfeed, .fb_iframe_widget iframe {border-radius:0 0 8px 8px;}
+#related-links #social {background-color:#000;width:100%;}
+#blog .sticky {background-color:#ffc; color: #000}
+#blog .sticky a {color:#ba0000;}
+.line {border:none;border-bottom:1px solid #eee;color:#eee;text-align:center;margin:0 0 .8em 0;}
+.clear {height:.1em;max-height:.1em;font-size:1pt}
+.preg {display:block;background-color: #282828;}
+#projects article, #texts article, #blog article {border-bottom: 1px solid #fff;display:block;padding-top:1.5em}
+#blog article.sticky {border-bottom: 4px solid #000;display:block;padding-top:1.5em}
+#texts article.about {border-bottom: none}
+
+
+/* Base pagination container */
+.pagination {display: flex;justify-content: center;flex-wrap: wrap;list-style: none;margin: 2rem 0;padding: 0;gap: 0.5rem;}
+.pagination li {display: inline-block;}
+.pagination span {display: inline-flex;align-items: center;justify-content: center;min-width: .5rem;height: 2rem; padding: 0 0.75rem; font-size: 1rem;color: #ba0000;background-color: #f9f9f9;border: 1px solid #ddd;border-radius: 4px;text-decoration: none;}
+/* Current page styling */
+.pagination li > span {background-color: #000; font-weight:800;color: #fff;border-color: #da00;cursor: default;}
+/* Hover states .pagination a:hover {outline: 1px solid #ba0000;} */
+.pagination li > a:hover > span[role="navigation"], 
+.pagination li > a:hover,
+.pagination li > a:hover > span[role="separator"]
+{background-color:#ccc!important; color:#000!important;}
+/* Ellipsis styling */
+.pagination li > a span {font-weight: bold;cursor: default;}
+/* Next/Prev button (symbol) */
+.pagination li > a, .pagination li > a span {font-size: 1.2rem;}
+.entry-summary strong {color:#000;background-color:#ffc}
+
+@media screen and (max-width:960px){
+.grid_18{width:100%}
+#projects section .grid_5, #projects section .grid_6, #projects section .grid_13 {width:98%}
+#blog .grid_6, #blog .grid_18, #projects .grid_5, #projects .grid_13 {width:100%;clear:both;}
+#menu-primary-items,nav a{display:block} 
+}
