@@ -25,11 +25,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026" format="flat.url" />"></txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -155,9 +152,10 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
 
-<txp:output_form form="colak_menu" />
+
+<txp:output_form form="colak_menu_2026" />
+
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
@@ -182,6 +180,7 @@
 <txp:article limit="10" searchall="1" />
 <txp:else />
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
+<h1 class="line">Blog</h1>
 <txp:evaluate query='<txp:page_url type="pg" /> = 1'>
 <txp:article_custom status="live" section="blog" c10="x" form="sticky_form" limit="30" />
 </txp:evaluate>
@@ -192,15 +191,15 @@
 <txp:evaluate test="3,7,5">
 <nav aria-label="page nav" class="pagination">
 <ul>
-<txp:newer showalways break="li"><span aria-label="Go to previous page">&#x2962;</span></txp:newer>
-<txp:newer shift break="li"><span aria-label="Go to first page"><txp:yield item="page" /></span></txp:newer>
+<txp:newer showalways break="li"><span role="navigation" aria-label="Go to previous page">&#x2962;</span></txp:newer>
+<txp:newer shift break="li"><span role="navigation" aria-label="Go to first page"><txp:yield item="page" /></span></txp:newer>
 <txp:newer shift="5-3" limit="1" break="li"><span role="separator" aria-label="More pages">&hellip;</span></txp:newer>
-<txp:newer total shift="2" break="li"><span aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:newer>
-<txp:pages shift="0" break="li"><span aria-label="You are on page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:pages>
-<txp:older total shift="2" break="li"><span aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:older>
+<txp:newer total shift="2" break="li"><span role="navigation" aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:newer>
+<txp:pages shift="0" break="li"><span role="navigation" aria-label="You are on page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:pages>
+<txp:older total shift="2" break="li"><span role="navigation" aria-label="Go to page <txp:yield item="page" />"><txp:yield item="page" /></span></txp:older>
 <txp:older shift="5-3" limit="1" break="li"><span role="separator" aria-label="More pages">&hellip;</span></txp:older>
-<txp:older shift break="li"><span aria-label="Go to last page"><txp:yield item="page" /></span></txp:older>
-<txp:older showalways break="li"><span aria-label="Go to next page">&#x2964;</span></txp:older>
+<txp:older shift break="li"><span role="navigation" aria-label="Go to last page"><txp:yield item="page" /></span></txp:older>
+<txp:older showalways break="li"><span role="navigation" aria-label="Go to next page">&#x2964;</span></txp:older>
 </ul>
 </nav>
 </txp:evaluate>
@@ -255,7 +254,7 @@
 <div id="meta">
 <txp:if_custom_field name="venue">
 <txp:if_custom_field name="venue" value="#">
-<h4>Off line</h4>
+<p>Off line</p>
 <txp:else />
 <p><txp::ext url='<txp:custom_field name="venue" escape="" />' txt="Website" /></p>
 </txp:if_custom_field>
@@ -268,7 +267,7 @@
 <txp:if_custom_field name="type" value="info"><h5>Date(s)</h5><txp:custom_field name="Dates" /></txp:if_custom_field>
 <txp:else />
 </txp:if_custom_field>
-<h5>Posted<txp:if_logged_in> <a class="noprint" href="<txp:site_url type="admin" />index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h5>
+<h2 class="h5">Posted<txp:if_logged_in> <a class="noprint" href="<txp:site_url type="admin" />index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h2>
 <time datetime="<txp:posted format="iso8601" />">
 <txp:posted class="time-day" wraptag="span" format="%d" /> <txp:posted class="time-month" wraptag="span" format="%B" /> <txp:posted class="time-year" wraptag="span" format="%Y" />, <txp:posted class="time-time" wraptag="span" format="%T" />
 </time>
@@ -276,8 +275,6 @@
 </txp:article>
 
 <txp:output_form form="announce" />
-
-<txp:output_form form="social_logos" />
 
 <div class="sub">
 <h3>Latest Blog posts</h3>
@@ -298,6 +295,7 @@
 </div><!-- end .container_24 -->
 
 <txp:output_form form="colak_foot" />
+<txp:output_form form="menu.js" format="flat.script" />
 <txp:hide><txp:output_form form="cookies" /></txp:hide>
 
 </body>
