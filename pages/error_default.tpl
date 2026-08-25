@@ -8,10 +8,8 @@
 <meta charset="utf-8">
 
 <title><txp:site_name />: <txp:error_status /></title>
-
-<meta name="author" content="NeMe">
-<meta name="Robots" content="noindex,nocache,follow">
-<meta name="GOOGLEBOT" content="NOARCHIVE"><link rel="home" href="<txp:site_url />">
+<meta name="Robots" content="noindex,follow">
+<link rel="home" href="<txp:site_url />">
 
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,11 +40,8 @@
 <link rel="alternate" type="application/atom+xml" title="Atom feed" href="<txp:site_url />atom/">
 <link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss/">
 
-<txp:css name="default" format="flat.link" media="all" />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
 
-<!--[if IE]>
-<txp:css name="ie-fluid" format="flat.link" />
-<![endif]-->
 
 <txp:css name="print" format="flat.link" media="print" />
 
@@ -80,10 +75,7 @@ menu.removeAttr('style');
 </head>
 <body id="error">
 
-
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme_peace.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 <div id="content">
 <div class="container_24">
@@ -97,6 +89,8 @@ menu.removeAttr('style');
 </div>
 
 <txp:output_form form="colak_foot" />
+<txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="menu.js" format="flat.script" />
 <txp:output_form form="javascripts" />
 
 </body>
