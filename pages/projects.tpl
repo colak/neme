@@ -30,12 +30,11 @@
 </txp:if_variable>
 </txp:hide>
 
-
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -159,9 +158,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 
 <div id="content"><div class="container_24">
@@ -221,7 +218,18 @@
 <txp:article status limit="1" listform="" form="" c10="">
 <div class="grid_24 aright">
 <txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
-<p aria-label="Breadcrumb" class="text-right breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p></div>
+<txp:if_logged_in not>
+<p aria-label="Breadcrumb" class="text-right breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p>
+<txp:else />
+<nav aria-label="Breadcrumb" class="breadcrumb aright" id="breadcrumbs">
+  <ol>
+    <li>&hellip;</li>
+    <li><txp:section link="1" /></li>
+    <li><span aria-current="page"><txp:category1 title="1" /></span></li>
+  </ol>
+</nav>
+</txp:if_logged_in>
+</div>
 <div class="clear">&nbsp;></div>
 <txp:if_category name="hosted"><h1>Hosted Projects</h1></txp:if_category>
 <txp:if_category name="participations"><h1>Participations</h1></txp:if_category>
@@ -364,8 +372,6 @@
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-
 
 <txp:variable name="publs" value='<txp:custom_field name="pubs_by_others" /><txp:custom_field name="pubs" /><txp:custom_field name="multi_event_pubs" />' />
 
@@ -427,6 +433,7 @@
 </div>
 <txp:output_form form="colak_foot" />
 <txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="menu.js" format="flat.script" />
 <txp:output_form form="javascripts" />
 
 </body>
