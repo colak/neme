@@ -3,7 +3,7 @@
 
 <txp:hide><txp:if_article_list>
 <txp:evaluate query='"<txp:site_url trim="/" /><txp:page_url type="req" />" != "<txp:page_url context />"'>
-    <txp:txp_die status="404" />
+<txp:txp_die status="404" />
 </txp:evaluate>
 </txp:if_article_list></txp:hide>
 
@@ -23,11 +23,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 </txp:act_if_mobile>
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -157,9 +157,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 <txp:hide>==================-article-lists-======================</txp:hide>
 
@@ -207,7 +205,12 @@
 <div class="clear noprint">&nbsp;</div></article>
 </txp:article>
 </main>
-<div class="line"><h3 class="h5 grid_24" id="cited"><a class="centre" href="/publications/cited/">Publications citing our content</a></h3><div class="clear">&nbsp;</div></div>
+
+
+<h3 class="centre h5 line" style="padding:.5rem 0;"><a class="centre" href="/publications/cited/">Citations</a></h3>
+
+<div class="clearboth">&nbsp;</div>
+
 </txp:if_search>
 </txp:if_article_list>
 
@@ -253,8 +256,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-
 <div class="sub">
 <txp:etc_query name="find" data='<txp:custom_field name="venue" />' markup="list" break=" OR " >FIND_IN_SET({?}, custom_3)</txp:etc_query>
 <txp:if_variable name="find">
@@ -295,6 +296,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 <txp:output_form form="colak_foot" />
 <txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:if_article_list><txp:output_form form="javascripts" /></txp:if_article_list>
-
+<txp:output_form form="menu.js" format="flat.script" />
 </body>
 </html>
