@@ -24,11 +24,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
-<txp:if_article_list><link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />"></txp:if_article_list>
-<!--[if IE]><link rel="stylesheet" media="all" href="<txp:css name="ie-fluid" format="flat.url" />"><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" media="all" href="<txp:css name="ie7" format="flat.url" />"><![endif]-->
-<!--[if gte IE 9]<style type="text/css">nav li {filter: none;}</style><![endif]-->
+<txp:if_article_list>
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<txp:else />
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+</txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
 
@@ -153,10 +153,7 @@
 
 <txp:hide>==================-menu-======================</txp:hide>
 
-
-<img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo" width="50" height="50">
-
-<txp:output_form form="colak_menu" />
+<txp:output_form form="colak_menu_2026" />
 
 
 <div id="content"><div class="container_24">
@@ -189,7 +186,7 @@
 <a href="<txp:site_url />publications/#book_<txp:image_info type="id" />"><txp:image class="ds" loading="lazy" /></a>
 </txp:images>
 <txp:else />
-<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
+<txp:images category='<txp:category_list type="image" parent="events" break="," class="ds noprint"><txp:category type="image" /></txp:category_list>' sort="rand()" limit="1">
 <txp:thumbnail class="ds" loading="lazy" />
 </txp:images>
 </txp:if_custom_field></figure>
@@ -221,16 +218,17 @@ Cyprus</p></address>
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
+<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241,2178,2430,2181" limit="600" wraptag="ul" class="submenu">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 
 <txp:recent_articles section="projects" limit="10" label="Previously" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
-<h4>Publications (random)</h4><div class="grid_24">
-<txp:article_custom section="publications" limit="6" sort="rand()" break='<div class="clear">&nbsp;</div>'><txp:permlink><txp:article_image loading="lazy" class="grid_24" /></txp:permlink></txp:article_custom>
+<h4 class="grid_24">Publications (random)</h4>
+<div class="grid_24">
+<txp:article_custom section="publications" limit="6" sort="rand()" break=""><txp:permlink><txp:article_image loading="lazy" class="<txp:act_if_mobile>grid_4<txp:else />grid_24</txp:act_if_mobile>" /></txp:permlink></txp:article_custom>
 </div>
+
 <div class="clear">&nbsp;</div>
 
 </div>
@@ -289,9 +287,7 @@ Cyprus</p></address>
 
 <txp:output_form form="announce" />
 
-<txp:output_form form="social_logos" />
-
-<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241" limit="600" wraptag="ul" class="submenu">
+<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241,2178,2430,2181" limit="600" wraptag="ul" class="submenu">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
 </txp:article_custom></div>
 </div>
@@ -306,7 +302,7 @@ Cyprus</p></address>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="menu.js" format="flat.script" />
 <txp:if_article_list>
 <txp:output_form form="javascripts" />
 <txp:else />
