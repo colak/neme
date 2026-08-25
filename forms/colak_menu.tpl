@@ -1,16 +1,15 @@
 <div id="nav">
-<div class="container_24">
-<div class="grid_24" id="menu">
-<nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="menu" id="menu-primary" aria-label="Primary menu">
-<div class="menu-container">
-<div id="menu-toggle-primary">
-<a class="open-menu-primary" href="#menu-primary"><span class="screen-reader-text">Menu</span></a>
-<a class="close-menu-primary" href="#"><span class="screen-reader-text">&#10540;</span></a>
-</div><txp:hide> .menu-toggle </txp:hide>
-<div class="wrap">
-<ul class="menu-items" id="menu-primary-items">
+<div class="container_24" id="menu">
+<nav class="navbar" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<div class="navbar-container grid_24">        
+
+<button class="hamburger-btn" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">☰</button>
+
+<a href="/" class="navbar-logo" aria-label="NeMe Home"><img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" class="logo noprint" width="50" height="50" loading="eager"></a>
+
+<ul id="primary-menu" class="navbar-menu">
 <li><a itemprop="url" href="<txp:site_url />" <txp:if_section name="">class="active"</txp:if_section> rel="home">Home</a></li>
-<li><a itemprop="url" href="<txp:site_url />about/"<txp:if_section name="about"> class="active"</txp:if_section> rel="bookmark">About</a></li>
+<li><a itemprop="url" href="<txp:site_url />about/"<txp:if_section name="about"><txp:if_article_id id="2240,2241" not> class="active"</txp:if_article_id></txp:if_section> rel="bookmark">About</a></li>
 <li><a itemprop="url" href="<txp:site_url />projects/"<txp:if_section name="projects"> class="active"</txp:if_section> rel="bookmark">Projects</a></li>
 <li><a itemprop="url" href="<txp:site_url />texts/"<txp:if_section name="texts"> class="active"</txp:if_section> rel="bookmark">Texts</a></li>
 <li><a itemprop="url" href="<txp:site_url />publications/"<txp:if_section name="publications"> class="active"</txp:if_section> rel="bookmark">Publications</a></li>
@@ -20,10 +19,6 @@
 <li><a itemprop="url" href="<txp:site_url />related-links/" <txp:if_section name="related-links"> class="active"</txp:if_section> rel="bookmark">Links</a></li>
 </ul>
 </div>
-</div>
 </nav>
 </div>
-
-<div class="nosmall clear">&nbsp;</div>
-
-</div><!-- end .container_24 --></div>
+</div>
