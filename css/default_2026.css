@@ -266,6 +266,23 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
 .gdpr p {text-align: center;}
 .gdpr img {width:100%;height:auto;}
 
+.accordion-item {border-bottom: 1px solid #eee;margin-bottom: 0.5rem;}
+.year-heading {padding: .6rem 0;cursor: pointer;font-weight: bold;display: flex;justify-content: space-between;align-items: center;}
+.year-heading::-webkit-details-marker {display: none;}
+.accordion-item {list-style: none; }
+.year-heading::after {content: '▶';font-size: 0.8rem;display: inline-block; transition: transform 0.3s ease;}
+.accordion-item[open] .year-heading::after {transform: rotate(90deg);}
+.accordion-item::details-content {transition: opacity 0.35s ease, grid-template-rows 0.35s ease;display: grid;grid-template-rows: 0fr;opacity: 0;}
+.accordion-item[open]::details-content {grid-template-rows: 1fr;opacity: 1;}
+
+@starting-style {
+.accordion-item[open]::details-content {grid-template-rows: 0fr;opacity: 0;}
+}
+.accordion-content {overflow: hidden;}
+
+.article-list {padding: 0 0 .5rem 1rem;margin: 0;list-style: none;}
+.article-list li {margin-bottom: 0.5rem;}
+
 @supports not (aspect-ratio: 1) {
 .embed-container{position:relative;padding-bottom:56.25%;height:0;padding-top: 30px;overflow:hidden;max-width:100%}
 .embed-container embed,.embed-container iframe,.embed-container object{position:absolute;top:0;left:0;width:100%;height:100%;display:block;}
