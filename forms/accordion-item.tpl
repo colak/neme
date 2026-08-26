@@ -1,0 +1,1 @@
+<details class="accordion-item" id="year_<txp:yield item="breakby" />" name="archive-accordion" <txp:if_variable name="year" value='<txp:yield item="breakby" />'>open="open"</txp:if_variable>><summary class="year-heading accordion-header"><txp:yield item="breakby" /></summary><div class="accordion-content"><ul class="article-list"><+></ul></div></details>
