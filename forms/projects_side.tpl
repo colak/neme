@@ -18,17 +18,24 @@
 
 </txp:if_article_category>
 <txp:else />
-<txp:article_custom status section form="" listform="" label='More <txp:section />' labeltag="h4" limit="999" wraptag="ul" break="li" c10="x" class="submenu">
+<txp:article_custom status section='<txp:section />' limit="0" breakby="<txp:posted format='%Y' />" breakform="accordion-item" label='More <txp:section />' labeltag="h4" c10="x">
+<li>
 <txp:if_article_category>
 <txp:if_custom_field name="status" value="5">
-<a href="/<txp:section />/<txp:category1 />/" rel="bookmark"><txp:title /></a>
+<span class="preg"><a href="/<txp:section />/<txp:category1 />/" rel="bookmark"><txp:title /></a></span>
 </txp:if_custom_field>
 <txp:else />
 <txp:if_article_id>
-<span><txp:title /></span>
+<txp:variable name="year" value='<txp:posted format="%Y" />' />
+<txp:title wraptag="span" />
 <txp:else />
 <a href="<txp:permlink />" rel="bookmark"><txp:title /></a>
 </txp:if_article_id>
 </txp:if_article_category>
+</li>
 </txp:article_custom>
 </txp:if_article_category>
+
+
+
+
