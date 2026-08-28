@@ -303,13 +303,8 @@ Cyprus</p></address>
 
 <txp:output_form form="colak_foot" />
 <txp:output_form form="menu.js" format="flat.script" />
-<txp:if_article_list>
+
 <txp:output_form form="javascripts" />
-<txp:else />
-<txp:if_article_id id="2044,2002">
-<txp:output_form form="javascripts" />
-</txp:if_article_id>
-</txp:if_article_list>
 
 </body>
 </html>
