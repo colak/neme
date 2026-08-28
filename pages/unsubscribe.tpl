@@ -22,9 +22,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <txp:if_article_list>
-<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v3" format="flat.url" />">
 <txp:else />
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
 </txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
@@ -153,13 +153,13 @@
 
 <p class="grid_9">Should you wish to unsubscribe from our newsletter, do tell us your email with which you have subscribed, and fill the relevant checkboxes below.</p><div class="clear">&nbsp;</div>
 
-<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="xxxxxx" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
+<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="xxx@xxx.xxx" label="" thanks_form="unsubscribe" subject="NeMe Unsubscribe">
 <txp:com_connect_email label="Your email" name="Email" required="1" class="grid_24" /><br><br>
 <txp:com_connect_secret label="This article"><txp:page_url /></txp:com_connect_secret>
 <txp:com_connect_select label="" name="reason" options="{Select},I no longer want to receive these emails,I never signed up for this mailing list,Oher" required="1" /><br><br>
 <txp:com_connect_checkbox label="Confirm!" required="1" />
 <txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
-<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" /><br>
 <txp:com_connect_submit label="Unsubscribe" />
 </txp:com_connect>
 <div class="clear">&nbsp;</div>
@@ -167,7 +167,7 @@
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
+<txp:output_form form="javascripts" />
 
 </body>
 </html>
