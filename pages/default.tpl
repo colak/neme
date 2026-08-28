@@ -17,9 +17,9 @@
 </txp:act_if_mobile>
 
 <txp:if_article_list>
-<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v2" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v3" format="flat.url" />">
 <txp:else />
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
 </txp:if_article_list>
 </txp:if_logged_in>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
@@ -239,8 +239,6 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
-<txp:output_form form="menu.js" format="flat.script" />
 <txp:output_form form="javascripts" />
 
 </body>
