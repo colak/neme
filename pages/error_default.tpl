@@ -40,7 +40,7 @@
 <link rel="alternate" type="application/atom+xml" title="Atom feed" href="<txp:site_url />atom/">
 <link rel="alternate" type="application/rss+xml" title="RSS feed" href="<txp:site_url />rss/">
 
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
 
 
 <txp:css name="print" format="flat.link" media="print" />
@@ -89,9 +89,7 @@ menu.removeAttr('style');
 </div>
 
 <txp:output_form form="colak_foot" />
-<txp:hide><txp:output_form form="cookies" /></txp:hide>
 <txp:output_form form="menu.js" format="flat.script" />
-<txp:output_form form="javascripts" />
 
 </body>
 </html>
