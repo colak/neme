@@ -1,3 +1,5 @@
+<script>document.addEventListener("DOMContentLoaded",(function(){document.body.className=document.body.className.replace(/\bno-js\b/,"js")}));</script>
+
 <div id="nav">
 <div class="container_24" id="menu">
 <nav class="navbar" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
