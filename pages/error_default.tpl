@@ -74,6 +74,7 @@ menu.removeAttr('style');
 
 </head>
 <body id="error">
+<script>document.addEventListener("DOMContentLoaded",(function(){document.body.className=document.body.className.replace(/\bno-js\b/,"js")}));</script>
 
 <txp:output_form form="colak_menu_2026" />
 
@@ -89,7 +90,7 @@ menu.removeAttr('style');
 </div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="menu.js" format="flat.script" />
+<txp:output_form form="menu.js" format="flat.script" escape="tidy,trim" />
 
 </body>
 </html>
