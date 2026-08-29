@@ -74,7 +74,6 @@ menu.removeAttr('style');
 
 </head>
 <body id="error">
-<script>document.addEventListener("DOMContentLoaded",(function(){document.body.className=document.body.className.replace(/\bno-js\b/,"js")}));</script>
 
 <txp:output_form form="colak_menu_2026" />
 
