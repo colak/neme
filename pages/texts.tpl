@@ -294,6 +294,6 @@ Posted: <txp:posted format="%b %d, %Y" /></time>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
+<txp:output_form form="javascripts" escape="tidy,trim" />
 </body>
 </html>
