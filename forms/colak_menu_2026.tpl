@@ -22,3 +22,4 @@
 </nav>
 </div>
 </div>
+<noscript class="announce" style="margin:0 auto"><p class="centre">This site uses non-tracking, privacy-aware javascripts to enhance user experiance.</p></noscript>
