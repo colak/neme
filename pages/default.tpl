@@ -134,6 +134,7 @@
 <txp:hide>==================-body-======================</txp:hide>
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
+<script>document.addEventListener("DOMContentLoaded",(function(){document.body.className=document.body.className.replace(/\bno-js\b/,"js")}));</script>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -239,7 +240,7 @@
 <div class="clear">&nbsp;</div>
 </div>
 <txp:output_form form="colak_foot" />
-<txp:output_form form="javascripts" />
+<txp:output_form form="javascripts" escape="tidy,trim" />
 
 </body>
 </html>
