@@ -7,7 +7,7 @@
 </txp:if_section>
 <txp:else /><txp:hide>individual articles</txp:hide>
 <txp:if_article_section name="about">
-<txp:if_article_id id="2044,2002">
+<txp:if_article_id id="2044,2002,2241">
 <txp:output_form form="carousel.js" format="flat.script" />
 </txp:if_article_id>
 </txp:if_article_section>
