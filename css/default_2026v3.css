@@ -320,7 +320,7 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
   #nav{position:relative}
   .hamburger-btn{display:block}
   
-  /* Standard behavior (when JS is present) */
+  /* Standard behavior (with JS) */
   .navbar-menu{display:none;position:fixed!important;top:70px!important;left:0!important;right:0!important;width:auto!important;background-color:#333;flex-direction:column;gap:0;padding:0;border-top:1px solid #444;z-index:9999!important;margin:0!important}
   .navbar-menu.is-open{display:flex;border-radius:0 0 6px 6px}
   .navbar-menu li{width:100%}
