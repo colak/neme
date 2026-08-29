@@ -49,10 +49,7 @@
 <meta name="geo.placename" content="Limassol">
 <meta name="DC.title" content="<txp:page_title />">
 
-<txp:hide><txp;if_article_id id="2366"><script src="<txp:page_url type="theme_path" />/forms/javascripts/echarts.min.js"></script></txp:if_article_id></txp:hide>
-
 <txp:if_article_id id="2366"><script src="/js/echarts.min.js"></script></txp:if_article_id>
-
 
 <link rel="home" href="<txp:site_url />">
 <txp:if_search>
@@ -140,6 +137,7 @@
 
 
 <body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>" class="no-js">
+<script>document.addEventListener("DOMContentLoaded",(function(){document.body.className=document.body.className.replace(/\bno-js\b/,"js")}));</script>
 
 <txp:hide>==================-accessibility-======================</txp:hide>
 
@@ -218,11 +216,11 @@ Cyprus</p></address>
 
 <txp:output_form form="announce" />
 
-<div class="sub"><txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241,2178,2430,2181" limit="600" wraptag="ul" class="submenu">
+<txp:article_custom label="More" labeltag="h3" section='<txp:section />' exclude="2001,2240,2241,2178,2430,2181" limit="600" wraptag="ul" class="sub">
 <txp:if_article_id><li><span><txp:title /></span></li><txp:else /><li><a href="<txp:permlink />" rel="bookmark"><txp:title /></a></li></txp:if_article_id>
-</txp:article_custom></div>
+</txp:article_custom>
 
-<txp:recent_articles section="projects" limit="10" label="Previously" labeltag="h3" break="li" wraptag="ul" class="submenu" />
+<txp:recent_articles section="projects" limit="5" label="Previously" labeltag="h3" break="li" wraptag="ul" class="submenu" />
 
 <h4 class="grid_24">Publications (random)</h4>
 <div class="grid_24">
@@ -302,9 +300,8 @@ Cyprus</p></address>
 </div><!-- end .container_24 --></div>
 
 <txp:output_form form="colak_foot" />
-<txp:output_form form="menu.js" format="flat.script" />
 
-<txp:output_form form="javascripts" />
+<txp:output_form form="javascripts" escape="tidy,trim" />
 
 </body>
 </html>
