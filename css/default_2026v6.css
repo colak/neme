@@ -209,7 +209,7 @@ body.no-js .tab-buttons {display: none;}
 /* fieldset, select, input, label, checkbox {box-sizing: border-box;} */
 #searchsites form {display: flex;flex-wrap: wrap;gap: 10px;align-items: stretch;}
 .contact_form form {align-items: stretch;}
-
+label.comRequired::after{content:'\0261A';font-size:1.5rem;margin-left:.25em;color:#EE0000}
 fieldset {border-radius: 4px;padding: 10px;display: flex;flex-wrap: wrap;gap: 10px;align-items: center;background: #111;width: 96%; align-items: flex-end;}
 legend {font-weight: 600;color: #fff;padding: 0 5px;font-size: 0.9rem;}
 .accessibility.hidden {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip-path: inset(50%);white-space: nowrap;border: 0;}
@@ -397,19 +397,28 @@ p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;borde
 .paginator {border-top:1px solid #eeeeee;}
 .paginator .prev, .paginator .next {width:49%;clear:none;display:inline;float:left;margin-left:.5%;margin-right:.5%;}
 
-label.comRequired::after{content:'\0261A';font-size:1.5rem;margin-left:.25em;color:#EE0000}
-.tooltip .tooltiptext {display:none}
 
-@media screen and (min-width: 960px){
-.tooltip .tooltiptext  {display:block;z-index:99999}
-.tooltip {position:relative; display:inline-block; border-bottom:1px dotted black;}
-.tooltip .tooltiptext {visibility:hidden;width: 200px; background-color:#BA0000; color:#fff; text-align:center; border-radius:6px; padding:5px 3px; position:absolute; z-index:2000; bottom:150%; left:50%; margin-left:-100px; font-size:.9rem;height:auto; line-height:1.2em}
-h2 .tooltip .tooltiptext {font-size:.8rem;line-height:1em}
-h3 .tooltip .tooltiptext {font-size:.9rem;line-height:1em} 
-.tooltip .tooltiptext a {color:#fff;}
-.tooltip .tooltiptext::after {content:""; position:absolute; top:100%; left:50%; margin-left:-5px; border-width:5px;border-style:solid; border-color:#BA0000 transparent transparent transparent;}
-.tooltip:hover .tooltiptext {visibility:visible;}
+/* notes */
+
+.footnote-ref{font-size:.75rem;vertical-align:super;text-decoration:none;color:#fff;cursor:pointer;margin-left:.5ch;margin-inline-start:.5ch;}
+.footnote-ref:hover{text-decoration:underline;}
+li[id^="ref_content"]:target{background:none;outline:dotted 2px #ffc!important;padding:2px 4px!important;scroll-margin-top:20px;color:inherit;}
+.references{margin-top:2rem;padding-top:10px;border-top:1px solid #fff;font-size:.85rem;color:#fff;}
+.references ol{padding-left:20px;margin:0;list-style-type:decimal;}
+.references li{margin-bottom:8px;}
+.footnote-back{font-size:.7rem;color:#fff;text-decoration:none;margin-left:.5ch;margin-inline-start:.5ch;vertical-align:super;cursor:pointer;user-select:none;}
+a.footnote-back{margin-left:.25ch;margin-inline-start:.25ch;}
+.footnote-back:hover{text-decoration:underline;}
+#footnote-popup{position:fixed;display:none;z-index:2000;width:300px;max-width:90vw;max-height:50vh;padding:10px 14px;background:#ba0000;border:1px solid #eee;border-radius:3px;font-size:.85rem;line-height:1.4;color:#fff;pointer-events:auto;overflow-y:auto;overflow-x:hidden;transition:opacity 0.1s;overflow:scroll;}
+#footnote-popup a{color:#fff;}
+#footnote-popup::after,#footnote-popup::before{content:"";position:absolute;bottom:-6px;left:20px;border-width:6px 6px 0;border-style:solid;display:none;}
+
+@media (max-width:960px){
+#footnote-popup{width:80vw;max-width:90vw;max-height:40vh;}
 }
+
+/* End future notes */
+
 
 @media screen and (min-width: 800px){
 .slides {width:96%;margin:auto;}
@@ -424,7 +433,6 @@ h3 .tooltip .tooltiptext {font-size:.9rem;line-height:1em}
 
 .logo {position:relative;margin-left:auto;margin-right:auto;display: block;clear:both}
 .nolarge {display:block}
-.medium,.nosmall, .large, #landing, .tooltip:hover .tooltiptext {display:none;}
 #content, #soylentgreen { box-shadow:none;}
 .container_24{width:97%; padding:0 1.5%; display:block}
 h1{font-size:1.6rem;margin:0 .7em auto;padding:0;clear:both;display:block}
@@ -462,7 +470,6 @@ h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 #front .frontthumbs h3 a{font-size:.85rem;display:block}
 #front .grid_18 .slides{float:none;width:99%}
 .container_24 .grid_18 {width: 96%; clear:both; float:none;}
-
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
 #about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:95%}
 #publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
@@ -486,9 +493,10 @@ h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 #side .otherpubs {align-self: flex-end;}
 #copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
 #texts .container_24 .grid_18, #publications .container_24 .grid_18 {clear:both;width:99%;display:block}
-article ol.notes, article .tooltip {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;}
+article ol.notes, {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
+.medium,.nosmall, .large, #landing {display:none;}
 }
 
 @media screen and (max-width:450px){
