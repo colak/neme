@@ -1,3 +1,13 @@
+:root { 
+--bg-color: #000000;
+--text-color: #ffffff;
+--dark-red: #85182a;
+--brighter-red: #ba0000;
+--links-main: #FF7373;
+--links-visited: #DCA0A0;
+--links-active: #FFB3B3;
+}
+
 *{box-sizing: border-box;}
 abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;vertical-align:baseline;margin:0;padding:0;}
 html {scroll-behavior: smooth;scroll-padding-top:60px;scrollbar-gutter:stable;font-size: 18px;font-weight:300;}
@@ -162,15 +172,16 @@ figure img{height:auto}
 
 #error #content h2,#front .frontthumbs a{color:#fff}
 #front .frontthumbs a:hover{color:#ccc}
-#front .grid_6 ul,#front .grid_6 ul li{list-style:none;margin:0}
-#front h2 {background-color:#BA0000; padding:6px;}
+#front .grid_6 ul,#front .grid_6 ul li{list-style:none;margin:0;padding:0 2px;}
+#front h2 {background-color:#BA0000; padding:6px 0;}
 #meta{width:97%;padding:1.5%;margin:0}
 #meta .linklist,#meta a{color:#fff;font-size:1rem}
 .side li, #side li,.side li,.submenu li, #workshops .announce li, #contact .announce li{list-style:none!important;padding:0;margin:0}
 .line{border:none;border-bottom:1px solid #eee;color:#eee;text-align:center;margin:0 0 3em}
 .announce,.announce h3 {color:#000;background-color:#ffc}
+#front .frontthumbs h2 {padding:8px 3px;}
 .announce hr:after {content:none;}
-.announce{padding:1.5%;width:97%;display:block}
+.announce{display:block; width:100%;}
 .videofeed h3 {color:#fff;}
 .line h3,.line h4,.line h6{text-align:left}
 #front .announce a,.announce a{color:#990000}
@@ -203,6 +214,42 @@ img{max-width:100%;height:auto}
 .tab-container h2 {margin-bottom: 1rem;color: #eee;}
 body.no-js .tab-content {display: block;}
 body.no-js .tab-buttons {display: none;}
+
+ /* Breadcrumbs*/
+
+/* Breadcrumb Container */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin: 0 5px;
+  color: #eee;
+}
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  font-weight: 600;
+}
+
 
  /* Forms */
 
@@ -397,6 +444,24 @@ p.red a {padding:.3em .5em;background-color:#cc0000;color:#fff  !important;borde
 .paginator {border-top:1px solid #eeeeee;}
 .paginator .prev, .paginator .next {width:49%;clear:none;display:inline;float:left;margin-left:.5%;margin-right:.5%;}
 
+/* Base pagination */
+
+.pagination {display: flex;justify-content: center;flex-wrap: wrap;list-style: none;margin: 2rem 0;padding: 0;gap: 0.5rem;}
+.pagination li {display: inline-block;}
+.pagination span {display: inline-flex;align-items: center;justify-content: center;min-width: .5rem;height: 2rem; padding: 0 0.75rem; font-size: 1rem;color: #ba0000;background-color: #f9f9f9;border: 1px solid #ddd;border-radius: 4px;text-decoration: none;}
+/* Current page styling */
+.pagination li > span {background-color: #000; font-weight:800;color: #fff;border-color: #da00;cursor: default;}
+/* Hover states .pagination a:hover {outline: 1px solid #ba0000;} */
+.pagination li > a:hover > span[role="navigation"], 
+.pagination li > a:hover,
+.pagination li > a:hover > span[role="separator"]
+{background-color:#ccc!important; color:#000!important;}
+/* Ellipsis styling */
+.pagination li > a span {font-weight: bold;cursor: default;}
+/* Next/Prev button (symbol) */
+.pagination li > a, .pagination li > a span {font-size: 1.2rem;}
+.entry-summary strong {color:#000;background-color:#ffc}
+
 
 /* notes */
 
@@ -436,7 +501,7 @@ a.footnote-back{margin-left:.25ch;margin-inline-start:.25ch;}
 #content, #soylentgreen { box-shadow:none;}
 .container_24{width:97%; padding:0 1.5%; display:block}
 h1{font-size:1.6rem;margin:0 .7em auto;padding:0;clear:both;display:block}
-h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
+h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 .grid_16 {max-width: 90%;}
 
 .comText,.comTextarea {width:100%}
@@ -496,7 +561,8 @@ h2{font-size:1.6rem;margin:0 .6em auto;padding:0;clear:both;display:block}
 article ol.notes, {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
-.medium,.nosmall, .large, #landing {display:none;}
+.medium, .nosmall, .large, #landing, {display:none;}
+.nosmall {flex-shrink: 0 !important; display:none !important;}
 }
 
 @media screen and (max-width:450px){
