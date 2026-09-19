@@ -264,8 +264,6 @@
 </nav>
 </div>
 
-</txp:if_logged_in>
-
 <div class="clear">&nbsp;</div>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
