@@ -31,9 +31,9 @@
 </txp:hide>
 
 <txp:if_article_list>
-<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists" format="flat.url" />">
 <txp:else />
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default" format="flat.url" />">
 </txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
@@ -217,10 +217,7 @@
 <div class="grid_24 noprint">
 <txp:article status limit="1" listform="" form="" c10="">
 <div class="grid_24 aright">
-<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
-<txp:if_logged_in not>
-<p aria-label="Breadcrumb" class="text-right breadcrumb">&hellip; / <txp:section link="1" /> / <span aria-current="page"><txp:category1 /> /</span></p>
-<txp:else />
+
 <nav aria-label="Breadcrumb" class="breadcrumb aright" id="breadcrumbs">
   <ol>
     <li>&hellip;</li>
@@ -228,7 +225,6 @@
     <li><span aria-current="page"><txp:category1 title="1" /></span></li>
   </ol>
 </nav>
-</txp:if_logged_in>
 </div>
 <div class="clear">&nbsp;></div>
 <txp:if_category name="hosted"><h1>Hosted Projects</h1></txp:if_category>
@@ -257,9 +253,19 @@
 <txp:hide>==================-Category 2-======================</txp:hide>
 <div class="grid_24 noprint">
 <txp:article limit="1" listform="" match="Category1=2, Category2=3" form="" c10="y">
-<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
-<p aria-label="Breadcrumb" class="text-right">&hellip; / <txp:section link="1" /> / <a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / <txp:category2 /> /</p>
+
+<nav aria-label="Breadcrumb" class="breadcrumb aright" id="breadcrumbs">
+  <ol>
+    <li>&hellip;</li>
+    <li><txp:section link="1" /></li>
+    <li><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a></li>
+    <li><span aria-current="page"><txp:category2 title="1" /></span></li>
+  </ol>
+</nav>
 </div>
+
+</txp:if_logged_in>
+
 <div class="clear">&nbsp;</div>
 </txp:article>
 <main aria-label="main content" itemscope itemtype="https://schema.org/CollectionPage">
@@ -337,7 +343,7 @@
 <figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
 <txp:if_custom_field name="img2">
 <txp:images limit="1" sort="rand()" id='<txp:custom_field name="img2" />' break="">
-<txp:thumbnail class="ds noprint" loading="lazy" /></txp:images>
+<txp:thumbnail class="ds noprint nosmall" loading="lazy" /></txp:images>
 <txp:else />
 &nbsp;
 </txp:if_custom_field>
@@ -362,13 +368,22 @@
 <h2 class="h5">Venue</h2>
 <p><txp:custom_field name="venue" /></p>
 </txp:if_custom_field>
-<h3 class="h5">Dates<txp:if_logged_in> <a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a></txp:if_logged_in></h3>
+<h3 class="h5">Dates<txp:if_logged_in> (<a class="noprint" href="<txp:site_url />textpattern/index.php?event=article&amp;step=edit&amp;ID=<txp:article_id />"><txp:article_id /></a>)</txp:if_logged_in></h3>
 <p><txp:custom_field name="dates" escape="" /></p>
 <p>Posted: <txp:posted format="%b %d, %Y" /></p>
-<txp:hide>--- change to https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ --</txp:hide>
-<p role="navigation" aria-label="breadcrumbs">&hellip; / <txp:section link="1" /> /
-<txp:if_article_category number="1"><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a> / </txp:if_article_category><txp:if_article_category number="2"><a href="/<txp:section />/<txp:category1 />/<txp:category2 />/"><txp:category2 /></a> / </txp:if_article_category></p>
+
+<nav aria-label="Breadcrumb" class="breadcrumb aright" id="breadcrumbs">
+  <ol>
+    <li>&hellip;</li>
+    <li><txp:section link="1" /></li>
+    <li><txp:if_article_category number="1"><a href="/<txp:section />/<txp:category1 />/"><txp:category1 /></a></txp:if_article_category></li>
+    <li><txp:if_article_category number="2"><a href="/<txp:section />/<txp:category1 />/<txp:category2 />/"><txp:category2 /></a></txp:if_article_category></li>
+    <li><span aria-current="page"><txp:category2 title="1" /></span></li>
+  </ol>
+</nav>
 </div>
+
+
 
 <txp:output_form form="announce" />
 
