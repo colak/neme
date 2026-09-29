@@ -332,9 +332,11 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
 
 /* Publications grid */
 
-.publications-grid {display: grid;grid-template-columns: repeat(1, 1fr); gap:20px; width:100%; margin:0 auto; padding:1rem; justify-content: center;}
-.publications-grid figure {margin: 0;width: 100%;}
-.publications-grid figure img {width: 100%;height: auto;display: block;}
+.publications-grid {display: grid;grid-template-columns: repeat(1, 1fr); gap:20px; width:100%; margin:0 auto; padding:1rem; justify-content: center;justify-items: center;}
+.publications-grid figure {margin: 0 auto;width: 100%;max-width:230px;}
+.publications-grid figure img {width: 100%;height: auto;display: block; transition: transform 0.3s ease;}
+.publications-grid figure:hover img {transform: translateY(-5px);}
+
 @media (min-width: 600px) {
 .publications-grid {grid-template-columns: repeat(2, 1fr);}
 }
@@ -535,13 +537,7 @@ h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 .container_24 .grid_18 {width: 96%; clear:both; float:none;}
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
 #about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:95%}
-#publications #content .grid_12,#publications #content .grid_17,#publications #content .grid_9{width:100%;clear:both;}
-#blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}
-#publications #content .grid_3,#publications #content .grid_6{width:99%;clear:both;display:block;margin:1.5em auto}
-#publications #content img{clear:both;display:block;max-width:230px}
-#publications #content .grideven img{max-width:110px}
-#publications #content figcaption{width:95%}
-#publications #content .grid_9{border-bottom:1px solid #fff}
+#blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}s
 
 #related-links #content{line-height:2em}
 
@@ -555,7 +551,7 @@ h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 #side .grid_24 {display: flex;}
 #side .otherpubs {align-self: flex-end;}
 #copyright, #searchsites {width:98%;background:#333;display:block;clear:both;}
-#texts .container_24 .grid_18, #publications .container_24 .grid_18 {clear:both;width:99%;display:block;}
+#texts .container_24 .grid_18 {clear:both;width:99%;display:block;}
 article ol.notes {list-style-position: inside;list-style-type: decimal;overflow-wrap: break-word;}
 #soylentgreen .grid_6 {width:50%;clear:both;float:none;margin:0 auto;display:block;}
 #content #side {width:99%}
