@@ -13,11 +13,10 @@
 <txp:act_if_mobile><meta http-equiv="x-rim-auto-match" content="none"></txp:act_if_mobile>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-
 <txp:if_article_list>
-<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists2" format="flat.url" />">
 <txp:else />
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default2" format="flat.url" />">
 </txp:if_article_list>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
 <link rel="stylesheet" media="print" href="<txp:css name="print" format="flat.url" />">
@@ -152,7 +151,7 @@
 <txp:article_custom status="sticky" id="2373">
 <main>
 <article class="grid_22 prefix_1 suffix_1">
-<h1><txp:if_logged_in not><txp:title /><txp:else /><a href="/textpattern/index.php?event=article&step=edit&ID=2373"><txp:title /></a></txp:if_logged_in></h1>
+<h1><txp:title /><txp:if_logged_in> (<a href="/textpattern/index.php?event=article&step=edit&ID=2373">2373</a>)</txp:if_logged_in></h1>
 <txp:body />
 </article>
 </main>
@@ -160,7 +159,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/participations/">Contributions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="clearboth">&nbsp;</div>
+<div class="g_12 preg"><h2 class="centre h5" style="padding:.5rem 0;"><a href="/publications/participations/">Contributions</a></h2></div><div class="g_12 preg"><h2 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h2></div><div class="clearboth">&nbsp;</div>
 <txp:hide><txp::pub_forms /></txp:hide>
 
 <div class="clear">&nbsp;</div>
@@ -182,7 +181,7 @@
 <txp:article_custom status="sticky" id="2375">
 <main>
 <article class="grid_22 prefix_1 suffix_1">
-<h1><txp:if_logged_in not><txp:title /><txp:else /><a href="/textpattern/index.php?event=article&step=edit&ID=2375"><txp:title /></a></txp:if_logged_in></h1>
+<h1><txp:title /><txp:if_logged_in> (<a href="/textpattern/index.php?event=article&step=edit&ID=2375">2375</a>)</txp:if_logged_in></h1>
 <txp:body />
 </article>
 </main>
@@ -218,7 +217,7 @@
 
 <txp:if_section name="publications">
 
-<div class="line"><h1 class="grid_23 alpha h4" id="nemepubs"><txp:if_logged_in not>NeMe publications<txp:else /><a href="/textpattern/index.php?event=page&name=publications">Publications</a></txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
+<div class="line"><h1 class="grid_23 h4" id="nemepubs">NeMe publication<txp:if_logged_in not>s<txp:else /><a href="/textpattern/index.php?event=page&name=publications">Publications</a></txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
 <div class="grid_24 line"><h2 class="h4">Published or co-published</h2></div>
 
 
