@@ -200,10 +200,12 @@
 <txp:if_category name="participations">
 
 <main>
-<div class="line grid_24"><h1 class="h4" id="contributed">Contributions to publications</h1></div>
+<div class="line grid_24"><h1 class="h2" id="contributed">Contributions to publications</h1></div>
 
-<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure class="grid_6" id="book_<txp:custom_field name="article_image" />"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure>
+<div class="publications-grid">
+<txp:article_custom section="publications" category="participations" limit="999"><figure id="book_<txp:custom_field name="article_image" />"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure>
 </txp:article_custom>
+</div>
 
 </main>
 
@@ -217,21 +219,22 @@
 
 <txp:if_section name="publications">
 
-<div class="line"><h1 class="grid_23 h4" id="nemepubs">NeMe publication<txp:if_logged_in not>s<txp:else /><a href="/textpattern/index.php?event=page&name=publications">Publications</a></txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
-<div class="grid_24 line"><h2 class="h4">Published or co-published</h2></div>
+<div class="grid_24 line"><h1 class="grid_24 h2" id="nemepubs">NeMe publications<txp:if_logged_in not><txp:else /> (<a href="/textpattern/index.php?event=page&name=publications">edit</a>)</txp:if_logged_in></h1><div class="clear">&nbsp;</div></div>
+<div class="grid_24 line"><h2 class="h3">Published or co-published</h2></div>
 
 
-<txp:article_custom section="publications" exclude="category1" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure id="book_<txp:custom_field name="article_image" />" class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h6"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure></txp:article_custom>
+<div class="publications-grid">
+<txp:article_custom section="publications" exclude="category1" limit="999"><figure id="book_<txp:custom_field name="article_image" />"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h2 class="h5"><txp:permlink><txp:title /></txp:permlink></h2></figcaption></figure></txp:article_custom>
+</div>
 <div class="clear">&nbsp;</div>
-<div class="line">&nbsp;</div>
 
 
+<div class="line grid_24"><h2 class="h3" id="contributed">Contributions to publications</h2></div>
 
-<div class="line grid_24"><h2 class="h4" id="contributed">Contributions to publications</h2></div>
-
-<txp:article_custom section="publications" category="participations" limit="999" breakby="4" break='<div class="clearboth nosmall">&nbsp;</div>'><figure id="book_<txp:custom_field name="article_image" />" class="grid_6"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h3 class="h6"><txp:permlink><txp:title /></txp:permlink></h3></figcaption></figure>
+<div class="publications-grid">
+<txp:article_custom section="publications" category="participations" limit="999" ><figure id="book_<txp:custom_field name="article_image" />"><txp:permlink><txp:article_image loading="lazy" /></txp:permlink><figcaption class=""><h3 class="h5"><txp:permlink><txp:title /></txp:permlink></h3></figcaption></figure>
 </txp:article_custom>
-<div class="clearboth">&nbsp;</div>
+</div>
 <div class="clear">&nbsp;</div>
 
 <div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/mentioned/">Mentions</a></h4></div><div class="g_12 preg"><h4 class="centre h5" style="padding:.5rem 0;"><a href="/publications/cited/">Citations</a></h4></div><div class="clearboth">&nbsp;</div>
