@@ -336,6 +336,7 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
 .publications-grid figure {margin: 0 auto;width: 100%;max-width:230px;}
 .publications-grid figure img {width: 100%;height: auto;display: block; transition: transform 0.3s ease;}
 .publications-grid figure:hover img {transform: translateY(-5px);}
+.publications-grid figcaption {margin-top: 12px;}
 
 @media (min-width: 600px) {
 .publications-grid {grid-template-columns: repeat(2, 1fr);}
