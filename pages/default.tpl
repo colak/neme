@@ -17,9 +17,9 @@
 </txp:act_if_mobile>
 
 <txp:if_article_list>
-<link rel="stylesheet" media="all" href="<txp:css name="articlelists_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="articlelists2" format="flat.url" />">
 <txp:else />
-<link rel="stylesheet" media="all" href="<txp:css name="default_2026v3" format="flat.url" />">
+<link rel="stylesheet" media="all" href="<txp:css name="default2" format="flat.url" />">
 </txp:if_article_list>
 </txp:if_logged_in>
 <txp:act_if_mobile><link rel="stylesheet" media="screen" href="<txp:css name="mobile" format="flat.url" />"></txp:act_if_mobile>
@@ -186,7 +186,7 @@
 <txp:else />
 <article class="grid_6 about" role="main">
 <txp:article_custom id="2001">
-<h1><txp:title /></h1>
+<h1 class="h3"><txp:title /></h1>
 <txp:excerpt />
 <p class="text-right"><a href="<txp:site_url />about/">read more&#8230;</a></p>
 </txp:article_custom>
@@ -196,12 +196,10 @@
 
 <div class="clearboth">&nbsp;</div>
 
+
 <div class="grid_6 frontthumbs noprint">
+<h2 class="h4 white">Announcements</h2>
 <txp:output_form form="announce" />
-<txp:hide><h3>Blog</h3>
-<txp:article_custom section="blog" limit="4" c10="" status="live" break="li" wraptag="ul">
-<txp:permlink><txp:title /></txp:permlink>
-</txp:article_custom></txp:hide>
 </div>
 
 <div class="grid_6 frontthumbs noprint">
