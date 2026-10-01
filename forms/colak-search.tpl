@@ -1,5 +1,4 @@
-<txp:act_if_mobile not>
-<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
+<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post" role="search" itemscope itemtype="https://schema.org/SearchAction">
 <fieldset>
 <legend>Search</legend>
 <input type="hidden" value="all" name="m">
@@ -25,11 +24,8 @@ echo '<option value="'.$url.'">'.$title.'</option>';
 <label class="accessibility hidden" for="terms">Search</label>
 <input id="terms" name="terms" type="text" value="<txp:page_url type="q" />" itemprop="query-input" placeholder="Search">
 
-
+<txp:hide><txp:search_input match="all" /></txp:hide>
 <input name="submit" type="submit" value="search" id="searchbutton">
+
 </fieldset>
 </form>
-</txp:act_if_mobile>
-
-
-<txp:hide><script src="<txp:page_url type="theme_path" />/forms/javascripts/main.js"></script></txp:hide>
