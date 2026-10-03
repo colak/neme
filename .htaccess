@@ -48,7 +48,6 @@ AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javasc
 Header append Vary Accept-Encoding
 </IfModule>
 
-# cache control
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType image/jpg "access plus 1 year"
@@ -56,18 +55,42 @@ ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 10 days"
-ExpiresByType text/html "access plus 1 month"
-ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 year"
 ExpiresByType application/x-javascript "access plus 1 year"
 ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/html "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 month"
-ExpiresByType image/svg+xml "access 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
 ExpiresByType application/atom+xml "access plus 1 hour"
 ExpiresByType application/rss+xml "access plus 1 hour"
+ExpiresByType text/plain "access plus 1 week"
 ExpiresDefault "access plus 1 month"
+
+# CUSTOM TEXT FILE CACHING (Overrides text/plain default)
+<FilesMatch "^(robots\.txt|humans\.txt|llm\.txt|llm-extended\.txt)$">
+ExpiresActive Off
+</FilesMatch>
+<Files "robots.txt">Header set Cache-Control "max-age=2592000, public"
+</Files>
+<FilesMatch "^(humans\.txt|llm\.txt)$">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+<Files "llm-extended.txt">
+Header set Cache-Control "max-age=604800, public"
+</Files>
 </IfModule>
+
+# <FilesMatch "\.(css)$">
+# FileETag None
+#  <IfModule mod_headers.c>
+# Header unset ETag
+# Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+# Header set Pragma "no-cache"
+# Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+# </IfModule>
+# </FilesMatch>
 
 # redirects any non-www HTTP or HTTPS
 RewriteCond %{HTTP_HOST} !^$
@@ -75,8 +98,15 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteCond %{HTTPS}s ^on(s)|
 RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+<IfModule mod_rewrite.c>
+RewriteRule ^llm-extended\.txt$ /?f=llm-extended [L,QSA]
+</IfModule>
+
 # redirects old urls to new urls
 RewriteEngine On
+RewriteRule ^robots\.txt$ /themes/neme960_v6/forms/txt/robots.txt [L]
+RewriteRule ^humans\.txt$ /themes/neme960_v6/forms/txt/humans.txt [L]
+RewriteRule ^llm\.txt$ /themes/neme960_v6/forms/txt/llm.txt [L]
 RewriteRule ^main/?(.*)$ https://www.neme.org/$1 [R=301,L]
 RewriteRule ^forum/?(.*)$ http://forum.neme.org/$1 [R=301,L]
 RewriteRule ^reblog/out/?$ https://www.neme.org/ [R=301,L]
@@ -128,11 +158,16 @@ RewriteEngine On
 RewriteCond %{REQUEST_URI} (bbs|bigdump|bitrix|cgi|CHANGELOG|ckeditor|ckfinder|cms|connectors|connector|console|convert|dedecms|dede|drupal|dump|editor|elfinder|eshop|fallback|fckeditor|FileZilla|gaestebuch|gastenboek|guestbook|jomestate|joomla|kcfinder|lazycms|login|magmi|mail|manage|noscript|oecms|phpcms|plus|register|rob-chiu|templates|Tester|tinymce|trackback|udd|uploadTester|utility|webmail|webmanage|wordpress|wp-admin|wp-content|wp-login|wp|xmlrpc|ycportal) [NC]
 RewriteRule .* - [F,L]
 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^ghost-rider$ [NC]
+RewriteRule ^(.*)$ - [F,L]
+
 
 # Block any referer from any subdomain including main domain
 RewriteEngine On
-RewriteCond %{HTTP_REFERER} ^https?://([a-zA-Z0-9-]+\.)*star-finder\.de [NC]
+RewriteCond %{HTTP_REFERER} ^https?://([a-zA-Z0-9-]+\.)*(star-finder\.de|uniuit\.com) [NC]
 RewriteRule .* - [F]
+
 
 #DirectoryIndex index.php index.html
 
