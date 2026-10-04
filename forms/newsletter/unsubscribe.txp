@@ -1,0 +1,12 @@
+<p>All your details have now been deleted from our database. We are sorry to see you go.</p>
+<p>Do concider following us on:</p>
+
+<ol>
+<li><txp::ext url="https://bsky.app/profile/nemeorg.bsky.social" /></li>
+<li><txp::ext url="https://x.com/nemeorg/" /></li>
+<li><txp::ext url="https://www.facebook.com/nemeorg/" /></li>
+<li><txp::ext url="https://instagram.com/nemeorg/" /></li>
+<li><txp::ext url="https://x.com/nemeorg/" /></li>
+<li><txp::ext url="https://mastodon.social/@nemeorg" /></li>
+<li><txp::ext url="https://youtube.com/@nemeorg" /></li>
+</ol>
