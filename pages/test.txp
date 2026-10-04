@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />" dir="<txp:text item="lang_dir" />">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title><txp:page_title /></title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+<txp:article form="" listform="">
+<h1><txp:title /></h1>
+<txp:body />
+</txp:article>
+</body>
+</html>

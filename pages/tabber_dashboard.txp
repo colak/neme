@@ -1,0 +1,32 @@
+<h3>Manual Updates</h3>
+<ul>
+<li><a href="https://www.neme.org/f=llm-extended">llm-extended</a> - copy paste on llm-extended.txt
+<li>* <a href="https://www.neme.org/textpattern/?event=form&step=form_edit&name=llm-extended.txt">llm-extended form</a></li>
+</li>
+<li><a href="https://www.neme.org/about/statistics">Statistics</a>
+<li>* <a href="https://www.neme.org/textpattern/index.php?event=article&step=edit&ID=2366">Update Statistics</a></li>
+</li>
+</ul>
+
+
+<h3>Latest modified articles</h3>
+
+<txp:article_custom sort="LastMod desc" wraptag="ul" break="li" limit="15"><a href="https://www.neme.org/textpattern/index.php?event=article&step=edit&ID=<txp:article_id />"><txp:title /></a></txp:article_custom>
+
+<ul>
+<li><a href="https://www.neme.org/textpattern/?event=article&step=edit&ID=2351">Languages</a></li>
+<li><a href="https://textile-lang.com/">Textile</a></li>
+</ul>
+
+
+<ul>
+<li><code>&lt;txp::vimeo video=&quot;xxx&quot; other=&quot;&quot; txt=&quot;yyy&quot;setcookie=&quot;1&quot; /&gt; setcookie=&quot;1&quot;</code> sets the cookie. other is not needed if video is NeMe produced.</li>
+<li><code>&lt;txp::vimeos cat=&quot;cat&quot; txt=&quot;yyy&quot; other=&quot;&quot; setcookie=&quot;1&quot; /&gt;</code> other is not needed if video is NeMe produced.</li>
+<li><code>&lt;txp::figure id=&quot;6&quot; caption=&quot;some caption&quot; class=&quot;some classes&quot; /&gt;</code></li>
+<li><code>&lt;txp::youtube video=&quot;#&quot; txt=&quot;#&quot; setcookie=&quot;1&quot; /&gt;</code></li>
+<li><code>[==&lt;txp::note no=&quot;1&quot; txt=&quot;txt&quot; pos=&quot;top&quot; /&gt;==]</code></li>
+<li><code>[==&lt;txp::note no=&quot;1&quot; pos=&quot;bottom&quot; /&gt;==]</code></li>
+<li><code>[==&lt;txp::note no=&quot;1&quot; txt=&quot;txt&quot; pos=”&quot;bottom&quot; /&gt;==]</code></li>
+<li><code>&lt;txp::ext url=&quot;http&quot; txt=&quot;&quot; /&gt;</code></li>
+<li><code>&lt;txp::gmaps id=&quot;##&quot; /&gt;</code></li>
+</ul>
