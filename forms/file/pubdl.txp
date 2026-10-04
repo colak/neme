@@ -1,0 +1,1 @@
+<txp:file_download_list id='<txp:yield name="id" />'><txp:yield name="txt" default="Download:" /> <a rel="nofollow" href="<txp:file_download_link />?format=inline" title="<txp:file_download_name title />"><txp:file_download_name /></a> (<txp:file_download_size />).</txp:file_download_list>

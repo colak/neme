@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Robots" content="noindex,nofollow">
+<title>Popup Footnotes in Textpattern</title>
+
+<style> 
+html {
+     scroll-behavior: smooth;
+}
+ body {
+     font-family: Helvetica, Arial, sans-serif;
+     line-height: 1.6;
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px 20px 50px 20px;
+     background: #fff;
+     color: #202122;
+}
+ .main {
+     background: #f0f0f0; 
+     padding: 20px; 
+     margin: 20px 0;
+}
+ .footnote-ref {
+     font-size: 0.75em;
+     vertical-align: super;
+     text-decoration: none;
+     color: #0645ad;
+     cursor: pointer;
+     margin-left: .5ch;
+     margin-inline-start: .5ch;
+}
+ .footnote-ref:hover {
+     text-decoration: underline;
+}
+
+li[id^="ref_content"]:target { 
+     background: #ffc !important; 
+     outline: dotted 2px #ba0000 !important; 
+     padding: 2px 4px !important; 
+     scroll-margin-top: 20px;
+}
+
+sup[id^="cite_note"]:target { 
+     background: #ffc !important; 
+     display: inline-block !important; 
+     padding: 2px 4px !important; 
+     outline: 2px dotted #ba0000 !important; 
+     vertical-align: baseline !important;
+     scroll-margin-top: 20px;
+}
+
+ .references {
+     margin-top: 40px;
+     padding-top: 10px;
+     border-top: 1px solid #a2a9b1;
+     font-size: 0.85em;
+     color: #54595d;
+}
+ .references h3, .references .h3 {
+     font-size: 1em;
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+ .references ol {
+     padding-left: 20px;
+     margin: 0;
+     list-style-type: decimal;
+}
+ .references li {
+     margin-bottom: 8px;
+}
+ .footnote-back {
+     font-size: 0.7em;
+     color: #0645ad;
+     text-decoration: none;
+     margin-left: .5ch;
+     margin-inline-start: .5ch;
+     vertical-align: super;
+     cursor: pointer;
+     user-select: none;
+}
+ a.footnote-back {
+     margin-left: .25ch;
+     margin-inline-start: .25ch;
+}
+ .footnote-back:hover {
+     text-decoration: underline;
+}
+ #footnote-popup {
+     position: fixed;
+     display: none;
+     z-index: 1000;
+     width: 300px;
+     max-width: 90vw;
+     max-height: 50vh;
+     padding: 10px 14px;
+     background: #f8f9fa;
+     border: 1px solid #a2a9b1;
+     border-radius: 3px;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+     font-size: 0.85em;
+     line-height: 1.4;
+     color: #202122;
+     pointer-events: auto;
+     overflow-y: auto;
+     overflow-x: hidden;
+     transition: opacity 0.1s;
+     overflow: scroll;
+}
+/* Narrow screens */
+ @media (max-width: 700px) {
+     #footnote-popup {
+         width: 80vw;
+         max-width: 90vw;
+         max-height: 40vh;
+    }
+}
+ #footnote-popup::after, #footnote-popup::before {
+     content: "";
+     position: absolute;
+     bottom: -6px;
+     left: 20px;
+     border-width: 6px 6px 0;
+     border-style: solid;
+     display: none;
+}
+ .if169 {
+     aspect-ratio: 16 / 9;
+     width: 100%;
+     height: auto;
+     display: block;
+}
+ .code {
+     max-width: 90vw;
+     overflow-x: auto;
+     background: #010101;
+     color: #AAFF00;
+     padding:20px;
+}
+
+ code {
+     font-family: 'Courier New', Courier, monospace;
+ }
+
+@media print {
+     body, .main, code {color: #000; background: #fff;}
+     .noprint {display:none;}
+}
+
+ </style>
+
+</head>
+<body>
+
+<h1>Popup Footnotes in Textpattern</h1>
+
+  <p>
+    <strong>This page will be taken down on Sunday, 30 Aug 2026.</strong></p>
+  <p>
+    <strong>Test 1 (Short):</strong> Why is it this the best CMS?.<txp::notes id="1" /></p>
+
+  <p>
+    <strong>Test 2 (Long, formatted, and links):</strong> This note has <em>italics</em>, <strong>bold</strong> text, an external link, a permlink, and scrolls as it is a long one.<txp::notes id="2" />
+  </p>
+
+
+  <p>
+    The footnote anchors behave normally when javascript is disabled in the browser, but the popups do not load. 
+  </p>
+
+  <div class="main">
+    <h2>How this is done</h2>
+
+<h3>Shortcode</h3> <br>
+
+<div class="code"><pre><code>
+<txp:php>
+echo htmlspecialchars(<<<'CODE'
+<txp:evaluate test="4">
+  <txp:if_yield name="id" value="1">
+    <div class="references">
+    <txp:yield name="heading" default="<h3>Notes</h3>" />
+    <ol class="notes">
+  </txp:if_yield>
+      <li id="ref_content_<txp:yield name="id" />" <txp:yield name="lang" wraptag=' lang="<+>"' />>
+          <txp:yield escape="tidy, textile, trim" />
+          <a href="#cite_note-<txp:yield name="id" />" class="footnote-back noprint" aria-label="Jump back to citation <txp:yield name="id" />">&#8617;</a>
+        <txp:if_yield name="last">
+      </li>
+    </ol>
+    </div>
+      <txp:else />
+      </li>
+  </txp:if_yield>
+  <txp:else />
+  <sup id="cite_note-<txp:yield name="id" />" class="footnote-ref">
+    <a href="#ref_content_<txp:yield name="id" />" aria-label="Jump back to citation <txp:yield name="id" />"><txp:yield name="id" /></a>
+  </sup>
+</txp:evaluate>
+CODE
+);
+</txp:php>
+</code></pre></div>
+
+<p>The shortcode is called with <code>&lt;txp::notes id="1" /&gt;</code> which produces the number of the footnote and it is placed in the text body.<br>
+For the actual footnote use <code>&lt;txp::notes id="1"&gt;Footnote here&lt;/txp::notes&gt;</code>. The first note also produces <code>&lt;div class="references"&gt;&lt;h3&gt;Notes&lt;/h3&gt;&lt;ol&gt;</code> which is the container div for the notes, its heading, and the <code>ol</code><p>
+<p>For the last footone (in the case of this test is number 3): <code>&lt;txp::notes id="3" last&gt;Last note&lt;/txp::notes&gt;</code>. The '<code>last</code>' statement closes the <code>&lt;li&gt;</code> tag, as well as the <code>&lt;ol&gt;</code> and the <code>&lt;div&gt;</code>.</p>
+
+<p>Many thanks to Julian and Oleg for their help on <txp::ext url="https://forum.textpattern.com/viewtopic.php?id=52955" />, Philippe for reminding me of accessibility, and Marios for his security audit, advice, and code which prevents XSS attacks through the javascript.</p>
+
+<p>The <code>&lt;txp:yield name="lang" wraptag=' lang="&lt;+&gt;"' /&gt;</code> is optional but is is there for those who may have a note written in a language other than that defined by the html page. It can be used like this: <code>&lt;txp::notes id="1" lang="es" &gt;Nota al pie aquí&lt;/txp::notes&gt;</code>.</p>
+
+<h3>The javascript</h3>
+
+<p>Extra care was taken to pass numerous invaluable safety audits by a fiend, who authored a safe sanitiser to the javascript that defends against XSS	attacks. Please let me know if you see anything that should be corrected.</p>
+
+<p><b>Warning:</b> make sure you do not have a class named <code>footnote-popup</code> in your html layout as a div with this class is generated by the javascript to contain the popups.</p>
+
+<div class="code"><pre><code>
+<txp:php>
+echo htmlspecialchars('
+let popup = document.getElementById("footnote-popup");
+popup || (popup = document.createElement("div"), popup.id = "footnote-popup", document.body.appendChild(popup));
+const footnoteRefs = document.querySelectorAll(".footnote-ref a"),
+    POPUP_PADDING = 10,
+    VIEWPORT_MARGIN = 20,
+    ALLOWED_TAGS = ["P", "CITE", "A", "EM", "I", "STRONG", "B", "SUP", "SUB", "DEL", "INS", "S", "KBD", "SPAN", "BR", "WBR", "Q", "MARK", "ABBR", "DFN", "TIME", "BLOCKQUOTE", "DL", "DT", "DD", "BDI", "BDO"],
+    ALLOWED_ATTRIBUTES = {
+        A: ["href", "title", "rel", "lang"],
+        SPAN: ["lang", "class"],
+        TIME: ["datetime"],
+        BLOCKQUOTE: ["cite"],
+        Q: ["cite"],
+        ABBR: ["title"],
+        BDI: ["dir"],
+        BDO: ["dir"]
+    };
+
+function validateHref(e) {
+    return !(!e || "string" != typeof e || !e.startsWith("#")) && /^#[a-zA-Z0-9_:.-]+$/.test(e)
+}
+
+function validateLinkHref(e) {
+    if (!e || "string" != typeof e) return !1;
+    const t = e.trim();
+    if (t.startsWith("#")) return /^#[a-zA-Z0-9_:.-]+$/.test(t);
+    try {
+        const e = new URL(t, window.location.origin);
+        return "http:" === e.protocol || "https:" === e.protocol
+    } catch {
+        return !1
+    }
+}
+
+function validateCite(e) {
+    if (!e || "string" != typeof e) return !1;
+    const t = e.trim();
+    if (t.startsWith("#")) return /^#[a-zA-Z0-9_:.-]+$/.test(t);
+    try {
+        const e = new URL(t, window.location.origin);
+        return "http:" === e.protocol || "https:" === e.protocol
+    } catch {
+        return !1
+    }
+}
+
+function sanitizeElement(e) {
+    const t = e.tagName.toUpperCase();
+    if (!ALLOWED_TAGS.includes(t)) {
+        const t = document.createDocumentFragment();
+        return e.childNodes.forEach(e => {
+            if (e.nodeType !== Node.TEXT_NODE) {
+                if (e.nodeType === Node.ELEMENT_NODE) {
+                    const o = sanitizeElement(e);
+                    o && t.appendChild(o)
+                }
+            } else t.appendChild(e.cloneNode(!0))
+        }), t
+    }
+    const o = e.cloneNode(!1),
+        n = ALLOWED_ATTRIBUTES[t] || [];
+    return Array.from(e.attributes).forEach(e => {
+        const i = e.name.toLowerCase(),
+            p = e.value;
+        "id" !== i && "name" !== i && n.includes(i) && ("A" !== t || "href" !== i || validateLinkHref(p)) && ("Q" !== t && "BLOCKQUOTE" !== t || "cite" !== i || validateCite(p)) && o.setAttribute(i, p)
+    }), e.childNodes.forEach(e => {
+        if (e.nodeType !== Node.TEXT_NODE) {
+            if (e.nodeType === Node.ELEMENT_NODE) {
+                const t = sanitizeElement(e);
+                t && o.appendChild(t)
+            }
+        } else o.appendChild(e.cloneNode(!0))
+    }), o
+}
+
+function positionPopup(e) {
+    const t = popup.getBoundingClientRect(),
+        o = e.getBoundingClientRect(),
+        n = window.innerWidth,
+        i = "absolute" === window.getComputedStyle(popup).position,
+        p = i ? window.scrollY : 0,
+        l = i ? window.scrollX : 0;
+    let u = o.top + p - t.height - 10,
+        r = o.left + l;
+    o.top - t.height - 10 < 0 && (u = o.bottom + p + 10), r + t.width > n && (r = n - t.width - 20), r < 20 && (r = 20), popup.style.top = `${u}px`, popup.style.left = `${r}px`
+}
+
+function showPopup(e) {
+    const t = e.getAttribute("href");
+    if (!validateHref(t)) return console.error("Invalid footnote reference:", t), !1;
+    const o = document.getElementById(t.slice(1));
+    if (!o) return console.error("Footnote element not found:", t), !1;
+    const n = o.cloneNode(!0);
+    n.querySelectorAll(".footnote-back").forEach(e => e.remove());
+    const i = sanitizeElement(n);
+    return popup.replaceChildren(), i && popup.appendChild(i), popup.style.display = "block", popup.classList.add("show"), positionPopup(e), !0
+}
+
+function hidePopup() {
+    popup.style.display = "none", popup.classList.remove("show")
+}
+
+function handlePopupScroll(e) {
+    if ("none" === popup.style.display) return;
+    const t = popup.getBoundingClientRect();
+    if (!(e.clientX >= t.left && e.clientX <= t.right && e.clientY >= t.top && e.clientY <= t.bottom)) return;
+    if (popup.scrollHeight <= popup.clientHeight) return;
+    const o = popup.scrollTop,
+        n = popup.scrollHeight,
+        i = popup.clientHeight,
+        p = e.deltaY;
+    p < 0 && o <= 0 || p > 0 && o + i >= n - 1 || (e.preventDefault(), e.stopPropagation(), popup.scrollTop += p)
+}
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+let pendingCloseTimeout = null,
+    mouseIsInsidePopup = !1;
+isTouchDevice || (footnoteRefs.forEach(e => {
+    e.addEventListener("mouseenter", () => {
+        showPopup(e), pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null)
+    }), e.addEventListener("mouseleave", () => {
+        pendingCloseTimeout = setTimeout(() => {
+            mouseIsInsidePopup || hidePopup(), pendingCloseTimeout = null
+        }, 50)
+    })
+}), popup.addEventListener("mouseenter", () => {
+    mouseIsInsidePopup = !0, pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null)
+}), popup.addEventListener("mouseleave", () => {
+    mouseIsInsidePopup = !1
+}), popup.addEventListener("wheel", handlePopupScroll, {
+    passive: !1
+}));
+let activePopupLink = null;
+isTouchDevice && footnoteRefs.forEach(e => {
+    e.addEventListener("click", t => {
+        if (t.preventDefault(), activePopupLink === e) return hidePopup(), void(activePopupLink = null);
+        hidePopup(), showPopup(e) && (activePopupLink = e)
+    })
+}), document.addEventListener("click", e => {
+    const t = e.target instanceof Element ? e.target : null;
+    if (!t) return;
+    const o = t.closest(".footnote-ref"),
+        n = t.closest("#footnote-popup");
+    o || n || (hidePopup(), activePopupLink = null)
+}), document.addEventListener("keydown", e => {
+    "Escape" === e.key && (hidePopup(), pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null), activePopupLink = null)
+}), document.querySelectorAll(".footnote-back").forEach(e => {
+    e.addEventListener("click", t => {
+        t.preventDefault();
+        const o = e.getAttribute("href");
+        if (!validateHref(o)) return void console.error("Invalid footnote back-reference:", o);
+        const n = document.getElementById(o.slice(1));
+        if (n) {
+            try {
+                window.location.hash = o
+            } catch (e) {
+                console.warn("Could not update URL hash:", e)
+            }
+            n.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            }), hidePopup(), activePopupLink = null
+        }
+    })
+});
+');
+</txp:php>
+</code></pre></div>
+
+<h3>The CSS</h3>
+
+<div class="code"><pre><code>
+<txp:php>
+echo htmlspecialchars('
+ .footnote-ref {
+     font-size: 0.75em;
+     vertical-align: super;
+     text-decoration: none;
+     color: #0645ad;
+     cursor: pointer;
+     margin-left: .5ch;
+     margin-inline-start: .5ch;
+}
+ .footnote-ref:hover {
+     text-decoration: underline;
+}
+
+li[id^="ref_content"]:target { 
+     background: #ffc !important; 
+     outline: dotted 2px #ba0000 !important; 
+     padding: 2px 4px !important; 
+     scroll-margin-top: 20px;
+}
+
+sup[id^="cite_note"]:target { 
+     background: #ffc !important; 
+     display: inline-block !important; 
+     padding: 2px 4px !important; 
+     outline: 2px dotted #ba0000 !important; 
+     vertical-align: baseline !important;
+     scroll-margin-top: 20px;
+}
+
+ .references {
+     margin-top: 40px;
+     padding-top: 10px;
+     border-top: 1px solid #a2a9b1;
+     font-size: 0.85em;
+     color: #54595d;
+}
+ .references h3, .references h3 {
+     font-size: 1em;
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+ .references ol {
+     padding-left: 20px;
+     margin: 0;
+     list-style-type: decimal;
+}
+ .references li {
+     margin-bottom: 8px;
+}
+ .footnote-back {
+     font-size: 0.7em;
+     color: #0645ad;
+     text-decoration: none;
+     margin-left: .5ch;
+     margin-inline-start: .5ch;
+     vertical-align: super;
+     cursor: pointer;
+}
+ a.footnote-back {
+     margin-left: .25ch;
+     margin-inline-start: .25ch;
+}
+ .footnote-back:hover {
+     text-decoration: underline;
+}
+ #footnote-popup {
+     position: fixed;
+     display: none;
+     z-index: 1000;
+     width: 300px;
+     max-width: 90vw;
+     max-height: 50vh;
+     padding: 10px 14px;
+     background: #f8f9fa;
+     border: 1px solid #a2a9b1;
+     border-radius: 3px;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+     font-size: 0.85em;
+     line-height: 1.4;
+     color: #202122;
+     pointer-events: auto;
+     overflow-y: auto;
+     overflow-x: hidden;
+     transition: opacity 0.1s;
+     overflow: scroll;
+}
+/* Narrow screens */
+ @media (max-width: 700px) {
+     #footnote-popup {
+         width: 80vw;
+         max-width: 90vw;
+         max-height: 40vh;
+    }
+}
+ #footnote-popup::after, #footnote-popup::before {
+     content: "";
+     position: absolute;
+     bottom: -6px;
+     left: 20px;
+     border-width: 6px 6px 0;
+     border-style: solid;
+     display: none;
+}
+');
+</txp:php>
+</code></pre></div>
+
+
+
+<h3>A test</h3>
+
+<p>Apologies for the non GDPR compliant video embed below. It is just confirming that the sanitation rules in the javascript only target the footnote-popup div.</p>
+
+<iframe class="if169 noprint" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-0EyWNMdWqo?si=KckZrLA3IrXXh5Ju" title="NeMe logo" allow="encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>Morbi ipsum purus, tempus vel posuere eu, tempus eget ligula. Sed tempus viverra ullamcorper. Aenean in dictum sapien. Cras vitae maximus tortor. Donec ac libero tristique, vestibulum augue vitae, volutpat ante. Sed gravida purus vel leo maximus rutrum. Proin sit amet purus at magna placerat tincidunt. </p>
+
+<p>In ut urna porttitor turpis ornare ornare. Curabitur ultricies purus mauris, sed maximus ipsum finibus non. Cras ac felis quis dolor tincidunt laoreet. In efficitur lacus non ligula congue, nec volutpat magna finibus. Pellentesque id bibendum magna, quis semper nunc. Morbi tincidunt mollis elit, ut egestas ipsum pharetra sed. Sed condimentum tortor sem, eget facilisis magna vehicula sit amet. Duis eu tellus vitae purus mollis suscipit. Etiam quis imperdiet nulla, eu congue neque. Duis pharetra malesuada molestie. </p>
+
+<p>Aenean suscipit a dolor eget ullamcorper. Ut pharetra bibendum tincidunt. Proin sed lobortis tellus. Morbi et sapien sollicitudin, pulvinar justo sed, porta ipsum. Curabitur mi justo, tristique sit amet arcu sed, varius fermentum nibh. Nam volutpat, massa id ornare tincidunt, tortor tellus ultrices neque, non tempor nisl augue eget odio. Integer commodo pulvinar consectetur. Vestibulum vel purus arcu. Aliquam mollis commodo magna, eget ultricies urna varius nec. </p>
+
+<p>Suspendisse tellus nulla, lacinia sit amet lectus ac, vehicula dictum libero. Cras aliquam eu ligula ut placerat. Nam ac ipsum sagittis leo suscipit volutpat. Nulla ante quam, consequat ac tincidunt eget, commodo vitae est. Aenean ac auctor est, id iaculis nisi. Sed volutpat congue lorem vitae porttitor. Donec interdum metus sit amet convallis suscipit. Vivamus est diam, luctus volutpat condimentum at, aliquam quis enim. Phasellus condimentum maximus nisi quis imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed dictum est felis, non tristique erat ornare eu. Pellentesque orci purus, tempor pellentesque lobortis sed, sodales vel dui. </p>
+
+<p>Nulla in lorem eros. Integer rhoncus luctus urna. Curabitur non metus diam. Phasellus convallis est ut condimentum consequat. Integer porta est eget erat laoreet, sodales malesuada tellus feugiat. Morbi et justo nibh. Pellentesque fringilla sit amet quam efficitur dignissim. Cras a euismod orci. Nam accumsan ligula at aliquam imperdiet. </p>
+
+<p>Quisque convallis ex at fringilla porttitor. In vel dapibus nulla. Nam ut ante arcu. Duis rutrum sem at sapien blandit, sit amet commodo lacus porta. Curabitur in lectus et orci lacinia blandit ut a urna. Ut interdum eros orci, finibus mollis velit sollicitudin sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut venenatis metus eu semper accumsan. Ut dignissim arcu at magna mattis tincidunt. Proin ac dolor nec sem fermentum malesuada. Maecenas molestie, tellus eu elementum tincidunt, justo nisi suscipit sapien, eget pellentesque nisl diam vitae mi. Nam posuere imperdiet elit, nec blandit metus luctus nec.<txp::notes id="3" /></p>
+
+<p>Phasellus accumsan nunc vitae ligula semper ullamcorper non ut quam. Cras vitae efficitur nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel risus sed risus faucibus hendrerit. Integer vel bibendum arcu. In hac habitasse platea dictumst. Donec rutrum congue nunc vel rhoncus. Donec sodales dolor dui, quis suscipit nisl placerat id. </p>
+
+<p>Proin ac turpis non erat finibus aliquam. Proin ipsum erat, consequat vitae diam non, rutrum mollis dui. Maecenas nunc ligula, scelerisque a molestie quis, convallis quis lectus. Sed vestibulum velit id eros accumsan, ac tristique lectus suscipit. Donec pretium consectetur nisl, id posuere dolor tincidunt ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce gravida congue turpis, quis varius neque interdum in. Suspendisse sit amet massa sapien. Maecenas hendrerit est eu vehicula cursus. Donec eleifend posuere nunc, et euismod mi lacinia at. Pellentesque vel faucibus justo. In imperdiet sit amet est a placerat. Praesent felis sem, gravida at egestas id, tincidunt in massa.</p>
+
+<p>Duis at magna felis. Vivamus dolor quam, lobortis in diam in, pharetra placerat dolor. Vestibulum neque urna, tempor at est ut, pulvinar fermentum libero. Donec magna nibh, porta tincidunt mattis sed, vehicula non lorem. Nulla id nibh vitae lacus ultricies hendrerit. Fusce pretium viverra consequat. Suspendisse aliquam, leo nec suscipit sodales, nulla orci cursus enim, vitae consectetur arcu neque commodo erat. Nullam neque dolor, finibus eget posuere non, malesuada quis nunc. Vivamus ac accumsan sem. Nam congue fermentum nisl, in euismod magna tempor vitae. Sed tincidunt tempor massa, et finibus neque tristique ut. Nam posuere, tellus eget congue rutrum, libero diam congue est, vitae suscipit dui turpis eget neque. Nulla eu sem mollis nibh sodales porttitor. Aenean at lorem at erat suscipit faucibus. Pellentesque congue posuere tortor, a pellentesque elit efficitur ac.</p>
+
+<p>Praesent cursus imperdiet hendrerit. Cras bibendum odio sit amet scelerisque ultricies. Aliquam mattis lacinia nulla at scelerisque. Proin quis pellentesque nisl. Vivamus condimentum rutrum tellus, vel venenatis dolor lobortis vel. Nunc eleifend dapibus nibh eu lobortis. Praesent orci ante, imperdiet vitae nulla sit amet, vehicula tincidunt magna. Nam quis hendrerit massa, non fermentum dui. In venenatis felis sem, nec ullamcorper elit sagittis ac. Praesent quis mi vitae erat mattis porttitor. Maecenas consequat enim eget rhoncus imperdiet.</p>
+
+<p>In sit amet sem vehicula, pharetra nulla in, ultricies nulla. Nam sed ornare nisi. Vivamus lorem augue, tincidunt nec dignissim nec, maximus quis justo. Aenean id magna eget erat interdum efficitur eu eu metus. Nunc congue tempor risus ut congue. Nullam non augue ipsum. Etiam rutrum at dolor non tincidunt. Etiam sit amet vehicula ipsum. Vestibulum libero nibh, sodales ac enim vitae, consequat ultricies enim. Aliquam sit amet venenatis enim. Suspendisse convallis est vulputate mi vehicula convallis. Nunc nec neque pretium, tristique nisi et, suscipit turpis. Cras ultricies velit non nisl placerat, at porttitor dolor tempor. Donec pretium purus sed ultricies sagittis. Etiam ut mi erat. Sed vestibulum luctus ex, eu interdum lectus commodo sed.<br>
+Maecenas eu dignissim enim. Sed ac lacus dignissim, euismod orci quis, malesuada ipsum. Phasellus egestas magna rutrum velit accumsan, a porttitor velit molestie. Mauris pretium tellus id cursus mollis. Vivamus in ullamcorper urna. Maecenas gravida nec leo vitae ornare. Praesent sed nisi orci. Morbi massa turpis, faucibus id fringilla nec, ullamcorper id enim. Donec nec euismod ligula, vitae maximus sem. Integer iaculis egestas ullamcorper.</p>
+
+  </div>
+
+      <txp::notes id="1">Textpattern, "Why is this the best CMS?," 2026.</txp::notes>
+      <txp::notes id="2">*Long Note:* This citation includes _italics_ for book titles, <strong>bold</strong> for emphasis, an external link, <txp::ext url="https://web.archive.org/web/20201109033639/http://www.neme.org/"/>, a <txp:permlink id="2396">permlink</txp:permlink>, and line brakes using the br tag.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas lectus quis ex efficitur, in viverra erat tempus. Donec vestibulum tristique tincidunt. Fusce auctor neque nec lacus egestas tincidunt. Sed eget lacinia nisl. Aenean iaculis enim justo. Sed ligula justo, tincidunt et sem vel, ornare bibendum felis. Fusce dolor lacus, maximus quis nulla et, vulputate ultricies diam.<br>Cras viverra, metus a convallis varius, felis nulla gravida dolor, vitae elementum arcu ex a diam. Nunc condimentum, neque at cursus faucibus, nibh odio rhoncus ex, sed pretium metus lorem vel felis. Nullam at risus laoreet, congue dui ut, rutrum risus. Integer velit nibh, aliquam vel blandit ac, tincidunt et ipsum. Nullam elementum quam quis nibh interdum dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis euismod metus vitae dui rutrum aliquam. Nam ac massa eros. Quisque vitae ex at turpis semper ultricies.<br><br>Duis nulla magna, pretium non ultrices et, vestibulum vitae urna. Nullam faucibus ornare odio id vestibulum. Ut sodales eros sed pharetra volutpat. Nam sit amet sem at tellus dictum ullamcorper. Nullam pulvinar massa vitae posuere euismod. Vivamus mattis in risus euismod congue. Donec porta egestas rutrum.<br>Quisque ac luctus lacus. Nullam auctor elit a tincidunt facilisis. Pellentesque a metus aliquet, pharetra nibh et, venenatis purus. Maecenas vel volutpat urna. Fusce pulvinar nunc lacus, a eleifend diam pellentesque ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum id sapien maximus, ultricies elit sed, sollicitudin nisl. Donec dignissim laoreet ipsum, a iaculis felis porta ut. Integer dolor turpis, luctus aliquam lectus sed, laoreet dignissim nisi. Donec pellentesque augue eget sapien facilisis posuere. Vivamus commodo arcu at sagittis viverra. Donec iaculis molestie neque quis dapibus. Duis ante felis, pretium non dictum ac, pellentesque sed augue. Proin mattis metus sed risus volutpat feugiat. Nullam rhoncus eros at enim laoreet, at mollis diam placerat.</txp::notes>
+      <txp::notes id="3" last>Last note.</txp::notes>
+
+
+<script>
+let popup = document.getElementById("footnote-popup");
+popup || (popup = document.createElement("div"), popup.id = "footnote-popup", document.body.appendChild(popup));
+const footnoteRefs = document.querySelectorAll(".footnote-ref a"),
+    POPUP_PADDING = 10,
+    VIEWPORT_MARGIN = 20,
+    ALLOWED_TAGS = ["P", "CITE", "A", "EM", "I", "STRONG", "B", "SUP", "SUB", "DEL", "INS", "S", "KBD", "SPAN", "BR", "WBR", "Q", "MARK", "ABBR", "DFN", "TIME", "BLOCKQUOTE", "DL", "DT", "DD", "BDI", "BDO"],
+    ALLOWED_ATTRIBUTES = {
+        A: ["href", "title", "rel", "lang"],
+        SPAN: ["lang", "class"],
+        TIME: ["datetime"],
+        BLOCKQUOTE: ["cite"],
+        Q: ["cite"],
+        ABBR: ["title"],
+        BDI: ["dir"],
+        BDO: ["dir"]
+    };
+
+function validateHref(e) {
+    return !(!e || "string" != typeof e || !e.startsWith("#")) && /^#[a-zA-Z0-9_:.-]+$/.test(e)
+}
+
+function validateLinkHref(e) {
+    if (!e || "string" != typeof e) return !1;
+    const t = e.trim();
+    if (t.startsWith("#")) return /^#[a-zA-Z0-9_:.-]+$/.test(t);
+    try {
+        const e = new URL(t, window.location.origin);
+        return "http:" === e.protocol || "https:" === e.protocol
+    } catch {
+        return !1
+    }
+}
+
+function validateCite(e) {
+    if (!e || "string" != typeof e) return !1;
+    const t = e.trim();
+    if (t.startsWith("#")) return /^#[a-zA-Z0-9_:.-]+$/.test(t);
+    try {
+        const e = new URL(t, window.location.origin);
+        return "http:" === e.protocol || "https:" === e.protocol
+    } catch {
+        return !1
+    }
+}
+
+function sanitizeElement(e) {
+    const t = e.tagName.toUpperCase();
+    if (!ALLOWED_TAGS.includes(t)) {
+        const t = document.createDocumentFragment();
+        return e.childNodes.forEach(e => {
+            if (e.nodeType !== Node.TEXT_NODE) {
+                if (e.nodeType === Node.ELEMENT_NODE) {
+                    const o = sanitizeElement(e);
+                    o && t.appendChild(o)
+                }
+            } else t.appendChild(e.cloneNode(!0))
+        }), t
+    }
+    const o = e.cloneNode(!1),
+        n = ALLOWED_ATTRIBUTES[t] || [];
+    return Array.from(e.attributes).forEach(e => {
+        const i = e.name.toLowerCase(),
+            p = e.value;
+        "id" !== i && "name" !== i && n.includes(i) && ("A" !== t || "href" !== i || validateLinkHref(p)) && ("Q" !== t && "BLOCKQUOTE" !== t || "cite" !== i || validateCite(p)) && o.setAttribute(i, p)
+    }), e.childNodes.forEach(e => {
+        if (e.nodeType !== Node.TEXT_NODE) {
+            if (e.nodeType === Node.ELEMENT_NODE) {
+                const t = sanitizeElement(e);
+                t && o.appendChild(t)
+            }
+        } else o.appendChild(e.cloneNode(!0))
+    }), o
+}
+
+function positionPopup(e) {
+    const t = popup.getBoundingClientRect(),
+        o = e.getBoundingClientRect(),
+        n = window.innerWidth,
+        i = "absolute" === window.getComputedStyle(popup).position,
+        p = i ? window.scrollY : 0,
+        l = i ? window.scrollX : 0;
+    let u = o.top + p - t.height - 10,
+        r = o.left + l;
+    o.top - t.height - 10 < 0 && (u = o.bottom + p + 10), r + t.width > n && (r = n - t.width - 20), r < 20 && (r = 20), popup.style.top = `${u}px`, popup.style.left = `${r}px`
+}
+
+function showPopup(e) {
+    const t = e.getAttribute("href");
+    if (!validateHref(t)) return console.error("Invalid footnote reference:", t), !1;
+    const o = document.getElementById(t.slice(1));
+    if (!o) return console.error("Footnote element not found:", t), !1;
+    const n = o.cloneNode(!0);
+    n.querySelectorAll(".footnote-back").forEach(e => e.remove());
+    const i = sanitizeElement(n);
+    return popup.replaceChildren(), i && popup.appendChild(i), popup.style.display = "block", popup.classList.add("show"), positionPopup(e), !0
+}
+
+function hidePopup() {
+    popup.style.display = "none", popup.classList.remove("show")
+}
+
+function handlePopupScroll(e) {
+    if ("none" === popup.style.display) return;
+    const t = popup.getBoundingClientRect();
+    if (!(e.clientX >= t.left && e.clientX <= t.right && e.clientY >= t.top && e.clientY <= t.bottom)) return;
+    if (popup.scrollHeight <= popup.clientHeight) return;
+    const o = popup.scrollTop,
+        n = popup.scrollHeight,
+        i = popup.clientHeight,
+        p = e.deltaY;
+    p < 0 && o <= 0 || p > 0 && o + i >= n - 1 || (e.preventDefault(), e.stopPropagation(), popup.scrollTop += p)
+}
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+let pendingCloseTimeout = null,
+    mouseIsInsidePopup = !1;
+isTouchDevice || (footnoteRefs.forEach(e => {
+    e.addEventListener("mouseenter", () => {
+        showPopup(e), pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null)
+    }), e.addEventListener("mouseleave", () => {
+        pendingCloseTimeout = setTimeout(() => {
+            mouseIsInsidePopup || hidePopup(), pendingCloseTimeout = null
+        }, 50)
+    })
+}), popup.addEventListener("mouseenter", () => {
+    mouseIsInsidePopup = !0, pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null)
+}), popup.addEventListener("mouseleave", () => {
+    mouseIsInsidePopup = !1
+}), popup.addEventListener("wheel", handlePopupScroll, {
+    passive: !1
+}));
+let activePopupLink = null;
+isTouchDevice && footnoteRefs.forEach(e => {
+    e.addEventListener("click", t => {
+        if (t.preventDefault(), activePopupLink === e) return hidePopup(), void(activePopupLink = null);
+        hidePopup(), showPopup(e) && (activePopupLink = e)
+    })
+}), document.addEventListener("click", e => {
+    const t = e.target instanceof Element ? e.target : null;
+    if (!t) return;
+    const o = t.closest(".footnote-ref"),
+        n = t.closest("#footnote-popup");
+    o || n || (hidePopup(), activePopupLink = null)
+}), document.addEventListener("keydown", e => {
+    "Escape" === e.key && (hidePopup(), pendingCloseTimeout && (clearTimeout(pendingCloseTimeout), pendingCloseTimeout = null), activePopupLink = null)
+}), document.querySelectorAll(".footnote-back").forEach(e => {
+    e.addEventListener("click", t => {
+        t.preventDefault();
+        const o = e.getAttribute("href");
+        if (!validateHref(o)) return void console.error("Invalid footnote back-reference:", o);
+        const n = document.getElementById(o.slice(1));
+        if (n) {
+            try {
+                window.location.hash = o
+            } catch (e) {
+                console.warn("Could not update URL hash:", e)
+            }
+            n.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            }), hidePopup(), activePopupLink = null
+        }
+    })
+});
+</script>
+
+
+</body>
+</html>

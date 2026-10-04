@@ -1,0 +1,52 @@
+<txp:header name="Cache-Control" value="no-cache, no-store, must-revalidate" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>We are all going to make it</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="Robots" content="noindex,follow">
+
+<style>
+body 
+{background:#fff;color:#000;font-size:2em;line-height:1.2;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
+h1 {font-size:1.3em;line-height:1}
+h3 {line-height:0;margin-top:2em}
+.video {aspect-ratio: 16 / 9;width: 100%;}
+.eu {width:100%;font-size:80%;}
+.img {display:block;clear:both;width:100%;height:auto;max-width:300px;margin:2em auto;}
+</style>
+</head>
+<body>
+
+<div style="width:90%;margin:1em auto 0;padding:0;display:block;">
+
+<txp:image id="792" style="  display: block; margin-left: auto; margin-right: auto;" />
+
+<h1>Paul O' Neill: <em>We are all going to make it</em></h1>
+
+<txp:image id="1804" style="float:left;padding-right:10px;padding-bottom:3px;" /><p>Paul O' Neill was NeMe's second artist in residence under the Creative Europe funded <em>European Media Art Platform</em> (EMAP) framework. He was selected from 600 applicants because of his critical approach and the relevance of his proposal to post colonial discourse.</p>
+
+<p>The <em>We are all going to make it</em> artwork, first launched during the <em>Limassol Art Walks</em> on 21st October 2023, is but one of a series he created during his two month residency from May 12 to 14 July 2023.</p>
+
+<p>In the video below, Paul talks about his post-colonial research in Ireland and Cyprus, presented at the NeMe Arts Centre on 7 July 2023.</p>
+
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/BLJq82sEYck" title="Paul O' Neill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>You can find out more about the EMAP work curried out by NeNe on the <a href="https://www.neme.org/projects/emap/">NeMe website</a>.</p>
+
+<hr>
+
+<h3>Funding</h3>
+
+<p class="eu">This project has been funded with the support from the European Commission and the Cyprus Deputy Ministry of Culture. This communication reflects the views only of the author, and the Commission or the Deputy Ministry, cannot be held responsible for any use which may be made of the information contained therein.</p>
+
+<txp:image id="2038" class="img" />
+
+</div>
+</body>
+</html>

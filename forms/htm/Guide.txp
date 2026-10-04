@@ -1,0 +1,38 @@
+<txp:header name="Cache-Control" value="no-cache, no-store, must-revalidate" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Event Guide</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="Robots" content="noindex,follow">
+
+<style>
+body 
+{background:#fff;color:#000;font-size:2em;line-height:1.2;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
+h1 {font-size:1.3em;line-height:1}
+h3 {line-height:0;margin-top:2em}
+.video {aspect-ratio: 16 / 9;width: 100%;}
+.eu {width:100%;font-size:80%;}
+.img {display:block;clear:both;width:100%;height:auto;max-width:300px;margin:2em auto;}
+</style>
+</head>
+<body>
+
+<div style="width:90%;margin:1em auto 0;padding:0;display:block;">
+
+<txp:image id="792" style="  display: block; margin-left: auto; margin-right: auto;" />
+
+<h1>Event Guide</em></h1>
+
+<p>Apologies but our event guide is out of print.</p>
+
+<p>The good news is that you can download a pdf version from <txp:file_download_link id="140"><txp:file_download_name /> </txp:file_download_link> (<txp:file_download_size format="mb" decimals="2" />).</p>
+
+</div>
+</body>
+</html>

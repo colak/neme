@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="Robots" content="noindex,nocache,follow">
+<meta name="GOOGLEBOT" content="NOARCHIVE">
+
+<style>
+	
+.container_24 {margin:0 auto;max-width:1080px;padding:1rem 0;}
+.container_24 .grid_6,.container_24 .grid_18 {display:inline;float:left;margin-left:.5%;margin-right:.5%}
+.container_24 .grid_6 {width:24%}
+.container_24 .grid_18 {width:74%}
+.container_24 .grid_6 img {width:100%;height:auto;}
+.clear {clear:both;}
+		
+	
+.slides {position: relative;overflow: hidden;width: 100%;aspect-ratio: 71 / 30; /* height: 300px; */ }
+.carousel {width: 100%;height: 100%;}
+.carousel li {position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;transition: opacity 1s ease;}
+.carousel li.active {opacity: 1;z-index: 1;}
+.carousel li.inactive {opacity: 0;z-index: 0;}
+.carousel img {width: 100%;height: auto;aspect-ratio: 71 / 30;object-fit: cover;border-radius: 0 8px 8px 0;}
+.no-js ul.carousel li{display:none}
+.no-js ul.carousel li:first-child{display:block}	
+.no-js ul.carousel li:first-child {opacity: 1;z-index: 1;}
+
+</style>
+
+<title>Dynamic Carousel Height</title>
+</head>
+
+<body class="no-js">
+
+<div class="container_24">
+	
+	<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_6 noprint nosmall">
+		<img src="/images/2297t.jpg" alt="Image 2" width="230" height="300">
+	</figure>
+	
+	<figure itemscope itemtype="http://schema.org/ImageObject" class="grid_18 slides"><txp:images category="promote" wraptag="ul" class="carousel" wrapclass="" break="li" sort="rand()" limit="8"><txp:permlink id='<txp:image_info type="name" />'><txp:image loading="lazy" /></txp:permlink></txp:images></figure>
+		
+	<noscript id="noscript"><div class="announce"><p>Javascript should be enabled in your browser to view the slideshow.</p></div></noscript>
+
+<div class="clear">&nbsp;</div>
+
+<h1>Heading</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec felis posuere, faucibus ligula quis, eleifend magna. Nulla pellentesque luctus vestibulum. Ut vel massa at ante luctus molestie et at lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut dapibus feugiat volutpat. Maecenas ut accumsan nulla, a vulputate orci. Vestibulum at mauris ac felis sagittis facilisis non quis turpis. Sed lobortis lorem libero, non egestas neque finibus sit amet. Sed lacinia consectetur eros nec sollicitudin. Quisque tortor lacus, aliquet in massa ac, luctus vulputate ex. Maecenas ultricies pharetra augue at mollis. Morbi eu ex luctus, molestie lectus nec, rhoncus elit. Nulla varius auctor diam eget interdum.</p>
+
+	<p>Nunc egestas hendrerit purus. Nullam ut augue gravida, sagittis sem at, feugiat libero. Praesent ut lorem tempor, sagittis orci et, dapibus felis. Nullam risus nibh, sodales vehicula magna in, rhoncus pulvinar enim. Aenean posuere eleifend aliquet. Nam dictum id enim nec dictum. Phasellus gravida, ante sed maximus pretium, nulla lectus fringilla turpis, nec accumsan enim quam eget elit. Etiam diam velit, sollicitudin in egestas sed, rutrum sollicitudin elit. Proin sit amet mollis augue. In at mi urna. Praesent sit amet turpis id metus cursus molestie. Sed rhoncus sapien quis interdum hendrerit. Etiam finibus molestie lorem vitae laoreet. Pellentesque turpis neque, venenatis id tristique eu, dictum non arcu.</p>
+
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+document.body.className = document.body.className.replace(/\bno-js\b/, 'js');
+});
+</script>
+<script src="https://www.neme.org/themes/neme960_v3/forms/js/carousel.js"></script>
+
+</body>
+</html>

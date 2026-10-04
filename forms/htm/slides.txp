@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fading Image Gallery</title>
+    <link rel="stylesheet" media="all" href="<txp:css name="slidescss" format="flat.url" />">
+
+</head>
+<body class="no-js">
+<div class="sticky">
+<div class="container menu">
+	<nav class="topnav" id="myTopnav">
+		<a href="https://www.neme.org/" rel="home" class="logo noprint"><img src="<txp:page_url type="theme_path" />/forms/svg/neme.svg" alt="NeMe logo" width="43" height="43"></a>
+		<a href="https://www.neme.org/about/" rel="bookmark">About</a>
+		<a href="https://www.neme.org/projects/" rel="bookmark">Projects</a>
+		<a href="https://www.neme.org/texts/" rel="bookmark">Texts</a>
+		<a href="https://www.neme.org/publications/" rel="bookmark">Publications</a>
+		<a href="https://www.neme.org/blog/" rel="bookmark">Blog</a>
+		<a href="https://www.neme.org/about/subscribe-to-our-newsletter" rel="nofollow noopener">Newsletter</a>
+		<a href="https://www.neme.org/about/contact-us" rel="nofollow noopener">Contact</a>
+		<a href="https://www.neme.org/related-links/" rel="bookmark">Links</a>
+	    <a href="javascript:void(0);" class="icon" onclick="myNav()"><span class="fa fa-bars"></span></a>
+	</nav>
+</div>
+</div>
+
+<div class="container main">
+	<article class="grid1 about">
+		<txp:article_custom id="2001">
+			<h1><txp:title /></h1>
+			<txp:excerpt />
+			<p class="text-right"><a href="<txp:site_url />about/">read more&#8230;</a></p>
+		</txp:article_custom>
+	</article>
+	<div class="slideshow">
+		<figure itemscope itemtype="http://schema.org/ImageObject" class="slideshow1">
+			<ul id="slides" class="no_style_list">
+				<txp:images category="promote" limit="8" sort="rand()" wraptag="" break="li"><txp:permlink id='<txp:image_info type="name" />'><txp:image class="slide" /></txp:permlink></txp:images>
+			</ul>
+		</figure>
+	</div>
+	<div class="announce submenu"><h2 class="linklist">Announcements</h2>
+		<ul class="linklist no_style_list">
+			<txp:linklist category="active,ongoing" sort="id desc" limit="10" break="li" wraptag="">
+				<txp:variable name="external noopener" value='<txp:link_description />' />
+				<txp:if_variable name="external noopener" value="ext">
+					<span><a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a></span>
+				<txp:else />
+					<span><a href="<txp:link_url />"><txp:link_name escape="html" /></a></span>
+				</txp:if_variable>
+			</txp:linklist>
+		</ul>
+	<hr>
+		<ul class="linklist no_style_list">
+			<txp:linklist category="eu" sort="id desc" limit="10" break="li" wraptag="">
+			<txp:variable name="external noopener" value='<txp:link_description />' />
+			<txp:if_variable name="external noopener" value="ext">
+				<span><a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a></span>
+			<txp:else />
+				<span><a href="<txp:link_url />"><txp:link_name escape="html" /></a></span>
+			</txp:if_variable>
+			</txp:linklist>
+		</ul>
+	</div>
+	<div class="submenu">
+		<h2 class="linklist">Activities</h2>
+		<ul class="linklist no_style_list">
+			<txp:article_custom limit="8" section="projects" label="" labeltag="" break="li" wraptag="" sort="Posted desc"><span><txp:permlink><txp:title /></txp:permlink></span></txp:article_custom>
+		</ul>
+	</div>
+	<div class="submenu">
+		<h2 class="linklist">Texts</h2>
+		<ul class="linklist no_style_list">
+			<txp:article_custom section="texts" limit="8" sort="rand()" break="li" wraptag="" labeltag="" label=""><span><txp:permlink><txp:title /></txp:permlink></span></txp:article_custom>
+		</ul>
+	</div>
+	<div class="submenu">
+		<h2 class="linklist">Blog</h2>
+		<ul class="linklist no_style_list">
+			<txp:article_custom section="blog" limit="8" c10="" status="live" break="li" wraptag=""><span><txp:permlink><txp:title /></txp:permlink></span></txp:article_custom>
+		</ul>
+	</div>
+</div>
+
+<div class="container">
+<div class="announce">
+	<p class="centre">Concider following us on YouTube on <a rel="external" href="#">youtube.com/nemeorg</a>, or view our channel feed in this site.</p>
+	<p class="centre"><a rel="external" href="#">Watch here</a></p>
+	<p class="centre"><a rel="external" href="#">YouTube’s privacy policy.</a><p>
+</div>
+</div>
+
+<div id="social">
+<div class="container">
+	<txp:output_form form="social_just" />
+</div>
+</div>
+
+<footer>
+<div class="container">
+	<div>
+		<p>This site archives <txp:article_custom section="projects,about,blog,texts" pageby="1" pgonly escape="number" /> posts since NeMe was founded <txp:fha_time_diff year="2004" month="11" day="18" /> ago. It was last modified on <txp:article_custom section="projects,texts,blog,about" sort="LastMod desc" limit="1" form=""> <txp:modified format="%d %B %G 'at' %I:%M:%S %p" />.</txp:article_custom></p>
+	</div>
+	<div>
+		<form action="<txp:php> echo $_SERVER['PHP_SELF'];</txp:php>" id="search" method="post"  class="nosmall" role="search" itemscope itemtype="https://schema.org/SearchAction">
+			<fieldset>
+				<legend>Search</legend>
+				<input type="hidden" value="all" name="m">
+				<label for="site">Site
+					<select id="site" name="site">
+						<txp:php>
+							// simple way to auto-generate <options>
+								$sites = array(
+								// site title => url/?q=
+								'NeMe' => 'https://www.neme.org?m=all&amp;q=',
+								'A Sea Change' => 'https://a-sea-change.net/search/?q=',
+								'Toolkit of Care' => 'https://toolkitof.care/?m=any&amp;q='
+								);
+								// asort($sites);
+								foreach ($sites as $title => $url) {
+									echo '<option value="'.$url.'">'.$title.'</option>';
+								};
+
+							</txp:php>
+					</select>
+				</label>
+				<label class="accessibility hidden" for="terms" aria-hidden="false">Search</label>
+				<input id="terms" name="terms" type="text" value="<txp:page_url type="q" />" itemprop="query-input" placeholder="Search">
+				<input name="submit" type="submit" value="search" id="searchbutton">
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+<div class="licence">
+<txp:if_logged_in><p class="centre">Standards: <a href="http://wave.webaim.org/refer" rel="nofollow">Accessibility</a>, <a href="http://feedvalidator.org/check.cgi?url=<txp:site_url />rss/" rel="nofollow">RSS</a>, <a href="http://feedvalidator.org/check.cgi?url=<txp:site_url />atom/" rel="nofollow">ATOM</a>, <a href="http://validator.w3.org/check?uri=referer" rel="nofollow">HTML5</a>, <a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.neme.org%2Fcss%2Fneme960%2Fdefault.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" rel="nofollow">CSS</a> 
+<txp:if_search>
+<txp:else />
+<txp:if_article_list>
+<txp:if_section name="">
+and <a rel="nofollow" href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.neme.org">optimisation</a>
+<txp:else />
+and <a rel="nofollow" href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.neme.org%2F<txp:section />%2F<txp:category1 />%2F">optimisation</a>
+</txp:if_section>
+<txp:else />
+and <a rel="nofollow" href="https://developers.google.com/speed/pagespeed/insights/?url=<txp:permlink />">optimisation</a>
+</txp:if_article_list>
+</txp:if_search>.</p></txp:if_logged_in>
+<p class="centre"><a href="<txp:site_url />about/privacy-policy" rel="license">Privacy policy</a> <txp:article_custom id="2178">(Modified on <txp:modified format="%d %B %G 'at' %r" />)</txp:article_custom>.</p>
+<p class="centre">&copy; 2004-2024 NeMe.</p>
+</div>
+</footer>
+
+<txp:output_form form="merged.js" format="flat.script" />
+
+</body>
+</html>
