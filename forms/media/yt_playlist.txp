@@ -1,0 +1,3 @@
+<txp:if_yield name="setcookie" value="1"><txp:oui_cookie name="accept_youtube" duration="+1 year" values="yes" /></txp:if_yield>
+<div class="embed-container"<txp:if_yield name="id"> id="<txp:yield name="id" />"</txp:if_yield><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=<txp:yield name="id" />" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+<noscript><div class="announce"><p>JavaScript is currently disabled in your browser. Activate it for the best experience.</p></div></noscript>
