@@ -1,0 +1,6 @@
+<div class="accordion-item" id="year_<txp:yield item="breakby" />">
+<a href="#year<txp:yield item="breakby" />" class="accordion-header"><txp:yield item="breakby" /></a>
+<div class="accordion-content">
+<ul><+></ul>
+</div>
+</div>
