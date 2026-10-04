@@ -1,0 +1,73 @@
+# http://humanstxt.org
+# The humans responsible and
+# technology colophon
+
+# TEAM
+
+  Developer: The NeMe team
+  Site: https://www.neme.org/
+  Location: Limassol, Cyprus
+
+# Social Media
+
+  Twitter: https://x.com/nemeorg/
+  Instagram: https://instagram.com/nemeorg/
+  Facebook: https://www.facebook.com/nemeorg/
+  BlueSky: https://bsky.app/profile/nemeorg.bsky.social
+  Mastodon: https://mastodon.social/@nemeorg
+  Upscrolled: https://upscrolled.com/@nemeorg
+  YouTube: https://youtube.com/nemeorg
+
+# TEAM
+
+  Editos & URLs:
+    Yiannis Colakides, https://www.neme.org
+    Helene Black, https://hblack.art
+
+# TECHNOLOGY COLOPHON
+
+  Standards: HTML5, CSS3, Javascript, ARIA, RSS, Atom
+  Server: Apache, MySQL, PHP
+
+  Components:
+    Software: Textpattern CMS, https://textpattern.com/
+    Site source: https://github.com/colak/neme
+    PHP-Textile: https://github.com/textile/php-textile
+    echarts.js: https://echarts.apache.org/
+
+
+MNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNM
+Mh  ``````````                 `````````   ``````````````````````   hM
+Mh .MMMMMMMMMN-                oMMMMMMMM: sMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMMMm`               oMMMMMMMM: sMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMMMMd`              oMMMMMMMM: sMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMMMMMy              oMMMMMMMM: .----------------dMMMMMo  hM
+Mh .MMMMMMMMMMMMMo             oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMMMMMMM:            oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMMMMMMMN-           oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMMMMMMMMm`          oMMMMMMMM: -++++++++++++++++mMMMMMo  hM
+Mh .MMMMMMMMMMMMMMMMh          oMMMMMMMM: sMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMymMMMMMMMs         oMMMMMMMM: sMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMs.NMMMMMMM+        oMMMMMMMM: +ddddddddddddddddNMMMMMo  hM
+Mh .MMMMMMMMs :MMMMMMMN:       oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMs  +MMMMMMMN.      oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMs   sMMMMMMMm`     oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMs    hMMMMMMMh     oMMMMMMMM:                  hMMMMMo  hM
+Mh .MMMMMMMMs    `mMMMMMMMs    oMMMMMMMM: ommmmmmmmmmmmmmmmNMMMMMo  hM
+Mh .MMMMMMMMs     .NMMMMMMM+   oMMMMMMMM: oMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMs      :MMMMMMMN:  oMMMMMMMM: oMMMMMMMMMMMMMMMMMMMMMMo  hM
+Mh .MMMMMMMMs       +MMMMMMMN. oMMMMMMMM: :++++++++++++++++++++++-  hM
+Mh .MMMMMMMMs        sMMMMMMMd`oMMMMMMMM: ``````      ````````````  hM
+Mh .MMMMMMMMs         hMMMMMMMhoMMMMMMMM: oMMMMN`    -MMMMMMMMMMMo  hM
+Mh .MMMMMMMMs         `mMMMMMMMNMMMMMMMM: oMMMMM/    sMMMMMNmmmmm+  hM
+Mh .MMMMMMMMs          .NMMMMMMMMMMMMMMM: oMMmmMh    NMhMMM-        hM
+Mh .MMMMMMMMs           :MMMMMMMMMMMMMMM: oMMmoMM`  :MM+MMM-        hM
+Mh .MMMMMMMMs            +MMMMMMMMMMMMMM: oMMm-MM+  yMm-MMMysssss:  hM
+Mh .MMMMMMMMs             yMMMMMMMMMMMMM: oMMm dMd `NMo.MMMMMMMMMo  hM
+Mh .MMMMMMMMs              hMMMMMMMMMMMM: oMMm oMM-/MM..MMMo/////.  hM
+Mh .MMMMMMMMs              `mMMMMMMMMMMM: oMMm .MMshMd .MMM-        hM
+Mh .MMMMMMMMs               .NMMMMMMMMMM: oMMm  hMNMM+ .MMM:``````  hM
+Mh .MMMMMMMMs                :MMMMMMMMMM: oMMm  +MMMN. .MMMMMMMMMo  hM
+Mh .mmmmmmmmo                 +mmmmmmmmm: +mmh  `mmmy  .mmmmmmmmm+  hM
+Mh                                                                  hM
+MNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNM

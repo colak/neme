@@ -1,0 +1,20 @@
+# NeMe Extended Archive Index
+
+> This document provides an automated full-text inventory map of all archived nodes, texts, publications, and exhibition projects hosted on the NeMe network.
+
+## About NeMe<txp:article_custom section="about" exclude="2001,2189,2190,2240,2241,2372" limit="9999" status="live">
+- <txp:title />: <txp:permlink /></txp:article_custom>
+
+## Critical Texts Archive<txp:article_custom section="texts" limit="9999" status="live">
+- <txp:title />: <txp:permlink /></txp:article_custom>
+
+## Book Publications Repository
+- Mentions: https://www.neme.org/publications/mentioned/
+- Citations: https://www.neme.org/publications/cited/<txp:article_custom section="publications" limit="9999" status="live">
+- <txp:title />: <txp:permlink /></txp:article_custom>
+
+## Projects & Exhibitions Archive<txp:article_custom section="projects" exclude="2001,2189,2190,2240,2241,2372" limit="9999" status="live">
+- <txp:title />: <txp:permlink /></txp:article_custom>
+
+## Latest 25 Blog, Calls, & Event Announcements<txp:article_custom section="blog" limit="25" status="live">
+- <txp:title />: <txp:permlink /></txp:article_custom>

@@ -1,0 +1,336 @@
+# NeMe Extended Archive Index
+
+> This document provides an automated full-text inventory map of all archived nodes, texts, publications, and exhibition projects hosted on the NeMe network.
+
+## About NeMe
+- AI Transparency Policy: https://www.neme.org/about/ai-transparency-policy
+- About this site: https://www.neme.org/about/about-this-site
+- Statistics: https://www.neme.org/about/statistics
+- Legacy: https://www.neme.org/about/legacy
+- Cookies: https://www.neme.org/about/cookies
+- Privacy Policy: https://www.neme.org/about/privacy-policy
+- NeMe Arts Centre: https://www.neme.org/about/neme-arts-centre
+- Workshops: https://www.neme.org/about/workshops
+
+## Critical Texts Archive
+- Our insurrection will not be televised: https://www.neme.org/texts/our-insurrection-will-not-be-televised
+- Biomimetics and shifting languages: computation to aid nature: https://www.neme.org/texts/biomimetics-and-shifting-languages
+- Recombinant text and narrative: https://www.neme.org/texts/recombinant-text-and-narrative
+- Sentient Text: https://www.neme.org/texts/sentient-text
+- The Concept of Material Practice: a transdiscursive inquiry: https://www.neme.org/texts/the-concept-of-material-practice
+- Text is Mortal: https://www.neme.org/texts/text-is-mortal
+- Visual Culture in the Age of Google: https://www.neme.org/texts/visual-culture-in-the-age-of-google
+- &#39;The Newest in What is Oldest&#39;: https://www.neme.org/texts/the-newest-in-what-is-oldest
+- Text is not Static: https://www.neme.org/texts/text-is-not-static
+- Creativity and other fundamentalisms: https://www.neme.org/texts/creativity-and-other-fundamentalisms
+- Terra - Terror - Territory: https://www.neme.org/texts/terra-terror-territory
+- Not(es) on participation: https://www.neme.org/texts/notes-on-participation
+- Differentiating between access, interaction and participation: https://www.neme.org/texts/differentiating-between-access-interaction-and-participation
+- Neocolonial Parapraxis: https://www.neme.org/texts/neocolonial-parapraxis
+- Name Changer: https://www.neme.org/texts/name-changer
+- A Sound Projectile Behind the Light: https://www.neme.org/texts/a-sound-projectile-behind-the-light
+- Revisiting Inarticulacy: https://www.neme.org/texts/revisiting-inarticulacy
+- A Noise Reduction Pass on the Concept of Media: https://www.neme.org/texts/noise-reduction-pass
+- Digital and Analogue: https://www.neme.org/texts/digital-and-analog
+- 50 Shades of Red: https://www.neme.org/texts/50-shades-of-red
+- Artistic gesture: expression, communication, participation: https://www.neme.org/texts/artistic-gesture
+- From Film to Interactive Art: https://www.neme.org/texts/from-film-to-interactive-art
+- Avant Garde and Creative Industry: https://www.neme.org/texts/avant-garde-and-creative-industry
+- Speaking Clown to Power: https://www.neme.org/texts/speaking-clown-to-power
+- Let&#39;s do it again comrades, let&#39;s occupy the museum!: https://www.neme.org/texts/lets-occupy-the-museum
+- Metadesigning for the Future - Gene Youngblood: https://www.neme.org/texts/metadesigning-for-the-future
+- art@science: https://www.neme.org/texts/artscience
+- (AUDIO)VISUAL LABYRINTHS: https://www.neme.org/texts/audiovisual-labyrinths
+- Lisbon Sound Map: https://www.neme.org/texts/lisbon-sound-map
+- Deep Space: Text, interaction and the new space: https://www.neme.org/texts/deep-space
+- The Aesthetics of Reason and Care: https://www.neme.org/texts/the-aesthetics-of-reason-and-care
+- Orlan, Stelarc and the Art of the Virtual Body: https://www.neme.org/texts/the-art-of-the-virtual-body
+- Theorising New Media in a Global Context;: https://www.neme.org/texts/theorizing-new-media
+- Narrative Archaeology: https://www.neme.org/texts/narrative-archaeology
+- Generative Architecture: https://www.neme.org/texts/generative-architecture
+- The &#34;Hidden Homeless&#34; in Japan&#39;s Contemporary Mobile Culture: https://www.neme.org/texts/hidden-homeless
+- Freedom, Control and Confusion in the Art Gallery: https://www.neme.org/texts/freedom-control-and-confusion
+- The popularisation of video art: https://www.neme.org/texts/the-popularization-of-video-art
+- Hmong In Transition: https://www.neme.org/texts/hmong-in-transition
+- Critique of Software Security: https://www.neme.org/texts/critique-of-software-security
+- Malleable World: https://www.neme.org/texts/malleable-world
+- The Future Is Here: https://www.neme.org/texts/the-future-is-here
+- The world of tags: https://www.neme.org/texts/the-world-of-tags
+- Obdurate Love: https://www.neme.org/texts/obdurate-love
+- Complex Urbanism: https://www.neme.org/texts/complex-urbanism
+- Philosophy after Drawing: https://www.neme.org/texts/philosophy-after-drawing
+- The dream was of a perfect line: https://www.neme.org/texts/dream
+- Writing Within the Map: https://www.neme.org/texts/writing-within-the-map
+- The Disappearance of Signs in a Landscape of Deceptions: https://www.neme.org/texts/the-disappearance-of-signs
+- Thoughts on Participatory Art: https://www.neme.org/texts/thoughts
+- Locative Media and Spatial Narratives: https://www.neme.org/texts/locative-media-and-spatial-narratives
+- Rhizomatic Cartography: https://www.neme.org/texts/rhizomatic-cartography
+- Delaying Demolition: https://www.neme.org/texts/delaying-demolition
+- Immersive Event Time: https://www.neme.org/texts/immersive-event-time
+- The Decision and the Gap: https://www.neme.org/texts/the-decision-and-the-gap
+- The Archival Event: https://www.neme.org/texts/the-archival-event
+- Form Follows Data: https://www.neme.org/texts/form-follows-data
+- Some Thoughts About &#34;New Media&#34; in Quotes: https://www.neme.org/texts/some-thoughts
+- I Am Sorry: The Exhibition Has Been Censored by the Artist: https://www.neme.org/texts/censored
+- The Book Scales: https://www.neme.org/texts/book-scales
+- Hot to Bot: https://www.neme.org/texts/hot-to-bot
+- Shaken hands with statues...: https://www.neme.org/texts/shaken-hands-with-statues
+- Immersive Sight Within the Third Space: https://www.neme.org/texts/immersive-sight
+- Tele-Agency: Telematics, Telerobotics, and the Art of Meaning: https://www.neme.org/texts/tele-agency
+- The New New: video art in the 21st century: https://www.neme.org/texts/the-new-new
+- Trouble at the Interface 2.0: https://www.neme.org/texts/trouble-at-the-interface-2
+- Challenges for a Ubiquitous Museum: https://www.neme.org/texts/preserving-new-media
+- Environmental Awareness through Eco-visualisation: https://www.neme.org/texts/environmental-awareness
+- Collecting New Media Art: Just Like Anything Else, Only Different: https://www.neme.org/texts/collecting-new-media-art
+- The Work of Artists in a Databased Society: net.art as on-line activism: https://www.neme.org/texts/databased-society
+- Unframed Landscapes: Nature in Contemporary Art: https://www.neme.org/texts/unframed-landscapes
+- Words as Landscape: https://www.neme.org/texts/words-as-landscape
+- Manifesta 6 - a cautionary tale: https://www.neme.org/texts/a-cautionary-tale
+- Abstraction, evacuation of resistance and sensualisation of emptiness: https://www.neme.org/texts/abstraction
+- Knowing Bodies - Feminist issues in health care, medicine, and biotechnology: https://www.neme.org/texts/knowing-bodies
+- In search of a balanced view: https://www.neme.org/texts/in-search-of-a-balanced-view
+- Stolen Rhetoric: The Appropriation of Choice by ART Industries: https://www.neme.org/texts/stolen-rhetoric
+- Robotic Art Chronology: https://www.neme.org/texts/robotic-art-chronology
+- Where is Feminism in Cyberfeminism?: https://www.neme.org/texts/cyberfeminism
+- Biopoetry: https://www.neme.org/texts/biopoetry
+- NEWS FROM NOWHERE: https://www.neme.org/texts/news-from-nowhere
+- The Matrix: Morpheus in Exile: https://www.neme.org/texts/the-matrix-morpheus-in-exile
+- DARK MATTER - Activist Art and the Counter-Public Sphere: https://www.neme.org/texts/dark-matter
+- Principia Anaesthetica, Future dimensions after the vanishing point: https://www.neme.org/texts/principia-anaesthetica
+- Leaps of Faith: https://www.neme.org/texts/leaps-of-faith
+- Disciplining The Avant-Garde, The United States versus The Critical Art Ensemble: https://www.neme.org/texts/disciplining-the-avant-garde
+- Anarchism, Representation, and Culture: https://www.neme.org/texts/anarchism-representation-and-culture
+- Nostalgic Technology: Notes for an Off-modern Manifesto: https://www.neme.org/texts/nostalgic-technology
+- Analytic Of The Dimensionless, Towards A Prolegomena For Any Future Materialism: https://www.neme.org/texts/analytic-of-the-dimensionless
+- A HACKER MANIFESTO [version 4.0]: https://www.neme.org/texts/hacker-manifesto
+- OK TEXTS: https://www.neme.org/texts/ok-texts
+- Post Human? All Too Human: https://www.neme.org/texts/post-human
+- Pragmatic Media Philosophy and the Internet: https://www.neme.org/texts/pragmatic-media-philosophy
+- Planning for the Future or what our village needs now: https://www.neme.org/texts/planning-for-the-future
+- Negotiating Identities: https://www.neme.org/texts/negotiating-identities
+- Mechanism Independent: https://www.neme.org/texts/mechanism-independent
+- Aer( )sculpture, Using a Space Material as a Sculptural Medium: https://www.neme.org/texts/aerosculpture
+- Prosthetic Head: Intelligence, Awareness and Agency: https://www.neme.org/texts/prosthetic-head
+- The Erasure of Technology in Cultural Critique: https://www.neme.org/texts/erasure-of-technology-in-cultural-critique
+- Suspended Bodies - Uncertain, Anxious and Obsolete: https://www.neme.org/texts/suspended-bodies
+- FROM ZOMBIE TO CYBORG BODIES - Extra Ear, Exoskeleton and Avatars: https://www.neme.org/texts/from-zombie-to-cyborg
+- Poetic Terrorism: https://www.neme.org/texts/poetic-terrorism
+- The Artist as Public Intellectual: https://www.neme.org/texts/the-artist-as-public-intellectual
+- 28th August 2030: https://www.neme.org/texts/2030
+- Jelena Vesic interviews Charles Esche: https://www.neme.org/texts/charles-esche
+- Collectivity, Modest proposals and Foolish Optimism: https://www.neme.org/texts/collectivity
+- Mobile Utopia: https://www.neme.org/texts/mobile-utopia
+- Remarks on modernity, mobility, nomadism and the arts: https://www.neme.org/texts/nomadism
+- The Myth of the Centre: https://www.neme.org/texts/the-myth-of-the-center
+- FAQ Digital Work: https://www.neme.org/texts/faq-digital-work
+- Giving is Receiving: https://www.neme.org/texts/giving-is-receiving
+- Abstraction and Complexity: https://www.neme.org/texts/abstraction-and-complexity
+- Why Have There Been No Great Net Artists?: https://www.neme.org/texts/why-have-there-been-no-great-net-artists
+- Millenium Museum Journal: https://www.neme.org/texts/millenium-museum-journal
+- What is, in the context of contemporary art, your vision of a future art? or Future as Context: https://www.neme.org/texts/future-as-context
+- OPEN CITY - stepping in from the edge: https://www.neme.org/texts/open-city
+
+## Book Publications Repository
+- Mentions: https://www.neme.org/publications/mentioned/
+- Citations: https://www.neme.org/publications/cited/
+- Critical Networks of Care: https://www.neme.org/publications/participations/critical-networks-of-care
+- BiblioTech: https://www.neme.org/publications/bibliotech-book
+- Frankenstein Reanimated: https://www.neme.org/publications/frankenstein-reanimated-book
+- A Sea Change: https://www.neme.org/publications/participations/a-sea-change-book
+- Iconoclastic Controversies: https://www.neme.org/publications/participations/iconoclastic-controversies-book
+- State Machines: https://www.neme.org/publications/participations/state-machines-publication
+- The Idea of the Avant Garde: https://www.neme.org/publications/idea-of-the-avant-garde
+- The New Dark Age: https://www.neme.org/publications/participations/the-new-dark-age
+- Respublika!: https://www.neme.org/publications/respublika-book
+- Through the Roadblocks: https://www.neme.org/publications/through-the-roadblocks-programme
+- Hybrid City 2015: https://www.neme.org/publications/participations/yk-emx-2425
+- Through the Roadblocks: https://www.neme.org/publications/through-the-roadblocks-exhibition-catalogue
+- 6pm your local time europe: https://www.neme.org/publications/participations/6pm-your-local-time-europe
+- Heidelberger Kunstverein: https://www.neme.org/publications/participations/heidelberger-kunstverein
+- Through the Roadblocks: https://www.neme.org/publications/through-the-roadblocks-curators-abroad
+- Through the Roadblocks: https://www.neme.org/publications/through-the-roadblocks-reader
+- The Elder Paints An Icon: https://www.neme.org/publications/the-elder-paints-an-icon
+- Nobody knows: https://www.neme.org/publications/nobody-knows
+- The Dead Travel Fast: https://www.neme.org/publications/the-dead-travel-fast
+- Ancient Whispers: https://www.neme.org/publications/ancient-whispers-catalogue
+- ISEA2011, Istanbul: https://www.neme.org/publications/participations/isea2011-istanbul-proceedings
+- MADATAC: VIDEO ARtMY: https://www.neme.org/publications/participations/madatac-video-artmy
+- 2A Magazine: https://www.neme.org/publications/participations/2a-magazine
+- In Transition: https://www.neme.org/publications/in-transition-2008-conference
+- In Transition Russia 2008: https://www.neme.org/publications/in-transition-russia-2008-catalogue
+- A gardener at midnight: https://www.neme.org/publications/a-gardener-at-midnight
+- The Mirror Stage: https://www.neme.org/publications/the-mirror-stage-catalogue
+- Isolomania: https://www.neme.org/publications/isolomania-catallogue
+- YK: EMX: https://www.neme.org/publications/participations/yk-emx
+- Art in Nicosia: https://www.neme.org/publications/participations/art-in-nicosia
+- In Transition Cyprus 2006: https://www.neme.org/publications/in-transition-cyprus-book
+
+## Projects & Exhibitions Archive
+- AI &amp; Critical Play: https://www.neme.org/projects/ai-critical-play
+- Power Lines: https://www.neme.org/projects/power-lines
+- Mesaoría: https://www.neme.org/projects/hosted/mesaoria
+- Ask Pay Trust: https://www.neme.org/projects/participations/ask-pay-trust
+- Libre Arts: https://www.neme.org/projects/hosted/libre-arts
+- F.U.C.K-SD. presentation at NeMe: https://www.neme.org/projects/emap/fucksd
+- Subversive, Investigative, and Open Source Practices: https://www.neme.org/projects/participations/subversive-investigative-and-open-source-practices
+- Decentralised networks of care: https://www.neme.org/projects/toolkit-of-care/dnc
+- Veiling Identities: https://www.neme.org/projects/veiling-identities
+- Algorithms of Power: https://www.neme.org/projects/algorithms-of-power
+- Palestinian Independent Film Festival 2025: https://www.neme.org/projects/hosted/piff-2025
+- rethinking the presentation of generative artworks: https://www.neme.org/projects/presentation-of-generative-art
+- metaphor and Narrative: https://www.neme.org/projects/hosted/metaphor-and-narrative
+- Designing Disobedience: https://www.neme.org/projects/designing-disobedience
+- Badly Behaved Biotech-Feminist Subversions: https://www.neme.org/projects/badly-behaved-biotech
+- Other Intelligences / Other Natures: https://www.neme.org/projects/other-intelligence-other-natures
+- Archiving Care: https://www.neme.org/projects/toolkit-of-care/archiving-care
+- Primitive Modes: https://www.neme.org/projects/hosted/primitive-modes
+- AI and Art: https://www.neme.org/projects/hosted/ai-and-art
+- Rosemary Lee: https://www.neme.org/projects/emap/rosemary-lee
+- fragments and the Narrative: https://www.neme.org/projects/hosted/fragments-and-the-narrative
+- State of Matter is a State of Mind: https://www.neme.org/projects/a-sea-change/state-of-matter-is-a-state-of-mind
+- EMAP network meeting: https://www.neme.org/projects/emap/network-meeting-2024
+- Palestinian Independent Film Festival 2024: https://www.neme.org/projects/hosted/piff2024
+- Media (Art) and Politics: https://www.neme.org/projects/emap/media-art-politics
+- MoneyLab#13 - Krypto: Decrypting the Artist: https://www.neme.org/projects/moneylab13
+- Sea blindness: https://www.neme.org/projects/a-sea-change/sea-blindness
+- Living with others: https://www.neme.org/projects/a-sea-change/living-with-others
+- Paul O&#39; Neill: https://www.neme.org/projects/emap/paul-o-neill
+- Non-machines: Playground of Perspectives: https://www.neme.org/projects/participations/non-machines
+- Interfacing life: https://www.neme.org/projects/emap/interfacing-life
+- Data for Care: https://www.neme.org/projects/toolkit-of-care/data-for-care
+- UNLAND: https://www.neme.org/projects/unland
+- Sharing Care: https://www.neme.org/projects/toolkit-of-care/sharing-care
+- The LAR Chronicles: https://www.neme.org/projects/hosted/the-lar-chronicles
+- Money, Ruins, and the Sea: https://www.neme.org/projects/a-sea-change/money-ruins-and-the-sea
+- Rosa Menkman: https://www.neme.org/projects/emap/rosa-menkman
+- Flood Tide of Resistance: https://www.neme.org/projects/a-sea-change/flood-tide-of-resistance
+- BiblioTech: https://www.neme.org/projects/bibliotech
+- The FOREST: https://www.neme.org/projects/hosted/the-forest
+- Through the Mesh: Media, Borders, and Firewalls: https://www.neme.org/projects/through-the-mesh
+- Rose Butler: Research &amp; methods of art practice: https://www.neme.org/projects/rose-butler-research-methods-of-art-practice
+- Working towards our own obsolescence: https://www.neme.org/projects/working-towards-our-own-obsolescence
+- Reprogramming earth: https://www.neme.org/projects/reprogramming-earth
+- The Event of a Thread. Global Narratives in Textiles: https://www.neme.org/projects/hosted/the-event-of-a-thread
+- Jonas Lund and Elisa Lasowski: https://www.neme.org/projects/jonas-lund-and-elisa-lasowski
+- Children of Prometheus: https://www.neme.org/projects/children-of-prometheus
+- 1s and 0s, haves and have-nots: https://www.neme.org/projects/1s-and-0s-haves-and-have-nots
+- Through Other Eyes: https://www.neme.org/projects/through-other-eyes
+- International Cyprus Poster Triennial 2019: https://www.neme.org/projects/hosted/cpt-2019
+- Exit Strategy: https://www.neme.org/projects/hosted/exit-strategy
+- Self as Actor: Colonising identity: https://www.neme.org/projects/state-machines/self-as-actor
+- Stateless: https://www.neme.org/projects/state-machines/stateless
+- The State: https://www.neme.org/projects/hosted/the-state
+- The Idea of the Avant Garde: https://www.neme.org/projects/the-idea-of-the-avant-garde
+- reality distortion field: https://www.neme.org/projects/reality-distortion-field
+- See you hear: https://www.neme.org/projects/hosted/see-you-hear
+- (DIWO) from the web to the blockchain: https://www.neme.org/projects/state-machines/diwo-from-the-web-to-the-blockchain
+- New Imaginaries for Crypto Design: https://www.neme.org/projects/state-machines/new-imaginaries-for-crypto-design
+- Participation Matters: https://www.neme.org/projects/respublika/exhibitions/participation-matters
+- About Respublika!: https://www.neme.org/projects/respublika/about-respublika
+- Participation, Active Citizenship and Community Media: https://www.neme.org/projects/respublika/seminars/participation-active-citizenship-and-community-media
+- About the R! team: https://www.neme.org/projects/respublika/about-the-r-team
+- Gritos en el cielo: https://www.neme.org/projects/gritos-en-el-cielo
+- Life:Moving: https://www.neme.org/projects/respublika/exhibitions/lifemoving
+- It&#39;s Good to Know: https://www.neme.org/projects/respublika/screenings/it-s-good-to-know
+- The Party of the Housing Dream: https://www.neme.org/projects/respublika/screenings/the-party-of-the-housing-dream
+- Illuminated Night Ride: https://www.neme.org/projects/respublika/performances/illuminated-night-ride
+- Community Spectradio: https://www.neme.org/projects/respublika/performances/community-spectradio
+- Social Sculpture: https://www.neme.org/projects/respublika/performances/social-sculpture
+- All Sources Are Broken: https://www.neme.org/projects/respublika/performances/all-sources-are-broken
+- WolFMoon: https://www.neme.org/projects/respublika/performances/wolfmoon
+- What is it about?!: https://www.neme.org/projects/respublika/performances/what-is-it-about
+- Monitorial Citizen: the ordinary witness: https://www.neme.org/projects/state-machines/monitorial-citizen
+- Open Community - Open Networks: https://www.neme.org/projects/respublika/exhibitions/open-community-open-networks
+- Unbuilding Citizenship: https://www.neme.org/projects/state-machines/unbuilding-citizenship
+- Community media, Community art production and Democratic knowledge: https://www.neme.org/projects/respublika/seminars/art-production-and-democratic-knowledge
+- &#34;…&#34; an archeology of silence in the digital age: https://www.neme.org/projects/respublika/seminars/an-archeology-of-silence-in-the-digital-age
+- Tools for the Next Revolution: https://www.neme.org/projects/respublika/workshops/tools-for-the-next-revolution
+- Motivwv1.1: https://www.neme.org/projects/respublika/workshops/motivwv11
+- R! Festival programme: https://www.neme.org/projects/respublika/r-festival-programme
+- Phenomenological Lightworks: https://www.neme.org/projects/phenomenological-lightworks
+- Improper Names: https://www.neme.org/projects/state-machines/improper-names
+- The art of community media organisations: https://www.neme.org/projects/respublika/archive/art-community-media-organisations
+- Why community media? A bit more context and references: https://www.neme.org/projects/respublika/archive/why-community-media
+- Ambiguous bodies: timeless interpretations: https://www.neme.org/projects/ambiguous-bodies
+- (b)orders: https://www.neme.org/projects/borders
+- Sublime/Internal/Subliminal: https://www.neme.org/projects/hosted/sublime-internal-subliminal
+- Urban Emptiness: https://www.neme.org/projects/urban-emptiness
+- The Annunciation: https://www.neme.org/projects/the-annunciation
+- Scale matters: https://www.neme.org/projects/scale-matters
+- nEUROsis: https://www.neme.org/projects/neurosis
+- Beneficial Parasites: https://www.neme.org/projects/beneficial-parasites
+- Remaking Cosmopolitanism: https://www.neme.org/projects/remaking-cosmopolitanism
+- Iconoclastic Controversies: https://www.neme.org/projects/iconoclastic-controversies
+- IDIOSYNCRASIES.CY: https://www.neme.org/projects/idiosyncrasies-cy
+- Two Worlds: https://www.neme.org/projects/two-worlds
+- Hybrid City 2015: https://www.neme.org/projects/participations/hybrid-city-2015
+- SHORT MATTERS!: https://www.neme.org/projects/hosted/short-matters
+- 6pm your local time - Cyprus: https://www.neme.org/projects/participations/6pm-your-local-time-cyprus
+- dis-LOCATE: https://www.neme.org/projects/dis-locate
+- Video is the medium: https://www.neme.org/projects/video-is-the-medium
+- Cinematic Ammunition: The Visual Impact of Global Unrest: https://www.neme.org/projects/cinematic-ammunition
+- It&#39;s the Political Economy, Stupid: https://www.neme.org/projects/itpes
+- Q.E.D.: https://www.neme.org/projects/qed
+- Right Brain Problems: https://www.neme.org/projects/ttr/ttr2-right-brain-problems
+- A Pound of Flesh: https://www.neme.org/projects/a-pound-of-flesh
+- Trimming the Arts: https://www.neme.org/projects/trimming-the-arts
+- Through the Roadblocks - Stage 3: https://www.neme.org/projects/ttr/through-the-roadblocks
+- All the other lovers: https://www.neme.org/projects/ttr/ttr2-all-the-other-lovers
+- From Hand to Hand Project: https://www.neme.org/projects/ttr/ttr2-hand-to-hand
+- Lemesos Documentary Film Festival 2012: https://www.neme.org/projects/ttr/ttr2-lemesos-documentary-film-festival
+- The Ties of the Transitory: https://www.neme.org/projects/ttr/ttr2-ties-of-the-transitory-seminar
+- Bound: https://www.neme.org/projects/ttr/ttr2-bound
+- Inter Alios: https://www.neme.org/projects/ttr/ttr2-inter-alios
+- Nomadism and Trans-cities: https://www.neme.org/projects/ttr/ttr2-nomadism-and-trans-cities
+- Everybody Knows this is Nowhere: https://www.neme.org/projects/ttr/ttr2-everybody-knows-this-is-nowhere
+- Art, Culture, Memory and Trauma: https://www.neme.org/projects/ttr/ttr2-art-culture-memory-and-trauma
+- Famagusta/Varosha: Damnatio Memoriae: https://www.neme.org/projects/ttr/ttr2-re-collecting-city-re-collecting-time
+- Art Funding and Politics: https://www.neme.org/projects/participations/art-funding-and-politics
+- ISEA 2011: https://www.neme.org/projects/participations/isea2011
+- Ancient Whispers: https://www.neme.org/projects/ancient-whispers
+- MADATAC II: https://www.neme.org/projects/participations/madatac-ii
+- Through the Roadblocks - Stage 1: https://www.neme.org/projects/ttr/through-the-roadblocks-stage-1
+- 2nd Subversive Festival: https://www.neme.org/projects/participations/subversive-festival-2
+- Margins of Time: https://www.neme.org/projects/margins-of-time
+- IDEODROME 2006-2009: https://www.neme.org/projects/participations/ideodrome-2006-2009
+- IDEODROME 2009: https://www.neme.org/projects/ideodrome-2009
+- Eric Lloyd Wright: Working with Nature: https://www.neme.org/projects/eric-lloyd-wright-working-with-nature
+- Rencontres Internationales 2009: https://www.neme.org/projects/participations/rencontres-internationales-2009
+- e-MobilArt: https://www.neme.org/projects/participations/e-mobilart
+- In Transition Russia 2008: https://www.neme.org/projects/in-transition-russia-2008
+- Cor Unum: https://www.neme.org/projects/cor-unum
+- IDEODROME 2008: https://www.neme.org/projects/ideodrome-2008
+- The Mirror Stage: https://www.neme.org/projects/the-mirror-stage
+- ... SO NOW WHAT: https://www.neme.org/projects/participations/so-now-what
+- ISOLOMANIA: https://www.neme.org/projects/participations/isolomania
+- IDEODROME at NiMAC: https://www.neme.org/projects/participations/ideodrome-at-nimac
+- IDEODROME 2007: https://www.neme.org/projects/ideodrome-2007
+- IDEODROME 2006: https://www.neme.org/projects/ideodrome-2006
+- In Transition Cyprus 2006: https://www.neme.org/projects/in-transition-cyprus-2006
+
+## Latest 25 Blog, Calls, & Event Announcements
+- October 2026 at NeMe: https://www.neme.org/blog/october-2026-at-neme
+- EMAP Residencies 2027 - Open call: https://www.neme.org/blog/emap-residencies-2027
+- Goodbye to Vimeo: https://www.neme.org/blog/goodbye-to-vimeo
+- César Escudero Andaluz, 2026 EMAP residency: https://www.neme.org/blog/cesar-2026-emap-residency
+- EMAP announces 15 artists for the 2026 residency programme: https://www.neme.org/blog/emap-2026-residencies
+- Decentralised networks of care: https://www.neme.org/blog/dmc-press
+- Open Calls 2026: https://www.neme.org/blog/open-calls-2026
+- Subversive, Investigative, and Open Source Practices: https://www.neme.org/blog/siosp
+- EMAP Residencies 2026 – Open Call: https://www.neme.org/blog/emap-2026-open-call
+- Decentralised networks of care: https://www.neme.org/blog/dnc-call
+- Veiling Identities: https://www.neme.org/blog/veiling-identities-press
+- Algorithms of Power: https://www.neme.org/blog/algorithms-of-power-press
+- Translation of our content to Greek: https://www.neme.org/blog/translation-of-our-content-to-greek
+- Open letter to the President: https://www.neme.org/blog/open-letter-to-the-president
+- Objections to the proposed legislation on tax incentives for cultural donations: https://www.neme.org/blog/proposed-legislation-on-tax-incentives
+- Open letter: freedom of speech, opinion, and creativity: https://www.neme.org/blog/freedom-of-speech
+- Open Call for Exhibition Curation 2027: https://www.neme.org/blog/open-call-for-exhibition-curation-2027
+- A call to the European Parliament, the European Commission, and Member States: https://www.neme.org/blog/european-parliament-european-commission
+- Open Letter to the Deputy Ministry of Culture: https://www.neme.org/blog/open-letter-to-the-deputy-ministry-of-culture-2
+- Cyprus Tech Policy Unconference - ReFLOSS edition: https://www.neme.org/blog/refloss
+- WRO Biennale 2025: https://www.neme.org/blog/wro-biennale-2025
+- May days 2025: https://www.neme.org/blog/may-days-2025
+- Closure of the NeMe forum: https://www.neme.org/blog/closure-of-the-neme-forum
+- Open Letter to the Deputy Ministry of Culture: https://www.neme.org/blog/open-letter-to-the-deputy-ministry
+- Archiving Care: https://www.neme.org/blog/archiving-care-call
