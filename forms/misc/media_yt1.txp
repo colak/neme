@@ -1,0 +1,36 @@
+
+								    <txp:php>
+        $videoId = trim(parse_articles(array('short' => '<txp:yield name="media" />')));
+        
+        if (!empty($videoId)) {
+            // Ordered resolutions: 16:9 high-res variants down to 4:3 guaranteed variants
+            $resolutions = ['maxresdefault', 'sddefault', 'hqdefault', 'mqdefault'];
+            $validImageUrl = "https://youtube.com{$videoId}/hqdefault.jpg"; // Default standard 4:3 fall-back
+
+            foreach ($resolutions as $res) {
+                $testUrl = "https://youtube.com{$videoId}/{$res}.jpg";
+                
+                // Fast cURL HEAD-request to check image existence without pulling payload data
+                $ch = curl_init($testUrl);
+                curl_setopt($ch, CURLOPT_NOBODY, true);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_TIMEOUT, 1); 
+                curl_exec($ch);
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+
+                if ($httpCode === 200) {
+                    $validImageUrl = $testUrl;
+                    break;
+                }
+            }
+            echo '
+            <div class="video-consent-placeholder" style="background-image: url('.htmlspecialchars($validImageUrl).'); background-size: cover; background-position: center; width: 100%; aspect-ratio: unset;">
+                <div class="consent-overlay">
+<p class="centre">Hosted by YouTube on<br>
+						<a rel="external noopener" href="<txp:if_yield name="url" value="pl">https://www.youtube.com/playlist?list=<txp:else />https://youtu.be/</txp:if_yield><txp:yield name="media" />"><txp:if_yield name="url" value="pl">https://www.youtube.com/playlist?list=<txp:else />youtu.be/</txp:if_yield><txp:yield name="media" /></a>.</p>
+					<p class="accept red centre"><a rel="nofollow noopener" href="?<txp:variable name="sitename" />_youtube=yes#m_<txp:yield name="media" />">Watch here</a></p>
+                </div>
+            </div>';
+        }
+    </txp:php>

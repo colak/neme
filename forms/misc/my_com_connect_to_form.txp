@@ -1,0 +1,26 @@
+<txp:php>
+    global $com_connect_form;
+    switch($com_connect_form['Organisation'][0])
+    {
+        case 'Project coordinator':
+            echo 'marcela@aksioma.org';
+            break;
+        case 'Aksioma':
+            echo 'aksioma@aksioma.org';
+            break;
+        case 'Drugo More':
+            echo 'davor@drugo-more.hr';
+            break;
+        case 'Furtherfield':
+            echo 'ruth.catlow@furtherfield.org';
+            break;
+        case 'Institute of Network Cultures':
+            echo 'inte@networkcultures.org';
+            break;
+        case 'NeMe':
+            echo 'nemeorg@gmail.com';
+            break;
+        default:
+            echo 'ycolakides@gmail.com';
+    }
+</txp:php>

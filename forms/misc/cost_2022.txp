@@ -1,0 +1,9 @@
+<aside class="noprint">
+<div class="clear">&nbsp;</div>
+<div class="grid_5">
+<img src="<txp:page_url type="theme_path" />/forms/svg/cost_white.svg" width="1291" height="476" alt="COST" class="grid_24" loading="lazy"><br>
+<img src="<txp:page_url type="theme_path" />/forms/svg/funded-by-eu-2022.svg" alt="Funded by the European Union" width="1019" height="213" class="grid_24" loading="lazy">
+</div>
+<p class="grid_19">COST (European Cooperation in Science and Technology) is a funding agency for research and innovation networks. Our Actions help connect research initiatives across Europe and enable scientists to grow their ideas by sharing them with their peers. This boosts their research, career and innovation.</p>
+<div class="clear">&nbsp;</div>
+</aside>

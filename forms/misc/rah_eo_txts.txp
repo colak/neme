@@ -1,0 +1,8 @@
+<txp:hide><txp:article_custom section="texts" limit="999" wraptag="" break="br">
+<txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="" break=" &amp; "><txp:link_name /></txp:linklist></a><txp:else /><txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="" break=" &amp; "><txp:link_name /></txp:linklist>: <txp:page_title />
+</txp:article_custom></txp:hide>
+
+<txp:article_custom section="texts" limit="999" wraptag="" break="br"> 
+<txp:linklist id='<txp:custom_field name="venue" escape="" />' wraptag="" break=" &amp; "><txp:link_name /></txp:linklist>, <i><txp:title /></i>, www.neme.org/texts/<txp:article_url_title /><txp:hide><txp:permlink /></txp:hide>
+
+</txp:article_custom>

@@ -1,0 +1,13 @@
+<txp:act_if_mobile>
+<txp:else />
+<div class="social nosmall">
+<span class="grid_3"><a href="https://x.com/nemeorg/" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_twitter.svg" width="30" height="30" loading="lazy" alt="NeMe on X" title="NeMe on X"></a></span>
+<span class="grid_3"><a href="https://www.facebook.com/nemeorg/" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_facebook.svg" width="30" height="30" loading="lazy" alt="NeMe on facebook" title="NeMe on facebook"></a></span>
+<span class="grid_3"><a href="https://youtube.com/nemeorg" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_youtube.svg" width="30" height="30" alt="NeMe on YouTube" title="NeMe on YouTube"></a></span>
+<span class="grid_3"><a href="https://instagram.com/nemeorg/" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_instagram.svg" width="30" height="30" loading="lazy" alt="NeMe on Instagram" title="NeMe on Instagram"></a></span>
+<span class="grid_3"><a href="https://vimeo.com/nemeorg/" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_vimeo.svg" width="30" height="30" loading="lazy" alt="NeMe on Vimeo" title="NeMe on Vimeo"></a></span>
+<span class="grid_3"><a href="https://bsky.app/profile/nemeorg.bsky.social" rel="me nofollow noopener"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_bluesky.svg" width="30" height="30" loading="lazy" alt="NeMe on BlueSky" title="NeMe on BlueSky"></a></span>
+<span class="grid_3"><a href="https://mastodon.social/@nemeorg" rel="me nofollow noopener"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_mastodon.svg" width="30" height="30" loading="lazy" alt="NeMe on Mastodon" title="NeMe on Mastodon"></a></span>
+<span class="grid_3"><a href="https://github.com/colak/neme/" rel="nofollow"><img src="<txp:page_url type="theme_path" />/forms/svg/sm_github.svg" width="30" height="30" loading="lazy" alt="NeMe on Github" title="NeMe on Github"></a></span></div>
+</txp:act_if_mobile>
+<div class="clear soc">&nbsp;</div>
