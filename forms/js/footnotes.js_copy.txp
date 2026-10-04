@@ -1,0 +1,40 @@
+<script>
+// Get all footnotes at the end of the page
+const footnotes = document.querySelectorAll('li.footnote');
+
+// If any exist, process them
+if (footnotes) {
+  footnotes.forEach(note => {
+    // Clone the note to change its content without affecting the original
+    const clonedNote = note.cloneNode(true);
+
+    // Get the last anchor element in the cloned note
+    const backLink = clonedNote.querySelector('a:last-of-type');
+
+    // Extract the href attribute from the backlink
+    const href = backLink.getAttribute('href');
+
+    // Remove backlink from tooltip text
+    backLink.remove();
+
+    // Extract the tooltip text content (without the backlink)
+    const tooltipText = clonedNote.textContent;
+
+    // Use the href to find the inline footnote by its id
+    const inlineFootnote = document.getElementById(href.replace('#', ''));
+
+    // If the inline footnote exists
+    if (inlineFootnote) {
+      // Create a new span element
+      const span = document.createElement('span');
+
+      // Set the classes and text content of the span
+      span.classList.add('tooltiptext', 'noprint');
+      span.textContent = tooltipText;
+
+      // Append the span after the inline footnote
+      inlineFootnote.after(span);
+    }
+  });
+}
+</script>
