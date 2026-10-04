@@ -1,0 +1,71 @@
+<txp:header name="Cache-Control" value=" no-cache, no-store, must-revalidate" />
+
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+	<meta charset="utf-8">
+	<title>MoneyLab#13</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="google" content="notranslate">
+
+<style>
+body 
+{background:#fff;color:#000;font-size:2em;line-height:1.5;font-family:'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}
+.comEmail, .comText, .comTextarea, .comSelect
+{width:100%;padding:.5em;font-size:120%;}
+.comTextarea {height:5em;resize:vertical;overflow:auto;box-sizing:border-box;}
+.comSelect, .comSubmit
+{padding:.5em;border-radius:.5em;background-color:#eee}
+.comSelect label
+{background-color:#fff}
+.comSubmit
+{font-size:130%;font-weight:bold;}
+input[type=checkbox]
+{
+  -ms-transform: scale(3); /* IE */
+  -moz-transform: scale(3); /* FF */
+  -webkit-transform: scale(3); /* Safari and Chrome */
+  -o-transform: scale(3); /* Opera */
+  transform: scale(3);
+  padding: 10px;
+margin-right: 15px;
+}
+
+</style>
+</head>
+<body>
+
+<div style="width:90%;margin:1em auto 0;padding:0;display:block;">
+<div style="width:90%;margin:1em auto 0;padding:0;display:block;">
+<h1>MoneyLab#13</h1>
+
+<txp:hide><p>The following is required by Creative Europe for statistical purposes only. NeMe will anonymise all private details you provide and will not share them with any third parties.</p></txp:hide>
+
+<p>Help us improve! Let us know your comments!</p>
+
+<txp:com_connect to='<txp:authors name="colak"><txp:author_email /></txp:authors>' from="email@domain.tld" label="" thanks_form="eu_stats" subject="TOC stats.">
+<txp:com_connect_text name="Name" label="Your Name:" required="1" /><br>
+<txp:com_connect_text name="Surname" label="Your Surname:" required="1" /><br>
+<txp:com_connect_email name="Email" label="Your Email:" required="1" /><br>
+<txp:com_connect_text name="Website" label="Your website (optional):" required="0" /><br>
+<txp:com_connect_textarea label="Your comments about the event" required="1" /><br>
+<txp:com_connect_select label="" name="Gender" options="{Gender},Male,Female,Non binary" required="1" /><br><br>
+<txp:com_connect_select label="" name="Residence" options="{Residence},Cyprus,Elsewhere" required="1" /><br><br>
+<txp:com_connect_checkbox label="Check this box if you wish to receive infrequent emails about our events." required="0" /><br><br>
+<txp:com_connect_secret name="date" value='<txp:php>echo date("d.m.Y");</txp:php>' />
+<txp:com_connect_serverinfo name="REMOTE_ADDR" label="IP number" />
+<txp:com_connect_serverinfo name="HTTP_USER_AGENT" label="Browser" />
+<txp:com_connect_submit label="Submit" />
+</txp:com_connect>
+
+<p>Funding:<br><txp:hide><img src="<txp:page_url type="theme_path" />/forms/svg/eu-2022.svg" alt="creative europe" width="306" height="54" style="float:left;margin-right:3px"></txp:hide><img src="<txp:page_url type="theme_path" />/forms/svg/moec2022.svg" alt="Deputy Ministry of Culture" width="73" height="54"></p>
+
+<txp:hide><p>Funding:<br><img src="<txp:page_url type="theme_path" />/forms/svg/ce.svg" alt="COST" width="527" height="187" style="width:50%;height:auto;margin-right:3px"></p>
+<p>COST (European Cooperation in Science and Technology) is a funding agency for research and innovation networks. Our Actions help connect research initiatives across Europe and enable scientists to grow their ideas by sharing them with their peers. This boosts their research, career and innovation.</p></txp:hide>
+
+<txp:hide><p>Support:<br><txp:image id="1663" /></p></txp:hide>
+</div></div>
+</body>
+</html>
