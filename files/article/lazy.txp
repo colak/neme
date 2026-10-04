@@ -1,0 +1,1 @@
+<txp:images id='<txp:yield name="id" />'><img itemscope itemtype="http://schema.org/ImageObject" loading="lazy" src="/images/<txp:yield name="id" /><txp:image_info type="ext" />" widh="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" default="Image from NeMe" />" /></txp:images>
