@@ -14,5 +14,5 @@
 <txp:if_article_section name="publications"><txp:output_form form="tabs.js" format="flat.script" /></txp:if_article_section>
 </txp:if_article_list>
 <txp:if_section name="publications"><txp:if_category name="mentioned,cited"><script>const totalFootnotes=document.querySelectorAll("#bibliography > li").length;document.getElementById("bibliography-counter").textContent=totalFootnotes;</script></txp:if_category></txp:if_section>
-<txp:output_form form="WebMCP.js" format="flat.script" /><script>
+<txp:output_form form="WebMCP.js" format="flat.script" />
 </txp:if_search>
