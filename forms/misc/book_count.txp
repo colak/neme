@@ -1,0 +1,1 @@
+<txp:php>echo safe_count('txp_image', "category = publications'");</txp:php>

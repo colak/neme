@@ -1,0 +1,4 @@
+<div class="grid_6"><img src="<txp:page_url type="theme_path" />/forms/svg/creative_europe.svg" alt="creative europe" /></div>
+<p class="grid_15">This project has been funded with the support from the European Commission.</p>
+<div class="grid_3"><img src="<txp:page_url type="theme_path" />/forms/svg/moec_colour.svg" alt="MOEC"></div>
+<div class="clearboth">&nbsp;</div>

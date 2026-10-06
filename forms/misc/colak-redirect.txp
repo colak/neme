@@ -1,0 +1,21 @@
+<txp:if_article_section name="about">
+  <txp:php>
+   txp_status_header('301 Moved Permanently');
+   header('Location: https://www.neme.org/about/');
+   exit;
+  </txp:php>
+</txp:if_article_section>
+<txp:if_article_section name="workshops">
+  <txp:php>
+   txp_status_header('301 Moved Permanently');
+   header('Location: https://www.neme.org/workshops/');
+   exit;
+  </txp:php>
+</txp:if_article_section>
+<txp:if_article_section name="nac">
+  <txp:php>
+   txp_status_header('301 Moved Permanently');
+   header('Location: https://www.neme.org/nac/');
+   exit;
+  </txp:php>
+</txp:if_article_section>
