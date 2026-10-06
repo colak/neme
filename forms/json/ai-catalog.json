@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "NeMe"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:neme.org:archive:search-texts",
+      "displayName": "Text Archive Search",
+      "description": "Allows search access across NeMe's contemporary art theory and criticism essay database.",
+      "type": "application/openapi+json",
+      "url": "https://neme.org",
+      "representativeQueries": [
+        "search contemporary art theory essays",
+        "find art criticism database texts"
+      ]
+    },
+    {
+      "identifier": "urn:air:neme.org:projects:get-directory",
+      "displayName": "Projects Directory",
+      "description": "Provides machine access to active cultural project grids and open residency calls.",
+      "type": "application/mcp-server-card+json",
+      "url": "https://neme.org",
+      "representativeQueries": [
+        "get active cultural project grids",
+        "list open residency calls"
+      ]
+    }
+  ]
+}
