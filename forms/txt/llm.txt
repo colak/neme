@@ -22,7 +22,7 @@
 - Cross-Network Search Interface: https://www.neme.org/
   - Protocol: Declarative Form (Schema.org SearchAction)
   - Tool Name: `cross_network_cultural_search`
-  - Scope: Searches <txp:article_custom section="projects,about,blog,texts,publications" pageby="1" pgonly escape="number" /> archival posts cross-network.
+  - Scope: Searches 2,055 archival posts cross-network.
 - Site-Wide Academic Citation Generator: 
   - Protocol: Imperative JavaScript Browser Tool
   - Tool Name: `generate_text_citation`
