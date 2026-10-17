@@ -177,8 +177,8 @@
 </main>
 <div>
 <h2>Contributors</h2>
-<p><txp:php>echo safe_count('txp_link', "category = 'contributors'");</txp:php> people &amp; groups who participated in one or more of the projects we organised, hosted, or participated in</p>
-<txp:linklist category="contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
+<p><txp:php>echo safe_count('txp_link', "category IN ('contributors', 'txt-contributors')");</txp:php> people &amp; groups who participated in one or more of the projects we organised, hosted, or participated in</p>
+<txp:linklist category="contributors,txt-contributors" limit="999999" sort="linksort" break=" &bull; " wraptag="p"> <txp:variable name="haslink" value='<txp:link_url />' /> <txp:if_variable name="haslink" value="#"> <txp:link_name escape="" /> <txp:else /> <a href="<txp:link_url />" rel="external noopener"><txp:link_name escape="html" /></a> </txp:if_variable> </txp:linklist>
 
 <div class="clear">&nbsp;</div>
 
@@ -208,7 +208,7 @@
 
 <div class="clear">&nbsp;</div>
 
-<div class="announce"><h5 id="site_thanks"><h5>Site help</h5>
+<div class="announce"><h5 class="h3" id="site_thanks">Site help</h5>
 <p>For their help and/or advice for the coding of our websites we thank:</p>
 
 <txp:output_form form="site_thanks" /></div>
