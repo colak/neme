@@ -1,0 +1,33 @@
+# NeMe
+
+> An independent, non-profit cultural NGO based in Limassol, Cyprus. NeMe focuses on contemporary art, media criticism, critical theory, and intersectional techno-cultural research.
+
+## Core Repositories & Hubs
+- Home page: https://www.neme.org
+- About NeMe: https://www.neme.org/about/
+- Critical Texts Archive: https://www.neme.org/texts/
+- Projects & Exhibitions Archive: https://www.neme.org/projects/
+- Book Publications Repository: https://www.neme.org/publications/
+- Blog & Event Announcements: https://www.neme.org/blog/
+
+## Extended Resources
+- Full Archive Directory: https://www.neme.org/llm-extended.txt
+
+## Associated Networks
+- A Sea Change, Creative Europe Project: https://a-sea-change.net
+- Toolkit of Care COST Action: https://toolkitof.care
+- EMAP Creative, Europe funded project: https://emare.eu/
+
+## WebMCP Tools & APIs
+- Cross-Network Search Interface: https://www.neme.org/
+  - Protocol: Declarative Form (Schema.org SearchAction)
+  - Tool Name: `cross_network_cultural_search`
+  - Scope: Searches <txp:article_custom section="projects,about,blog,texts,publications" pageby="1" pgonly escape="number" /> archival posts cross-network.
+- Site-Wide Academic Citation Generator: 
+  - Protocol: Imperative JavaScript Browser Tool
+  - Tool Name: `generate_text_citation`
+  - Output standard: Chicago Manual of Style (Notes & Bibliography)
+
+## Live Feeds
+- RSS XML Feed: https://www.neme.org/rss/
+- ATOM XML Feed: https://www.neme.org/atom/
