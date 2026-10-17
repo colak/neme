@@ -2,13 +2,16 @@
 # The humans responsible and
 # technology colophon
 
-# TEAM
+/* TEAM */
 
   Developer: The NeMe team
   Site: https://www.neme.org/
   Location: Limassol, Cyprus
+  Editos & URLs:
+    Yiannis Colakides, https://www.neme.org
+    Helene Black, https://hblack.art
 
-# Social Media
+/* Social Media */
 
   Twitter: https://x.com/nemeorg/
   Instagram: https://instagram.com/nemeorg/
@@ -18,13 +21,23 @@
   Upscrolled: https://upscrolled.com/@nemeorg
   YouTube: https://youtube.com/nemeorg
 
-# TEAM
 
-  Editos & URLs:
-    Yiannis Colakides, https://www.neme.org
-    Helene Black, https://hblack.art
+/* Texts Contributors */
 
-# TECHNOLOGY COLOPHON
+Lanfranco Aceti, Mark Amerika, Aristide Antonas, Christos Barboutis, Richard Barbrook, Belinda Barnet, Andrew Benjamin, Hakim Bey, Helene Black, Svetlana Boym, Nico Carpentier, Jesse Cohn, Yiannis Colakides, Geoff Cox, Steve Dietz, Judith Donath, Charles Esche, Michael Filimowicz, Maja and Reuben Fowkes, Pascal Gielen, Christopher Gordon, Marina Grzinic, Michael Haerdter, Jeremy Hight, Tiffany Holmes, Srećko Horvat, Erkki Huhtamo, Eduardo Kac, Ryszard W. Kluszczyński, Martin Knahl, Marc James Léger, Chrystalleni Loizidou, Lev Manovich, Ioannis MICHALOU(di)S, Joanne Morra, Soraya Murray, Timothy Murray, Nikos Papastergiadis, Christiane Paul, Sheila Pinkel, Luís Cláudio Ribeiro, Martin Rieser, John Roberts, Denise Robinson, Jette Sandahl, Mike Sandbothe, Edward Shanken, Simon Sheikh, Gregory Sholette, Marquard Smith, Stelarc, Andrew Vande Moere, Paul Vanouse, Jorge Bruno Ventura, McKenzie Wark, Faith Wilding, Shaun Wilson, Gordon Winiemko, Miya Yoshida, Iannis Zannos, Ricardo Miranda Zúñiga.
+
+/* Thanks */
+
+For their help and/or advice for the coding of our websites
+
+Ιsaac Βowen, Ben Bruce, Marios Buttner, Andy Carter, Pete Cooper, Stef Dawson, Jon-Michael Deldin, Stephen Dickinson, Simon Finch, Mary Fredborg, Nikolaos Genimakis, Adi Gilbert, Filip Hajny, Walker Hamilton, Coke Harrington, Andrew Ilin, Henrik Jönsson, Kuopassa, Steve Lam, Julián Landerreche, Patrick Lefevre, Els Lepelaars, Yura Linnyk, Oleg Loukianov, makss, Michael Manfre, Nicolas Morand, Stanislav Müller, Juanjo Navarro, Johan Nilsson, Mark Norton, Julian Reisenberger, Claude Roulet, Rob Sable, Bastian Sackermamn, Christian Sandberg, Bit Santos, Tommy Schmucker, Alex Shiels, Rick Silletti, Jeff Soo, Jonathan Stubbs, Jukka Svahn, Uli, Ruud van Melick, Phil Wareham, Sam Weiss, Robert Wetzlmayr, Philippe Wittenbergh, Sencer Yurdagül.
+
+/* SECURITY AND PRIVACY */
+
+NeMe has implemented numerous site security and GDPR compliant organisational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means.
+
+
+/* TECHNOLOGY COLOPHON */
 
   Standards: HTML5, CSS3, Javascript, ARIA, RSS, Atom
   Server: Apache, MySQL, PHP
@@ -34,6 +47,7 @@
     Site source: https://github.com/colak/neme
     PHP-Textile: https://github.com/textile/php-textile
     echarts.js: https://echarts.apache.org/
+    Javascript: Various custom javascripts
 
 
 MNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNM
@@ -71,3 +85,4 @@ Mh .MMMMMMMMs                :MMMMMMMMMM: oMMm  +MMMN. .MMMMMMMMMo  hM
 Mh .mmmmmmmmo                 +mmmmmmmmm: +mmh  `mmmy  .mmmmmmmmm+  hM
 Mh                                                                  hM
 MNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNM
+
