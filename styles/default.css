@@ -414,7 +414,7 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
 
 
 /* Slide shows */
-.slides {position: relative;overflow: hidden;width: 100%;aspect-ratio: 71 / 30; /* height: 300px; */ }
+.slides {position: relative;overflow: hidden;width: 100%;aspect-ratio: 71 / 30; }
 @supports not (aspect-ratio: 71 / 30) {
 .slides {height: 0; padding-top: 42.24%;}
 }
@@ -424,6 +424,8 @@ ul.carousel li {margin-left: 0;}
 .carousel li.active {opacity: 1;z-index: 1;}
 .carousel li.inactive {opacity: 0;z-index: 0;}
 .carousel img {width: 100%;height: auto;aspect-ratio: 71 / 30;object-fit: cover;border-radius: 0 8px 8px 0;}
+
+
 .no-js ul.carousel li{display:none}
 .no-js ul.carousel li:first-child{display:block}	
 .no-js ul.carousel li:first-child {opacity: 1;z-index: 1;}
@@ -537,7 +539,7 @@ h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 #soylentgreen, #newsletter .grid_14 {width:100%;margin:0 auto;padding:0;border:0;display:block;top:0;clear:both}
 
 
-#front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:98%;padding:.5em .5%}
+#front .container_24 .frontthumbs li, #side .submenu li, .side .submenu li, .submenu li, #side .related_articles li {display:block;float:none;background-color:#000;border-bottom:#ddd solid 1px;margin:0 1% 0 0;width:100%;padding:.5em .5%}
 #texts #content ol li, ol.notes {list-style-type: decimal;}
 #side .related_articles li:nth-of-type(odd), #side .submenu li:nth-of-type(odd) {background-color: #2A2A2A;}
 
@@ -561,7 +563,7 @@ h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 #front .grid_18 .slides{float:none;width:99%}
 .container_24 .grid_18 {width: 96%; clear:both; float:none;}
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
-#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:95%}
+#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:100%}
 #blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}s
 
 #related-links #content{line-height:2em}
@@ -585,7 +587,7 @@ article ol.notes {list-style-position: inside;list-style-type: decimal;overflow-
 }
 
 @media screen and (max-width:450px){
-#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:96%}
+#front #content .container_24 .frontthumbs,#front #side .submenu li,figure{width:100%}
 #vids {display:block; padding-bottom:52%;}
 .eu .grid_2 {clear:both;}
 .eu .grid_16 {width:74%}
