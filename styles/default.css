@@ -328,7 +328,7 @@ select, textarea, input[type="text"], input[type="submit"], input[type="email"],
 
 /* Details accordeon */
 
-.accordion-item {border-bottom: 1px solid #eee;margin-bottom: 0.3rem;list-style: none;}
+.accordion-item {border-bottom: 1px solid #eee;margin-bottom: 0.3rem;list-style: none;padding:0 5px}
 .accordion-item summary {list-style: none;}
 .year-heading {padding: .6rem 0;cursor: pointer;font-weight: bold;display: flex;justify-content: space-between;align-items: center;-webkit-tap-highlight-color: transparent;list-style: none;}
 .year-heading::-webkit-details-marker {display: none;}
@@ -519,6 +519,7 @@ a.footnote-back{margin-left:.25ch;margin-inline-start:.25ch;}
 
 @media screen and (max-width:1030px){
 .large {display:none;}
+abbr[title]::after {content: " (" attr(title) ")";font-size: 0.9em;}
 }
 
 @media screen and (max-width:960px){
@@ -563,7 +564,7 @@ h2{font-size:1.6rem;margin:0;padding:0;clear:both;display:block}
 #front .grid_18 .slides{float:none;width:99%}
 .container_24 .grid_18 {width: 96%; clear:both; float:none;}
 .largeonsmall,.small100,.video .grid_9{width:100%;float:none}
-#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:100%}
+#about #content .grid_18,#about #content .grid_6,#about #content .grid_18 .grid_6,#about #content .grid_18 .grid_4,#about #content .grid_18 .grid_12,#about #content .grid_18 .grid_2,#projects #content .grid_12,#projects #content .grid_18,#projects #content .grid_6,#related-links #content .grid_16,#related-links #content .grid_8,#related-links #content .grid_8 .grid_4, #content .grid_9{width:95%}
 #blog #content .grid_12, #blog #content grid_18, #blog #content grid_6, #blog #side, #blog #main {width:99%;clear:both;}s
 
 #related-links #content{line-height:2em}
