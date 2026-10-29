@@ -516,6 +516,15 @@ a.footnote-back{margin-left:.25ch;margin-inline-start:.25ch;}
 .slides {width:96%;margin:auto;}
 }
 
+abbr[title]{position:relative;text-decoration:underline dotted;cursor:help}
+
+@media (pointer: coarse) {
+abbr[title] {-webkit-tap-highlight-color: transparent;}
+abbr[title]:focus::after {content: attr(title); position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); z-index: 1000; white-space: nowrap; background-color: var(--dark-red); color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 14px; font-weight: normal;}
+abbr[title]:focus::before {content: "";position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%); border-width: 6px; border-style: solid; border-color: var(--dark-red) transparent transparent transparent; z-index: 1000;}
+}
+
+
 
 @media screen and (max-width:1030px){
 .large {display:none;}
