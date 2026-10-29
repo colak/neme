@@ -1,1 +1,143 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".carousel"),o=e.querySelectorAll("li");if(!e||0===o.length)return void console.error("Carousel or items not found");let t,n=0,s=o.length,l=!1,i=0,c=0;function d(){if(l)return;o[n].classList.remove("active"),n=(n+1)%s;o[n].classList.add("active"),console.log("Showing slide",n)}function r(){if(l)return;o[n].classList.remove("active"),n=(n-1+s)%s;o[n].classList.add("active"),console.log("Showing slide",n)}console.log("Carousel initialized with",s,"items"),o[n].classList.add("active"),console.log("First item marked as active");const a=document.querySelector(".slides");a&&(a.addEventListener("mouseenter",()=>{l=!0,console.log("Paused")}),a.addEventListener("mouseleave",()=>{l=!1,console.log("Resumed")}),a.addEventListener("click",function(o){const t=e.getBoundingClientRect(),n=o.clientX-t.left,s=t.width/2;console.log("Click at",n,"midpoint is",s),n<s?(console.log("Clicked left half"),r()):(console.log("Clicked right half"),d())}),a.addEventListener("touchstart",e=>{l=!0,i=e.changedTouches[0].clientX,console.log("Touch started at",i)},{passive:!0}),a.addEventListener("touchend",e=>{c=e.changedTouches[0].clientX,console.log("Touch ended at",c),function(){const e=c-i;e>50?(console.log("Swiped right"),r()):e<-50&&(console.log("Swiped left"),d())}(),l=!1},{passive:!0})),document.addEventListener("keydown",e=>{"ArrowLeft"===e.key&&(console.log("Left arrow pressed"),r()),"ArrowRight"===e.key&&(console.log("Right arrow pressed"),d())}),t=setInterval(d,4500),console.log("Interval started")});
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel");
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll("li"));
+  if (slides.length === 0) {
+    console.error("Carousel items not found");
+    return;
+  }
+
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let intervalId = null;
+
+  let isHoverPaused = false;
+  let isTouchActive = false;
+
+  function canAdvance() {
+    return !isHoverPaused && !isTouchActive;
+  }
+
+  function updateSlideAccessibility() {
+    slides.forEach((slide, index) => {
+      const isActive = index === currentIndex;
+
+      slide.classList.toggle("active", isActive);
+      slide.classList.toggle("inactive", !isActive);
+
+      if (isActive) {
+        slide.removeAttribute("aria-hidden");
+      } else {
+        slide.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  function goToSlide(direction, isAutoPlayCall = false) {
+    if (isAutoPlayCall && !canAdvance()) return;
+
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    updateSlideAccessibility();
+  }
+
+  function nextSlide(isAutoPlayCall = false) {
+    goToSlide(1, isAutoPlayCall);
+  }
+
+  function prevSlide() {
+    goToSlide(-1, false); // Manual actions skip interaction blocks
+  }
+
+  function startAutoPlay() {
+    clearInterval(intervalId);
+    intervalId = setInterval(() => {
+      nextSlide(true); // Pass true to specify this run is a background automation loop
+    }, 4500);
+  }
+
+  function pauseAutoPlay() {
+    isHoverPaused = true;
+    clearInterval(intervalId);
+  }
+
+  function resumeAutoPlay() {
+    isHoverPaused = false;
+    startAutoPlay();
+  }
+
+  updateSlideAccessibility();
+
+  const slidesWrapper = document.querySelector(".slides");
+  if (slidesWrapper) {
+    slidesWrapper.addEventListener("mouseenter", pauseAutoPlay);
+    slidesWrapper.addEventListener("mouseleave", resumeAutoPlay);
+
+    slidesWrapper.addEventListener("click", (e) => {
+      if (e.pointerType === "touch") return;
+
+      const rect = carousel.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+
+      if (clickX < rect.width / 2) {
+        prevSlide();
+      } else {
+        nextSlide(false);
+      }
+    });
+
+    slidesWrapper.addEventListener(
+      "touchstart",
+      (e) => {
+        isTouchActive = true;
+        clearInterval(intervalId);
+        touchStartX = e.changedTouches[0].clientX;
+      },
+      { passive: true }
+    );
+
+    slidesWrapper.addEventListener(
+      "touchend",
+      (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const swipeDistance = touchEndX - touchStartX;
+
+        isTouchActive = false;
+
+        if (swipeDistance > 50) {
+          prevSlide();
+        } else if (swipeDistance < -50) {
+          nextSlide(false);
+        } else {
+          const rect = carousel.getBoundingClientRect();
+          const tapX = touchEndX - rect.left;
+
+          if (tapX < rect.width / 2) {
+            prevSlide();
+          } else {
+            nextSlide(false);
+          }
+        }
+
+        startAutoPlay();
+      },
+      { passive: true }
+    );
+  }
+
+  document.addEventListener("keydown", (e) => {
+    const carouselFocused =
+      e.target.closest?.(".slides") ||
+      document.activeElement?.closest?.(".slides");
+
+    if (!carouselFocused) return;
+
+    if (e.key === "ArrowLeft") {
+      prevSlide();
+    } else if (e.key === "ArrowRight") {
+      nextSlide(false);
+    }
+  });
+
+  startAutoPlay();
+});
